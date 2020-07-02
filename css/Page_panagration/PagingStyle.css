@@ -1,0 +1,35 @@
+
+#panagration_list,
+#panagration_list li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#panagration_list {
+  padding: 20px;
+}
+
+ #paging {
+  padding: 0 20px 20px 20px;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+}
+ #paging a {
+  color: #000;
+  background: #e0e0e0;
+  padding: 8px 12px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+ #paging a.aktif {
+  background: #169fe6 !important;
+  color: #fff;
+}
+ #paging a:hover {
+  background: #169fe6 !important;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,103 @@
+
+.licence table .wrapper td:nth-first-child{
+	float:left;
+	display:block
+}
+.licence table .wrapper td:nth-last-child{
+	float:right;
+	display:block;
+}
+
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers)
+====================================================================== */
+@media only screen and (min-width:250px) and (max-width: 767px) {
+/*=========================
+		Buttons
+===========================*/
+.licence table .wrapper td:nth-first-child{
+	float:none;
+	display:block;
+	width:100%;
+}
+
+.licence table .wrapper td:nth-last-child{
+	float:none;
+	display:block;
+	width:100%;
+}
+
+.licence table tr:nth-child(even){
+	background:#D9D9D9;	
+}
+
+.licence table .wrapper td{
+	font-size:12px;	
+}
+
+
+
+
+
+
+
+
+
+
+/* All Mobile Sizes (devices and browsers)
+====================================================================== */
+@media only screen and (max-width: 767px) {
+
+	.submitbut{
+		
+		margin-left:30px !important;
+	}
+	
+}
+
+
+/*==========================================================================*/
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers)
+====================================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	.submitbut{
+		
+		margin-left:30px !important;
+	}
+	
+	
+}
+
+/*==========================================================================*/
+
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+====================================================================== */
+@media only screen and (max-width: 479px) {
+
+.reset_button, .submitbut{
+	
+		display:block;
+		margin-bottom:10px !important;
+		margin-top:10px !important;
+		margin-left:70px !important;
+		
+	}
+	
+
+.bar_graph_image{
+	
+	width:150px !important;
+	height:50px !important;
+}
+
+
+}
+
+
+
