@@ -21,6 +21,7 @@
 
 .covid_placekeeper a.covid_19_Acc {
     position: relative;
+    font-size: 20px;
 }
 .covid_placekeeper a.covid_19_Acc:before {
     content: '\002B';
@@ -46,6 +47,15 @@
 }
 .covid_placekeeper a.covid_19_Acc:before {
     content: '\2212';
+}
+@media only screen and (max-width:767px) {
+    .covid_placekeeper a.covid_19_Acc {
+        position: relative;
+        font-size: 15px;
+    }
+    .covid_placekeeper a.covid_19_Acc:before {
+        right: 10px !important;
+    }
 }
 
 /*---------------------
@@ -169,6 +179,37 @@ ABSTRACT ACCORDION
     INSIDER TAB
 ==================*/
 
+.insider.offer {
+    overflow: visible !important;
+}
+.insider .offer-content {
+    padding: 23px 8px 10px 8px;
+    position: relative;
+    overflow: visible;
+}
+.insider .offer-content .grade {
+    width: 25px;
+    height: 25px;
+    display: block;
+    border-radius: 100% !important;
+    color: #fff;
+    font-size: 15px;
+    padding: 2px;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    left: 40%;
+}
+.insider .offer-content .lead {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+}
+.inside > .offer-primary .shape {
+    border-width: 0 30px 40px 0 !important;
+}
 .insider_star_ranking i {
     color: #fff;
     background: #067574;
