@@ -19,6 +19,7 @@
     transition: all 0.5s linear;
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
+    z-index: 999
 }
 .pageload_popup .card {
     top: -50px;
@@ -41,8 +42,8 @@
 }
 .pageload_popup .card button.close {
     float: right;
-    height: 8px;
-    width: 8px;
+    height: 15px !important;
+    width: 15px !important;
 }
 
 /*---------------------

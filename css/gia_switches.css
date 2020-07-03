@@ -3457,12 +3457,13 @@ code {
     line-height: 1.5;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    position: relative;
 }
 .btn-label {
-    position: relative;
-    left: -12px;
+    position: absolute;
+    left: 0;
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px 8px;
     background: rgba(0, 0, 0, 0.15);
     border-radius: 3px 0 0 3px;
 }
@@ -4132,6 +4133,93 @@ input[type="button"].btn-block {
     clip: rect(0, 0, 0, 0);
     pointer-events: none;
 }
+.btn-50 {
+    width: 50px !important;
+}
+.btn-75 {
+    width: 75px !important;
+}
+.btn-100 {
+    width: 100px !important;
+}
+.btn-125 {
+    width: 125px !important;
+}
+.btn-150 {
+    width: 150px !important;
+}
+.btn-175 {
+    width: 175px !important;
+}
+.btn-200 {
+    width: 200px !important;
+}
+.btn-225 {
+    width: 225px !important;
+}
+.btn-250 {
+    width: 250px;
+}
+.btn-275 {
+    width: 275px !important;
+}
+.btn-300 {
+    width: 300px;
+}
+.btn-325 {
+    width: 325px;
+}
+.btn-350 {
+    width: 350px;
+}
+.btn-375 {
+    width: 375px;
+}
+.btn-400 {
+    width: 400px;
+}
+.btn-425 {
+    width: 425px;
+}
+.btn-450 {
+    width: 450px;
+}
+.btn-475 {
+    width: 475px;
+}
+.btn-500 {
+    width: 500px;
+}
+
+/* @media (min-width: 576px) {
+                                                         .btn-50,
+                                                         .btn-75,
+                                                         .btn-100,
+                                                         .btn-125,
+                                                         .btn-150,
+                                                         .btn-175,
+                                                         .btn-200,
+                                                         .btn-225,
+                                                         .btn-250,
+                                                         .btn-275,
+                                                         .btn-300,
+                                                         .btn-325,
+                                                         .btn-350,
+                                                         .btn-375,
+                                                         .btn-400,
+                                                         .btn-425,
+                                                         .btn-450,
+                                                         .btn-475,
+                                                         .btn-500 {
+                                                             width: 100%;
+                                                         }
+                                                     }
+                                                     @media (prefers-reduced-motion: reduce) {
+                                                         .btn {
+                                                             transition: none;
+                                                         }
+                                                     }*/
+
 
 /*====CARD ====*/
 
