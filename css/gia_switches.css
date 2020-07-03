@@ -140,7 +140,10 @@ sup {
 
 /*==common snipts==*/
 
-blockquote {
+.page_block {
+    overflow: hidden;
+}
+lockquote {
     margin: 0 0 1rem;
 }
 sub,
@@ -7031,6 +7034,9 @@ textarea.form-control.is-invalid {
     TOP, LEFT, RIGHT, BOTTOM
     ========================*/
 
+.t-0 {
+    top: 0px !important;
+}
 .t-5 {
     top: 5px !important;
 }
@@ -7150,6 +7156,9 @@ textarea.form-control.is-invalid {
 }
 .t-neg-100 {
     top: -100px !important;
+}
+.l-0 {
+    left: 0px !important;
 }
 .l-5 {
     left: 5px !important;
@@ -7271,6 +7280,9 @@ textarea.form-control.is-invalid {
 .l-neg-100 {
     left: -100px !important;
 }
+.r-0 {
+    right: 0px !important;
+}
 .r-5 {
     right: 5px !important;
 }
@@ -7390,6 +7402,9 @@ textarea.form-control.is-invalid {
 }
 .r-neg-100 {
     right: -100px !important;
+}
+.b-0 {
+    bottom: 0px !important;
 }
 .b-5 {
     bottom: 5px !important;

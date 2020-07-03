@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]>
 <!-->
@@ -44,8 +44,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="scripts/bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <script src="scripts/lazyload/jquery.lazy.js"></script>
-    <script src="scripts/lazyload/jquery.lazy.plugins.js"></script>
+    <!--script src="scripts/lazyload/jquery.lazy.js"></script>
+    <script src="scripts/lazyload/jquery.lazy.plugins.js"></script-->
     <!--- accordion2 script ---->
 </head>
 
@@ -70,7 +70,7 @@
         <div class="page-content">
             <div class="container">
                 <!---BEGIN:POOLED DATA & INFOGRAPHIC--->
-                <div class="row my-4 lazy" data-loader="customLoaderName">
+                <div class="row my-4 ">
                     <div class="d-flex  flex-sm-column flex-md-column flex-lg-row flex-xl-row">
                         <!--BEGIN:POLLED DATA BLOCK--->
                         <div class="eleven columns shadow  w-sm-100 w-md-100">
@@ -158,7 +158,7 @@
                         <!--END:POLLED DATA BLOCK--->
                         <!--BEGIN:POLLED DATA BLOCK--->
                         <div class="five columns shadow p-2 d-flex align-items-center w-sm-100 w-md-100">
-                            <a href="#ex1" rel="modal:open"> <img class="lazy" data-src="https://www.strategyr.com/images/info_img10.jpg" class="img-fluid block mx-auto" /></a>
+                            <a href="#ex1" rel="modal:open"> <img src="https://www.strategyr.com/images/info_img10.jpg" class="img-fluid block mx-auto" /></a>
                         </div>
                         <!--END:POLLED DATA BLOCK--->
                     </div>
@@ -166,7 +166,7 @@
                 <!---POOLED DATA BEGIN--->
                 <hr/>
                 <!--- BEGIN:COVID-19 MESSAGE --->
-                <div class="row my-4 lazy" data-loader="customLoaderName">
+                <div class="row my-4 ">
                     <div class="covid_placekeeper pt-2 w-100 border shadow-sm">
                         <h3 class="w-100 my-0 py-0"> 
                         <a  class=" covid_19_Acc text-primary text-center w-100 d-block font-weight-bold collapsed" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
@@ -190,7 +190,7 @@
                 </div>
                 <!--- END:COVID-19 MESSAGE --->
                 <!---Begin:Abstract--->
-                <div class="row my-4 lazy" data-loader="customLoaderName">
+                <div class="row my-4 ">
                     <div class="">
                         <div class="released_abstract">
                             <button class="accordion_rel  mt-1 ">Global Beer Market to Reach US$687 Billion by the Year 2027</button>
@@ -210,7 +210,7 @@
                 </div>
                 <!---End:Abstroct--->
                 <!---Begin:SELECT PLAYERS,SEGMENTS,GEOGRAPHIES --->
-                <div class="row shadow-lg  py-4  lazy" data-loader="customLoaderName">
+                <div class="row shadow-lg  py-4  ">
                     <div class="mx-3">
                         <!-- Tabs Navigation -->
                         <ul class="tabs-nav">
@@ -342,16 +342,17 @@
                     <div class="w-100 mt-3">
                         <div id="main">
                             <span class="d-flex flex-md-row flex-sm-column flex-wrap flex-md-wrap flex-lg-nowrap flex-xl-nowrap  justify-content-around">
-                            <button class="btn btn-gia-primary rounded-0 shadow-sm m-1  m-md-2  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample01" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class="btn btn-gia-primary rounded-0 shadow-sm m-1  m-md-2  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample01" aria-expanded="flase" aria-controls="collapseExample" id="companies_btn">
                                 COMPANIES 33331
                             </button>
-                            <button class="btn btn-gia-primary rounded-0 shadow-sm m-1 m-md-2  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample02" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class="btn btn-gia-primary rounded-0 shadow-sm m-1 m-md-2  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample02" aria-expanded="flase" aria-controls="collapseExample" id="world_brand_btn">
                                 WORLD  BRANDS 70119
                             </button>
-                            <button class="btn btn-gia-primary rounded-0 shadow-sm m-1 m-md-2 w-sm-100   text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample03" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class="btn btn-gia-primary rounded-0 shadow-sm m-1 m-md-2 w-sm-100  executives_btn  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button"  data-toggle="collapse" data-target="#collapseExample03" aria-expanded="flase" aria-controls="collapseExample" id="executives_btn">
                                 EXECUTIVES 95924
                             </button>
-                            <button class="btn btn-gia-primary rounded-0 shadow-sm m-1 m-md-2 w-sm-100   text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample04" aria-expanded="flase" aria-controls="collapseExample">
+                            
+                            <button class="btn btn-gia-primary rounded-0 shadow-sm m-1 m-md-2 w-sm-100   text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample04" aria-expanded="flase" aria-controls="collapseExample" id="differentiators_btn">
                                 DIFFERENTIATORS
                             </button>
                             </span>
@@ -360,22 +361,12 @@
                                     <div class="w-100 text-center mb-2 ">
                                         <h4 class="font-weight-bold font-size-20 my-2 border-bottom">  FEATURED COMPANIES </h4>
                                     </div>
+
                                     <div class="w-100 text-center">
-                                        <a href="javascript:OpenWin(2)" class="text-danger">YOUR PRIVACY MATTERS!</a>
+                                        <div id="iframeHolder1"></div>
                                     </div>
-                                    <div class="w-100 text-center">
-                                        <button type="button" class="btn btn-labeled btn-primary mx-3  my-2 my-md-4 ">
-                                            <span class="btn-label">
-                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
-                                         </span>LogIn</button>
-                                        <button type="button" class="btn btn-labeled btn-success mx-3  my-2 my-md-4">
-                                            <span class="btn-label">
-                                             <i  class="fa fa-user"  aria-hidden="true"></i>
-                                         </span>Register</button>
-                                    </div>
-                                    <div class="w-100">
-                                        <p class="text-dark text-center">Registration is required to access our data stacks.</p>
-                                    </div>
+
+
                                 </div>
                             </div>
                             <div class="collapse  my-3 shadow" id="collapseExample02" data-parent="#main">
@@ -384,21 +375,10 @@
                                         <h4 class="font-weight-bold font-size-20 my-2 border-bottom">   WORLD BRANDS </h4>
                                     </div>
                                     <div class="w-100 text-center">
-                                        <a href="javascript:OpenWin(2)" class="text-danger">YOUR PRIVACY MATTERS!</a>
+                                        <div id="iframeHolder2"></div>
                                     </div>
-                                    <div class="w-100 text-center">
-                                        <button type="button" class="btn btn-labeled btn-primary mx-3  my-2 my-md-4">
-                                            <span class="btn-label">
-                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
-                                         </span>LogIn</button>
-                                        <button type="button" class="btn btn-labeled btn-success mx-3  my-2 my-md-4">
-                                            <span class="btn-label">
-                                             <i  class="fa fa-user"  aria-hidden="true"></i>
-                                         </span>Register</button>
-                                    </div>
-                                    <div class="w-100">
-                                        <p class="text-dark text-center">Registration is required to access our data stacks.</p>
-                                    </div>
+
+
                                 </div>
                             </div>
                             <div class="collapse  my-3 shadow" id="collapseExample03" data-parent="#main">
@@ -406,22 +386,12 @@
                                     <div class="w-100 text-center mb-2 ">
                                         <h4 class="font-weight-bold font-size-20 my-2 border-bottom">   EXECUTIVES ENGAGED </h4>
                                     </div>
+
                                     <div class="w-100 text-center">
-                                        <a href="javascript:OpenWin(2)" class="text-danger">YOUR PRIVACY MATTERS!</a>
+                                        <div id="iframeHolder3"></div>
                                     </div>
-                                    <div class="w-100 text-center">
-                                        <button type="button" class="btn btn-labeled btn-primary mx-3 my-2 my-md-4 ">
-                                            <span class="btn-label">
-                                             <i class="fa fa-sign-in" aria-hidden="true"></i>
-                                         </span>LogIn</button>
-                                        <button type="button" class="btn btn-labeled btn-success mx-3 my-4 my-md-4">
-                                            <span class="btn-label">
-                                             <i  class="fa fa-user"  aria-hidden="true"></i>
-                                         </span>Register</button>
-                                    </div>
-                                    <div class="w-100">
-                                        <p class="text-dark text-center">Registration is required to access our data stacks.</p>
-                                    </div>
+
+
                                 </div>
                             </div>
                             <div class="collapse  my-3 shadow" id="collapseExample04" data-parent="#main">
@@ -489,21 +459,24 @@
                     </div>
                 </div>
                 <!---End:COMPANIES, WorldBrands,Executive, Differentiators Block --->
+
+
+
                 <!---Begin:Buy, WorldBrands,Executive, Differentiators Block --->
                 <div class="row  mt-4 mb-0 ">
                     <div class="w-100">
                         <div id="main2">
                             <span class="d-flex flex-md-row flex-sm-column flex-wrap flex-md-wrap flex-lg-nowrap flex-xl-nowrap  justify-content-around">
-                            <a https="www.strategyr.com/AddToCart.asp" class="btn btn-gia-secondary rounded-0 shadow-sm m-1  m-md-2  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " >
+                            <a https="www.strategyr.com/AddToCart.asp" class="btn btn-gia-secondary rounded-0 shadow-sm m-1  m-md-2  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " id="buy_report_btn" >
                                 BUY REPORT USD $5600
                             </a>
-                            <button class="btn btn-gia-secondary rounded-0 shadow-sm m-1 m-md-2  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample06" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class="btn btn-gia-secondary rounded-0 shadow-sm m-1 m-md-2  text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample06" aria-expanded="flase" aria-controls="collapseExample" id="report_index_btn">
                                 REPORT INDEX
                             </button>
-                            <button class="btn btn-gia-secondary rounded-0 shadow-sm m-1 m-md-2 w-sm-100   text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample07" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class="btn btn-gia-secondary rounded-0 shadow-sm m-1 m-md-2 w-sm-100   text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample07" aria-expanded="flase" aria-controls="collapseExample" id="project_compendium_btn">
                                 PROJECT COMPENDIUM <span class="text-danger">*</span>
                             </button>
-                            <button class="btn btn-gia-secondary rounded-0 shadow-sm m-1 m-md-2 w-sm-100   text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample08" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class="btn btn-gia-secondary rounded-0 shadow-sm m-1 m-md-2 w-sm-100   text-white font-weight-bold font-size-15 w-xl-25 w-lg-25 w-md-45 " type="button" data-toggle="collapse" data-target="#collapseExample08" aria-expanded="flase" aria-controls="collapseExample" id="expert_panel_btn">
                                 EXPERT PANEL
                             </button>
                             </span>
@@ -674,7 +647,7 @@
                         <button type="button" class="btn btn-labeled btn-primary mx-3  my-2 my-md-4 ">
                             <span class="btn-label">
                                              <i class="fa fa-sign-in" aria-hidden="true"></i>
-                                         </span>LogIn</button> (or)
+                                         </span>LogIn</button>
                         <button type="button" class="btn btn-labeled btn-success mx-3  my-2 my-md-4">
                             <span class="btn-label">
                                              <i  class="fa fa-user"  aria-hidden="true"></i>
@@ -690,33 +663,133 @@
 
         <!----Js Scripts ------>
 
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#iframe1').on('load', function() {
+                    $('#loader_01').hide();
+                });
+            });
+
+        </script>
+
 
         <script>
-            //----Executive Engagment----//
-            < script type = "text/javascript" >
-                $(function() {
-                    $('#button').click(function() {
-                        if (!$('#iframe').length) {
-                            $('#iframeHolder').html('<iframe id="iframe" src="https://www.strategyr.com/Influencer_report_List.asp?PEOPLE_CNT=1166&SRCWord=[A-D]&code=MCP-2204&EncryptSTR=WYQ-ZA1E-J-IGIG-XJ11EJ7PLHJO" width="100%" height="600"></iframe>');
-                        }
-                    });
+            //--- LOADING PAGE FROM TOP X AXES---//
+            $(document).ready(function() {
+                $(window).scrollTop(0);
+            });
+
+        </script>
+
+        <script>
+            //----ACCORDION----//
+            var acc = $(".released_abstract .accordion_rel");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel2 = this.nextElementSibling;
+                    if (panel2.style.maxHeight) {
+                        panel2.style.maxHeight = null;
+                    } else {
+                        panel2.style.maxHeight = panel2.scrollHeight + "px";
+                    }
                 });
+            }
+            //----ACCORDION----//
+            var acc = document.getElementsByClassName("accordion_key");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel3 = this.nextElementSibling;
+                    if (panel3.style.maxHeight) {
+                        panel3.style.maxHeight = null;
+                    } else {
+                        panel3.style.maxHeight = panel3.scrollHeight + "px";
+                    }
+                });
+            }
+            //-----NUMBER COUNT----//
+            $('.count').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 15000,
+                    easing: 'linear',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+
+            //---COLLAPSE DIRACTION--//
+
+            $("#myCollapsible").collapse({
+                toggle: true,
+                direction: "up"
+            });
+
+            //---pageloadpop---//
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('.pageload_popup').addClass('pop_active');
+                    // $("body").addClass('page_block');
+                } else {
+                    $('.pageload_popup').removeClass('pop_active');
+                    //$("body").removeClass('page_block');
+
+                }
+            });
+
+        </script>
+        <script>
+            $("button.close").click(function() {
+                $('.pageload_popup').hide();
+                $("body").removeClass('page_block');
+            });
+
+        </script>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            //====COMANIES TAB ====//
+
+            $(function() {
+                $('#companies_btn').click(function() {
+
+                    if (!$('#iframe1').length) {
+                        $('#iframeHolder1').html('<iframe id="iframe1" src="https://www.strategyr.com/Influencer_report_List.asp?PEOPLE_CNT=1166&SRCWord=[A-D]&code=MCP-2204&EncryptSTR=WYQ-ZA1E-J-IGIG-XJ11EJ7PLHJO" width="100%" height="600"></iframe>');
+
+                    }
+
+                });
+            });
+
+            //====WORLD BRANDS TAB ====//
+
+            $(function() {
+                $('#world_brand_btn').click(function() {
+                    if (!$('#iframe2').length) {
+                        $('#iframeHolder2').html('<iframe id="iframe2" src="https://www.strategyr.com/" width="100%" height="600"></iframe>');
+                    }
+                });
+            });
+
+            //====EXECUTIVE TAB ====//
+
+            $(function() {
+                $('#executives_btn').click(function() {
+                    if (!$('#iframe3').length) {
+                        $('#iframeHolder3').html('<iframe id="iframe3" src="https://www.strategyr.com/Influencer_report_List.asp?PEOPLE_CNT=1166&SRCWord=[A-D]&code=MCP-2204&EncryptSTR=WYQ-ZA1E-J-IGIG-XJ11EJ7PLHJO" width="100%" height="600"></iframe>');
+                    }
+                });
+            });
 
         </script>
 
 
 
-        //--- LOADING PAGE FROM TOP X AXES---// $(document).ready(function() { $(window).scrollTop(0); }); //----ACCORDION----// var acc = $(".released_abstract .accordion_rel"); var i; for (i = 0; i
-        < acc.length; i++) { acc[i].addEventListener( "click", function() { this.classList.toggle( "active"); var panel2=t his.nextElementSibling; if (panel2.style.maxHeight) { panel2.style.maxHeight=n ull; } else { panel2.style.maxHeight=p anel2.scrollHeight + "px"; } }); } //----ACCORDION----// var acc=d ocument.getElementsByClassName( "accordion_key"); var i; for (i=0 ; i < acc.length; i++) { acc[i].addEventListener( "click", function() { this.classList.toggle( "active"); var panel3=t his.nextElementSibling; if (panel3.style.maxHeight) { panel3.style.maxHeight=n ull; } else { panel3.style.maxHeight=p anel3.scrollHeight + "px"; } }); } //-----NUMBER COUNT----// $( '.count').each(function() { $(this).prop( 'Counter', 0).animate({ Counter: $(this).text() }, { duration: 15000, easing: 'linear', step: function(now) { $(this).text(Math.ceil(now)); } }); }); //---LAZY LOAD---// $(function() { $(function() { $( '.lazy').lazy(); }); }); //---COLLAPSE DIRACTION--// $( "#myCollapsible").collapse({ toggle: true, direction: "up" }); //---pageloadpop---// $(window).scroll(function() { if ($(this).scrollTop()> 100) { $('.pageload_popup').addClass('pop_active'); // $("body").addClass('page_block'); } else { $('.pageload_popup').removeClass('pop_active'); //$("body").removeClass('page_block'); } });
-
-            </script>
-            <script>
-                $("button.close").click(function() {
-                    $('.pageload_popup').hide();
-                    $("body").removeClass('page_block');
-                });
-
-            </script>
 </body>
 
 </html>

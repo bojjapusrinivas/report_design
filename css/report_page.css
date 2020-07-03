@@ -4,6 +4,48 @@
 
 
 /*---------------------
+    ONPAGE POPUP
+----------------------*/
+
+.pageload_popup {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+}
+.pageload_popup .card {
+    top: -50px;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    position: relative;
+}
+.pageload_popup.pop_active {
+    opacity: 1;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+}
+.pageload_popup.pop_active .card {
+    top: 0px;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+}
+.pageload_popup .card button.close {
+    float: right;
+    height: 8px;
+    width: 8px;
+}
+
+/*---------------------
  DATA POOL NUMBER COUNT
 ---------------------*/
 
@@ -97,7 +139,7 @@ ABSTRACT ACCORDION
     max-height: auto !important;
     padding: 2px 18px;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.5s ease-out;
 }
 .released_abstract . .panel2 p {
     margin-top: 0px;
@@ -172,7 +214,7 @@ ABSTRACT ACCORDION
     background-color: white;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.5s ease-out;
 }
 
 /*=================
