@@ -68,28 +68,44 @@
 }
 .covid_placekeeper a.covid_19_Acc:before {
     content: '\002B';
-    color: #169fe6;
-    width: 15px;
-    height: 100%;
-    top: 0px;
-    right: 30px;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    top: 3px;
+    left: 65%;
     position: absolute;
-    font-size: 21px;
+    font-size: 25px;
     font-weight: bold;
+    background: #169fe6;
+    padding: -2px !important;
+    border-radius: 100%;
+    line-height: 23px;
 }
 .covid_placekeeper a.covid_19_Acc.collapsed:before {
     content: '\002B';
-    color: #169fe6;
-    width: 15px;
-    height: 100%;
-    top: 0px;
-    right: 30px;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    top: 3px;
+    left: 65%;
     position: absolute;
-    font-size: 21px;
+    font-size: 25px;
     font-weight: bold;
+    background: #169fe6;
+    padding: -2px !important;
+    border-radius: 100%;
+    line-height: 23px;
 }
 .covid_placekeeper a.covid_19_Acc:before {
     content: '\2212';
+}
+@media only screen and (max-width:992px) {
+    .covid_placekeeper a.covid_19_Acc:before {
+        left: 73%;
+    }
+    .covid_placekeeper a.covid_19_Acc.collapsed:before {
+        left: 73%;
+    }
 }
 @media only screen and (max-width:767px) {
     .covid_placekeeper a.covid_19_Acc {
@@ -97,7 +113,10 @@
         font-size: 15px;
     }
     .covid_placekeeper a.covid_19_Acc:before {
-        right: 10px !important;
+        left: 90%;
+    }
+    .covid_placekeeper a.covid_19_Acc.collapsed:before {
+        left: 90%;
     }
 }
 
@@ -195,6 +214,8 @@ ABSTRACT ACCORDION
     outline: none;
     font-size: 14px;
     transition: 0.4s;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .accordion_new .active,
 .accordion_new .accordion_key:hover {
@@ -226,7 +247,7 @@ ABSTRACT ACCORDION
     overflow: visible !important;
 }
 .insider .offer-content {
-    padding: 23px 8px 10px 8px;
+    padding: 10px;
     position: relative;
     overflow: visible;
 }
