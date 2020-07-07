@@ -154,3 +154,48 @@
         opacity: 1;
     }
 }
+
+/*====================
+    MEDIA QURIS
+====================*/
+
+@media only screen and (max-width:991px) {
+    .dash_board ul li.list ul li {
+        font-size: 15px;
+        margin: 15px;
+    }
+    .dash_board ul li.list ul li:before {
+        left: 9px;
+    }
+}
+@media only screen and (max-width:767px) {
+    .dash_board ul li.list {
+        position: absolute;
+        font-size: 16px;
+    }
+    .dash_board ul li.list ul {
+        margin-top: 10px;
+        text-align: left;
+    }
+    .dash_board ul li.list ul li {
+        margin-top: 2px;
+        position: relative;
+    }
+    .dash_board ul li.list ul li:before {
+        content: "\f0da";
+        font-size: 12px;
+        color: #6c757d !important;
+        font-family: FontAwesome;
+        position: absolute;
+        left: -10px;
+        top: 7px;
+    }
+    .datastact_block {
+        margin-top: 120px !important;
+    }
+}
+@media only screen and (max-width:480px) {
+    .dash_board h3 {
+        font-size: 17px !important;
+    }
+}
