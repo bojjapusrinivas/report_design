@@ -113,10 +113,34 @@
         font-size: 15px;
     }
     .covid_placekeeper a.covid_19_Acc:before {
-        left: 90%;
+        top: 0 !important;
+        left: 93%;
+        font-weight: bold;
+        background: #169fe6;
+        padding: 10px 0px !important;
+        border-radius: 0px;
+        height: 100%;
+        line-height: 15px;
+        font-size: 15px;
     }
     .covid_placekeeper a.covid_19_Acc.collapsed:before {
-        left: 90%;
+        top: 0 !important;
+        left: 93%;
+        font-weight: bold;
+        background: #169fe6;
+        padding: 10px 0px !important;
+        border-radius: 0px;
+        height: 100%;
+        line-height: 15px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:448px) {
+    .covid_placekeeper a.covid_19_Acc.collapsed:before {
+        left: 91%;
+    }
+    .covid_placekeeper a.covid_19_Acc:before {
+        left: 91%;
     }
 }
 
@@ -188,7 +212,7 @@ ABSTRACT ACCORDION
     }
     .released_abstract .accordion_rel:after {
         visibility: visible;
-        font-size: 14px;
+        font-size: 15px;
         right: 9px;
         z-index: 99;
         position: absolute;
@@ -205,7 +229,7 @@ ABSTRACT ACCORDION
 
 .accordion_new .accordion_key {
     background-color: #eee;
-    color: #444;
+    color: #000;
     cursor: pointer;
     padding: 6px 18px;
     width: 100%;
@@ -237,6 +261,22 @@ ABSTRACT ACCORDION
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
+}
+@media only screen and (max-width:448px) {
+    .accordion_new .accordion_key {
+        background-color: #eee;
+        color: #000;
+        cursor: pointer;
+        padding: 6px 3px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+        transition: 0.4s;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
 }
 
 /*=================
@@ -290,4 +330,51 @@ ABSTRACT ACCORDION
     font-size: 16px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+/*================
+    players_tab
+================*/
+.players_tab li {
+    position: relative;
+    margin-bottom: 1px
+}
+.players_tab li:before {
+    content: '\002B';
+    color: #ffffff;
+    width: 25px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    background: #169fe6;
+    padding: 9px 8px !important;
+    line-height: 23px;
+    display: none
+}
+.players_tab li.active:before {
+    content: '\2212' !important;
+    color: #ffffff;
+    width: 25px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    background: #169fe6;
+    padding: 9px 8px !important;
+    line-height: 23px;
+    display: none
+}
+@media only screen and (max-width:767px) {
+    .players_tab li:before,
+    .players_tab li.active:before {
+        display: block;
+    }
+    /* .players_tab_content .tab-content:nth-child(1) {
+        display: none !important;
+    }*/
 }
