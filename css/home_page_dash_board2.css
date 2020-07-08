@@ -163,8 +163,8 @@
         margin-top: 10px;
     }
     .dash_board ul li.list ul li {
-        margin-top: 2px;
         position: relative;
+        margin-bottom: 5px !important;
     }
     /*.dash_board ul li.list ul li:before {
         content: "\f0da";
