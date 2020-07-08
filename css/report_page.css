@@ -145,6 +145,96 @@
 }
 
 /*---------------------
+SEGMENTS TAB & ACCORDION
+---------------------*/
+
+.players_tab {
+    display: block;
+}
+.tabs-container .tab_accordion {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 0px 18px 0px 8px !important;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 13px;
+    transition: 0.4s;
+    font-weight: 600;
+    line-height: 18px;
+    position: relative;
+    display: none;
+}
+.tabs-container .tab_accordion .active,
+.tabs-container .tab_accordion:hover {
+    background-color: #eee;
+}
+.tabs-container .tab_accordion:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 20px;
+    visibility: hidden;
+}
+.tabs-container .tab_accordion.active:after {
+    content: "\2212";
+    color: #000;
+}
+.tabs-container .panel4 {
+    background-color: #fff;
+    min-height: auto !important;
+    padding: 0px 18px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.tabs-container .panel4 p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+@media only screen and (max-width:767px) {
+    .players_tab {
+        display: none;
+    }
+    .tabs-container .tab_accordion {
+        font-size: 15px;
+        background-color: #eee;
+        /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);*/
+        padding: 8px 0px 5px 8px !important;
+        line-height: 17px;
+        margin-bottom: 0px;
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-weight: bold
+    }
+    .tabs-container .tab_accordion:before {
+        content: '';
+        position: absolute;
+        right: 0px;
+        width: 25px;
+        height: 100%;
+        top: 0px;
+        color: #000 !important;
+    }
+    .tabs-container .tab_accordion:after {
+        visibility: visible;
+        font-size: 15px;
+        right: 9px;
+        z-index: 99;
+        position: absolute;
+        top: calc(100% - 70%);
+    }
+    .tabs-container .panel4 {
+        max-height: 0px;
+    }
+}
+
+/*---------------------
 ABSTRACT ACCORDION
 ---------------------*/
 
