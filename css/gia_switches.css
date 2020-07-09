@@ -297,7 +297,7 @@ small,
     margin-left: -1px;
     border-left-width: 1px;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .list-group-horizontal-sm {
         -ms-flex-direction: row;
         flex-direction: row;
@@ -690,7 +690,7 @@ code {
     -ms-flex-item-align: stretch !important;
     align-self: stretch !important;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .flex-sm-row {
         -ms-flex-direction: row !important;
         flex-direction: row !important;
@@ -1294,7 +1294,7 @@ code {
     -ms-flex-order: 12;
     order: 12;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .order-sm-first {
         -ms-flex-order: -1;
         order: -1;
@@ -1561,7 +1561,7 @@ code {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .d-sm-none {
         display: none !important;
     }
@@ -2061,7 +2061,7 @@ code {
 .mx-auto {
     margin-left: auto !important;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .m-sm-0 {
         margin: 0 !important;
     }
@@ -5028,7 +5028,7 @@ button.bg-secondary:focus {
 .float-none {
     float: none !important;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .float-sm-left {
         float: left !important;
     }
@@ -5304,7 +5304,7 @@ button.bg-secondary:focus {
 .vh-100 {
     height: 100vh !important;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .w-sm-5 {
         width: 5% !important;
     }
@@ -5833,7 +5833,7 @@ button.bg-secondary:focus {
 .text-center {
     text-align: center !important;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .text-sm-left {
         text-align: left !important;
     }
@@ -5979,7 +5979,7 @@ a.text-dark:focus {
     color: rgba(255, 255, 255, 0.5) !important;
 }
 .text-brown {
-    color: #4c0404
+    color: #4c0404 !important;
 }
 .text-hide {
     font: 0/0 a;
@@ -6388,7 +6388,7 @@ a.text-dark:focus {
     right: 0;
     left: auto;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .dropdown-menu-sm-left {
         right: auto;
         left: 0;
@@ -7621,7 +7621,7 @@ textarea.form-control.is-invalid {
 .b-neg-100 {
     bottom: -100px !important;
 }
-@media only screen and (min-width:250px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     @charset "utf-8";
     /* CSS Document */
     .t-sm-5 {
