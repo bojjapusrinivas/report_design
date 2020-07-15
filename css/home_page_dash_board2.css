@@ -4,6 +4,13 @@
     margin-left: 3px;
     padding-bottom: 10px;
 }
+.tracking {}
+.tracking h6 {
+    color: #800000;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
 .loading {
     color: #800000;
     font-size: 12px;
