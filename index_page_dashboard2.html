@@ -60,9 +60,9 @@
 ================================================== -->
         <!---BEGIN: DASHBOARD--->
         <div class="container mb-3">
-            <div class="row w-100 py-2 my-2 border-top text-center dash_board ">
-                <h2 class="text-black font-weight-bolder my-0 font-size-25 wow animate fadeInDown" data-wow-delay="0.0s">MARKETGLASS<sup class="subscript_text" >TM</sup></h2>
-                <h3 class="text-black font-weight-bold my-0 line-height-normal font-size-20  wow animate fadeInDown" data-wow-delay="0.5s">A New User Experience</h3>
+            <div class="row w-100 py-2 my-2 text-center dash_board ">
+                <h2 class="text-black font-weight-bolder my-0 font-size-25 wow animate fadeInDown" data-wow-delay="0.5s">MARKETGLASS<sup class="subscript_text" >TM</sup></h2>
+                <!--h3 class="text-black font-weight-bold my-0 line-height-normal font-size-20  wow animate fadeInDown" data-wow-delay="0.5s">A New User Experience</h3-->
                 <ul class="m-0 w-100 p-0">
                     <li class="text-black font-weight-bold my-1 line-height-normal font-size-20 list" id="example1"> </li>
                     <li class="text-black  my-1 line-height-normal font-size-20 list">Data Into <span class="text-brown wow animate fadeIn font-weight-bold wow animate fadeIn" data-wow-delay="4s">Information</span></li>
@@ -80,26 +80,37 @@
                     </li>
                 </ul>
             </div>
-            <div class="row w-100 d-flex my-4  py-2 datastact_block opacity flex-sm-column flex-md-row justify-content-center ">
-                <div class="shadow text-center p-2 three columns  mx-1 wow animate fadeInUp data_stacks" data-wow-delay="14s">
-                    <h4 class="border-bottom my-1 text-uppercase text-black">Companies</h4>
-                    <h2 class="mb-0"><span class="count text-primary font-weight-bold">847461</span></h2>
+
+            <div class="row w-100 d-flex my-4  py-2 datastact_block opacity_animation flex-sm-column flex-md-row justify-content-center ">
+
+                <div class=" text-center p-2 three columns  mx-1  data_stacks data_stacks_01">
+                    <h4 class=" my-1 text-uppercase text-black">Companies</h4>
+                    <h2 class="mb-0"><span class="count text-primary font-weight-bold count_6">847461</span></h2>
+                    <h6 class="loading">TRACKING</h6>
                 </div>
-                <div class="shadow text-center p-2 three columns mx-1 wow animate fadeInUp data_stacks" data-wow-delay="14.5s">
-                    <h4 class="border-bottom my-1 text-uppercase text-black">Brands</h4>
-                    <h2 class="mb-0"><span class="count text-primary font-weight-bold">1208518</span></h2>
+
+                <div class="text-center p-2 three columns mx-1  data_stacks data_stacks_02">
+                    <h4 class=" my-1 text-uppercase text-black">Brands</h4>
+                    <h2 class="mb-0"><span class="count text-primary font-weight-bold count_7">1208518</span></h2>
+                    <h6 class="loading">TRACKING</h6>
                 </div>
-                <div class="shadow text-center p-2 three columns mx-1 wow animate fadeInUp data_stacks" data-wow-delay="15s">
-                    <h4 class="border-bottom my-1 text-uppercase text-black">Projects</h4>
-                    <h2 class="mb-0"><span class="count text-primary font-weight-bold ">9281</span></h2>
+
+                <div class=" text-center p-2 three columns mx-1  data_stacks data_stacks_03">
+                    <h4 class=" my-1 text-uppercase text-black">Projects</h4>
+                    <h2 class="mb-0"><span class="count text-primary font-weight-bold count_4 ">9281</span></h2>
+                    <h6 class="loading">TRACKING</h6>
                 </div>
-                <div class="shadow text-center p-2 three columns mx-1 wow animate fadeInUp data_stacks" data-wow-delay="15.5s">
-                    <h4 class="border-bottom my-1 text-uppercase text-black">Executives</h4>
-                    <h2 class="mb-0"><span class="count text-primary font-weight-bold">2418714</span></h2>
+
+                <div class=" text-center p-2 three columns mx-1  data_stacks data_stacks_04">
+                    <h4 class=" my-1 text-uppercase text-black">Executives</h4>
+                    <h2 class="mb-0"><span class="count text-primary font-weight-bold count_7">2418714</span></h2>
+                    <h6 class="loading">TRACKING</h6>
                 </div>
-                <div class="shadow text-center p-2 three columns mx-1 wow animate fadeInUp data_stacks" data-wow-delay="16s">
-                    <h4 class="border-bottom my-1 text-uppercase text-black">Clients</h4>
-                    <h2 class="mb-0"><span class="count text-primary font-weight-bold ">42672</span></h2>
+
+                <div class=" text-center p-2 three columns mx-1 data_stacks data_stacks_05">
+                    <h4 class=" my-1 text-uppercase text-black">Clients</h4>
+                    <h2 class="mb-0"><span class="count text-primary font-weight-bold count_5 ">42672</span></h2>
+                    <h6 class="loading">TRACKING</h6>
                 </div>
             </div>
         </div>
@@ -112,11 +123,51 @@
     </script>
 
     <script>
-        $('.count').each(function() {
+        $('.count_4').each(function() {
             $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()
             }, {
-                duration: 50000,
+                duration: 25000,
+                easing: 'linear',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+
+        $('.count_5').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 35000,
+                easing: 'linear',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+
+        $('.count_6').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 45000,
+                easing: 'linear',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+
+
+        $('.count_7').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 55000,
                 easing: 'linear',
                 step: function(now) {
                     $(this).text(Math.ceil(now));
@@ -125,7 +176,6 @@
         });
 
     </script>
-
 
     <script>
         window.instance = new TypeIt("#example1", {
