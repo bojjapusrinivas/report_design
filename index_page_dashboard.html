@@ -85,8 +85,8 @@
 
             <div class="row w-100  my-4  py-2 datastact_block opacity_animation ">
 
-                <div class="row tracking w-100 wow animation mt-3  mb-2 fadeInUp " data-wow-delay="13.5s" id="tracking">
-                    <h6 class=" my-0 py-0 text-center loading">TRACKING</h6>
+                <div class="row tracking w-100 wow animation mt-2  mb-2 fadeInUp " data-wow-delay="13.5s" id="tracking">
+                    <h6 class=" my-0 py-0 text-center">TRACKING...</h6>
                 </div>
 
                 <div class="row flex-sm-column flex-md-row justify-content-center d-flex mt-2 ">
@@ -156,7 +156,7 @@
                 step: function(now) {
                     $(this).text(Math.ceil(now));
                     if ($('.count')[0].innerHTML == totalCount) {
-                        $('#tracking').hide(500);
+                        //$('#tracking').hide(500);//
                     }
                 }
 
