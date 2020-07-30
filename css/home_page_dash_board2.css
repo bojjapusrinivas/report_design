@@ -4,12 +4,13 @@
     margin-left: 3px;
     padding-bottom: 10px;
 }
-.tracking {}
 .tracking h6 {
     color: #800000;
-    font-size: 17px;
+    font-size: 20px;
     text-align: center;
     font-weight: bold;
+    background: rgba(0, 0, 0, 0.0);
+    padding: 2px 0px !important;
 }
 .loading {
     color: #800000;
@@ -145,6 +146,9 @@
 
 /*----DATA STACK-----*/
 
+.datastact_block {
+    padding: 3px 0px;
+}
 .data_stacks {
     transform: scale(1, 1);
     transition: all 0.2s linear;
@@ -152,9 +156,11 @@
     -moz-transition: all 0.2s linear;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     border-bottom: 0px solid #dee2e6 !important;
+    padding: 3px 0px !important;
 }
 .data_stacks h4 {
     border-bottom: 1px solid #dee2e6 !important;
+    margin: 2px 0px !important;
 }
 .data_stacks:hover {
     transform: scale(1.1, 1.1);
@@ -308,11 +314,13 @@
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     }
     .datastact_block {
-        margin-top: 150px !important;
+        margin-top: 165px !important;
+        padding: 0px 0px !importrant;
     }
     .data_stacks {
         box-shadow: 0 0.5rem 0rem rgba(0, 0, 0, 0.0) !important;
         border-bottom: 1px solid #dee2e6 !important;
+        padding: 0px 0px;
     }
     .data_stacks_05 {
         box-shadow: 0 0.5rem 0rem rgba(0, 0, 0, 0.0) !important;
@@ -320,6 +328,7 @@
     }
     .data_stacks h4 {
         border-bottom: 0px solid #dee2e6 !important;
+        margin: 0px 0px !important;
     }
     .data_stacks_01,
     .data_stacks_02,
@@ -350,6 +359,11 @@
     .long_search_box .search-container form .drp_sec {
         Position: relative;
         padding: 10px !important;
+    }
+    .tracking h6 {
+        font-size: 17px;
+        background: rgba(0, 0, 0, 0.09);
+        padding: 8px 0px !important;
     }
 }
 @media only screen and (max-width:480px) {
