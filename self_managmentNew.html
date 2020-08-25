@@ -90,14 +90,38 @@
         <!-- Content
 ================================================== -->
         <!---BEGN REPORT TITLE--->
+        <style>
+            span.badge.badge-danger.valied_client {
+                position: absolute;
+                right: 0px;
+                top: 17px;
+                transform: skewX(-10deg);
+                margin: 0px;
+            }
+            
+            @media only screen and (max-width: 767px) and (min-width: 150px) {
+                span.badge.badge-danger.valied_client {
+                    position: relative;
+                    right: 0px;
+                    top: 0;
+                    transform: skewX(-0deg);
+                    margin: 10px;
+                }
+            }
+
+        </style>
+
+
+
         <div class="container">
             <div class="row w-100 py-2 my-2  border-bottom text-center">
                 <div class="w-xl-10 w-lg-10 w-md-15 w-30 mx-auto mt-2">
                     <img src="https://www.strategyr.com/Company_Logos/ibm_PNG19657.png" class="img-fluid" title="IBM" alt="IBM" />
                 </div>
                 <h3 class="text-black font-weight-bold my-1 line-height-normal font-size-30">IBM Corporation </h3>
-                <div class="w-100">
+                <div class="w-100 position-relative ">
                     <ul class="d-flex  w-xl-10 w-lg-10 w-md-15 w-sm-30 w-40 my-0 mx-auto justify-content-between">
+
                         <li class="px-1  my-2">
                             <a href="https://www.linkedin.com/company/ibm" target="new">
                                 <img src="https://www.strategyr.com//images/social/linkedin.jpg" title="Linkedin"></a>
@@ -111,6 +135,8 @@
                                 <img src="https://www.strategyr.com//images/social/youtube.png" title="YouTube"></a>
                         </li>
                     </ul>
+
+                    <span class="badge badge-danger valied_client p-3 ">VALUED CLIENT!</span>
                 </div>
             </div>
         </div>
