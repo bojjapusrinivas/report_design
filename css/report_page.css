@@ -490,6 +490,71 @@ ABSTRACT ACCORDION-2
     }
 }
 
+/*--- AFFILIATES---*/
+
+.affiliates .accordion_new,
+.affiliates .accordion_new .affiliates_block {
+    position: relative;
+}
+.affiliates .accordion_new .accordion_key2 {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 6px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    transition: 0.4s;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 40px;
+    overflow: hidden;
+}
+.affiliates .accordion_new .active,
+.affiliates .accordion_new .accordion_key2:hover {
+    background-color: #eee;
+}
+.affiliates .accordion_new .accordion_key2:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.affiliates .accordion_new .active:after {
+    content: "\2212";
+}
+.affiliates .accordion_new .panel5 {
+    padding: 0 18px;
+    background-color: #eaeaea;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+    left: 0px;
+    top: 41px;
+    z-index: 999;
+    width: 100%;
+}
+@media only screen and (max-width:448px) {
+    .affiliates .accordion_new .accordion_key2 {
+        background-color: #eee;
+        color: #000;
+        cursor: pointer;
+        padding: 6px 3px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+        transition: 0.4s;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
+
 /*=================
     INSIDER TAB
 ==================*/
