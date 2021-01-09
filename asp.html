@@ -1,0 +1,1926 @@
+<!doctype html>
+<HTML>
+<HEAD>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href="../css/gia_switches.css" async>
+<title>LICENSED REPORT FEEDBACK - Global Industry Analysts, Inc.</title>
+<%	Response.Buffer = True
+	Response.ExpiresAbsolute = 0
+	
+	'If trim(session("ReportCode"))="" Then
+		session("ReportCode") = trim(request("code"))	
+	'End If
+	
+	If Trim(request("encID"))<>"" then
+	If session("security_code") ="" then
+	   session("security_code") = Trim(request("encID"))
+	End If
+	Else
+		session("security_code") = ""
+	End If
+		
+	strReportTitle = trim(session("ReportTitle"))
+	strReportCode = trim(session("ReportCode"))
+	intRptID = trim(session("ReportID"))
+
+	
+'''IF Seeions expires log out to main screen'''''
+IF trim(session("EID"))="" THEN
+	''response.redirect "https://www.strategyr.com/GIA_Research_Program.asp?code="&Trim(request("code"))&"&SessOUT=True"
+End If
+
+If Trim(session("isMCP"))="" then
+	If Trim(request("code"))<>"" Then
+	  ''isMCPCnt = InStr("MCP-1001","-")
+	 isMCPCnt = InStr(request("code"),"-")
+	 If (isMCPCnt>0) then
+		session("isMCP") = "Y"
+	 Else
+		session("isMCP") = "N"
+	 End if
+	''response.write session("isMCP")
+	End If
+End If	
+
+
+
+%>
+<!--#include file="adovbs.asp"-->
+<!--#INCLUDE FILE="aspincludes/dbopen.asp" -->
+<link href="eQuestion.css" rel="stylesheet" type="text/css">
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+
+<link rel="stylesheet" href="../css/styleRP1.css">
+<link rel="stylesheet" href="../css/gia.css">
+<link rel="stylesheet" href="../css/colors/blue.css" id="colors">
+<link rel="shortcut icon" href="../images/favicon.ico">
+<link rel='stylesheet' href="../css/all-ie-only.css">
+<link rel='stylesheet' href="../css/tri_page.css">
+<link rel='stylesheet' href="../css/self_man_style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="all-ie-only.css" />
+<![endif]-->
+
+<!-- Java Script
+================================================== -->
+<script src="../scripts/jquery.min.js"></script>
+<script src="../scripts/jquery.flexslider.js"></script>
+<script src="../scripts/jquery.selectnav.js"></script>
+<script src="../scripts/jquery.twitter.js"></script>
+<script src="../scripts/jquery.modernizr.js"></script>
+<script src="../scripts/jquery.easing.1.3.js"></script>
+<script src="../scripts/jquery.contact.js"></script>
+<script src="../scripts/jquery.isotope.min.js"></script>
+<script src="../scripts/jquery.jcarousel.js"></script>
+<script src="../scripts/jquery.fancybox.min.js"></script>
+<script src="../scripts/jquery.layerslider.min.js"></script>
+<script src="../scripts/jquery.shop.js"></script>
+<script src="../scripts/custom.js"></script>
+<script src="../resize_img/jquery.lazy.js"></script>
+<script src="../resize_img/jquery.lazy.plugins.js"></script>
+<script>
+$(function() {
+        $('.lazy').Lazy();
+    });
+            
+/*function maxLengthCheck(object)
+  {
+    if (object.value.length > object.maxLength)
+      object.value = object.value.slice(0, object.maxLength)	  
+  }*/
+
+function maxLengthCheck(object)
+{
+ //if (object.value.length > object.maxLength)
+	// object.value = '2009';//object.value.slice(0, object.maxLength)	  
+	  inpVal=object.value; 
+	  //alert(inpVal.length);
+	if ((inpVal > 2025)||(inpVal<2019))
+	{
+		 alert("Value must be in between 2019 to 2025");
+		   object.value ='';
+		   object.focus();
+		   return false;
+	}
+}
+
+
+function toggle1(){	
+  document.forms["frmadd"].submit();
+}
+
+function Unitstoggle()				{  
+	   document.getElementById("REGION").value = "";					
+	   document.forms["frmadd"].submit();
+}
+function toggle() {
+		  //if (document.getElementById("REGION").value != "")
+		 // {
+		   // document.getElementById("DDlSegmentsList").value = "";
+		 // }						  
+		  document.forms["frmadd"].submit();
+}
+
+function CheckAddData()
+{
+	alert ("HI");
+	/*if (document.getElementById("MARKET_MEASURE").value == "")
+	{
+		alert("Market Measure cannot be left blank");
+		document.getElementById("MARKET_MEASURE").focus();
+		return false;
+	}
+	return true;*/
+}
+				
+</script>
+
+<style>
+/*Body { background:  URL(BG Graph.PNG) bottom right no-repeat;}*/
+	body{background: url(../images/bg/04.png) repeat !important;
+	color: #666 !important;
+	padding-top: 0px !important !important;
+    -webkit-font-smoothing: antialiased;
+	font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size:13px !important;
+	}
+
+	.gia_them{
+    background: #fff;
+    width: 1020px;
+    margin: 0 auto !important;
+    padding:0;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0 !important;
+`     -moz-border-radius:10px 10px 0 0 !important;
+    -o-border-radius: 10px 10px 0 0 !important;
+    -webkit-border-radius: 10px 10px 0 0 !important;
+	padding:20px;
+	box-size:borderbox;
+
+}
+
+.gia_them.top-line {
+    border-top: #169fe6 solid 8px;
+
+
+
+</style>
+
+<style>
+        /* Mask for background, by default is not display */
+        
+        td,
+        tr {
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        
+        .bg_light_yellow {
+            background: #FFD4AA
+        }
+        
+        .bg_light_gray {
+            background: #e0e0e0;
+        }
+        
+        .table_responsive {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            table-layout: fixed;
+            color: #000;
+            font-size: 14px;
+        }
+        
+        .table_responsive caption {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .table_responsive tr {
+            border: 1px solid #ddd;
+            padding: .35em;
+        }
+        
+        .table_responsive tr.cluster_row {
+            background: #e0e0e0;
+        }
+        
+        .table_responsive th,
+        .table_responsive td {
+            text-align: center;
+            border: rgba(0, 0, 0, 0.2) solid 1px;
+            position: relative;
+        }
+        
+        .table_responsive th {
+            font-weight: bold;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+        
+        .table_responsive input {
+            width: 75px;
+            margin: 0 auto;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .table_responsive {
+                border: 0;
+            }
+            .table_responsive caption {
+                font-size: 1.3em;
+            }
+            .table_responsive thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+            .table_responsive tr {
+                /* border-bottom: 3px solid #ddd;*/
+                display: block;
+                margin-bottom: .625em;
+            }
+            .table_responsive td {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                font-size: .8em;
+                text-align: right;
+            }
+            .table_responsive td::before {
+                /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+                position: absolute;
+                left: calc(100% - 96%);
+                top: calc(100% - 70%);
+            }
+            .table_responsive td:last-child {
+                border-bottom: 0;
+            }
+            /*---HIDING YEAR TAB---*/
+            .table_responsive td:nth-child(1) {
+                text-align: center;
+                font-size: 16px;
+                background: #404040;
+                color: #fff;
+            }
+            .table_responsive td:nth-child(1)::before,
+            .table_responsive td:nth-child(6)::before {
+                display: none;
+            }
+            .table_responsive tr.cluster_row td:nth-child(6) {
+                display: none;
+            }
+            .table_responsive tr.cluster_row td {
+                padding: 5px 0px
+            }
+        }
+
+    </style>
+
+
+
+</HEAD>
+<body ><!--onBeforePrint="document.body.style.display='none';" onAfterPrint="document.body.style.display='block';" onContextmenu="return false" onSelectstart="return false" onDragstart="return false"  topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"-->
+<%
+If Trim(request("encID"))<>"" then
+	If session("security_code") ="" then
+	   session("security_code") = Trim(request("encID"))
+	End If
+Else
+	session("security_code") = ""
+End If
+Set Conn9 = Server.CreateObject("ADODB.Connection")
+						Set RS9 = Server.CreateObject("ADODB.Recordset")
+						Conn9.Open DataSource1
+						RS9.CursorType = 3
+					
+						SQL9="OPEN SYMMETRIC KEY SKEY_GI1_DB_1 DECRYPTION BY CERTIFICATE CERT_GI1_DB_1; SELECT UserId,user_SurName,LastName,firstname,user_company,address1 +' '+ Address2 +' '+ city +' '+ state +' '+ zip as Address,country,user_website,telephone,fax,jobfunction,user_position,CONVERT(varchar(500), DecryptByKey(EmailID)) as EmailID FROM [user_master] WHERE security_code='" & session("security_code")& "'"
+
+						''response.write SQL9
+						rs9.open sql9, conn9
+						if not rs9.eof then
+							company = trim(rs9("User_company"))
+							address = trim(rs9("address"))
+							country = trim(rs9("country"))
+							url = trim(rs9("user_website"))
+							phone = trim(rs9("telephone"))
+							fax = trim(rs9("fax"))
+							JobFunction = trim(rs9("JobFunction"))
+							userposition= trim(rs9("user_position"))
+							First_Name = trim(rs9("firstname"))
+							Last_Name = trim(rs9("LastName"))
+							Session("First_Name")=First_Name
+							Session("Last_Name")=Last_Name
+							Session("company")=company
+							
+							session("EID")=trim(rs9("emailid"))
+							session("UserID") = trim(rs9("UserId"))
+						else
+							company = "-"
+							address = "-"
+							country = "-"
+							url = "-"
+							phone = "-"
+							fax = "-"
+							JobFunction = "-"
+							userposition= "-"
+							First_Name = "-"
+							Last_Name = "-"
+						end if
+						
+						if trim(First_Name)<>"" then
+							uname = Trim(First_Name) & " " & Trim(Last_Name)
+						else
+							uname = "New User"
+						end if
+						set rs9 = nothing
+						set conn9 = Nothing
+						
+						
+						daydisplay=WeekDayName(Weekday(Now())) & ","
+						%>
+
+<!-- Wrapper / Start -->
+<div id="wrapper" class="bor-radius">
+<div id="top-line" style="box-shadow:none; height:5px; padding:5px 0px; z-index:1"></div>
+
+
+<div class="container flo"> 
+  
+  <!-- Header -->
+  <header id="header" style="min-height:auto;"> 
+    
+    <!-- Logo start -->
+   
+				
+		<!-- <div class="sixteen columns">
+      <p class="user_name"> Welcome <%=uname%></p>
+    </div>-->
+
+	<%
+	
+	Set Conn = Server.CreateObject("ADODB.Connection")
+	Set RS = Server.CreateObject("ADODB.Recordset")
+	Conn.Open DataSource
+
+	
+	If session("isMCP") = "N" then
+		SQL = "SELECT * FROM MCPNewTopic WHERE NewCODE='" & session("ReportCode") & "'"
+	Else
+		SQL = "SELECT * FROM MCPNewTopic WHERE newCODE='" & session("ReportCode") & "'"
+	End If
+	'response.write sql
+	RS.Open SQL, conn,1,2
+	If Not RS.EOF Then
+			giacode=Trim(RS("newcode"))
+			strReportTitle = Trim(RS("title"))
+			Companies_List = Trim(RS("companyNames"))
+			CpCodes=Trim(RS("CPCodes"))
+			region=Trim(RS("region"))
+			''If session("isMCP") = "Y" Then
+			  Segment_List = Trim(RS("Segments_Covered"))
+			''End if
+			session("ReportTitle") = ucase(Trim(RS("title")))
+	End If
+	set RS = nothing
+	set conn = Nothing
+	session("giacode")=giacode
+	
+	intRptID = Trim(request("code"))
+	code = Trim(request("code"))
+	strReportTitle = session("ReportTitle") 
+	''intReportCode = session("ReportCode") 
+
+	
+	If Trim(request("code"))<>"" Then
+		If session("ReportCode") ="" then
+		   session("ReportCode") = Trim(request("code"))		   
+		End If
+	Else
+		session("ReportCode") = ""
+	End If
+
+	''''FE471CA7EA '''security_code
+
+	If Trim(request("encID"))<>"" then
+		If session("security_code") ="" then
+		   session("security_code") = Trim(request("encID"))
+		End If
+	Else
+		session("security_code") = ""
+	End If
+
+%>
+	
+    
+
+  <!-- <div class="sixteen columns">
+      <p class="user_name"> Welcome <%=uname%></p>
+    </div>-->
+    <div class="row" style="margin-bottom:0px;">
+		<!--<div class="mobile_display" style="text-align:center; width:100% !important">
+		<img src="../images/gia_smalllogo.png" alt="GIA" class="logo" style="width:65px; height:auto; margin:0 auto">
+		</div>-->
+
+		<div class="three columns desktop_display" style="text-align:center;"> <img src="../images/gia_smalllogo.png" alt="GIA" class="logo" style="width:65px; height:auto;"/> </div>
+		<!--div class="three columns mobile_display"> <img src="resize_img/sig_100.jpg" alt="elite" class="sign_logo" style="width:116px; height: auto;"/> </div-->
+
+		<div class="ten columns head_title_block" style="text-align:center">
+		<h3 style="font-weight:bold; color:#0080C2;">LICENSED REPORT FEEDBACK </h3>
+		<h3 style="font-weight:bold; color:#900;line-height: 23px;"> <%=strReportTitle%><br><span style="font-weight:bold;color:#0080C2;"><%=code%></span></h3>
+      </div>
+      <!--<div class="three columns desktop_display"> <img src="../resize_img/sig_100.jpg" alt="elite" class="sign_logo" style="width:116px; height: auto;"/> </div>-->
+	  <div class="mobile_display" style="text-align:center; width:100% !important"> <img src="../resize_img/sig_100.jpg" alt="GIA" class="logo" style="width:90px; height:auto; margin:0 auto; padding-top:10px"> </div>
+    </div>
+	</hr>
+  </header>
+  <!-- Header / End --> 
+  
+ <% If trim(session("security_code"))<>"" Then
+						'' send mail to sales@strategyr.com and rsd@strategyr.com , Subject: Interested in Research Partnership Program.
+						Set Conn9 = Server.CreateObject("ADODB.Connection")
+						Set RS9 = Server.CreateObject("ADODB.Recordset")
+						Conn9.Open DataSource1
+						RS9.CursorType = 3
+					
+						SQL9="OPEN SYMMETRIC KEY SKEY_GI1_DB_1 DECRYPTION BY CERTIFICATE CERT_GI1_DB_1; SELECT UserId,user_SurName,LastName,firstname,user_company,address1 +' '+ Address2 +' '+ city +' '+ state +' '+ zip as Address,country,user_website,telephone,fax,jobfunction,user_position,CONVERT(varchar(500), DecryptByKey(EmailID)) as EmailID FROM [user_master] WHERE security_code='" & session("security_code")& "'"
+
+						''response.write SQL9
+						rs9.open sql9, conn9
+						if not rs9.eof then
+							company = trim(rs9("User_company"))
+							address = trim(rs9("address"))
+							country = trim(rs9("country"))
+							url = trim(rs9("user_website"))
+							phone = trim(rs9("telephone"))
+							fax = trim(rs9("fax"))
+							JobFunction = trim(rs9("JobFunction"))
+							userposition= trim(rs9("user_position"))
+							First_Name = trim(rs9("firstname"))
+							Last_Name = trim(rs9("LastName"))
+							Session("First_Name")=First_Name
+							Session("Last_Name")=Last_Name
+							Session("company")=company
+							
+							session("EID")=trim(rs9("emailid"))
+							session("UserID") = trim(rs9("UserId"))
+						else
+							company = "-"
+							address = "-"
+							country = "-"
+							url = "-"
+							phone = "-"
+							fax = "-"
+							JobFunction = "-"
+							userposition= "-"
+							First_Name = "-"
+							Last_Name = "-"
+						end if
+						
+						if trim(First_Name)<>"" then
+							uname = Trim(First_Name) & " " & Trim(Last_Name)
+						else
+							uname = "New User"
+						end if
+						set rs9 = nothing
+						set conn9 = Nothing
+						
+						
+						daydisplay=WeekDayName(Weekday(Now())) & ","
+  %>
+  
+					<div class="sixteen columns" > 
+					<p id="table-body1"></p>
+						<p style="text-align:center;background:#f9f9f9;padding-right:5px;font-size:18px;padding-top:15px;padding-bottom:15px;">
+						<!--Panelist--> 
+						<%=uname%><br> <%=company%>&nbsp;<br><%=Replace(FormatDateTime(Now,1),daydisplay,"")%><br>
+					</p>
+					</div>
+<%End If%>
+</div>
+
+<div class="container flo"> 
+  <!-- Page Content -->
+  <div class="page-content"> 
+    <!-- 960 Container -->
+    <div class="container"> 
+      <!-- Texts -->
+      <div class="sixteen columns">
+        <hr/>
+        <div class="row">
+
+
+<!---second values--->
+
+<script>
+      
+$(document).ready(function(){
+
+
+//**** for preventing form submit with Enter Key
+   $(window).keydown(function(event){
+        if((event.keyCode == 13) && ($(event.target)[0]!=$("text")[0])) {
+            event.preventDefault();
+            return false;
+        }
+
+    });
+ 
+ //**** for market share 
+ $('.allow_decimalforshare').keyup(function () {
+   
+	   this.value = this.value.replace(/[^0-9\.]/g,'');
+	        if ($(this).val() > 100){
+			 alert("No Pecentage above 100%");
+	         $(this).val('');
+             }
+});
+
+
+//**** for market share 
+ $('.allow_decimal').keyup(function () {
+   
+	   this.value = this.value.replace(/[^0-9\.]/g,'');
+	   
+		
+
+});
+
+
+
+$( '#lock-refresh' ).click(function() {
+    $( this ).addClass( 'fa-spin' );
+
+    //Trying to use setTimeout, but doesn't seem to work either.
+    var $el = $(this);
+    setTimeout(function() { $el.removeClass( 'fa-spin' ); }, 1000);
+});
+
+
+
+
+});
+
+  
+
+function addToDatabase(SegId,Cname,vListid,MKTtype) {	
+
+  var v2019 = $("#txt"+SegId+vListid+MKTtype+"2019").val();
+  var v2020 = $("#txt"+SegId+vListid+MKTtype+"2020").val();
+  var v2021 = $("#txt"+SegId+vListid+MKTtype+"2021").val();
+  var v2022 = $("#txt"+SegId+vListid+MKTtype+"2022").val();
+  var v2023 = $("#txt"+SegId+vListid+MKTtype+"2023").val();
+  var v2024 = $("#txt"+SegId+vListid+MKTtype+"2024").val();
+  var v2025 = $("#txt"+SegId+vListid+MKTtype+"2025").val();
+  var vCAGR = $("#txt"+SegId+vListid+MKTtype+"CAGR").val();
+  var vCAGRsYear = $("#txt"+SegId+vListid+MKTtype+"CAGRsYear").val();
+  var vCAGReYear = $("#txt"+SegId+vListid+MKTtype+"CAGReYear").val();
+ //alert(MKTtype)
+  //alert("#txt"+SegId+vListid+MKTtype+"2019");
+  // alert(SegId+Cname+v2019+v2020+v2021+v2022+v2023+v2024+v2025);
+  
+	 // $("#confirmAdd").html('<img src="loaderIcon.gif" />');
+	  $.ajax({
+		url: "Ajax_Analyticsadd.asp",
+		type: "POST",
+		data:'SegId='+SegId+'&MKTtype='+MKTtype+'&Cname='+encodeURIComponent(Cname)+'&v2019='+v2019+'&v2020='+v2020+'&v2021='+v2021+'&v2022='+v2022+'&v2023='+v2023+'&v2024='+v2024+'&v2025='+v2025+'&vCAGR='+vCAGR+'&vCAGRsYear='+vCAGRsYear+'&vCAGReYear='+vCAGReYear+'',
+		success: function(data){
+		//alert(data);
+		//  $("#new_row_ajax").remove();
+		 //$("#add-more").show();		  
+		 // $("#table-body").append(data);
+		  //alert("Saved");
+		},
+
+		error: function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+		alert(xhr.responseText);
+		}
+	  });
+}
+
+function addAllToDatabase(vCountry,vListid,TotSegs,GIANo,MKTtype){
+//alert(TotSegs)
+  i = TotSegs
+	for (i = TotSegs; i <= TotSegs; i++) 
+	{
+		//var SegId=GIANo+'-'+i
+		var SegId=i
+		//alert(SegId)
+		addToDatabase(SegId,vCountry,vListid,MKTtype)		
+	
+	}
+	alert("Market Size Module Saved Successfully");
+	
+
+}
+
+function addMShareToDatabase(vCountry,CompName,RecNo,vListid,vSegId){ 
+     
+   var v2019Percent = $("#txt"+vListid+RecNo+"2019Percent"+vSegId).val();
+   var v2025Percent = $("#txt"+vListid+RecNo+"2025Percent"+vSegId).val();
+   //  alert(v2019Percent+'-'&v2025Percent);
+    //  alert(vSegId);
+	 // $("#confirmAdd").html('<img src="loaderIcon.gif" />');
+	  $.ajax({
+		url: "Ajax_MShareAnalyticsadd.asp",
+		type: "POST",
+		data:'v2019Percent='+v2019Percent+'&v2025Percent='+v2025Percent+'&vCountry='+encodeURIComponent(vCountry)+'&CompName='+encodeURIComponent(CompName)+'&vSegId='+vSegId+'',
+		success: function(data){
+		//alert(data);			  
+		// $("#table-body").append(data);
+		// alert("Saved");
+		},
+
+		error: function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+		alert(xhr.responseText);
+		}
+	  });
+}
+
+
+
+function addMShareData(vCountry,CompName,RecNo,vListid,vSegId,vUnits){ 
+
+	var Cmpcnt = $("#txtCmpCnt"+vListid+vSegId).val();
+	 var v2025Total = $("#txt2025Total"+vListid+vSegId).val();
+	  var v2019Total = $("#txt2019Total"+vListid+vSegId).val();
+	    
+		if ((v2025Total==100) && (v2019Total==100))
+		{
+		
+		
+              for (i=1; i<Cmpcnt; i++)
+					{
+						var v2019Percent=$("#txt"+vListid+i+"2019Percent"+vSegId).val();
+						var v2025Percent=$("#txt"+vListid+i+"2025Percent"+vSegId).val();
+                        var vCmpName=$("#txt"+vListid+i+"CmpName"+vSegId).val();					  
+						// alert("#txt"+vListid+i+"CmpName"+vSegId);
+						if ((v2019Percent!='') && (v2025Percent != ''))
+						{     
+						   
+						   $.ajax({
+							url: "Ajax_MShareAnalyticsadd.asp",
+							type: "POST",
+							data:'vUnits='+encodeURIComponent(vUnits)+'&v2019Percent='+v2019Percent+'&v2025Percent='+v2025Percent+'&vCountry='+encodeURIComponent(vCountry)+'&CompName='+encodeURIComponent(vCmpName)+'&vSegId='+vSegId+'',
+							success: function(data){
+							//alert(data);			  
+							// $("#table-body").append(data);
+							 //alert("Saved");
+							},
+
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						  });
+						}	
+				} 
+				alert("Market Share Module Saved Successfully");
+			
+			} ///checking total equal to 100
+			else
+			{
+			   alert("Total of percentages must equal 100");
+			}
+	 
+}
+
+function addCountry(vCountry){    
+	$('#txtCountryName').val(vCountry);
+	$("#txtName").val("");
+	$("#txtLName").val("");
+	$("#txtSEmail1").val("");    
+}
+function checkEmail() {
+
+    var email = document.getElementById('txtSEmail1');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;   
+    return false;
+ }
+}
+function addInviteData(){ 
+	
+   var vCountry = $("#txtCountryName").val();
+   var vtxtName = $("#txtName").val();
+   var vtxtLName = $("#txtLName").val();
+   var vtxtSEmail1 = $("#txtSEmail1").val(); 
+    var vTxtEContent = $("#TxtEContent").val(); 
+  
+    //alert(vCountry + vtxtName + vtxtLName  + vtxtSEmail1 + vTxtEContent);
+     //alert(vtxtName);
+	 // $("#confirmAdd").html('<img src="loaderIcon.gif" />');
+
+      if ((vtxtSEmail1 == '' || vtxtName == '' || vtxtLName == '') )
+	   {
+		alert("Fill All Fields");
+	   }	   
+	   else
+			{
+	  $.ajax({
+		url: "Ajax_Inviteadd.asp",
+		type: "POST",
+		data:'vCountry='+encodeURIComponent(vCountry)+'&vtxtName='+encodeURIComponent(vtxtName)+'&vtxtLName='+encodeURIComponent(vtxtLName)+'&vtxtSEmail1='+vtxtSEmail1+'&vTxtEContent='+encodeURIComponent(vTxtEContent)+'',
+		success: function(data){
+		// alert(data);			  
+		 $("#table-body").append(data);
+		 alert("Successfully Invited.");
+		},
+
+		error: function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+		alert(xhr.responseText);
+		}
+	  });
+	  }
+}
+
+function CheckShare2019(RecNo,vListid,vSegId)
+  {
+    var n;
+    var v2019ShareTotalValue = 0 ;  
+	var Cmpcnt = $("#txtCmpCnt"+vListid+vSegId).val();
+	    //alert(Cmpcnt);	  	  
+	  
+		    for (i=1; i<Cmpcnt; i++)
+			{ 
+				var txtval=$("#txt"+vListid+i+"2019Percent"+vSegId).val();	
+				//alert("#txt"+vListid+i+"2019Percent"+vSegId);
+				if (txtval!='')
+				{
+				 
+				  v2019ShareTotalValue = parseFloat(v2019ShareTotalValue) + parseFloat(txtval);				
+				}
+			} 
+		
+		
+		if (v2019ShareTotalValue<=100)
+		{
+			if (v2019ShareTotalValue==100)
+			{
+				$("#txt2019Total"+vListid+vSegId).val(v2019ShareTotalValue);
+				$("#txt2019Total"+vListid+vSegId).css("color","black");
+			}
+			else
+			{
+				$("#txt2019Total"+vListid+vSegId).val(v2019ShareTotalValue);
+				$("#txt2019Total"+vListid+vSegId).css("color","red");
+			}
+           
+		 
+					for (i=1; i<Cmpcnt; i++)
+					{
+						var txtval=$("#txt"+vListid+i+"2019Percent"+vSegId).val();
+						var txtval25=$("#txt"+vListid+i+"2025Percent"+vSegId).val();
+						if (txtval=='')
+						{
+						  $("#txt"+vListid+i+"2019Percent"+vSegId).prop('readonly', false);
+						}	
+					} 			 
+			 
+		}
+
+		
+		else
+		{
+		   $("#txt2019Total"+vListid+vSegId).val(v2019ShareTotalValue);
+		   $("#txt2019Total"+vListid+vSegId).css("color","red") ;
+			
+			
+				for (i=1; i<Cmpcnt; i++)
+				    {
+						var txtval=$("#txt"+vListid+i+"2019Percent"+vSegId).val();
+						var txtval25=$("#txt"+vListid+i+"2025Percent"+vSegId).val();						
+						
+						if (txtval=='')
+						{
+						  $("#txt"+vListid+i+"2019Percent"+vSegId).prop('readonly', true);
+						}
+					}
+			
+			
+		}
+		return false;
+  }
+
+  function CheckShare2025(RecNo,vListid,vSegId)
+  {
+   
+    var v2025ShareTotalValue = 0 ;  
+	var Cmpcnt = $("#txtCmpCnt"+vListid+vSegId).val();
+	
+	  	for (i=1; i<Cmpcnt; i++)
+				{
+					var txtval=$("#txt"+vListid+i+"2025Percent"+vSegId).val();
+					if (txtval!='')
+					{
+					  v2025ShareTotalValue =  parseFloat(v2025ShareTotalValue) + parseFloat(txtval);
+					}	   
+				}   
+		
+	
+	 if (v2025ShareTotalValue<=100)
+		{
+			if (v2025ShareTotalValue==100)
+			{
+			   $("#txt2025Total"+vListid+vSegId).val(v2025ShareTotalValue);
+			   $("#txt2025Total"+vListid+vSegId).css("color","black") ;
+			 }
+			 else
+			 {
+				$("#txt2025Total"+vListid+vSegId).val(v2025ShareTotalValue);
+				$("#txt2025Total"+vListid+vSegId).css("color","red") ;
+			 }
+			
+			
+			    for (i=1; i<Cmpcnt; i++)
+					{
+						var txtval=$("#txt"+vListid+i+"2025Percent"+vSegId).val();
+						if (txtval=='')
+						{
+						  $("#txt"+vListid+i+"2025Percent"+vSegId).prop('readonly', false);
+						}	   
+					} 	
+			
+		}
+		else
+		{
+		   $("#txt2025Total"+vListid+vSegId).val(v2025ShareTotalValue);
+		   $("#txt2025Total"+vListid+vSegId).css("color","red") ;
+
+					 for (i=1; i<Cmpcnt; i++)
+						{
+							var txtval=$("#txt"+vListid+i+"2025Percent"+vSegId).val();
+							if (txtval=='')
+							{
+							  $("#txt"+vListid+i+"2025Percent"+vSegId).prop('readonly', true);
+							}	   
+						}
+				
+		}
+    //alert(v2019ShareTotalValue);
+    return false;
+
+  }
+  
+  
+  function AddMultipleRecordstoDB(textIdentity,region,segid,units,stYear,enYear)
+  {	
+  
+      var vGiaCode = document.getElementById("txtGiaCode").value;
+	 var vencID = document.getElementById("txtencID").value;
+	 //alert(stYear);
+	 // alert(enYear);
+	 for (year = stYear; year < enYear; year++) 
+	 {
+	// alert(year);
+      var vtxtVal = $("#txt"+textIdentity+year).val();
+	  var vtxtcagrVal = $("#txtcagr"+textIdentity+year).val();
+	  var vtxtUNISVal = $("#txtUNIS"+textIdentity+year).val();
+	  var vtxtcagrUNISVal = $("#txtcagrUNIS"+textIdentity+year).val();
+	  // alert(vtxtVal);
+	  
+			 if ((vtxtVal!="") || (vtxtcagrVal!="") || (vtxtUNISVal!="") || (vtxtcagrUNISVal!=""))
+			 {
+			   if(vtxtcagrVal=="")
+			   {
+			    vtxtcagrVal=0
+			   }
+			    if(vtxtVal=="")
+			   {
+			    vtxtVal=0
+			   }
+			     if(vtxtUNISVal=="")
+			   {
+			    vtxtUNISVal=0
+			   }
+			     if(vtxtcagrUNISVal=="")
+			   {
+			    vtxtcagrUNISVal=0
+			   }
+			   
+			 $.ajax({
+				url: "Ajax_AddGIA_Research_Feedback_Data.asp",
+				type: "POST",
+				data:'vGiaCode='+encodeURIComponent(vGiaCode)+'&vencID='+encodeURIComponent(vencID)+'&vregion='+encodeURIComponent(region)+'&vyear='+encodeURIComponent(year)+'&vsegid='+encodeURIComponent(segid)+'&vunits='+encodeURIComponent(units)+'&vtxtVal='+encodeURIComponent(vtxtVal)+'&vtxtcagrVal='+encodeURIComponent(vtxtcagrVal)+'&vtxtUNISVal='+encodeURIComponent(vtxtUNISVal)+'&vtxtcagrUNISVal='+encodeURIComponent(vtxtcagrUNISVal)+'', 				
+				success: function(data){
+				//alert(data);
+				//alert("Data Updated Sucessfully");
+					
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+				alert(xhr.status);
+				alert(thrownError);
+				alert(xhr.responseText); 
+				} 
+			  });
+			
+			 } 
+			  /*else
+			  {
+				alert('Value cannot be left blank');
+			  }	*/
+	  }
+    alert("Data Updated Sucessfully");
+  }
+  
+  
+  function addData(year,textIdentity,region,segid,units) {	 
+
+  // alert("hi");
+ // alert(segid);
+ //alert(year);
+ //alert(region);
+ 
+    var vGiaCode = document.getElementById("txtGiaCode").value;
+	 var vencID = document.getElementById("txtencID").value;
+	 
+     var vtxtVal = $("#txt"+textIdentity+year).val();
+	 var vtxtcagrVal = $("#txtcagr"+textIdentity+year).val();
+	  var vtxtUNISVal = $("#txtUNIS"+textIdentity+year).val();
+	  var vtxtcagrUNISVal = $("#txtcagrUNIS"+textIdentity+year).val();
+	
+			 if(vtxtVal!="")
+			 {
+			 $.ajax({
+				url: "Ajax_AddGIA_Research_Feedback_Data.asp",
+				type: "POST",
+				data:'vGiaCode='+encodeURIComponent(vGiaCode)+'&vencID='+encodeURIComponent(vencID)+'&vregion='+encodeURIComponent(region)+'&vyear='+encodeURIComponent(year)+'&vsegid='+encodeURIComponent(segid)+'&vunits='+encodeURIComponent(units)+'&vtxtVal='+encodeURIComponent(vtxtVal)+'&vtxtcagrVal='+encodeURIComponent(vtxtcagrVal)+'&vtxtUNISVal='+encodeURIComponent(vtxtUNISVal)+'&vtxtcagrUNISVal='+encodeURIComponent(vtxtcagrUNISVal)+'', 				
+				success: function(data){
+				//alert(data);
+				alert("Data Updated Sucessfully");
+					
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+				alert(xhr.status);
+				alert(thrownError);
+				alert(xhr.responseText);
+				}
+			  });
+			 } 
+			  else
+			  {
+				alert('Value cannot be left blank');
+			  }		
+		 
+
+        
+		}
+function addNewSegment() {	 
+	 var vSegment = document.getElementById("txtSegment").value;
+	 var vGiaCode = document.getElementById("txtGiaCode").value;
+	 var vencID = document.getElementById("txtencID").value;
+	// alert (vGiaCode);
+	// alert (vSegment);
+			 if(vSegment!="")
+			 {
+			 $.ajax({
+				url: "Ajax_AddGIA_Research_Feedback_Segment.asp",
+				type: "POST",
+				data:'vSegment='+encodeURIComponent(vSegment)+'&vGiaCode='+encodeURIComponent(vGiaCode)+'&vencID='+encodeURIComponent(vencID)+'', 				
+				success: function(data){
+				alert("Segment Added Sucessfully");
+				parent.location.reload();
+					//document.getElementById(CbTag).value ="";
+					//document.getElementById(CbLink).value ="";
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+				alert(xhr.status);
+				alert(thrownError);
+				alert(xhr.responseText);
+				}
+			  });
+			 } 
+			  else
+			  {
+				alert('Segment cannot be left blank');
+			  }			  
+		 
+
+        
+		}
+		
+function addNewRegion() {
+	 
+	 var vRegion = document.getElementById("txtRegion").value;
+	 var vGiaCode = document.getElementById("txtGiaCode").value;
+	 var vencID = document.getElementById("txtencID").value;
+	
+			 if(vRegion!="")
+			 {
+			  $.ajax({
+				url: "Ajax_AddGIA_Research_Feedback_Region.asp",
+				type: "POST",
+				data:'vRegion='+encodeURIComponent(vRegion)+'&vGiaCode='+encodeURIComponent(vGiaCode)+'&vencID='+encodeURIComponent(vencID)+'', 		
+				success: function(data){
+				alert("Region Added Sucessfully");
+				parent.location.reload();
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+				alert(xhr.status);
+				alert(thrownError);
+				alert(xhr.responseText);
+				}
+			  });
+			 } 
+			  else
+			  {
+				alert('Region/Country cannot be left blank');
+			  }			  
+		 
+
+        
+		}
+
+
+</script>
+<%
+	intRptID = Trim(request("code"))
+	strReportTitle = session("ReportTitle") 
+	intReportCode = session("ReportCode")
+	
+	
+	Function Selected(val1,val2)
+	IF trim(val1) = trim(val2) then
+		Selected = "Selected"
+	else
+		Selected = ""
+	End IF
+	END Function
+	
+	Function checked(val1,val2)
+		IF trim(val1) = trim(val2) Then		
+			checked = "checked"
+		else
+			checked = ""
+		End IF
+	END Function
+
+	Function checked_STR_Working(val1,val2)    
+		SplitVal=Split(val1,", ")
+		For Each x In SplitVal
+		''If Len(Trim(x))=Len(Trim(val2)) then
+			If Instr(Trim(val2), Trim(x))>0 Then
+				  checked_STR = "checked"			
+			   ''else
+				''checked_STR = ""
+			End If	
+		  ''End If 
+	   next 
+	END Function
+
+	Function checked_STR(val1,val2)    
+		SplitVal=Split(val1,", ")
+		For Each x In SplitVal
+		  SplitVal2=Split(val2,", ")
+				For Each y In SplitVal2  
+					   If Trim(y)=Trim(x)Then				
+						  checked_STR = "checked"
+						End if
+				Next	  
+		Next 
+	END Function
+
+	Set Conn = Server.CreateObject("ADODB.Connection")
+			
+	''Conn.Open DataSource
+	SQLrptGIA="select topic,units,region_type,(select report_type  from gia_analytix.dbo.REPORTS_Params$ where gia_analytix.dbo.REPORTS_Params$.gia_no=gia_analytix.dbo.REPORTS_GIA$.gia_no) as reporttype,(select replace(reporting_level,'Data is reported at ','')  from gia_analytix.dbo.REPORTS_Params$ where gia_analytix.dbo.REPORTS_Params$.gia_no=gia_analytix.dbo.REPORTS_GIA$.gia_no) as reportLevel   from gia_analytix.dbo.REPORTS_GIA$ where gia_no='" & giacode & "'"
+	''response.write SQLrptGIA
+	Set RSAnalytics = Server.CreateObject("ADODB.Recordset")
+	RSAnalytics.Open SQLrptGIA, DataSource
+	If Not RSAnalytics.EOF Then
+		MARKET_MEASURE=RSAnalytics("Units")
+		region_type=RSAnalytics("region_type")
+		RPT_Level = Trim(RSAnalytics("reportLevel"))
+		report_type=Trim(RSAnalytics("reporttype"))
+	end if
+	''response.write MARKET_MEASURE & "    ----- " & RPT_Level
+	set RSAnalytics=nothing
+	%>
+	
+		<form name="frmadd" method="post" action="GIA_Research_Feedback_n.asp?code=<%=Trim(request("code"))%>&encID=<%=Trim(request("encID"))%>">
+		<p id="table-body"></p>
+		<div style="width:100%; overflow:hidden">
+		<div>
+		<table  align="center" border="0" width="100%"  style="border-collapse:collapse;">	
+		<%If trim(request("type"))="submit" Then%>
+		<tr>
+			<td height="15" colspan="2"  style="padding-left:5px " class="LClass">Your request has been submitted. Thank you</td>
+		</tr>
+		<%End If%>
+		<tr>
+			<td width="100%" colspan=2 align="center"><font color=red><b><%=msg%></b></font></td>
+		</tr>
+		<%If Trim(RPT_Level)<>"" Then%>
+		<tr style="background-color:#f0f0f0;">
+			<td height="15" colspan="2"  style="padding-left:5px " class="LClass"><b>REPORTING LEVEL:</b> <%=Trim(UCase(RPT_Level))%>&nbsp;(<%=report_type%>) </td>
+		</tr>
+		<%End If%>
+		<tr><td>&nbsp;</td></tr>
+		<tr style="background-color:#f0f0f0;">
+			<td height="15" colspan="2"  style="padding-left:5px " class="LClass"><b>MARKET MEASURE:</b></td>
+		</tr>
+		<tr style="background-color:#f0f0f0;">
+			<td height="15" colspan="2"  style="padding-left:5px " class="LClass"><input type="checkbox" name="USD_MEASURE" id="USD_MEASURE" value="USD" checked <%=checked(trim(request("USD_MEASURE")),"USD")%>> &nbsp;<b>USD$</b></td>
+		</tr>
+		<tr style="background-color:#f0f0f0;">			
+			<td height="15" colspan="2"  style="padding-left:5px " class="LClass"><b>&nbsp;&nbsp;&nbsp;&nbsp;</b><!--input type="radio" name="MARKET_MEASURE" id="MARKET_MEASURE" onclick="Unitstoggle()" value="US$ MILLION" checked-->
+			<input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ MILLION" checked <%=checked(trim(request("MARKET_MEASURE_USD")),"US$ MILLION")%>> US$ MILLION &nbsp;&nbsp;<input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ BILLION" <%=checked(trim(request("MARKET_MEASURE_USD")),"US$ BILLION")%> >US$ BILLION</td>			
+		</tr>
+		<tr style="background-color:#f0f0f0;">
+			<td height="15" colspan="2"  style="padding-left:5px " class="LClass"><input type="checkbox" name="UNITS_MEASURE" id="UNITS_MEASURE" value="UNITS" <%=checked(trim(request("UNITS_MEASURE")),"UNITS")%>> &nbsp;<b>UNITS:</b></td>
+		</tr>
+		<tr style="background-color:#f0f0f0;">			
+			<td height="15" colspan="2"  style="padding-left:5px " class="LClass"><b>&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Actual" <%=checked(trim(request("MARKET_MEASURE_UNITS")),"Actual")%>> Actual &nbsp;&nbsp;<input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Million" <%=checked(trim(request("MARKET_MEASURE_UNITS")),"Million")%>>Million&nbsp;&nbsp;<input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Billion" <%=checked(trim(request("MARKET_MEASURE_UNITS")),"Billion")%>>Billion</td>			
+		</tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr style="background-color:#f0f0f0;">
+	<td  nowrap colspan="2"  style="padding-left:5px " class="LClass">
+		<b><font color='#9B0004'>*</font> SEGMENT:</b> <br>                                         
+		<%Set RSSegmentsList = Server.CreateObject("ADODB.Recordset")
+			''	If session("isMCP") = "N" then
+					''SegmentsListQry="select * from vwReports_GIA_Segments$ where GIA_No='" & session("giacode") & "'"
+					SegmentsListQry="select SegmentID as Segment_ID, Name from vwReports_GIA_Segments$ where GIA_No='" & session("giacode") & "' and Name not like 'Other %' "
+
+			'	Else
+			'	   '' SegmentsQry="select * from vwReports_GIA_Segments$ where CODE='MCP-1001'"	
+			'	   SegmentsListQry="select sno as Segment_ID,CompanyName as [Name] from GIA_Analytix.dbo.GetGIACompaniesList('"&Segment_List&"')"
+			''	End if	
+				Set Conn7 = Server.CreateObject("ADODB.Connection")
+				Set RSRegions = Server.CreateObject("ADODB.Recordset")
+				Conn7.Open Datasource7
+				''RSSegmentsList.CursorLocation=3 
+				''response.write SegmentsListQry
+				RSSegmentsList.Open SegmentsListQry, Conn7 '',1,2
+				''response.write SegmentsListQry
+				if Trim(request("DDlSegmentsList")) <> "" then
+					segmentname= Trim(request("DDlSegmentsList"))
+				else
+					segmentname= Trim(request("sname"))
+				end if
+				%>
+				<!--<select name="DDlSegmentsList" id="DDlSegmentsList"  onchange="toggle1()">
+				<option value="">--select--</option>-->
+				
+				<%If Not RSSegmentsList.EOF Then
+				 while not RSSegmentsList.EOF%> <div class="four columns" style="text-align:left"> 
+				 <input type="checkbox" name="DDlSegmentsList" id="DDlSegmentsList" <%=checked_STR(Trim(segmentname),Trim(RSSegmentsList("Name")))%>   value="<%=Trim(RSSegmentsList("Name"))%>"><span> <%=RSSegmentsList("Name")%></span></div>
+			   <!--	<option <%'=Selected(Trim(request("DDlSegmentsList")),Trim(RSSegmentsList("Name")))%> value="<%'=Trim(RSSegmentsList("Name"))%>"> <%'=RSSegmentsList("Name")%> </option> -->
+			<%
+					RSSegmentsList.MoveNext
+					Wend
+					End If 
+			
+					 %>
+				<!--</select>-->
+				<%
+				Set RSRegions = Nothing
+				Set RSSegmentsList = Nothing
+				
+				
+				''''ADD THE ADDED SEGMENTS FOR THE USER from TABLE: GIA_Research_Feedback_Segments (ReportCode,eNcID,Segment,UpdateDate,Status)
+				SegmentsListQry1="select  Segment as Name from GIA_Research_Feedback_Segments where ReportCode='" & trim(session("giacode")) & "' and eNcID='"&trim(request("encID"))&"' and Segment not like 'Other %' "
+				Set RSSegmentsList = Server.CreateObject("ADODB.Recordset")
+				RSSegmentsList.Open SegmentsListQry1, Conn7 
+				''response.write SegmentsListQry
+				if Trim(request("DDlSegmentsList")) <> "" then
+					segmentname= Trim(request("DDlSegmentsList"))
+				else
+					segmentname= Trim(request("sname"))
+				end if
+				%>
+				<%If Not RSSegmentsList.EOF Then
+				 while not RSSegmentsList.EOF%> <div class="four columns" style="text-align:left"> 
+				 <input type="checkbox" name="DDlSegmentsList" id="DDlSegmentsList" <%=checked_STR(Trim(segmentname),Trim(RSSegmentsList("Name")))%>   value="<%=Trim(RSSegmentsList("Name"))%>"><span> <%=RSSegmentsList("Name")%></span></div>
+			   <!--	<option <%'=Selected(Trim(request("DDlSegmentsList")),Trim(RSSegmentsList("Name")))%> value="<%'=Trim(RSSegmentsList("Name"))%>"> <%'=RSSegmentsList("Name")%> </option> -->
+			<%
+					RSSegmentsList.MoveNext
+					Wend
+					End If 
+			
+					 %>
+				<!--</select>-->
+				<%
+				Set RSSegmentsList = Nothing
+				  ''''''''''''''' %>
+	</td>
+</tr>
+
+<input type='textbox'   id='txtGiaCode' name='txtGiaCode' size="12" value="<%=session("giacode")%>" style="display:none">
+<input type='textbox'   id='txtencID' name='txtencID' size="12" value="<%=request("encID")%>" style="display:none">
+<tr><td>&nbsp;<div class="three columns" style="text-align:left"><b>ADD SEGMENT:</b></div><input type='textbox'   id='txtSegment' name='txtSegment' size="12" value=""><button type="button"  title="Add Segment" onClick='addNewSegment()'><i class="fa fa-plus" style="color:blue" aria-hidden="true"></i></td></tr>
+<tr><td><hr/></td></tr>
+<tr style="background-color:#f0f0f0;">
+	<td  nowrap colspan="2"  style="padding-left:5px " class="LClass"><b><font color='#9B0004'>*</font> REGION/COUNTRY:</b><br>
+	<% ''CountryQry="SELECT  * FROM  eQuestioner_Countries where display_status in ('D','Y') ORDER BY Display_Order"
+	CountryQry="select distinct country_name from GIA_Analytix.dbo.vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='"& session("giacode") &"'"
+	   Set RSCountry = Server.CreateObject("ADODB.Recordset")
+	   RSCountry.Open CountryQry, Datasource7
+		if Trim(request("REGION"))<> "" then
+			cname= Trim(request("REGION"))
+		else
+			cname= Trim(request("cname"))
+		
+		end if
+		If trim(ucase(cname))="USA" then
+			cname = "United States"
+		End If
+		If Not RSCountry.EOF Then %> 
+		
+			<% while not RSCountry.EOF%>
+				
+				<div class="three columns" style="text-align:left"> 
+					<!--<option value="WORLD"  <%=Selected("WORLD",Trim(request("REGION")))%>>WORLD</option>-->
+				 <input type="checkbox" name="REGION" id="REGION" <%=checked_STR(Trim(RSCountry("country_name")),Trim(cname))%>  onclick="toggle()" value="<%=Trim(RSCountry("country_name"))%>"><span> <%=RSCountry("country_name")%></span></div>
+			<%RSCountry.MoveNext
+			Wend%>
+			
+		<%End If
+		Set RSCountry = Nothing
+		
+		''''ReportCode,eNcID,Region,UpdateDate,Status
+		CountryQry="select Region as country_name from GIA_Research_Feedback_Region where ReportCode='"& session("giacode") &"' and eNcID='"&trim(request("encID"))&"'"
+	    Set RSCountry = Server.CreateObject("ADODB.Recordset")
+	   RSCountry.Open CountryQry, Datasource7
+		if Trim(request("REGION"))<> "" then
+			cname= Trim(request("REGION"))
+		else
+			cname= Trim(request("cname"))
+		
+		end if
+		If trim(ucase(cname))="USA" then
+			cname = "United States"
+		End If
+		If Not RSCountry.EOF Then %> 
+		
+			<% while not RSCountry.EOF%>
+				
+				<div class="three columns" style="text-align:left"> 
+					<!--<option value="WORLD"  <%=Selected("WORLD",Trim(request("REGION")))%>>WORLD</option>-->
+				 <input type="checkbox" name="REGION" id="REGION" <%=checked_STR(Trim(RSCountry("country_name")),Trim(cname))%>  onclick="toggle()" value="<%=Trim(RSCountry("country_name"))%>"><span> <%=RSCountry("country_name")%></span></div>
+			<%RSCountry.MoveNext
+			Wend%>
+			
+		<%End If
+		Set RSCountry = Nothing
+		
+		
+		
+		%>
+		
+		</td>
+	</tr>
+<tr><td><div class="three columns" style="text-align:left"> <b>ADD REGION/COUNTRY:</b></div><input type='textbox'   id='txtRegion' name='txtRegion' size="12" value=""><button type="button"  title="Add Region/Country" onClick='addNewRegion()'><i class="fa fa-plus" style="color:blue" aria-hidden="true"></i></td></tr>
+
+		</table>
+		</div>
+
+							<%
+							Dim ShowValueButtons
+							ShowValueButtons = 0
+							''' NEWLY ADDED CODE
+							Dim gregion
+							gregion = Trim(request("cname"))
+							
+							''dim sname
+							sname = trim(request("sname"))
+							
+							dim YearType
+							YearType = trim(request("YearType"))
+							
+							'''OR SPLIT THE getDATA VARIABLE TO GET ALL THE ABOVE DATA
+							If trim(request("getDATA"))<>"" Then
+								Dim FullTableData
+								'''''USA-RPCF-ST:Type
+								FullTableData = trim(request("getDATA"))
+								If instr(trim(FullTableData),":")>0 then
+									dim SPLTRequestData, OtherDataSPLT
+									SPLTRequestData = split(FullTableData,":")
+									'''
+									sname = SPLTRequestData(1)
+									
+									OtherDataSPLT = SPLTRequestData(0)
+									
+									Dim SPLTcountryANDyear
+									SPLTcountryANDyear = split(OtherDataSPLT,"-")
+									gregion = SPLTcountryANDyear(0)
+									YearType = SPLTcountryANDyear(1)
+								End If
+							End If
+							
+							'' IF any value is empty ADD a default values
+							If trim(gregion)="" then
+								gregion = "United States"
+								gregion=request("Region")
+							End If
+							If trim(YearType)="" then
+								YearType = "RPCF"
+							End If
+							
+							Set Conn7 = Server.CreateObject("ADODB.Connection")
+							Set RSRegions = Server.CreateObject("ADODB.Recordset")
+							Conn7.Open Datasource7
+							
+							''' IF country is encoded with 3 digit code (like USA - United States, GBR - United Kingdom) etc 	
+							If len(gregion)= 3 Then
+								'''COUNTRY_NAMES_THREE_DIGITS
+								Set GetCountryName = Server.CreateObject("ADODB.Recordset")
+								sqlCountryName = "SELECT Country FROM [GIA_Analytix].[dbo].[COUNTRY_NAMES_THREE_DIGITS] where Three_Code='"&trim(gregion)&"'"
+								GetCountryName.Open sqlCountryName, Conn7
+								If not GetCountryName.EOF then
+									gregion = trim(GetCountryName("Country"))
+								End IF
+							End If
+						  
+							multipleRegionList = "'"&Replace(Trim(gregion),", ","', '")&"'"
+							
+							
+							''response.write multipleRegionList
+							
+							If region="GEO_A" Then  
+								RegionsQry="select * from REPORTS_GSA_REGIONS$ where region_country_name in ("& Trim(multipleRegionList)&")"
+							Else
+								RegionsQry="select * from REPORTS_GSB_REGIONS$ where  region_country_name in ("&Trim(multipleRegionList)&")"
+							End If 
+							'response.write regionsqry
+							
+							
+							if trim(request("DDlSegmentsList")) <> "" then
+								DDlSegmentsList= "'" & Replace(trim(request("DDlSegmentsList")),", ", "','") & "'"
+							end if
+								If trim(sname)="" then
+									Set GetSegmentType = Server.CreateObject("ADODB.Recordset")
+									sqlsegmenttype = "SELECT distinct [Type] FROM [GIA_Analytix].[dbo].[REPORT_SEGMENTS$] where gia_no='"&trim(request("code"))&"'"
+									GetSegmentType.Open sqlsegmenttype, Conn7
+									If not GetSegmentType.EOF then
+										sname = trim(GetSegmentType("Type"))
+									End IF
+								End If
+							
+							''response.write DDlSegmentsList
+							
+							set YearRs=Server.CreateObject("ADODB.Recordset")
+							YearSql="SELECT  GIA_No, H_StartYear, H_EndYear, CF_StartYear, CF_EndYear FROM CreateHeaders WHERE   (GIA_No = '" & request("code") & "')"
+							YearRs.Open YearSql, Conn7
+							If Not YearRs.EOF Then
+								HStartYear=trim(YearRs("H_StartYear"))
+								HEndYear=trim(YearRs("H_EndYear"))
+								CF_StartYear=trim(YearRs("CF_StartYear"))
+								CF_EndYear=trim(YearRs("CF_EndYear"))
+								
+							end if
+							''response.write HStartYear & "  " & HEndYear & " " & CF_StartYear & " " & CF_EndYear
+							'''2012 2019 (HR) 2020 2027 (RPCF) YearTpe = RPCF & HR
+							RSRegions.Open RegionsQry, Conn7,1,2
+							''response.write RegionsQry
+							'''response.write "YearType = "& trim(request("YearType"))
+							''Dim GTDivID, SWDivID
+							GTDivID = 1
+							If Not RSRegions.EOF Then
+							ShowValueButtons = 1
+							%>
+							<TABLE width="100%" cellpadding=2 cellspacing=5 >	<tr><td >
+							<hr/>
+							Cluster Median Value (must be a Licensed User or participant in our <font color="blue">Intelligence Exchange Program</font>)
+							<hr/>
+							</td></tr></table>
+								<%while not RSRegions.EOF								
+								SWDivID = "div"&GTDivID
+								%>
+																
+								<%'''' IF the trim(request("YearType")) is RPCF Then show this									
+									YearType="RPCF"
+									If trim(ucase(YearType))="RPCF" Then
+								%>
+										<div class="row mb-0 py-0 ">
+										<table class="table m-0" border="1" bg-color="#ccc">
+											<tr class="w-100">
+											 <td><!--colspan=2-->
+											<div id="<%=SWDivID%>" style="width:100%;overflow:auto !important;">
+											<!-- MARKET SIZE TABLE -->
+											<%'Dim MKTSize_Type
+											MKTSize_Type = "USD"%>
+											<form id="frm<%=RSRegions("Region_Country_Name")%><%=MKTSize_Type%>" >
+											<div class="scroll_responsive_table">
+											<div class="DataAnalytics">
+
+											<table  width="100%" cellpadding=2 cellspacing=5 border=1 style="border-collapse:collapse;" class="tbl-msize">											
+											<%
+											multipleSegList = "'"&Replace(Trim(request("sname")),", ","', '")&"'"											
+											MKTSize_Type = "USD"
+											''LINE 1: SEGMENT + YEARS + COUNTRY OR REGION
+											''LINE 2: FIRST + LAST NAME
+											%>
+											<!--tr style="background-color:#FFD4AA;color:#000000;font-size:15px;"><td colspan="6" ALIGN="CENTER"><b>TRAJECTORY: <font color='blue'><%=CF_StartYear%>-<%=CF_EndYear%></font></b></td></tr>
+											<tr style="background-color:#FFD4AA;color:#000000;font-size:15px;"><td colspan="6" ALIGN="CENTER"><b>REGION/COUNTRY: <font color='blue'><%=UCase(RSRegions("Region_Country_Name"))%></b></font></td></tr-->
+											<%For displayYear=CF_StartYear to CF_EndYear 
+												QueryYearsF=QueryYearsF & ",[" &  displayYear  & "]"
+											Next %>
+											<% ''response.write QueryYearsF
+											Set RSSegmentsList = nothing
+											Set RSSegments = Server.CreateObject("ADODB.Recordset")
+											'if Trim(RSRegions("Region_Country_Name"))="EUROPE" then
+											'	SegmentsQry="select * from vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='" & request("code") & "' and country_name='"&Trim(RSRegions("Region_Country_Name"))&"' and segment_type='" & trim(sname)&"' ORDER BY CONVERT(int, REPLACE(REPLACE(Segment_ID, REPLACE(REPLACE(GIA_NO, 'NT', ''), 'MCP-', ''), ''), '-', ''))"
+											'else
+												''SegmentsQry="select * from vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='" & request("code") & "' and country_name='"&Trim(RSRegions("Region_Country_Name"))&"' and segment_type='" & trim(sname)&"' ORDER BY CONVERT(int, REPLACE(REPLACE(Segment_ID, REPLACE(REPLACE(GIA_NO, 'NT', ''), 'MCP-', ''), ''), '-', ''))"
+											if DDlSegmentsList <> "" then
+												SegmentsQry="select segment_name,Segment_ID " & QueryYearsF & ",dbo.ReturnCAGR([" & CF_EndYear & "],[" & CF_StartYear &"]) as cagr from vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='" & request("code") & "' and country_name='"&Trim(RSRegions("Region_Country_Name"))&"' and segment_NAME IN (" & trim(DDlSegmentsList)&") ORDER BY CONVERT(int, REPLACE(REPLACE(Segment_ID, REPLACE(REPLACE(GIA_NO, 'NT', ''), 'MCP-', ''), ''), '-', ''))"
+											else
+												''SegmentsQry="select segment_name,Segment_ID " & QueryYearsF & ",dbo.ReturnCAGR([" & CF_EndYear & "],[" & CF_StartYear &"]) as cagr from vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='" & request("code") & "' and country_name='"&Trim(RSRegions("Region_Country_Name"))&"' and segment_type='" & trim(sname)&"' ORDER BY CONVERT(int, REPLACE(REPLACE(Segment_ID, REPLACE(REPLACE(GIA_NO, 'NT', ''), 'MCP-', ''), ''), '-', ''))"
+												SegmentsQry="select segment_name,Segment_ID " & QueryYearsF & ",dbo.ReturnCAGR([" & CF_EndYear & "],[" & CF_StartYear &"]) as cagr from vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='" & request("code") & "' and country_name='"&Trim(RSRegions("Region_Country_Name"))&"' and segment_NAME='" & trim(sname)&"' ORDER BY CONVERT(int, REPLACE(REPLACE(Segment_ID, REPLACE(REPLACE(GIA_NO, 'NT', ''), 'MCP-', ''), ''), '-', ''))"
+											end if   
+											''response.write REGION
+											''response.write SegmentsQry
+											RSSegments.CursorLocation=3 
+											RSSegments.Open SegmentsQry, Conn7,1,2											
+											If Not RSSegments.EOF Then
+												segmentCount=RSSegments.RecordCount%>
+												<thead style=" width: 100% !important; display: contents;">
+												<!--tr style="background-color:#FFFFFF;color:#000000;" class="tbl-msize-head"><td><b>SEGMENT<%''=trim(ucase(stype))%></b></td-->
+												<!--<td align='center'><b>2019</b></td>-->
+												<%For displayYear=CF_StartYear to CF_EndYear %>
+													<!--td align='center'><b><%=displayYear%></b></td-->												
+												<%Next %>
+												<!--td><b>CAGR (%)</b></td-->
+												</tr>											
+												</thead>
+												<tbody>
+												<%
+													while not RSSegments.EOF%>
+																											
+													<tr style="background-color:#FFD4AA;color:#000000;font-size:15px;">
+													<td class="td_heder_name" colspan="6" align="center"><b><%=trim(ucase(RSSegments("segment_name")))%></font>&nbsp;/&nbsp;<%=CF_StartYear%>-<%=CF_EndYear%>&nbsp;/&nbsp;<%=UCase(RSRegions("Region_Country_Name"))%></b></td></tr>
+													<tr style="background-color:#FFD4AA;color:#000000;font-size:15px;">
+														<!--td class="td_heder_name" align="center" colspan="6"><b><%=CF_StartYear%>-<%=CF_EndYear%> %CAGR: <font color='blue'><%=round(RSSegments("cagr"),2)%></font></b></td-->
+														<td class="td_heder_name" align="center" colspan="6"><b><%=ucase(uname)%></b></td>
+													</tr>													
+													
+													<tr style="background-color:#e0e0e0;color:#000000;" class="colldatainput">
+													<td class="td_heder_name" align="center"><b>YEAR</b></td>
+													<td class="td_heder_name" align="center"><b>[$$$]</b></td>
+													<td class="td_heder_name" align="center"><b>[%]</b></td>
+													<td class="td_heder_name" align="center"><b>[###]</b></td>
+													<td class="td_heder_name" align="center"><b>[%]</b></td>
+													<td class="td_heder_name" align="center"><b>OPTIONS</b></td>
+													</tr>
+													
+													<!--td class="td_heder_name"><%=RSSegments("segment_name")%> <BR/><font color='blue'>[Reported Data]</font></td-->
+													<!--<td align='center'><input type='textbox' type="number" class="allow_decimal" id="txt<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%>2019" name="txt<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%>2019" size="3" value="<%=txt2019%>"></td>-->
+													<%
+													dim RecValue1
+													''' HERE NUMBER 16 IS THE COLUMN NUMBER ON THE TABLE FOR 2020 FIELD. CHANGE THIS NUMBER TO 17 TO SHOW 2021
+													RecValue1 = 2
+													For displayYearData=CF_StartYear to CF_EndYear 
+														dispYear= """" & displayYearData  & """"
+													%>
+														<tr style="background-color:#f0f0f0;color:#000000;" class="colldatainput">
+														<td align='center'><b><%=displayYearData%></b> </td>
+														<td align='center'><input type='textbox' type="number"  class="allow_decimal" id='txt<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' name='txt<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' size="3" value=""><br/><font color='blue'>[<%=RSSegments.fields(RecValue1).value%>]</font></td>
+														<td align='center'><input type='textbox' type="number"  class="allow_decimal" id='txtcagr<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' name='txtcagr<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' size="3" value=""><br><font color='blue'>[<%=round(RSSegments("cagr"),2)%>]</font></td>
+														<td align='center'><input type='textbox' type="number"  class="allow_decimal" id='txtUNIS<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' name='txtUNIS<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' size="3" value="">
+														<!--br/><font color='blue'>[<%=RSSegments.fields(RecValue1).value%>]</font--></td>
+														<td align='center'><input type='textbox' type="number"  class="allow_decimal" id='txtcagrUNIS<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' name='txtcagrUNIS<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' size="3" value="">
+														<!--br><font color='blue'>[<%=round(RSSegments("cagr"),2)%>]</font--></td>
+														<td align='center'>
+												          
+														 
+														  <!--button type="button"  title="Add Region/Country" onClick='addData(<%=displayYearData%>,<%=RSSegments("Segment_ID")%><%=RSRegions("List_ID")%>,<%=RSSegments("Segment_ID")%>)'><i class="fa fa-plus" style="color:blue" aria-hidden="true"></i-->
+														 <a class='login-window' onClick="addData('<%=displayYearData%>','<%=RSSegments("Segment_ID")%><%=RSRegions("List_ID")%><%=MKTSize_Type%>','<%=Trim(RSRegions("Region_Country_Name"))%>','<%=RSSegments("Segment_ID")%>','<%=MKTSize_Type%>')" class="ajax-action-links"><button type='button'>ACTVITY</button></a>
+														  </td>
+														</tr>
+														
+														<tr style="background-color:#e0e0e0;color:#000000;" class="colldatainput">
+														<td align='center'>Cluster</td>
+														<td align='center'><font color='blue'>###</font></td>
+														<td align='center'>###</td>
+														<td align='center'>###
+														<!--br/><font color='blue'>[<%=RSSegments.fields(RecValue1).value%>]</font--></td>
+														<td align='center'>###
+														<!--br><font color='blue'>[<%=round(RSSegments("cagr"),2)%>]</font--></td>
+														<td>&nbsp;</td>
+														</tr>
+													<%
+													RecValue1 = RecValue1 + 1
+													next%>	
+													<!--td align='center'><input type='textbox' type="number"  class="allow_decimal" id='txtcagr<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' name='txtcagr<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' size="3" value=""><br><font color='blue'>[<%=round(RSSegments("cagr"),2)%>]</font></td-->													
+													</tr>
+													
+													<tr><td colspan=6>
+														<button type="button" class="button1"  id="btnSaveUpdate" name="btnSaveUpdate" value="SUBMIT" style="background-color:#255e91; border:0px; width:160px; margin:0 auto !important;float:none; font-weight:bold; font-size:14px;color:white;padding:10px;" onClick="AddMultipleRecordstoDB('<%=RSSegments("Segment_ID")%><%=RSRegions("List_ID")%><%=MKTSize_Type%>','<%=Trim(RSRegions("Region_Country_Name"))%>','<%=RSSegments("Segment_ID")%>','<%=MKTSize_Type%>','<%=CF_StartYear%>','<%=CF_EndYear%>')">SAVE & UPDATE</button></td>											
+													</tr>
+													
+											<%	
+											    vSeg_ID = Trim(RSSegments("Segment_ID"))	
+											    GTDivID = GTDivID+1
+												RSSegments.MoveNext
+												Wend
+											End If %>
+										</table><BR>
+								
+										<%
+										End If										
+										
+										'''' IF the trim(request("YearType")) is RPCF Then show this
+										if instr(trim(report_type),"No Historics") =0 then
+										YearType="HR"
+										end if
+										If trim(ucase(YearType))="HR" Then
+										%>
+										 <div class="row mb-0 py-0 ">
+										<table class="table m-0" border="1" bg-color="#ccc">
+
+										
+											<%For displayHYear = HStartYear to HEndYear
+												QueryYearsH=QueryYearsH & ",[" &  displayHYear & "]"
+											Next %>
+										<%	Set RSSegmentsList = nothing
+											Set RSSegments = Server.CreateObject("ADODB.Recordset")
+											if DDlSegmentsList <> "" then
+												SegmentsQry="select segment_name,Segment_ID " & QueryYearsH & ",dbo.ReturnCAGR([" & HEndYear & "],[" & HStartYear &"]) as cagr from vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='" & request("code") & "' and country_name='"&Trim(RSRegions("Region_Country_Name"))&"' and segment_NAME IN (" & trim(DDlSegmentsList)&") ORDER BY CONVERT(int, REPLACE(REPLACE(Segment_ID, REPLACE(REPLACE(GIA_NO, 'NT', ''), 'MCP-', ''), ''), '-', ''))"
+											else
+												''SegmentsQry="select segment_name,Segment_ID " & QueryYearsH & ",dbo.ReturnCAGR([" & HEndYear & "],[" & HStartYear &"]) as cagr from vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='" & request("code") & "' and country_name='"&Trim(RSRegions("Region_Country_Name"))&"' and segment_type='" & trim(sname)&"' ORDER BY CONVERT(int, REPLACE(REPLACE(Segment_ID, REPLACE(REPLACE(GIA_NO, 'NT', ''), 'MCP-', ''), ''), '-', '')) "
+												SegmentsQry="select segment_name,Segment_ID " & QueryYearsH & ",dbo.ReturnCAGR([" & HEndYear & "],[" & HStartYear &"]) as cagr from vw_Report_Countries_AnalytixConsolidate$_cust where gia_no='" & request("code") & "' and country_name='"&Trim(RSRegions("Region_Country_Name"))&"' and segment_NAME='" & trim(sname)&"' ORDER BY CONVERT(int, REPLACE(REPLACE(Segment_ID, REPLACE(REPLACE(GIA_NO, 'NT', ''), 'MCP-', ''), ''), '-', '')) "
+											end if 	
+											''on error resume next
+                                           ''response.write SegmentsQry
+											'response.end
+											RSSegments.CursorLocation=3 
+											RSSegments.Open SegmentsQry, Conn7,1,2
+											
+											If Not RSSegments.EOF Then
+											ShowValueButtons = 1
+												segmentCount=RSSegments.RecordCount%>
+												
+												<tbody>
+												<%
+												''response.write segmentCount
+												''YEAR    [$$$] [%]    [###] [%]
+													while not RSSegments.EOF%>
+																											
+													<tr class="w-100">
+													<td class="bg_light_yellow p-0 m-0">
+														<table class="table_responsive border ">
+															<tr class="w-100">
+															 <caption class="text-cetner m-0 p-0 mt-2"><%=trim(ucase(RSSegments("segment_name")))%>&nbsp;/&nbsp;<%=HStartYear%>-<%=HEndYear%>&nbsp;/&nbsp;<%=UCase(RSRegions("Region_Country_Name"))%></caption>
+															<caption class="text-cetner m-0 p-0 mb-2 mt-1"><%=ucase(uname)%></caption>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													
+													
+													<!--BEGIN:HEADER --->
+													<tr class="w-100 ">
+														<td class="m-0 p-0">
+															<table class="table_responsive">
+																<thead>
+																	<tr class="bg_light_gray ">
+																		<th scope="col">YEAR</th>
+																		<th scope="col">[$$$]</th>
+																		<th scope="col">[%]</th>
+																		<th scope="col">[###]</th>
+																		<th scope="col"><b>[%]</th>
+																		<th scope="col">OPTIONS</th>
+																		</tr>
+																	</thead>
+															</table>
+															</td>
+														</tr>
+
+														 <tr class="w-100">
+														<td class="m-0 p-0">
+
+														<div>
+														<table class="table_responsive">
+															<tbody>
+									<!--END:HEADER --->
+													<%dim RecHValue1
+													''' HERE NUMBER 16 IS THE COLUMN NUMBER ON THE TABLE FOR 2020 FIELD. CHANGE THIS NUMBER TO 17 TO SHOW 2021
+													RecHValue1 = 2
+													For displayYearDataH=HStartYear to HEndYear 
+														dispYearH= """" & displayYearDataH  & """"
+													%>
+														
+															<tr>
+															<td data-label="YEAR" style=" vertical-align: middle"><b><%=displayYearDataH%></b> </td>
+															 <td data-label="[$$$]">
+
+															<div class="d-flex flex-column text-center my-2">
+															<input type='textbox' type="number"  class="allow_decimal" id='txt<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>' name='txt<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>' size="3" value="">
+															<span><font color="blue">[<%=RSSegments.fields(RecHValue1).value%>]</font></span>
+															</div></td>
+
+															<td data-label="[%]">
+															<div class="d-flex flex-column text-center my-2"><input type='textbox' type="number"  class="allow_decimal" id='txtcagr<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>' name='txtcagr<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>' size="3" value=""><span><font color="blue">[<%=round(RSSegments("cagr"),2)%>]</font></span> </div></td>
+
+															<td data-label="[###]">
+															<div class="d-flex flex-column text-center my-2">
+															<input type='textbox' type="number"  class="allow_decimal" id='txtUNITS<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>' name='txtUNITS<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>' size="3" value="">
+															 </div></td>
+
+															<td data-label="[%]">
+															<div class="d-flex flex-column text-center my-2"><input type='textbox' type="number"  class="allow_decimal" id='txtcagrUNITS<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>' name='txtcagrUNITS<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>' size="3" value="">
+															</div></td>
+
+															
+															<td data-label="OPTIONS" style=" vertical-align:middle;" class="text-center">											          
+															<a class="btn btn-sm btn-gia-primary mt-1"  data-toggle="collapse" href="#collapse<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>" role="button" aria-expanded="false" aria-controls="collapseExample"><small>ACTVITY</small></a>
+															<!--<a class="btn btn-sm btn-gia-primary mt-1"  onClick="addDataHistoric('<%=displayYearData%>','<%=RSSegments("Segment_ID")%><%=RSRegions("List_ID")%><%=MKTSize_Type%>','<%=Trim(RSRegions("Region_Country_Name"))%>','<%=RSSegments("Segment_ID")%>','<%=MKTSize_Type%>')"  data-toggle="collapse"  class="ajax-action-links"><button type='button'>ACTVITY</button></a>-->
+															<!--<a class='login-window' onClick="addDataHistoric('<%=displayYearData%>','<%=RSSegments("Segment_ID")%><%=RSRegions("List_ID")%><%=MKTSize_Type%>','<%=Trim(RSRegions("Region_Country_Name"))%>','<%=RSSegments("Segment_ID")%>','<%=MKTSize_Type%>')" class="ajax-action-links"><button type='button'>ACTVITY</button></a>-->
+														  </td>
+
+														  
+														</tr>
+
+
+														 <tr class="cluster_row">
+
+														<td data-label="YEAR" style=" vertical-align: middle"><b>Cluster</b></td>
+
+														<td data-label="[$$$]">
+															<div class="d-flex flex-column text-center ">
+																<span><font>###</font></span>
+															</div></td>
+
+
+														<td data-label="[%]">
+															<div class="d-flex flex-column text-center ">
+																<span><font>###</font></span>
+															</div>
+														</td>
+
+														<td data-label="[###]">
+
+															<div class="d-flex flex-column text-center ">
+																<span><font>###</font></span>
+															</div>
+														</td>
+
+														<td data-label="[%]">
+														<div class="d-flex flex-column text-center ">
+																<span><font>###</font></span>
+															</div>
+														</td>
+
+														<td data-label="OPTIONS" style=" vertical-align:middle;" class="text-center"></td>
+
+
+														 
+													</tr>
+
+													<tr>
+														<td colspan="6">
+															<!--BEGIN: COLLAPSE BOX--->
+															<div class="w-100">
+																<div class="bg-white p-3 text-left p-2 collapse shadow border" id="collapse<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearDataH%>">
+
+																	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+																</div>
+															</div>
+																	<!--COLLAPSE BOX---> 
+
+														</td>
+													</tr>	
+
+
+                                                        													
+													<%
+													RecHValue1 = RecHValue1 + 1
+													next%>	
+													</tbody> 
+													</table>
+													<!--td align='center'><input type='textbox' type="number"  class="allow_decimal" id='txtcagr<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' name='txtcagr<%response.write(RSSegments("Segment_ID")&""& RSRegions("List_ID")&""&MKTSize_Type)%><%=displayYearData%>' size="3" value=""><br><font color='blue'>[<%=round(RSSegments("cagr"),2)%>]</font></td-->
+																										
+													<!--td ALIGN='CENTER'><a class='login-window' onClick="addToDatabase('<%=RSSegments("Segment_ID")%>','<%=RSRegions("Region_Country_Name")%>','<%=RSRegions("List_ID")%>')" class="ajax-action-links"><button type='button'>SAVE</button></a></td-->
+													 	
+													 <tr class="w-100">
+														<td class="m-0 p-0">
+															<div class="d-flex">
+														<button type="submit" class="button1"  id="btnEqsubmit" name="btnEqsubmit" value="SUBMIT" style="background-color:#255e91; border:0px; width:160px; margin:0 auto !important;float:none; font-weight:bold; font-size:14px;color:white;padding:10px;" onClick="AddMultipleRecordstoDB('<%=RSSegments("Segment_ID")%><%=RSRegions("List_ID")%><%=MKTSize_Type%>','<%=Trim(RSRegions("Region_Country_Name"))%>','<%=RSSegments("Segment_ID")%>','<%=MKTSize_Type%>','<%=HStartYear%>','<%=HEndYear%>')">SAVE & UPDATE</button>											</td>											
+													</div>
+													</td>
+
+												</tr>
+												
+											<%	
+											    vSeg_ID = Trim(RSSegments("Segment_ID"))	
+											    GTDivID = GTDivID+1
+												RSSegments.MoveNext
+												Wend
+											End If %>
+											
+											</table>
+											
+											</div>
+											
+											
+											<%End If%>
+											
+										     <table><tr width='100%'><td colspan='8'><!--button type="Reset" name="btnsubmit" value="RESET" class="button1" style="display:block; margin:0 auto !important;float:right;font-weight:bold;font-size:15px;width:80px;">RESET</button--></td><td colspan='2' align='right'>
+
+														<!--a class="login-window" onClick="addAllToDatabase('<%=RSRegions("Region_Country_Name")%>','<%=RSRegions("List_ID")%>','<%=segmentCount%>','<%=Replace(session("giacode"),"NT","")%>','<%=MKTSize_Type%>')"><button id=""  type='button' style="width:160px; display:block; margin:0 auto !important;background:#007EC6 !important;border:none; float:none; font-weight:bold; font-size:15px; color:white; padding:10px; height:35px;"><font color="#ffffff">SAVE</font></button></a-->
+
+
+														<!--a class="login-window" style="color:#fff" onClick="addAllToDatabase('<%=RSRegions("Region_Country_Name")%>','<%=RSRegions("List_ID")%>','<%=vSeg_ID%>','<%=Replace(session("giacode"),"NT","")%>','<%=MKTSize_Type%>')"><button id=""  type='button' class="button1" style="background-color:#005fb4; border:0px; width:160px; display:block; margin:0 auto !important;border:none; float:none; font-weight:bold; font-size:15px; color:white !important; padding:10px; height:35px;">SAVE</button></a--->
+														
+														</td></tr></tbody>
+											</table>
+											</div>
+											</div>
+											</form> <!--Regions form closed---->
+											
+                                         <%''End If%>
+								
+
+										
+											<%''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+											''''''''''''''''''''''''END OF UNITS VALUES FOR THE FIRST SCREEN''''''''''''''
+											''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''%>
+											
+
+
+											<!-- END MARKET SIZE TABLE -->
+											
+
+
+											
+											</div>	
+											</td></tr></table></DIV><hr>
+											
+									<%RSRegions.MoveNext 
+									Wend%>
+									
+								<%End If
+								'Conn.close
+								%>
+						
+							<p><font class="car" face="arial" style="color:#000000;" size='2'></p>
+							<%If ShowValueButtons = 1 Then%>
+							</form>
+							<form name="frmadd" method="post" action="GIA_Research_Feedback_n.asp?code=<%=Trim(request("code"))%>&encID=<%=Trim(request("encID"))%>&gregion=<%=trim(request("gregion"))%>&stype=<%=trim(request("stype"))%>&YearType=<%=trim(request("YearType"))%>&getDATA=<%=trim(request("getDATA"))%>&type=submit">
+							<hr/>
+							
+							&nbsp;&nbsp;<button type="submit" class="button1"  id="btnEqsubmit" name="btnEqsubmit" value="SUBMIT" style="background-color:#255e91; border:0px; width:160px; margin:0 auto !important;float:none; font-weight:bold; font-size:14px;color:white;padding:10px;" onsubmit="return CheckAddData();">SUBMIT FINAL</button>
+							
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="button1"  id="btnEqsubmit" name="btnEqsubmit" value="COLLABORATE" style="background-color:#255e91; border:0px; width:160px; margin:0 auto !important;float:none; font-weight:bold; font-size:14px;color:white;padding:10px;" onclick="location.href='https://www.strategyr.com/GIA_Research_collaborate.asp?code=<%=Trim(request("code"))%>&encID=<%=Trim(request("encID"))%>';">COLLABORATE </button>
+							
+							
+							</form>
+							<%END If%>
+					<!--	</table>	-->
+				
+			<!--Questionnaire code end here-->			
+			<!--Questionnaire code end here-->			
+		
+</div>
+
+<script type="text/javascript">
+function openWindow() {
+    window.open("vuL1QuesDataAnalytics.asp",'User',"status=1,width=1200,height=700");
+}
+</script>
+<script type="text/javascript">
+
+   function showMe (box) {   
+   //  alert(box);
+	var chboxs = document.getElementById(box).style.display;
+	var vis = "none";
+		if(chboxs=="none"){
+		 vis = "block"; }
+		if(chboxs=="block"){
+		 vis = "none"; }
+	document.getElementById(box).style.display = vis;
+}
+  
+</script>
+
+<script>
+$(document).ready(function() {
+$('a.login-window').click(function() {
+    
+    //Getting the variable's value from a link 
+    var loginBox = $(this).attr('href');
+
+    //Fade in the Popup
+    $(loginBox).fadeIn(300);
+    
+    //Set the center alignment padding + border see css style
+   // var popMargTop = ($(loginBox).height() + 24) / 2; 
+   // var popMargLeft = ($(loginBox).width() + 24) / 2; 
+    var popMargTop = ($(loginBox).height() + 24) / 12; 
+    var popMargLeft = ($(loginBox).width() + 24) / 12; 
+    
+    $(loginBox).css({ 
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+    
+    // Add the mask to body
+	 $('body').append('<div id="mask"></div>');
+    //$('#mask').fadeIn(30);
+    
+    return false;
+});
+
+// When clicking on the button close or the mask layer the popup closed
+$('a.close, #mask').live('click', function() { 
+  $('#mask , .login-popup').fadeOut(300 , function() {
+    $('#mask').remove();  
+}); 
+return false;
+});
+});
+</script>
+
+
+</div>
+
+      </div>
+      <!-- 960 Container / End --> 
+    </div>
+    <!-- Page Content / End --> 
+  </div>
+  <!-- Content / End --> 
+</div>
+<!-- Wrapper / End --> 
+
+<!-- Footer
+================================================== --> 
+
+</div>
+</div><!-- Wrapper / End -->
+
+<!-- Footer start-->
+<!--#include file="ASPIncludes/BottomStrip_Other.asp"-->
+<!---footer_end-->
+</body>
+</html>
+<script>
+$(".coll_btn").click(function() {
+        $(this).parents(".coll_block").find(".pannel").slideToggle();
+		 $(this).parents(".coll_block").find("span").toggleClass("active");
+		 //$(this).parents(".coll_block").find("span").toggleClass("ui-accordion-icon");
+		 $(this).parents(".coll_block").find("coll_alink").addClass("active");
+		 $(this).parents(".coll_block").find("button").toggleClass("active");
+		 $(this).parents(".coll_block").toggleClass("border_shadow");
+		 
+    });
+	
+	$(".compnay_col_close").click(function() {
+		$(this).parents(".coll_block").hide;
+	});
+	
+	$(".other_research_btn").click(function(){
+		$("#resea_indu").toggle()
+	});
+	
+	$("#resea_indu ul li").click(function(){
+		$("#resea_indu_table").css("display","block");
+	});
+	
+				function SubitQuestionnaire()
+				{ 
+                   //window.location.href = "../GIA_Questionnaire_Final.asp";			 
+
+				   
+				}
+</script>
