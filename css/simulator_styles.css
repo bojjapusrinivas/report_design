@@ -1,0 +1,73 @@
+/*===============================
+        SIMULATOR PAGE STYLES
+===============================*/
+
+
+/*----HEADER SECTION-----*/
+
+.header_titles p {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+@media screen and (max-width: 480px) {
+    .header_titles p {
+        font-size: 16px;
+    }
+}
+
+/*------ CURRENTCY SECTION ---*/
+
+#currency_block h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #900;
+    line-height: normal;
+    margin-top: 12px;
+}
+#currency_block .form-check-label {
+    font-weight: 700 !important;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+#currency_block a.close-modal {
+    top: 7.5px;
+    right: 7.5px;
+    display: block;
+    width: 25px;
+    height: 25px
+}
+
+/*====== TABLE STYLES =======*/
+
+.table_capiton {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+.expert_details {
+    width: 255px;
+    margin: 0 auto;
+}
+.expert_details h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: normal;
+}
+.expert_details h4 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+.expert_details .star_rating {
+    margin-top: 2px;
+    width: 60px;
+    height: 14px;
+    display: block;
+}
+.expert_details .brand_cards .img-block {
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    padding: 2px;
+    overflow: hidden;
+}

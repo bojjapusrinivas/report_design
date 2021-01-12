@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/wedges_effect.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/simulator_styles.css" />
     <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -45,11 +46,9 @@
     <script src="scripts/bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
     <!--script src="scripts/load/jquery..js"></script>
     <script src="scripts/load/jquery..plugins.js"></script-->
     <!--- accordion2 script ---->
-
     <style>
         /* Mask for background, by default is not display */
         
@@ -129,7 +128,7 @@
             margin: 0px;
             display: block;
         }
-        
+        /*
         @media screen and (max-width: 767px) {
             .table_responsive {
                 border: 0;
@@ -148,157 +147,150 @@
                 width: 1px;
             }
             .table_responsive tr {
-                /* border-bottom: 3px solid #ddd;*/
-                display: block;
-                margin-bottom: .625em;
-            }
-            .table_responsive td {
-                border-bottom: 1px solid #ddd;
-                display: block;
-                font-size: .8em;
-                text-align: right;
-            }
-            .table_responsive td::before {
-                /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
-                content: attr(data-label);
-                float: left;
-                font-weight: bold;
-                text-transform: uppercase;
-                position: absolute;
-                left: calc(100% - 96%);
-                top: calc(100% - 70%);
-            }
-            .table_responsive td:last-child {
-                border-bottom: 0;
-            }
-            /*---HIDING YEAR TAB---*/
-            .table_responsive td:nth-child(1) {
-                text-align: center;
-                font-size: 16px;
-                background: #404040;
-                color: #fff;
-            }
-            .table_responsive td:nth-child(1)::before,
-            .table_responsive td:nth-child(6)::before {
-                display: none;
-            }
-            .table_responsive tr.cluster_row td:nth-child(6) {
-                display: none;
-            }
-            .table_responsive tr.cluster_row td {
-                padding: 5px 0px
-            }
-        }
+                border-bottom: 3px solid #ddd;
+        
+        display: block;
+        margin-bottom: .625em;
+    }
+    .table_responsive td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    .table_responsive td::before {
+        
+        
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: absolute;
+        left: calc(100% - 96%);
+        top: calc(100% - 70%);
+    }
+    .table_responsive td:last-child {
+        border-bottom: 0;
+    }
+    
+    .table_responsive td:nth-child(1) {
+        text-align: center;
+        font-size: 16px;
+        background: #404040;
+        color: #fff;
+    }
+    .table_responsive td:nth-child(1)::before,
+    .table_responsive td:nth-child(6)::before {
+        display: none;
+    }
+    .table_responsive tr.cluster_row td:nth-child(6) {
+        display: none;
+    }
+    .table_responsive tr.cluster_row td {
+        padding: 5px 0px
+    }
+}
+*/
 
     </style>
-
-
-
 </head>
 
-<body>
+<body id="simulator_page">
     <!-- Wrapper / Start -->
     <div id="wrapper" class="bor-radius">
         <div id="top-line" style="box-shadow:none; height:5px;"> </div>
         <!-- Content
 ================================================== -->
         <!---BEGN REPORT TITLE--->
-
         <!---END REPORT TITLE--->
         <!---BEGIN:PAGE CONTENT--->
         <div class="page-content">
             <div class="container">
-                <!---Begin:SELECT PLAYERS,SEGMENTS,GEOGRAPHIES --->
-
-
-                <div class="row mb-0 py-0 ">
-                    <div class="sixteen columns">
+                <!---- BEGIN : HEADER SECTION ---->
+                <header>
+                    <div class="row" style="margin-bottom:0px;">
+                        <div class="three columns text-center"> <img src="../images/gia_smalllogo.png" alt="GIA" class="logo mx-auto" style="width:65px; height:auto;"> </div>
+                        <div class="ten columns head_title_block text-center">
+                            <h3 style="font-weight:bold; color:#0080C2;" class="mb-0">SIMULATOR</h3>
+                            <h3 style="font-weight:bold; color:#900;line-height: 23px;"> DIGITAL BANKING<br><span style="font-weight:bold;color:#000;">MCP-6073</span></h3> </div>
+                        <div class="mobile_display" style="text-align:center; width:100% !important"> <img src="https://www.strategyr.com/resize_img/sig_100.jpg" alt="GIA" class="logo" style="width:90px; height:auto; margin:0 auto; padding-top:10px"> </div>
+                    </div>
+                    <div class="row mb-0 py-0 text-center">
                         <p id="table-body1"></p>
-                        <div class="py-2 border-bottom border-top my-3 " id="header_strip ">
-                            <p class=" my-0 py-1 text-center">Srinivas Obili</p>
-                            <p class=" my-0 py-1 text-center">Global Industry Analysts, Inc.</p>
-                            <p class=" my-0 py-1 text-center">January 7, 2021</p>
+                        <div class="py-2 border-bottom border-top my-3 header_titles">
+                            <p>Srinivas Obili</p>
+                            <p>Global Industry Analysts, Inc.</p>
+                            <p>January 7, 2021</p>
                         </div>
                     </div>
-
+                </header>
+                <!---- END : HEADER SECTION ---->
+                <!---- BEGIN : CONTENT SSECTION ---->
+                <div class="row mb-0 py-0 ">
                     <div class="sixteen columns" id="region_block">
-
                         <table align="center" border="0" width="100%" style="border-collapse:collapse;">
-
                             <tbody>
+                                <!--- BEGIN:MESSAGE(REPORTING LEVEL) TR---->
                                 <tr class="my-2 d-block">
-                                    <td height="15" colspan="2" style="padding-left:5px " class="LClass">
-
-                                        <b>REPORTING LEVEL:</b> SERVICE PROVIDER'S LEVEL&nbsp;(No Historics) </td>
+                                    <td height="15" colspan="2" style="padding-left:5px " class="LClass"> <b>REPORTING LEVEL:</b> SERVICE PROVIDER'S LEVEL&nbsp;(No Historics) </td>
                                 </tr>
-
-
+                                <!--- END:MESSAGE(REPORTING LEVEL) TR---->
+                                <!--- BEGIN:MESSAGE TR---->
                                 <tr class="my-2 d-block">
                                     <td height="15" colspan="2" style="padding-left:5px " class="LClass"><b>MARKET MEASURE:</b></td>
                                 </tr>
-                                <tr style="background-color:#f0f0f0;">
+                                <tr>
                                     <td height="15" colspan="2">
                                         <table class="m-0 p-0">
                                             <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <table class="m-0 p-0">
-                                                            <tbody>
-                                                                <tr class="mb-2 d-block">
-                                                                    <td height="15" colspan="2" style="padding-left:5px " class="LClass">
-
-                                                                        <div class="eight columns mx-0 mb-2">
-                                                                            <input type="checkbox" name="USD_MEASURE" id="USD_MEASURE" value="USD" checked=""> &nbsp;<b>USD$</b> &nbsp;
-                                                                            <a href="#currency_block" rel="modal:open" class="mb-2 btn btn-gia-primary btn-sm p-1 rounded-0  mx-2"><small>CHANGE CURRENCY</small></a>
-
-                                                                            <br/>
-                                                                            <input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ MILLION" checked="" class="ml-4"> MILLION &nbsp;&nbsp;
-                                                                            <input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ BILLION">BILLION &nbsp;&nbsp;
-                                                                            <input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ TRILLION">TRILLION
-                                                                        </div>
-
-                                                                        <div class="eight columns mx-0  mb-2">
-                                                                            <input type="checkbox" name="UNITS_MEASURE" id="UNITS_MEASURE" value="UNITS" checked="" class="mb-3"> &nbsp;<b>UNITS:</b>
-                                                                            <br/>
-
-                                                                            <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Actual" class="ml-4"> ACTUAL &nbsp;&nbsp;
-                                                                            <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Million">MILLION&nbsp;&nbsp;
-                                                                            <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Billion">BILLION
-
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-
-
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                    <td valign="top">
-
+                                                <tr class="mb-2 d-block">
+                                                    <td height="15" colspan="2" style="padding-left:5px " class="LClass">
+                                                        <!---Begin:USD Section---->
+                                                        <div class="eight columns mx-0 mb-2">
+                                                            <div class="w-100 mb-1">
+                                                                <input type="checkbox" name="USD_MEASURE" id="USD_MEASURE" value="USD" checked=""> &nbsp;<b>USD$</b> &nbsp; <a href="#currency_block" rel="modal:open" class="mb-2 text-primary  mx-2 font-weight-bold">CHANGE CURRENCY</a> </div>
+                                                            <div class="w-100">
+                                                                <div class="d-flex">
+                                                                    <input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ MILLION" checked="" class="ml-4"> MILLION&nbsp;&nbsp;
+                                                                    <input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ BILLION">BILLION&nbsp;&nbsp;
+                                                                    <input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ TRILLION">TRILLION </div>
+                                                            </div>
+                                                        </div>
+                                                        <!---End:USD Section---->
+                                                        <!---Begin:Units Section---->
+                                                        <div class="eight columns mx-0 mb-2">
+                                                            <div class="w-100 mb-1">
+                                                                <input type="checkbox" name="UNITS_MEASURE" id="UNITS_MEASURE" value="UNITS" checked=""> &nbsp;<b>UNITS:</b> </div>
+                                                            <div class="w-100">
+                                                                <div class="d-flex">
+                                                                    <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Actual" class="ml-4"> ACTUAL&nbsp;&nbsp;
+                                                                    <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Million">MILLION&nbsp;&nbsp;
+                                                                    <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Billion">BILLION </div>
+                                                            </div>
+                                                        </div>
+                                                        <!---Begin:Units Section---->
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </td>
                                 </tr>
-
-
-                                <tr class="my-2 d-block">
+                                <!--- END:MESSAGE TR---->
+                                <!--- BEGIN:SEGMENT TR---->
+                                <tr class="mb-3 mt-2 d-block">
                                     <td>
-                                        <b><font color="#9B0004">*</font> SEGMENT:</b>
+                                        <div class="d-flex"> <b class="mx-2"><font color="#9B0004">*</font> SEGMENT:</b>
+                                            <div data-brackets-id="37176" class="form-group"> ADD SEGMENT:
+                                                <input data-brackets-id="37177" type="textbox" class="form-control feedback_full_page border py-1" id="txtSegment" name="txtSegment" size="12" value="" placeholder="ADD SEGMENT">
+                                                <button data-brackets-id="37178" class="btn btn-gia-primary btn-sm" type="button" title="Add Segment" onclick="addNewSegment()"><i data-brackets-id="37179" class="fa fa-plus" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
                                     </td>
-
                                 </tr>
-
-
                                 <tr class="my-2 d-block">
                                     <td nowrap="" colspan="2" style="padding-left:5px " class="LClass d-flex flex-wrap justify-content-rounded flex-md-column flex-lg-row flex-xl-row">
                                         <!--<select name="DDlSegmentsList" id="DDlSegmentsList"  onchange="toggle1()">
 				<option value="">--select--</option>-->
-
                                         <div class="five columns" style="text-align:left">
                                             <input type="checkbox" name="DDlSegmentsList" id="DDlSegmentsList" value="Retail Banking"><span> Retail Banking [Type]</span></div>
                                         <!--	<option  value="">  </option> -->
@@ -335,7 +327,6 @@
                                         <div class="five columns" style="text-align:left">
                                             <input type="checkbox" name="DDlSegmentsList" id="DDlSegmentsList" value="Chatbots"><span> Chatbots [Technology]</span></div>
                                         <!--	<option  value="">  </option> -->
-
                                         <!--</select>-->
                                         <div class="five columns" style="text-align:left">
                                             <input type="checkbox" name="DDlSegmentsList" id="DDlSegmentsList" value="test 1"><span> test 1 [User Added]</span></div>
@@ -346,73 +337,31 @@
                                         <div class="five columns" style="text-align:left">
                                             <input type="checkbox" name="DDlSegmentsList" id="DDlSegmentsList" value="New Segment"><span> New Segment [User Added]</span></div>
                                         <!--	<option  value="">  </option> -->
-
                                         <!--</select>-->
-
                                     </td>
                                 </tr>
-
-
-
-                                <tr class="my-3 d-block">
-                                    <td class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                        <div class="mt-2 mx-2"><b>ADD SEGMENT:</b></div>
-                                        <div>
-                                            <div class="form-group">
-                                                <input type="textbox" class="form-control feedback_full_page border py-1" id="txtSegment" name="txtSegment" size="12" value="">
-                                                <button class="btn btn-gia-primary btn-sm" type="button" title="Add Segment" onclick="addNewSegment()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-
-
+                                <!--- END:SEGMENT TR---->
                                 <tr class="mt-4 d-block">
-                                    <td colspan="2" style="padding-left:5px " class="LClass"><b><font color="#9B0004">*</font> REGION/COUNTRY:</b>
-                                    </td>
+                                    <td colspan="2" style="padding-left:5px " class="LClass"><b><font color="#9B0004">*</font> REGION/COUNTRY:</b> </td>
                                 </tr>
                                 <tr>
                                     <td class="LClass" id="region_block">
-                                        <div class="row border-top mx-2 pt-2 mb-0">
-                                            <b>REGION:</b> Africa
-                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                                ADD COUNTRY:
+                                        <div class="row border-top mx-2 pt-2 mb-0"> <b>REGION:</b> Africa
+                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row"> ADD COUNTRY:
                                                 <div class="d-flex">
                                                     <select name="AddNewCountryAsia-Pacific" id="AddNewCountryAsia-Pacific" class="py-0  feedback_input">
                                                         <option value="">-- Select a country--</option>
-
                                                         <option value="Taiwan">Taiwan (Asia-Pacific)</option>
-
-
                                                         <option value="Thailand">Thailand (Asia-Pacific)</option>
-
-
                                                         <option value="Indonesia">Indonesia (Asia-Pacific)</option>
-
-
                                                         <option value="Bangladesh">Bangladesh (Asia-Pacific)</option>
-
-
                                                         <option value="Vietnam">Vietnam (Asia-Pacific)</option>
-
-
                                                         <option value="Pakistan">Pakistan (Asia-Pacific)</option>
-
-
                                                         <option value="Malaysia">Malaysia (Asia-Pacific)</option>
-
-
                                                         <option value="Singapore">Singapore (Asia-Pacific)</option>
-
-
                                                         <option value="New Zealand">New Zealand (Asia-Pacific)</option>
-
-
                                                         <option value="Philippines">Philippines (Asia-Pacific)</option>
-
-
                                                     </select>
-
                                                     <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                 </div>
                                             </div>
@@ -420,450 +369,254 @@
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" checked="" onclick="toggle()" value="Africa"><span> Africa</span></div>
                                         </div>
-
-                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 ">
-                                            <b>REGION:</b>&nbsp;&nbsp; Asia-Pacific
-
-
-
-                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                                ADD COUNTRY:
+                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 "> <b>REGION:</b>&nbsp;&nbsp; Asia-Pacific
+                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row"> ADD COUNTRY:
                                                 <div class="d-flex">
                                                     <select name="AddNewCountryAsia-Pacific" id="AddNewCountryAsia-Pacific" class="py-0  feedback_input">
                                                         <option value="">-- Select a country--</option>
-
                                                         <option value="Taiwan">Taiwan (Asia-Pacific)</option>
-
-
                                                         <option value="Thailand">Thailand (Asia-Pacific)</option>
-
-
                                                         <option value="Indonesia">Indonesia (Asia-Pacific)</option>
-
-
                                                         <option value="Bangladesh">Bangladesh (Asia-Pacific)</option>
-
-
                                                         <option value="Vietnam">Vietnam (Asia-Pacific)</option>
-
-
                                                         <option value="Pakistan">Pakistan (Asia-Pacific)</option>
-
-
                                                         <option value="Malaysia">Malaysia (Asia-Pacific)</option>
-
-
                                                         <option value="Singapore">Singapore (Asia-Pacific)</option>
-
-
                                                         <option value="New Zealand">New Zealand (Asia-Pacific)</option>
-
-
                                                         <option value="Philippines">Philippines (Asia-Pacific)</option>
-
-
                                                     </select>
-
                                                     <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                 </div>
                                             </div>
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" checked="" onclick="toggle()" value="India"><span> India</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" checked="" onclick="toggle()" value="South Korea"><span> South Korea</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Australia"><span> Australia</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Japan"><span> Japan</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Rest of Asia-Pacific"><span> Rest of Asia-Pacific</span></div>
-
                                         </div>
-
-                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 ">
-                                            <b>REGION:</b>&nbsp;&nbsp;Canada
-
-                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                                ADD COUNTRY:
+                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 "> <b>REGION:</b>&nbsp;&nbsp;Canada
+                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row"> ADD COUNTRY:
                                                 <div class="d-flex">
                                                     <select name="AddNewCountryAsia-Pacific" id="AddNewCountryAsia-Pacific" class="py-0  feedback_input">
                                                         <option value="">-- Select a country--</option>
-
                                                         <option value="Taiwan">Taiwan (Asia-Pacific)</option>
-
-
                                                         <option value="Thailand">Thailand (Asia-Pacific)</option>
-
-
                                                         <option value="Indonesia">Indonesia (Asia-Pacific)</option>
-
-
                                                         <option value="Bangladesh">Bangladesh (Asia-Pacific)</option>
-
-
                                                         <option value="Vietnam">Vietnam (Asia-Pacific)</option>
-
-
                                                         <option value="Pakistan">Pakistan (Asia-Pacific)</option>
-
-
                                                         <option value="Malaysia">Malaysia (Asia-Pacific)</option>
-
-
                                                         <option value="Singapore">Singapore (Asia-Pacific)</option>
-
-
                                                         <option value="New Zealand">New Zealand (Asia-Pacific)</option>
-
-
                                                         <option value="Philippines">Philippines (Asia-Pacific)</option>
-
-
                                                     </select>
-
                                                     <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                 </div>
                                             </div>
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Canada"><span> Canada</span></div>
-
                                         </div>
-
-                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 ">
-                                            <b>REGION:</b>&nbsp;&nbsp; China
-
-                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                                ADD COUNTRY:
+                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 "> <b>REGION:</b>&nbsp;&nbsp; China
+                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row"> ADD COUNTRY:
                                                 <div class="d-flex">
                                                     <select name="AddNewCountryAsia-Pacific" id="AddNewCountryAsia-Pacific" class="py-0  feedback_input">
                                                         <option value="">-- Select a country--</option>
-
                                                         <option value="Taiwan">Taiwan (Asia-Pacific)</option>
-
-
                                                         <option value="Thailand">Thailand (Asia-Pacific)</option>
-
-
                                                         <option value="Indonesia">Indonesia (Asia-Pacific)</option>
-
-
                                                         <option value="Bangladesh">Bangladesh (Asia-Pacific)</option>
-
-
                                                         <option value="Vietnam">Vietnam (Asia-Pacific)</option>
-
-
                                                         <option value="Pakistan">Pakistan (Asia-Pacific)</option>
-
-
                                                         <option value="Malaysia">Malaysia (Asia-Pacific)</option>
-
-
                                                         <option value="Singapore">Singapore (Asia-Pacific)</option>
-
-
                                                         <option value="New Zealand">New Zealand (Asia-Pacific)</option>
-
-
                                                         <option value="Philippines">Philippines (Asia-Pacific)</option>
-
-
                                                     </select>
-
                                                     <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                 </div>
                                             </div>
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="China"><span> China</span></div>
-
                                         </div>
-
-                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 ">
-                                            <b>REGION:</b>&nbsp;&nbsp; Europe
-
-                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                                ADD COUNTRY:
+                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 "> <b>REGION:</b>&nbsp;&nbsp; Europe
+                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row"> ADD COUNTRY:
                                                 <div class="d-flex">
                                                     <select name="AddNewCountryEurope" id="AddNewCountryEurope" class="py-0  feedback_input">
                                                         <option value="">-- Select a country--</option>
-
                                                         <option value="Kazakhstan">Kazakhstan (Europe)</option>
-
-
                                                         <option value="Norway">Norway (Europe)</option>
-
-
                                                         <option value="Netherlands">Netherlands (Europe)</option>
-
-
                                                         <option value="Turkey">Turkey (Europe)</option>
-
-
                                                         <option value="Ukraine">Ukraine (Europe)</option>
-
-
                                                         <option value="Greece">Greece (Europe)</option>
-
-
                                                         <option value="Poland">Poland (Europe)</option>
-
-
                                                         <option value="Portugal">Portugal (Europe)</option>
-
-
                                                         <option value="Iceland">Iceland (Europe)</option>
-
-
                                                         <option value="Belgium">Belgium (Europe)</option>
-
-
                                                     </select>
-
                                                     <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                 </div>
                                             </div>
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Spain"><span> Spain</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="United Kingdom"><span> United Kingdom</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="France"><span> France</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Italy"><span> Italy</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Russia"><span> Russia</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Rest of Europe"><span> Rest of Europe</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Germany"><span> Germany</span></div>
-
                                         </div>
-
-                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 ">
-                                            <b>REGION:</b> &nbsp;&nbsp;Latin America
-
-
-                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                                ADD COUNTRY:
+                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 "> <b>REGION:</b> &nbsp;&nbsp;Latin America
+                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row"> ADD COUNTRY:
                                                 <div class="d-flex">
                                                     <select name="AddNewCountryLatin America" id="AddNewCountryLatin America" class="py-0  feedback_input">
                                                         <option value="">-- Select a country--</option>
-
                                                         <option value="Argentina">Argentina (Latin America)</option>
-
-
                                                         <option value="Chile">Chile (Latin America)</option>
-
-
                                                         <option value="Colombia">Colombia (Latin America)</option>
-
-
                                                         <option value="Costa Rica">Costa Rica (Latin America)</option>
-
-
                                                         <option value="El Salvador">El Salvador (Latin America)</option>
-
-
                                                     </select>
                                                     <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                 </div>
                                             </div>
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Brazil"><span> Brazil</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Mexico"><span> Mexico</span></div>
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Rest of Latin America"><span> Rest of Latin America</span></div>
-
                                         </div>
-
-
-                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 ">
-                                            <b>REGION:</b> &nbsp;&nbsp;Middle East
-
-                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                                ADD COUNTRY:
+                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 "> <b>REGION:</b> &nbsp;&nbsp;Middle East
+                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row"> ADD COUNTRY:
                                                 <div class="d-flex">
                                                     <select name="AddNewCountryMiddle East" id="AddNewCountryMiddle East" class="py-0  feedback_input">
                                                         <option value="">-- Select a country--</option>
-
                                                         <option value="Iran">Iran (Middle East)</option>
-
-
                                                         <option value="Israel">Israel (Middle East)</option>
-
-
                                                         <option value="Rest of Middle East">Rest of Middle East (Middle East)</option>
-
-
                                                         <option value="Saudi Arabia">Saudi Arabia (Middle East)</option>
-
-
                                                         <option value="United Arab Emirates">United Arab Emirates (Middle East)</option>
-
-
                                                     </select>
-                                                    <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i>
-                                                    </button>
+                                                    <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i> </button>
                                                 </div>
                                             </div>
-
-
                                             <!--button> ADD COUNTRY</button-->
                                             <!-- STARTS INSERT-->
-
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Middle East"><span> Middle East</span></div>
-
                                         </div>
-
-                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 ">
-                                            <b>REGION:</b> United States
-                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row">
-                                                ADD COUNTRY:
+                                        <div class="row border-top mx-2 my-2 pt-2 mb-0 "> <b>REGION:</b> United States
+                                            <div class="d-flex mt-2 dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 flex-sm-column flex-md-row flex-lg-row flex-md-row"> ADD COUNTRY:
                                                 <div class="d-flex">
                                                     <select name="AddNewCountryMiddle East" id="AddNewCountryMiddle East" class="py-0  feedback_input">
                                                         <option value="">-- Select a country--</option>
-
                                                         <option value="Iran">Iran (Middle East)</option>
-
-
                                                         <option value="Israel">Israel (Middle East)</option>
-
-
                                                         <option value="Rest of Middle East">Rest of Middle East (Middle East)</option>
-
-
                                                         <option value="Saudi Arabia">Saudi Arabia (Middle East)</option>
-
-
                                                         <option value="United Arab Emirates">United Arab Emirates (Middle East)</option>
-
-
                                                     </select>
                                                     <button type="button" style="width:29px; height:29px;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                                 </div>
                                             </div>
-
-
-
                                             <div class="three columns mt-2" style="text-align:left">
                                                 <!--<option value="WORLD"  >WORLD</option>-->
                                                 <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="United States"><span> United States</span></div>
-
-
-
                                         </div>
-
-
-
-
                                     </td>
                                 </tr>
-
-
                             </tbody>
                         </table>
-
-
-
-
                     </div>
-
-
-
-
-
-
                     <!---OUTER TABLE--->
                     <table class="table m-0" border="1" bg-color="#ccc">
-
-
                         <tr class="w-100">
                             <td class="bg_light_yellow p-0 m-0">
+                                <div class="row">
+                                    <div class="text-center w-100  pt-2 table_capiton">RETAIL BANKING - ASIA-PACIFIC</div>
+                                    <div class="w-100 bg-white  my-2 text-center">
+                                        <div class="expert_details">
+                                            <div class="py-1">
+                                                <div class="brand_cards my-1 px-2 d-flex justify-content-center ">
 
+                                                    <div class="mb-2">
+                                                        <div class="d-flex float-left flex-column img-block"> <img src="images\beer\profile_pic.jpg" class="img-fluid"> </div>
+                                                    </div>
+
+                                                    <div class="text-left ml-3">
+
+                                                        <h3 class="font-weight-bold text-dark mb-0 p-0 textlimited">Obili Srinivas</h3>
+                                                        <h4 class="text-dark mb-0 p-0 textlimited2">Executive Vice President
+</h4>
+                                                        <h4 class="text-dark mb-1 p-0">IBM </h4>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-0">
+                                                    <div class="m-0 p-0 d-flex flex-row  flex-wrap justify-content-around">
+                                                        <h4 class="mb-0 tier_top_10 tier">Expert: 256487
+                                                </h4>
+                                                        <h4 class="text-dark mb-1 p-0"> Projects: 169 </h4>
+                                                    </div>
+                                                    <div class="m-0 p-0 d-flex flex-row  flex-wrap justify-content-around">
+
+                                                        <h4 class="mb-0 d-flex">Influence:<i class="star_rating"> <img src="https://bojjapusrinivas.github.io/report_design/images/beer/star_rating_3.0.jpg"></i>
+                                                </h4>
+                                                        <h4 class="text-dark mb-1 p-0"> Tier: Top 30% </h4> </div>
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!--BEGIN: RESPONSIVE TABLE:CAPTION --->
                                 <table class="table_responsive border ">
                                     <tr class="w-100">
                                         <caption class="text-cetner m-0 p-0 mt-2">AUTOMOTIVE&nbsp;/&nbsp;2020-2027&nbsp;/&nbsp;CANADA</caption>
-
-
                                         <caption class="text-cetner m-0 p-0 mb-2 mt-1">
-                                            <div class="d-flex  flex-lg-row flex-xl-row w-sm-100  w-md-50 w-25 mx-auto text-center justify-content-center">
-
-                                                <img src="https://via.placeholder.com/35" class="rounded-circle" style="width: 35px; height: 35px" />
-
-                                                <span class="mt-2 mx-2">SRINIVAS OBILI</span>
-                                            </div>
-                                            <div class="mt-1">
-                                                Executive Vice President, IBM
-                                            </div>
-
-                                            <div class="mt-1 d-flex flex-sm-column flex-lg-row flex-xl-row w-sm-100 justify-content-center">
-                                                <small> <span class="mx-2 font-weight-bold">Expert: 256487</span> <span class="mx-2 font-weight-bold">Projects: 169</span> <span class="mx-2 font-weight-bold">Tier: Top 20% </span></small>
-                                            </div>
-
-
-
+                                            <div class="d-flex  flex-lg-row flex-xl-row w-sm-100  w-md-50 w-25 mx-auto text-center justify-content-center"> <img src="https://via.placeholder.com/35" class="rounded-circle" style="width: 35px; height: 35px" /> <span class="mt-2 mx-2">SRINIVAS OBILI</span> </div>
+                                            <div class="mt-1"> Executive Vice President, IBM </div>
+                                            <div class="mt-1 d-flex flex-sm-column flex-lg-row flex-xl-row w-sm-100 justify-content-center"> <small> <span class="mx-2 font-weight-bold">Expert: 256487</span> <span class="mx-2 font-weight-bold">Projects: 169</span> <span class="mx-2 font-weight-bold">Tier: Top 20% </span></small> </div>
                                         </caption>
-
                                     </tr>
                                 </table>
                                 <!--END: RESPONSIVE TABLE:CAPTION --->
-
                             </td>
                         </tr>
                         <!--END:CAPTION --->
-
-
-
                         <!--BEGIN:HEADER TR --->
                         <tr class="w-100 ">
                             <td class="m-0 p-0">
@@ -877,7 +630,6 @@
                                             <th scope="col">[###]</th>
                                             <th scope="col">[%]</th>
                                             <th scope="col"> OPTIONS</th>
-
                                         </tr>
                                     </thead>
                                 </table>
@@ -885,13 +637,9 @@
                             </td>
                         </tr>
                         <!--END:HEADER TR--->
-
-
                         <!---- Begin:THIS  TR WILL BE LOOPED FOR MULITIPLE ROWS---->
-
                         <tr class="w-100">
                             <td class="m-0 p-0">
-
                                 <!--BEGIN: RESPONSIVE TABLE: YEAR AND CLUSTER --->
                                 <table class="table_responsive">
                                     <tbody>
@@ -899,88 +647,46 @@
                                             <td data-label="YEAR" style=" vertical-align: middle"><b>2020</b></td>
                                             <td data-label="[$$$]">
                                                 <div class="d-flex flex-column text-center my-2">
-                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value="">
-
-                                                    <span><font color="blue">[14.1]</font></span>
-                                                </div>
-
+                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value=""> <span><font color="blue">[14.1]</font></span> </div>
                                             </td>
-
                                             <td data-label="[%]">
                                                 <div class="d-flex flex-column text-center my-2">
-                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value="">
-
-                                                    <span><font color="blue">[14.1]</font></span>
-                                                </div>
-
-
+                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value=""> <span><font color="blue">[14.1]</font></span> </div>
                                             </td>
-
                                             <td data-label="[###]">
-
                                                 <div class="d-flex flex-column text-center my-2">
                                                     <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value="">
-
-                                                    <!--span><font color="blue">[14.1]</font></span-->
-                                                </div>
+                                                    <!--span><font color="blue">[14.1]</font></span--></div>
                                             </td>
                                             <td data-label="[%]">
-
                                                 <div class="d-flex flex-column text-center my-2">
                                                     <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value="">
-
-                                                    <!--span><font color="blue">[14.1]</font></span-->
-                                                </div>
-
-
+                                                    <!--span><font color="blue">[14.1]</font></span--></div>
                                             </td>
                                             <td data-label="OPTIONS" style=" vertical-align:middle;" class="text-center"><a class="btn btn-sm btn-gia-primary mt-1" onclick="addData('2020','15846-63USD','Canada','15846-6','USD')" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><small>ACTVITY</small></a></td>
                                         </tr>
-
                                         <tr class="cluster_row">
                                             <td data-label="YEAR" style=" vertical-align: middle"><b>Cluster</b></td>
                                             <td data-label="[$$$]">
-                                                <div class="d-flex flex-column text-center ">
-                                                    <span><font>###</font></span>
-                                                </div>
-
+                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
                                             </td>
-
                                             <td data-label="[%]">
-                                                <div class="d-flex flex-column text-center ">
-                                                    <span><font>###</font></span>
-                                                </div>
-
-
+                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
                                             </td>
-
                                             <td data-label="[###]">
-
-                                                <div class="d-flex flex-column text-center ">
-                                                    <span><font>###</font></span>
-                                                </div>
+                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
                                             </td>
                                             <td data-label="[%]">
-
-                                                <div class="d-flex flex-column text-center ">
-                                                    <span><font>###</font></span>
-                                                </div>
-
-
+                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
                                             </td>
                                             <td data-label="OPTIONS" style=" vertical-align:middle;" class="text-center"></td>
                                         </tr>
-
-
                                     </tbody>
                                 </table>
                                 <!--END: RESPONSIVE TABLE: YEAR AND CLUSTER --->
-
-
                                 <!--BEGIN: COLLAPSE BOX--->
                                 <div class="w-100">
                                     <div class="bg-white p-3 text-left p-2 collapse shadow border" id="collapseExample">
-
                                         <div class="bg-white p-3 text-left p-2 shadow border collapse show" id="collapse6073-215USD2021" style="background-color: yellow;">
                                             <div class="table_responsive">
                                                 <table class="table w-95" cellpadding="0" cellspacing="0" width="100%">
@@ -1000,66 +706,44 @@
                                                 </table>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                                 <!--COLLAPSE BOX--->
                             </td>
-
                         </tr>
                         <!---- End:THIS  TR WILL BE LOOPED FOR MULITIPLE ROWS---->
-
                         <tr class="w-100">
                             <td class="m-0 p-0">
                                 <div class="d-flex">
                                     <button type="submit" class="btn btn-lg btn-gia-primary my-2 font-size-15 rounded-0 shadow mx-auto" id="btnEqsubmit" name="btnEqsubmit" value="SUBMIT" onclick="AddMultipleRecordstoDB('15846-63USD','Canada','15846-6','USD','2012','2019')"><small>SAVE UPDATE</small></button>
                                 </div>
                             </td>
-
                         </tr>
-
                         <tr>
                             <td>
                                 <div class="d-flex justify-content-between my-2 flex-sm-column flex-md-column flex-lg-row">
-
                                     <button type="submit" class="btn btn-sm btn-gia-primary mt-1 shadow rounded-0 my-2  w- sm-100 w-md-100 w-lg-20 w-xl-20 " id="btnEqsubmit" name="btnEqsubmit" value="SUBMIT" onsubmit="return CheckAddData();"><small>SUBMIT FINAL</small></button>
-
                                     <button type="button" class="btn btn-sm btn-gia-primary mt-1 shadow rounded-0  my-2   w- sm-100 w-md-100 w-lg-25 w-xl-25" data-toggle="collapse" href="#intelligence" role="button" aria-expanded="false" aria-controls="collapseExample"><small>INTELLIGENCE EXCHANGE PROGRAM</small> </button>
-
                                     <button type="button" class="btn btn-sm btn-gia-primary mt-1 shadow rounded-0 my-2     w- sm-100 w-md-100 w-lg-20 w-xl-20" data-toggle="collapse" href="#feedback" role="button" aria-expanded="false" aria-controls="collapseExample"><small>FEED BACK</small> </button>
-
                                     <button type="button" class="btn btn-sm btn-gia-primary mt-1 shadow rounded-0 my-2    w- sm-100 w-md-100 w-lg-20 w-xl-20" id="btnEqsubmit" name="btnEqsubmit" value="COLLABORATE" nclick="location.href='https://www.strategyr.com/GIA_Research_collaborate.asp?code=MCP-7925&amp;encID=E7CCA26F61';"><small>COLLABORATE</small> </button>
-
                                 </div>
                             </td>
-
-
                         </tr>
-
                         <tr>
-
                             <td>
                                 <div class="collapse" id="feedback">
-
                                     <div class="form-group text-dark text-cetner ">
-
                                         <textarea class="form-control w-100 text-dark" placeholder="Describe yourself here..." id="exampleFormControlTextarea1" rows="3"></textarea>
-
                                         <button type="submit" class="btn btn-gia-primary rounded-0 shadow mx-auto; my-3">Submit</button>
                                     </div>
-
                                 </div>
-
                                 <div class="collapse" id="intelligence">
-
                                     <div class="large-notice border-0 nt-3">
                                         <h3 align="center" class="font-weight-bold font-size-20 my-0 border-bottom text-center"><a name="RCC">&nbsp;</a>INTELLIGENCE EXCHANGE PROGRAM</h3>
                                         <!--p align="left">Request a Global Expert Panel Registry. </p-->
-
                                         <div class="form_box">
                                             <form method="post" name="reg" onsubmit="return validatefrm1()">
                                                 <!--GENDER BLOCK START-->
-
                                                 <input type="hidden" name="Title1" value="">
                                                 <!--div class="gender_block">
 				    <h4 class="gen_title"> Gender </h4>
@@ -1075,150 +759,125 @@
                                                 <div class="text_field_block">
                                                     <label class="d-flex flex-wrap">
                                                         <input class="w-xl-45 w-lg-45 w-md-90 w-sm-100 my-1" type="text" name="firstname" maxlength="20" onblur="checkalpha(this);" value="Srinivas" required="" placeholder="First Name">
-                                                        <input class="w-xl-45 w-lg-45 w-md-90 w-sm-100 my-1" type="text" name="lastname" maxlength="20" required="" value="Obili" placeholder="Last Name">
-                                                    </label>
+                                                        <input class="w-xl-45 w-lg-45 w-md-90 w-sm-100 my-1" type="text" name="lastname" maxlength="20" required="" value="Obili" placeholder="Last Name"> </label>
                                                 </div>
-
                                                 <div class="text_field_block" style="text-align:left;">
-                                                    <input type="email" name="userEmail" class="email_block" maxlength="50" onblur="checkemail(this);" value="srinivas@strategyr.com" required="" placeholder="Work Email">
-                                                </div>
-
+                                                    <input type="email" name="userEmail" class="email_block" maxlength="50" onblur="checkemail(this);" value="srinivas@strategyr.com" required="" placeholder="Work Email"> </div>
                                                 <div class="text_field_block" style="text-align:left;">
                                                     <label>
                                                         <input type="text" name="txtCompany" maxlength="50" required="" value="Global Industry Analysts, Inc." onblur="checkaddress(this);" class="company" placeholder="Company">
-                                                        <input type="hidden" name="rdo1" value="Monthly">
-                                                    </label>
+                                                        <input type="hidden" name="rdo1" value="Monthly"> </label>
                                                 </div>
-
                                                 <div class="text_field_block" style="text-align:left;">
                                                     <label>
                                                         <input type="text" name="txtDesignation" maxlength="50" required="" value="" onblur="checkaddress(this);" class="company" placeholder="Designation">
                                                         <input type="hidden" name="CPL" value="Company">
-
-
-                                                        <input type="hidden" name="code" value="CP-999999">
-
-                                                    </label>
+                                                        <input type="hidden" name="code" value="CP-999999"> </label>
                                                 </div>
-
                                             </form>
                                         </div>
                                         <div class="width-100 text-center">
                                             <!--p class="comp_note" style="align:center;line-height:14px !important">NOTE: Generic Email IDs such as AOL, Hotmail, Yahoo, Gmail, MSN etc. cannot be used</p-->
                                             <button type="submit" name="btnsubmit" value="ACCEPT" class="btn btn-gia-primary rounded-0 shadow-sm m-1 mx m-md-2  text-white font-weight-bold font-size-15 w-xl-20 w-lg-20 w-md-45  w-sm-70 mx-auto" onsubmit="return validatefrm();">ACCEPT</button>
                                         </div>
-
                                     </div>
-
                                 </div>
-
-
                             </td>
-
                         </tr>
-
-
                     </table>
                     <!---OUTER END--->
-
-
                 </div>
-                <!---End:SELECT PLAYERS,SEGMENTS,GEOGRAPHIES --->
+                <!---- END : CONTENT SSECTION ---->
             </div>
             <!---CONTAINER END--->
         </div>
     </div>
-
     <!-- Footer
 ================================================== -->
     <!-- Footer / Start -->
-    <footer id="footer " class="bg-white py-1">
-    </footer>
-
-
+    <footer id="footer " class="bg-white py-1"> </footer>
     <div id="currency_block" class="modal">
-
         <div class="row m-0 ">
-            <h2 class="text-center w-100 font-weigth-bold"><b>Currency Change</b></h2>
-            <hr/>
+            <h2 class="text-center w-100 font-weigth-bold d-flex justify-content-center flex-lg-row flex-md-row flex-sm-column">
+            <b class="mx-2">CHANGE CURRENCY</b> 
+            (Exchange rate)</h2>
+            <hr>
             <div class="d-flex flex-wrap justify-content-center justify-content-md-between">
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex justify-content-between ">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="US Dollar (USD)" value="US Dollar">
+                    <label class="form-check-label" for="US Dollar (USD)">US Dollar (USD)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="British Pound (GBP)" value="British Pound">
+                    <label class="form-check-label" for="British Pound (GBP)">British Pound (GBP)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline  px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
-                    <label class="form-check-label" for="inlineRadio3">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Euro (EUR)" value="Euro">
+                    <label class="form-check-label" for="Euro (EUR)">Euro (EUR)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option2">
-                    <label class="form-check-label" for="inlineRadio4">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Swiss Franc (CHF)" value="Swiss Franc">
+                    <label class="form-check-label" for="Swiss Franc (CHF)">Swiss Franc (CHF)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option2">
-                    <label class="form-check-label" for="inlineRadio5">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Canadian Dollar (CAD)" checked="" value="Canadian Dollar">
+                    <label class="form-check-label" for="Canadian Dollar (CAD)">Canadian Dollar (CAD)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option2">
-                    <label class="form-check-label" for="inlineRadio6">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Australian Dollar (AUD)" value="Australian Dollar">
+                    <label class="form-check-label" for="Australian Dollar (AUD)">Australian Dollar (AUD)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option2">
-                    <label class="form-check-label" for="inlineRadio7">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Chinese Yuan (CNY)" value="Chinese Yuan">
+                    <label class="form-check-label" for="Chinese Yuan (CNY)">Chinese Yuan (CNY)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Indian Rupee (INR)" value="Indian Rupee">
+                    <label class="form-check-label" for="Indian Rupee (INR)">Indian Rupee (INR)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Russian Ruble (RUB)" value="Russian Ruble">
+                    <label class="form-check-label" for="Russian Ruble (RUB)">Russian Ruble (RUB)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Currency Name</label>
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-50 w-lg-50 w-xl-50 d-flex ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Japanese Yen (JPY)" value="Japanese Yen">
+                    <label class="form-check-label" for="Japanese Yen (JPY)">Japanese Yen (JPY)
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
                 </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Currency Name</label>
-                </div>
-
-                <div class="form-check form-check-inline px-2 seven columns d-flex">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Currency Name</label>
-                </div>
-
-            </div>
-
-            <hr/>
-
-
-        </div>
-
+                <!--button type="button" class="btn btn-gia-primary btn-sm " style="width:29px; height:29px;" title="Add Region/Country" onClick='addNewRegion()'><i class="fa fa-plus"  aria-hidden="true"></i--></div>
+            <hr> </div>
         <div class="row text-center mb-0">
-            <button class="btn btn-gia-primary btn-sm">UPDATE</button>
+            <button class="btn btn-gia-primary btn-sm w-sm-45 w-md-25 w-lg-25 mx-2 my-1 rounded-0 shadow">UPDATE</button>
+            <!--a href="#close-modal" rel="modal:close" class="btn btn-gia-primary btn-sm w-sm-45  w-md-25 w-lg-25 my-1  mx-2 rounded-0 shadow">UPDATE</a-->
         </div>
     </div>
-
-
-
-
-
-
 </body>
+<script>
+    $("#sticky").modal({
+        escapeClose: false,
+        clickClose: false,
+        showClose: false
+    });
+
+</script>
 
 </html>
