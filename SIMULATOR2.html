@@ -137,7 +137,7 @@
                             <div class="left_column">
                                 <h4 class="mt-1"> SEGMENT :</h4> </div>
                             <div class="right_column">
-                                <div class="w-100 mb-1 d-flex px-2 flex-wrap"> <a href="#currency_block" rel="modal:open" class="mb-2  p-1 rounded-0   text-blue" style="color:#169FE6 !important">ADD SEGMENT</a> </div>
+                                <div class="w-100 mb-1 d-flex px-2 flex-wrap"> <a href="#segment_block" rel="modal:open" class="mb-2  p-1 rounded-0   text-blue" style="color:#169FE6 !important">ADD SEGMENT</a> </div>
                             </div>
                         </div>
                     </section>
@@ -159,56 +159,8 @@
                                 </div>
                                 <!--Asia Specific--->
                                 <div class="row mb-2">
-                                    <div class="w-100   px-2  mt-1 d-flex flex-lg-nowrap flex-md-wrap flex-sm-wrap mb-1">
-                                        <div class="four columns ">
-                                            <b> ASIA-PACIFIC</b>
-                                        </div>
 
-                                        <div class="ten columns d-flex  dblock mx-sm-0 mx-md-3 mx-lg-3 mx-md-3 my-2 flex-md-row flex-lg-row flex-md-row">
-                                            ADD COUNTRY:
-                                            <div class="d-flex mx-2">
-
-                                                <select name="AddNewCountryEurope" id="AddNewCountryEurope" class="py-0  feedback_input">
-                                                    <option value="">-- Select a country--</option>
-
-                                                    <option value="Kazakhstan">Kazakhstan (Europe)</option>
-
-
-                                                    <option value="Norway">Norway (Europe)</option>
-
-
-                                                    <option value="Netherlands">Netherlands (Europe)</option>
-
-
-                                                    <option value="Turkey">Turkey (Europe)</option>
-
-
-                                                    <option value="Ukraine">Ukraine (Europe)</option>
-
-
-                                                    <option value="Greece">Greece (Europe)</option>
-
-
-                                                    <option value="Poland">Poland (Europe)</option>
-
-
-                                                    <option value="Portugal">Portugal (Europe)</option>
-
-
-                                                    <option value="Iceland">Iceland (Europe)</option>
-
-
-                                                    <option value="Belgium">Belgium (Europe)</option>
-
-
-                                                </select>
-                                                <button type="button" style="width:20px; height:23px;border-radius:0px;padding:0px !important;" title="Add Region/Country" class="btn btn-gia-primary btn-small p-1" onclick="addNewRegion('Europe');"><i class="fa fa-plus" aria-hidden="true" style="font-size:12px;padding:0px;margin:0px;"></i></button>
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
+                                    <div class="w-100   px-2  mt-1"> <b>ASIA-PACIFIC</b> </div>
 
 
 
@@ -291,7 +243,7 @@
 
                                 <!--Latin America --->
                                 <div class="row mb-2">
-                                    <div class="w-100   px-2  mt-1"> <b> Europe</b> </div>
+                                    <div class="w-100   px-2  mt-1"> <b>Latin America</b> </div>
                                     <div class="d-flex justify-content-start flex-wrap w-100 light_gray border-top-orange  py-2 px-sm-2 px-md-2 px-xl-0 px-lg-0 py-2">
                                         <div class="three columns mt-2" style="text-align:left">
                                             <!--<option value="WORLD"  >WORLD</option>-->
@@ -952,6 +904,8 @@
 ================================================== -->
     <!-- Footer / Start -->
     <footer id="footer " class="bg-white py-1"> </footer>
+
+    <!----CURRENCY_BLOCK--->
     <div id="currency_block" class="modal">
         <div class="row m-0 ">
             <h2 class="text-center w-100 font-weigth-bold d-flex justify-content-center flex-lg-row flex-md-row flex-sm-column">
@@ -1026,6 +980,77 @@
             <!--a href="#close-modal" rel="modal:close" class="btn btn-gia-primary btn-sm w-sm-45  w-md-25 w-lg-25 my-1  mx-2 rounded-0 shadow">UPDATE</a-->
         </div>
     </div>
+
+    <!---Select segment---->
+
+
+    <div id="segment_block" class="modal">
+        <div class="row m-0 ">
+            <h2 class="text-center w-100 font-weigth-bold d-flex justify-content-center flex-lg-row flex-md-row flex-sm-column">
+            <b class="mx-2">
+SELECT SEGMENT</b> </h2>
+            <hr>
+            <div class="d-flex flex-wrap justify-content-start justify-content-md-start">
+                <div class="form-check form-check-inline px-2 w-sm-100 w-md-60 w-lg-100 w-xl-100 d-flex ">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="Stainless Steel" value="Stainless Steel">
+                    <label class="form-check-label" for="Stainless Steel"> Stainless Steel [Material Type]
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
+                </div>
+                <div class="form-check form-check-inline px-2 w-sm-100  w-md-60 w-lg-100w-xl-100 d-flex ">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="Low Alloy Steel" value="British Pound">
+                    <label class="form-check-label" for="Low Alloy Steel">Low Alloy Steel [Material Type]
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
+                </div>
+                <div class="form-check form-check-inline px-2 w-sm-100  w-md-60 w-lg-100 w-xl-100 d-flex ">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="Soft Magnetic Material" value="Soft Magnetic Material">
+                    <label class="form-check-label" for="Soft Magnetic Material">Soft Magnetic Material [Material Type]
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
+                </div>
+                <div class="form-check form-check-inline px-2 w-sm-100  w-md-60 w-lg-100 w-xl-100 d-flex ">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="Electrical & Electronics" value="Electrical & Electronics">
+                    <label class="form-check-label" for="Electrical & Electronics">Electrical & Electronics [End-Use]
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
+                </div>
+                <div class="form-check form-check-inline px-2 w-sm-100  w-md-60 w-lg-100 w-xl-100 d-flex ">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="Automotive" checked="" value="Automotive">
+                    <label class="form-check-label" for="Automotive">Automotive [End-Use]
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
+                </div>
+                <div class="form-check form-check-inline px-2 w-sm-100  w-md-60 w-lg-100 w-xl-100 d-flex ">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="Consumer Products" value="Australian Dollar">
+                    <label class="form-check-label" for="Consumer Products">Consumer Products [End-Use]
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
+                </div>
+                <div class="form-check form-check-inline px-2 w-sm-100  w-md-60 w-lg-100 w-xl-100 d-flex ">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="Industrial" value="Industrial">
+                    <label class="form-check-label" for="Industrial">Industrial [End-Use]
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
+                </div>
+                <div class="form-check form-check-inline px-2 w-sm-100  w-md-60 w-lg-50 w-xl-60 w-xl-100 d-flex ">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="Firearms & Defense " value="Firearms & Defense ">
+                    <label class="form-check-label" for="Indian Rupee (INR)">Firearms & Defense [End-Use]
+                        <!--<input type="textbox" id="TxtCurrencyExchange" name="TxtCurrencyExchange" value="" >-->
+                    </label>
+                </div>
+
+                <!--button type="button" class="btn btn-gia-primary btn-sm " style="width:29px; height:29px;" title="Add Region/Country" onClick='addNewRegion()'><i class="fa fa-plus"  aria-hidden="true"></i--></div>
+            <hr> </div>
+        <div class="row text-center mb-0">
+            <button class="btn btn-gia-primary btn-sm w-sm-45 w-md-25 w-lg-25 mx-2 my-1 rounded-0 shadow">ADD</button>
+            <!--a href="#close-modal" rel="modal:close" class="btn btn-gia-primary btn-sm w-sm-45  w-md-25 w-lg-25 my-1  mx-2 rounded-0 shadow">UPDATE</a-->
+        </div>
+    </div>
+
+
+
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="scripts/bootstrap.bundle.js"></script>
@@ -1057,28 +1082,6 @@
     });
 
 </script>
-<script type="text/javascript">
-    $(function() {
-        $('#people').multiSelect();
-        $('#ice-cream').multiSelect();
-        $('#line-wrap-example').multiSelect({
-            positionMenuWithin: $('.position-menu-within')
-        });
-        $('#categories').multiSelect({
-            noneText: 'All categories',
-            presets: [{
-                name: 'All categories',
-                options: []
-            }, {
-                name: 'My categories',
-                options: ['a', 'c']
-            }]
-        });
-        $('#modal-example').multiSelect({
-            'modalHTML': '<div class="multi-select-modal">'
-        });
-    });
 
-</script>
 
 </html>

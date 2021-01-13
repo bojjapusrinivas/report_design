@@ -68,19 +68,22 @@ table td {
 
 /*------ CURRENTCY SECTION ---*/
 
-#currency_block h2 {
+#currency_block h2,
+#segment_block h2 {
     font-size: 18px;
     text-transform: uppercase;
     color: #e37038 !important;
     line-height: normal;
     margin-top: 12px;
 }
-#currency_block .form-check-label {
+#currency_block .form-check-label,
+#segment_block .form-check-label {
     font-weight: 700 !important;
     margin-left: 3px;
     margin-right: 3px;
 }
-#currency_block a.close-modal {
+#currency_block a.close-modal,
+#segment_block a.close-modal {
     top: 7.5px;
     right: 7.5px;
     display: block;
