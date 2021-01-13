@@ -10,6 +10,9 @@ body {
 * {
     line-height: normal !important;
 }
+#simulator_page a {
+    cursor: pointer;
+}
 table td {
     padding: 0px
 }
@@ -37,8 +40,31 @@ table td {
 .blocker {
     z-index: 999999 !important;
 }
-.border-top-orange {
-    border-top: rgba(227, 112, 56, 0.2) solid 1px
+.border-bottom-orange {
+    border-bottom: rgba(227, 112, 56, 0.2) solid 1px
+}
+
+/*======================
+        BOTTOM LINKS
+=======================*/
+
+.bottom_links a {
+    width: 140px;
+    text-align: center;
+}
+@media screen and (max-width: 767px) {
+    .bottom_links a {
+        width: 96px;
+        text-align: center;
+        font-size: 12px
+    }
+}
+@media screen and (max-width: 480px) {
+    .bottom_links a {
+        font-size: 10px;
+        font-weight: 500 !important;
+        width: 100px;
+    }
 }
 
 /*======================
@@ -69,7 +95,8 @@ table td {
 /*------ CURRENTCY SECTION ---*/
 
 #currency_block h2,
-#segment_block h2 {
+#segment_block h2,
+#add_countary h2 {
     font-size: 18px;
     text-transform: uppercase;
     color: #e37038 !important;
@@ -77,13 +104,15 @@ table td {
     margin-top: 12px;
 }
 #currency_block .form-check-label,
-#segment_block .form-check-label {
+#segment_block .form-check-label,
+#add_countary .form-check-label {
     font-weight: 700 !important;
     margin-left: 3px;
     margin-right: 3px;
 }
 #currency_block a.close-modal,
-#segment_block a.close-modal {
+#segment_block a.close-modal,
+#add_countary a.close-modal {
     top: 7.5px;
     right: 7.5px;
     display: block;
@@ -361,10 +390,19 @@ TOP FIXED BAR
     #region_section .three.columns {
         width: 165px;
     }
+    #region_section .two.columns {
+        width: 165px;
+    }
 }
 @media screen and (max-width: 480px) {
     #region_section selection {
         width: 150px !important;
+    }
+    #region_section .two.columns {
+        width: 100px !important;
+    }
+    #region_section .add_country {
+        font-size: 12px !important;
     }
 }
 
