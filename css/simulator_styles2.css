@@ -347,6 +347,28 @@ TOP FIXED BAR
         Grid style
 ====================================*/
 
+#region_section button {
+    background: #e37038 !important;
+    border: #e37038 solid 1px;
+}
+#region_section selection {
+    width: 200px;
+}
+@media screen and (max-width: 959px) {
+    #region_section .three.columns {
+        width: 165px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #region_section selection {
+        width: 150px !important;
+    }
+}
+
+/*==================================
+        Grid style
+====================================*/
+
 #simulator_page .left_column {
     width: 16%;
     float: left;
