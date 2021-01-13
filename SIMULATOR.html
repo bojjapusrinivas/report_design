@@ -49,150 +49,7 @@
     <!--script src="scripts/load/jquery..js"></script>
     <script src="scripts/load/jquery..plugins.js"></script-->
     <!--- accordion2 script ---->
-    <style>
-        /* Mask for background, by default is not display */
-        
-        #header_strip {}
-        
-        td,
-        tr {
-            padding: 0px !important;
-            margin: 0px !important;
-        }
-        
-        .bg_light_yellow {
-            background: #FFD4AA
-        }
-        
-        .bg_light_gray {
-            background: #e0e0e0;
-        }
-        
-        .table_responsive {
-            border: 1px solid #ccc;
-            border-collapse: collapse;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            table-layout: fixed;
-            color: #000;
-            font-size: 14px;
-        }
-        
-        .table_responsive caption {
-            font-size: 16px;
-            font-weight: bold;
-        }
-        
-        .table_responsive tr {
-            border: 1px solid #ddd;
-            padding: .35em;
-        }
-        
-        .table_responsive tr.cluster_row {
-            background: #e0e0e0;
-        }
-        
-        .table_responsive th,
-        .table_responsive td {
-            text-align: center;
-            border: rgba(0, 0, 0, 0.2) solid 1px;
-            position: relative;
-        }
-        
-        .table_responsive th {
-            font-weight: bold;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-        }
-        
-        .table_responsive input {
-            width: 75px;
-            margin: 0 auto;
-        }
-        
-        .feedback_input {
-            width: 200px !important;
-        }
-        
-        #region_block button {
-            width: 20px !important;
-            height: 20px !important;
-            border-radius: 0px !important;
-            padding: 0px;
-        }
-        
-        #region_block button i {
-            font-size: 12px;
-            padding: 0px;
-            margin: 0px;
-            display: block;
-        }
-        /*
-        @media screen and (max-width: 767px) {
-            .table_responsive {
-                border: 0;
-            }
-            .table_responsive caption {
-                font-size: 1.3em;
-            }
-            .table_responsive thead {
-                border: none;
-                clip: rect(0 0 0 0);
-                height: 1px;
-                margin: -1px;
-                overflow: hidden;
-                padding: 0;
-                position: absolute;
-                width: 1px;
-            }
-            .table_responsive tr {
-                border-bottom: 3px solid #ddd;
-        
-        display: block;
-        margin-bottom: .625em;
-    }
-    .table_responsive td {
-        border-bottom: 1px solid #ddd;
-        display: block;
-        font-size: .8em;
-        text-align: right;
-    }
-    .table_responsive td::before {
-        
-        
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-        position: absolute;
-        left: calc(100% - 96%);
-        top: calc(100% - 70%);
-    }
-    .table_responsive td:last-child {
-        border-bottom: 0;
-    }
-    
-    .table_responsive td:nth-child(1) {
-        text-align: center;
-        font-size: 16px;
-        background: #404040;
-        color: #fff;
-    }
-    .table_responsive td:nth-child(1)::before,
-    .table_responsive td:nth-child(6)::before {
-        display: none;
-    }
-    .table_responsive tr.cluster_row td:nth-child(6) {
-        display: none;
-    }
-    .table_responsive tr.cluster_row td {
-        padding: 5px 0px
-    }
-}
-*/
 
-    </style>
 </head>
 
 <body id="simulator_page">
@@ -247,8 +104,12 @@
                                                     <td height="15" colspan="2" style="padding-left:5px " class="LClass">
                                                         <!---Begin:USD Section---->
                                                         <div class="eight columns mx-0 mb-2">
+
                                                             <div class="w-100 mb-1">
-                                                                <input type="checkbox" name="USD_MEASURE" id="USD_MEASURE" value="USD" checked=""> &nbsp;<b>USD$</b> &nbsp; <a href="#currency_block" rel="modal:open" class="mb-2 text-primary  mx-2 font-weight-bold">CHANGE CURRENCY</a> </div>
+                                                                <input type="checkbox" name="USD_MEASURE" id="USD_MEASURE" value="USD" checked=""> &nbsp;<b>USD$</b> &nbsp; <a href="#currency_block" rel="modal:open" class="mb-2 text-primary  mx-2 font-weight-bold">CHANGE CURRENCY</a>
+                                                            </div>
+
+
                                                             <div class="w-100">
                                                                 <div class="d-flex">
                                                                     <input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="US$ MILLION" checked="" class="ml-4"> MILLION&nbsp;&nbsp;
@@ -562,6 +423,7 @@
                     <table class="table m-0" border="1" bg-color="#ccc">
                         <tr class="w-100">
                             <td class="bg_light_yellow p-0 m-0">
+                                <!--BEGIN: RESPONSIVE TABLE:CAPTION --->
                                 <div class="row">
                                     <div class="text-center w-100  pt-2 table_capiton">RETAIL BANKING - ASIA-PACIFIC</div>
                                     <div class="w-100 bg-white  my-2 text-center">
@@ -570,7 +432,7 @@
                                                 <div class="brand_cards my-1 px-2 d-flex justify-content-center ">
 
                                                     <div class="mb-2">
-                                                        <div class="d-flex float-left flex-column img-block"> <img src="images\beer\profile_pic.jpg" class="img-fluid"> </div>
+                                                        <div class="d-flex float-left flex-column img-block"> <img src="https://bojjapusrinivas.github.io/report_design/images/beer/profile_pic2.jpg" class="img-fluid"> </div>
                                                     </div>
 
                                                     <div class="text-left ml-3">
@@ -596,120 +458,132 @@
                                                         <h4 class="text-dark mb-1 p-0"> Tier: Top 30% </h4> </div>
 
                                                 </div>
-
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!--BEGIN: RESPONSIVE TABLE:CAPTION --->
-                                <table class="table_responsive border ">
-                                    <tr class="w-100">
-                                        <caption class="text-cetner m-0 p-0 mt-2">AUTOMOTIVE&nbsp;/&nbsp;2020-2027&nbsp;/&nbsp;CANADA</caption>
-                                        <caption class="text-cetner m-0 p-0 mb-2 mt-1">
-                                            <div class="d-flex  flex-lg-row flex-xl-row w-sm-100  w-md-50 w-25 mx-auto text-center justify-content-center"> <img src="https://via.placeholder.com/35" class="rounded-circle" style="width: 35px; height: 35px" /> <span class="mt-2 mx-2">SRINIVAS OBILI</span> </div>
-                                            <div class="mt-1"> Executive Vice President, IBM </div>
-                                            <div class="mt-1 d-flex flex-sm-column flex-lg-row flex-xl-row w-sm-100 justify-content-center"> <small> <span class="mx-2 font-weight-bold">Expert: 256487</span> <span class="mx-2 font-weight-bold">Projects: 169</span> <span class="mx-2 font-weight-bold">Tier: Top 20% </span></small> </div>
-                                        </caption>
-                                    </tr>
-                                </table>
                                 <!--END: RESPONSIVE TABLE:CAPTION --->
                             </td>
                         </tr>
                         <!--END:CAPTION --->
-                        <!--BEGIN:HEADER TR --->
-                        <tr class="w-100 ">
-                            <td class="m-0 p-0">
-                                <!--BEGIN: RESPONSIVE TABLE:HEADER --->
-                                <table class="table_responsive">
-                                    <thead>
-                                        <tr class="bg_light_gray ">
-                                            <th scope="col">YEAR</th>
-                                            <th scope="col">[$$$]</th>
-                                            <th scope="col">[%]</th>
-                                            <th scope="col">[###]</th>
-                                            <th scope="col">[%]</th>
-                                            <th scope="col"> OPTIONS</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                                <!--END: RESPONSIVE TABLE:HEADER --->
-                            </td>
-                        </tr>
-                        <!--END:HEADER TR--->
+
                         <!---- Begin:THIS  TR WILL BE LOOPED FOR MULITIPLE ROWS---->
                         <tr class="w-100">
-                            <td class="m-0 p-0">
-                                <!--BEGIN: RESPONSIVE TABLE: YEAR AND CLUSTER --->
-                                <table class="table_responsive">
-                                    <tbody>
+                            <td>
+                                <div class="responsive_table">
+                                    <table>
                                         <tr>
-                                            <td data-label="YEAR" style=" vertical-align: middle"><b>2020</b></td>
-                                            <td data-label="[$$$]">
-                                                <div class="d-flex flex-column text-center my-2">
-                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value=""> <span><font color="blue">[14.1]</font></span> </div>
+                                            <td>
+
+                                                <table class="table_responsive">
+
+                                                    <thead>
+                                                        <tr class="bg_light_gray ">
+                                                            <th scope="col">YEAR</th>
+                                                            <th scope="col">[$$$]</th>
+                                                            <th scope="col">[%]</th>
+                                                            <th scope="col">[###]</th>
+                                                            <th scope="col">[%]</th>
+                                                            <th scope="col"> OPTIONS</th>
+                                                        </tr>
+                                                    </thead>
+
+
+                                                </table>
                                             </td>
-                                            <td data-label="[%]">
-                                                <div class="d-flex flex-column text-center my-2">
-                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value=""> <span><font color="blue">[14.1]</font></span> </div>
-                                            </td>
-                                            <td data-label="[###]">
-                                                <div class="d-flex flex-column text-center my-2">
-                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value="">
-                                                    <!--span><font color="blue">[14.1]</font></span--></div>
-                                            </td>
-                                            <td data-label="[%]">
-                                                <div class="d-flex flex-column text-center my-2">
-                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value="">
-                                                    <!--span><font color="blue">[14.1]</font></span--></div>
-                                            </td>
-                                            <td data-label="OPTIONS" style=" vertical-align:middle;" class="text-center"><a class="btn btn-sm btn-gia-primary mt-1" onclick="addData('2020','15846-63USD','Canada','15846-6','USD')" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><small>ACTVITY</small></a></td>
+
                                         </tr>
-                                        <tr class="cluster_row">
-                                            <td data-label="YEAR" style=" vertical-align: middle"><b>Cluster</b></td>
-                                            <td data-label="[$$$]">
-                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
-                                            </td>
-                                            <td data-label="[%]">
-                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
-                                            </td>
-                                            <td data-label="[###]">
-                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
-                                            </td>
-                                            <td data-label="[%]">
-                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
-                                            </td>
-                                            <td data-label="OPTIONS" style=" vertical-align:middle;" class="text-center"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!--END: RESPONSIVE TABLE: YEAR AND CLUSTER --->
-                                <!--BEGIN: COLLAPSE BOX--->
-                                <div class="w-100">
-                                    <div class="bg-white p-3 text-left p-2 collapse shadow border" id="collapseExample">
-                                        <div class="bg-white p-3 text-left p-2 shadow border collapse show" id="collapse6073-215USD2021" style="background-color: yellow;">
-                                            <div class="table_responsive">
-                                                <table class="table w-95" cellpadding="0" cellspacing="0" width="100%">
-                                                    <thead class="bg-secondary text-white" border="0" cellspacing="0">
+
+
+
+
+                                        <tr>
+                                            <td class="m-0 p-0">
+                                                <!--BEGIN: RESPONSIVE TABLE: YEAR AND CLUSTER --->
+                                                <table class="table_responsive">
+                                                    <tbody>
                                                         <tr>
-                                                            <!--td>USERID</td>
+                                                            <td data-label="YEAR" style=" vertical-align: middle"><b>2020</b></td>
+                                                            <td data-label="[$$$]">
+                                                                <div class="d-flex flex-column text-center my-2">
+                                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value=""> <span><font color="blue">[14.1]</font></span> </div>
+                                                            </td>
+                                                            <td data-label="[%]">
+                                                                <div class="d-flex flex-column text-center my-2">
+                                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value=""> <span><font color="blue">[14.1]</font></span> </div>
+                                                            </td>
+                                                            <td data-label="[###]">
+                                                                <div class="d-flex flex-column text-center my-2">
+                                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value="">
+                                                                    <!--span><font color="blue">[14.1]</font></span--></div>
+                                                            </td>
+                                                            <td data-label="[%]">
+                                                                <div class="d-flex flex-column text-center my-2">
+                                                                    <input type="textbox" class="allow_decimal" id="txt15846-63USD2020" name="txt15846-63USD2020" size="3" value="">
+                                                                    <!--span><font color="blue">[14.1]</font></span--></div>
+                                                            </td>
+                                                            <td data-label="OPTIONS" style=" vertical-align:middle;" class="text-center"><a class="btn btn-sm btn-gia-primary mt-1" onclick="addData('2020','15846-63USD','Canada','15846-6','USD')" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><small>ACTVITY</small></a></td>
+                                                        </tr>
+                                                        <tr class="cluster_row">
+                                                            <td data-label="YEAR" style=" vertical-align: middle"><b>Cluster</b></td>
+                                                            <td data-label="[$$$]">
+                                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
+                                                            </td>
+                                                            <td data-label="[%]">
+                                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
+                                                            </td>
+                                                            <td data-label="[###]">
+                                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
+                                                            </td>
+                                                            <td data-label="[%]">
+                                                                <div class="d-flex flex-column text-center "> <span><font>###</font></span> </div>
+                                                            </td>
+                                                            <td data-label="OPTIONS" style=" vertical-align:middle;" class="text-center"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!--END: RESPONSIVE TABLE: YEAR AND CLUSTER --->
+                                                <!--BEGIN: COLLAPSE BOX--->
+                                                <div class="w-100">
+                                                    <div class="bg-white p-3 text-left p-2 collapse shadow border" id="collapseExample">
+                                                        <div class="bg-white p-3 text-left p-2 shadow border collapse show" id="collapse6073-215USD2021" style="background-color: yellow;">
+                                                            <div class="table_responsive">
+                                                                <table class="table w-95" cellpadding="0" cellspacing="0" width="100%">
+                                                                    <thead class="bg-secondary text-white" border="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <!--td>USERID</td>
 																			  <td>YEAR</td>
 																			  <td>SEGMENTID</td>
 																			  <td>REGION</td-->
-                                                            <td>NAME</td>
-                                                            <td>US$ MILLION</td>
-                                                            <td>[%]</td>
-                                                            <td>UNITS</td>
-                                                            <td>[%]</td>
-                                                        </tr>
-                                                    </thead>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                                            <td>NAME</td>
+                                                                            <td>US$ MILLION</td>
+                                                                            <td>[%]</td>
+                                                                            <td>UNITS</td>
+                                                                            <td>[%]</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--COLLAPSE BOX--->
+                                            </td>
+
+
+                                        </tr>
+
+
+
+
+                                    </table>
+
                                 </div>
-                                <!--COLLAPSE BOX--->
                             </td>
+
+
+
+
                         </tr>
                         <!---- End:THIS  TR WILL BE LOOPED FOR MULITIPLE ROWS---->
                         <tr class="w-100">

@@ -1,0 +1,428 @@
+body {
+    font-size: 14px !important;
+}
+
+/*===============================
+        SIMULATOR PAGE STYLES
+===============================*/
+
+* {
+    line-height: normal !important;
+}
+table td {
+    padding: 0px
+}
+
+/*----- SNIPTS----*/
+
+.bg_light_yellow {
+    background: #FFD4AA
+}
+.bg_light_gray {
+    background: #e0e0e0;
+}
+.primary_color {
+    color: #e37038
+}
+.success_color {
+    color: #0e98df;
+}
+.bg_black {
+    background: #000;
+}
+.light_gray {
+    background: #e6e6e6;
+}
+.blocker {
+    z-index: 999999 !important;
+}
+
+/*======================
+    BUTTON STYLES
+=======================*/
+
+#simulator_page .btn {
+    font-size: 14px;
+    background: #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 480px) {
+    #simulator_page .btn {
+        font-size: 12px;
+    }
+}
+
+/*======================
+    BUTTON STYLES
+=======================*/
+
+.left_column h4 {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+/*------ CURRENTCY SECTION ---*/
+
+#currency_block h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #e37038 !important;
+    line-height: normal;
+    margin-top: 12px;
+}
+#currency_block .form-check-label {
+    font-weight: 700 !important;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+#currency_block a.close-modal {
+    top: 7.5px;
+    right: 7.5px;
+    display: block;
+    width: 25px;
+    height: 25px
+}
+
+/*----HEADER SECTION-----*/
+
+.header_titles p {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+@media screen and (max-width: 480px) {
+    .header_titles p {
+        font-size: 16px !important
+    }
+}
+
+/*---------------------------
+TOP FIXED BAR
+
+-------------------------*/
+
+.brand_cards {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.0);
+}
+.brand_cards .img-block {
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    padding: 2px;
+    overflow: hidden;
+}
+#brand_cards h3 {
+    color: #e37038 !important;
+    font-size: 20px;
+    line-height: normal !important;
+}
+#brand_cards h4 {
+    font-size: 15px;
+}
+#brand_cards h4 span.company_title1 {
+    display: inline-block;
+}
+#brand_cards h4.company_title {
+    display: none;
+}
+#brand_cards h5 {
+    font-size: 15px;
+}
+.fixed-top .brand_cards {
+    width: 1019px;
+    margin: 0 auto;
+    padding-left: 53px !important;
+    padding-right: 53px !important;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.fixed-top {
+    position: fixed;
+    top: -10px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.star_rating {
+    margin-top: 2px;
+    width: 60px;
+    height: 14px;
+    display: block;
+}
+@media screen and (max-width: 959px) {
+    .fixed-top .brand_cards {
+        width: 710px;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .fixed-top .brand_cards {
+        width: 420px;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+    #brand_cards h4 span.company_title1 {
+        display: none;
+    }
+    #brand_cards h4.company_title {
+        display: block;
+    }
+}
+@media screen and (max-width: 479px) {
+    .fixed-top .brand_cards {
+        width: 320px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    #brand_cards h3 {
+        color: #e37038 !important;
+        font-size: 15px;
+        line-height: normal !important;
+    }
+    #brand_cards h4 {
+        font-size: 13px;
+    }
+    #brand_cards h5 {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .fixed-top .brand_cards {
+        width: 100%;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .brand_cards .img-block {
+        width: 70px;
+        height: 70px;
+    }
+    #brand_cards h3 {
+        color: #e37038 !important;
+        font-size: 15px;
+        line-height: normal !important;
+    }
+    #brand_cards h4 {
+        font-size: 13px;
+    }
+    #brand_cards h5 {
+        font-size: 12px;
+    }
+}
+
+/*------ CURRENTCY SECTION ---*/
+
+#simulator_block {
+    margin: 0 !important;
+}
+#simulator_block h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+#simulator_table thead tr {
+    background: #E37038;
+}
+#simulator_table th,
+#simulator_table td {
+    width: 15%;
+    border: #fff solid 1px;
+    padding: 6px;
+}
+#simulator_table th {
+    font-size: 16px;
+    font-weight: 700;
+}
+#simulator_table tbody tr {
+    background: #e4e4e4;
+}
+#simulator_table tbody tr td:nth-child(1) {
+    background: #dedede;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 50px;
+}
+#simulator_table tbody tr td {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+#simulator_table tbody tr td input {
+    width: 55px;
+    margin: 0px 10px;
+    border: #b3b3b3 solid 1px;
+    border-radius: 0px;
+}
+#simulator_table a,
+#simulator_table tbody tr td span {
+    color: #0e98df;
+}
+.activity_block {
+    background: #f4e5ce;
+    padding: 10px 0px;
+}
+.activity_block .table thead tr {
+    background: #42210b;
+}
+.activity_block .table thead tr th {
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+.activity_block .table thead tr th,
+.activity_block .table tbody tr td {
+    border: #fff solid 1px;
+    padding: 6px 0px !important;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500
+}
+.activity_block .table tbody tr td {
+    background: #d6ccc4
+}
+@media screen and (max-width: 959px) {
+    #simulator_table th,
+    #simulator_table td {
+        width: 13%;
+    }
+    #simulator_table th {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    #simulator_table tbody tr td:nth-child(1) {
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    #simulator_table th,
+    #simulator_table td {
+        padding: 2px;
+        width: 60px;
+    }
+    #simulator_table th {
+        font-size: 13px;
+        font-weight: bold;
+    }
+    #simulator_table a,
+    #simulator_table tbody tr td span {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    #simulator_table tbody tr td:nth-child(1) {
+        padding-left: 5px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    #simulator_table tbody tr td input {
+        width: 35px;
+    }
+    #simulator_table a,
+    #simulator_table tbody tr td span {
+        color: #0e98df;
+    }
+    .activity_block .table thead tr th,
+    .activity_block .table tbody tr td {
+        border: #fff solid 1px;
+        padding: 2px 0px !important;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    #simulator_block,
+    #simulator_table,
+    .activity_block .table {
+        width: 430px !important;
+    }
+    #simulator_block h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+
+/*==================================
+        Grid style
+====================================*/
+
+#simulator_page .left_column {
+    width: 16%;
+    float: left;
+}
+#simulator_page .right_column {
+    width: 84%;
+    float: left;
+}
+@media screen and (max-width: 959px) {
+    #simulator_page .left_column {
+        width: 25%;
+        float: left;
+    }
+    #simulator_page .right_column {
+        width: 75%;
+        float: left;
+    }
+}
+@media screen and (max-width: 767px) {
+    #simulator_page .left_column {
+        width: 100%;
+        float: left;
+    }
+    #simulator_page .right_column {
+        width: 100%;
+        float: left;
+    }
+}
+
+/*-----------------------------------
+     ACCORDION
+------------------------------------*/
+
+accordion_new .accordion_key {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 6px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    transition: 0.4s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.accordion_new .active,
+.accordion_new .accordion_key:hover {
+    background-color: #eee;
+}
+.accordion_new .accordion_key:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.accordion_new .active:after {
+    content: "\2212";
+}
+.accordion_new .panel3 {
+    padding: 0 18px;
+    background-color: white;
+    min-height: auto;
+    height: auto;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+@media only screen and (max-width:448px) {
+    .accordion_new .accordion_key {
+        background-color: #eee;
+        color: #000;
+        cursor: pointer;
+        padding: 6px 3px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+        transition: 0.4s;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
