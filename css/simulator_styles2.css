@@ -68,9 +68,33 @@ table td {
 .bottom_links a.bt-1,
 .bottom_links a.bt-2 {
     width: 123px;
+    margin: 2px 0px;
 }
 .bottom_links a.bt-3 {
     width: 65px;
+    margin: 2px 0px;
+}
+@media screen and (max-width: 767px) {
+    .bottom_links a.bt-1,
+    .bottom_links a.bt-2 {
+        width: 110px;
+        font-size: 12px;
+    }
+    .bottom_links a.bt-3 {
+        width: 65px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 480px)and (orientation:portrait) {
+    .bottom_links a.bt-1,
+    .bottom_links a.bt-2 {
+        width: 100%;
+        font-size: 14px;
+    }
+    .bottom_links a.bt-3 {
+        width: 100%;
+        font-size: 14px;
+    }
 }
 
 /*======================
