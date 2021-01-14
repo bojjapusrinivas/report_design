@@ -43,28 +43,34 @@ table td {
 .border-bottom-orange {
     border-bottom: rgba(227, 112, 56, 0.2) solid 1px
 }
+.left_column h4 {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
 
 /*======================
         BOTTOM LINKS
 =======================*/
 
 .bottom_links a {
-    width: 140px;
+    background: #169fe6;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-weight: 500;
+    padding: 8px;
     text-align: center;
 }
-@media screen and (max-width: 767px) {
-    .bottom_links a {
-        width: 96px;
-        text-align: center;
-        font-size: 12px
-    }
+.bottom_links a:hover,
+.bottom_links a:active {
+    background-color: #1397DB;
 }
-@media screen and (max-width: 480px) {
-    .bottom_links a {
-        font-size: 10px;
-        font-weight: 500 !important;
-        width: 100px;
-    }
+.bottom_links a.bt-1,
+.bottom_links a.bt-2 {
+    width: 120px;
+}
+.bottom_links a.bt-3 {
+    width: 65px;
 }
 
 /*======================
@@ -84,57 +90,20 @@ table td {
 }
 
 /*======================
-    BUTTON STYLES
+     Header style
 =======================*/
 
-.left_column h4 {
-    font-size: 14px !important;
-    font-weight: bold !important;
+.signatrue_logo {
+    display: block
 }
-
-/*------ CURRENTCY SECTION ---*/
-
-#currency_block h2,
-#segment_block h2,
-#add_countary h2 {
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #e37038 !important;
-    line-height: normal;
-    margin-top: 12px;
-}
-#currency_block .form-check-label,
-#segment_block .form-check-label,
-#add_countary .form-check-label {
-    font-weight: 700 !important;
-    margin-left: 3px;
-    margin-right: 3px;
-}
-#currency_block a.close-modal,
-#segment_block a.close-modal,
-#add_countary a.close-modal {
-    top: 7.5px;
-    right: 7.5px;
-    display: block;
-    width: 25px;
-    height: 25px
-}
-
-/*----HEADER SECTION-----*/
-
-.header_titles p {
-    font-size: 20px;
-    margin: 5px 0px;
-}
-@media screen and (max-width: 480px) {
-    .header_titles p {
-        font-size: 16px !important
+@media screen and (max-width: 767px) {
+    .signatrue_logo {
+        display: none;
     }
 }
 
 /*---------------------------
-TOP FIXED BAR
-
+    simulator_top_header
 -------------------------*/
 
 .brand_cards {
@@ -200,12 +169,6 @@ TOP FIXED BAR
         padding-left: 35px !important;
         padding-right: 35px !important;
     }
-    #brand_cards h4 span.company_title1 {
-        display: none;
-    }
-    #brand_cards h4.company_title {
-        display: block;
-    }
 }
 @media screen and (max-width: 479px) {
     .fixed-top .brand_cards {
@@ -248,6 +211,57 @@ TOP FIXED BAR
     }
 }
 
+/*---I PHONE LAND SCAPE STYLES--*/
+
+
+/*------ CURRENTCY SECTION ---*/
+
+#currency_block h2,
+#segment_block h2,
+#asia_pacific h2,
+#europe_con h2,
+#europe_con h2,
+#latin_america h2,
+{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #e37038 !important;
+    line-height: normal;
+    margin-top: 12px;
+}
+#currency_block .form-check-label,
+#segment_block .form-check-label,
+#asia_pacific .form-check-label,
+#europe_con .form-check-label,
+#latin_america .form-check-label {
+    font-weight: 700 !important;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+#currency_block a.close-modal,
+#segment_block a.close-modal,
+#asia_pacific a.close-modal,
+#europe_con a.close-modal,
+#latin_america a.close-modal {
+    top: 7.5px;
+    right: 7.5px;
+    display: block;
+    width: 25px;
+    height: 25px
+}
+
+/*----HEADER SECTION-----*/
+
+.header_titles p {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+@media screen and (max-width: 480px) {
+    .header_titles p {
+        font-size: 16px !important
+    }
+}
+
 /*------ CURRENTCY SECTION ---*/
 
 #simulator_block {
@@ -282,6 +296,7 @@ TOP FIXED BAR
 }
 #simulator_table tbody tr td {
     text-align: center;
+    font-size: 12px;
 }
 #simulator_table tbody tr td input {
     width: 55px;
@@ -296,7 +311,7 @@ TOP FIXED BAR
 #simulator_table a,
 #simulator_table tbody tr td span {
     color: #0e98df;
-    font-size: 14px;
+    font-size: 12px;
 }
 .activity_block {
     background: #f4e5ce;
