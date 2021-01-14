@@ -108,9 +108,9 @@
                                 <div class="d-flex flex-xl-row flex-lg-row flex-md-column px-2 flex-sm-column">
                                     <div class="nine columns mx-0 my-2">
                                         <div class="w-100 mb-2 d-flex flex-wrap">
-                                            <input type="checkbox" name="USD_MEASURE" id="USD_MEASURE" value="USD" checked=""> &nbsp; CANADIAN DOLLAR&nbsp;&nbsp;&nbsp;<span class="ml-3 "><a href="#currency_block" rel="modal:open" class="mb-2  p-1 rounded-0  mx-2 text-blue" style="color:#169FE6 !important">CHANGE CURRENCY</a></span> </div>
+                                            <input type="checkbox" name="USD_MEASURE" id="USD_MEASURE" value="USD" checked=""> &nbsp; $CAD &nbsp;&nbsp;&nbsp;<span class="ml-3 "><a href="#currency_block" rel="modal:open" class="mb-2  p-1 rounded-0  mx-2 text-blue" style="color:#169FE6 !important">CHANGE CURRENCY</a></span> </div>
                                         <div class="w-100">
-                                            <div class="d-flex flex-wrap">
+                                            <div class="d-flex flex-wrap ml-3 pl-1">
                                                 <!--span> <input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="THOUSAND"  > THOUSAND &nbsp;&nbsp;</span--><span><input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="MILLION" checked=""> Million &nbsp;&nbsp;</span> <span><input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="BILLION">&nbsp;&nbsp;Billion &nbsp;&nbsp;</span> <span><input type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="TRILLION">&nbsp;&nbsp;Trillion</span> </div>
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@
                                             <input type="checkbox" name="UNITS_MEASURE" id="UNITS_MEASURE" value="UNITS" checked=""> &nbsp;UNITS:
                                         </div>
                                         <div class="w-100">
-                                            <div class="d-flex flex-wrap">
+                                            <div class="d-flex flex-wrap ml-3 pl-1">
                                                 <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Actual"> &nbsp;&nbsp;Actual &nbsp;&nbsp;
                                                 <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Million">&nbsp;&nbsp;Million&nbsp;&nbsp;
                                                 <input type="radio" name="MARKET_MEASURE_UNITS" id="MARKET_MEASURE_UNITS" value="Billion">&nbsp;&nbsp;Billion </div>
@@ -135,7 +135,7 @@
                     <section id="segment">
                         <div class="row mx-0  my-2 px-lg-3 px-sm-0 px-md-2 px-xl-3">
                             <div class="left_column">
-                                <h4 class="mt-1"> SEGMENT :</h4> </div>
+                                <h4 class="mt-1"> SEGMENT:</h4> </div>
                             <div class="right_column">
                                 <div class="w-100 d-flex px-2 flex-wrap"> <a href="#segment_block" rel="modal:open" class="p-1 rounded-0   text-blue add_segment" style="color:#169FE6 !important; color: #FFF">ADD SEGMENT</a> </div>
 
@@ -191,10 +191,10 @@
                             <div class="right_column">
                                 <!--Africa--->
                                 <div class="row mb-3 border-bottom-orange">
-                                    <div class="w-100   px-2  mt-1 d-flex">
-                                        <input type="checkbox" name="REGION" class="mr-2" id="REGION" checked onclick="toggle()" value="Africa">
+                                    <div class="w-100   px-2  mt-1  ">
 
-                                        <b>AFRICA</b>
+                                        <b class="two columns mx-0">AFRICA</b>
+                                        <a href="#add_countary" rel="modal:open" class="mb-2 ml-3  p-1 rounded-0   text-blue add_country" style="color:#169FE6 !important">ADD COUNTRY</a>
 
                                     </div>
 
@@ -203,34 +203,34 @@
                                 <!--Asia Specific--->
                                 <div class="row mb-3 border-bottom-orange">
 
-                                    <div class="accordion_new">
-                                        <div class="w-100   px-2  mt-1  ">
 
-                                            <b class="two columns mx-0">ASIA-PACIFIC</b>
-                                            <a href="#add_countary" rel="modal:open" class="mb-2 ml-3  p-1 rounded-0   text-blue add_country" style="color:#169FE6 !important">ADD COUNTRY</a>
+                                    <div class="w-100   px-2  mt-1  ">
 
-                                        </div>
-
-
-                                        <div class="d-flex justify-content-start flex-wrap w-100 light_gray  py-2 px-sm-2 px-md-2 px-xl-0 px-lg-0 py-2">
-                                            <div class="three columns mt-2" style="text-align:left">
-                                                <!--<option value="WORLD"  >WORLD</option>-->
-                                                <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Australia"><span> Australia</span></div>
-                                            <div class="three columns mt-2" style="text-align:left">
-                                                <!--<option value="WORLD"  >WORLD</option>-->
-                                                <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="India"><span> India</span></div>
-                                            <div class="three columns mt-2" style="text-align:left">
-                                                <!--<option value="WORLD"  >WORLD</option>-->
-                                                <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Japan"><span> Japan</span></div>
-                                            <div class="three columns mt-2" style="text-align:left">
-                                                <!--<option value="WORLD"  >WORLD</option>-->
-                                                <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Rest of Asia-Pacific"><span> Rest of Asia-Pacific</span></div>
-                                            <div class="three columns mt-2" style="text-align:left">
-                                                <!--<option value="WORLD"  >WORLD</option>-->
-                                                <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="South Korea"><span> South Korea</span></div>
-                                        </div>
+                                        <b class="two columns mx-0">ASIA-PACIFIC</b>
+                                        <a href="#add_countary" rel="modal:open" class="mb-2 ml-3  p-1 rounded-0   text-blue add_country" style="color:#169FE6 !important">ADD COUNTRY</a>
 
                                     </div>
+
+
+                                    <div class="d-flex justify-content-start flex-wrap w-100 light_gray  py-2 px-sm-2 px-md-2 px-xl-0 px-lg-0 py-2">
+                                        <div class="three columns mt-2" style="text-align:left">
+                                            <!--<option value="WORLD"  >WORLD</option>-->
+                                            <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Australia"><span> Australia</span></div>
+                                        <div class="three columns mt-2" style="text-align:left">
+                                            <!--<option value="WORLD"  >WORLD</option>-->
+                                            <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="India"><span> India</span></div>
+                                        <div class="three columns mt-2" style="text-align:left">
+                                            <!--<option value="WORLD"  >WORLD</option>-->
+                                            <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Japan"><span> Japan</span></div>
+                                        <div class="three columns mt-2" style="text-align:left">
+                                            <!--<option value="WORLD"  >WORLD</option>-->
+                                            <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="Rest of Asia-Pacific"><span> Rest of Asia-Pacific</span></div>
+                                        <div class="three columns mt-2" style="text-align:left">
+                                            <!--<option value="WORLD"  >WORLD</option>-->
+                                            <input type="checkbox" name="REGION" id="REGION" onclick="toggle()" value="South Korea"><span> South Korea</span></div>
+                                    </div>
+
+
 
 
                                 </div>
@@ -419,27 +419,66 @@
                                             <table class="table m-0 p-0 w-100" id="simulator_table">
                                                 <tbody>
                                                     <tr class="m-0 p-0">
-                                                        <td>2020</td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[10.67]</font></span> </td>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <i class="mb-2">2020</i>
+                                                                <i class="mt-1">CLUSTER</i>
+                                                            </div>
+
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[10.67]</font></span> </td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <span><font>[10.67]</font></span>
+                                                            </div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <span><font>[10.67]</font></span>
+                                                            </div>
+
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+
+
+
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
-                                                        <td><a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+
+                                                                <!--span><font>[10.67]</font></span-->
+                                                            </div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span-->
+                                                            </div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="mt-3">
+                                                                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                        
+                                                        ACTIVITY</a>
+                                                            </div>
+
+                                                        </td>
                                                     </tr>
-                                                    <tr class="m-0 p-0">
-                                                        <td>Cluster</td>
-                                                        <td> ### </td>
-                                                        <td> ### </td>
-                                                        <td> ###</td>
-                                                        <td> ###</td>
-                                                        <td> </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                             <div class="activity_block  collapse" id="collapseExample">
@@ -479,27 +518,49 @@
                                             <table class="table m-0 p-0 w-100" id="simulator_table">
                                                 <tbody>
                                                     <tr class="m-0 p-0">
-                                                        <td>2021</td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[20.45]</font></span> </td>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <i class="mb-2">2021</i>
+                                                                <i class="mt-1">CLUSTER</i>
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[6.28]</font></span> </td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[20.45]</font></span> </div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[6.28]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
-                                                        <td><a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="mt-3">
+                                                                <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a>
+                                                            </div>
+                                                        </td>
                                                     </tr>
-                                                    <tr class="m-0 p-0">
-                                                        <td>Cluster</td>
-                                                        <td> ### </td>
-                                                        <td> ### </td>
-                                                        <td> ###</td>
-                                                        <td> ###</td>
-                                                        <td> </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                             <div class="activity_block  collapse" id="collapseExample2">
@@ -539,27 +600,47 @@
                                             <table class="table m-0 p-0 w-100" id="simulator_table">
                                                 <tbody>
                                                     <tr class="m-0 p-0">
-                                                        <td>2022</td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[21.84]</font></span> </td>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <i class="mb-2">2022</i>
+                                                                <i class="mt-1">CLUSTER</i>
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[6.28]</font></span> </td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[21.84]</font></span> </div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[6.28]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
-                                                        <td><a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="mt-3"><a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></div>
+                                                        </td>
                                                     </tr>
-                                                    <tr class="m-0 p-0">
-                                                        <td>Cluster</td>
-                                                        <td> ### </td>
-                                                        <td> ### </td>
-                                                        <td> ###</td>
-                                                        <td> ###</td>
-                                                        <td> </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                             <div class="activity_block  collapse" id="collapseExample3">
@@ -599,27 +680,48 @@
                                             <table class="table m-0 p-0 w-100" id="simulator_table">
                                                 <tbody>
                                                     <tr class="m-0 p-0">
-                                                        <td>2023</td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[10.67]</font></span> </td>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <i class="mb-2">2023</i>
+                                                                <i class="mt-1">CLUSTER</i>
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span> </td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[10.67]</font></span> </div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
-                                                        <td><a data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="mt-3">
+                                                                <a data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></div>
+                                                        </td>
                                                     </tr>
-                                                    <tr class="m-0 p-0">
-                                                        <td>Cluster</td>
-                                                        <td> ### </td>
-                                                        <td> ### </td>
-                                                        <td> ###</td>
-                                                        <td> ###</td>
-                                                        <td> </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                             <div class="activity_block  collapse" id="collapseExample4">
@@ -659,27 +761,50 @@
                                             <table class="table m-0 p-0 w-100" id="simulator_table">
                                                 <tbody>
                                                     <tr class="m-0 p-0">
-                                                        <td>2024</td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[23.24]</font></span> </td>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <i class="mb-2">2024</i>
+                                                                <i class="mt-1">CLUSTER</i>
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span> </td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[23.24]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
-                                                        <td><a data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="mt-3">
+                                                                <a data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a>
+
+                                                            </div>
+                                                        </td>
                                                     </tr>
-                                                    <tr class="m-0 p-0">
-                                                        <td>Cluster</td>
-                                                        <td> ### </td>
-                                                        <td> ### </td>
-                                                        <td> ###</td>
-                                                        <td> ###</td>
-                                                        <td> </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                             <div class="activity_block  collapse" id="collapseExample5">
@@ -719,27 +844,57 @@
                                             <table class="table m-0 p-0 w-100" id="simulator_table">
                                                 <tbody>
                                                     <tr class="m-0 p-0">
-                                                        <td>2025</td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[24.64]</font></span> </td>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <i class="mb-2">2025</i>
+                                                                <i class="mt-1">CLUSTER</i>
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span> </td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <div class="d-flex flex-row justify-content-center">
+                                                                    <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[24.64]</font></span> </div>
+
+                                                            </div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
-                                                        <td><a data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span-->
+                                                            </div>
+
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span-->
+                                                            </div>
+
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="mt-3">
+                                                                <a data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a>
+                                                            </div>
+                                                        </td>
                                                     </tr>
-                                                    <tr class="m-0 p-0">
-                                                        <td>Cluster</td>
-                                                        <td> ### </td>
-                                                        <td> ### </td>
-                                                        <td> ###</td>
-                                                        <td> ###</td>
-                                                        <td> </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                             <div class="activity_block  collapse" id="collapseExample6">
@@ -779,27 +934,49 @@
                                             <table class="table m-0 p-0 w-100" id="simulator_table">
                                                 <tbody>
                                                     <tr class="m-0 p-0">
-                                                        <td>2026</td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[26.04]</font></span> </td>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <i class="mb-2">2026</i>
+                                                                <i class="mt-1">CLUSTER</i>
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span> </td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[26.04]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
-                                                        <td><a data-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="mt-3">
+                                                                <a data-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a>
+                                                            </div>
+                                                        </td>
                                                     </tr>
-                                                    <tr class="m-0 p-0">
-                                                        <td>Cluster</td>
-                                                        <td> ### </td>
-                                                        <td> ### </td>
-                                                        <td> ###</td>
-                                                        <td> ###</td>
-                                                        <td> </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                             <div class="activity_block  collapse" id="collapseExample7">
@@ -839,27 +1016,49 @@
                                             <table class="table m-0 p-0 w-100" id="simulator_table">
                                                 <tbody>
                                                     <tr class="m-0 p-0">
-                                                        <td>2025</td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[27.43]</font></span> </td>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <i class="mb-2">2027</i>
+                                                                <i class="mt-1">CLUSTER</i>
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span> </td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[27.43]</font></span></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value=""> <span><font>[17.91]</font></span> </div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
                                                         <td>
-                                                            <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
-                                                            <!--span><font>[10.67]</font></span--></td>
-                                                        <td><a data-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a></td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex flex-row justify-content-center">
+                                                                <input type="textbox" class="allow_decimal" id="txt15846-66USD2012" name="txt15846-66USD2012" size="3" value="">
+                                                                <!--span><font>[10.67]</font></span--></div>
+                                                            <div class="mt-2 border-top">
+                                                                ###
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="mt-3">
+                                                                <a data-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample">ACTIVITY</a>
+                                                            </div>
+                                                        </td>
                                                     </tr>
-                                                    <tr class="m-0 p-0">
-                                                        <td>Cluster</td>
-                                                        <td> ### </td>
-                                                        <td> ### </td>
-                                                        <td> ###</td>
-                                                        <td> ###</td>
-                                                        <td> </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                             <div class="activity_block  collapse" id="collapseExample8">
@@ -896,20 +1095,173 @@
                                 </table>
 
                             </div>
-                            <div class="d-flex justify-content-around flex-wrap w-xl-50 w-lg-50 w-md-75 w-sm-100 mx-auto m-2 py-2 bottom_links ">
-                                <a her="" class=" mt-1 my-2 mx-2">SAVE & UPDATE</a>
-                                <a her="" class=" mt-1 my-2 mx-2 ">SUBMIT FINAL</a>
-                                <a her="" class=" mt-1 my-2 mx-2 ">ALERTS</a>
 
-                                <a her="" class=" mt-1 my-2 mx-2 ">FEEDBACK </a>
-                                <a her="" class=" mt-1 my-2 mx-2 ">COLLABORATE</a>
-                                <a her="" class=" mt-1 my-2 mx-2 ">STATS</a>
+                            <div id="main">
+
+                                <div class="d-flex justify-content-around flex-wrap w-xl-50 w-lg-50 w-md-75 w-sm-100 mx-auto m-2 py-2 bottom_links ">
+                                    <a her="" class=" mt-1 my-2 mx-2">SAVE & UPDATE</a>
+                                    <a her="" class=" mt-1 my-2 mx-2 ">SUBMIT FINAL</a>
+                                    <a class=" mt-1 my-2 mx-2 " data-toggle="collapse" href="#alert" role="button" aria-expanded="false" aria-controls="collapseExample">ALERTS</a>
+
+                                    <a her="" class=" mt-1 my-2 mx-2 ">FEEDBACK </a>
+                                    <a her="" class=" mt-1 my-2 mx-2 ">COLLABORATE</a>
+                                    <a her="" class=" mt-1 my-2 mx-2 " data-toggle="collapse" href="#stats" role="button" aria-expanded="false" aria-controls="collapseExample">STATS</a>
 
 
-                            </div>
+                                </div>
 
-                            <div class="d-flex justify-content-around w-xl-50 w-lg-50 w-md-100 w-sm-100 mx-auto m-2 bottom_links">
+                                <div class="row collapse border alert_block" id="alert" data-parent="#main" data-parent="#main">
 
+
+                                    <div class="p-3">
+                                        <h3 align="center" class="font-weight-bold font-size-20 py-2 border-bottom text-center primary_color ">ALERT</h3>
+
+                                        <div class="w-xl-60 w-lg-75 w-md-75 w-sm-100 mx-auto">
+                                            <!--p align="left">Request a Global Expert Panel Registry. </p-->
+                                            <p style="font-size:15px !important" class="text-darker">Receive activity alerts for project updates by email and in mobile app </p>
+                                            <div class="mb-3 ml-2">
+                                                <input data-brackets-id="213770" type="checkbox" name="alert" id="checkAll" onclick="toggle()" class="mb-3" value="ALL ALERTS" style="margin-top:2px">&nbsp;ALL ALERTS
+                                                <br/>
+
+                                                <input data-brackets-id="213770" class="ml-4 mb-3" type="checkbox" name="alert" id="ALL_ALERTS" onclick="toggle()" value="ALL ALERTS" style="margin-top:2px">&nbsp;Peer-to-Peer
+                                                <br/>
+
+                                                <input data-brackets-id="213770" class="ml-4 mb-3" type="checkbox" name="alert" id="ALL_ALERTS" onclick="toggle()" value="ALL ALERTS" style="margin-top:2px">&nbsp;Competitive Enterprise
+                                                <br/>
+
+                                                <input data-brackets-id="213770" class="ml-4 mb-3" type="checkbox" name="alert" id="ALL_ALERTS" onclick="toggle()" value="ALL ALERTS " style="margin-top:2px">&nbsp;Project Updates
+
+
+
+                                            </div>
+
+                                            <div>
+                                                FREQUENCY: &nbsp;
+                                                <input data-brackets-id="206492" type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="MILLION" style="margin-top:2px" checked="">&nbsp;Month&nbsp;&nbsp;
+
+                                                <input data-brackets-id="206492" type="radio" name="MARKET_MEASURE_USD" id="MARKET_MEASURE_USD" value="MILLION" style="margin-top:2px" checked="">&nbsp;Quarter
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row collapse border stats_block" id="stats" data-parent="#main" data-parent="#main">
+
+
+                                    <div class="p-3">
+                                        <h2 align="center" class="font-weight-bold font-size-20 py-2 border-bottom text-center primary_color ">STATS</h2>
+
+
+                                        <div class="d-flex flex-row">
+
+                                            <div class="w-xl-50 w-lg-50 w-md-100 w-sm-100">
+                                                <div class="p-2 ">
+
+                                                    <h5 align="center" class="font-weight-bold font-size-15 py-2 border-bottom text-center  text-dark ">PEER-TO-PEER </h5>
+
+                                                    <div class="w-100 border">
+
+
+
+                                                        <table class="table">
+                                                            <thead class="thead-dark">
+                                                                <tr>
+                                                                    <th scope="col">YEAR</th>
+                                                                    <th scope="col">PROJECT</th>
+                                                                    <th scope="col">PLATFORM</th>
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+
+                                                                    <td>2020</td>
+                                                                    <td>###</td>
+                                                                    <td>###</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>2021</td>
+                                                                    <td>###</td>
+                                                                    <td>###</td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+
+
+
+
+
+
+                                                    </div>
+
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="w-xl-50 w-lg-50 w-md-100 w-sm-100">
+                                                <div class="p-2">
+
+                                                    <h5 align="center" class="font-weight-bold font-size-15 py-2 border-bottom text-center  text-dark ">COMPANIES ENGAGED </h5>
+
+                                                    <div class="w-100  border">
+
+
+                                                        <table class="table">
+                                                            <thead class="thead-dark">
+                                                                <tr>
+                                                                    <th scope="col">YEAR</th>
+                                                                    <th scope="col">PROJECT</th>
+                                                                    <th scope="col">PLATFORM</th>
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+
+                                                                    <td>2020</td>
+                                                                    <td>###</td>
+                                                                    <td>###</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>2021</td>
+                                                                    <td>###</td>
+                                                                    <td>###</td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+
+
+
+
+
+
+                                                    </div>
+
+
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
 
 
                             </div>
@@ -918,62 +1270,9 @@
                     </section>
                     <!----END:SIMULATOR TABLE------>
                     <!---Begin:sumbit, intelligence, feedback, collborat -->
-                    <!--section>
-                        <div class="row mx-0">
-                            <div class="d-flex justify-content-between my-2 flex-sm-column flex-md-column flex-lg-row">
-                                <button type="submit" class="btn btn-sm  text-white shadow rounded-0 my-1  w- sm-100 w-md-100 w-lg-20 w-xl-20 " id="btnEqsubmit" name="btnEqsubmit" value="SUBMIT" onsubmit="return CheckAddData();">SUBMIT FINAL</button>
-                                <button type="button" class="btn btn-sm  text-white shadow rounded-0  my-1   w- sm-100 w-md-100 w-lg-30 w-xl-30" data-toggle="collapse" href="#intelligence" role="button" aria-expanded="false" aria-controls="collapseExample">INTELLIGENCE EXCHANGE PROGRAM </button>
-                                <button type="button" class="btn btn-sm   text-white shadow rounded-0 my-1     w- sm-100 w-md-100 w-lg-20 w-xl-20" data-toggle="collapse" href="#feedback" role="button" aria-expanded="false" aria-controls="collapseExample">FEEDBACK </button>
-                                <button type="button" class="btn btn-sm   text-white shadow rounded-0 my-1    w- sm-100 w-md-100 w-lg-20 w-xl-20" id="btnEqsubmit" name="btnEqsubmit" value="COLLABORATE" onclick="location.href='https://www.strategyr.com/GIA_Research_collaborate.asp?code=NT15846&amp;encID=FE471CA7EA';">COLLABORATE </button>
-                            </div>
-                        </div--->
-                    <div class="row mx-0">
-                        <!---BEGIN:INTELLIGENCE EXCHANGE PROGRAM---->
-                        <div class="collapse" id="intelligence">
-                            <div class="large-notice border-0 p-0">
-                                <h3 align="center" class="font-weight-bold font-size-20 py-2 border-bottom text-center primary_color ">INTELLIGENCE EXCHANGE PROGRAM</h3>
-                                <!--p align="left">Request a Global Expert Panel Registry. </p-->
-                                <div class="form_box">
-                                    <!--GENDER BLOCK START-->
-                                    <input type="hidden" name="Title1" value="">
-                                    <!--div class="gender_block">
-				    <h4 class="gen_title"> Gender </h4>
-					<input type="radio" id="radio1" name="Title" value="Mr." checked title="Male">
-					<label for="radio1" title="Male"><div class="male"></div></label>
-									
-					<input type="radio" id="radio2" name="Title" value="Ms." title="Female">
-					<label for="radio2" title="Female"><div class="female"></div></label>
-				
-				</div> -->
-                                    <!--GENDER BLOCK START-->
-                                    <!--NAME BOX-->
-                                    <div class="text_field_block">
-                                        <div class="d-flex flex-wrap">
-                                            <input class="w-xl-45 w-lg-45 w-md-90  w-sm-100 my-1" type="text" name="First Name" maxlength="20" onblur="checkalpha(this);" value="" required="" placeholder="First Name">
-                                            <input class="w-xl-45 w-lg-45 w-md-90 w-sm-100 my-1" type="text" name="Last Name" maxlength="20" required="" value="" placeholder="Last Name"> </div>
-                                    </div>
-                                    <div class="text_field_block" style="text-align:left;">
-                                        <input type="email" name="userEmail" class="email_block my-1   w-sm-100  w-md-90" maxlength="50" onblur="checkemail(this);" value="srinivas123@strategyr.com" required="" placeholder="WORK EMAIL"> </div>
-                                    <div class="text_field_block" style="text-align:left;">
-                                        <label>
-                                            <input type="text" name="txtCompany" maxlength="50" required="" value="Global Industry Analysts, Inc." onblur="checkaddress(this);" class="company   w-sm-100  w-md-90" placeholder="COMPANY">
-                                            <input type="hidden" name="rdo1" value="Monthly"> </label>
-                                    </div>
-                                    <div class="text_field_block" style="text-align:left;">
-                                        <label>
-                                            <input type="text" name="txtDesignation" maxlength="50" required="" value="" onblur="checkaddress(this);" class="company  w-sm-100  w-md-90" placeholder="Designation">
-                                            <input type="hidden" name="CPL" value="Company">
-                                            <input type="hidden" name="code" value="NT15846"> </label>
-                                    </div>
-                                </div>
-                                <div class="width-100 text-center">
-                                    <!--p class="comp_note" style="align:center;line-height:14px !important">NOTE: Generic Email IDs such as AOL, Hotmail, Yahoo, Gmail, MSN etc. cannot be used</p-->
-                                    <button type="submit" name="btnsubmit" value="ACCEPT" class="btn btn-gia-primary rounded-0 shadow-sm m-1 mx m-md-2  text-white font-weight-bold font-size-15 w-xl-20 w-lg-20 w-md-45  w-sm-70 mx-auto" onsubmit="return validatefrm();">ACCEPT</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!---END:INTELLIGENCE EXCHANGE PROGRAM---->
-                    </div>
+                    <section>
+
+
                     </section>
                     <!---End:sumbit, intelligence, feedback, collborat -->
                 </main>
@@ -1137,8 +1436,6 @@
 
     <div id="segment_block" class="modal">
         <div class="row m-0 ">
-
-
             <div>
 
                 <div class="btn-group w-100">
@@ -1202,6 +1499,15 @@
         } else {
             $('.simulator_top_header').removeClass('fixed-top');
         }
+    });
+
+</script>
+
+<!---CHECK ALL SCRIPT--->
+
+<script>
+    $("#checkAll").click(function() {
+        $('input:checkbox').not(this).prop('checked', this.checked);
     });
 
 </script>

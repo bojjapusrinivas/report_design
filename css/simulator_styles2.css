@@ -264,6 +264,7 @@ TOP FIXED BAR
 #simulator_table td {
     width: 15%;
     border: #fff solid 1px;
+    border-top: none !important;
     padding: 6px;
 }
 #simulator_table th {
@@ -286,6 +287,10 @@ TOP FIXED BAR
     width: 55px;
     margin: 0px 10px;
     border: #b3b3b3 solid 1px;
+    border-radius: 0px;
+}
+#simulator_table tbody tr td input:focus {
+    border: #b3b3b3 solid 1px !important;
     border-radius: 0px;
 }
 #simulator_table a,
@@ -494,4 +499,18 @@ accordion_new .accordion_key {
         text-transform: capitalize;
         font-weight: 600;
     }
+}
+
+/*---stats_block-----*/
+
+#stats table {
+    padding: 0px;
+    margin: 0px;
+}
+#stats table thead tr th,
+#stats table tbody tr td {
+    padding: 3px !important;
+    margin: 0px;
+    !important;
+    text-align: center;
 }
