@@ -395,6 +395,7 @@ table td {
         font-size: 14px;
         font-weight: 500;
         margin-left: 2px;
+        padding-top: 4px !important;
     }
     #simulator_table tbody tr td input {
         width: 35px;
@@ -406,12 +407,12 @@ table td {
     #simulator_table td:nth-child(4) div:nth-child(2),
     #simulator_table td:nth-child(5) div:nth-child(2) {
         position: absolute;
-        bottom: 0px;
+        bottom: 2px;
         left: calc(100% - 70%);
     }
     #simulator_table td:nth-child(1) div i:nth-child(2) {
         position: absolute;
-        bottom: 0px;
+        bottom: 2px;
         left: 3px;
     }
     #simulator_table a,
