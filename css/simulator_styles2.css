@@ -53,21 +53,22 @@ table td {
 =======================*/
 
 .bottom_links a {
-    background: #169fe6;
-    border-radius: 2px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-weight: 500;
+    color: #169fe6;
+    font-weight: 600;
     padding: 8px;
     text-align: center;
+    /*border: rgba(0, 0, 0, 0.1)  1px;*/
+    border: rgba(22, 159, 230) line 1px;
+    font-size: 14px
 }
 .bottom_links a:hover,
 .bottom_links a:active {
     background-color: #1397DB;
+    color: #fff;
 }
 .bottom_links a.bt-1,
 .bottom_links a.bt-2 {
-    width: 123px;
+    width: 125px;
     margin: 2px 0px;
 }
 .bottom_links a.bt-3 {
@@ -75,25 +76,45 @@ table td {
     margin: 2px 0px;
 }
 @media screen and (max-width: 767px) {
+    .bottom_links {
+        width: 80%;
+    }
     .bottom_links a.bt-1,
     .bottom_links a.bt-2 {
-        width: 110px;
-        font-size: 12px;
+        width: 95px;
+        font-size: 10px;
+        font-weight: bold
     }
     .bottom_links a.bt-3 {
         width: 65px;
-        font-size: 12px;
+        font-size: 10px;
+        font-weight: bold
     }
 }
-@media screen and (max-width: 480px)and (orientation:portrait) {
+@media screen and (max-width: 480px) {
+    .bottom_links {
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px)and (orientation:portrait) {
     .bottom_links a.bt-1,
     .bottom_links a.bt-2 {
-        width: 100%;
-        font-size: 14px;
+        width: 48%;
+        font-size: 12px;
+        font-weight: 200;
+        background: none;
+        color: #169FE6;
+        box-shadow: none;
+        font-weight: 600;
     }
     .bottom_links a.bt-3 {
-        width: 100%;
-        font-size: 14px;
+        width: 48%;
+        font-size: 12px;
+        font-weight: 200;
+        background: none;
+        color: #169FE6;
+        box-shadow: none;
+        font-weight: 600;
     }
 }
 
