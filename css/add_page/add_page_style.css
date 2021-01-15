@@ -30,4 +30,7 @@ body {
     .mobile_display {
         display: none !important;
     }
+    #add_page button {
+        font-size: 12px;
+    }
 }
