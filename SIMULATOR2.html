@@ -67,10 +67,13 @@
                 <header>
                     <div class="row" style="margin-bottom:0px;">
                         <div class="three columns text-center"> <img src="https://www.strategyr.com/images/gia_smalllogo.png" alt="GIA" class="logo mx-auto" style="width:65px; height:auto;"> </div>
+
                         <div class="ten columns head_title_block text-center  d-flex justify-content-center">
                             <h3 style="font-weight:bold; color:#900;line-height: 23px;" class="mt-2"> DIGITAL BANKING<br><span style="font-weight:bold;color:#000;">MCP-6073</span></h3>
                         </div>
-                        <div class="mobile_display" style="text-align:center; width:100% !important"> <img src="https://www.strategyr.com/resize_img/sig_100.jpg" alt="GIA" class="logo signatrue_logo" style="width:90px; height:auto; margin:0 auto; padding-top:10px"> </div>
+
+                        <div class="mobile_display" style="text-align:center; width:100% !important">
+                            <img src="https://www.strategyr.com/resize_img/sig_100.jpg" alt="GIA" class="logo signatrue_logo" style="width:90px; height:auto; margin:0 auto; padding-top:10px"> </div>
                     </div>
                 </header>
                 <!---- END : HEADER SECTION ---->
@@ -78,13 +81,16 @@
                 <section>
                     <div class="simulator_top_header">
                         <div class="brand_cards border-top border-bottom  bg-white   cards my-1 py-2 px-lg-4 px-xl-4 px-md-4  px-sm-0 d-flex flex-row align-content-rounded flex-md-row position-relative align-content-center" id="brand_cards">
-                            <div class="mb-1">
-                                <div class="d-flex float-left flex-column img-block" style="height: 110px">
-                                    <img src="https://bojjapusrinivas.github.io/report_design/images/beer/09.jpg" class="img-fluid" style="margin-top:10px"> </div>
+                            <div class="mb-1 d-flex">
+
+                                <div class="d-flex float-left flex-column img-block" style="-webkit-writing-mode: vertical-rl;">
+                                    <img src="https://bojjapusrinivas.github.io/report_design/images/beer/09.jpg" class="img-fluid"> </div>
                             </div>
                             <div class="text-left ml-3 w-100 mt-1">
-                                <h3 class="font-weight-bold text-dark mb-1 p-0 textlimited"> JACK CHERKAS</h3>
-                                <h4 class="text-dark mb-1 p-0 textlimited2">Executive Vice President</h4>
+                                <h3 class="font-weight-bold text-dark mb-1 p-0 "> JACK CHERKAS CHERKAS</h3>
+                                <h3 class="font-weight-bold text-dark mb-1 p-0 textlimit"> JACK CHERKAS CHERKAS CHERKAS</h3>
+                                <h4 class="text-dark mb-1 p-0 ">Executive Vice President</h4>
+                                <h4 class="text-dark mb-1 p-0 textlimit">Executive Vice President Executive Vice President</h4>
                                 <h4 class="text-dark mb-1 p-0 mx-0 px-0 textlimited2" style="margin-top: -5px">Ground Zero</h4>
                                 <div class="user_spec">
                                     <div class="m-0 p-0 d-flex flex-lg-row  flex-xl-row  flex-sm-row flex-md-row justify-content-start custom_flex_style" style="margin-top:-5px !important">
@@ -1798,9 +1804,18 @@
                             <button type="button" class="btn  p-1 rounded-0 dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent" style="background:#e37038">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                                <a class="dropdown-item" href="#">Option-1</a>
-                                <a class="dropdown-item" href="#">Option-2</a>
+                            <div class="dropdown-menu " aria-labelledby="dropdownMenuReference" x-placement="bottom-start">
+
+                                <!--<a class="dropdown-item" href="#"></a>-->
+                                <div class="p-1 ">
+                                    <input type="radio" name="DDlSegmentsType" id="DDlSegmentsType" value="End-Use"><span> End-Use </span>
+                                </div>
+
+                                <!--<a class="dropdown-item" href="#"></a>-->
+                                <div class="p-1 ">
+                                    <input type="radio" name="DDlSegmentsType" id="DDlSegmentsType" value="Material Type"><span> Material Type </span>
+                                </div>
+
 
                             </div>
                         </div>
@@ -1823,6 +1838,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="scripts/bootstrap.bundle.js"></script>
 <script src="js/jquery.multi-select.js"></script>
+<script src="js/limit.text.js"></script>
 <script>
     //----ACCORDION----//
     var acc = document.getElementsByClassName("accordion_key");
@@ -1859,5 +1875,19 @@
     });
 
 </script>
+
+
+<script>
+    $(function() {
+        $('.textlimit').limitText({
+            length: 15
+        });
+    });
+
+</script>
+
+
+
+
 
 </html>

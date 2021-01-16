@@ -156,27 +156,18 @@ table td {
 }
 .brand_cards .img-block {
     width: 90px;
-    height: 100px;
+    height: 90px;
     align-items: center;
     padding: 2px;
     overflow: hidden;
-    align-self: center;
 }
 #brand_cards h3 {
     color: #e37038 !important;
     font-size: 20px;
     line-height: normal !important;
-    display: block
-}
-#brand_cards h3.textlimit {
-    display: none;
-}
-#brand_cards h4.textlimit {
-    display: none;
 }
 #brand_cards h4 {
     font-size: 15px;
-    display: block
 }
 #brand_cards h4 span.company_title1 {
     display: inline-block;
@@ -222,18 +213,6 @@ table td {
         width: 420px;
         padding-left: 35px !important;
         padding-right: 35px !important;
-    }
-    #brand_cards h3 {
-        display: none;
-    }
-    #brand_cards h3.textlimit {
-        display: block;
-    }
-    #brand_cards h4 {
-        display: none;
-    }
-    #brand_cards h4.textlimit {
-        display: block;
     }
 }
 @media screen and (max-width: 479px) {
@@ -626,22 +605,10 @@ accordion_new .accordion_key {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
     #brand_cards .three.columns {
-        width: 113px;
-    }
-    #brand_cards h3.textlimit {
-        display: none;
-    }
-    #brand_cards h4.textlimit {
-        display: none;
-    }
-    #brand_cards h3 {
-        display: block;
-    }
-    #brand_cards h4 {
-        display: block;
+        width: 160px;
     }
 }
-@media only screen and (min-device-width:280px) and (max-device-width: 448px) and (orientation:portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 448px) and (orientation:portrait) {
     #brand_cards .custom_flex_style {
         flex-flow: column !important;
     }
