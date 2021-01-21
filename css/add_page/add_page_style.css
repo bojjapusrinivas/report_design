@@ -39,70 +39,41 @@ body {
     simulator_top_header
 -------------------------*/
 
+.star_rating {
+    margin-top: 2px;
+    width: 60px;
+    height: 14px;
+    display: block;
+}
 .brand_cards {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.0);
-    position: relative;
-}
-.brand_cards .user_spec {
-    position: relative;
 }
 .brand_cards .img-block {
     width: 90px;
-    height: 90px;
+    height: 100px;
     align-items: center;
     padding: 2px;
     overflow: hidden;
+    align-self: center;
 }
 #brand_cards h3 {
     color: #e37038 !important;
     font-size: 20px;
     line-height: normal !important;
+    display: block
 }
 #brand_cards h4 {
     font-size: 15px;
-    line-height: 17px;
-}
-#brand_cards h4 span.company_title1 {
-    display: inline-block;
-}
-#brand_cards h4.company_title {
-    display: none;
+    line-height: 18px;
 }
 #brand_cards h5 {
     font-size: 15px;
-}
-.fixed-top .brand_cards {
-    width: 1019px;
-    margin: 0 auto;
-    padding-left: 53px !important;
-    padding-right: 53px !important;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-    /*transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;*/
-}
-.fixed-top {
-    position: fixed;
-    top: -10px;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
-.star_rating {
-    margin-top: 8px;
-    width: 60px;
-    height: 14px;
-    display: block;
 }
 @media screen and (max-width: 959px) {
     .fixed-top .brand_cards {
         width: 710px;
         padding-left: 35px !important;
         padding-right: 35px !important;
-    }
-    .ecosystem_block .five.columns {
-        width: 250px !important;
-        float: left;
     }
 }
 @media screen and (max-width: 767px) {
@@ -150,5 +121,23 @@ body {
     }
     #brand_cards h5 {
         font-size: 12px;
+    }
+}
+
+/* MEDIA QURIES FOR IPHONE  AND LANDSCAPE */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+    #brand_cards .three.columns {
+        width: 113px;
+    }
+}
+@media only screen and (min-device-width:280px) and (max-device-width: 448px) and (orientation:portrait) {
+    #brand_cards .custom_flex_style {
+        flex-flow: column !important;
+    }
+}
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+    #brand_cards .three.columns {
+        width: 140px !important;
     }
 }
