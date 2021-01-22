@@ -105,17 +105,12 @@
                         </div>
                     </div>
                 </header>
-                <hr/>
                 <!---- END : HEADER SECTION ---->
-
-
-
-
 
                 <!---- BEGIN :CONTENT SSECTION ---->
                 <!---Begin: Main Content--->
                 <main>
-
+                    <!---- DATA SIMULATOR BUTTONS --->
                     <div class="row mb-0 my-2">
 
                         <div class=" d-flex  justify-content-center flex-xl-row flex-lg-row flex-md-row flex-sm-row w-100">
@@ -128,7 +123,7 @@
 
                     </div>
 
-
+                    <!---- DATA SIMULATOR BUTTONS --->
 
                     <div class="row mb-0">
 
@@ -181,402 +176,12 @@
 
                     <div class="row">
 
-                        <div class="my-3 shadow" id="collapseExample06" data-parent="#main2">
 
-                            <div class="collapse" id="collapseExample">
 
-                                <div>
-                                    <div class="card card-body">
+                        <div class="collapse" id="collapseExample">
 
-                                        <!--include file="adovbs.asp"-->
-                                        <!--INCLUDE FILE="dbopen.asp" -->
 
-
-                                        <!-- Java Script
-================================================== -->
-
-
-                                        <!--onBeforePrint="document.body.style.display='none';" onAfterPrint="document.body.style.display='block';" onContextmenu="return false" onSelectstart="return false" onDragstart="return false"  topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"-->
-
-
-                                        <!-- Wrapper / Start -->
-                                        <div id="wrapper" class="bor-radius">
-                                            <div id="top-line" style="box-shadow:none; height:5px; padding:5px 0px; z-index:1"></div>
-
-
-
-                                            <div class="container flo">
-                                                <!-- Page Content -->
-                                                <div class="page-content">
-                                                    <!-- 960 Container -->
-                                                    <div class="container">
-                                                        <!-- Texts -->
-                                                        <div class="sixteen columns">
-                                                            <hr>
-                                                            <div class="row">
-
-
-                                                                <!---second values--->
-
-                                                                <script>
-                                                                    $(document).ready(function() {
-
-
-                                                                        //**** for preventing form submit with Enter Key
-                                                                        $(window).keydown(function(event) {
-                                                                            if ((event.keyCode == 13) && ($(event.target)[0] != $("text")[0])) {
-                                                                                event.preventDefault();
-                                                                                return false;
-                                                                            }
-
-                                                                        });
-
-                                                                        //**** for market share 
-                                                                        $('.allow_decimalforshare').keyup(function() {
-
-                                                                            this.value = this.value.replace(/[^0-9\.]/g, '');
-                                                                            if ($(this).val() > 100) {
-                                                                                alert("No Pecentage above 100%");
-                                                                                $(this).val('');
-                                                                            }
-                                                                        });
-
-
-                                                                        //**** for market share 
-                                                                        $('.allow_decimal').keyup(function() {
-
-                                                                            this.value = this.value.replace(/[^0-9\.]/g, '');
-
-
-
-                                                                        });
-
-
-
-                                                                        $('#lock-refresh').click(function() {
-                                                                            $(this).addClass('fa-spin');
-
-                                                                            //Trying to use setTimeout, but doesn't seem to work either.
-                                                                            var $el = $(this);
-                                                                            setTimeout(function() {
-                                                                                $el.removeClass('fa-spin');
-                                                                            }, 1000);
-                                                                        });
-
-
-
-
-                                                                    });
-
-
-
-                                                                    function addToDatabase(SegId, Cname, vListid, MKTtype) {
-
-                                                                        var v2019 = $("#txt" + SegId + vListid + MKTtype + "2019").val();
-                                                                        var v2020 = $("#txt" + SegId + vListid + MKTtype + "2020").val();
-                                                                        var v2021 = $("#txt" + SegId + vListid + MKTtype + "2021").val();
-                                                                        var v2022 = $("#txt" + SegId + vListid + MKTtype + "2022").val();
-                                                                        var v2023 = $("#txt" + SegId + vListid + MKTtype + "2023").val();
-                                                                        var v2024 = $("#txt" + SegId + vListid + MKTtype + "2024").val();
-                                                                        var v2025 = $("#txt" + SegId + vListid + MKTtype + "2025").val();
-                                                                        var vCAGR = $("#txt" + SegId + vListid + MKTtype + "CAGR").val();
-                                                                        var vCAGRsYear = $("#txt" + SegId + vListid + MKTtype + "CAGRsYear").val();
-                                                                        var vCAGReYear = $("#txt" + SegId + vListid + MKTtype + "CAGReYear").val();
-                                                                        //alert(MKTtype)
-                                                                        //alert("#txt"+SegId+vListid+MKTtype+"2019");
-                                                                        // alert(SegId+Cname+v2019+v2020+v2021+v2022+v2023+v2024+v2025);
-
-                                                                        // $("#confirmAdd").html('<img src="loaderIcon.gif" />');
-                                                                        $.ajax({
-                                                                            url: "Ajax_Analyticsadd.asp",
-                                                                            type: "POST",
-                                                                            data: 'SegId=' + SegId + '&MKTtype=' + MKTtype + '&Cname=' + encodeURIComponent(Cname) + '&v2019=' + v2019 + '&v2020=' + v2020 + '&v2021=' + v2021 + '&v2022=' + v2022 + '&v2023=' + v2023 + '&v2024=' + v2024 + '&v2025=' + v2025 + '&vCAGR=' + vCAGR + '&vCAGRsYear=' + vCAGRsYear + '&vCAGReYear=' + vCAGReYear + '',
-                                                                            success: function(data) {
-                                                                                //alert(data);
-                                                                                //  $("#new_row_ajax").remove();
-                                                                                //$("#add-more").show();		  
-                                                                                // $("#table-body").append(data);
-                                                                                //alert("Saved");
-                                                                            },
-
-                                                                            error: function(xhr, ajaxOptions, thrownError) {
-                                                                                alert(xhr.status);
-                                                                                alert(thrownError);
-                                                                                alert(xhr.responseText);
-                                                                            }
-                                                                        });
-                                                                    }
-
-                                                                    function addAllToDatabase(vCountry, vListid, TotSegs, GIANo, MKTtype) {
-                                                                        //alert(TotSegs)
-                                                                        i = TotSegs
-                                                                        for (i = TotSegs; i <= TotSegs; i++) {
-                                                                            //var SegId=GIANo+'-'+i
-                                                                            var SegId = i
-                                                                                //alert(SegId)
-                                                                            addToDatabase(SegId, vCountry, vListid, MKTtype)
-
-                                                                        }
-                                                                        alert("Market Size Module Saved Successfully");
-
-
-                                                                    }
-
-                                                                    function addMShareToDatabase(vCountry, CompName, RecNo, vListid, vSegId) {
-
-                                                                        var v2019Percent = $("#txt" + vListid + RecNo + "2019Percent" + vSegId).val();
-                                                                        var v2025Percent = $("#txt" + vListid + RecNo + "2025Percent" + vSegId).val();
-                                                                        //  alert(v2019Percent+'-'&v2025Percent);
-                                                                        //  alert(vSegId);
-                                                                        // $("#confirmAdd").html('<img src="loaderIcon.gif" />');
-                                                                        $.ajax({
-                                                                            url: "Ajax_MShareAnalyticsadd.asp",
-                                                                            type: "POST",
-                                                                            data: 'v2019Percent=' + v2019Percent + '&v2025Percent=' + v2025Percent + '&vCountry=' + encodeURIComponent(vCountry) + '&CompName=' + encodeURIComponent(CompName) + '&vSegId=' + vSegId + '',
-                                                                            success: function(data) {
-                                                                                //alert(data);			  
-                                                                                // $("#table-body").append(data);
-                                                                                // alert("Saved");
-                                                                            },
-
-                                                                            error: function(xhr, ajaxOptions, thrownError) {
-                                                                                alert(xhr.status);
-                                                                                alert(thrownError);
-                                                                                alert(xhr.responseText);
-                                                                            }
-                                                                        });
-                                                                    }
-
-
-
-                                                                    function addMShareData(vCountry, CompName, RecNo, vListid, vSegId, vUnits) {
-
-                                                                        var Cmpcnt = $("#txtCmpCnt" + vListid + vSegId).val();
-                                                                        var v2025Total = $("#txt2025Total" + vListid + vSegId).val();
-                                                                        var v2019Total = $("#txt2019Total" + vListid + vSegId).val();
-
-                                                                        if ((v2025Total == 100) && (v2019Total == 100)) {
-
-
-                                                                            for (i = 1; i < Cmpcnt; i++) {
-                                                                                var v2019Percent = $("#txt" + vListid + i + "2019Percent" + vSegId).val();
-                                                                                var v2025Percent = $("#txt" + vListid + i + "2025Percent" + vSegId).val();
-                                                                                var vCmpName = $("#txt" + vListid + i + "CmpName" + vSegId).val();
-                                                                                // alert("#txt"+vListid+i+"CmpName"+vSegId);
-                                                                                if ((v2019Percent != '') && (v2025Percent != '')) {
-
-                                                                                    $.ajax({
-                                                                                        url: "Ajax_MShareAnalyticsadd.asp",
-                                                                                        type: "POST",
-                                                                                        data: 'vUnits=' + encodeURIComponent(vUnits) + '&v2019Percent=' + v2019Percent + '&v2025Percent=' + v2025Percent + '&vCountry=' + encodeURIComponent(vCountry) + '&CompName=' + encodeURIComponent(vCmpName) + '&vSegId=' + vSegId + '',
-                                                                                        success: function(data) {
-                                                                                            //alert(data);			  
-                                                                                            // $("#table-body").append(data);
-                                                                                            //alert("Saved");
-                                                                                        },
-
-                                                                                        error: function(xhr, ajaxOptions, thrownError) {
-                                                                                            alert(xhr.status);
-                                                                                            alert(thrownError);
-                                                                                            alert(xhr.responseText);
-                                                                                        }
-                                                                                    });
-                                                                                }
-                                                                            }
-                                                                            alert("Market Share Module Saved Successfully");
-
-                                                                        } ///checking total equal to 100
-                                                                        else {
-                                                                            alert("Total of percentages must equal 100");
-                                                                        }
-
-                                                                    }
-
-                                                                    function addCountry(vCountry) {
-                                                                        $('#txtCountryName').val(vCountry);
-                                                                        $("#txtName").val("");
-                                                                        $("#txtLName").val("");
-                                                                        $("#txtSEmail1").val("");
-                                                                    }
-
-                                                                    function checkEmail() {
-
-                                                                        var email = document.getElementById('txtSEmail1');
-                                                                        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-                                                                        if (!filter.test(email.value)) {
-                                                                            alert('Please provide a valid email address');
-                                                                            email.focus;
-                                                                            return false;
-                                                                        }
-                                                                    }
-
-                                                                    function addInviteData() {
-
-                                                                        var vCountry = $("#txtCountryName").val();
-                                                                        var vtxtName = $("#txtName").val();
-                                                                        var vtxtLName = $("#txtLName").val();
-                                                                        var vtxtSEmail1 = $("#txtSEmail1").val();
-                                                                        var vTxtEContent = $("#TxtEContent").val();
-
-                                                                        //alert(vCountry + vtxtName + vtxtLName  + vtxtSEmail1 + vTxtEContent);
-                                                                        //alert(vtxtName);
-                                                                        // $("#confirmAdd").html('<img src="loaderIcon.gif" />');
-
-                                                                        if ((vtxtSEmail1 == '' || vtxtName == '' || vtxtLName == '')) {
-                                                                            alert("Fill All Fields");
-                                                                        } else {
-                                                                            $.ajax({
-                                                                                url: "Ajax_Inviteadd.asp",
-                                                                                type: "POST",
-                                                                                data: 'vCountry=' + encodeURIComponent(vCountry) + '&vtxtName=' + encodeURIComponent(vtxtName) + '&vtxtLName=' + encodeURIComponent(vtxtLName) + '&vtxtSEmail1=' + vtxtSEmail1 + '&vTxtEContent=' + encodeURIComponent(vTxtEContent) + '',
-                                                                                success: function(data) {
-                                                                                    // alert(data);			  
-                                                                                    $("#table-body").append(data);
-                                                                                    alert("Successfully Invited.");
-                                                                                },
-
-                                                                                error: function(xhr, ajaxOptions, thrownError) {
-                                                                                    alert(xhr.status);
-                                                                                    alert(thrownError);
-                                                                                    alert(xhr.responseText);
-                                                                                }
-                                                                            });
-                                                                        }
-                                                                    }
-
-                                                                    function CheckShare2019(RecNo, vListid, vSegId) {
-                                                                        var n;
-                                                                        var v2019ShareTotalValue = 0;
-                                                                        var Cmpcnt = $("#txtCmpCnt" + vListid + vSegId).val();
-                                                                        //alert(Cmpcnt);	  	  
-
-                                                                        for (i = 1; i < Cmpcnt; i++) {
-                                                                            var txtval = $("#txt" + vListid + i + "2019Percent" + vSegId).val();
-                                                                            //alert("#txt"+vListid+i+"2019Percent"+vSegId);
-                                                                            if (txtval != '') {
-
-                                                                                v2019ShareTotalValue = parseFloat(v2019ShareTotalValue) + parseFloat(txtval);
-                                                                            }
-                                                                        }
-
-
-                                                                        if (v2019ShareTotalValue <= 100) {
-                                                                            if (v2019ShareTotalValue == 100) {
-                                                                                $("#txt2019Total" + vListid + vSegId).val(v2019ShareTotalValue);
-                                                                                $("#txt2019Total" + vListid + vSegId).css("color", "black");
-                                                                            } else {
-                                                                                $("#txt2019Total" + vListid + vSegId).val(v2019ShareTotalValue);
-                                                                                $("#txt2019Total" + vListid + vSegId).css("color", "red");
-                                                                            }
-
-
-                                                                            for (i = 1; i < Cmpcnt; i++) {
-                                                                                var txtval = $("#txt" + vListid + i + "2019Percent" + vSegId).val();
-                                                                                var txtval25 = $("#txt" + vListid + i + "2025Percent" + vSegId).val();
-                                                                                if (txtval == '') {
-                                                                                    $("#txt" + vListid + i + "2019Percent" + vSegId).prop('readonly', false);
-                                                                                }
-                                                                            }
-
-                                                                        } else {
-                                                                            $("#txt2019Total" + vListid + vSegId).val(v2019ShareTotalValue);
-                                                                            $("#txt2019Total" + vListid + vSegId).css("color", "red");
-
-
-                                                                            for (i = 1; i < Cmpcnt; i++) {
-                                                                                var txtval = $("#txt" + vListid + i + "2019Percent" + vSegId).val();
-                                                                                var txtval25 = $("#txt" + vListid + i + "2025Percent" + vSegId).val();
-
-                                                                                if (txtval == '') {
-                                                                                    $("#txt" + vListid + i + "2019Percent" + vSegId).prop('readonly', true);
-                                                                                }
-                                                                            }
-
-
-                                                                        }
-                                                                        return false;
-                                                                    }
-
-                                                                    function CheckShare2025(RecNo, vListid, vSegId) {
-
-                                                                        var v2025ShareTotalValue = 0;
-                                                                        var Cmpcnt = $("#txtCmpCnt" + vListid + vSegId).val();
-
-                                                                        for (i = 1; i < Cmpcnt; i++) {
-                                                                            var txtval = $("#txt" + vListid + i + "2025Percent" + vSegId).val();
-                                                                            if (txtval != '') {
-                                                                                v2025ShareTotalValue = parseFloat(v2025ShareTotalValue) + parseFloat(txtval);
-                                                                            }
-                                                                        }
-
-
-                                                                        if (v2025ShareTotalValue <= 100) {
-                                                                            if (v2025ShareTotalValue == 100) {
-                                                                                $("#txt2025Total" + vListid + vSegId).val(v2025ShareTotalValue);
-                                                                                $("#txt2025Total" + vListid + vSegId).css("color", "black");
-                                                                            } else {
-                                                                                $("#txt2025Total" + vListid + vSegId).val(v2025ShareTotalValue);
-                                                                                $("#txt2025Total" + vListid + vSegId).css("color", "red");
-                                                                            }
-
-
-                                                                            for (i = 1; i < Cmpcnt; i++) {
-                                                                                var txtval = $("#txt" + vListid + i + "2025Percent" + vSegId).val();
-                                                                                if (txtval == '') {
-                                                                                    $("#txt" + vListid + i + "2025Percent" + vSegId).prop('readonly', false);
-                                                                                }
-                                                                            }
-
-                                                                        } else {
-                                                                            $("#txt2025Total" + vListid + vSegId).val(v2025ShareTotalValue);
-                                                                            $("#txt2025Total" + vListid + vSegId).css("color", "red");
-
-                                                                            for (i = 1; i < Cmpcnt; i++) {
-                                                                                var txtval = $("#txt" + vListid + i + "2025Percent" + vSegId).val();
-                                                                                if (txtval == '') {
-                                                                                    $("#txt" + vListid + i + "2025Percent" + vSegId).prop('readonly', true);
-                                                                                }
-                                                                            }
-
-                                                                        }
-                                                                        //alert(v2019ShareTotalValue);
-                                                                        return false;
-
-                                                                    }
-
-                                                                </script>
-
-                                                                <!--GET COMPANIES FORM THE REPORT-->
-
-
-                                                                <p><font class="car" face="arial" style="color:#000000;" size="2"></font></p><font class="car" face="arial" style="color:#000000;" size="2">
-							
-							
-							<form name="frmadd" method="post" action="DataAnalyticsFeedback1.asp?code=MCP-1109">
-							<p><button type="submit" class="button1" id="btnEqsubmit" name="btnEqsubmit" value="SUBMIT" style="display:block; margin:0 auto !important;float:none; font-weight:bold; font-size:14px;color:white;padding:10px;" onsubmit="return CheckAddData();">SUBMIT</button></p>
-							</form>
-	  </font></div><font class="car" face="arial" style="color:#000000;" size="2">
-      <!-- 960 Container / End --> 
-    </font></div><font class="car" face="arial" style="color:#000000;" size="2">
-    <!-- Page Content / End --> 
-  </font></div><font class="car" face="arial" style="color:#000000;" size="2">
-  <!-- Content / End --> 
-</font></div><font class="car" face="arial" style="color:#000000;" size="2">
-<!-- Wrapper / End --> 
-
-<!-- Footer
-================================================== --> 
-
-</font></div><font class="car" face="arial" style="color:#000000;" size="2">
-</font></div>
-                                        <!-- Wrapper / End --><font class="car" face="arial" style="color:#000000;" size="2">
-
-
-
-
-
-                </font></div><font class="car" face="arial" style="color:#000000;" size="2">
+                            <font class="car" face="arial" style="color:#000000;" size="2">
             </font></div><font class="car" face="arial" style="color:#000000;" size="2">
       
 
@@ -633,14 +238,14 @@
 
 
 
-                    </div>
-
-                </main>
-                <!---End: Main Content--->
-                <!---- END : CONTENT SSECTION ---->
-            </div>
-            <!---CONTAINER END--->
         </div>
+
+        </main>
+        <!---End: Main Content--->
+        <!---- END : CONTENT SSECTION ---->
+    </div>
+    <!---CONTAINER END--->
+    </div>
     </div>
     <!-- Footer
 ================================================== -->
