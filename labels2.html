@@ -57,6 +57,7 @@
         <div class="page-content">
             <div class="container">
                 <div class="row mb-0">
+                    <h3 class="text-center bg-dark text-white p-1">L1: WITH COMPANY LOGO</h3>
 
                     <div id="label_container" class="bg-white border-bottom  border-top cards mb-2 pb-1 ">
 
@@ -110,6 +111,71 @@
 
                         </div>
                     </div>
+
+
+                    <br/>
+                    <br/>
+
+                    <h3 class="text-center bg-dark text-white p-1">L2: WITH COMPANY LOGO</h3>
+
+                    <div id="label_container" class="bg-white border-bottom  border-top cards mb-2 pb-1 ">
+
+                        <div class="top_block mt-3 ">
+                            <h3 class="font-weight-bold  mb-1 pb-2  text-center"> SRINIVAS OBILI</h3>
+                        </div>
+                        <hr class="m-0 p-1">
+
+                        <div class="label_middle_block d-flex text-center">
+                            <div class="  d-flex flex-row flex-md-row position-relative align-content-center w-100">
+
+                                <div class="mb-1 w-50">
+                                    <div class="d-flex justify-content-end">
+                                        <div class="img-block">
+                                            <div class="w-100 h-100 bg-danger d-flex justify-content-center align-items-center" style="overflow: hidden">
+                                                <img src="https://marketglass.com/uploads/images/7/h/j/3/z/ibm.png" class="img-fluid"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-left   label_aside w-50">
+                                    <h4 class="text-dark mb-1 p-0 " id="influncer_desig">Tech Lead/Developer Analyst</h4>
+                                    <h4 class="text-dark mb-1 p-0 mx-0 px-0" id="influncer_company">Global Industry Analysts, Inc.</h4>
+                                    <h4 class="text-dark mb-1 p-0 mx-0 px-0">Rank: Top 1%</h4>
+                                    <h4 class="mb-0 d-flex  columns px-0 mr-2 ml-0 ">Influence:<i class="star_rating"> 
+                 <img src="https://bojjapusrinivas.github.io/report_design/images/beer/star_rating_2.0.jpg" class="img-fluid"></i>
+                </h4>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="label_bottom_block d-flex text-center">
+                            <div class="  d-flex flex-row flex-md-row position-relative align-content-center w-100">
+                                <div class="mb-1 w-50">
+                                    <div class="d-flex justify-content-end">
+                                        <div>
+                                            <h4>Expert Pool:211750&nbsp;</h4>
+                                            <h4>Competition: 1777</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-1 w-50 label_aside">
+                                    <div class="d-flex text-left ">
+                                        <div>
+                                            <h4>Projects:56</h4>
+                                            <h4>Eco:Hybrid Cloud & Edge</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <br/>
+                    <br/>
+
+
                 </div>
             </div>
         </div>
@@ -131,6 +197,12 @@
 
             $('#influncer_desig').addClass('textlimited');
             $('#influncer_company').addClass('textlimited');
+            $(function() {
+                $('.textlimited').limitText({
+                    length: 25.5
+                });
+            });
+
 
         } else {
             $('#influncer_desig').removeClass('textlimited');
@@ -144,11 +216,7 @@
 
 
 <script>
-    $(function() {
-        $('.textlimited').limitText({
-            length: 25.5
-        });
-    });
+
 
 </script>
 
