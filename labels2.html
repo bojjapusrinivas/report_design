@@ -125,21 +125,19 @@
 <script src="js/limit.text.js"></script>
 
 <script>
-    $(document).ready(function() {
-        $(window).on('onload', function() {
-            var win = $(this);
-            if (win.width() < 479) {
+    $(window).on('load', function() {
+        var win = $(this);
+        if (win.width() < 479) {
 
-                $('#influncer_desig').addClass('textlimited');
-                $('#influncer_company').addClass('textlimited');
+            $('#influncer_desig').addClass('textlimited');
+            $('#influncer_company').addClass('textlimited');
 
-            } else {
-                $('#influncer_desig').removeClass('textlimited');
-                $('#influncer_company').removeClass('textlimited');
-            }
+        } else {
+            $('#influncer_desig').removeClass('textlimited');
+            $('#influncer_company').removeClass('textlimited');
+        }
 
-        });
-    })
+    });
 
 </script>
 
