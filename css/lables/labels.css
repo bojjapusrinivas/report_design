@@ -29,12 +29,16 @@
     display: block;
 }
 #label_container .img-block {
-    width: 90px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     align-items: center;
     padding: 5px;
     overflow: hidden;
-    margin-right: 23px;
+    margin-right: 25px;
+    margin-top: -6px;
+}
+#label_container .img-block.l4 {
+    margin-right: 0px;
 }
 #label_container h3 {
     color: #e37038 !important;
@@ -66,7 +70,7 @@
     }
     #label_container .img-block {
         width: 80px;
-        height: 60px;
+        height: 76px;
         margin-right: 15px;
     }
 }
