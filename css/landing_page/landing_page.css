@@ -29,6 +29,11 @@
 #report_info_table h3 {
     font-size: 14px;
 }
+.collapse_body_frame {
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: none
+}
 
 /*---REPORT TOP BUTTON---*/
 
@@ -39,6 +44,7 @@
     font-weight: 600 !important;
     color: #000;
     margin: 2px !important;
+    border: none;
 }
 .btn_type_02 {
     border: none !important;
@@ -48,6 +54,7 @@
     color: #fff !important;
     width: 150px;
     margin: 2px !important;
+    border: none;
 }
 .btn_type_02:hover {
     background: #074073;
