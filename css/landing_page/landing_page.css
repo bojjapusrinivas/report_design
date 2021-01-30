@@ -32,7 +32,7 @@
 .collapse_body_frame {
     height: 500px;
     overflow-y: scroll;
-    overflow-x: none
+    overflow-x: hidden;
 }
 
 /*---REPORT TOP BUTTON---*/
@@ -120,10 +120,38 @@
  report_page_executive_engagement
 =================================*/
 
+#landing_page #label_container h4 {
+    font-size: 14px;
+}
+#landing_page .label_bottom_block h4 {
+    line-height: 21px;
+}
+#landing_page .label_middle_block {
+    margin-top: 12px !important;
+}
+@media only screen and (max-width: 767px) {
+    #landing_page .label_bottom_block h4 {
+        margin-bottom: 0px
+    }
+}
+#report_page_executive_engagement .b-tooltip-content {
+    font-size: 10px;
+    line-height: 10px !important;
+    padding: 3px !important;
+}
+#report_page_executive_engagement h3 {
+    font-size: 15px !important;
+    line-height: normal;
+}
 @media only screen and (max-width: 767px) {
     #report_page_executive_engagement h3 {
         font-size: 13px !important;
         line-height: normal;
+    }
+    #report_page_executive_engagement .b-tooltip-content {
+        font-size: 12px;
+        line-height: 15px !important;
+        padding: 3px !important;
     }
     /*---------------------
  DATA POOL NUMBER COUNT
@@ -239,6 +267,16 @@
     }
     #report_page #footer-bottom {
         display: none !important;
+    }
+}
+#landing_page .report_lable {
+    border-right: rgba(0, 0, 0, 0.15) solid 1px;
+    border-bottom: rgba(0, 0, 0, 0.15) solid 0px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #landing_page .report_lable {
+        border-right: rgba(0, 0, 0, 0.15) solid 0px;
+        border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
     }
 }
 

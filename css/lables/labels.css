@@ -62,22 +62,6 @@
 .label_bottom_block {
     margin-top: 2px;
 }
-#landing_page .label_bottom_block h4 {
-    line-height: 21px;
-}
-#landing_page .label_middle_block {
-    margin-top: 12px !important;
-}
-#landing_page .report_lable {
-    border-right: rgba(0, 0, 0, 0.15) solid 1px;
-    border-bottom: rgba(0, 0, 0, 0.15) solid 0px;
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-    #landing_page .report_lable {
-        border-right: rgba(0, 0, 0, 0.15) solid 0px;
-        border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
-    }
-}
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     #label_container h4 {
         font-size: 12px;
@@ -95,7 +79,7 @@
 }
 @media only screen and (min-width: 300px) and (max-width: 479px) {
     #label_container h4 {
-        font-size: 11px;
+        font-size: 11px !important;
         line-height: 14px;
     }
     #label_container h3 {

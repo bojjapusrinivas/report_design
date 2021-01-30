@@ -2151,6 +2151,22 @@
         margin-top: 10px;
     }
 }
+.site_tag_line {
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center
+}
+@media only screen and (max-width:767px) and (min-width:480px) {
+    .site_tag_line {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width:487px) and (min-width:320px) {
+    .site_tag_line {
+        font-size: 10px;
+    }
+}
 
 /*=====================
    LATEST REPORT TITLE
@@ -2653,7 +2669,7 @@ textarea::-webkit-input-placeholder {
 .guest {
     width: 52%;
     float: left;
-    font-size: 13px;
+    font-size: 10px;
 }
 .mobile_text_hide {
     display: inline;
@@ -2699,7 +2715,7 @@ textarea::-webkit-input-placeholder {
     border-radius: 5px;
     color: #333;
     margin: 0 2px;
-    font-size: 13px;
+    font-size: 10px;
 }
 .log_reg li {
     display: block;
@@ -2754,10 +2770,10 @@ textarea::-webkit-input-placeholder {
         display: block;
     }
     .logo_block {
-        justify-content: flex-start;
-        -webkit-justify-content: flex-start;
-        -moz-justify-content: flex-start;
-        -o-justify-content: flex-start;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -o-justify-content: center;
     }
 }
 @media only screen and (min-width: 300px) and (max-width: 487px) {
@@ -3536,7 +3552,7 @@ cart_purchase {
         border-radius: 5px;
         color: #333;
         margin: 0 5px;
-        font-size: 13px;
+        font-size: 10px;
     }
     .top-search input {
         width: 130px;
@@ -3786,7 +3802,7 @@ cart_purchase {
         border-radius: 5px;
         color: #333;
         margin: 0 1px;
-        font-size: 13px;
+        font-size: 10px;
     }
     /*=============================
 			Header

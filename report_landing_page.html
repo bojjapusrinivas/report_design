@@ -65,6 +65,7 @@
     <link rel="stylesheet" href="css/header_footer/header_footer.css" async>
     <link rel="stylesheet" href="css/landing_page/landing_page.css" ansyc>
     <link rel="stylesheet" href="css/lables/labels.css" ansyc>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
 
     <style>
@@ -75,6 +76,14 @@
             margin-left: 0px;
             padding-left: 0px;
             font-size: 14px;
+        }
+        
+        .contact-details-alt li a {
+            font-size: 11px !important;
+        }
+        
+        .contact-details-alt li {
+            padding: 0 2px !important;
         }
 
     </style>
@@ -109,7 +118,7 @@
                          </div-->
                     <div class="logo_text px-4">
 
-                        <img src="https://www.strategyr.com/images/strategyr_logo.svg" class="strategyrR_logo">
+                        <img src="images/strategyr_logo.svg" class="strategyrR_logo">
 
                     </div>
                 </div>
@@ -117,16 +126,20 @@
 
             </div>
 
+            <div class="row site_tag_line mx-4 ">
+                StrategyR is a trade mark of Global Industry Analysts, Inc. USA
+            </div>
+
         </header>
         <!---HEADER / END--->
         <!----Nav / start--->
-        <div class=" border-bottom pb-3">
+        <div class=" border-bottom pb-sm-2 pb-xl-3 pb-3">
             <div id="gia_nav_new">
                 <nav id="navigation" class="style-1 py-2 ">
                     <ul class="menu" id="responsive">
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">PROFILE</a></li>
-                        <li><a href="#">MARKETGLASS</a></li>
+                        <li><a href="#">MARKETGLASS<sup><small style="font-size: 10px">TM</small></sup></a></li>
                         <li><a href="#">CX</a></li>
                         <li><a href="#">PANELS</a></li>
                         <li class="insider_desktop"><a href="#">INSIDER</a></li>
@@ -181,32 +194,31 @@
                 <!---BEGIN:POOLED DATA & INFOGRAPHIC--->
                 <div class="row my-0 ">
                     <div class="d-flex  flex-sm-column flex-md-column flex-lg-row flex-xl-row justify-content-around justify-content-md-center">
+                        <!-- label start-->
 
-                        <!--BEGIN:LABLE-->
-
-                        <div class=" mx-0 px-0 w-xl-50 w-lg-50  w-sm-100 w-md-100 d-flex justify-content-start justify-content-md-center report_lable" style="margin-top: 7px;">
+                        <div class=" mx-0 px-0 w-xl-40 w-lg-40  w-sm-100 w-md-100 d-flex justify-content-start justify-content-md-center report_lable" style="margin-top: 10px;">
 
                             <div id="label_container" class="bg-white    w-100 mb-2 pb-1  ">
 
                                 <div class="top_block mt-0 ">
-                                    <h3 class="font-weight-bold  pb-2  text-center"> JACK CHERKAS CHERKAS</h3>
+                                    <h3 class="font-weight-bold  pb-2  text-center"> SRINIVAS&nbsp;OBILI</h3>
                                 </div>
 
 
-                                <div class="label_middle_block d-flex text-center mt-2">
+                                <div class="label_middle_block d-flex text-center mt-3">
                                     <div class="  d-flex flex-row flex-md-row position-relative align-content-center w-100">
 
                                         <div class="mb-1 w-50">
                                             <div class="d-flex justify-content-end">
                                                 <div class="img-block">
-                                                    <div class="w-100 h-100 bg-danger d-flex justify-content-center align-items-center" style="overflow: hidden">
-                                                        <img src="images/beer/pro_pic.jpg" class="img-fluid"> </div>
+                                                    <div class="w-100 h-100  d-flex justify-content-center align-items-center" style="overflow: hidden">
+                                                        <img src="https://www.strategyr.com/GIA_Images/images/log_icon.png" class="img-fluid"> </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="text-left   label_aside w-50">
-                                            <h4 class="text-dark mb-1 p-0 texttrim ">Executive Vice President</h4>
-                                            <h4 class="text-dark mb-1 p-0 mx-0 px-0 texttrim">IBM</h4>
+                                            <h4 class="text-dark mb-1 p-0 textlimited ">Tech Lead/Developer ...</h4>
+                                            <h4 class="text-dark mb-1 p-0 mx-0 px-0 textlimited">Global Industry ...</h4>
                                             <h4 class="text-dark mb-1 p-0 mx-0 px-0">Rank: Top 1%</h4>
                                             <h4 class="mb-0 d-flex  columns px-0 mr-2 ml-0 ">Influence:<i class="star_rating"> 
                  <img src="https://bojjapusrinivas.github.io/report_design/images/beer/star_rating_2.0.jpg" class="img-fluid"></i>
@@ -229,8 +241,8 @@
                                         <div class="mb-1 w-50 label_aside">
                                             <div class="d-flex text-left ">
                                                 <div>
-                                                    <h4>Projects: 56</h4>
-                                                    <h4 class="texttrim">Eco: Hybrid Cloud & Edge</h4>
+                                                    <h4 c>Projects: 56</h4>
+                                                    <h4 class="textlimited">Eco: Hybrid Cloud &amp; Edge</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,61 +252,88 @@
                             </div>
 
                         </div>
-                        <!--END:LABLE-->
 
 
 
+
+
+                        <!--label end-->
                         <!--BEGIN:POLLED DATA BLOCK--->
-                        <div id="report_page_executive_engagement" class=" mx-0 px-0 w-xl-50 w-lg-50  w-sm-100 w-md-100">
+
+                        <div id="report_page_executive_engagement" class=" mx-0 px-0 w-xl-60 w-lg-60  w-sm-100 w-md-100">
                             <!---title--->
                             <div class=" mb-1 py-1 text-center">
-                                <h3 class="text_orange font-weight-bold m-0 line-height-normal mt-0" style="color:#E37038; ">EXECUTIVE ENGAGEMENTS</h3> </div>
+                                <h3 class="text_orange font-weight-bold m-0 line-height-normal mt-1" style="color:#E37038; ">EXECUTIVE ENGAGEMENTS</h3> </div>
                             <!---poll data--->
-                            <div class="d-flex w-100 flex-row  flex-sm-wrap justify-content-around">
+                            <div class="d-flex w-100 flex-row  flex-sm-wrap justify-content-around mt-1">
                                 <!--- DATA-BLOCK-1--->
-                                <div class="w-md-25 w-lg-25 w-xl-25  w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
+                                <div class="w-md-15  w-lg-15 w-xl-15  w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
                                     <!---img block--->
                                     <div class="mx-1 my-0 block w-100"> <img src="https://www.strategyr.com/chat_page_icon/doman-01.svg" class="w-25 block mx-auto"> </div>
                                     <!---pool values-->
                                     <div class="mx-1 my-0">
                                         <h3 class="py-0 my-0 line-height-normal"><small>OUTREACH</small></h3> </div>
-                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">7289</span> </div>
+                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">396</span> </div>
                                     <div class="b-tooltip-content border shadow bg-light line-height-normal h-100 d-flex align-items-center justify-content-center">
                                         Number of executives repeatedly engaged by snail &amp; email outreach
                                     </div>
                                 </div>
                                 <!--- DATA-BLOCK-1--->
-                                <div class="w-md-25 w-lg-25 w-xl-25 w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
+                                <div class="w-md-15  w-lg-15 w-xl-15 w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
                                     <!---img block--->
                                     <div class="mx-1 my-0 block w-100"> <img src="https://www.strategyr.com/chat_page_icon/unique-01.svg" class="w-25 block mx-auto"> </div>
                                     <!---pool values-->
                                     <div class="mx-1 my-0">
                                         <h3 class="py-0 my-0 line-height-normal"><small>INTERACTIONS</small></h3> </div>
-                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">1022</span> </div>
+                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">79</span> </div>
                                     <div class="b-tooltip-content border shadow bg-light line-height-normal h-100 d-flex align-items-center text-center justify-content-center">
                                         Interactions with Platform &amp; by Email
                                     </div>
                                 </div>
                                 <!--- DATA-BLOCK-3--->
-                                <div class="w-md-25 w-lg-25 w-xl-25 w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
+                                <div class="w-md-15  w-lg-15 w-xl-15  w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip participants_block">
                                     <!---img block--->
                                     <div class="mx-1 my-0 block w-100"> <img src="https://www.strategyr.com/chat_page_icon/participation-01.svg" class="w-25 block mx-auto"> </div>
                                     <!---pool values-->
                                     <div class="mx-1 my-0">
                                         <h3 class="py-0 my-0 line-height-normal"><small>PARTICIPANTS</small></h3> </div>
-                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">219</span> </div>
+                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">16</span> </div>
                                     <div class="b-tooltip-content border shadow bg-light line-height-normal h-100 d-flex align-items-center text-center justify-content-center">
                                         Unique # Participated
                                     </div>
                                 </div>
                                 <!--- DATA-BLOCK-4--->
-                                <div class="w-md-25 w-lg-25 w-xl-25 w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
+                                <div class="w-md-15  w-lg-15 w-xl-15 w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
                                     <!---img block--->
                                     <div class="mx-1 my-0 block w-100"> <img src="https://www.strategyr.com/chat_page_icon/validation-01.svg" class="w-25 block mx-auto"> </div>
                                     <!---pool values-->
                                     <div class="mx-1 my-0 ">
                                         <h3 class="py-0 my-0 line-height-normal"><small>VALIDATIONS</small></h3> </div>
-                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">99</span> </div>
+                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">7</span> </div>
+                                    <div class="b-tooltip-content border shadow bg-light line-height-normal h-100 d-flex align-items-center text-center justify-content-center">
+                                        Responses Validated<span class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <!--- DATA-BLOCK-4--->
+                                <div class="w-md-15  w-lg-15 w-xl-15 w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
+                                    <!---img block--->
+                                    <div class="mx-1 my-0 block w-100"> <img src="https://www.strategyr.com/chat_page_icon/Competitors.svg" class="w-25 block mx-auto"> </div>
+                                    <!---pool values-->
+                                    <div class="mx-1 my-0 ">
+                                        <h3 class="py-0 my-0 line-height-normal"><small>COMPETITORS</small></h3> </div>
+                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">567</span> </div>
+                                    <div class="b-tooltip-content border shadow bg-light line-height-normal h-100 d-flex align-items-center text-center justify-content-center">
+                                        Responses Validated<span class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <!--- DATA-BLOCK-4--->
+                                <div class="w-md-15  w-lg-15 w-xl-15 w-sm-40 text-center  my-sm-3 mb-0 mb-md-3 b-tooltip ">
+                                    <!---img block--->
+                                    <div class="mx-1 my-0 block w-100"> <img src="https://www.strategyr.com/chat_page_icon/brands.svg" class="w-25 block mx-auto"> </div>
+                                    <!---pool values-->
+                                    <div class="mx-1 my-0 ">
+                                        <h3 class="py-0 my-0 line-height-normal"><small>BRANDS</small></h3> </div>
+                                    <div id="shiva"> <span class="count py-1 text-primary  text-center ">895</span> </div>
                                     <div class="b-tooltip-content border shadow bg-light line-height-normal h-100 d-flex align-items-center text-center justify-content-center">
                                         Responses Validated<span class="text-danger">*</span>
                                     </div>
@@ -305,7 +344,8 @@
 
 
                             <div class="w-100">
-                                <h5 class="font-italic px-3 text-black-50 line-height-normal"> <span class="text-danger">*</span> Login for a full stack data experience</h5> </div>
+                                <h5 class="font-italic px-3 text-black-50 line-height-normal font-weight-bold pb-2"> 
+                                    <span class="text-danger">*</span> <strong><a href="" class="font-weight-bold">Login</a> for a full stack data experience</strong></h5> </div>
                             <!--- data values--->
                             <div class="d-flex  text-center  flex-row" id="report_info_table">
                                 <!---Date-->
@@ -315,23 +355,26 @@
                                 <!---TABLES-->
                                 <div class="w-md-50 w-100  mb-0 mb-md-2 my-sm-3 mx-auto">
                                     <h4 class="py-0 my-0 text-black-50 line-height-normal"> TABLES </h4>
-                                    <h3 class="font-weight-bold py-0 my-0">297</h3> </div>
+                                    <h3 class="font-weight-bold py-0 my-0">183</h3> </div>
                                 <!---PAGES-->
                                 <div class="w-md-50 w-100  mb-0 mb-md-2 my-sm-3 mx-auto">
                                     <h4 class="py-0 my-0 text-black-50 line-height-normal"> PAGES  </h4>
-                                    <h3 class="font-weight-bold py-0 my-0">622</h3> </div>
+                                    <h3 class="font-weight-bold py-0 my-0">354</h3> </div>
                                 <!---EDITON-->
                                 <div class="w-md-50 w-100  mb-0 mb-md-2  my-sm-3 mx-auto">
                                     <h4 class="py-0 my-0 text-black-50 line-height-normal"> EDITION </h4>
-                                    <h3 class="font-weight-bold py-0 my-0">19</h3> </div>
+                                    <h3 class="font-weight-bold py-0 my-0">20</h3> </div>
                                 <!---PRICE-->
                                 <div class="w-md-50 w-100   mb-0 mb-md-2 my-sm-3 mx-auto">
                                     <h4 class="py-0 my-0 text-black-50 line-height-normal">  PRICE  </h4>
-                                    <h3 class="font-weight-bold py-0 my-0">USD $5600</h3> </div>
+                                    <h3 class="font-weight-bold py-0 my-0">USD $5450</h3> </div>
                             </div>
                         </div>
+
                         <!--END:POLLED DATA BLOCK--->
                         <!--BEGIN:POLLED DATA BLOCK--->
+
+
 
                     </div>
                 </div>
@@ -341,24 +384,48 @@
                     <div id="main">
                         <span class="d-flex flex-md-row flex-sm-row flex-wrap  justify-content-center">
                                    
-                            <button class=" rounded-0 p-2 shadow btn_type_02 " type="button" data-toggle="collapse" data-target="#highlights" aria-expanded="flase" aria-controls="collapseExample">
+                                   
+                                   
+                            <!---button class=" rounded-0 p-2 shadow btn_type_02 " type="button" id="highlights_btn" data-toggle="collapse" data-target="#highlights"   aria-expanded="flase" aria-controls="collapseExample">
                                 HIGHLIGHTS 
                             </button>
                                                   
-                            <button class=" rounded-0 p-2 shadow btn_type_02 " type="button" data-toggle="collapse" data-target="#preview" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class=" rounded-0 p-2 shadow btn_type_02 "  id="preview_btn" type="button" data-toggle="collapse" data-target="#preview" aria-expanded="flase" aria-controls="collapseExample">
                                 PREVIEW REPORT
                             </button>
-                            <button class=" p-2 rounded-0  shadow   btn_type_02 " type="button" data-toggle="collapse" data-target="#differentiatiors" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class=" p-2 rounded-0  shadow   btn_type_02 "  id="differentiators_btn" type="button" data-toggle="collapse" data-target="#differentiatiors" aria-expanded="flase" aria-controls="collapseExample">
                                 DIFFERENTIATORS
                             </button>
-                            <button class=" rounded-0 p-2 shadow   btn_type_02  " type="button" data-toggle="collapse" data-target="#expert_panel" aria-expanded="flase" aria-controls="collapseExample">
+                            <button class=" rounded-0 p-2 shadow   btn_type_02  "  id="expert_btn" type="button" data-toggle="collapse" data-target="#expert_panel" aria-expanded="flase" aria-controls="collapseExample">
                                EXPERT PANEL
                             </button>
                             
                             <button type="submit" id="btnsubmit" name="btnsubmit" class=" rounded-0 p-2 shadow btn_type_02" data-toggle="collapse" data-target="buy_report" aria-expanded="flase" aria-controls="collapseExample" onclick="return submittocart1();" value="ADD TO CART">
 							
                                BUY REPORT <i class="fa fa-cart-plus" aria-hidden="true"></i>
+							  </button--> 
+                   
+                   
+                   
+                    <button class=" rounded-0 p-2 shadow btn_type_02 " type="button" id="highlights_btn"   aria-expanded="flase" aria-controls="collapseExample">
+                                HIGHLIGHTS 
+                            </button>
+                                                  
+                            <button class=" rounded-0 p-2 shadow btn_type_02 "  id="preview_btn"  aria-expanded="flase" aria-controls="collapseExample">
+                                PREVIEW REPORT
+                            </button>
+                            <button class=" p-2 rounded-0  shadow   btn_type_02 "  id="differentiators_btn" type="button" aria-expanded="flase" aria-controls="collapseExample">
+                                DIFFERENTIATORS
+                            </button>
+                            <!--button class=" rounded-0 p-2 shadow   btn_type_02  "  id="expert_btn" type="button"  aria-expanded="flase" aria-controls="collapseExample">
+                               EXPERT PANEL
+                            </button-->
+                            
+                            <button type="submit" id="btnsubmit" name="btnsubmit" class="rounded-0 p-2 shadow btn_type_02"  aria-expanded="flase" aria-controls="collapseExample" onclick="return submittocart1();" value="ADD TO CART">
+							
+                               BUY REPORT <i class="fa fa-cart-plus" aria-hidden="true"></i>
 							  </button> 
+                   
                     </span>
 
 
@@ -1612,27 +1679,122 @@
 
 
 
-
         </div>
         <!---CONTAINER END--->
+        <!-- Footer
+================================================== -->
+        <!---Footer / Start--->
+        <footer id="footer " class="bg-white border-top ">
+            <!-- 960 Container -->
+            <div class="container mt-3 ">
+
+                <!-- Contact Details -->
+                <div class="four columns ">
+                    <ul class="w-100 d-flex justify-content-center social-icons Social_icons m-0 py-1">
+                        <!--<li ><a href="https://medium.com/@strategyr " target="new "><img src="\images\social\medium.jpg " style="width:24px;height:auto; " title="Medium "/></a></li>-->
+                        <li>
+                            <a href="https://www.linkedin.com/company/global-industry-analysts-inc./?trk=tyah " target="new "><img src="https://www.strategyr.com/GIA_Images/images/social/linkedin.jpg " style="width:24px;height:auto; " title="Linkedin "></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/MarketBytes " target="new "><img src="https://www.strategyr.com/GIA_Images/images/social/twitter.jpg " style="width:24px;height:auto; " title="Twitter "></a>
+                        </li>
+
+
+
+                    </ul>
+
+
+
+
+                </div>
+
+                <div class="seven columns ">
+                    <div class="footer_nav">
+                        <ul class="d-flex justify-content-center flex-wrap flex-md-wrap flex-sm-wrap  contact-details-alt ">
+                            <li><a href="#ex1" rel="modal:open"> Trade Marks</a></li>
+                            <li><span style="color:black ">|</span></li>
+                            <li><a href="javascript:OpenWin(1) "> Disclaimer</a></li>
+                            <li><span style="color:black ">|</span></li>
+                            <li><a href="javascript:OpenWin(2) "> Privacy Policy</a></li>
+                            <li><span style="color:black ">|</span></li>
+                            <li><a href="contact.asp "> Contact Us</a></li>
+                            <li><span style="color:black ">|</span></li>
+                            <li><a href="feedback.asp "> Feedback</a></li>
+                            <li><span style="color:black ">|</span></li>
+                            <li><a href="Copycats.asp "> Buyer Alert</a></li>
+                            <!--    <li>|</li>
+                <li><a href="careers.asp "> Careers</a></li>
+				 <li>|</li>
+               <li><a href="clientlist.asp "> Clients</a></li>
+				 <li>|</li>
+                <li><a href="blog/blog.asp "> Blog</a></li>-->
+                            <!--<li>|</li>
+				 <li><script src='//platform.linkedin.com/in.js' type='text/javascript'>  lang: en_US </script><script type='IN/Share' data-url='https://www.StrategyR.com'></script></li>-->
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- Twitter -->
+                <div class="five columns text-center pt-1 ">
+
+                    <div>
+
+                        <span style="color:black !important; font-size: 11px ">General queries: Info411@StrategyR.com</span>
+
+                    </div>
+
+                </div>
+                <!-- 960 Container / End -->
+
+            </div>
+        </footer>
+        <footer id="footer-bottom ">
+
+            <div id="wrapper " class="border-top py-2 ">
+                <!-- 960 Container -->
+                <div class="container ">
+
+                    <!-- Copyrights -->
+                    <div class="sixteen columns ">
+                        <div class="copyright text-center text-dark">
+                            <small> © Global Industry Analysts, Inc., USA. All Rights Reserved.</small>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- 960 Container / End -->
+
+        </footer>
+
+
+
     </div>
     <!---END:PAGE CONTENT--->
-    <!-- Footer
-================================================== -->
-    <!-- Footer / Start -->
-    <footer id="footer " class="bg-white py-1">
-    </footer>
+
     <!=======================================================
                      MODEL
 ======================================================>
     <!----scripts---->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="scripts/jquery.flexslider.js "></script>
     <script src="scripts/jquery.selectnav.js "></script>
     <script src="scripts/jquery.modernizr.js "></script>
     <script src="scripts/bootstrap.bundle.js "></script>
     <script src="js/collapse_plugin/jquery.collapsable.js"></script>
     <script src="js/collapse_plugin/ie8-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+
+
+    <div id="ex1" class="modal">
+        <h3 class="bg-gia-primary text-white text-center font-weight-bold font-size-15">TRADE MARK</h3>
+        <p class=" p-2">StrategyR, MarketGlass, Influencer Driven, Influencer Powered, Peer Acumen, Enterprise Acumen, BizAcumen, Industry Acumen, are Trade Marks and Brands owned by Global Industry Analysts, Inc., A California Corporation. All Rights Reserved.</p>
+    </div>
+
+
 
     <script>
         //----ACCORDION----//
@@ -1649,6 +1811,40 @@
                 }
             });
         }
+
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+
+            $("#highlights_btn").click(function() {
+
+                $("#highlights").toggle();
+                $("#preview, #differentiatiors, #expert_panel").css("display", "none")
+
+            });
+
+            $("#preview_btn").click(function() {
+                $("#preview").toggle();
+                $("#highlights, #differentiatiors, #expert_panel").css("display", "none")
+
+            });
+
+
+            $("#differentiators_btn").click(function() {
+                $("#differentiatiors").toggle();
+                $("#highlights, #preview, #expert_panel").css("display", "none")
+
+            });
+
+
+            $("#expert_btn").click(function() {
+                $("#expert_panel").toggle();
+                $("#highlights, #preview, #differentiatiors").css("display", "none")
+
+            });
+        });
 
     </script>
 

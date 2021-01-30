@@ -17,6 +17,11 @@
                                 position: relative;
                                 display: flex;
                             }
+                            @media only screen and (max-width: 959px) and (min-width: 300px) {
+                                #gia_nav_new {
+                                    margin-bottom: 5px;
+                                }
+                            }
                             .ind_life_logo {
                                 right: 30px;
                                 top: -30px;
@@ -110,7 +115,7 @@
                                     font-size: 13px;
                                 }
                                 .ind_life_logo {
-                                    top: -53px;
+                                    top: -93px;
                                     position: absolute;
                                     right: 30px;
                                 }
