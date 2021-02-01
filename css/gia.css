@@ -2197,7 +2197,6 @@ cart_purchase {
 @media only screen and (max-width:767px) and (min-width:480px) {
     .site_tag_line {
         font-size: 10.5px;
-        display: none;
     }
 }
 @media only screen and (max-width:487px) and (min-width:320px) {
@@ -2344,6 +2343,7 @@ cart_purchase {
 @media only screen and (max-width: 759px) {
     .long_search_box .search-container form .search-field {
         padding: 18px;
+        box-shadow: none !important;
     }
 }
 .long_search_box .search-container form .search-btn {
@@ -4798,6 +4798,7 @@ cart_purchase {
     margin-bottom: 20px;
     width: 90%;
     margin: 0 auto !important;
+    margin-top: 0px !important;
 }
 .long_search_box .search-container {
     float: none;
@@ -4809,22 +4810,21 @@ cart_purchase {
 }
 .long_search_box .search-container form .drp_sec {
     position: absolute;
-    padding: 0;
+    padding: 7px 3px;
     top: 1px;
     right: 1px;
     background-color: #dbd9d9;
     border-radius: 0 2px 2px 0px;
-    height: 43.5px;
+    height: 33px;
     margin-top: 0px;
-    width: 140px !important;
+    width: 240px !important;
 }
 .long_search_box .search-container form .search-field {
     width: 100%;
     padding: 13px;
     box-sizing: border-box;
-    box-shadow: -2px 7px 6px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: -2px 7px 6px rgba(0, 0, 0, 0.3);
-    border: rgba(0, 0, 0, 0.5) solid 1px
+    border: rgba(0, 0, 0, 0.5) solid 1px;
+    height: 35px;
 }
 .long_search_box .search-container form .search-btn {
     position: relative;
@@ -4844,7 +4844,7 @@ cart_purchase {
     margin-top: 7px;
 }
 .long_search_box .search-container form .search-btn2 {
-    margin-top: -16px !important;
+    margin-top: -33px !important;
 }
 .long_search_box .search-container form .search-btn:hover {
     background: url(../images/search@2x.png) center center no-repeat;
@@ -4875,6 +4875,7 @@ cart_purchase {
         margin-bottom: 20px;
         width: 100%;
         margin: 0 auto !important;
+        margin-top: -24px !important;
     }
 }
 @media only screen and (min-width:768) (max-width: 959px) {
@@ -4899,8 +4900,22 @@ cart_purchase {
         height: 39.5px;
         background-size: 25px;
     }
+    .long_search_box .search-container form .drp_sec {
+        position: relative;
+        padding: 7px 3px;
+        margin-top: -6px;
+        width: 342px !important;
+    }
 }
-@media only screen and (max-width: 759px)
+@media only screen and (max-width: 479px) {
+    .long_search_box .search-container form .drp_sec {
+        position: relative;
+        padding: 7px 3px;
+        margin-top: -6px;
+        width: 242px !important;
+    }
+}
+
 /*=====================
 	company logos
 ======================*/
