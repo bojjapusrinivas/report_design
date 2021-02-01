@@ -58,7 +58,7 @@
                             }
                             /*---HIDING SEARCH ICON FOR DESKTOP---*/
                             
-                            #gia_nav_new #navigation .menu li:nth-child(12) a {
+                            #gia_nav_new #navigation .menu li:nth-child(11) a {
                                 border-right: none;
                             }
                             #gia_nav_new #navigation .menu li.search_on_mobile {
@@ -74,7 +74,7 @@
                                 display: none
                             }
                             @media only screen and (max-width: 959px) and (min-width: 300px) {
-                                #gia_nav_new #navigation .menu li:nth-child(13) a {
+                                #gia_nav_new #navigation .menu li:nth-child(12) a {
                                     border-right: none;
                                 }
                                 #gia_nav_new #navigation #selectnav2,
@@ -115,10 +115,10 @@
                                     padding: 2px 6px;
                                     color: #000;
                                     font-weight: 600;
-                                    font-size: 13px;
+                                    font-size: 15px;
                                 }
                                 .ind_life_logo {
-                                    top: -77px;
+                                    top: -53px;
                                     position: absolute;
                                     right: 30px;
                                 }
@@ -128,7 +128,7 @@
                                     padding: 1px 3px;
                                     color: #000;
                                     font-weight: 600;
-                                    font-size: 11px;
+                                    font-size: 13px;
                                 }
                                 .ind_life_logo {
                                     display: none;
