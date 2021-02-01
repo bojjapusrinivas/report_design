@@ -184,7 +184,7 @@
         }
     }
     #report_page_executive_engagement .b-tooltip-content {
-        font-size: 10px;
+        font-size: 10px !important;
         line-height: 10px !important;
         padding: 3px !important;
     }
@@ -198,7 +198,7 @@
             line-height: normal;
         }
         #report_page_executive_engagement .b-tooltip-content {
-            font-size: 12px;
+            font-size: 12px !important;
             line-height: 15px !important;
             padding: 3px !important;
         }
@@ -318,12 +318,12 @@
             display: none !important;
         }
     }
-    #landing_page .report_lable {
+    .report_lable {
         border-right: rgba(0, 0, 0, 0.15) solid 1px;
         border-bottom: rgba(0, 0, 0, 0.15) solid 0px;
     }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-        #landing_page .report_lable {
+    @media only screen and (min-width: 768px) and (max-width: 300px) {
+        .report_lable {
             border-right: rgba(0, 0, 0, 0.15) solid 0px;
             border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
         }
@@ -882,7 +882,8 @@ ABSTRACT ACCORDION-2
 #compan_landing_page #label_container h3 {
     font-size: 20px;
 }
-#compan_landing_page #label_container .img-block {
+
+/* #compan_landing_page #label_container .img-block {
     width: 100px !important;
 }
 #compan_landing_page #label_container .label_aside {
