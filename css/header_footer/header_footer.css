@@ -34,6 +34,9 @@
                                 -webkit-display: flex;
                                 justify-content: center;
                             }
+                            #gia_nav_new #navigation .trade_mark {
+                                font-size: 10px;
+                            }
                             #gia_nav_new #navigation .menu li a {
                                 padding: 2px 10px;
                                 color: #000;
@@ -55,7 +58,7 @@
                             }
                             /*---HIDING SEARCH ICON FOR DESKTOP---*/
                             
-                            #gia_nav_new #navigation .menu li:nth-child(7) a {
+                            #gia_nav_new #navigation .menu li:nth-child(12) a {
                                 border-right: none;
                             }
                             #gia_nav_new #navigation .menu li.search_on_mobile {
@@ -71,7 +74,7 @@
                                 display: none
                             }
                             @media only screen and (max-width: 959px) and (min-width: 300px) {
-                                #gia_nav_new #navigation .menu li:nth-child(8) a {
+                                #gia_nav_new #navigation .menu li:nth-child(13) a {
                                     border-right: none;
                                 }
                                 #gia_nav_new #navigation #selectnav2,
@@ -115,7 +118,7 @@
                                     font-size: 13px;
                                 }
                                 .ind_life_logo {
-                                    top: -93px;
+                                    top: -77px;
                                     position: absolute;
                                     right: 30px;
                                 }
