@@ -4813,11 +4813,20 @@ cart_purchase {
     padding: 7px 3px;
     top: 1px;
     right: 1px;
-    background-color: #dbd9d9;
+    background-color: #fff;
     border-radius: 0 2px 2px 0px;
     height: 33px;
     margin-top: 0px;
     width: 240px !important;
+    border-left: rgba(0, 0, 0, 0.3) solid 1px;
+}
+.long_search_box .search-container form .drp_sec .d-flex.w-100 .dflex {
+    margin-left:2px !important;
+    margin-right:2px !important;
+}
+.long_search_box .search-container form .drp_sec .d-flex.w-100 .dflex #title,
+.long_search_box .search-container form .drp_sec .d-flex.w-100 .dflex #company {
+    margin-right: 0px !important;
 }
 .long_search_box .search-container form .search-field {
     width: 100%;
@@ -4833,7 +4842,7 @@ cart_purchase {
     background-size: 65% !important;
     float: right;
     width: 30px;
-    background-color: #dbd9d9;
+    background-color: #fff;
     height: 43.4px;
     cursor: pointer;
     border: none;
@@ -4905,6 +4914,10 @@ cart_purchase {
         padding: 7px 3px;
         margin-top: -6px;
         width: 342px !important;
+        border-left: rgba(0, 0, 0, 0.0) solid 0px;
+    }
+    .long_search_box .search-container form .drp_sec .d-flex.w-100 {
+        justify-content: center!important
     }
 }
 @media only screen and (max-width: 479px) {
@@ -4913,6 +4926,9 @@ cart_purchase {
         padding: 7px 3px;
         margin-top: -6px;
         width: 242px !important;
+    }
+    .long_search_box .search-container form .drp_sec .d-flex.w-100 {
+        justify-content: flex-start !important;
     }
 }
 

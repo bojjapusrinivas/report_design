@@ -274,9 +274,11 @@
     margin-bottom: 3px !important;
     line-height: normal;
 }
-#our_clients h2:before {
+
+/*#our_clients h2:before {
     display: none;
-}
+}*/
+
 
 /*====================
     MEDIA QURIS
@@ -387,12 +389,13 @@
         -ms- animation-delay: 14s !important;
         -o-animation-delay: 14s !important;
     }
-    #our_clients h2 {
+    #our_clients h2,
+    h2.latest_report {
         font-size: 16px !important;
-        margin-bottom: 3px !important;
-        text-align: left;
+        margin-bottom: 2px !important;
+        text-align: center
     }
-    #our_clients h2:before {
+    /* #our_clients h2:before {
         content: "\f0a9";
         font-size: 12px;
         color: #4c0404 !important;
@@ -401,7 +404,7 @@
         left: -10px;
         top: 7px;
         display: contents;
-    }
+    }*/
     .tracking h6 {
         font-size: 15px;
         padding: 8px 0px !important;
@@ -448,6 +451,12 @@
     }
     .data_stack_lists {
         margin-top: -11px;
+    }
+    #our_clients h2,
+    h2.latest_report {
+        font-size: 14px !important;
+        margin-bottom: 0px !important;
+        text-align: center
     }
 }
 

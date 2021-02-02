@@ -184,7 +184,7 @@
         }
     }
     #report_page_executive_engagement .b-tooltip-content {
-        font-size: 10px !important;
+        font-size: 10px;
         line-height: 10px !important;
         padding: 3px !important;
     }
@@ -198,7 +198,7 @@
             line-height: normal;
         }
         #report_page_executive_engagement .b-tooltip-content {
-            font-size: 12px !important;
+            font-size: 12px;
             line-height: 15px !important;
             padding: 3px !important;
         }
@@ -318,12 +318,12 @@
             display: none !important;
         }
     }
-    .report_lable {
+    #landing_page .report_lable {
         border-right: rgba(0, 0, 0, 0.15) solid 1px;
         border-bottom: rgba(0, 0, 0, 0.15) solid 0px;
     }
-    @media only screen and (min-width: 768px) and (max-width: 300px) {
-        .report_lable {
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        #landing_page .report_lable {
             border-right: rgba(0, 0, 0, 0.15) solid 0px;
             border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
         }
@@ -883,7 +883,7 @@ ABSTRACT ACCORDION-2
     font-size: 20px;
 }
 
-/* #compan_landing_page #label_container .img-block {
+/*#compan_landing_page #label_container .img-block {
     width: 100px !important;
 }
 #compan_landing_page #label_container .label_aside {
@@ -900,7 +900,8 @@ ABSTRACT ACCORDION-2
 #landing_page #label_container .label_bottom_block {
     width: 400px;
     margin: 0 auto;
-}
+}*/
+
 
 /*==========================
      SCROLLING DASH BOARD
@@ -918,9 +919,13 @@ ABSTRACT ACCORDION-2
     border-top: rgba(0, 0, 0, 0.2) solid 1px;
     display: block
 }
-@media only screen and (max-width:959px) and (min-width:768px) {
+@media only screen and (max-width:959px) and (min-width:300px) {
     #scrolling_dashboard h3 {
         font-size: 15px !important;
+        display: flex !important;
+        -webkit-display: flex !important;
+        justify-content: center;
+        -webkit-justify-content: center;
     }
     #scrolling_dashboard #shiva .count {
         font-size: 23px !important;
@@ -938,7 +943,7 @@ ABSTRACT ACCORDION-2
 }
 @media only screen and (max-width:767px) and (min-width:480px) {
     #scrolling_dashboard #shiva .count {
-        font-size: 23px !important;
+        font-size: 21px !important;
         width: 70%;
         margin-top: 5px !important;
         padding-top: 5px !important;
@@ -946,10 +951,16 @@ ABSTRACT ACCORDION-2
         display: block;
         margin: 0 auto !important;
     }
+    #scrolling_dashboard .d-flex.w-xl-80 {
+        flex-wrap: nowrap!important;
+    }
+    #scrolling_dashboard h3 {
+        font-size: 13px !important;
+    }
 }
 @media only screen and (max-width:479px) and (min-width:300px) {
     #scrolling_dashboard h3 {
-        font-size: 13px !important;
+        font-size: 9px !important;
     }
     #scrolling_dashboard #shiva .count {
         font-size: 19px !important;
@@ -960,10 +971,16 @@ ABSTRACT ACCORDION-2
         display: block;
         margin: 0 auto !important;
     }
+    #scrolling_dashboard .d-flex.w-xl-80 {
+        flex-wrap: nowrap!important;
+    }
     #company_page_btn .btn_type_01 {
         font-size: 11px !important;
         padding: 0px 5px 0px 0px !important;
         font-weight: bold;
         border-right: rgba(0, 0, 0, 0.2) solid 1px;
+    }
+    #scrolling_dashboard #shiva .count {
+        font-size: 16px !important;
     }
 }
