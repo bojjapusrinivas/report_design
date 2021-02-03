@@ -665,3 +665,16 @@ accordion_new .accordion_key {
         width: 280px !important;
     }
 }
+.imodule {
+    font-size: 15px;
+}
+media only screen and (max-width:380px) {
+    .imodule {
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) .right_column .six.columns {
+    width: 350px !important;
+}
+
+}
