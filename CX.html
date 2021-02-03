@@ -61,8 +61,15 @@
     <link rel='stylesheet' href="css/animate.css" async>
     <link rel='stylesheet' href="css/style.css" async>
     <link rel='stylesheet' href="css/all-ie-only.css" async>
+
     <link rel="stylesheet" href="css/header_footer/header_footer.css" async>
-    <link rel="stylesheet" href="css/landing_page/landing_page.css" async>
+
+    <link href="stylesheet" href="css/donut_chart/donut_chart.css">
+
+
+
+
+
 
 
 </head>
@@ -88,9 +95,7 @@
                          <a href="https://www.strategyr.com/default.asp"><img src="GIA_Images/images/log_icon.png" class="log_ico"/></a>
                          </div-->
                     <div class="logo_text px-4">
-
                         <img src="https://www.strategyr.com/images/strategyr_logo.svg" class="strategyrR_logo">
-
                     </div>
                 </div>
 
@@ -104,17 +109,30 @@
             <div id="gia_nav_new">
                 <nav id="navigation" class="style-1 py-2 ">
                     <ul class="menu" id="responsive">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">PROFILE</a></li>
-                        <li><a href="#">MARKETGLASS</a></li>
+                        <li class="insider_desktop"><a href="#">HOME</a></li>
+                        <li class="search_on_mobile"><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+
+                        <li class="insider_desktop"><a href="#">PROFILE</a></li>
+                        <li class="search_on_mobile"><a href="#">WE</a></li>
+
+                        <li class="insider_desktop"><a href="#">MARKETGLASS</a></li>
+                        <li class="search_on_mobile"><a href="#">HOW</a></li>
+
+
                         <li><a href="#">CX</a></li>
                         <li><a href="#">PANELS</a></li>
-                        <li class="insider_desktop"><a href="#">INSIDER</a></li>
+                        <li><a href="#">INSIDER</a></li>
+
+                        <li><a href="#">LOGIN</a></li>
                         <li class="search_desktop"><a href="#">SEARCH</a></li>
                         <li class="search_on_mobile">
                             <a data-toggle="collapse" href="#searchmobile" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-search" aria-hidden="true"></i>
                         </a>
                         </li>
+
+
+
+
                     </ul>
                     <select class="selectnav" id="selectnav1">
                         <option value="">Menu</option>
@@ -142,12 +160,12 @@
 
                     </div>
 
-                    <div class="row m-0 p-1 shadow border d-flex mt-1">
+                    <!---div class="row m-0 p-1 shadow border d-flex mt-1">
                         <input class="search-field w-100 p-3" type="text" id="tags1" x-webkit-speech="true" name="search" value="Insider Code" placeholder="Insider Code" onfocus="if(this.value=='Search Titles')this.value='';" onblur="unblank(this)" onselect="Redirect();">
 
                         <button type="submit" value="search" name="btnsubmit" class="button1 w-sm-25 w-md-15 mt-0 p-2 rounded-0" style="margin-left:10px !important;width:50px;"><small>INSIDER</small></button>
 
-                    </div>
+                    </div--->
                 </div>
             </div>
         </div>
@@ -158,180 +176,31 @@
             <main>
                 <div class="container ">
 
-                    <div class="row w-100 py-2 my-2 text-center ">
+                    <div id="CX">
 
-                        <h3 class="text-center text-gia-primary my-2" style="line-height:normal !important">EXECUTIVE INSIDER GATEWAY</h3>
-                        <div class="border_shadow privileg_box">
+                        <div class="row text-center cx-title">
+                            <h1>Customer Experience Dashboard</h1>
+                            <h2>613 Respondents of 14,328 Customers 12/31/2021. Data range weight averaged for dash display</h2>
 
-                            <h4 class="block_title_bar p-1"><!--Enter Your Privileged Access Code--></h4>
-
-                            <div class="form_div_01">
-                                <table cellpadding="0" cellspacing="5" bgcolor="#f2f2f2">
-                                    <tbody>
-                                        <tr align="center">
-                                            <td align="right" class="td1"></td>
-                                            <td class="td2">&nbsp;</td>
-                                            <!--td height="40" align="left" class="td4 text-center">All items are <span class="red_color">mandatory</span></td-->
-                                        </tr>
-
-
-                                        <tr align="center">
-
-                                            <td class="w-100 pb-3">
-                                                <div class="d-flex w-100 flex-row justify-content-around">
-                                                    <div class="w-25 pt-2  d-sm-none font-weigh-bold"><span class="red_color">*</span> CODE: </div>
-                                                    <input type="text" name="Code" class=" w-xl-90 w-lg-90 w-md-90 w-sm-95 mx-auto py-2" placeholder="Code" size="25" maxlength="15" onblur="return validatepassword(this);">
-
-                                                    <button data-brackets-id="12795" type="submit" value="GO" name="btnsubmit" class="btn-gia-primary mx-2 p-1 rounded border-0">GO</button>
-                                                </div>
-
-
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
                         </div>
 
+                        <div class="row w-xl-80 w-lg-80 w-md-100 w-sm-100 mx-auto py-2 my-2 text-center ">
 
-
-                    </div>
-
-                    <div class="row">
-                        <div class=" p-2 w-xl-100 w-lg-100 w-md-80 w-sm-100 mx-auto " id="insider" data-parent="#main">
-
-                            <div class="w-100 text-left mb-2 ">
-
-                                <h4 class="font-weight-bold  my-0 border-bottom text-center"> INSIDER ACCESS PRIVILEGES</h4>
-
-
-                            </div>
-
-                            <div class="w-100">
-                                <div class="w-100 mb-2 ">
-                                    <i>Users of our portal have insider access to our data stacks based on project relevance and engagement status. Tiered access is offered to data stacks, managed based on user status - Opt-in, Active Panelist, Inactive Panelist, Active Client or Inactive Client.  </i>
+                            <div class="row d-flex">
+                                <div class="w-20">
+                                    <div id="test-circle"></div>
                                 </div>
-                                <div class="w-100  d-flex justify-content-xl-start justify-content-md-center flex-wrap ">
-
-                                    <div class="insider_list p-1">
-                                        <div class=" offer-secondary  insider my-0">
-                                            <div class="offer-content d-flex flex-xl-column flex-lg-column flex-md-column flex-sm-row justify-content-between  ">
-                                                <h3>
-                                                    OPT-INS 
-                                                </h3>
-                                                <div class="insider_star_ranking">
-                                                    <i class="fa fa-star"></i>
-                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info i1" title=" Limited access to data sampler"></i></a>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-
-                                    </div>
-
-                                    <div class="insider_list p-1">
-                                        <div class=" offer-secondary  insider my-0">
-                                            <div class="offer-content d-flex flex-xl-column flex-lg-column flex-md-column flex-sm-row justify-content-between ">
-                                                <h3>
-                                                    INACTIVE PANELIST   
-                                                </h3>
-                                                <div class="insider_star_ranking">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-
-                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info i2" title="  Inactive supporter - has not participated on our panels in the past year"></i></a>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="insider_list p-1">
-                                        <div class="offer-secondary  insider my-0">
-                                            <div class="offer-content d-flex flex-xl-column flex-lg-column flex-md-column flex-sm-row justify-content-between  ">
-                                                <h3>
-                                                    ACTIVE PANELIST 
-                                                </h3>
-                                                <div class="insider_star_ranking">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info i3" title=" Active expert panelist project supporter"></i></a>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="insider_list p-1">
-                                        <div class=" offer-secondary  insider my-0">
-                                            <div class="offer-content d-flex flex-xl-column flex-lg-column flex-md-column flex-sm-row justify-content-between  ">
-                                                <h3>
-                                                    INACTIVE CLIENT
-                                                </h3>
-                                                <div class="insider_star_ranking">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info i4" title=" Purchased a report one or more years ago"></i></a>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="insider_list p-1">
-                                        <div class=" offer-secondary  insider my-0">
-                                            <div class="offer-content d-flex flex-xl-column flex-lg-column flex-md-column flex-sm-row justify-content-between  ">
-                                                <h3>
-                                                    ACTIVE CLIENT  
-                                                </h3>
-                                                <div class="insider_star_ranking">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info i5" title="  Purchased a report in the past one year"></i></a>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="insider_list p-1">
-                                        <div class=" offer-secondary  insider my-0">
-                                            <div class="offer-content d-flex flex-xl-column flex-lg-column flex-md-column flex-sm-row justify-content-between  ">
-                                                <h3 class="text-gia-primary" style="color: #800000">
-                                                   INFLUENCER INVITEE  
-                                                </h3>
-                                                <div class="insider_star_ranking">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info i5" title="  Influencer invitee who has received a Master Key Access Code from us."></i></a>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-
+                                <div class="w-xl-20 w-lg-20 w-md-20 w-sm-20">
+                                    <div id="test-circle2"></div>
+                                </div>
+                                <div class="w-xl-20 w-lg-20 w-md-20 w-sm-20">
+                                    <div id="test-circle3"></div>
+                                </div>
+                                <div class="w-xl-20 w-lg-20 w-md-20 w-sm-20">
+                                    <div id="test-circle4"></div>
+                                </div>
+                                <div class="w-xl-20 w-lg-20 w-md-20 w-sm-20">
+                                    <div id="test-circle5"></div>
                                 </div>
                             </div>
 
@@ -341,7 +210,6 @@
 
 
                         </div>
-
 
                     </div>
                 </div>
@@ -445,7 +313,152 @@
 <script src="scripts/jquery.flexslider.js "></script>
 <script src="scripts/jquery.selectnav.js "></script>
 <script src="scripts/jquery.modernizr.js "></script>
-
 <script src="scripts/bootstrap.bundle.js "></script>
+<script src="js/number_count/numscroller-1.0.js"></script>
+<!--script src="scripts/donut_chart/pretty-doughtnut.js"></script-->
+ <script async src="https://rawgit.com/pguso/jquery-plugin-circliful/1.0.2/js/jquery.circliful.js"></script>
+
+ 
+ 
+  
+
+<script>
+    
+    $( document ).ready(function() { // 6,32 5,38 2,34
+        $("#test-circle").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 30,
+            backgroundBorderWidth: 15,
+             backgroundColor: '#D4D4D4',
+            foregroundColor: '#FF9A00',
+            fontColor: '#000',
+          
+            percent: 85,
+            textSize: 28,
+            textStyle: 'font-size: 12px;',
+            textColor: '#000',
+            multiPercentage: 1,
+            percentages: [5, 10, 15]
+        });
+        
+          $("#test-circle2").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 30,
+            backgroundBorderWidth: 15,
+               backgroundColor: '#D4D4D4',
+            foregroundColor: '#FE3000',
+            percent: 88,
+               fontColor: '#000',
+            textSize: 28,
+            textStyle: 'font-size: 12px; font-weight:bold',
+            textColor: '#000',
+            multiPercentage: 1,
+            percentages: [10, 20, 30]
+        });
+        
+          $("#test-circle3").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 30,
+            backgroundBorderWidth: 15,
+               backgroundColor: '#D4D4D4',
+            foregroundColor: '#B6513C',
+               fontColor: '#000',
+            percent: 74,
+            textSize: 28,
+            textStyle: 'font-size: 12px; font-weight:bold',
+            textColor: '#000',
+            multiPercentage: 1,
+            percentages: [10, 20, 30]
+        });
+        
+          $("#test-circle4").circliful({
+            animation: 1,
+            animationStep: 5,
+            foregroundBorderWidth: 30,
+            backgroundBorderWidth: 15,
+               backgroundColor: '#D4D4D4',
+            foregroundColor: '#1D6DBD',
+               fontColor: '#000',
+            percent: 92,
+            textSize: 28,
+            textStyle: 'font-size: 15px; font-weight:bold',
+            textColor: '#000',
+            multiPercentage: 1,
+            percentages: [10, 20, 30]
+        });
+        
+          $("#test-circle5").circliful({
+            animation: 1,
+            animationStep: 5,
+           
+            foregroundBorderWidth: 30,
+            backgroundBorderWidth: 15,
+               backgroundColor: '#D4D4D4',
+            foregroundColor: '#A8C64A',
+               fontColor: '#000',
+              
+            percent: 82,
+             
+            textSize: 28,
+            textStyle: 'font-size: 12px; font-weight:bold',
+            textColor: '#000',
+            multiPercentage: 1,
+            percentages: [10, 20, 30]
+        });
+        
+        /*
+        $("#test-circle2").circliful({
+            animation: 0,
+            animationStep: 6,
+            foregroundBorderWidth: 5,
+            backgroundColor: "none",
+            fillColor: '#eee',
+            percent: 50,
+            iconColor: '#3498DB',
+            icon: 'f206',
+            iconSize: '40',
+            iconPosition: 'middle'
+        });
+        $("#test-circle3").circliful({
+            animation: 1,
+            animationStep: 6,
+            foregroundBorderWidth: 5,
+            backgroundBorderWidth: 1,
+            percent: 88,
+            iconColor: '#3498DB',
+            icon: 'f004',
+            iconSize: '40',
+            iconPosition: 'middle'
+        });
+        $("#test-circle4").circliful({
+            animation: 1,
+            animationStep: 1,
+            start: 2,
+            showPercent: 1,
+            backgroundColor: '#000',
+            foregroundColor: '#A8C64A',
+            fontColor: '#000',
+            multiPercentage: 1,
+            text: 'No Kids',
+            foregroundBorderWidth: 15,
+            backgroundBorderWidth: 15,
+        });
+        $("#test-circle5").circliful({
+          animationStep: 5,
+          foregroundBorderWidth: 5,
+          backgroundBorderWidth: 15,
+          percent: 80,
+          halfCircle: 1,
+        });*/
+    });    
+    
+
+    
+</script>
+
+
 
 </html>
