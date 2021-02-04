@@ -5072,6 +5072,11 @@ cart_purchase {
     font-style: italic;
     margin-bottom: 3px;
 }
+#panel_section .offer-content h3 {
+    font-size: 13px !important;
+    color: #000;
+}
+@media only screen and (max-width:959px) and (min-width:768px) {}
 
 /*=================
     INSIDER TAB
@@ -5092,7 +5097,7 @@ cart_purchase {
     text-align: center;
 }
 .insider .offer-content h3 {
-    font-size: 12px;
+    font-size: 12px !important;
     font-weight: bold;
     line-height: normal;
 }
@@ -5283,7 +5288,7 @@ cart_purchase {
         font-size: 11px;
     }
     .insider .offer-content {
-        padding: 6px;
+        padding: 3px 6px !important;
     }
     .insider_star_ranking a i[title]:hover:after {
         width: 130px;
@@ -5302,5 +5307,74 @@ cart_purchase {
     }
     .insider_star_ranking a i.i5[title]:hover:after {
         left: -92px;
+    }
+}
+
+/*=================
+    CX TAB
+==================*/
+#CX .cx-title h1 {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: arial;
+    padding: 0px;
+    margin-top: 12px;
+    line-height: normal;
+}
+#CX .cx-title h2 {
+    font-size: 12px;
+    font-family: arial;
+    line-height: normal;
+    padding: 0px;
+    margin-top: 3px;
+}
+#cx_donut_charts h3 {
+    line-height: normal;
+    font-size:14px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+#cx_donut_charts {
+    margin: -12px 0px;
+    padding: 5px 0px;
+}
+#CX ul {
+    margin-left: 20px margin-top:25px;
+}
+#CX ul li {
+    margin-bottom: 10px;
+    color:#000;
+}
+@media only screen and (max-width:767px) and (min-width:480px) {
+    #CX .cx-title h1 {
+        font-size: 20px;
+    }
+    #CX .cx-title h2 {
+        font-size: 12px;
+    }
+    #cx_donut_charts h3 {
+        font-size:8px;
+    }
+}
+@media only screen and (max-width:479px) and (min-width:310px) {
+    #CX .cx-title h1 {
+        font-size: 13px;
+    }
+    #CX .cx-title h2 {
+        font-size: 11px;
+    }
+    #cx_donut_charts h3 {
+        font-size:10px;
+    }
+    #cx_donut_charts .row.d-flex {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    #cx_donut_charts .row.d-flex .dont_chart_block {
+        width: 50% !important;
+    }
+    #cx_donut_charts {
+        margin: -25px 0px;
+        padding: 5px 0px;
     }
 }
