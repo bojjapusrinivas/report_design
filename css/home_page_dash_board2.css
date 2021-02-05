@@ -265,15 +265,6 @@
     OUR CLIENTS
 ==================*/
 
-#our_clients h2 {
-    font-size: 18px !important;
-    font-weight: 500 !important;
-    color: #000 !important;
-    text-align: center !important;
-    font-family: 'Oswald', sans-serif !important;
-    margin-bottom: 3px !important;
-    line-height: normal;
-}
 
 /*#our_clients h2:before {
     display: none;
@@ -389,12 +380,6 @@
         -ms- animation-delay: 14s !important;
         -o-animation-delay: 14s !important;
     }
-    #our_clients h2,
-    h2.latest_report {
-        font-size: 16px !important;
-        margin-bottom: 2px !important;
-        text-align: center
-    }
     /* #our_clients h2:before {
         content: "\f0a9";
         font-size: 12px;
@@ -451,12 +436,6 @@
     }
     .data_stack_lists {
         margin-top: -11px;
-    }
-    #our_clients h2,
-    h2.latest_report {
-        font-size: 14px !important;
-        margin-bottom: 0px !important;
-        text-align: center
     }
 }
 
