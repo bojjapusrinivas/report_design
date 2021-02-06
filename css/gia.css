@@ -578,10 +578,11 @@
         color: #00;
         font-weight: bold;
     }
-    .menutitle:hover {
+    /*  .menutitle:hover {
         background: #51ADD2 !important;
         color: #000000 !important;
-    }
+    }*/
+    
     .bgPage,
     .menutitle,
     .submenutitle {
@@ -3043,14 +3044,15 @@ textarea::-webkit-input-placeholder {
     /*	background:#51ADD2;
 	color:#FFF;*/
     
-    background: #C7C8C9;
+    background: #e6e6e6;
     color: #00;
     font-weight: bold;
 }
-.menutitle:hover {
+
+/*.menutitle:hover {
     background: #51ADD2 !important;
     color: #000000 !important;
-}
+}*/
 .bgPage,
 .menutitle,
 .submenutitle {
@@ -5296,28 +5298,13 @@ cart_purchase {
 /*=================
     CX TAB
 ==================*/
-#CX .cx-title h1 {
-    font-size: 30px;
-    font-weight: 900;
-    font-family: arial;
-    padding: 0px;
-    margin-top: 12px;
-    line-height: normal;
-}
-#CX .cx-title h2 {
-    font-size: 12px;
-    font-family: arial;
-    line-height: normal;
-    padding: 0px;
-    margin-top: 3px;
-}
 #cx_donut_charts h3 {
     line-height: normal;
     font-size:14px;
     margin-top: -10px;
 }
 #cx_donut_charts {
-    margin: -12px 0px;
+    margin: -34px 0px;
     padding: 5px 0px;
 }
 #CX ul {
@@ -5339,12 +5326,6 @@ cart_purchase {
     margin-top: 2px;
 }
 @media only screen and (max-width:767px) and (min-width:480px) {
-    #CX .cx-title h1 {
-        font-size: 20px;
-    }
-    #CX .cx-title h2 {
-        font-size: 12px;
-    }
     #cx_donut_charts h3 {
         font-size:8px;
     }
@@ -5354,12 +5335,6 @@ cart_purchase {
     }
 }
 @media only screen and (max-width:479px) and (min-width:310px) {
-    #CX .cx-title h1 {
-        font-size: 14px;
-    }
-    #CX .cx-title h2 {
-        font-size: 11px;
-    }
     #cx_donut_charts h3 {
         font-size:8px;
     }
@@ -5387,14 +5362,14 @@ cart_purchase {
     margin-top:10px;
 }
 .gia_page_title h1 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 900;
-    font-family: "HelveticaNeue",
+    /* font-family: "HelveticaNeue",
     "Helvetica Neue",
     Helvetica,
     Arial,
     sans-serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.5px;*/
     line-height: normal;
     color: #1C6DBC;
 }
@@ -5402,12 +5377,12 @@ cart_purchase {
     font-size: 15px;
 }
 .gia_page_title h2 {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     font-family:arial;
     line-height: normal;
     margin-top:5px;
-    color:#8D8D8D
+    color:#494949
 }
 @media only screen and (max-width:479px) and (min-width:300px) {
     .gia_page_title h1 {
