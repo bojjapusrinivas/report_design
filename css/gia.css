@@ -3983,7 +3983,7 @@ cart_purchase {
     }
     .submitbut {
         margin: 0 auto !important;
-        margin-left: 10% !important;
+        /* margin-left: 10% !important;*/
     }
 }
 

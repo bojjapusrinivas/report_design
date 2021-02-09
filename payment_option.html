@@ -171,52 +171,75 @@
                 <div class="container ">
 
 
-                    <div class="row w-100 py-2 my-2  ">
+                    <div class="w-100">
+                        <div class="row text-center cx-title gia_page_title text-center">
+                            <h1>Payment Options</h1>
 
-                        <table class="shop_cart_table table table-bordered shadow p-2">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th align="center" class="shopdisplay w-xl-15 w-lg-15 w-md-15 w-sm-100">CODE</th>
-                                    <th align="center" class="shopdisplay w-xl-60 w-lg-60 w-md-65 w-sm-100">TITLE</th>
-                                    <th align="center" class="shopdisplay option w-xl-15 w-lg-15 w-md-15 w-sm-100 ">PRICE($)</th>
-                                    <th align="center" class="shopdisplay option w-xl-10 w-lg-10 w-md-5 w-sm-100">REMOVE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td align="center" class="shoptext option w-xl-15 w-lg-15 w-md-15 w-sm-100">MCP-6599</td>
-                                    <td align="center" class="shoptext title w-xl-60 w-lg-60 w-md-65 w-sm-100">Biogas Plants Biogas Plants Biogas Plants</td>
-                                    <!--td align='center' class='shoptext'>252</td-->
-                                    <td align="center" class="shoptext option w-xl-15 w-lg-15 w-md-15 w-sm-100">5600.00</td>
-                                    <td class="shoptext option w-xl-10 w-lg-10 w-md-5 w-sm-100" align="center">
-                                        <a href="javascript:callsubmitme('MCP-6599','Report','Biogas Plants');"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-
-
-                        <table class="cart_tot_price table ">
-                            <tbody>
-                                <tr class="w-100">
-                                    <td class="w-xl-15 w-lg-15 w-md-15 w-sm-100 d-sm-none border-top-0">&nbsp;</td>
-                                    <td class="w-xl-60 w-lg-60 w-md-65 w-sm-100 d-sm-none border-top-0">&nbsp;</td>
-                                    <td class="cart_tot_txt w-xl-15 w-lg-15 w-md-15 w-sm-35 font-weight-bold text-center border-top-0">Total $</td>
-                                    <td class="cart_tot_value  w-xl-10 w-lg-10 w-md-5 w-sm-65 font-weight-bold text-center border-top-0">5600.00</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-
-                        <div class="w-100 d-flex flex-wrap  justify-content-center">
-
-                            <button type="button" name="BtnCheck" class="btn rounded-0 shadow mx-2 my-1 btn-gia-primary" value="Check Out" onclick="CheckVal(0,1);" style="width:126px"><small>Check Out</small></button>
-
-                            <button type="button" name="Btnback" class="btn rounded-0 shadow mx-2 my-1 btn-gia-primary" value="Back to Shopping" onclick="javascript:history.go(-2);">
-                                <small>Back to Shopping</small>
-                            </button>
                         </div>
+
+                    </div>
+
+                    <div class=" w-100 py-2 my-2  ">
+
+
+                        <form name="frmcheckout" method="post" action="Paymentoptions.asp" onsubmit="return retval();">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td width="100%">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td height="10" colspan="2" valign="middle" align="left">
+                                                            <p class="mb-0"><font color="red"><b><u>Warning</u>:</b> We prosecute credit card fraud to the fullest extent of the law internationally.<br></font><font color="maroon"><i>Only credit card payments are instantly fulfilled through this web site. Bank wires and check payments are processed upon receipt of payment. Please check your email after 5 minutes for the research you purchased.</i></font></p>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="p-1 thead-dark px-2 border-top-0">Please select one payment option:</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="p-1 border-top-0">
+                                                            <input type="radio" name="Payment" value="Card" checked=""> CREDIT CARD (Visa, MasterCard, American Express)</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="p-1 border-top-0">
+                                                            <input type="radio" name="Payment" value="Bank Transfer"> BANK WIRE</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="p-1 border-top-0">
+                                                            <input type="radio" name="Payment" value="Check"> COMPANY OR BANKERS CHECK</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="p-1 border-top-0">
+                                                            <input type="Checkbox" name="disc"> <font size="2" style="font-family:Arial">I have read and agree to the terms and conditions of <a href="javascript:OpenWin11(1)">GIA's sales and licensing policy</a>. (Please click to view)</font></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="p-1 border-top-0">
+                                                            <button type="submit" name="btnsubmit" class="btn btn-gia-primary rounded-0 shadow" value="Confirm Payment"><small>Confirm Payment</small></button>
+                                                            <!--input type="button" name="btnconfirm" value="Show eBooks" onclick="sendval();"-->
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+
+                        <!-- END ADD Page Content -->
+
+
+
+
 
 
                     </div>
@@ -246,6 +269,9 @@
 
 
                     </ul>
+
+
+
 
                 </div>
 
