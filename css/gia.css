@@ -5313,6 +5313,7 @@ cart_purchase {
 #CX ul li {
     margin-bottom: 10px;
     color:#000;
+    position: relative;
 }
 #CX ul li:before {
     content: '\f0da';
@@ -5324,6 +5325,22 @@ cart_purchase {
     margin-left: -11px;
     font-size: 15px;
     margin-top: 2px;
+}
+#CX ul li span[title]:hover:after {
+    content: attr(title);
+    position: absolute;
+    display: block;
+    width: 140px;
+    line-height: 15px;
+    padding: 3px;
+    font-size: 11px;
+    min-height: 60px;
+    color: #000;
+    bottom: 0px;
+    background: #fff;
+    font-family: 'Open Sans';
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+    right:0px;
 }
 @media only screen and (max-width:767px) and (min-width:480px) {
     #cx_donut_charts h3 {
