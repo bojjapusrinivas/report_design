@@ -185,6 +185,26 @@
     .red_color {
         color: #F00;
     }
+    .text_brown {
+        color: #900;
+    }
+    .gia_list_display {
+        list-style: none;
+    }
+    .gia_list_display li {
+        margin-bottom: 8px;
+    }
+    .gia_list_display li:before {
+        content: '\f0da';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        font-family: FontAwesome;
+        color: #900;
+        margin-left: -11px;
+        font-size: 15px;
+        margin-top: 0px;
+    }
     /*======================================
 				Header
 =======================================*/
@@ -4810,7 +4830,7 @@ cart_purchase {
 }
 .long_search_box .search-container form .search-btn:hover {
     background: url(../images/search@2x.png) center center no-repeat;
-    background-color: #dbd9d9;
+    background-color: #fff;
 }
 .long_search_box .search-container form .report_selec_box {
     position: relative;
@@ -4990,7 +5010,7 @@ cart_purchase {
     margin-top: 2px;
 }
 #panel_section .bullit_list {
-    margin-left: 50px;
+    margin-left:17px;
 }
 #panel_section .bullit_list li:before {
     content: '\f0da';
@@ -4998,10 +5018,10 @@ cart_purchase {
     width: 20px;
     height: 20px;
     font-family: FontAwesome;
-    color: #000;
-    margin-left: -25px;
+    color: #900;
+    margin-left: -12px;
     font-size: 15px;
-    margin-top: 2px;
+    margin-top: 0px;
 }
 #panel_section .note_mesage {
     font-style: italic;
@@ -5013,7 +5033,7 @@ cart_purchase {
     color: #000;
 }
 #pannel_infulancer_invitee .panel_insider_star_ranking {
-    margin-top:10px
+    margin-top:6px
 }
 #pannel_infulancer_invitee .panel_insider_star_ranking i {
     color: #fff;
@@ -5307,6 +5327,10 @@ cart_purchase {
     margin: -34px 0px;
     padding: 5px 0px;
 }
+.svg-container text.timer {
+    font-weight:bold;
+    font-size: 25px !important;
+}
 #CX ul {
     margin-left: 20px;
 }
@@ -5321,7 +5345,7 @@ cart_purchase {
     width: 20px;
     height: 20px;
     font-family: FontAwesome;
-    color: #000;
+    color: #900;
     margin-left: -11px;
     font-size: 15px;
     margin-top: 2px;
