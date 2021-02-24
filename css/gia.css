@@ -915,10 +915,6 @@
         height: 40px;
         margin-bottom: 10px
     }
-    .feedback_table li {
-        height: 30px;
-        font-size: 14px
-    }
     .feedback_table .left_column {
         float: left;
         width: 30%;
@@ -952,7 +948,6 @@
         width: 60%;
         margin: 0 auto;
         text-align: center;
-        height: 250px !important
     }
     .feedback_text_box {
         border: #000 solid 1px;
@@ -1200,9 +1195,6 @@
             width: 25% !important;
         }
         /*---FEEDBACK---*/
-        .feedback_option {
-            display: none
-        }
         .feedback_table .left_column {
             float: left;
             width: 40%;
@@ -1442,9 +1434,6 @@
         }
         .feedback_table .right_column:hover {
             background: #3CF
-        }
-        .feedback_table_title_row {
-            display: none
         }
         .privileg_box {
             width: 100% !Important;
@@ -2546,7 +2535,6 @@ textarea::-webkit-input-placeholder {
     margin-top: 10px;
 }
 .submit_button_block > input {
-    width: 40%;
     margin: 9px 9px;
     text-align: center;
 }
@@ -3394,12 +3382,11 @@ cart_purchase {
 }
 .feedback_table_title_row {
     overflow: hidden;
-    height: 40px;
+    height: 34px;
     margin-bottom: 10px
 }
 .feedback_table li {
-    height: 30px;
-    font-size: 14px
+    height: 23px;
 }
 .feedback_table .left_column {
     float: left;
@@ -3434,7 +3421,6 @@ cart_purchase {
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    height: 250px !important
 }
 .feedback_text_box {
     border: #000 solid 1px;
@@ -3445,7 +3431,7 @@ cart_purchase {
     width: 100%;
 }
 #txtComments {
-    heigh: 60px;
+    height: 60px;
     margin: 10px 0
 }
 
@@ -3694,17 +3680,14 @@ cart_purchase {
     }
     /*---FEEDBACK---*/
     
-    .feedback_option {
-        display: none
-    }
     .feedback_table .left_column {
         float: left;
-        width: 40%;
+        width: 38%;
         padding-left: 10px
     }
     .feedback_table .right_column {
         float: right;
-        width: 50%
+        width: 60%
     }
     /*==================================
 			Subscribe 
@@ -3928,11 +3911,12 @@ cart_purchase {
     .feedback_table .left_column {
         float: left;
         width: 100%;
+        font-weight: bold;
     }
     .feedback_table .right_column {
         float: left;
         width: 100%;
-        margin: 0 0 10px 0;
+        margin: 0 0 18px 0;
         border-bottom: #CCC solid 1px;
         padding: 5px 0 0 2px;
         background: #f5f5f5;
@@ -3942,13 +3926,13 @@ cart_purchase {
         width: 100%;
     }
     .feedback_option {
-        display: none
+        display: block
     }
     .feedback_table .right_column:hover {
         background: #3CF
     }
     .feedback_table_title_row {
-        display: none
+        display: none;
     }
     .privileg_box {
         width: 100% !Important;
@@ -4550,7 +4534,7 @@ cart_purchase {
         width: 100%;
     }
     .feedback_table_title_row {
-        display: none
+        display: none !important;
     }
     .feedback_option {
         display: none
@@ -4830,7 +4814,7 @@ cart_purchase {
 }
 .long_search_box .search-container form .search-btn:hover {
     background: url(../images/search@2x.png) center center no-repeat;
-    background-color: #fff;
+    background-color: #dbd9d9;
 }
 .long_search_box .search-container form .report_selec_box {
     position: relative;
@@ -5010,7 +4994,7 @@ cart_purchase {
     margin-top: 2px;
 }
 #panel_section .bullit_list {
-    margin-left:17px;
+    margin-left:38px;
 }
 #panel_section .bullit_list li:before {
     content: '\f0da';
@@ -5020,7 +5004,7 @@ cart_purchase {
     font-family: FontAwesome;
     color: #900;
     margin-left: -12px;
-    font-size: 15px;
+    5012 font-size: 15px;
     margin-top: 0px;
 }
 #panel_section .note_mesage {

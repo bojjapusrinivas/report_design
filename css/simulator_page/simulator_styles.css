@@ -46,7 +46,7 @@
         background: #900;
     }
     .text_brown {
-        background: #900;
+        color: #900;
     }
     .light_gray {
         background: #e6e6e6;
@@ -62,10 +62,10 @@
         font-weight: bold !important;
     }
     .modules_page_title {
-        margin: 25px 0px;
+        margin: 25px 0px 0px 0px;
     }
     .modules_page_title h3 {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         margin-bottom: 5px;
     }
@@ -457,13 +457,29 @@
     #simulator_table th {
         font-size: 14px;
         font-weight: 600;
-        transform: rotate( -15deg)
+        font-weight: bold;
+        /*transform: rotate( -15deg)*/
+    }
+    table#tbUser tbody tr td input[type=text] {
+        width: 45px !important;
+        margin: 0 auto !important;
+        display: block;
+        padding: 2px !important;
+    }
+    table#tbUser thead tr th {
+        font-size: 14px;
+    }
+    table#tbUser tbody tr td {
+        padding: 2px
+    }
+    table#tbUser tbody tr:nth-child(even) {
+        background: #efefef;
     }
     #simulator_table tbody tr:nth-child(even) {
         background: #e4e4e4;
     }
     #simulator_block tbody tr:nth-child(even) {
-        background: #ececec
+        background: #efefef
     }
     #simulator_table tbody tr td:nth-child(1) {
         /* background: #dedede;*/
@@ -481,7 +497,7 @@
         margin: 0px 5px;
         border: #e5e5e5 solid 1px;
         border-radius: 0px;
-        color: #ccc;
+        color: #000;
     }
     #simulator_table tbody tr td input:focus {
         border: #b3b3b3 solid 1px !important;
@@ -622,8 +638,27 @@
         font-weight: bold;
         color: #169fe6;
     }
+    .similutar_nav li .dropdown .dropdown-menu a {
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left
+    }
+    .similutar_nav li .dropdown .dropdown-menu a:before {
+        content: '\f0da';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        font-family: FontAwesome;
+        color: #dddddd;
+        margin-left: -9px;
+        font-size: 12px;
+        margin-top: 3px;
+    }
+    .similutar_nav li .dropdown .dropdown-menu a:before:hover {
+        color: #900;
+    }
     .similutar_nav li a:hover,
-    .similutar_nav li a:active {
+    .similutar_nav li a.active {
         text-align: center;
         font-weight: bold;
         color: #900;
@@ -632,20 +667,37 @@
         .similutar_nav li a {
             font-size: 11px;
         }
+        .similutar_nav li .dropdown .dropdown-menu a {
+            font-size: 11px;
+        }
+        .similutar_nav li .dropdown .dropdown-menu a:before {
+            font-size: 10px;
+            margin-top: 3px;
+        }
     }
     @media screen and (min-width:480px) and (max-width:767px) {
         .similutar_nav li {
             width: 33%;
             border-left: rgba(0, 0, 0, 0.2) solid 1px;
             padding: 2px 2px;
-            text-align: center;
+            text-align: left;
             margin-bottom: 3px;
         }
         .similutar_nav li a {
-            font-size: 10px;
+            font-size: 12px;
         }
         .similutar_nav li:nth-child(4) {
             border-left: 0px;
+        }
+        .similutar_nav li {
+            border-left: 0px;
+        }
+        .similutar_nav li .dropdown .dropdown-menu a {
+            font-size: 12px;
+        }
+        .similutar_nav li .dropdown .dropdown-menu a:before {
+            font-size: 11px;
+            margin-top: 3px;
         }
     }
     @media screen and (min-width:310px) and (max-width:479px) {
@@ -653,16 +705,23 @@
             width: 50%;
             border-left: rgba(0, 0, 0, 0.2) solid 1px;
             padding: 2px 2px;
-            text-align: center;
+            text-align: left;
             margin-bottom: 3px;
         }
         .similutar_nav li a {
             font-size: 12px;
-            font-weight: 600;
+            font-weight: bold;
             margin-bottom: 2px;
         }
         .similutar_nav li {
             border-left: 0px;
+        }
+        .similutar_nav li .dropdown .dropdown-menu a {
+            font-size: 12px;
+        }
+        .similutar_nav li .dropdown .dropdown-menu a:before {
+            font-size: 12px;
+            margin-top: 3px;
         }
     }
     /*==================================
