@@ -41,14 +41,14 @@
     margin-right: 0px;
 }
 #label_container h3 {
-    color: #e37038 !important;
+    color: #900 !important;
     font-size: 16px;
     line-height: 15px;
     margin: 0px;
 }
 #label_container h4 {
     font-size: 15px;
-    line-height: 15px !important;
+    line-height: 14px !important;
 }
 #label_container .star_rating {
     margin-top: 0px;
@@ -79,12 +79,11 @@
 }
 @media only screen and (min-width: 300px) and (max-width: 479px) {
     #label_container h4 {
-        font-size: 11px !important;
+        font-size: 14px !important;
         line-height: 14px;
     }
     #label_container h3,
     #stats h3 {
-        color: #e37038 !important;
         font-size: 14px;
     }
     #label_container .img-block {
@@ -94,6 +93,7 @@
     }
     #label_container .label_aside {
         margin-left: 4px;
+        margin-bottom: 10px;
     }
     .label_bottom_block {
         margin-top: 6px;
