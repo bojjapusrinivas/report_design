@@ -43,12 +43,12 @@
 #label_container h3 {
     color: #900 !important;
     font-size: 16px;
-    line-height: 15px;
+    line-height: 16px !important;
     margin: 0px;
 }
 #label_container h4 {
     font-size: 15px;
-    line-height: 14px !important;
+    line-height: 16px !important;
 }
 #label_container .star_rating {
     margin-top: 0px;
@@ -62,10 +62,20 @@
 .label_bottom_block {
     margin-top: 2px;
 }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #label_container h3 {
+        font-size: 15px;
+    }
     #label_container h4 {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #label_container h3 {
+        font-size: 15px;
+    }
+    #label_container h4 {
+        font-size: 15px;
     }
     #label_container .img-block {
         width: 80px;
@@ -79,12 +89,7 @@
 }
 @media only screen and (min-width: 300px) and (max-width: 479px) {
     #label_container h4 {
-        font-size: 14px !important;
-        line-height: 14px;
-    }
-    #label_container h3,
-    #stats h3 {
-        font-size: 14px;
+        font-size: 15px !important;
     }
     #label_container .img-block {
         width: 70px;
