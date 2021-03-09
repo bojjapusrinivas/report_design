@@ -32,6 +32,30 @@
             font-size: 17px
         }
     }
+    /*=====================
+event_title_logo
+======================*/
+    
+    .event_title_logo {
+        width: 100px;
+        height: 100px;
+        padding: 2px;
+        overflow: hidden;
+        margin: 0 auto;
+        background: #fcfcfc;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .event_title_logo {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    @media only screen and (min-width: 300px) and (max-width: 768px) {
+        .event_title_logo {
+            width: 75px;
+            height: 75px;
+        }
+    }
     /*================================
         Lable styling
 ===============================*/
@@ -43,8 +67,8 @@
         display: block;
     }
     #label_container .img-block {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         align-items: center;
         padding: 5px;
         overflow: hidden;
@@ -71,7 +95,7 @@
         display: block;
     }
     #label_container .label_aside {
-        margin-left: 15px;
+        margin-left: 10px;
     }
     .label_bottom_block {
         margin-top: 2px;
@@ -107,7 +131,7 @@
         }
         #label_container .img-block {
             width: 70px;
-            height: 60px;
+            height: 70px;
             margin-right: 15px;
         }
         #label_container .label_aside {

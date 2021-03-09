@@ -316,7 +316,7 @@ else
 							
                          </div>
                         <div class="border-bottom text-center mb-4">
-                            <h2 style="font-weight:bold; color:#900;line-height: 23px;" class="mt-2 font-size-20"><%=trim(ucase(RSevent("title")))%></h2>
+                            <h2 style="font-weight:bold; color:#900;line-height: 23px;" class="mt-2  font-weight-bold event_header_title "><%=trim(ucase(RSevent("title")))%></h2>
                         </div>
                       <!--  <div class="mobile_display" style="text-align:center; width:100% !important"> <img src="https://www.strategyr.com/resize_img/sig_100.jpg" alt="GIA" class="logo signatrue_logo" style="width:90px; height:auto; margin:0 auto; padding-top:10px"> </div>-->
                     </div>
@@ -340,7 +340,7 @@ else
 								Get_Eventimage = "https://cbcrawler.marketglass.com/"&Get_Eventimage
 							%>
 								<div class="form-group row d-flex flex-sm-wrap flex-md-nowrap mb-2 flex-lg-nowrap  justify-content-left">
-                                    <label for="staticEmail" class="w-100 pholder d-flex flex-column"> <img src="<%=Get_Eventimage%>" border=0 class="border shadow mb-3" style="width:100px;height:100px; overflow:hidden; margin:0 auto; background:#fcfcfc; ">
+                                    <label for="staticEmail" class="w-100 mb-3 d-flex flex-column"> <img src="<%=Get_Eventimage%>" border=0 class="border shadow mb-1 event_title_logo broken_img_placeholder">
 									<a href="<%=RSevent("url")%>" class="text-center mt-2 font-size-15">EVENT URL</a>
 									</label>
                                     
@@ -348,30 +348,30 @@ else
 							<%End If%>
 							<div>
                                 
-                              <div class="d-flex justify-content-start mb-1 flex-column">  
-                                <div class="form-group row d-flex  mb-2 justify-content-left mr-5">
-                                    <label for="staticEmail" class="font-weight-bold mr-3 " style="color:#900;">START (M/D/Y)</label>
+                               
+                                <div class="form-group row d-flex   justify-content-left mb-2 ">
+                                    <label for="staticEmail" class="font-weight-bold mr-3  " style="color:#900;">START (M/D/Y)</label>
                                     <div class="">										
                                        <%=RSevent("start_date__month")%>/<%=RSevent("start_date__DAY")%>/<%=RSevent("start_date__YEAR")%>
                                     </div>
                                 </div>
-								<div class="form-group row d-flex  mb-2 justify-content-left">
-                                    <label for="staticEmail" class="font-weight-bold mr-3 " style="color:#900;">END (M/D/Y)</label>
+								<div class="form-group row d-flex   justify-content-left mb-2">
+                                    <label for="staticEmail" class="font-weight-bold mr-3" style="color:#900;">END (M/D/Y)</label>
                                     <div class="" style="margin-left:12px;">
 									<%=RSevent("END_date__month")%>/<%=RSevent("end_date__DAY")%>/<%=RSevent("end_date__YEAR")%>                                         
                                     </div>
                                 </div>
-							</div>
+							
 								<%If trim(Get_EventLocation)<>"" Then%>
-								<div class="form-group row d-flex  mb-2 justify-content-left flex-column">
-                                    <label for="staticEmail" class="w-100 font-weight-bold mr-3" style="color:#900;">LOCATION</label>
+								<div class="form-group row d-flex  mb-3 justify-content-left flex-column" style="margin-bottom: 11px !important;">
+                                    <label for="staticEmail" class="w-100 font-weight-bold  mb-0" style="color:#900;">LOCATION</label>
                                     <div class="w-100" style="valign:top;">
                                          <%=trim(Get_EventLocation)%>
                                     </div>
                                 </div>
 								<%End If%>
-                                <div class="form-group row justify-content-left flex-column mt-3">
-                                    <label for="staticEmail" class="w-100 font-weight-bold mr-3" style="color:#900;">DESCRIPTION</label>
+                                <div class="form-group row justify-content-left flex-column" style="margin-bottom: 11px !important;">
+                                    <label for="staticEmail" class="w-100 font-weight-bold  mb-0" style="color:#900;">DESCRIPTION</label>
                                     <div class="w-100" style="valign:top;">
                                          <%=RSevent("description")%>
                                     </div>
@@ -389,8 +389,8 @@ else
 								End If%>
 								
 								<%If trim(ViewDomainNames)<>"" then%>
-                                <div class="form-group row d-flex  mb-2 justify-content-left flex-column">
-                                    <label for="staticEmail" class="w-100 font-weight-bold mr-3" style="color:#900;">ECOSYSTEMS</label>
+                                <div class="form-group row d-flex  mb-2 justify-content-left flex-column" style="margin-bottom: 11px !important;">
+                                    <label for="staticEmail" class="w-100 font-weight-bold mr-3 mb-0" style="color:#900;">ECOSYSTEMS</label>
                                     <div class="w-100">										
 										<%=trim(ViewDomainNames)%>                                       
                                     </div>
@@ -414,7 +414,7 @@ else
 									RSeventMain.Open SQLeventMain, ConnMain ,3
 									
 									If Not RSeventMain.EOF Then%>
-									<div class="form-group row d-flex flex-sm-wrap flex-md-nowrap mb-2  flex-lg-nowrap   justify-content-left">
+									<div class="form-group row d-flex flex-sm-wrap flex-md-nowrap my-3  flex-lg-nowrap   justify-content-left">
                                     <label for="staticEmail" class="columns col-form-label w-100 text-center" style="font-size:16px;color:#900;">SPEAKERS&nbsp;<span style="color:#169FE6;font-size:16px;"><%=RSeventMain.recordcount%></span></label>
                                     
                                 </div>
@@ -434,32 +434,33 @@ else
 											'' response.write "<img src="&IMG_Path_Person&" border='0'>"
 										End If
 										'response.write "<b>"&trim(RSeventMain("first_name"))& " "&trim(RSeventMain("last_name"))& "</b><br/>"
-										%><div class="w-lg-32 w-xl-32 w-md-45 w-sm-100  px-lg-2 px-sm-2 px-md-2 px-xl-2 d-flex flex-column shadow pt-2 mb-3">				
-							<div class="w-lg-100 w-xl-100 w-md-100 w-sm-100 ">
-                                <div id="label_container" class="bg-white cards mb-2 pb-1 l2 ml-0 ">
+										%><div class="w-lg-32 w-xl-32 w-md-45 w-sm-100   d-flex flex-column shadow  border p-2 my-2">				
+							<div class="w-100 ">
+                                <div id="label_container" class="bg-white cards m-0 p-0 ">
                                     <div class="label_middle_block d-flex text-center">
                                         <div class="  d-flex flex-row  flex-md-row position-relative align-content-center w-100 ">
 
-                                            <div class="mb-1 w-xl-45 w-lg-45 w-md-40 w-sm-30 ">
-                                                <div class="d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column justify-content-center align-items-center">
-                                                    <div class="img-block order-xl-0 order-lg-0 order-md-0 order-sm-1" style="margin-right: 0px">
-                                                        <div class="w-100 h-100  d-flex justify-content-center align-items-center" style="overflow: hidden">
+                                            <div class="mb-1 w-xl-30 w-lg-30 w-md-30 w-sm-25 ">
+                                                <div class="d-flex flex-xl-column flex-lg-column flex-md-column flex-sm-column justify-content-start align-items-center">
+                                                    <div class="img-block order-xl-1 order-lg-1 order-md-1 order-sm-1" style="margin-right: 0px">
+                                                        <div class="w-100 h-100  d-flex justify-content-center align-items-start mt-1" style="overflow: hidden">
                                                             <img src="<%=IMG_Path_company%>" class="img-fluid"> </div>
 														
                                                     </div>
 													<div class="img-block" style="margin-right: 0px">
-                                                        <div class="w-100 h-100  d-flex justify-content-center align-items-center" style="overflow: hidden">
+                                                        <div class="w-100 h-100  d-flex justify-content-center align-items-start mt-1" style="overflow: hidden">
                                                             <img src="<%=IMG_Path_Person%>" class="img-fluid"> </div>
 														
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="text-left   label_aside" style="margin-left:10px;margin-top:-8px;">
-                                                <h3 class="text-dark mb-1 p-0 texttrim mt-2 text-brown"><%=trim(RSeventMain("first_name"))%>&nbsp;<%=trim(RSeventMain("last_name"))%></h3>
+                                            <div class="text-left   label_aside w-xl-70 w-lg-70 w-md-70 w-sm-75 d-flex align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center">
+                                                <div class="m-0 p-0">
+												<h3 class="text-dark mb-1 p-0 texttrim mb-2 text-brown" style="margin-top:2px"><%=trim(RSeventMain("first_name"))%>&nbsp;<%=trim(RSeventMain("last_name"))%></h3>
                                                 <h4 class="text-dark mb-1 p-0 textlimit mt-1 " title="<%=RSeventMain("headline")%>"><%=RSeventMain("headline")%></h4>
 												<h4 class="text-dark mb-1 p-0 textlimit mt-1 " ><%=RSeventMain("person_company")%></h4>
 												<h4 class="text-dark mb-1 p-0 textlimit mt-1 " title="<%=RSeventMain("person_location")%>"><%=RSeventMain("person_location")%></h4>
-                                                
+											</div>
                                             </div>
                                         </div>
 
@@ -499,7 +500,7 @@ else
 									getCNT2 = 1
 									RSeventMain.movefirst
 									%>
-									<div class="form-group row d-flex flex-sm-wrap flex-md-nowrap mb-2 mt-2  flex-lg-nowrap   justify-content-left">
+									<div class="form-group row d-flex flex-sm-wrap flex-md-nowrap my-3  flex-lg-nowrap   justify-content-left">
                                     <label for="staticEmail" class="columns col-form-label w-100 text-center" style="font-size:16px;color:#900;">SPONSORS&nbsp;<span style="color:#169FE6;font-size:16px;"><%=RSeventMain.recordcount%></span></label>
                                     
                                 </div>
@@ -515,22 +516,22 @@ else
 										End If
 										'response.write "<b>"&trim(RSeventMain("name"))& "</b><br/>"%>
 									
-										<div class="w-lg-32 w-xl-32 w-md-45 w-sm-100  px-lg-3 px-sm-2 px-md-2 px-xl-3 d-flex flex-column shadow pt-3 mb-3">				
-							<div class="w-lg-100 w-xl-100 w-md-100 w-sm-100 ">
-                                <div id="label_container" class="bg-white cards mb-2 pb-1 l2 ml-0 ">
+										<div class="w-lg-32 w-xl-32 w-md-45 w-sm-100   d-flex flex-column shadow  border p-2 my-2">				
+							<div class="w-100 ">
+                                <div id="label_container" class="bg-white cards p-0 m-0 ">
                                     <div class="label_middle_block d-flex text-center">
                                         <div class="  d-flex flex-row  flex-md-row position-relative align-content-center w-100 ">
 
-                                            <div class="mb-1 w-xl-40 w-lg-40 w-md-40 w-sm-30 ">
+                                            <div class="mb-1 w-xl-20 w-lg-20 w-md-20 w-sm-30 ">
                                                 <div class="d-flex justify-content-end">
-                                                    <div class="img-block shadow-sm" style="margin-right: 0px">
+                                                    <div class="img-block shadow-sm mt-0" style="margin-right: 0px">
                                                         <div class="w-100 h-100  d-flex justify-content-center align-items-center" style="overflow: hidden">
                                                             <img src="<%=IMG_Path_Company%>" class="img-fluid"> </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="text-left label_aside w-xl-55 w-lg-55 w-md-55 w-sm-70 d-flex align-items-center" style="margin-left:10px">
-											 <h3 class="text-dark mb-1 p-0 texttrim mt-2"><%=trim(RSeventMain("name"))%></h3>
+                                            <div class="text-left label_aside w-xl-80 w-lg-80 w-md-80 w-sm-70 d-flex align-items-center" style="margin-left:10px">
+											 <h3 class="text-dark mb-1 p-0 texttrim "><%=trim(RSeventMain("name"))%></h3>
                                              <!--h4 class="text-dark mb-1 p-0 textlimit mt-1 " title="<%=RSeventMain("location")%>"><%=RSeventMain("location")%></h4-->  
                                                 <!--<h4 class="text-dark mb-1 p-0 textlimit mt-2 " title="<%'=RSeventMain("headline")%>"><%'=RSeventMain("headline")%></h4>
 												<h4 class="text-dark mb-1 p-0 textlimit mt-2 " ><%'=RSeventMain("company_name")%></h4>
@@ -628,12 +629,20 @@ else
 
 </script>
 <script>
-	$(document).ready(function() {
-		$(".pholder img").bind("error", function() {
-			// Replacing image source
-			$(this).attr("src", "/images/image_placeholder.jpg");
-		});
-	});
+    $(document).ready(function() {
+        $(".broken_img_placeholder").each(function() {
+            var img = $(this);
+            var image = new Image();
+            image.src = $(img).attr("src");
+            var no_image = "https://www.strategyr.com/images/image_placeholder.jpg";
+            if (image.naturalWidth == 0 || image.readyState == 'uninitialized') {
+                $(img).unbind("error").attr("src", no_image).css({
+                    /*height: $(img).css("min-height"),
+                    width: $(img).css("min-width"),*/
+                });
+            }
+        });
+    });
 
 </script>
 
