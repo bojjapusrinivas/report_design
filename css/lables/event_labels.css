@@ -56,6 +56,43 @@ event_title_logo
             height: 75px;
         }
     }
+    /*===========================================
+
+        VIEW PROFILE
+=========================================*/
+    
+    #profile_popup_model {
+        padding: 20px;
+        border-radius: 3px;
+        margin-bottom: 30px;
+        background-color: #fff;
+    }
+    #profile_popup_model .social-links li a {
+        color: #ffffff;
+        display: inline-block;
+        line-height: 27px;
+        text-align: center;
+        width: 33px;
+        font-size: 18px;
+        background: #169fe6;
+        padding: 2px 5px;
+        border: 2px solid #fff;
+    }
+    #profile_popup_model .social-links li a:hover {
+        color: #169fe6;
+        border: 2px solid #169fe6;
+        background: #fff;
+    }
+    #profile_popup_model .profile_img-thumbnail {
+        padding: .25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: .25rem;
+        width: 90px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
     /*================================
         Lable styling
 ===============================*/
