@@ -96,6 +96,16 @@ event_title_logo
     }
     #label_container .label_aside {
         margin-left: 10px;
+        position: relative;
+    }
+    #label_container .label_aside:before {
+        content: "";
+        height: 100%;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.2);
+        left: -9px !important;
+        top: 0px;
+        position: absolute;
     }
     .label_bottom_block {
         margin-top: 2px;
@@ -124,6 +134,9 @@ event_title_logo
             border-right: rgba(0, 0, 0, 0.15) solid 0px;
             border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
         }
+        #label_container .label_aside:before {
+            left: -12px !important;
+        }
     }
     @media only screen and (min-width: 300px) and (max-width: 479px) {
         #label_container h4 {
@@ -135,8 +148,11 @@ event_title_logo
             margin-right: 15px;
         }
         #label_container .label_aside {
-            margin-left: 4px;
+            margin-left: 18px;
             margin-bottom: 10px;
+        }
+        #label_container .label_aside:before {
+            left: -10px !important;
         }
         .label_bottom_block {
             margin-top: 6px;

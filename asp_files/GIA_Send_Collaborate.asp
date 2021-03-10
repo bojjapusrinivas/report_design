@@ -479,8 +479,16 @@ $(document).ready(function(){
     });
 });
 </script>
+
+<style>
+body, span{
+	font-size:14px !important;
+}
+
+</style>
+
 </head>
-<body style="font-size:14px; !important">
+<body >
 <!-- Wrapper / Start -->
 <div id="wrapper" class="bor-radius">
 <div id="top-line" style="box-shadow:none; height:5px; padding:5px 0px; z-index:1"></div>
@@ -679,7 +687,7 @@ $(document).ready(function(){
     <!-- 960 Container -->
     <div class="container"> 
       <!-- Texts -->
-      <div class="sixteen columns" >
+      <div class="w-xl-85 w-lg-85 w-md-95 w-sm-100 mx-auto" >
         
         <div class="row">
 
@@ -750,14 +758,14 @@ $(document).ready(function(){
 
     </div>
 	<form name="frmcreate" method="post">
-					  <table>
+					  <table class="w-100">
 					  <!--tr><td><div class="four columns mb-1 mx-0" style="text-align:left"> <input type="checkbox"  id="select_all"><b>Check Full Report</b></div></td></tr-->
-					<tr >
-	<td  nowrap colspan="2"  style="padding-left:5px " class="LClass">
+					<tr class="border-bottom pb-2" style="margin-bottom: 15px !important;display: block;" >
+	<td  nowrap colspan="2"  style=" " class="LClass">
 	<div class="w-100 mb-2">
 		<h4 class="m-0 font-weight-bold" style="font-size: 16px !important;color: #900; !important"> <font color='#9B0004'>*</font> SEGMENT:</h4>
     </div>	
-   <div class="w-100">	                                      
+   <div class="d-flex justify-content-start flex-wrap w-100 flex-sm-column">	                                      
 		<%Set RSSegmentsList = Server.CreateObject("ADODB.Recordset")
 			''	If session("isMCP") = "N" then
 					''SegmentsListQry="select * from vwReports_GIA_Segments$ where GIA_No='" & session("giacode") & "'"
@@ -784,7 +792,7 @@ $(document).ready(function(){
 				<option value="">--select--</option>-->
 				
 				<%If Not RSSegmentsList.EOF Then
-				 while not RSSegmentsList.EOF%> <div class="four columns mb-1 mx-0" style="text-align:left"> 
+				 while not RSSegmentsList.EOF%> <div class=" ml-0 mr-5 mb-1" style="text-align:left"> 
 				 <input type="checkbox" name="DDlSegmentsList" id="DDlSegmentsList" <%=checked_STR(Trim(segmentname),Trim(RSSegmentsList("Name")))%>   value="<%=Trim(RSSegmentsList("Name"))%>"><span> <%=RSSegmentsList("Name")%></span></div>
 			   <!--	<option <%'=Selected(Trim(request("DDlSegmentsList")),Trim(RSSegmentsList("Name")))%> value="<%'=Trim(RSSegmentsList("Name"))%>"> <%'=RSSegmentsList("Name")%> </option> -->
 			<%
@@ -811,7 +819,7 @@ $(document).ready(function(){
 				end if
 				%>
 				<%If Not RSSegmentsList.EOF Then
-				 while not RSSegmentsList.EOF%> <div class="four columns mb-1 mx-0" style="text-align:left"> 
+				 while not RSSegmentsList.EOF%> <div class=" ml-0 mr-5 mb-1" style="text-align:left"> 
 				 <input type="checkbox" name="DDlSegmentsList" id="DDlSegmentsList" <%=checked_STR(Trim(segmentname),Trim(RSSegmentsList("Name")))%>   value="<%=Trim(RSSegmentsList("Name"))%>"><span> <%=RSSegmentsList("Name")%></span></div>
 			   <!--	<option <%'=Selected(Trim(request("DDlSegmentsList")),Trim(RSSegmentsList("Name")))%> value="<%'=Trim(RSSegmentsList("Name"))%>"> <%'=RSSegmentsList("Name")%> </option> -->
 			<%
@@ -832,8 +840,8 @@ $(document).ready(function(){
 	<!--tr><td><hr/></td></tr-->
 
 <tr>
-	<td  nowrap colspan="2"  style="padding-left:5px " class="LClass">
-	<div class="w-100 mb-2 mt-3">
+	<td  nowrap colspan="2"   class="LClass">
+	<div class="w-100 mb-1">
 	  <h4 class="m-0 font-weight-bold" style="font-size: 16px !important;color: #900; !important"><font color='#9B0004'>*</font> REGION/COUNTRY:</h4>
 	</div>
 	<div class="w-100">
@@ -872,7 +880,8 @@ $(document).ready(function(){
 									<%region=Trim(RSCountry("region_name"))
 									 while not RSCountry.EOF%>
 									<%if region<>Trim(RSCountry("region_name")) then%>
-									</div><div class="row mb-0 ">
+									</div>
+									<div class="row mb-0 ">
 									<div class="w-100  mt-3">
                                         <b class="mr-3" style="letter-spacing:-1px;"><%=Trim(ucase(RSCountry("region_name")))%></b>
 										<%''Dim RegionValueModal
@@ -886,10 +895,10 @@ $(document).ready(function(){
                                         <!--<a href="#<%=Trim(RegionValueModal)%>" rel="modal:open" class="mb-2 ml-3  p-1 rounded-0 d-sm-none  text-blue add_country" style="color:#169FE6 !important">ADD COUNTRY</a>-->
 										<%End If%>
                                     </div>
-									<div class="d-flex justify-content-start flex-wrap w-100 ">
+									<div class="d-flex justify-content-start flex-wrap w-100 flex-sm-column send_collaborate_list_block">
 									<%End If%>
 										
-                                        <div class="w-xl-20 w-lg-20 w-md-30 w-sm-100 mx-0 mt-2" style="text-align:left;float:left;">
+                                        <div class="ml-0 mr-5 mb-1 mt-2 send_collaborate_list" style="font-size: 14px; text-align:left;float:left;">
                                            <input type="checkbox" name="REGION" id="REGION" <%=checked_STR_Other(Trim(cname),Trim(RSCountry("country_name")))%>  value="<%=Trim(RSCountry("country_name"))%>"> <%=RSCountry("country_name")%>
                                         </div>
 									

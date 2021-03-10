@@ -48,7 +48,7 @@ body {
 }
 @media screen and (min-width:300px) and (max-width: 767px) {
     .light_gray_responsive {
-        background: #ececec;
+        background: #fcfcfc;
     }
 }
 
@@ -304,7 +304,7 @@ table#tbUser tbody tr:nth-child(even) {
     background: #e4e4e4;
 }
 #simulator_block tbody tr:nth-child(even) {
-    background: #efefef
+    background: #fcfcfc
 }
 #simulator_table tbody tr td:nth-child(1) {
     /* background: #dedede;*/
@@ -471,12 +471,20 @@ table#tbUser tbody tr:nth-child(even) {
     font-size: 14px !important;
     font-weight: bold !important;
 }
+.send_collaborate_list {
+    float: left;
+}
 @media screen and (min-width:768px) and (max-width: 960px) {
     .modules_page_title {
         margin: 18px 0px 0px 0px;
     }
     .modules_page_title h3 {
         font-size: 18px;
+    }
+}
+@media screen and (min-width:480px) and (max-width: 767px) {
+    .send_collaborate_list {
+        float: none !important;
     }
 }
 @media screen and (min-width:300px) and (max-width: 767px) {
@@ -510,7 +518,8 @@ table#tbUser tbody tr:nth-child(even) {
 .message {
     position: relative;
 }
-i.message[title]:hover:after {
+
+/*i.message[title]:hover:after {
     content: attr(title);
     position: absolute;
     display: block;
@@ -527,6 +536,26 @@ i.message[title]:hover:after {
     top: -70px;
     left: calc(100% - 70px)
 }
+
+i.shareModule[title]:hover:after {
+    content: attr(title);
+    position: absolute;
+    display: block;
+    min-widtH: 120px;
+    line-height: 15px;
+    padding: 3px;
+    font-size: 11px;
+    height: 60px;
+    color: #000;
+    bottom: 0px;
+	z-index:999;
+    background: #fff;
+    font-family: 'Open Sans';
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+    top: 26px;
+    left: calc(100% - 70px)
+}*/
+
 
 /*****************************
    Cluster  
@@ -902,7 +931,7 @@ li a.active {
 *****************************/
 
 .analytcs {
-    background: #ededed;
+    background: #fcfcfc;
     border: none !important;
     padding: 3px !important;
 }
@@ -945,12 +974,44 @@ li a.active {
     Relevance Project Title 
 *****************************/
 
+.relevance_block,
+.Relevance_block {
+    margin-left: 19px !important;
+}
+.other_influencer_relevance_block {
+    margin-left: 19px !important;
+}
 .relevance_proj_title {
     font-size: 14px;
 }
-@media screen and (min-width:300px) and (max-width:480px) {
+@media screen and (min-width:768px) and (max-width:959px) {
+    .relevance_block,
+    .Relevance_block {
+        margin-left: 23px !important;
+    }
+    .other_influencer_relevance_block {
+        margin-left: 13px;
+    }
+}
+@media screen and (min-width:480px) and (max-width:767px) {
+    .relevance_block,
+    .Relevance_block {
+        margin-left: 31px !important;
+    }
+    .other_influencer_relevance_block {
+        margin-left: 31px !important;
+    }
+}
+@media screen and (min-width:300px) and (max-width:479px) {
+    .relevance_block,
+    .Relevance_block {
+        margin-left: 12px;
+    }
+    .other_influencer_relevance_block {
+        margin-left: 12px !important;
+    }
     .relevance_proj_title {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 }
 

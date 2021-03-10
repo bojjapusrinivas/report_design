@@ -62,8 +62,7 @@
 
 <%	''Response.Buffer = True
 	Response.ExpiresAbsolute = 0
-	Response.CodePage = 65001
-Response.CharSet = "utf-8"
+	
 	session("security_code") = ""
 	session("ReportCode") = ""
 	'If trim(session("ReportCode"))="" Then
@@ -175,7 +174,7 @@ daydisplay=WeekDayName(Weekday(Now())) & ","
 '''response.write trim(session("security_code"))
 %>
 <script>
-function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
+function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode)
 {
 	
 	var vsno= sno;
@@ -183,7 +182,7 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
 	var vencID = encid;
 	var relval=relval;
 	var vcpcode=cpcode;
-//alert(relval);
+//alert(vcpcode);
 //alert(sno);
 	
 		if((relval!="") && (relval!==undefined) && (vencID!="") && (vGiaCode!=""))
@@ -192,13 +191,13 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
 			//alert (RegionName);
 			///ReportCode = '"&trim(request("vGiaCode"))&"' and eNcID ='"&trim(request("vencID"))&"' and Country_Name ='"&trim(request("vRegion"))&"'" 
 			$.ajax({
-					url: "Ajax_AddGIA_Research_Brand_Competitive.asp",
+					url: "Ajax_AddGIA_Research_Influencer_CompetitiveRanking.asp",
 					type: "POST",
-					data:'vGiaCode='+encodeURIComponent(vGiaCode)+'&vencID='+encodeURIComponent(vencID)+'&vcpcode='+encodeURIComponent(vcpcode)+'&relval='+encodeURIComponent(relval)+'&vsno='+encodeURIComponent(vsno)+'&brandname='+encodeURIComponent(brandname)+'', 		
+					data:'vGiaCode='+encodeURIComponent(vGiaCode)+'&vencID='+encodeURIComponent(vencID)+'&vcpcode='+encodeURIComponent(vcpcode)+'&relval='+encodeURIComponent(relval)+'&vsno='+encodeURIComponent(vsno)+'', 		
 					success: function(data){
-				   // alert(data);
-					alert("Brands Rank Added Sucessfully");
-					//parent.location.reload();
+					//alert(data);
+					alert("Influencer Rank Added Sucessfully");
+					parent.location.reload();
 					},
 					error: function (xhr, ajaxOptions, thrownError) {
 					alert(xhr.status);
@@ -212,7 +211,6 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
 			alert('Rank not selected');
 		}
 }
-
 	</script>
 <body id="simulator_page">
     <!-- Wrapper / Start -->
@@ -230,8 +228,10 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
                     <div class="row" style="margin-bottom:0px;">
                          <!---- BEGIN : HEADER SECTION ---->
                 
-                         <div class="logo_text px-4">                           
-							<img src="images/strategyr_logo.svg" class="strategyrR_logo text-center mx-auto" style="width:210px !important;">							
+                       <div class="logo_text px-4">
+                            
+							<img src="images/strategyr_logo.svg" class="strategyrR_logo text-center mx-auto" style="width:210px !important;">
+							
                          </div>
                         <div class="sixteen columns head_title_block text-center  d-flex justify-content-center">
                             <h2 style="font-weight:bold; color:#900;line-height: 23px;" class="mt-2 font-size-20"> <%=strReportTitle%>&nbsp; (<%=code%>)</h2>
@@ -241,9 +241,9 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
                
                 <!---- END : HEADER SECTION ---->
 
-                        <div class="sixteen columns head_title_block text-center  d-flex justify-content-center">
+                        <div class=" head_title_block text-center  d-flex justify-content-center border-bottom">
                             <h3 style="font-weight:bold; color:#900;line-height: 23px;" class="mt-2">
-                             COMPETITIVE BRANDS - CROWD CURATED 
+                             COMPETITIVE INFLUENCER MODULE<a herf="javascript:void(0)" class='text-primary'>&nbsp;<i class="fa fa-info-circle info i5" title="Credibility level of influencers in competitive firms"></i></a>
                             </h3>
                         </div>
                     </div>
@@ -262,115 +262,174 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
 					Dim totalCompanyCount
 					totalCompanyCount = 1
 					PeopleTotalCNT = "SELECT count(*) as CMP_Count FROM [GIA_MC_PROGRAM].[dbo].[vwInfluencersPeople] WHERE filename='" & Company_CP_Code & "'"
-					
 					''CountryQryBrNSA = "select distinct b.res_brand_name, (select top 1  a.res_brand_image_url from vw_RESX_WIPO_FULL_AND_REST a where a.res_brand_name=b.res_brand_name and a.mcp_code=b.mcp_code and a.res_brand_image_url is not null ) as res_brand_image_url from vw_RESX_WIPO_FULL_AND_REST b where b.mcp_code='" & RPT_MCP_CODE & "' and b.res_brand_image_url is not null and b.res_brand_status='Active' order by b.res_brand_name"
 					Set RSPeopleRS = Server.CreateObject("ADODB.Recordset")
-					RSPeopleRS.Open PeopleTotalCNT, Datasource7,3,3
+					RSPeopleRS.Open PeopleTotalCNT, Datasource7,3
+							
 					If not RSPeopleRS.EOF then
 						totalCompanyCount = RSPeopleRS("CMP_Count")
 					End IF
 					Set RSPeopleRS = nothing
-					
-
-												''CountryQryBrNSA = "select distinct b.res_brand_name,b.res_brand_holder,b.res_brand_image_url,b.sno from gia_company_filter.dbo.WIPO_company_Brands b where b.company_cpcode='" & trim(request("cp")) & "' order by b.res_brand_name"
-												CountryQryBrNSA	="SELECT * FROM (SELECT ROW_NUMBER() OVER(PARTITION BY res_brand_name ORDER BY sno DESC) AS StRank,sno, res_brand_name,res_brand_holder,country,res_brand_image_url,mcp_code,company_cpcode FROM gia_company_filter.dbo.WIPO_Company_Brands where company_cpcode='" & trim(request("cp")) & "') n WHERE StRank = 1"
+											'CountryQryOPeople = "SELECT distinct top 100 [Filename],[CompanyName]  FROM [GIA_MC_PROGRAM].[dbo].[vwInfluencersPeople] WHERE filename<>'" & Company_CP_Code & "' and mcpcodes like ('%"& RPT_MCP_CODE &"%') and (Title like '%Manager%Marketing%' or title like '%Marketing%Manager%' or title like '%Manager%Product%' or title like '%Product%Manager%' or title like '%Director Marketing%' or title like '%Marketing Director%'  or title like '%President%' or title like '%CEO%' or title like 'CTO%' or title like '%CFO%' or title like '%CMO%' ) and [Sending_Status]='Y' order by companyname"
+											CountryQryBrNSA = "SELECT [sno],[Filename],[Address],[CompanyName],[PhoneNumber],[FaxNumber],Logo_local,[Country],[Website],[First_Name],[Last_Name],[Title],[JobFunction],[Email],[cmp_Projects_Count],[cmp_Segments_Count],[cmp_Competitors_Count],[cmp_Expert_Pool_Count],[CMPCountry],[Influencer_Tier],[Logo_local],[Market_Acumen][Sending_Status],[app_login_code]  FROM [GIA_MC_PROGRAM].[dbo].[vwInfluencersPeople] WHERE  filename='" & trim(request("cp")) & "' and mcpcodes like ('%"& trim(request("code")) &"%') and (Title like '%Manager%' or title like '%Marketing%' or title like '%Product%' or title like '%Director%' or title like '%President%' or title like 'CEO%' or title like 'CTO%' or title like 'CFO%' or title like 'CMO%') and [Sending_Status]='Y' order by companyname"
+											''	CountryQryBrNSA = "SELECT   [sno],[Filename],[Address],[CompanyName],[PhoneNumber],[FaxNumber],Logo_local,[Country],[Website],[First_Name],[Last_Name],[Title],[JobFunction],[Email],[cmp_Projects_Count],[cmp_Segments_Count],[cmp_Competitors_Count],[cmp_Expert_Pool_Count],[CMPCountry],[Influencer_Tier],[Logo_local],[Market_Acumen],[Cmp_hidden_code],[Filename_MD5],[Sending_Status],[code_MD5],[company_website],[app_login_code]  FROM [GIA_MC_PROGRAM].[dbo].[vwInfluencersPeople] WHERE filename='" & Company_CP_Code & "' and (Title like '%Manager%Marketing%' or title like '%Marketing%Manager%' or title like '%Manager%Product%' or title like '%Product%Manager%' or title like '%DirectorMarketing%' or title like '%Marketing%Director%' or title like '%President%' or title like '%CEO%' or title like 'CTO%' or title like '%CFO%' or title like '%CMO%' or title like '%chief%' ) and [Sending_Status]='Y'"
+												''CountryQryBrNSA = "select distinct b.res_brand_name, (select top 1  a.res_brand_image_url from vw_RESX_WIPO_FULL_AND_REST a where a.res_brand_name=b.res_brand_name and a.mcp_code=b.mcp_code and a.res_brand_image_url is not null ) as res_brand_image_url from vw_RESX_WIPO_FULL_AND_REST b where b.mcp_code='" & RPT_MCP_CODE & "' and b.res_brand_image_url is not null and b.res_brand_status='Active' order by b.res_brand_name"
 												Set RSwBrands = Server.CreateObject("ADODB.Recordset")
+												RSwBrands.Open CountryQryBrNSA, Datasource7,3  
+												infcount=RSwBrands.recordcount
 												''response.write CountryQryBrNSA
-												RSwBrands.Open CountryQryBrNSA, Datasource7,3
 												
-												brandcount=RSwBrands.recordcount
-												if cint(brandcount)<=0 then%>
-													<script>
-														alert("No Records  exists.");
-														window.close();
-													</script>
+												if cint(infcount)<=0 then%>
+												<script>
+													alert("No Records  exists.");
+													window.close();
+													
+												</script>
 												<%end if
-												%>
-	<%',res_brand_image_url
+														
+									
 												If Not RSwBrands.EOF Then 
-												
-												if cint(brandcount)<=0 then%>
-													<script>
-														alert("No Records  exists.");
-													</script>
-												<%end if
+												company=RSwBrands("CompanyName")
 												%> 
-                        <div class="row  mx-0  mt-3 px-lg-3 px-sm-0 px-md-2 px-xl-3">
-                            <h3 class="font-weight-bold  mb-0"><%=RSwBrands("res_brand_holder")%>  [<span style="color:#169fe6; font-weight:bold;"><%=brandcount%></span>] </h3>
+                        <div class="row  mx-0  mt-3 px-lg-3 px-sm-0 px-md-2 px-xl-3 ">
+                            <h3 class="font-weight-bold mb-0"><%=ucase(company)%>  [<span style="color:#169fe6; font-weight:bold;"><%=infcount%></span>] </h3>
                         </div>
 
                         <div class="row  mx-0  mt-3 px-lg-3 px-sm-0 px-md-2 px-xl-3">
-                            Please <i class="fa fa-check-square" aria-hidden="true" style="color:#008000;"></i> select and rate brands from your company which are relevant to this project or product.
+                            Please <i class="fa fa-check-square" aria-hidden="true" style="color:#008000;"></i> select and rate influencers from your company who are relevant to this project or product.
                         </div>
                         <hr/>
-							<div class="w-lg-100 w-xl-100 border-bottom d-flex flex-wrap justify-content-around" style="align-items: baseline !important;" >
+							<div class="w-lg-100 w-xl-100 border-bottom d-flex flex-wrap justify-content-around" style="align-items: baseline !important;">
                        
                             
+																	
 																
-																
-												<% RSwBrands.movefirst
-												while not RSwBrands.EOF
-												starVal="3"
-											
+												<% while not RSwBrands.EOF
+												
+											''	response.write("<tr class='table-row' id='table-row-"& RSwBrands("res_brand_name") &"'><td ><input type='checkbox' name='BrandRelev" & b &"' id='BrandRelev" & b &"' value='R'  ></td><td><input class='border-0 w-100' style='background:rgba( 255,255,255,0.5);' type='textbox' readonly value='"&Trim(RSwBrands("res_brand_name"))&"' name=brand_"&B&" size='45' id=brand_"&b&"><img src='" & Trim(RSwBrands("res_brand_image_url")) & "' class='w-20 img-fluid'></td><td  align='center'><input type='radio' id='brandPlayer_"&b&"' name='brandPlayer_"&b&"' "&SelectRadio(trim(vbrandPlayer),"D")&" onClick='addToDatabasebrandNew("&b&")'  value='D'></td><td  align='center'><input type='radio' id='brandPlayer_"&b&"' name='Player_"&b&"' "&SelectRadio(trim(vbrandPlayer),"KP")&" onClick='addToDatabasebrandNew("&b&")'  value='KP'></td><td  align='center'><input type='radio' id='brandPlayer_"&b&"'name='brandPlayer_"&b&"' "&SelectRadio(trim(vbrandPlayer),"NP")&" onClick='addToDatabasebrandNew("&b&")'  value='NP'></td><td  align='center'><input type='radio' "&SelectRadio(trim(vbrandPlayer),"UP")&"  name='brandPlayer_"&b&"' id='brandPlayer_"&b&"' onClick='addToDatabasebrandNew("&b&")' value='UP'></td><td><input type='number' name='M2021brandShare"&b&"' step='1' min='1' max='100' maxlength='3' size='10' tabindex='3' class='textbox_border border  w-100 p-1'></td><td><input type='number' name='M2027brandShare"&b&"' step='1' min='1' max='100' maxlength='3' size='10' tabindex='3' class='textbox_border border  w-100 p-1'></td><!--<a onClick='addToDatabasebrand("&b&")' class='ajax-action-links'><button type='button'>SAVE</button></a>--></tr>")
 																B= B+1%>
 																
-																
+																<%
+						'''dim RankType, RankPosition, starVal
+						RankType = "Top 5%"
+						RankPosition = trim(ucase(RSwBrands("Title")))
+						if instr(RankPosition,"MANAGER")>0 Then
+							RankType = "Top 10%"
+							starVal = 3
+						elseif instr(RankPosition,"DIRECTOR")>0 Then
+							RankType = "Top 5%"
+							starVal = 2
+						elseif instr(RankPosition,"CHIEF")>0 Then
+							RankType = "Top 1%"
+							starVal = 1
+						elseif instr(RankPosition,"PRESIDENT")>0 Then
+							RankType = "Top 1%"
+							starVal = 1
+						End If
+						%>
 					
 						<div class="w-lg-32 w-xl-32 w-md-45 w-sm-100  d-flex flex-column shadow my-2 border p-2">				
-							<div class="w-100">
-                                <div id="label_container" class="bg-white cards m-0 p-0">
-								<div class="top_block mt-2 ">
-										<h3 class="font-weight-bold  mb-1 pb-1  text-center border-bottom" style="color:#900"> <%=RSwBrands("res_brand_name")%></h3>
-								</div>
+							<div class="w-100 ">
+                                <div id="label_container" class="bg-white cards m-0 p-0 ">
                                     <div class="label_middle_block d-flex text-center">
-                                        <div class="  d-flex flex-row  flex-md-row position-relative align-content-center w-100 ">
-                                      
+                                        <div class="  d-flex flex-row border-bottom flex-md-row position-relative align-content-center w-100 ">
+
                                             <div class="mb-1 w-xl-40 w-lg-40 w-md-40 w-sm-40 ">
                                                 <div class="d-flex justify-content-center">
                                                     <div class="img-block" style="margin-right: 0px">
                                                         <div class="w-100 h-100  d-flex justify-content-center align-items-center" style="overflow: hidden">
-                                                            <img src="<%=RSwBrands("res_brand_image_url")%>" class="img-fluid"> </div>
+                                                            <img src="<%=RSwBrands("Logo_local")%>" class="img-fluid"> </div>
                                                     </div>
                                                 </div>
                                             </div>
-											
-											<%
-											
-											    Set Conn = Server.CreateObject("ADODB.Connection")
-												Conn.Open Datasource10
-												RecChkSQL = "SELECT * FROM Ancillaries_BrandsModule WHERE Code = '"&trim(request("code"))&"' and encid ='"&trim(request("encid"))&"' and cpcode ='"&RSwBrands("company_cpcode")&"' and type = 'Competitive' and email_id='"&session("EID")&"' and Influencer_sno='"&RSwBrands("sno")&"'  AND (BrandName = '"&RSwBrands("res_brand_name")&"')"
-											   '' response.write RecChkSQL
-												Dim CompetitiveChkedValue
-												CompetitiveChkedValue =""
-												Set RecChkRS = Server.CreateObject("ADODB.Recordset")
-												RecChkRS.Open RecChkSQL, Conn
-												If Not RecChkRS.EOF Then
-													CompetitiveChkedValue=RecChkRS("Scale")
-												End If	 
-												''response.write(RecChkSQL)&"<br>"
-												''response.write(CompetitiveChkedValue)"
-												set Conn = Nothing
-												
-											%>
-                                            <div class="text-left   label_aside mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0" style="margin-left:5px">
-                                                
-                                               <div class="d-flex mt-2">
-											   <h4 class="mb-0 d-flex  columns px-0 mr-xl-3 mr-lg-3 mr-md-3 mr-sm-2 ml-0 "><input type="radio" name="star_rating<%=RSwBrands("res_brand_name")%>" id="<%=RSwBrands("res_brand_name")%>Dominant" value="Dominant"  <%=SelectRadio(CompetitiveChkedValue,"Dominant")%> onClick="Addinfluence_moduletoDB('<%=RSwBrands("sno")%>','<%=Trim(request("code"))%>','<%=Trim(request("encID"))%>','Dominant','<%=RSwBrands("company_cpcode")%>','<%=RSwBrands("res_brand_name")%>')">Dominant</h4><br>
-                                                <h4 class="mb-0 d-flex  columns px-0 mr-xl-3 mr-lg-3 mr-md-3 mr-sm-2 ml-0  "><input type="radio" name="star_rating<%=RSwBrands("res_brand_name")%>" id="<%=RSwBrands("res_brand_name")%>Active" value="Active" <%=SelectRadio(CompetitiveChkedValue,"Active")%> onClick="Addinfluence_moduletoDB('<%=RSwBrands("sno")%>','<%=Trim(request("code"))%>','<%=Trim(request("encID"))%>','Active','<%=RSwBrands("company_cpcode")%>','<%=RSwBrands("res_brand_name")%>')">Active</h4><br>
-												</div>
-												 <div class="d-flex mt-2">
-												<h4 class="mb-0 d-flex  columns px-0 mr-xl-3 mr-lg-3 mr-md-3 mr-sm-2 ml-0 "><input type="radio" name="star_rating<%=RSwBrands("res_brand_name")%>" id="<%=RSwBrands("res_brand_name")%>Niche" value="Niche"  <%=SelectRadio(CompetitiveChkedValue,"Niche")%> onClick="Addinfluence_moduletoDB('<%=RSwBrands("sno")%>','<%=Trim(request("code"))%>','<%=Trim(request("encID"))%>','Niche','<%=RSwBrands("company_cpcode")%>','<%=RSwBrands("res_brand_name")%>')"><span>Niche</span></h4><br>
-												<h4 class="mb-1 d-flex  columns pl-2 mr-xl-3 mr-lg-3 mr-md-3 mr-sm-2 " style="margin-left: 22px !important;"><input type="radio" name="star_rating<%=RSwBrands("res_brand_name")%>" id="<%=RSwBrands("res_brand_name")%>N/A" <%=SelectRadio(CompetitiveChkedValue,"N/A")%>  value="N/A" onClick="Addinfluence_moduletoDB('<%=RSwBrands("sno")%>','<%=Trim(request("code"))%>','<%=Trim(request("encID"))%>','N/A','<%=RSwBrands("company_cpcode")%>','<%=RSwBrands("res_brand_name")%>')">N/A</h4>
-												</div>
+                                            <div class="text-left   label_aside mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0"  style="margin-left:5px">
+                                                <h4 class="text-dark mb-1 p-0 texttrim "><%=RSwBrands("First_Name")%>&nbsp;<%=RSwBrands("Last_Name")%></h4>
+                                                <h4 class="text-dark mb-1 p-0 textlimit "><%=RSwBrands("Title")%></h4>
+
+                                                <h4 class="mb-0 d-flex  columns px-0 mr-2 ml-0  ">Influence:<i class="star_rating"> 
+												<img src="https://bojjapusrinivas.github.io/report_design/images/beer/star_rating_<%=starVal%>.0.jpg" class="img-fluid mt-0"></i>
+												</h4>
                                             </div>
                                         </div>
 
                                     </div>
 
 
-                                </div>
+                                </div> 
                             </div>
-				
+																				
+							  <%
+											
+											    Set Conn = Server.CreateObject("ADODB.Connection")
+												Conn.Open Datasource10
+												RecChkSQL = "SELECT * FROM Ancillaries_InfluencerModule WHERE Code = '"&trim(request("code"))&"' and encid ='"&trim(request("encid"))&"' and cpcode ='"&RSwBrands("Filename")&"' and type = 'Competitive' and email_id='"&session("EID")&"' and Influencer_sno='"&RSwBrands("sno")&"'"
+											   '' response.write RecChkSQL
+												Dim CompChekedValue
+												CompChekedValue =""
+												Set RecChkRS = Server.CreateObject("ADODB.Recordset")
+												RecChkRS.Open RecChkSQL, Conn
+												If Not RecChkRS.EOF Then
+													CompChekedValue=RecChkRS("Scale")
+												End If	 
+												' response.write(RecChkSQL)&"<br>"
+											     ' response.write(CompChekedValue)
+												set Conn = Nothing
+												Dim CompChkBox
+												CompChkBox = ""
+												
+												if CompChekedValue <>"" then
+												   CompChkBox="checked"
+												else
+												   CompChkBox="" 
+												end if
+												
+							%>
+					
+											
+
+                            <div class="w-100 mb-0 mt-2">
+                                <div class="row other_influencer_relevance_block mb-0">
+                                    <div class="form-group w-100 ">
+                                        <div class="checkbox">
+                                            <label data-toggle="collapse" data-target="#collapseOne<%=RSwBrands("sno")%>" aria-expanded="false" aria-controls="collapseOne">
+                                                <input type="checkbox" id="rel<%=RSwBrands("sno")%>" name="rel<%=RSwBrands("sno")%>" <%=CompChkBox%> value="R"/> <span >Relevance to Project</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                     
+									<% if CompChkBox <>"" then %>
+                                      <div id="collapseOne<%=RSwBrands("sno")%>" aria-expanded="false" class="collapse show">
+									<%else%>
+									  <div id="collapseOne<%=RSwBrands("sno")%>" aria-expanded="false" class="collapse">
+									<%end if %>
+                                    
+                                        <div class="w-100 mt-2">
+                                            <h4 class="text-left">Market Influence 5-Scale</h4>
+                                            <div class="d-flex flex-wrap flex-row justify-content-around">
+                                                <div class=" w-xl-20 w-lg-20 w-mb-20 w-sm-20">
+                                                    <input type="radio" name="star_rating<%=RSwBrands("sno")%>" <%=SelectRadio(CompChekedValue,RSwBrands("sno"))%> id="<%=RSwBrands("sno")%>star_1" value="1" onClick='Addinfluence_moduletoDB("<%=RSwBrands("sno")%>","<%=Trim(request("code"))%>","<%=Trim(request("encID"))%>","1","<%=RSwBrands("filename")%>");'>1  </div>
+												<div class="w-xl-20 w-lg-20 w-mb-20 w-sm-20">
+                                                    <input type="radio" name="star_rating<%=RSwBrands("sno")%>" <%=SelectRadio(CompChekedValue,RSwBrands("sno"))%> id="<%=RSwBrands("sno")%>star_2" value="2" onClick='Addinfluence_moduletoDB("<%=RSwBrands("sno")%>","<%=Trim(request("code"))%>","<%=Trim(request("encID"))%>","2","<%=RSwBrands("filename")%>");'>2  </div>
+													<div class="w-xl-20 w-lg-20 w-mb-20 w-sm-20">
+                                                    <input type="radio" name="star_rating<%=RSwBrands("sno")%>" <%=SelectRadio(CompChekedValue,RSwBrands("sno"))%> id="<%=RSwBrands("sno")%>star_3" value="3" onClick='Addinfluence_moduletoDB("<%=RSwBrands("sno")%>","<%=Trim(request("code"))%>","<%=Trim(request("encID"))%>","3","<%=RSwBrands("filename")%>");'>3  </div>
+													 <div class="w-xl-20 w-lg-20 w-mb-20 w-sm-20">
+                                                    <input type="radio" name="star_rating<%=RSwBrands("sno")%>" <%=SelectRadio(CompChekedValue,RSwBrands("sno"))%> id="<%=RSwBrands("sno")%>star_4" value="4" onClick='Addinfluence_moduletoDB("<%=RSwBrands("sno")%>","<%=Trim(request("code"))%>","<%=Trim(request("encID"))%>","4","<%=RSwBrands("filename")%>");'>4  </div>
+                                                <div class="w-xl-20 w-lg-20 w-mb-20 w-sm-20">
+                                                    <input type="radio" name="star_rating<%=RSwBrands("sno")%>" <%=SelectRadio(CompChekedValue,RSwBrands("sno"))%> id="<%=RSwBrands("sno")%>star_5" value="5" checked="5" onClick='Addinfluence_moduletoDB("<%=RSwBrands("sno")%>","<%=Trim(request("code"))%>","<%=Trim(request("encID"))%>","5","<%=RSwBrands("filename")%>");'>5 
+                                                </div>
+
+                                              <!--  <div class="w-xl-30 w-lg-30 w-md-50 w-sm-100  mb-1">
+                                                    <input type="radio" name="star_rating" id="other" value="other">Other </div>-->
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
 						
 							<%RSwBrands.MoveNext
@@ -378,13 +437,14 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
 						  
 					
 																	
-						
+						<%End If
+						Set RSwBrands = Nothing%>
 						</div>
                        
 
 
 
-			
+		
 
 </div>
 
@@ -392,8 +452,7 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
 
 
 
-			<%End If
-						Set RSwBrands = Nothing%>
+
                     </section>
                     <!---- COPY UP TO HERE------>
 
@@ -513,17 +572,9 @@ function Addinfluence_moduletoDB(sno,code,encid,relval,cpcode,brandname)
 
 </script>
 <script>
-function OpenOthBrands(cp,mcp,encid){
-myWin = open("OtherBrandModule.asp?code="+mcp+"&cp="+cp+"&encid=" +encid,"Globind","width=800,height=700,status=no,toolbar=no,menubar=no,scrollbars=no");
+function OpenOthinflu(cp,mcp){
+myWin = open("privacy.htm" ,"Globind","width=800,height=700,status=no,toolbar=no,menubar=no,scrollbars=no");
 }
 </script>
-<script>
-	$(document).ready(function() {
-		 $(".img-block div img").bind("error", function() {
-			// Replacing image source
-			$(this).attr("src", "/images/image_placeholder.jpg");
-		});
-	});
 
-</script>
 </html>
