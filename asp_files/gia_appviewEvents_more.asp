@@ -192,6 +192,13 @@ else
 }
    </script>
     <!--- accordion2 script ---->
+
+	<style>
+        .blocker {
+            z-index: 9999999;
+        }
+
+    </style>
 </head>
 
 <body id="add_page">
@@ -454,12 +461,13 @@ else
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="text-left   label_aside w-xl-70 w-lg-70 w-md-70 w-sm-75 d-flex align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center">
+											<div class="text-left   label_aside w-xl-70 w-lg-70 w-md-70 w-sm-75 d-flex align-items-start position-relative">
                                                 <div class="m-0 p-0">
 												<h3 class="text-dark mb-1 p-0 texttrim mb-2 text-brown" style="margin-top:2px"><%=trim(RSeventMain("first_name"))%>&nbsp;<%=trim(RSeventMain("last_name"))%></h3>
                                                 <h4 class="text-dark mb-1 p-0 textlimit mt-1 " title="<%=RSeventMain("headline")%>"><%=RSeventMain("headline")%></h4>
 												<h4 class="text-dark mb-1 p-0 textlimit mt-1 " ><%=RSeventMain("person_company")%></h4>
 												<h4 class="text-dark mb-1 p-0 textlimit mt-1 " title="<%=RSeventMain("person_location")%>"><%=RSeventMain("person_location")%></h4>
+												<a rel="modal:open" href="#sticky" class="text-center mt-2  position-absolute l-0 b-0" style="font-size: 13px">VIEW PROFILE</a>
 											</div>
                                             </div>
                                         </div>
@@ -530,8 +538,9 @@ else
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="text-left label_aside w-xl-80 w-lg-80 w-md-80 w-sm-70 d-flex align-items-center" style="margin-left:10px">
-											 <h3 class="text-dark mb-1 p-0 texttrim "><%=trim(RSeventMain("name"))%></h3>
+                                            <div class="text-left label_aside w-xl-80 w-lg-80 w-md-80 w-sm-70 d-flex flex-column align-items-start justify-content-center" style="margin-left:10px">
+											 <h3 class="text-dark mb-1 p-0 texttrim mt-2 "><%=trim(RSeventMain("name"))%></h3>
+											 <a data-brackets-id="2477" href="#" class="text-center mt-2 " style="font-size: 13px">DATA SILO</a>
                                              <!--h4 class="text-dark mb-1 p-0 textlimit mt-1 " title="<%=RSeventMain("location")%>"><%=RSeventMain("location")%></h4-->  
                                                 <!--<h4 class="text-dark mb-1 p-0 textlimit mt-2 " title="<%'=RSeventMain("headline")%>"><%'=RSeventMain("headline")%></h4>
 												<h4 class="text-dark mb-1 p-0 textlimit mt-2 " ><%'=RSeventMain("company_name")%></h4>
@@ -580,6 +589,97 @@ else
    <!-- <footer id="footer " class="bg-white py-1"> </footer>-->
    <!--#include file="ASPIncludes/BottomStrip_module.asp"-->
 </body>
+
+
+<!----BEGIN:PROFILE MODEL----->
+<div id="sticky" class="modal" style="z-index: 99999; max-width: 500px !important; width: 100%; padding:15px !important ">
+
+    <!--a href="#" rel="modal:close">Close</a-->
+
+    <div class="row mb-0">
+
+        <div class="w-100">
+            <div class="card-box p-0 mb-0" id="profile_popup_model">
+                <div class="w-100">
+                    <div class="w-100 d-flex flex-sm-column">
+                        <div class="mb-1 w-xl-30 w-lg-30 w-md-30 w-sm-100 mb-2">
+                            <img src="https://cbcrawler.marketglass.com/uploads/images/persons/0/h/2/z/5/f044722a1de96ad89f9933e62175dc9293b10924.png" class="profile_img-thumbnail shadow broken_img_placeholder" alt="profile-image ">
+                        </div>
+                        <div class=" w-xl-70 w-lg-70 w-md-70 w-sm-100  d-flex flex-column  align-items-start align-items-sm-center justify-content-center">
+                            <h3 style="font-size:17px; color: #900; font-weight: bold" class="mb-0 mt-2">Reinier M. van der&nbsp;Drift</h3>
+                            <h4 style="font-size:15px; color:#000" class="mb-1">Co-Founder</h4>
+                        </div>
+
+                    </div>
+                    <div class="text-center pb-2 border-bottom mb-0">
+
+
+                    </div>
+
+                    <div class="w-100 ">
+
+                        <div id="label_container" class="bg-white cards p-0 m-0 border-bottom ">
+                            <div class="label_middle_block d-flex text-center">
+                                <div class="  d-flex flex-row  flex-md-row position-relative align-content-center w-100 ">
+
+                                    <div class="mb-1 w-xl-15 w-lg-15 w-md-15 w-sm-20 ">
+                                        <div class="d-flex justify-content-end">
+                                            <div class="img-block shadow-sm mt-0" style="margin-right: 0px">
+                                                <div class="w-100 h-100  d-flex justify-content-center align-items-center" style="overflow: hidden">
+                                                    <img src="https://cbcrawler.marketglass.com/uploads/images/companies/6/2/v/4/m/332b402bc818866308b72b298f8035f288fe7b56.png" class="img-fluid"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-left label_aside w-xl-80 w-lg-80 w-md-80 w-sm-70 d-flex flex-column align-items-start justify-content-center mb-0 " style="margin-left:10px">
+                                        <h4 class="text-dark mb-1 p-0  mt-2  " style="font-size:15px; line-height:normal !important; " title="Tymlez">Tymlez</h4>
+                                        <h4 class="text-dark mb-1 p-0  mt-1  " title="Amsterdam, Noord-Holland, The Netherlands" style="font-size:15px; line-height:normal !important; ">Amsterdam, Noord-Holland, The Netherlands</h4>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                        <div class="w-100">
+                            <ul class="social-links list-inline text-center mt-3 mb-0">
+                                <li class="list-inline-item">
+                                    <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook">
+                                        <i class="fa fa-linkedin"></i></a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- end col -->
+
+
+        </div>
+
+
+    </div>
+
+<!---END PROFILE MODEL-->
+
+
+
+
+
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="scripts/bootstrap.bundle.js"></script>
 <script src="js/jquery.multi-select.js"></script>
@@ -623,11 +723,22 @@ else
 <script>
    $(document).ready(function(){
          $('.textlimit').limitText({
-            length: 20
+            length: 25
         });
     })    
 
 </script>
+
+<script>
+	$("#sticky").modal({
+		escapeClose: false,
+		clickClose: false,
+		showClose: false
+	});
+
+</script>
+
+
 <script>
     $(document).ready(function() {
         $(".broken_img_placeholder").each(function() {
