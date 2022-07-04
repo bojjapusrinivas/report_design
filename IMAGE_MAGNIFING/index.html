@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8" />
+    
+    <!-- Required CDN's -->
+    <link rel="stylesheet"
+          href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.js">
+    </script>
+  
+   <style>
+        body {
+            margin: 20px;
+        }
+        h1 {
+            color: green;
+        }
+        .container {
+            display: flex;
+            padding: 0px;
+			justify-content:center;
+        }
+          
+        .contain {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+        margin-left: 20px;
+        }
+          
+        img {
+            width:100px;
+            height:100px;
+			margin:10px;
+			
+        }
+    </style>
+</head>
+  
+<body class="text-center">
+
+	<h4 >IMAGE  MAGNIFIER WITH JS</h4>
+    <p > Move Cursor over Image </p>
+    <div class="container">
+        <div class="parent">
+            <img src="https://www.strategyr.com/APP/img/logo.png">
+		</div>
+        <span class="contain">
+        <!-- Into another container -->
+   		</span>
+    </div>
+  
+    <script>
+        $(document).ready(function() {
+  
+            $('.parent').css('width', $('img').width());
+  
+            $('img')
+                .parent()
+                .zoom({
+                    magnify:2,
+                    target: $('.contain').get(0)
+                });
+        });
+    </script>
+    
+    
+
+    
+    
+</body>
+  
+</html> 

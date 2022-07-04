@@ -1,0 +1,642 @@
+/*=======SLIDER OVERRIDE STYLES========*/
+
+.irs-max,
+.irs-single,
+.irs-min {
+    display: none !important
+}
+
+.irs-with-grid {
+    margin-top: -25px;
+}
+
+ .irs--big .irs-handle {
+    top: 28px;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+ input[type="text"] {
+    padding: 0px;
+    margin: 3px 5px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600 !important;
+    color: #169FE6;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*=======SLIDER OVERRIDE STYLES========*/
+
+#data_simulator_table .irs-max,
+#data_simulator_table .irs-single,
+#data_simulator_table .irs-min {
+    display: none !important
+}
+
+#data_simulator_table .irs-with-grid {
+    margin-top: -25px;
+}
+
+#data_simulator_table .irs--big .irs-handle {
+    top: 28px;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.view_entire_pool_btn {
+    font-size: 17px;
+    margin: 0 auto !important;
+    display: block;
+    font-weight: 600;
+    padding: 10px !important;
+    cursor: pointer;
+    color: #169FE6;
+    text-align: center;
+
+}
+
+.view_entire_pool_btn:hover {
+    color: #057ab7;
+
+}
+
+
+/*=======================DATA SIMULATOR TABLE BEGIN HERE=======================*/
+
+#data_simulator_table table {
+    border: rgba(0, 0, 0, 0.02) solid 1px
+}
+
+#data_simulator_table table,
+#data_simulator_table table tr {
+    margin: 0px;
+    padding: 0px;
+}
+
+#data_simulator_table table thead tr th,
+#data_simulator_table table tbody tr td {
+    padding: 5px;
+}
+
+#data_simulator_table table thead tr {
+    background: #FFF1EB;
+}
+
+#data_simulator_table table tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+
+#data_simulator_table table thead tr th:nth-child(1),
+#data_simulator_table table tbody tr td:nth-child(1) {
+    width: 15%;
+    text-align: left;
+}
+
+
+#data_simulator_table table thead tr th:nth-child(2),
+#data_simulator_table table tbody tr td:nth-child(2) {
+    width: 75%;
+}
+
+
+#data_simulator_table table thead tr th:nth-child(2) .col-02,
+#data_simulator_table table tbody tr td:nth-child(2) .col-02 {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+#data_simulator_table table thead tr th:nth-child(2) .col-03,
+#data_simulator_table table tbody tr td:nth-child(2) .col-03 {
+    width: 15%;
+}
+
+#data_simulator_table table thead tr th:nth-child(2) .col-04 #data_simulator_table table tbody tr td:nth-child(2) .col-04 {
+    width: 70%;
+}
+
+
+#data_simulator_table table thead tr th:nth-child(2) .col-04,
+#data_simulator_table table tbody tr td:nth-child(2) .col-04 {
+    width: 80%;
+}
+
+
+
+#data_simulator_table .percent_block {
+    width: 15%;
+    text-align: center;
+}
+
+#data_simulator_table .simulator_block {
+    width: 85%;
+    text-align: center;
+    display: block;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    #data_simulator_table .simulator_block {
+        display: none;
+    }
+
+    .container {
+        width: 95% !important;
+    }
+
+    #data_simulator_table table thead tr th:nth-child(1),
+    #data_simulator_table table tbody tr td:nth-child(1) {
+        width: 35%;
+        text-align: left;
+    }
+
+    #data_simulator_table table thead tr th:nth-child(2),
+    #data_simulator_table table tbody tr td:nth-child(2) {
+        width: 65%;
+    }
+
+    #data_simulator_table table thead tr th:nth-child(2) .col-02,
+    #data_simulator_table table tbody tr td:nth-child(2) .col-02 {
+        width: 30%
+    }
+
+    #data_simulator_table table thead tr th:nth-child(2) .col-03,
+    #data_simulator_table table tbody tr td:nth-child(2) .col-03 {
+        width: 35%
+    }
+
+    #data_simulator_table table thead tr th:nth-child(2) .col-04,
+    #data_simulator_table table tbody tr td:nth-child(2) .col-04 {
+        width: 35%
+    }
+
+    #data_simulator_table .percent_block {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    #wrapper,
+    #footer,
+    #footer-bottom {
+        width: 95% !important;
+    }
+
+    
+    .container .four.columns,
+    .container .seven.columns
+     {
+        width: 95%;
+    }
+
+}
+
+/*=====FONT-STYLEING=======*/
+#data_simulator_table table h4 {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+/*=====INPU STYLEING=======*/
+#data_simulator_table input[type="text"] {
+    padding: 0px;
+    margin: 3px 5px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600 !important;
+    color: #169FE6;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*=======SLIDER OVERRIDE STYLES========*/
+
+#data_simulator_table .irs-max,
+#data_simulator_table .irs-single,
+#data_simulator_table .irs-min {
+    display: none !important
+}
+
+#data_simulator_table .irs-with-grid {
+    margin-top: -25px;
+}
+
+#data_simulator_table .irs--big .irs-handle {
+    top: 28px;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/*=======================DATA SIMULATOR TABLE ENDS HERE=======================*/
+
+
+
+/*=======================COMPETITIVE MARKET METRICS TABLE BEGIN HERE=======================*/
+
+#competitive_table table {
+    border: rgba(0, 0, 0, 0.02) solid 1px
+}
+
+#competitive_table table,
+#competitive_table table tr {
+    margin: 0px;
+    padding: 0px;
+}
+
+#competitive_table table thead tr th,
+#competitive_table table tbody tr td {
+    padding: 5px;
+}
+
+#competitive_table table thead tr {
+    background: #FFF1EB;
+}
+
+#competitive_table table tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+
+#competitive_table table thead tr th:nth-child(1), 
+#competitive_table table tbody tr td:nth-child(1) {
+    width: 38%;
+    text-align: left;
+}
+
+
+#competitive_table table tbody tr td:nth-child(1) .col-01 {
+    width: 100%;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+}
+
+#competitive_table table thead tr th:nth-child(2), 
+#competitive_table table tbody tr td:nth-child(2) {
+    width: 62%;
+}
+
+#competitive_table  table thead tr th:nth-child(2) .col-02, 
+#competitive_table  table tbody tr td:nth-child(2) .col-02 {
+    width: 24%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#competitive_table  table thead tr th:nth-child(2) .col-02 span, 
+#competitive_table  table tbody tr td:nth-child(2) .col-02 span{
+    width:22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+#competitive_table  table thead tr th:nth-child(2) .col-02 span i, 
+#competitive_table  table tbody tr td:nth-child(2) .col-02 span i{
+    width:22px;
+    height: 22px;
+    font-size: 15px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 100%;
+   /* background: #464444;*/
+    display: none;
+   
+}
+
+
+
+#competitive_table  table tbody tr td:nth-child(2) .col-02 span input{
+    margin-right: 0px !important;
+   
+}
+
+
+
+
+#competitive_table  table thead tr th:nth-child(2) .col-02 span{
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 100%;
+    background: #000;
+}
+
+#competitive_table table thead tr th:nth-child(2) .col-03, 
+#competitive_table table tbody tr td:nth-child(2) .col-03 {
+    width: 76%;
+}
+
+#competitive_table .percent_block {
+    width: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#competitive_table .simulator_block {
+    width: 82%;
+    text-align: center;
+    display: block;
+    margin-left: 10px;
+}
+
+.percentage_icon{
+    display: none;
+}
+
+
+
+
+/*------FIXED HEIGHT ON SCOLL FIXED HEADER COMPETATIVE--------*/
+
+
+#competitive_table table.fixed_height thead,
+#competitive_table table.fixed_height tbody{
+
+    display: block;
+
+}
+
+
+
+
+#competitive_table table.fixed_height tbody 
+{
+   overflow: auto;
+   height: 800px;
+}
+
+#competitive_table table.fixed_height thead tr{
+
+display: flex;
+
+}
+
+
+
+@media only screen and (min-width:760px) and (max-width:959px) {
+
+    #competitive_table .simulator_block {
+        display: none;
+    }
+
+    #competitive_table table thead tr th:nth-child(1), 
+    #competitive_table table tbody tr td:nth-child(1) {
+        width: 65%;
+        text-align: left;
+        }
+
+            #competitive_table table thead tr th:nth-child(2),
+            #competitive_table table tbody tr td:nth-child(2) {
+                width: 35%;
+        }
+
+        #competitive_table table thead tr th:nth-child(2) .col-02, 
+        #competitive_table table tbody tr td:nth-child(2) .col-02 {
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #competitive_table table thead tr th:nth-child(2) .col-03, 
+        #competitive_table table tbody tr td:nth-child(2) .col-03 {
+            width: 50%;
+        }
+
+        #competitive_table .percent_block {
+            width: 100%;
+        }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    #competitive_table .simulator_block {
+        display: none;
+    }
+
+    #competitive_table table h4 {
+        font-size: 16px;
+       
+}
+
+    #competitive_table table thead tr:nth-child(1), 
+    #competitive_table table tbody tr:nth-child(1) {
+        width: 100%;
+        text-align: left;
+        display: block;
+        }
+
+    #competitive_table table thead tr th:nth-child(1), 
+    #competitive_table table tbody tr td:nth-child(1) {
+        width: 100%;
+        text-align: left;
+        display: block;
+        }
+
+        #competitive_table table thead tr th:nth-child(2)
+       {
+            width: 100%;
+            display:none;
+        }
+
+       
+        #competitive_table table tbody tr td:nth-child(2) {
+            width: 100%;
+            display: block;
+           
+    }
+
+    #competitive_table  table thead tr th:nth-child(2) .col-02 span, 
+    #competitive_table  table tbody tr td:nth-child(2) .col-02 span{
+        width:50px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    #competitive_table  table thead tr th:nth-child(2) .col-02 span i, 
+    #competitive_table  table tbody tr td:nth-child(2) .col-02 span i{
+        width: 17px;
+        height: 16px;
+        padding-left: 5px;
+        display: block;
+        font-size: 14px;
+        margin-top: -1px;
+        margin-right: 2px;
+
+    }
+
+
+    #competitive_table  table thead tr th:nth-child(2) .col-02 span:nth-child(2) i, 
+    #competitive_table  table tbody tr td:nth-child(2) .col-02 span:nth-child(2) i{
+        padding-left: 4px;
+    }
+
+
+    #competitive_table  table thead tr th:nth-child(2) .col-02 span:nth-child(4) i, 
+    #competitive_table  table tbody tr td:nth-child(2) .col-02 span:nth-child(4) i{
+        padding-left: 5px;
+    }
+
+
+    #competitive_table table thead tr th:nth-child(2) .col-02,
+    #competitive_table table tbody tr td:nth-child(2) .col-02 {
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    #competitive_table table thead tr th:nth-child(2) .col-03, 
+    #competitive_table table tbody tr td:nth-child(2) .col-03 {
+        width: 50%;
+    }
+
+    #competitive_table .percent_block {
+        width: 85%;
+    }
+
+    .percentage_icon{
+        display: block;
+        padding-left: 5px;
+        display: block;
+        font-size: 17px;
+        color: #000;
+        width: 15%;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+
+}
+
+
+
+/*=====FONT-STYLEING=======*/
+#competitive_table table h4 {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+/*=====INPU STYLEING=======*/
+#competitive_table input[type="text"] {
+    padding: 0px;
+    margin: 3px 5px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold !important;
+    color: #169FE6;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*=======SLIDER OVERRIDE STYLES========*/
+
+#competitive_table .irs-max,
+#competitive_table .irs-single,
+#competitive_table .irs-min {
+    display: none !important
+}
+
+#competitive_table .irs-with-grid {
+    margin-top: -25px;
+}
+
+#competitive_table .irs--big .irs-handle {
+    top: 28px;
+    width: 20px !important;
+    height: 20px !important;
+}
+/*=========== IMG BLOCK ===================*/
+
+.img_block{
+    max-width: 50px;
+    max-height: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .img_block{
+        max-width: 40px;
+        max-height: 40px;
+        overflow: hidden;
+        margin-right: 10px;
+    }
+
+}
+
+/*--------------------------------*/
+.submit-button {
+    width: 110px;
+    color: #fff !important;
+    border-radius: 17px;
+    /*background: linear-gradient(0deg, rgba(0,154,50,1) 0%, rgba(5,200,68,1) 100%);*/
+    background-color: #255e91;
+    text-align: center;
+    height: 29px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 7px !important;
+    margin-bottom: 8px !important;
+    padding-top: 0px;
+}
+
+/*.submit-button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: rgba(255, 255, 255, 0.5) solid 3px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-radius: 17px;
+    border-bottom: #269cde
+}*/
+
+.submit-button::after {
+    content: "\f061";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        top: 3px;
+        left: 3px;
+        font-family: FontAwesome;
+        font-size: 17px;
+        line-height: 17px;
+        z-index: 999;
+        border-radius: 100px;
+        background: radial-gradient(circle, rgba(246,246,246,1) 0%, rgba(255,255,255,1) 100%);
+        border: #ece9e9 solid 2px;
+        color: #255e91;
+        box-shadow: 0 0 5px rgb(0 0 0 / 20%) !important;
+}

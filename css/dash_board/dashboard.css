@@ -1,0 +1,86 @@
+/*===================
+     DASHBOARD
+====================*/
+
+.dashboard_page h3{
+    line-height:normal;
+    color: #3675BC;
+    margin: 25px 0px;
+    font-weight: bold
+}
+
+.dashboard_table{
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    margin: 20px 0px 20px 0px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2) !important;
+    
+}
+
+.dashboard_table_border{
+    border:rgba(0,0,0,0.2) solid 1px;
+}
+
+
+.dashboard_row{
+	display:flex;
+	-webkit-display:flex;
+	diplay:-webkit-flex;
+	flex-direction:row;
+	justify-content: space-around;	
+}
+
+.dashboard_row.th{
+    background: #e0dede;
+    border-bottom: #a9a9a9 solid 1px;
+}
+
+.dashboard_row.th .col-4 h4 .fas,
+.dashboard_row.th .col-5 h4 .fas{
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.dashboard_row.th .col-4 h4 .fas{
+    color:green
+}
+
+.dashboard_row.th .col-5 h4 .fas{
+    color:red
+}
+
+.dashboard_row .col{
+	box-sizing:border-box;
+	text-align:center;
+	flex-grow: 1;
+	border-right:rgba(0,0,0,0.1) solid 1px;
+	width:15%;
+    padding: 3px 2px;
+}
+
+.dashboard_row .col h4{
+ color:#404040;
+ font-weight: bold; 
+ line-height: 25px;
+ text-transform:uppercase;
+    padding: 5px 3px;
+}
+
+.dashboard_row .value{
+	font-weight:bold;
+	color:blue;
+}
+
+.dashboard_row .Segment_type{
+	text-align:left;	
+}
+
+
+/*---animation----*/
+.arrow1 {
+  animation: slide1 1s ease-in-out infinite;
+  margin-left: 9px;
+}

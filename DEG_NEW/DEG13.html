@@ -1,0 +1,542 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        GIA - DEG Numbers
+    </title>
+    <!-- CSS STYLES-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="https://bojjapusrinivas.github.io/report_design/DEG_NEW/gia_switches.css" />
+    <link rel="stylesheet" href="deg_custom_styles3.css" />
+    <link rel="stylesheet" href="range_slider_tables.css" />
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+
+    <style>
+        #segment_allication .ranking_slider .irs.irs--big.js-irs-0.irs-with-grid:nth-child(2) {
+            display: NONE;
+        }
+
+        .js-range-slider {
+            DISPLAY: NONE;
+        }
+
+        #segment_allication .ranking_slider p,
+        #market-staging .ranking_slider p {
+            display: none;
+        }
+    </style>
+
+<script type="text/javascript">
+    function Navigate(){   
+         window.location.replace('http://205.234.30.74/degnumbers/GIA_DEG_Numbers_updated_3.asp');
+        return false;
+    }
+   </script>
+
+
+</head>
+</div>
+
+<body>
+    <!---NAV BAR-->
+    <nav>
+        <div class="navbar">
+            <div id="wapper">
+                <span style="float:left;"><img src="https://www.strategyr.com/images/log_icon.png"
+                        style="width:45px;height:45px;" class="log_ico">
+                </span>
+                <span>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx"><i class="fa fa-table"></i> GIA</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Segments.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Segments</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BaseYearData.aspx"><i
+                            class="fas fa fa-cloud-upload"></i> Base Year Data</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BulkTocReset.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Reset TOC</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">DEG Numbers Link
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="row">
+                                <div class="column">
+                                    <a href="http://server2/gia_analytix/viewGIACountriesII.asp?sts=O&amp;code="
+                                        target="_blank">
+                                        <!--i class="fa fa-link" aria-hidden="true"></i--><i class="fa fa-home"
+                                            aria-hidden="true"></i> Generate Numbers Link
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a href="http://128.242.110.22/DEGNumbers/" target="_blank"><i
+                                            class="fa fa-external-link"></i>Online Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--a href="ExchangeRates.aspx"><i class="fa fa-th" aria-hidden="true"></i> ExchangeRates</a>
+   <a href="Simulator.aspx"><i class="fa fa-table" aria-hidden="true"></i> Simulator</a-->
+
+                </span>
+                <span style="float:right; padding-right: 10px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Logout.aspx"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i> Log Out</a>
+                </span>
+                <span style="float:right;padding-right: 50px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx#GIA_Analytix"><i class="fa fa-home"
+                            aria-hidden="true"></i> Welcome obili</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="wapper" class="border shadow-sm bg-white">
+       
+        <!---SECTION B-->
+        <div class="row mx-0">
+            <div class="w-100 section_header">
+                <h3 class="p-2">B. PRIMARY APPLICATION BASE YEAR PERCENTAGE ALLOCATION - TIER B &nbsp;&nbsp;&nbsp;<a href="http://205.234.30.74/DEGNumbers/GIA.aspx" target="new"><input type="submit" name="btnAdd" value="Add New Segment" id="btnAdd" class="float-right"></a></h3>
+            </div>
+
+            <div class="w-100">
+
+                <div class="table-responisve">
+                    <div id="segment_allocation_primary">
+            <table class="table w-100">
+                            <tbody>
+                                <!--tr>
+                                    <th colspan="8" scope="col" align="center" style="color:black;background-color:#FFF;"></th>
+                                </tr-->
+                                <tr>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;">APPLICATION ID</th>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;">APPLICATION NAME</th>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;">2019 MARKET SIZE</th>
+                                    <!--<th scope="col" style="color:black;background-color:#FFF1EB;text-align: center !important;">%</th>-->
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">
+                                        <div class="d-flex justify-content-between"> 
+                                            <span class="ml-4">%</span>
+                                             <span class="mx-auto">ALLOCATION</span>
+                                         </div>
+                                    </th>
+                                    
+                                    <!--<th scope="col" style="color:black;background-color:#FFF1EB;" colspan="3" class="text-center">CAGR</th>-->
+                                    
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;" colspan="3" class="text-center">% GROWTH RATES</th>
+                                    
+                                    
+        <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">CAGR</th><th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">CAGR</th>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;">OPTIONS</th>
+                                </tr> 
+                                <tr>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                    
+                                    
+                                   <th scope="col" style="color:black;background-color:#FFF1EB;">2012</th>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;">2019</th>
+                                    <th scope="col" style="color:black;background-color:#FFF1EB;">2030</th>
+                                    
+                                    
+                                     <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                     <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                     <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                     
+                                    
+                                    <!--<th scope="col" style="color:black;background-color:#FFF1EB;">2020-2030</th>-->
+                                    <!--<th scope="col" style="color:black;background-color:#FFF1EB;">2020-2030</th>-->
+                                    <!--<th scope="col" style="color:black;background-color:#FFF1EB;"></th>-->
+                                </tr> 
+                                    
+                                    <tr>
+                                    <td class="GIA_NO">
+                                        <span>90000-TA-MS1</span>
+                                    </td>
+                                    <td class="SEGMENT">
+                                        <span>SURGICAL DRAPES</span>
+                                    </td>
+                                    <td class="Type">
+                                        <!--<span>Market Segments</span>-->
+                                        <input name="gvSegments116" type="text" class="mx-auto" style="width:80px;display: block" value="879.6">							
+                                    </td>
+                                    <td class="Allocation_Percentage">
+
+                                        <div class="w-100">
+        
+        
+                                            <div class="range-slider ranking_slider">
+                                                <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                                <input type="text" maxlength="4" class="js-input rank_input"
+                                                    name="rank_input_05" id="rank_input_011" value="0" maxlength='4' size='20'
+                                                    tabindex='3' placeholder="##.#">
+                                                <input type="text" value="0" class="js-range-slider" id="slide_011" />
+                                            </div>
+                                            <script>
+                                                var $slide_011 = $("#slide_011");
+                                                var $slide_input_011 = $("#rank_input_011");
+                                                var instance011;
+                                                var min = 0;
+                                                var vfromval = 0;
+                                                var max = 100;
+        
+                                                $slide_011.ionRangeSlider({
+                                                    skin: "big",
+                                                    type: "single",
+                                                    min: min,
+                                                    max: max,
+                                                    from: vfromval,
+                                                    grid: true,
+                                                    step: 0.5,
+                                                    grid_num: 10,
+        
+                                                    onStart: function (data) {
+                                                        $slide_input_011.prop("value", data
+                                                            .from);
+                                                    },
+                                                    onChange: function (data) {
+                                                        $slide_input_011.prop("value", data
+                                                            .from);
+                                                    }
+                                                });
+        
+                                                instance011 = $slide_011.data("ionRangeSlider");
+        
+                                                $slide_input_011.on("input", function () {
+                                                    var val = $(this).prop("value");
+        
+                                                    // validate
+                                                    if (val < min) {
+                                                        val = min;
+                                                    } else if (val > max) {
+                                                        val = max;
+                                                    }
+        
+                                                    instance011.update({
+                                                        from: val
+                                                    });
+        
+                                                    $(this).prop("value", val);
+                                                });
+                                            </script>
+        
+        
+                                        </div>
+        
+        
+        
+                                    </td>
+                                    
+                                    <td class="CAGR_Percentage">
+                                         <input name="txtCAGR_Percentage14_90000-1" type="text" id="txtCAGR_Percentage14_90000-1" value="5.6" style="width: 40px;text-align: center; ">
+                                    </td>
+                                    
+                                    <td class="CAGR_Percentage">
+                                        <input name="txtCAGR_Percentage19_90000-1" type="text" id="txtCAGR_Percentage19_90000-1" value="6.8" style="width: 40px;text-align: center; "></td>
+                                    
+                                    <td class="CAGR_Percentage">
+                                        <input name="txtCAGR_Percentage30_90000-1" type="text" id="txtCAGR_Percentage30_90000-1" value="8.4" style="width: 40px;text-align: center; ">
+                                    </td>
+                                    
+                        <td class="CAGR_Percentage">
+                                        <input name="txtCAGR_Percentage12_90000-1" type="text" id="txtCAGR_Percentage12_90000-1" value="6.38" style="width: 40px;text-align: center; ">
+                                        
+                                    </td><td class="CAGR_Percentage">
+                                        <select name="txtORIG_YEAR" id="txtORIG_YEAR">
+                                    
+                                    <option selected="" value="CODE">CODE</option>
+                                    <option value="L1-C1">L1-C1</option>
+                                    <option value="L1-C1">L1-C2</option>
+                                    <option value="L1-C1">L1-C3</option>
+                                    <option value="L1-C1">L1-C4</option>
+                                    <option value="L1-C1">L1-C5</option>
+                                    <option value="L1-C1">L1-C6</option>
+                                    <option value="L1-C1">L1-C7</option>
+                                    <option value="L1-C1">L1-C8</option>
+                                    <option value="L1-C9">L1-C9</option>
+                                    <option value="L1-C10">L1-C10</option>
+                                    <option value="L1-C11">L1-C11</option>
+                                    <option value="L1-C12">L1-C13</option>
+                                    <option value="L1-C14">L1-C14</option>
+                                    <option value="L1-C15">L1-C15</option>
+                                    <option value="L1-C16">L1-C16</option>
+                                    
+        
+                                </select>
+                                        
+                                    </td>
+                                    <td>
+                                        <a class="Edit" style="display: inline;cursor:pointer;" onclick="Main_Seg_GR_Add('90000-1','116')"><b>SAVE</b></a>
+                                    </td>
+                                </tr>
+                                                            
+                                    
+                                
+                                <tr><td colspan="10"><input type="hidden" id="txtsegStr" name="txtsegStr" value="116##117"></td></tr><tr>
+                                </tr>
+                                <tr>
+                                    <td class="GIA_NO"></td>
+                                    <td class="SEGMENT" colspan="2" style="text-align: right;"><b> TOTAL: </b></td>
+                                   <td colspan="8"><input name="txtCAGR_Percentage10" type="text" id="txtCAGR_Percentage10" value="100.0" style="width: 65px;text-align: center;font-size: 14px;font-weight: bold;color: #428bca;" placeholder="###.#"></td>
+                                </tr>
+                                <!--tr><td colspan="8" style="text-align:center !important;">
+                                <a class="mt-2  btn my-3" href="https://www.strategyr.com/gia_analytix/viewGIACountriesBespoke.asp?sts=O&code=mcp90000" target="new"  style="background-color: #2196F3;width: 125px;color:white;">BUILD DATA 1</a>
+                                </td></tr-->
+                            
+        </tbody></table></div>
+                </div>
+
+                
+            </div>
+
+    
+
+        </div>
+
+        <div class="row mx-0">
+
+            <div class="w-100 section_header">
+                <h3 class="p-2">D. SECONDARY APPLICATIONS MARKET BY CHANNEL - TIER D <!--<input type="submit" name="btnAdd" value="Add New Channel"  id="btnAdd" >--></h3>
+            </div>
+
+            <div class="w-100">
+                <div class="table-responisve">
+                    <!--div  id="segment_allication"-->
+                    <div id="segment_allication">
+                1        <table class="table w-100">
+                          <tbody>
+                              <!--tr>
+                                  <th colspan="8" scope="col" align="center" style="color:black;background-color:#FFF;"></th>
+                              </tr-->
+                              <tr>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">APPLICATION ID</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">APPLICATION NAME</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2019 MARKET SIZE</th>
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;text-align: center !important;">%</th>-->
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">
+                                    <div class="d-flex justify-content-between"> 
+                                        <span class="ml-4">%</span>
+                                         <span class="mx-auto">ALLOCATION</span>
+                                     </div>
+                                </th>
+                                
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;" colspan="3" class="text-center">CAGR</th>-->
+                                
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" colspan="3" class="text-center">% GROWTH RATES</th>
+                                
+                                
+    <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">CAGR</th><th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">CAGR</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">OPTIONS</th>
+                            </tr> 
+                            <tr>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                
+                                
+                               <th scope="col" style="color:black;background-color:#FFF1EB;">2012</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2019</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2030</th>
+                                
+                                
+                                 <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                 <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                 <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                 
+                                
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;">2020-2030</th>-->
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;">2020-2030</th>-->
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;"></th>-->
+                            </tr> 
+                                
+                            
+                                  
+                                  <tr>
+                                  <td class="GIA_NO">
+                                      <span>90000-TA-MS3</span>
+                                  </td>
+                                  <td class="SEGMENT">
+                                      <span>Cardiovascular</span>
+                                  </td>
+                                  <td class="Type">
+                                      <!--<span>Specialty</span>-->
+                                      <input name="gvSegments71820" type="text" class="mx-auto" style="width:80px;display: block" value="70.5">							
+                                  </td>
+                                  <td class="Allocation_Percentage">
+
+                                    <div class="w-100">
+    
+    
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_05" id="rank_input_012" value="0" maxlength='4' size='20'
+                                                tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_012" />
+                                        </div>
+                                        <script>
+                                            var $slide_012 = $("#slide_012");
+                                            var $slide_input_012 = $("#rank_input_012");
+                                            var instance012;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+    
+                                            $slide_012.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+    
+                                                onStart: function (data) {
+                                                    $slide_input_012.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_012.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+    
+                                            instance011 = $slide_012.data("ionRangeSlider");
+    
+                                            $slide_input_012.on("input", function () {
+                                                var val = $(this).prop("value");
+    
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+    
+                                                instance012.update({
+                                                    from: val
+                                                });
+    
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+    
+    
+                                    </div>
+    
+    
+    
+                                </td>
+                                  
+                                  <td class="CAGR_Percentage">
+                                       <input name="txtCAGR_Percentage14_90000-3" type="text" id="txtCAGR_Percentage14_90000-3" value="7.9" style="width: 40px;text-align: center; ">
+                                  </td>
+                                  
+                                  <td class="CAGR_Percentage">
+                                      <input name="txtCAGR_Percentage19_90000-3" type="text" id="txtCAGR_Percentage19_90000-3" value="9.8" style="width: 40px;text-align: center; "></td>
+                                  
+                                  <td class="CAGR_Percentage">
+                                      <input name="txtCAGR_Percentage30_90000-3" type="text" id="txtCAGR_Percentage30_90000-3" value="13.4" style="width: 40px;text-align: center; ">
+                                  </td>
+                                  <td class="CAGR_Percentage">
+              
+                                      <input name="txtCAGR_Percentage12_90000-3" type="text" id="txtCAGR_Percentage12_90000-3" value="6.36" style="width: 40px;text-align: center; ">
+                                      
+                                  </td>
+                      <td class="CAGR_Percentage">
+              
+                                      <select name="txtORIG_YEAR" id="txtORIG_YEAR">
+                                  
+                                  <option selected="" value="CODE">CODE</option>
+                                  <option value="L1-C1">L1-C1</option>
+                                  <option value="L1-C1">L1-C2</option>
+                                  <option value="L1-C1">L1-C3</option>
+                                  <option value="L1-C1">L1-C4</option>
+                                  <option value="L1-C1">L1-C5</option>
+                                  <option value="L1-C1">L1-C6</option>
+                                  <option value="L1-C1">L1-C7</option>
+                                  <option value="L1-C1">L1-C8</option>
+                                  <option value="L1-C9">L1-C9</option>
+                                  <option value="L1-C10">L1-C10</option>
+                                  <option value="L1-C11">L1-C11</option>
+                                  <option value="L1-C12">L1-C13</option>
+                                  <option value="L1-C14">L1-C14</option>
+                                  <option value="L1-C15">L1-C15</option>
+                                  <option value="L1-C16">L1-C16</option>
+                                  
+      
+                              </select>
+                                      
+                                  </td>
+                                  <td>
+                                      <a class="Edit" style="display: inline;cursor:pointer;" onclick="Main_Seg_GR_Add('90000-3','71820')"><b>SAVE</b></a>
+                                  </td>
+                              </tr>
+                             
+                              <tr><td><input type="hidden" id="txtsegStr" name="txtsegStr" value="71820##71821##71822##71823##71824##71825##71826##71827##71828##71829##71830##71831##71832"></td></tr><tr>
+                              </tr><tr>
+                                  <td class="GIA_NO"></td>
+                                  <td class="SEGMENT" colspan="2" style="text-align: right;"><b> TOTAL: </b></td>
+                                 <td colspan="10"><input name="txtCAGR_Percentage10" type="text" id="txtCAGR_Percentage10" value="100.0" style="width: 65px;text-align: center;font-size: 14px;font-weight: bold;color: #428bca;" placeholder="###.#"></td>
+                              </tr>
+                              <!--tr><td colspan="8" style="text-align:center !important;">
+                              <a class="mt-2  btn my-3" href="https://www.strategyr.com/gia_analytix/viewGIACountriesBespoke.asp?sts=O&code=mcp90000" target="new"  style="background-color: #2196F3;width: 125px;color:white;">BUILD DATA 1</a>
+                              </td></tr-->
+                          
+      </tbody></table></div>
+              </div>
+
+                </div>
+            
+
+        </div>
+
+        <div class="w-100 section_subheader">
+			<input type="checkbox" data-toggle="collapse" onclick="ViewSecondary_Market_Factors('PANDEMIC');" data-target="#PANDEMIC" aria-expanded="false" aria-controls="collapseExample" class="float-left mx-2 mt-2">
+                <h3>PANDEMIC &amp; SUPPLY CHAIN IMPACT</h3>
+            </div>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+<script>
+    $(function () {
+        var $chk = $("#grpChkBox input:checkbox");
+        var $tbl = $("#someTable");
+
+        $chk.prop('checked', false);
+
+        $chk.click(function () {
+            var colToHide = $tbl.find("." + $(this).attr("name"));
+            $(colToHide).toggle();
+        });
+    });
+</script>
+
+
+
+
+
+</html>

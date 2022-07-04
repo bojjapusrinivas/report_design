@@ -1,0 +1,36 @@
+/*=============================
+        ADD EVENT PAGE
+=============================*/
+
+body {
+    font-size: 14px;
+}
+
+/*----ecosystem_block----*/
+
+.mobile_display {
+    display: block;
+}
+.ecosystem_block {
+    height: auto;
+}
+@media only screen and (max-width:767px) {
+    .mobile_display {
+        display: none !important;
+    }
+    .ecosystem_block {
+        height: 250px;
+        overflow-y: scroll;
+    }
+}
+@media only screen and (max-width:480px) {
+    body {
+        font-size: 12px;
+    }
+    .mobile_display {
+        display: none !important;
+    }
+    #add_page button {
+        font-size: 12px;
+    }
+}

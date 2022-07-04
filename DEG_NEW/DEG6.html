@@ -1,0 +1,771 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        GIA - DEG Numbers
+    </title>
+    <!-- CSS STYLES-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="https://bojjapusrinivas.github.io/report_design/DEG_NEW/gia_switches.css" />
+    <link rel="stylesheet" href="deg_custom_styles.css" />
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <style>
+        #segment_allication .ranking_slider .irs.irs--big.js-irs-0.irs-with-grid:nth-child(2) {
+            display: NONE;
+        }
+
+        .js-range-slider {
+            DISPLAY: NONE;
+        }
+
+        #segment_allication .ranking_slider p,
+        #market-staging .ranking_slider p {
+            display: none;
+        }
+    </style>
+
+</head>
+</div>
+
+<body>
+    <!---NAV BAR-->
+    <nav>
+        <div class="navbar">
+            <div id="wapper">
+                <span style="float:left;"><img src="https://www.strategyr.com/images/log_icon.png"
+                        style="width:45px;height:45px;" class="log_ico">
+                </span>
+                <span>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx"><i class="fa fa-table"></i> GIA</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Segments.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Segments</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BaseYearData.aspx"><i
+                            class="fas fa fa-cloud-upload"></i> Base Year Data</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BulkTocReset.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Reset TOC</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">DEG Numbers Link
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="row">
+                                <div class="column">
+                                    <a href="http://server2/gia_analytix/viewGIACountriesII.asp?sts=O&amp;code="
+                                        target="_blank">
+                                        <!--i class="fa fa-link" aria-hidden="true"></i--><i class="fa fa-home"
+                                            aria-hidden="true"></i> Generate Numbers Link</a>
+                                </div>
+                                <div class="column">
+                                    <a href="http://128.242.110.22/DEGNumbers/" target="_blank"><i
+                                            class="fa fa-external-link"></i>Online Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--a href="ExchangeRates.aspx"><i class="fa fa-th" aria-hidden="true"></i> ExchangeRates</a>
+   <a href="Simulator.aspx"><i class="fa fa-table" aria-hidden="true"></i> Simulator</a-->
+
+                </span>
+                <span style="float:right; padding-right: 10px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Logout.aspx"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i> Log Out</a>
+                </span>
+                <span style="float:right;padding-right: 50px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx#GIA_Analytix"><i class="fa fa-home"
+                            aria-hidden="true"></i> Welcome obili</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="wapper" class="border shadow-sm bg-white">
+
+        <table id="market-staging">
+
+            <tbody>
+                <tr>
+                   <th scope="col"> COUNTRY </th>
+                    <th scope="col" style="text-align: center">2019 MARKET SIZE</th>							
+                    <th scope="col" colspan="2" style="text-align: center">% ADJUSTMENT</th>
+                   
+                    <!--th scope="col" style="text-align: center">TREND</th-->
+                    
+                    <th scope="col" colspan="3" style="text-align: center;">%GROWTH DELTA</th>
+                    <th scope="col" style="text-align: center;">OPTIONS</th>
+                </tr>
+                <tr>
+                    <!--td scope="col" ></td-->
+                    <td scope="col"></td>
+                    <td scope="col"></td>
+                    <td scope="col" colspan="2"></td>
+                 <!--   <td scope="col"></td>-->
+                    <td align="center" scope="col" class="font-weight-bold">2014</td>
+                    <td align="center" scope="col" class="font-weight-bold">2019</td>
+                    <td align="center" scope="col" class="font-weight-bold">2030</td>
+                    <!--td align="center" scope="col" class="font-weight-bold">26-45</td>
+                    <td align="center" scope="col" class="font-weight-bold">46-100</td>
+                    <td align="center" scope="col" class="font-weight-bold">100+</td-->
+                     <td align="center" scope="col" class="font-weight-bold"></td>
+                </tr>
+                
+                    <tr><td colspan="8"><div style="background-color: #569ED0;" class="p-2">
+
+                        <div class="d-flex justify-content-start font-weight-bold align-items-center" style="font-size: 15px;">
+                            <span class="text-white mr-3 style=" width:110px"="">1001-TA-MS1</span>
+                            <span class="text-white mr-1">Trajectory Segment-1 -  United States Market Size </span>
+                            <input name="gvSegments123311" type="text" class="mr-3 text-center" style="width: 45px;display: block;color: #569ed0;font-weight: bold;" value="">
+
+                            <span class="text-white mr-1">  % Allocation</span>
+
+                            <input name="gvSegments123311_2014" type="text" class="mr-3 text-center" style="width: 45px;display: block;color: #569ed0;font-weight: bold;" value="45">
+                            <span class="text-white mr-1">  % 2014</span>
+
+                            <input name="gvSegments123311" type="text" class="mr-3 text-center" style="width: 45px;display: block;color: #569ed0;font-weight: bold;" value="45">
+                            <span class="text-white mr-1">  % 2019</span>
+
+                            <input name="gvSegments123311_2020" type="text" class="mr-3 text-center" style="width: 45px;display: block;color: #569ed0;font-weight: bold;" value="">
+                            <span class="text-white mr-1">  % 2030</span>
+
+                            <input name="gvSegments123311_2030" type="text" class="mr-3 text-center" style="width: 45px;display: block;color: #569ed0;font-weight: bold;" value="">
+                            <span class="text-white mr-1">  DELTA</span>
+
+                            <input name="gvSegments123311_DELTA" type="text" class="mr-3 text-center" style="width: 45px;display: block;color: #569ed0;font-weight: bold;" value="">
+                        </div>
+
+                    </div></td></tr>	
+            
+        <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Trajectory Segment-4-Application</th>
+        </tr>-->
+        
+                    
+                    <tr>
+                    <!--td></td-->
+                    <!-- NAME TD -->
+                    <td>Trajectory Segment-4</td>
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td> <input name="txt_MSize1_6_United_States" type="text" id="txt_MSize1_6_United_States" value="" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" placeholder="###.#"></td>
+                    <!-- SLIDER PERCENTAGE TD -->
+                    <td colspan="2"><div class="w-100">
+                        <div class="range-slider ranking_slider">
+                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                            <input type="text" maxlength="4" class="js-input rank_input" onchange="SegTotalvalueCalculation_100('1','6','United_States','Application');" name="rank_input_1_6_United_States_TrajectorySegment1" id="rank_input_1_6_United_States_TrajectorySegment1" value="0" size="20" tabindex="3" placeholder="##.#">
+                            <span class="irs irs--big js-irs-30 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="visibility: hidden;">0</span><span class="irs-max" style="visibility: visible;">100</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single" style="left: 15.4487%;">20</span></span><span class="irs-grid" style="left: 9.75584%; width: 80.2883%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -4.93491%;">0</span><span class="irs-grid-pol small" style="left: 6.666666666666666%"></span><span class="irs-grid-pol small" style="left: 3.333333333333333%"></span><span class="irs-grid-pol" style="left: 10%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10%; visibility: hidden; margin-left: -7.17487%;">10</span><span class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span class="irs-grid-pol small" style="left: 13.333333333333332%"></span><span class="irs-grid-pol" style="left: 20%"></span><span class="irs-grid-text js-grid-text-2" style="left: 20%; visibility: visible; margin-left: -7.17487%;">20</span><span class="irs-grid-pol small" style="left: 26.666666666666668%"></span><span class="irs-grid-pol small" style="left: 23.333333333333332%"></span><span class="irs-grid-pol" style="left: 30%"></span><span class="irs-grid-text js-grid-text-3" style="left: 30%; visibility: hidden; margin-left: -7.17487%;">30</span><span class="irs-grid-pol small" style="left: 36.666666666666664%"></span><span class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span class="irs-grid-pol" style="left: 40%"></span><span class="irs-grid-text js-grid-text-4" style="left: 40%; margin-left: -7.17487%;">40</span><span class="irs-grid-pol small" style="left: 46.666666666666664%"></span><span class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-5" style="left: 50%; visibility: hidden; margin-left: -7.17487%;">50</span><span class="irs-grid-pol small" style="left: 56.666666666666664%"></span><span class="irs-grid-pol small" style="left: 53.333333333333336%"></span><span class="irs-grid-pol" style="left: 60%"></span><span class="irs-grid-text js-grid-text-6" style="left: 60%; visibility: visible; margin-left: -7.17487%;">60</span><span class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span class="irs-grid-pol" style="left: 70%"></span><span class="irs-grid-text js-grid-text-7" style="left: 70%; visibility: hidden; margin-left: -7.17487%;">70</span><span class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span class="irs-grid-pol small" style="left: 73.33333333333333%"></span><span class="irs-grid-pol" style="left: 80%"></span><span class="irs-grid-text js-grid-text-8" style="left: 80%; margin-left: -7.17487%;">80</span><span class="irs-grid-pol small" style="left: 86.66666666666667%"></span><span class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span class="irs-grid-pol" style="left: 90%"></span><span class="irs-grid-text js-grid-text-9" style="left: 90%; visibility: hidden; margin-left: -7.17487%;">90</span><span class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span class="irs-grid-pol small" style="left: 93.33333333333333%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -9.42182%;">100</span></span><span class="irs-bar irs-bar--single" style="left: 0px; width: 25.9135%;"></span><span class="irs-shadow shadow-single" style="display: none;"></span><span class="irs-handle single" style="left: 16.0577%;"><i></i><i></i><i></i></span></span><input type="text" value="0" class="js-range-slider irs-hidden-input" id="slide_1_6_United_States_TrajectorySegment1" tabindex="-1" readonly="">
+                        </div>
+                        <!--DATA SOURCE: 99999-1-1-6-United_States_TrajectorySegment1-->
+                        <script>
+                            var $slide_1_6_United_States_TrajectorySegment1 = $("#slide_1_6_United_States_TrajectorySegment1");
+                            var $slide_input_1_6_United_States_TrajectorySegment1 = $("#rank_input_1_6_United_States_TrajectorySegment1");
+                            var instance1_6_United_States_TrajectorySegment1;
+                            var min = 0;
+                            var vfromval = 20;
+                            var max = 100;
+
+                            $slide_1_6_United_States_TrajectorySegment1.ionRangeSlider({
+                                skin: "big",
+                                type: "single",
+                                min: min,
+                                max: max,
+                                from: vfromval,
+                                grid: true,
+                                step: 0.01,
+                                grid_num: 10,
+
+                                onStart: function (data) {
+                                    $slide_input_1_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                },
+                                onChange: function (data) {
+                                    $slide_input_1_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                    //UpdateStagingCountry('GEO_A##United_States');
+                                },	
+                                onFinish: function (data) {
+                                        // fired on pointer release
+                                           $slide_input_1_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                        SegTotalvalueCalculation_100('1','6','United_States','Application')
+                                        //UpdateStagingCountry('GEO_A##United_States');
+                                   }                           });
+
+                            instance1_6_United_States_TrajectorySegment1 = $slide_16United_States_TrajectorySegment1.data("ionRangeSlider");
+
+                            $slide_input_1_6_United_States_TrajectorySegment1.on("input", function () {
+                                var val = $(this).prop("value");
+
+                                // validate
+                                if (val < min) {
+                                    val = min;
+                                } else if (val > max) {
+                                    val = max;
+                                }
+
+                                instance1_6_United_States_TrajectorySegment1.update({
+                                    from: val
+                                });
+
+                                $(this).prop("value", val);
+                            });
+                        </script>
+                    </div> </td>
+                    <!-- TREND -VE +VE TD -->
+                        <!--td> <div class="  d-flex align-items-center justify-content-center">
+                        
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_1_6_United_States"  checked class="mr-3 mt-2">
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_1_6_United_States"  class="mr-3 mt-2">
+                        </div></td-->
+                    <!-- END TREND -VE +VE TD -->
+
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td-->
+                    <td align="center"><a href="">SAVE</a></td>
+                </tr>
+             
+        <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Trajectory Segment-5-Application</th>
+        </tr>-->
+        
+                    
+                    <tr>
+                    <!--td></td-->
+                    <!-- NAME TD -->
+                    <td>Trajectory Segment-5</td>
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td> <input name="txt_MSize2_6_United_States" type="text" id="txt_MSize2_6_United_States" value="" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" placeholder="###.#"></td>
+                    <!-- SLIDER PERCENTAGE TD -->
+                    <td colspan="2"><div class="w-100">
+                        <div class="range-slider ranking_slider">
+                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                            <input type="text" maxlength="4" class="js-input rank_input" onchange="SegTotalvalueCalculation_100('2','6','United_States','Application');" name="rank_input_2_6_United_States_TrajectorySegment1" id="rank_input_2_6_United_States_TrajectorySegment1" value="0" size="20" tabindex="3" placeholder="##.#">
+                            <span class="irs irs--big js-irs-31 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="visibility: visible;">0</span><span class="irs-max" style="visibility: visible;">100</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single" style="left: 18.6602%;">24</span></span><span class="irs-grid" style="left: 9.75584%; width: 80.2883%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -4.93491%;">0</span><span class="irs-grid-pol small" style="left: 6.666666666666666%"></span><span class="irs-grid-pol small" style="left: 3.333333333333333%"></span><span class="irs-grid-pol" style="left: 10%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10%; visibility: hidden; margin-left: -7.17487%;">10</span><span class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span class="irs-grid-pol small" style="left: 13.333333333333332%"></span><span class="irs-grid-pol" style="left: 20%"></span><span class="irs-grid-text js-grid-text-2" style="left: 20%; visibility: visible; margin-left: -7.17487%;">20</span><span class="irs-grid-pol small" style="left: 26.666666666666668%"></span><span class="irs-grid-pol small" style="left: 23.333333333333332%"></span><span class="irs-grid-pol" style="left: 30%"></span><span class="irs-grid-text js-grid-text-3" style="left: 30%; visibility: hidden; margin-left: -7.17487%;">30</span><span class="irs-grid-pol small" style="left: 36.666666666666664%"></span><span class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span class="irs-grid-pol" style="left: 40%"></span><span class="irs-grid-text js-grid-text-4" style="left: 40%; margin-left: -7.17487%;">40</span><span class="irs-grid-pol small" style="left: 46.666666666666664%"></span><span class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-5" style="left: 50%; visibility: hidden; margin-left: -7.17487%;">50</span><span class="irs-grid-pol small" style="left: 56.666666666666664%"></span><span class="irs-grid-pol small" style="left: 53.333333333333336%"></span><span class="irs-grid-pol" style="left: 60%"></span><span class="irs-grid-text js-grid-text-6" style="left: 60%; visibility: visible; margin-left: -7.17487%;">60</span><span class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span class="irs-grid-pol" style="left: 70%"></span><span class="irs-grid-text js-grid-text-7" style="left: 70%; visibility: hidden; margin-left: -7.17487%;">70</span><span class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span class="irs-grid-pol small" style="left: 73.33333333333333%"></span><span class="irs-grid-pol" style="left: 80%"></span><span class="irs-grid-text js-grid-text-8" style="left: 80%; margin-left: -7.17487%;">80</span><span class="irs-grid-pol small" style="left: 86.66666666666667%"></span><span class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span class="irs-grid-pol" style="left: 90%"></span><span class="irs-grid-text js-grid-text-9" style="left: 90%; visibility: hidden; margin-left: -7.17487%;">90</span><span class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span class="irs-grid-pol small" style="left: 93.33333333333333%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -9.42182%;">100</span></span><span class="irs-bar irs-bar--single" style="left: 0px; width: 29.125%;"></span><span class="irs-shadow shadow-single" style="display: none;"></span><span class="irs-handle single" style="left: 19.2692%;"><i></i><i></i><i></i></span></span><input type="text" value="0" class="js-range-slider irs-hidden-input" id="slide_2_6_United_States_TrajectorySegment1" tabindex="-1" readonly="">
+                        </div>
+                        <!--DATA SOURCE: 99999-1-2-6-United_States_TrajectorySegment1-->
+                        <script>
+                            var $slide_2_6_United_States_TrajectorySegment1 = $("#slide_2_6_United_States_TrajectorySegment1");
+                            var $slide_input_2_6_United_States_TrajectorySegment1 = $("#rank_input_2_6_United_States_TrajectorySegment1");
+                            var instance2_6_United_States_TrajectorySegment1;
+                            var min = 0;
+                            var vfromval = 24;
+                            var max = 100;
+
+                            $slide_2_6_United_States_TrajectorySegment1.ionRangeSlider({
+                                skin: "big",
+                                type: "single",
+                                min: min,
+                                max: max,
+                                from: vfromval,
+                                grid: true,
+                                step: 0.01,
+                                grid_num: 10,
+
+                                onStart: function (data) {
+                                    $slide_input_2_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                },
+                                onChange: function (data) {
+                                    $slide_input_2_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                    //UpdateStagingCountry('GEO_A##United_States');
+                                },	
+                                onFinish: function (data) {
+                                        // fired on pointer release
+                                           $slide_input_2_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                        SegTotalvalueCalculation_100('2','6','United_States','Application')
+                                        //UpdateStagingCountry('GEO_A##United_States');
+                                   }                           });
+
+                            instance2_6_United_States_TrajectorySegment1 = $slide_26United_States_TrajectorySegment1.data("ionRangeSlider");
+
+                            $slide_input_2_6_United_States_TrajectorySegment1.on("input", function () {
+                                var val = $(this).prop("value");
+
+                                // validate
+                                if (val < min) {
+                                    val = min;
+                                } else if (val > max) {
+                                    val = max;
+                                }
+
+                                instance2_6_United_States_TrajectorySegment1.update({
+                                    from: val
+                                });
+
+                                $(this).prop("value", val);
+                            });
+                        </script>
+                    </div> </td>
+                    <!-- TREND -VE +VE TD -->
+                        <!--td> <div class="  d-flex align-items-center justify-content-center">
+                        
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_2_6_United_States"  checked class="mr-3 mt-2">
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_2_6_United_States"  class="mr-3 mt-2">
+                        </div></td-->
+                    <!-- END TREND -VE +VE TD -->
+
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td-->
+                    <td align="center"><a href="">SAVE</a></td>
+                </tr>
+             
+        <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Trajectory Segment-6-Application</th>
+        </tr>-->
+        
+                    
+                    <tr>
+                    <!--td></td-->
+                    <!-- NAME TD -->
+                    <td>Trajectory Segment-6</td>
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td> <input name="txt_MSize3_6_United_States" type="text" id="txt_MSize3_6_United_States" value="" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" placeholder="###.#"></td>
+                    <!-- SLIDER PERCENTAGE TD -->
+                    <td colspan="2"><div class="w-100">
+                        <div class="range-slider ranking_slider">
+                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                            <input type="text" maxlength="4" class="js-input rank_input" onchange="SegTotalvalueCalculation_100('3','6','United_States','Application');" name="rank_input_3_6_United_States_TrajectorySegment1" id="rank_input_3_6_United_States_TrajectorySegment1" value="0" size="20" tabindex="3" placeholder="##.#">
+                            <span class="irs irs--big js-irs-32 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="visibility: hidden;">0</span><span class="irs-max" style="visibility: visible;">100</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single" style="left: 14.6458%;">19</span></span><span class="irs-grid" style="left: 9.75584%; width: 80.2883%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -4.93491%;">0</span><span class="irs-grid-pol small" style="left: 6.666666666666666%"></span><span class="irs-grid-pol small" style="left: 3.333333333333333%"></span><span class="irs-grid-pol" style="left: 10%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10%; visibility: hidden; margin-left: -7.17487%;">10</span><span class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span class="irs-grid-pol small" style="left: 13.333333333333332%"></span><span class="irs-grid-pol" style="left: 20%"></span><span class="irs-grid-text js-grid-text-2" style="left: 20%; visibility: visible; margin-left: -7.17487%;">20</span><span class="irs-grid-pol small" style="left: 26.666666666666668%"></span><span class="irs-grid-pol small" style="left: 23.333333333333332%"></span><span class="irs-grid-pol" style="left: 30%"></span><span class="irs-grid-text js-grid-text-3" style="left: 30%; visibility: hidden; margin-left: -7.17487%;">30</span><span class="irs-grid-pol small" style="left: 36.666666666666664%"></span><span class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span class="irs-grid-pol" style="left: 40%"></span><span class="irs-grid-text js-grid-text-4" style="left: 40%; margin-left: -7.17487%;">40</span><span class="irs-grid-pol small" style="left: 46.666666666666664%"></span><span class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-5" style="left: 50%; visibility: hidden; margin-left: -7.17487%;">50</span><span class="irs-grid-pol small" style="left: 56.666666666666664%"></span><span class="irs-grid-pol small" style="left: 53.333333333333336%"></span><span class="irs-grid-pol" style="left: 60%"></span><span class="irs-grid-text js-grid-text-6" style="left: 60%; visibility: visible; margin-left: -7.17487%;">60</span><span class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span class="irs-grid-pol" style="left: 70%"></span><span class="irs-grid-text js-grid-text-7" style="left: 70%; visibility: hidden; margin-left: -7.17487%;">70</span><span class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span class="irs-grid-pol small" style="left: 73.33333333333333%"></span><span class="irs-grid-pol" style="left: 80%"></span><span class="irs-grid-text js-grid-text-8" style="left: 80%; margin-left: -7.17487%;">80</span><span class="irs-grid-pol small" style="left: 86.66666666666667%"></span><span class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span class="irs-grid-pol" style="left: 90%"></span><span class="irs-grid-text js-grid-text-9" style="left: 90%; visibility: hidden; margin-left: -7.17487%;">90</span><span class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span class="irs-grid-pol small" style="left: 93.33333333333333%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -9.42182%;">100</span></span><span class="irs-bar irs-bar--single" style="left: 0px; width: 25.1106%;"></span><span class="irs-shadow shadow-single" style="display: none;"></span><span class="irs-handle single" style="left: 15.2548%;"><i></i><i></i><i></i></span></span><input type="text" value="0" class="js-range-slider irs-hidden-input" id="slide_3_6_United_States_TrajectorySegment1" tabindex="-1" readonly="">
+                        </div>
+                        <!--DATA SOURCE: 99999-1-3-6-United_States_TrajectorySegment1-->
+                        <script>
+                            var $slide_3_6_United_States_TrajectorySegment1 = $("#slide_3_6_United_States_TrajectorySegment1");
+                            var $slide_input_3_6_United_States_TrajectorySegment1 = $("#rank_input_3_6_United_States_TrajectorySegment1");
+                            var instance3_6_United_States_TrajectorySegment1;
+                            var min = 0;
+                            var vfromval = 19;
+                            var max = 100;
+
+                            $slide_3_6_United_States_TrajectorySegment1.ionRangeSlider({
+                                skin: "big",
+                                type: "single",
+                                min: min,
+                                max: max,
+                                from: vfromval,
+                                grid: true,
+                                step: 0.01,
+                                grid_num: 10,
+
+                                onStart: function (data) {
+                                    $slide_input_3_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                },
+                                onChange: function (data) {
+                                    $slide_input_3_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                    //UpdateStagingCountry('GEO_A##United_States');
+                                },	
+                                onFinish: function (data) {
+                                        // fired on pointer release
+                                           $slide_input_3_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                        SegTotalvalueCalculation_100('3','6','United_States','Application')
+                                        //UpdateStagingCountry('GEO_A##United_States');
+                                   }                           });
+
+                            instance3_6_United_States_TrajectorySegment1 = $slide_36United_States_TrajectorySegment1.data("ionRangeSlider");
+
+                            $slide_input_3_6_United_States_TrajectorySegment1.on("input", function () {
+                                var val = $(this).prop("value");
+
+                                // validate
+                                if (val < min) {
+                                    val = min;
+                                } else if (val > max) {
+                                    val = max;
+                                }
+
+                                instance3_6_United_States_TrajectorySegment1.update({
+                                    from: val
+                                });
+
+                                $(this).prop("value", val);
+                            });
+                        </script>
+                    </div> </td>
+                    <!-- TREND -VE +VE TD -->
+                        <!--td> <div class="  d-flex align-items-center justify-content-center">
+                        
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_3_6_United_States"  checked class="mr-3 mt-2">
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_3_6_United_States"  class="mr-3 mt-2">
+                        </div></td-->
+                    <!-- END TREND -VE +VE TD -->
+
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td-->
+                    <td align="center"><a href="">SAVE</a></td>
+                </tr>
+             
+        <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Trajectory Segment-7-Application</th>
+        </tr>-->
+        
+                    
+                    <tr>
+                    <!--td></td-->
+                    <!-- NAME TD -->
+                    <td>Trajectory Segment-7</td>
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td> <input name="txt_MSize4_6_United_States" type="text" id="txt_MSize4_6_United_States" value="" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" placeholder="###.#"></td>
+                    <!-- SLIDER PERCENTAGE TD -->
+                    <td colspan="2"><div class="w-100">
+                        <div class="range-slider ranking_slider">
+                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                            <input type="text" maxlength="4" class="js-input rank_input" onchange="SegTotalvalueCalculation_100('4','6','United_States','Application');" name="rank_input_4_6_United_States_TrajectorySegment1" id="rank_input_4_6_United_States_TrajectorySegment1" value="0" size="20" tabindex="3" placeholder="##.#">
+                            <span class="irs irs--big js-irs-33 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="visibility: hidden;">0</span><span class="irs-max" style="visibility: visible;">100</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single" style="left: 13.04%;">17</span></span><span class="irs-grid" style="left: 9.75584%; width: 80.2883%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -4.93491%;">0</span><span class="irs-grid-pol small" style="left: 6.666666666666666%"></span><span class="irs-grid-pol small" style="left: 3.333333333333333%"></span><span class="irs-grid-pol" style="left: 10%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10%; visibility: hidden; margin-left: -7.17487%;">10</span><span class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span class="irs-grid-pol small" style="left: 13.333333333333332%"></span><span class="irs-grid-pol" style="left: 20%"></span><span class="irs-grid-text js-grid-text-2" style="left: 20%; visibility: visible; margin-left: -7.17487%;">20</span><span class="irs-grid-pol small" style="left: 26.666666666666668%"></span><span class="irs-grid-pol small" style="left: 23.333333333333332%"></span><span class="irs-grid-pol" style="left: 30%"></span><span class="irs-grid-text js-grid-text-3" style="left: 30%; visibility: hidden; margin-left: -7.17487%;">30</span><span class="irs-grid-pol small" style="left: 36.666666666666664%"></span><span class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span class="irs-grid-pol" style="left: 40%"></span><span class="irs-grid-text js-grid-text-4" style="left: 40%; margin-left: -7.17487%;">40</span><span class="irs-grid-pol small" style="left: 46.666666666666664%"></span><span class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-5" style="left: 50%; visibility: hidden; margin-left: -7.17487%;">50</span><span class="irs-grid-pol small" style="left: 56.666666666666664%"></span><span class="irs-grid-pol small" style="left: 53.333333333333336%"></span><span class="irs-grid-pol" style="left: 60%"></span><span class="irs-grid-text js-grid-text-6" style="left: 60%; visibility: visible; margin-left: -7.17487%;">60</span><span class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span class="irs-grid-pol" style="left: 70%"></span><span class="irs-grid-text js-grid-text-7" style="left: 70%; visibility: hidden; margin-left: -7.17487%;">70</span><span class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span class="irs-grid-pol small" style="left: 73.33333333333333%"></span><span class="irs-grid-pol" style="left: 80%"></span><span class="irs-grid-text js-grid-text-8" style="left: 80%; margin-left: -7.17487%;">80</span><span class="irs-grid-pol small" style="left: 86.66666666666667%"></span><span class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span class="irs-grid-pol" style="left: 90%"></span><span class="irs-grid-text js-grid-text-9" style="left: 90%; visibility: hidden; margin-left: -7.17487%;">90</span><span class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span class="irs-grid-pol small" style="left: 93.33333333333333%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -9.42182%;">100</span></span><span class="irs-bar irs-bar--single" style="left: 0px; width: 23.5049%;"></span><span class="irs-shadow shadow-single" style="display: none;"></span><span class="irs-handle single" style="left: 13.649%;"><i></i><i></i><i></i></span></span><input type="text" value="0" class="js-range-slider irs-hidden-input" id="slide_4_6_United_States_TrajectorySegment1" tabindex="-1" readonly="">
+                        </div>
+                        <!--DATA SOURCE: 99999-1-4-6-United_States_TrajectorySegment1-->
+                        <script>
+                            var $slide_4_6_United_States_TrajectorySegment1 = $("#slide_4_6_United_States_TrajectorySegment1");
+                            var $slide_input_4_6_United_States_TrajectorySegment1 = $("#rank_input_4_6_United_States_TrajectorySegment1");
+                            var instance4_6_United_States_TrajectorySegment1;
+                            var min = 0;
+                            var vfromval = 17;
+                            var max = 100;
+
+                            $slide_4_6_United_States_TrajectorySegment1.ionRangeSlider({
+                                skin: "big",
+                                type: "single",
+                                min: min,
+                                max: max,
+                                from: vfromval,
+                                grid: true,
+                                step: 0.01,
+                                grid_num: 10,
+
+                                onStart: function (data) {
+                                    $slide_input_4_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                },
+                                onChange: function (data) {
+                                    $slide_input_4_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                    //UpdateStagingCountry('GEO_A##United_States');
+                                },	
+                                onFinish: function (data) {
+                                        // fired on pointer release
+                                           $slide_input_4_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                        SegTotalvalueCalculation_100('4','6','United_States','Application')
+                                        //UpdateStagingCountry('GEO_A##United_States');
+                                   }                           });
+
+                            instance4_6_United_States_TrajectorySegment1 = $slide_46United_States_TrajectorySegment1.data("ionRangeSlider");
+
+                            $slide_input_4_6_United_States_TrajectorySegment1.on("input", function () {
+                                var val = $(this).prop("value");
+
+                                // validate
+                                if (val < min) {
+                                    val = min;
+                                } else if (val > max) {
+                                    val = max;
+                                }
+
+                                instance4_6_United_States_TrajectorySegment1.update({
+                                    from: val
+                                });
+
+                                $(this).prop("value", val);
+                            });
+                        </script>
+                    </div> </td>
+                    <!-- TREND -VE +VE TD -->
+                        <!--td> <div class="  d-flex align-items-center justify-content-center">
+                        
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_4_6_United_States"  checked class="mr-3 mt-2">
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_4_6_United_States"  class="mr-3 mt-2">
+                        </div></td-->
+                    <!-- END TREND -VE +VE TD -->
+
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td-->
+                    <td align="center"><a href="">SAVE</a></td>
+                </tr>
+             
+        <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Trajectory Segment-8-Application</th>
+        </tr>-->
+        
+                    
+                    <tr>
+                    <!--td></td-->
+                    <!-- NAME TD -->
+                    <td>Trajectory Segment-8</td>
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td> <input name="txt_MSize5_6_United_States" type="text" id="txt_MSize5_6_United_States" value="" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" placeholder="###.#"></td>
+                    <!-- SLIDER PERCENTAGE TD -->
+                    <td colspan="2"><div class="w-100">
+                        <div class="range-slider ranking_slider">
+                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                            <input type="text" maxlength="4" class="js-input rank_input" onchange="SegTotalvalueCalculation_100('5','6','United_States','Application');" name="rank_input_5_6_United_States_TrajectorySegment1" id="rank_input_5_6_United_States_TrajectorySegment1" value="0" size="20" tabindex="3" placeholder="##.#">
+                            <span class="irs irs--big js-irs-34 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="visibility: hidden;">0</span><span class="irs-max" style="visibility: visible;">100</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single" style="left: 8.52372%;">11</span></span><span class="irs-grid" style="left: 9.75584%; width: 80.2883%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -4.93491%;">0</span><span class="irs-grid-pol small" style="left: 6.666666666666666%"></span><span class="irs-grid-pol small" style="left: 3.333333333333333%"></span><span class="irs-grid-pol" style="left: 10%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10%; visibility: hidden; margin-left: -7.17487%;">10</span><span class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span class="irs-grid-pol small" style="left: 13.333333333333332%"></span><span class="irs-grid-pol" style="left: 20%"></span><span class="irs-grid-text js-grid-text-2" style="left: 20%; visibility: visible; margin-left: -7.17487%;">20</span><span class="irs-grid-pol small" style="left: 26.666666666666668%"></span><span class="irs-grid-pol small" style="left: 23.333333333333332%"></span><span class="irs-grid-pol" style="left: 30%"></span><span class="irs-grid-text js-grid-text-3" style="left: 30%; visibility: hidden; margin-left: -7.17487%;">30</span><span class="irs-grid-pol small" style="left: 36.666666666666664%"></span><span class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span class="irs-grid-pol" style="left: 40%"></span><span class="irs-grid-text js-grid-text-4" style="left: 40%; margin-left: -7.17487%;">40</span><span class="irs-grid-pol small" style="left: 46.666666666666664%"></span><span class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-5" style="left: 50%; visibility: hidden; margin-left: -7.17487%;">50</span><span class="irs-grid-pol small" style="left: 56.666666666666664%"></span><span class="irs-grid-pol small" style="left: 53.333333333333336%"></span><span class="irs-grid-pol" style="left: 60%"></span><span class="irs-grid-text js-grid-text-6" style="left: 60%; visibility: visible; margin-left: -7.17487%;">60</span><span class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span class="irs-grid-pol" style="left: 70%"></span><span class="irs-grid-text js-grid-text-7" style="left: 70%; visibility: hidden; margin-left: -7.17487%;">70</span><span class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span class="irs-grid-pol small" style="left: 73.33333333333333%"></span><span class="irs-grid-pol" style="left: 80%"></span><span class="irs-grid-text js-grid-text-8" style="left: 80%; margin-left: -7.17487%;">80</span><span class="irs-grid-pol small" style="left: 86.66666666666667%"></span><span class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span class="irs-grid-pol" style="left: 90%"></span><span class="irs-grid-text js-grid-text-9" style="left: 90%; visibility: hidden; margin-left: -7.17487%;">90</span><span class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span class="irs-grid-pol small" style="left: 93.33333333333333%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -9.42182%;">100</span></span><span class="irs-bar irs-bar--single" style="left: 0px; width: 18.6876%;"></span><span class="irs-shadow shadow-single" style="display: none;"></span><span class="irs-handle single" style="left: 8.83172%;"><i></i><i></i><i></i></span></span><input type="text" value="0" class="js-range-slider irs-hidden-input" id="slide_5_6_United_States_TrajectorySegment1" tabindex="-1" readonly="">
+                        </div>
+                        <!--DATA SOURCE: 99999-1-5-6-United_States_TrajectorySegment1-->
+                        <script>
+                            var $slide_5_6_United_States_TrajectorySegment1 = $("#slide_5_6_United_States_TrajectorySegment1");
+                            var $slide_input_5_6_United_States_TrajectorySegment1 = $("#rank_input_5_6_United_States_TrajectorySegment1");
+                            var instance5_6_United_States_TrajectorySegment1;
+                            var min = 0;
+                            var vfromval = 11;
+                            var max = 100;
+
+                            $slide_5_6_United_States_TrajectorySegment1.ionRangeSlider({
+                                skin: "big",
+                                type: "single",
+                                min: min,
+                                max: max,
+                                from: vfromval,
+                                grid: true,
+                                step: 0.01,
+                                grid_num: 10,
+
+                                onStart: function (data) {
+                                    $slide_input_5_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                },
+                                onChange: function (data) {
+                                    $slide_input_5_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                    //UpdateStagingCountry('GEO_A##United_States');
+                                },	
+                                onFinish: function (data) {
+                                        // fired on pointer release
+                                           $slide_input_5_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                        SegTotalvalueCalculation_100('5','6','United_States','Application')
+                                        //UpdateStagingCountry('GEO_A##United_States');
+                                   }                           });
+
+                            instance5_6_United_States_TrajectorySegment1 = $slide_56United_States_TrajectorySegment1.data("ionRangeSlider");
+
+                            $slide_input_5_6_United_States_TrajectorySegment1.on("input", function () {
+                                var val = $(this).prop("value");
+
+                                // validate
+                                if (val < min) {
+                                    val = min;
+                                } else if (val > max) {
+                                    val = max;
+                                }
+
+                                instance5_6_United_States_TrajectorySegment1.update({
+                                    from: val
+                                });
+
+                                $(this).prop("value", val);
+                            });
+                        </script>
+                    </div> </td>
+                    <!-- TREND -VE +VE TD -->
+                        <!--td> <div class="  d-flex align-items-center justify-content-center">
+                        
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_5_6_United_States"  checked class="mr-3 mt-2">
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_5_6_United_States"  class="mr-3 mt-2">
+                        </div></td-->
+                    <!-- END TREND -VE +VE TD -->
+
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td-->
+                    <td align="center"><a href="">SAVE</a></td>
+                </tr>
+             
+        <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Trajectory Segment-9-Application</th>
+        </tr>-->
+        
+                    
+                    <tr>
+                    <!--td></td-->
+                    <!-- NAME TD -->
+                    <td>Trajectory Segment-9</td>
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td> <input name="txt_MSize6_6_United_States" type="text" id="txt_MSize6_6_United_States" value="" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" placeholder="###.#"></td>
+                    <!-- SLIDER PERCENTAGE TD -->
+                    <td colspan="2"><div class="w-100">
+                        <div class="range-slider ranking_slider">
+                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                            <input type="text" maxlength="4" class="js-input rank_input" onchange="SegTotalvalueCalculation_100('6','6','United_States','Application');" name="rank_input_6_6_United_States_TrajectorySegment1" id="rank_input_6_6_United_States_TrajectorySegment1" value="0" size="20" tabindex="3" placeholder="##.#">
+                            <span class="irs irs--big js-irs-35 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="visibility: hidden;">0</span><span class="irs-max" style="visibility: visible;">100</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single" style="left: 8.80303%;">8</span></span><span class="irs-grid" style="left: 9.75584%; width: 80.2883%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -4.93491%;">0</span><span class="irs-grid-pol small" style="left: 6.666666666666666%"></span><span class="irs-grid-pol small" style="left: 3.333333333333333%"></span><span class="irs-grid-pol" style="left: 10%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10%; visibility: hidden; margin-left: -7.17487%;">10</span><span class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span class="irs-grid-pol small" style="left: 13.333333333333332%"></span><span class="irs-grid-pol" style="left: 20%"></span><span class="irs-grid-text js-grid-text-2" style="left: 20%; visibility: visible; margin-left: -7.17487%;">20</span><span class="irs-grid-pol small" style="left: 26.666666666666668%"></span><span class="irs-grid-pol small" style="left: 23.333333333333332%"></span><span class="irs-grid-pol" style="left: 30%"></span><span class="irs-grid-text js-grid-text-3" style="left: 30%; visibility: hidden; margin-left: -7.17487%;">30</span><span class="irs-grid-pol small" style="left: 36.666666666666664%"></span><span class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span class="irs-grid-pol" style="left: 40%"></span><span class="irs-grid-text js-grid-text-4" style="left: 40%; margin-left: -7.17487%;">40</span><span class="irs-grid-pol small" style="left: 46.666666666666664%"></span><span class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-5" style="left: 50%; visibility: hidden; margin-left: -7.17487%;">50</span><span class="irs-grid-pol small" style="left: 56.666666666666664%"></span><span class="irs-grid-pol small" style="left: 53.333333333333336%"></span><span class="irs-grid-pol" style="left: 60%"></span><span class="irs-grid-text js-grid-text-6" style="left: 60%; visibility: visible; margin-left: -7.17487%;">60</span><span class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span class="irs-grid-pol" style="left: 70%"></span><span class="irs-grid-text js-grid-text-7" style="left: 70%; visibility: hidden; margin-left: -7.17487%;">70</span><span class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span class="irs-grid-pol small" style="left: 73.33333333333333%"></span><span class="irs-grid-pol" style="left: 80%"></span><span class="irs-grid-text js-grid-text-8" style="left: 80%; margin-left: -7.17487%;">80</span><span class="irs-grid-pol small" style="left: 86.66666666666667%"></span><span class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span class="irs-grid-pol" style="left: 90%"></span><span class="irs-grid-text js-grid-text-9" style="left: 90%; visibility: hidden; margin-left: -7.17487%;">90</span><span class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span class="irs-grid-pol small" style="left: 93.33333333333333%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -9.42182%;">100</span></span><span class="irs-bar irs-bar--single" style="left: 0px; width: 16.2789%;"></span><span class="irs-shadow shadow-single" style="display: none;"></span><span class="irs-handle single" style="left: 6.42307%;"><i></i><i></i><i></i></span></span><input type="text" value="0" class="js-range-slider irs-hidden-input" id="slide_6_6_United_States_TrajectorySegment1" tabindex="-1" readonly="">
+                        </div>
+                        <!--DATA SOURCE: 99999-1-6-6-United_States_TrajectorySegment1-->
+                        <script>
+                            var $slide_6_6_United_States_TrajectorySegment1 = $("#slide_6_6_United_States_TrajectorySegment1");
+                            var $slide_input_6_6_United_States_TrajectorySegment1 = $("#rank_input_6_6_United_States_TrajectorySegment1");
+                            var instance6_6_United_States_TrajectorySegment1;
+                            var min = 0;
+                            var vfromval = 8;
+                            var max = 100;
+
+                            $slide_6_6_United_States_TrajectorySegment1.ionRangeSlider({
+                                skin: "big",
+                                type: "single",
+                                min: min,
+                                max: max,
+                                from: vfromval,
+                                grid: true,
+                                step: 0.01,
+                                grid_num: 10,
+
+                                onStart: function (data) {
+                                    $slide_input_6_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                },
+                                onChange: function (data) {
+                                    $slide_input_6_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                    //UpdateStagingCountry('GEO_A##United_States');
+                                },	
+                                onFinish: function (data) {
+                                        // fired on pointer release
+                                           $slide_input_6_6_United_States_TrajectorySegment1.prop("value", data
+                                        .from);
+                                        SegTotalvalueCalculation_100('6','6','United_States','Application')
+                                        //UpdateStagingCountry('GEO_A##United_States');
+                                   }                           });
+
+                            instance6_6_United_States_TrajectorySegment1 = $slide_66United_States_TrajectorySegment1.data("ionRangeSlider");
+
+                            $slide_input_6_6_United_States_TrajectorySegment1.on("input", function () {
+                                var val = $(this).prop("value");
+
+                                // validate
+                                if (val < min) {
+                                    val = min;
+                                } else if (val > max) {
+                                    val = max;
+                                }
+
+                                instance6_6_United_States_TrajectorySegment1.update({
+                                    from: val
+                                });
+
+                                $(this).prop("value", val);
+                            });
+                        </script>
+                    </div> </td>
+                    <!-- TREND -VE +VE TD -->
+                        <!--td> <div class="  d-flex align-items-center justify-content-center">
+                        
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_6_6_United_States"  checked class="mr-3 mt-2">
+                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_6_6_United_States"  class="mr-3 mt-2">
+                        </div></td-->
+                    <!-- END TREND -VE +VE TD -->
+
+                    <!-- MARKET SIZE 2019 TD -->
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <td align="center"><input type="textbox" name="countryUnited_States" placeholder"##.#"="" size="1"></td>
+                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>
+                    <td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td-->
+                    <td align="center"><a href="">SAVE</a></td>
+                </tr>
+             
+        
+        <tr>
+                   
+                    
+                    <td colspan="8" style="font-size: 17px;font-weight: bold;color: #900;"><div class="w-100"><h5 style="font-size: 15px; margin-bottom:0px;">GEOGRAPHY: UNITED STATES - APPLICATION: END-USE</h5>
+                    </div></td>
+                    </tr>
+                    <tr>
+                        
+                        <td class="SEGMENT" colspan="2" style="text-align: right;"><b>APPLICATION TOTAL: </b></td>
+                        
+                       <td style="text-align: left;"><input name="txtTotal_Application_United_States" type="text" id="txtTotal_Application_United_States" value="100" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" placeholder="###.#"></td>
+
+                       <td colspan="5" style="text-align: left;"><input name="BTN_Application_United_States" type="button" id="BTN_Application_United_States" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" value="UPDATE"></td>
+                    </tr>
+                    
+             
+</tbody></table>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>

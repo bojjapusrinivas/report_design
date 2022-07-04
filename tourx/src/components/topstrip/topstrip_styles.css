@@ -1,0 +1,37 @@
+/*=========================
+        TOP STRIP
+=========================*/
+
+.pxi-top-strip{
+    padding:8px;
+    background-color: var(--primary)
+}
+
+
+.pxi-topbar-contact {
+    color:#fff;
+
+}
+
+.pxi-topbar-contact a{
+    color: #fff;
+    font-weight: 500;
+    margin: 0px 18px 0px 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+   
+}
+
+.pxi-topbar-social ul li a{
+    color: var(--secondary);
+    margin: 10px 15px;
+    font-size: 14px;
+}
+
+.pxi-laungage select{
+        background: none;
+        text-align: center;
+        color: var(--white);
+        border: none;
+        font-weight:500
+}

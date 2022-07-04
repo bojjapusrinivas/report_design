@@ -1,0 +1,40 @@
+/*===================
+ self_managment_page
+===================*/
+
+#self_managment_page .count {
+    font-size: 14px !important;
+}
+.company_cont_block {
+    width: 100%;
+    background: rgb(248, 248, 248);
+    border: rgb(255, 255, 255) solid 1px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 28px;
+    height: 28px;
+    overflow: hidden;
+}
+.company_cont_block:hover {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.0);
+    -webkit-box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.0);
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    min-height: 70px;
+    border: rgba(0, 0, 0, 0.15) solid 1px;
+}
+@media only screen and (max-width: 959px) {
+    .company_cont_block:hover {
+        box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.0);
+        -webkit-box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.0);
+        transition: all linear 0.5s;
+        -webkit-transition: all linear 0.5s;
+        min-height: auto;
+        height: auto;
+        border: rgba(0, 0, 0, 0.15) solid 1px;
+    }
+}

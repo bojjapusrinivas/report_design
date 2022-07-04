@@ -1,0 +1,452 @@
+
+/****************************
+            FONTS
+***************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:wght@900&display=swap');
+
+
+
+:root {
+    
+    --white: #ffffff;
+    --black: #000;
+    --black-90: calc(var(--black) - 50%);
+    
+    /*----links color---*/
+    --link-color: #4A9DE8;
+    --link-color-hover:#2174C0;
+    
+    /*----font---*/
+    --font-Montserrat: 'Montserrat', sans-serif;
+    --font-Nunito: 'Montserrat', sans-serif;
+    /*---font-size---*/
+    --main-font-size: 14px;
+    --h1:calc(var(--main-font-size) + 20px); 
+    --h2:calc(var(--main-font-size) + 16px); 
+    --h3:calc(var(--main-font-size) + 12px); 
+    --h4:calc(var(--main-font-size) + 6px); 
+    --h5:calc(var(--main-font-size) + 2px ); 
+    --h6:calc(var(--main-font-size) + 1px); 
+    
+    /*----body---*/
+     --bg-color-lightblue:#EBF7FF;
+
+}
+
+
+/****************************
+    GLOBAL STYLES
+***************************/
+::-webkit-input-placeholder {
+    /* Edge */
+    color: var(--page-font-color)
+}
+
+::-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--page-font-color)
+}
+
+::placeholder {
+    color: var(--page-font-color)
+}
+
+/****************************
+    UNIQUE DATA ASSETS PAGE
+***************************/
+body {
+    font-family: var(--font-Montserrat) !important;
+    color: var(--page-font-color) !important;
+    line-height: 21px;
+    font-size: var(--main-font-size);
+    padding-top: 0px !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+     background: var(--bg-color-lightblue)
+}
+
+/****************************
+    LINKS COLOR
+***************************/
+a{
+    color: var(--link-color);
+}
+a:hover{
+    color: var(--link-color-hover) !important
+}
+
+
+
+
+/****************************
+        WAPPER 
+***************************/
+
+#wapper {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+@media   screen and (max-width:1143px){
+    #wapper {
+        width: 992px;
+    }
+}
+
+/****************************
+    NAV BAR
+***************************/
+
+nav{
+    width:100%;
+    background-color: #fff;
+}
+
+@media screen and (max-width:996px){
+    nav{
+        width:992px;
+    }
+}
+
+.navbar .log_ico{
+    width: 180px;
+    height: auto;
+}
+
+.navbar a {
+    float: left;
+    font-size:calc(var(--main-font-size) + 1px);
+    color: var(--page-font-color);
+    text-align: center;
+    font-weight: 500;
+    padding:10px 0px 0px;
+    text-decoration: none;
+}
+
+
+/****************************
+        FONTS 
+***************************/
+
+h1{
+    font-size: var(--h1); 
+}
+h2{
+    font-size: var(--h2); 
+}
+h3{
+    font-size: var(--h3); 
+}
+h4{
+    font-size: var(--h4); 
+}
+h5{
+    font-size: var(--h5); 
+}
+h6{
+    font-size: var(--h6); 
+}
+
+
+p, a, li, ol, span, lable, input{
+    font-size: var(--main-font-size);
+}
+
+
+/*=================================
+    HEADERS
+=================================*/
+.section_header h3 {
+    font-size: calc(var(--main-font-size) + 4px);
+    font-weight: bold;
+    color: #871900;
+    padding: 10px 0px;
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+.section-sub-title h4 {
+    font-size: calc(var(--main-font-size) + 2px);
+    font-weight: 600;
+    margin: 14px 0px;
+}
+
+.report-code-table input {
+    margin-bottom: -10px;
+    display: block;
+}
+
+/*=================================
+        TABLE
+==================================*/
+
+table tr td, table tr th{
+    white-space:wrap;
+    padding:2px !important;
+    font-size: calc(var(--main-font-size) - 1px);
+}
+
+/*=================================
+    UNIQUE_DATA_ASSETS
+==================================*/
+
+#UNIQUE_DATA_ASSETS table thead tr th {
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: calc(var(--main-font-size) - 2px);
+}
+
+#UNIQUE_DATA_ASSETS table tbody tr td {
+
+    vertical-align: middle;
+    font-size: calc(var(--main-font-size) - 2px);
+}
+
+
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(odd) {
+    background-color: #e6f7f6;
+}
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(even) {
+    background-color: #bfe9e6;
+}
+
+
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(1) {
+    min-width: 170px;
+    max-width: 300px;
+    white-space:nowrap;
+   
+   
+}
+
+
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(2),
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(3)
+ {
+    width:75px;
+}
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(4) {
+   
+    width: 80px;
+}
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(5) {
+   
+    width: 100px;
+}
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(6) {
+  
+    width: 150px;
+}
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(7) {
+   
+    width: 85px;
+}
+
+#UNIQUE_DATA_ASSETS table thead tr th:nth-child(8) {
+   
+    width: 300px;
+}
+
+
+
+/*  TABLE HEAD STICKEY */
+
+#UNIQUE_DATA_ASSETS table thead tr th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+#UNIQUE_DATA_ASSETS table thead tr th[scope=row] {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+  }
+
+
+
+.tier-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0px;
+}
+
+.gray-bg {
+    background-color: #E5E5E5;
+}
+
+.tr-foot-tetxt {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.tr-foot-tetxt span {
+    color: #871900;
+}
+
+.tier-block span {
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.tier-block span input[type=radio] {
+    margin-left: 0px !important;
+}
+
+#UNIQUE_DATA_ASSETS table tbody tr td .tier-block span:nth-child(1) {
+    border-radius: 100%;
+    border: #FF0000 solid 3px;
+
+}
+
+#UNIQUE_DATA_ASSETS table tbody tr td .tier-block span:nth-child(2) {
+    border-radius: 100%;
+    border: #006837 solid 5px;
+
+}
+
+#UNIQUE_DATA_ASSETS table tbody tr td .tier-block span:nth-child(3) {
+    border-radius: 100%;
+    border: #2E3192 solid 5px;
+
+}
+
+#UNIQUE_DATA_ASSETS table tbody tr td .tier-block span:nth-child(4) {
+    border-radius: 100%;
+    border: #F7931E solid 5px;
+
+}
+
+#UNIQUE_DATA_ASSETS table tbody tr td input[type=text] {
+    width: 65px;
+    height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    background: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    color: #871900;
+
+}
+
+
+
+#UNIQUE_DATA_ASSETS table tbody tr td input[type=text].unselected {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    border: none;
+    pointer-events:none;
+
+  }
+
+#UNIQUE_DATA_ASSETS table tbody tr td input::placeholder {
+    color: #ccc;
+    font-weight: 400;
+}
+
+.comp-logo-block {
+    width: 70px;
+    overflow: hidden;
+    margin-right: 10px;
+    height: 40px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.comp-logo-block img {
+    width: 100%;
+    height: auto;
+}
+
+.comp-title-link-block {
+    width: 100%;
+}
+
+.comp-title-link-block h5 {
+    font-size:var(--main-font-size);
+    font-weight: 600;
+}
+
+.comp-title-link-block a {
+    color:var(--link-color);
+    font-weight: 600;
+    font-size: calc(var(--main-font-size) - 2px);
+}
+
+/*=====================
+     Range Slider 
+======================*/
+
+.ranking_slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#UNIQUE_DATA_ASSETS .irs-with-grid {
+    width: 85%;
+}
+
+#UNIQUE_DATA_ASSETS .ranking_slider .rank_input {
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #428bca;
+    font-weight: bold;
+    position: relative;
+    margin-right: 5px;
+}
+
+irs--big .irs-line {
+    top: 33px;
+    height: 12px;
+    background-color: white;
+    background: linear-gradient(to bottom, #ddd -50%, white 150%);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+.irs--big .irs-handle {
+    top: 29px !important;
+    width: 18px !important;
+    height: 18px !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: #cbcfd5;
+    background: linear-gradient(to bottom, white 0%, #B4B9BE 30%, white 100%);
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 20%), inset 0 0 3px 1px white;
+    border-radius: 30px;
+}
+
+.irs--big .irs-min, .irs--big .irs-max, .irs-single{
+    display: none !important
+}
+
+.irs--big.irs-with-grid {
+    height: 66px !important;
+    margin-top: -23px !important; 
+}

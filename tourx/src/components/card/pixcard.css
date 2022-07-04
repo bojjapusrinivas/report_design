@@ -1,0 +1,87 @@
+
+
+/*=========================
+        CARD STYLES
+=========================*/
+
+.pix-package-info h5{
+    font-size: 16px;
+    color:var(--primary)
+}
+
+.pix-package-info h5 span{
+    font-size: 22px;
+    font-weight: 600;
+} 
+
+.pxi-package-rating{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary);
+
+}
+
+.pxi-package-rating span{
+    font-size: 15px;
+    color: var(--secondary) !important;
+    margin-right: 5px;
+}
+
+.pxi-cardtitle h3 a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 23px;
+    
+}
+
+.pxi-cardtitle h3 span{
+    font-size: 20px;
+    margin-right:4px;
+    margin-left: -3px;
+}
+
+.pix-card-img{
+    width: 100%;
+    height:auto;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pix-card-img::before{
+content: "";
+position:absolute;
+width: 100%;
+height: 100%;
+background-color: var(--primary);
+opacity: 0.5;
+left: 0px;
+top:0px;
+transition: all 0.2s linear;
+-webkit-transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+z-index: 99;
+}
+
+.pix-card-img:hover::before{
+    opacity: 0;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+
+.pix-card-img img{
+    transform: scale(1, 1);
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+    
+
+.pix-card-img:hover img{
+    transform: scale(1.1, 1.1);
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+    

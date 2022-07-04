@@ -1,0 +1,42 @@
+
+/*=========================
+       page title
+=========================*/
+
+.pxi-page-title{
+    max-width: 516px;
+    font-family: 'Quicksand', sans-serif;
+     
+}
+
+.pxi-page-title h2 {
+    font-size: 40px;
+    line-height: 46px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: var(--black);
+
+}
+
+.pxi-page-title h5 {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: var(--secondary);
+
+}
+
+
+@media only screen and (max-width: 992px){
+    .pxi-page-title h2 {
+        font-size: 32px;
+        line-height:42px;
+    }
+
+    .pxi-page-title h5 {
+        font-size: 17px;
+        line-height: 20px;
+
+    }   
+}

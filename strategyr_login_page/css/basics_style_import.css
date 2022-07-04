@@ -1,0 +1,8 @@
+@import url("style.css"); /* main style */
+@import url("colors/blue.css"); /* Theme*/
+@import url("gia.css"); /* customised style*/
+@import url("gia_switches.css"); /* customised bootstraip supported styles*/
+@import url("font-awesome.css"); /* font Awesome icon*/
+@import url("animate.css"); /* Animation Effects*/
+@import url("all-ie-only.css"); /* ie support */
+@import url("header_footer/header_footer.css"); /* Page header and footer */

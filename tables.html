@@ -1,0 +1,353 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+<style>
+table {
+	margin: 0 auto;
+}
+table tr td {
+	padding: 6px !important;
+}
+table tr td:first-child {
+	text-align: left;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container shadow border p-3">
+  <h5 class="p-2 bg-dark text-white"> Table-1 </h5>
+  <br />
+  <!--table class="table-bordered ">
+    <tbody>
+      <tr>
+        <td><p><strong>Level of Impact (In %)</strong></p></td>
+        <td><p><strong>MRI (% of Hospitals)</strong></p></td>
+        <td><p><strong>CT (% of Hospitals)</strong></p></td>
+        <td><p><strong>Portable X-Rays (% of Hospitals)</strong></p></td>
+        <td><p><strong>Outpatient Radiology (% of Hospitals)</strong></p></td>
+        <td><p><strong>In-Patient Radiology (% of Hospitals)</strong></p></td>
+      </tr>
+      <tr>
+        <td><p>-40% and Above</p></td>
+        <td><p>45.2</p></td>
+        <td><p>32.4</p></td>
+        <td><p>20.4</p></td>
+        <td><p>58.4</p></td>
+        <td><p>28.1</p></td>
+      </tr>
+      <tr>
+        <td><p>-20% to -39%</p></td>
+        <td><p>23.5</p></td>
+        <td><p>33.2</p></td>
+        <td><p>16.6</p></td>
+        <td><p>26.1</p></td>
+        <td><p>22.6</p></td>
+      </tr>
+      <tr>
+        <td><p>-1% to -19%</p></td>
+        <td><p>23.1</p></td>
+        <td><p>25.6</p></td>
+        <td><p>25.4</p></td>
+        <td><p>11.2</p></td>
+        <td><p>30.9</p></td>
+      </tr>
+      <tr>
+        <td><p>1% and Above</p></td>
+        <td><p>8.2</p></td>
+        <td><p>8.8</p></td>
+        <td><p>37.6</p></td>
+        <td><p>4.3</p></td>
+        <td><p>18.4</p></td>
+      </tr>
+      <tr>
+        <td><p><strong>Total</strong></p></td>
+        <td><p><strong>100.0</strong></p></td>
+        <td><p><strong>100.0</strong></p></td>
+        <td><p><strong>100.0</strong></p></td>
+        <td><p><strong>100.0</strong></p></td>
+        <td><p><strong>100.0</strong></p></td>
+      </tr>
+    </tbody>
+  </table-->
+  <br />
+  <h5 class="p-2 bg-dark text-white"> Table-2 </h5>
+  <table class=" table-bordered">
+    <tbody>
+      <tr>
+        <td><p><strong>Processor Name</strong></p></td>
+        <td><p><strong>Country</strong></p></td>
+        <td><p><strong>Max. capacity / week (6-day Ci&nbsp;99Mo)</strong></p></td>
+        <td><p><strong>% Share of World Capacity</strong></p></td>
+        <td><p><strong>Organisation Type</strong></p></td>
+      </tr>
+      <tr>
+        <td><p>Curium</p></td>
+        <td><p>Netherlands</p></td>
+        <td><p>5&nbsp;000</p></td>
+        <td><p>32</p></td>
+        <td><p>Commercial</p></td>
+      </tr>
+      <tr>
+        <td><p>Institut National des Radioéléments (IRE)</p></td>
+        <td><p>Belgium</p></td>
+        <td><p>3&nbsp;500</p></td>
+        <td><p>22</p></td>
+        <td><p>Commercial/Semi-governmental</p></td>
+      </tr>
+      <tr>
+        <td><p>Australian Nuclear Medicine Molydenum-99 Facility (ANM Mo99)</p></td>
+        <td><p>Australia</p></td>
+        <td><p>3&nbsp;500</p></td>
+        <td><p>18</p></td>
+        <td><p>State-Owned</p></td>
+      </tr>
+      <tr>
+        <td><p>Nuclear Technology Products Radioisotopes (NTP)</p></td>
+        <td><p>South Africa</p></td>
+        <td><p>3&nbsp;000</p></td>
+        <td><p>16</p></td>
+        <td><p>Semi-governmental</p></td>
+      </tr>
+      <tr>
+        <td><p>NorthStar Medical Technologies</p></td>
+        <td><p>USA</p></td>
+        <td><p>750</p></td>
+        <td><p>5</p></td>
+        <td><p>Commercial</p></td>
+      </tr>
+      <tr>
+        <td><p>Rosatom (RIAR and KARPOV)</p></td>
+        <td><p>Russia</p></td>
+        <td><p>890</p></td>
+        <td><p>5</p></td>
+        <td><p>Semi-governmental</p></td>
+      </tr>
+      <tr>
+        <td><p>Comision Nacional de Ernergia Atomica (CNEA)</p></td>
+        <td><p>Argentina</p></td>
+        <td><p>400</p></td>
+        <td><p>2</p></td>
+        <td><p>State-Owned</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <h5 class="p-2 bg-dark text-white"> Table-3 </h5>
+  <table class=" table-bordered">
+    <thead>
+      <tr>
+        <td><p><strong>PET Isotope</strong></p></td>
+        <td><p><strong>Half-life</strong></p></td>
+        <td><p><strong>Diagnostic Applications</strong></p></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p>Iodine-124</p></td>
+        <td><p>4.18d</p></td>
+        <td><p>Apoptosis, Cancer Biotherapy, Thyroid Cancer, Glioma, Heart disease, Scout Therapeutic
+            Radioimmunoconjugates, Mediastinal Micrometastates</p></td>
+      </tr>
+      <tr>
+        <td><p>Zirconium-89</p></td>
+        <td><p>3.27d</p></td>
+        <td><p>Brain Tumors, non-Hodgkin’s Lymphoma, Head and Neck Cancers</p></td>
+      </tr>
+      <tr>
+        <td><p>Bromine-76</p></td>
+        <td><p>16.00h</p></td>
+        <td><p>Anti-Carcinoembryonic Antigens, Anti-CEA Antibodies, DNA studies, Nerves of the Heart,
+            Quantitative Imaging</p></td>
+      </tr>
+      <tr>
+        <td><p>Yttrium-86</p></td>
+        <td><p>14.74h</p></td>
+        <td><p>Lung Cancer, Renal Cell Carcinoma, Melanoma, Distribution of Y90</p></td>
+      </tr>
+      <tr>
+        <td><p>Copper-64</p></td>
+        <td><p>12.70h</p></td>
+        <td><p>Cancers, Stem Cell Research, Angiogeneses, Brain diseases, Parkinson’s, Hypoxia, Wilson’s </p></td>
+      </tr>
+      <tr>
+        <td><p>Iron-52</p></td>
+        <td><p>8.28h</p></td>
+        <td><p>Human Bone Marrow, Anemia</p></td>
+      </tr>
+      <tr>
+        <td><p>Fluorine-18</p></td>
+        <td><p>1.83h</p></td>
+        <td><p>Cancers, Alzheimer’s, Parkinson’s, Brain diseases, Heart diseases, Alcohol Addiction,
+            Schizophrenia, Small Animal Imaging, Anorexia, Atherscierosis, Depression, Diabetes,
+            HIV, Hypoxia, Herpes, Infection (Pen-Prosthetic, Hip-Prosthetic, Joint-Prosthetic),
+            Liver, Muscle, Osteomyelitin, Lung Inflammation, Pneumonia, Kennedy, Narcolepsy,
+            Ulcerative Colitis, Chemotherapy Research, Tourettes Syndrome</p></td>
+      </tr>
+      <tr>
+        <td><p>Gallium-68</p></td>
+        <td><p>1.13h</p></td>
+        <td><p>Breast Cancer, Molecular Imaging, Heart Imaging, Immunoscintigraphy, Neuroendrocrine
+            Tumors, Pancreatic Cancer</p></td>
+      </tr>
+      <tr>
+        <td><p>Carbon-11</p></td>
+        <td><p>20.3m</p></td>
+        <td><p>Cancers, Alzheimer’s, Parkinson’s, Epilepsy, Brain diseases, Heart diseases,
+            Alcohol/Drug/Tobacco Addiction, Nicotine Dependence, Pain Processing, Amphetamine
+            Release, Neuropsychiatric, Schizophrenia, Small Animal Imaging</p></td>
+      </tr>
+      <tr>
+        <td><p>Nitrogen-13</p></td>
+        <td><p>9.97m</p></td>
+        <td><p>Ammonia Dog Studies, Coronary Artery Disease, Heart Disease, Diabetes, Myocardial
+            Perfusion, Pulmonary Ventilation, Gamma Camera, Imaging of Heart, Pancreas and Liver,
+            Lupus Erythematosus</p></td>
+      </tr>
+      <tr>
+        <td><p>Copper-62</p></td>
+        <td><p>9.74m</p></td>
+        <td><p>Cerebral and Myocardial Perfusion, Colorectal Cancer, Liver Cancer, Human
+            Biodistribution, Renal Blood Flow, Renal Injury</p></td>
+      </tr>
+      <tr>
+        <td><p>Rubidium-82</p></td>
+        <td><p>1.26m</p></td>
+        <td><p>Heart Disease, Sarcoidosis, Myocardial Perfusion</p></td>
+      </tr>
+      <tr>
+        <td><p>Oxygen-15</p></td>
+        <td><p>122.s</p></td>
+        <td><p>Acute Brain Injury, Arterial Blood Glow, Brain Studies, Brain Cancer, Liver Cancer, Heart
+            Disease, Oxygen Utilization, Oxygen Metabolism, Kinetics of Oxygen, Cerebral Responses,
+            Cerebral Blood Volume, Coronary Artery Vasospasm, Coronary Reserve, Ischemic Stroke
+            Disease, Myocardial Viability, Pain Control, Venous Ulceration</p></td>
+      </tr>
+      <tr>
+        <td><p>PET Isotope</p></td>
+        <td><p>Half-life</p></td>
+        <td><p>Major Therapeutic Applications</p></td>
+      </tr>
+      <tr>
+        <td><p>Iodine-131</p></td>
+        <td><p>8.04 days</p></td>
+        <td><p>Follicular non-Hodgkin’s lymphoma</p></td>
+      </tr>
+      <tr>
+        <td><p>Yttrium-90</p></td>
+        <td><p>2.67 days</p></td>
+        <td><p>Follicular non-Hodgkin’s lymphoma</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="p-2 bg-dark text-white"> Table-5 </h5>
+  <table class=" table-bordered">
+    <tbody>
+      <tr>
+        <td><strong>Company</strong></td>
+        <td><strong>% Share</strong></td>
+      </tr>
+      <tr>
+        <td>GE Healthcare</td>
+        <td>35.8</td>
+      </tr>
+      <tr>
+        <td>Siemens Healthineers</td>
+        <td>23.8</td>
+      </tr>
+      <tr>
+        <td>Curium</td>
+        <td>5.9</td>
+      </tr>
+      <tr>
+        <td>Bayer</td>
+        <td>4.0</td>
+      </tr>
+      <tr>
+        <td>Cardinal Health</td>
+        <td>3.6</td>
+      </tr>
+      <tr>
+        <td>Advanced Accelerator Applications</td>
+        <td>2.9</td>
+      </tr>
+      <tr>
+        <td>Nordion</td>
+        <td>2.5</td>
+      </tr>
+      <tr>
+        <td>Lantheus Medical Imaging</td>
+        <td>2.0</td>
+      </tr>
+      <tr>
+        <td>Fujifilm</td>
+        <td>1.9</td>
+      </tr>
+      <tr>
+        <td>Bracco Imaging</td>
+        <td>1.7</td>
+      </tr>
+      <tr>
+        <td>Eczacýbaþý-Monrol Nuclear Products</td>
+        <td>1.3</td>
+      </tr>
+      <tr>
+        <td>Others</td>
+        <td>14.6</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>100.0</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!--script>
+
+    $(document).ready(function () {
+        $('table td').each(function () {
+            var flag = $.isNumeric($(this).html());
+            if (flag){
+                $(this).css('text-align', 'right');
+            }else{
+                $(this).css('text-align', 'left');
+            };
+			alert($(this).html() + " is numeric ? "+flag);
+
+        });
+    });
+
+    <script-->
+    
+    <script>
+	$(document).ready(function(){
+  $('table td p').each(function(){
+   var flag =   $.isNumeric($(this).html());
+   if(flag){
+     $(this).attr('style', 'text-align:right !important');
+   }else{
+	 var txt = $(this).html().split('&nbsp');
+	 if(txt.length ==1){
+		 var fg =$.isNumeric($(this).html().replace('&nbsp',''));
+		 if(fg){
+		 alert($(this).html() + " is numeric ? "+fg);
+    	 $(this).attr('style', 'text-align:right !important');
+		 }else{
+		 $(this).attr('style', 'text-align:left !important');
+		 }
+		 }
+   }
+  })
+});
+	
+	
+	</script>
+    
+
+
+
+</html>

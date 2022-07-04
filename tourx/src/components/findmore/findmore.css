@@ -1,0 +1,84 @@
+/*=========================
+        FIND MORE
+=========================*/
+
+.pxi-findmore{
+    padding:35px 25px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -50px;
+    z-index: 999;
+}
+
+.pxi-findmore::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color:var(--primary);
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    opacity: 0.9;
+
+}
+
+.pxi-custom-input,
+.pxi-custom-select,
+.pxi-calendar-input
+{
+
+    width: 100%;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 5px;
+
+}
+
+.pxi-custom-input input{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        border: none;
+        font-size: 14px;
+        color: var(--black);
+}
+
+.pxi-calender{
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 14px;
+        border-radius: 5px;
+        font-size: 14px;
+        color: var(--black);
+        text-align: center;
+}
+
+.pxi-custom-select select{
+         height: 100%;
+        width: 93%;
+        text-align: center;
+        border: none;
+        padding: 14px;
+        font-size: 14px;
+        color: var(--black);
+
+}
+
+.pxi-find-btn{
+    background-color: var(--secondary);
+    border-radius: 5px;
+    height:50px;
+    padding:10px;
+    color: var(--white);
+    text-align: center;
+}
+
+.pxi-find-btn a{
+    color: var(--white);
+    font-size: 18px;
+    text-decoration: none;
+}

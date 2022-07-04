@@ -1,0 +1,237 @@
+
+.table-scroll {
+	position:relative;
+	width: 100%;
+	margin:auto;
+	overflow:hidden;
+
+}
+.table-wrap {
+	width:100%;
+	overflow:auto;
+}
+.table-scroll table {
+	width:100%;
+	margin:auto;
+	border-collapse:separate;
+	border-spacing:0;
+}
+.table-scroll th, .table-scroll td {
+	padding:5px 1px;
+	border:1px solid rgba(0,0,0,0.2);
+	/*background:#fff;*/
+	white-space:nowrap;
+	vertical-align:top;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align:center;
+}
+
+
+.top-nav,
+.top-nav .nav-box {
+	line-height: 40px;
+	height: 40px
+}
+
+.handle-counter,
+.med-nav ul {
+	overflow: hidden
+}
+
+.handle-counter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.handle-counter .counter-minus,
+.handle-counter .counter-plus,
+.med-nav ul li a {
+	text-align: center
+}
+
+li,
+ul {
+	list-style: none
+}
+
+button {
+	cursor: pointer
+}
+
+input {
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	padding: 1px 6px
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto
+}
+
+body {
+	font-family: '????', arial;
+	font-size: 14px
+}
+
+.percent {
+	width: 85.71429%
+}
+
+.panel-primary {
+	border-color: #009dda
+}
+
+.top-nav {
+	min-width: 1200px;
+	background-color: #333;
+	color: #aaa;
+	font-size: 12px
+}
+
+.btn,
+.top-nav a:hover {
+	color: #fff
+}
+
+.top-nav .nav-box {
+	float: left
+}
+
+.top-nav a {
+	margin-left: 10px
+}
+
+.med-nav {
+	min-width: 1200px;
+	background-color: #009dda
+}
+
+.med-nav ul li {
+	float: left;
+	margin-right: 10px
+}
+
+.med-nav ul li a {
+	display: block;
+	padding: 0 20px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 45px
+}
+
+.med-nav ul li a:hover,
+.med-nav ul li.active>a {
+	background-color: #0486b9
+}
+
+body,
+html {
+	height: 100%
+}
+
+#container {
+	min-height: 100%;
+	position: relative
+}
+
+#body {
+	padding-bottom: 60px
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background-color: #333
+}
+
+.handle-counter .counter-minus,
+.handle-counter .counter-plus,
+.handle-counter input {
+	float: left;
+	text-align: center
+}
+
+.handle-counter input {
+	width: 40px;
+	border-width: 1px;
+	border-left: none;
+	border-right: none
+}
+
+.btn {
+	padding: 0px 4px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+
+.btn:disabled,
+.btn:disabled:hover {
+	background-color: #a9a9a9;
+	cursor: not-allowed
+}
+
+.btn-primary {
+	background-color: #05aa21
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+	background-color: #046d16
+}
+
+.btn-primary-neg {
+	background-color: #f44336
+}
+
+.btn-primary-neg:focus,
+.btn-primary-neg:hover {
+	background-color: #da0014
+}
+
+.margin-top {
+	margin-top: 20px
+}
+
+.margin-bottom {
+	margin-bottom: 20px
+}
+
+.pull-right {
+	float: right!important
+}
+
+.pull-left {
+	float: left!important
+}
+
+.hide {
+	display: none
+}
+
+.show {
+	display: block
+}
+
+.invisible {
+	visibility: hidden
+}
+
+a {
+	text-decoration: none;
+	color: #999
+}
+
+a:hover {
+	color: #FF5113
+}
+
+.border {
+	border: 1px solid red
+}

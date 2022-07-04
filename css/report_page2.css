@@ -1,0 +1,470 @@
+/*======================
+ GIA REPORT PAGE STYLING
+========================*/
+
+
+/*---------------------
+    ONPAGE POPUP
+----------------------*/
+
+.pageload_popup {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    z-index: 999
+}
+.pageload_popup .card {
+    top: -50px;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    position: relative;
+}
+.pageload_popup.pop_active {
+    opacity: 1;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+}
+.pageload_popup.pop_active .card {
+    top: 0px;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+}
+.pageload_popup .card button.close {
+    float: right;
+    height: 15px !important;
+    width: 15px !important;
+}
+
+/*---------------------
+ DATA POOL NUMBER COUNT
+---------------------*/
+
+.count,
+.count1,
+.count2,
+.count3 {
+    font-size: 22px !important;
+    font-weight: 500;
+}
+
+/*---------------------
+  Covid19 Placekeeper
+----------------------*/
+
+.covid_placekeeper a.covid_19_Acc {
+    position: relative;
+    font-size: 20px;
+}
+.covid_placekeeper a.covid_19_Acc:before {
+    content: '\002B';
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    top: 3px;
+    left: 65%;
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    background: #169fe6;
+    padding: -2px !important;
+    border-radius: 100%;
+    line-height: 23px;
+}
+.covid_placekeeper a.covid_19_Acc.collapsed:before {
+    content: '\002B';
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    top: 3px;
+    left: 65%;
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    background: #169fe6;
+    padding: -2px !important;
+    border-radius: 100%;
+    line-height: 23px;
+}
+.covid_placekeeper a.covid_19_Acc:before {
+    content: '\2212';
+}
+@media only screen and (max-width:992px) {
+    .covid_placekeeper a.covid_19_Acc:before {
+        left: 73%;
+    }
+    .covid_placekeeper a.covid_19_Acc.collapsed:before {
+        left: 73%;
+    }
+}
+@media only screen and (max-width:767px) {
+    .covid_placekeeper a.covid_19_Acc {
+        position: relative;
+        font-size: 15px;
+    }
+    .covid_placekeeper a.covid_19_Acc:before {
+        top: 0 !important;
+        left: 93%;
+        font-weight: bold;
+        background: #169fe6;
+        padding: 10px 0px !important;
+        border-radius: 0px;
+        height: 100%;
+        line-height: 15px;
+        font-size: 15px;
+    }
+    .covid_placekeeper a.covid_19_Acc.collapsed:before {
+        top: 0 !important;
+        left: 93%;
+        font-weight: bold;
+        background: #169fe6;
+        padding: 10px 0px !important;
+        border-radius: 0px;
+        height: 100%;
+        line-height: 15px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:448px) {
+    .covid_placekeeper a.covid_19_Acc.collapsed:before {
+        left: 91%;
+    }
+    .covid_placekeeper a.covid_19_Acc:before {
+        left: 91%;
+    }
+}
+
+/*---------------------
+SEGMENTS TAB & ACCORDION
+---------------------*/
+
+.players_tab {
+    display: block;
+}
+.tabs-container .tab_accordion {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 0px 18px 0px 8px !important;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 13px;
+    transition: 0.4s;
+    font-weight: 600;
+    line-height: 18px;
+    position: relative;
+    display: none;
+}
+.tabs-container .tab_accordion .active,
+.tabs-container .tab_accordion:hover {
+    background-color: #eee;
+}
+.tabs-container .tab_accordion:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 20px;
+    visibility: hidden;
+}
+.tabs-container .tab_accordion.active:after {
+    content: "\2212";
+    color: #000;
+}
+.tabs-container .panel4 {
+    background-color: #fff;
+    min-height: auto !important;
+    padding: 0px 18px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.tabs-container .panel4 p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+@media only screen and (max-width:767px) {
+    .players_tab {
+        display: none;
+    }
+    .tabs-container .tab_accordion {
+        font-size: 15px;
+        background-color: #eee;
+        /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);*/
+        padding: 8px 0px 5px 8px !important;
+        line-height: 17px;
+        margin-bottom: 0px;
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-weight: bold
+    }
+    .tabs-container .tab_accordion:before {
+        content: '';
+        position: absolute;
+        right: 0px;
+        width: 25px;
+        height: 100%;
+        top: 0px;
+        color: #000 !important;
+    }
+    .tabs-container .tab_accordion:after {
+        visibility: visible;
+        font-size: 15px;
+        right: 9px;
+        z-index: 99;
+        position: absolute;
+        top: calc(100% - 70%);
+    }
+    .tabs-container .panel4 {
+        max-height: 0px;
+    }
+}
+
+/*---------------------
+ABSTRACT ACCORDION
+---------------------*/
+
+.released_abstract .accordion_rel {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 0px 18px 0px 8px !important;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 13px;
+    transition: 0.4s;
+    font-weight: 600;
+    line-height: 18px;
+    position: relative;
+}
+.released_abstract .accordion_rel .active,
+.released_abstract .accordion_rel:hover {
+    background-color: #fff;
+}
+.released_abstract .accordion_rel:after {
+    content: '\002B';
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 20px;
+    visibility: hidden;
+}
+.released_abstract .accordion_rel.active:after {
+    content: "\2212";
+    color: #fff;
+}
+.released_abstract .panel2 {
+    background-color: #fff;
+    max-height: auto !important;
+    padding: 2px 18px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.released_abstract . .panel2 p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+@media only screen and (max-width:767px) {
+    .released_abstract .accordion_rel {
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 8px 35px 5px 8px !important;
+        font-weight: 300;
+        line-height: 17px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .released_abstract .accordion_rel:before {
+        content: '';
+        position: absolute;
+        right: 0px;
+        width: 25px;
+        height: 100%;
+        background: #169FE6;
+        top: 0px;
+    }
+    .released_abstract .accordion_rel:after {
+        visibility: visible;
+        font-size: 15px;
+        right: 9px;
+        z-index: 99;
+        position: absolute;
+        top: calc(100% - 70%);
+    }
+    .released_abstract .panel2 {
+        max-height: 0px;
+    }
+}
+
+/*==============================
+       button section
+==============================*/
+
+.accordion_new .accordion_key {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 6px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    transition: 0.4s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.accordion_new .active,
+.accordion_new .accordion_key:hover {
+    background-color: #eee;
+}
+.accordion_new .accordion_key:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.accordion_new .active:after {
+    content: "\2212";
+}
+.accordion_new .panel3 {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+@media only screen and (max-width:448px) {
+    .accordion_new .accordion_key {
+        background-color: #eee;
+        color: #000;
+        cursor: pointer;
+        padding: 6px 3px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+        transition: 0.4s;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
+
+/*=================
+    INSIDER TAB
+==================*/
+
+.insider.offer {
+    overflow: visible !important;
+}
+.insider .offer-content {
+    padding: 10px;
+    position: relative;
+    overflow: visible;
+}
+.insider .offer-content .grade {
+    width: 25px;
+    height: 25px;
+    display: block;
+    border-radius: 100% !important;
+    color: #fff;
+    font-size: 15px;
+    padding: 2px;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    left: 40%;
+}
+.insider .offer-content .lead {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+}
+.inside > .offer-primary .shape {
+    border-width: 0 30px 40px 0 !important;
+}
+.insider_star_ranking i {
+    color: #fff;
+    background: #067574;
+    padding: 1px;
+    transform: skewX(-10deg);
+    margin: 0 1px;
+    width: 14px;
+    height: 14px;
+}
+.insider_star_ranking a i.info {
+    background: #fff;
+    transform: skewX(0deg);
+    color: #169FE6;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/*================
+    players_tab
+================*/
+.players_tab li {
+    position: relative;
+    margin-bottom: 1px
+}
+.players_tab li:before {
+    content: '\002B';
+    color: #ffffff;
+    width: 25px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    background: #169fe6;
+    padding: 9px 8px !important;
+    line-height: 23px;
+    display: none
+}
+.players_tab li.active:before {
+    content: '\2212' !important;
+    color: #ffffff;
+    width: 25px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    background: #169fe6;
+    padding: 9px 8px !important;
+    line-height: 23px;
+    display: none
+}
+@media only screen and (max-width:767px) {
+    .players_tab li:before,
+    .players_tab li.active:before {
+        display: block;
+    }
+    /* .players_tab_content .tab-content:nth-child(1) {
+        display: none !important;
+    }*/
+}

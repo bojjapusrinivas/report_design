@@ -1,0 +1,389 @@
+<!--include file="ADOVBS.asp"-->
+<!--include file="ASPIncludes/DBopen.asp"-->
+
+<%
+				''sqlcpcodes="'" & Replace(cpcodes,"; ","','") & "'"
+				sql1="SELECT  top 1 dbo.GetCompaniesCountByMCP('" & code & "') as companies,DBO.GetDomainExpertsByMCP('" & code & "') as PEOPLE_CNT, MCPCODES FROM InfluencersCompanies WHERE MCPCODES LIKE '%" & code & "%' " '' and company_status='Y'"
+				
+				''Filename like ('%" & Replace(cpcodes,"; ","%') or Filename like ('%")  & "%')" 
+				''response.write sql1
+				Set RSInfluncer = Server.CreateObject("ADODB.Recordset")						
+				Set Conn1 = Server.CreateObject("ADODB.Connection")
+				Conn1.Open DataSource4
+				RSInfluncer.ActiveConnection = conn1
+				'RSInfluncer.CursorType = 3
+				'response.write sql1
+				RSInfluncer.OPEN sql1
+				MCPCODES_lIST = ""
+				If not RSInfluncer.EOF Then
+					companies=RSInfluncer("companies")
+					PEOPLE_CNT=RSInfluncer("PEOPLE_CNT")
+					While not RSInfluncer.EOF
+						MCPCODES_lIST = MCPCODES_lIST &"; "& RSInfluncer(0)
+					RSInfluncer.movenext
+					Wend
+				End If
+				Set RSInfluncer = Nothing
+				Set Conn1 = nothing
+				
+				if left(MCPCODES_lIST,1)=";" then
+					''dim LnthVAR22
+					LnthVAR22 = len(MCPCODES_lIST)-1
+					MCPCODES_lIST = right(MCPCODES_lIST,LnthVAR22)
+				End If
+				
+				VARBuldStrMCPs = ""
+				VARBuldStrMCPs1 = ""
+				VARBuldStrMCPs = "MCPCODES Like ('%"&MCPCODES_lIST&"%')"
+				VARBuldStrMCPs = Replace (VARBuldStrMCPs,", ","%') OR MCPCODES Like ('%")
+				VARBuldStrMCPs1 =" mcpcodes like ('%" & Replace(MCPCODES_lIST,"; ","%') or mcpcodes like ('%")  & "%')"
+				''BuldStrMCPs1="MCPCODES IN ('" & Replace(MCPCODES_lIST,", ","','") &"')"
+
+				
+			
+			
+	IF trim(ucase(code)) ="MCP17067" then
+		companies = "460"
+	End if
+	
+	''''ALGORITHM TO TWEEK THE BRAND COUNT'''''
+	'''' ADDED ON JUNE 30, 2020''''''''''''''''
+	'''' IF BRANDS COUNT IS MORE THAN 500 THAN 70% TO BE SHOWN''''
+	'''' IF BRANDS ARE 15 - 500 THAN 805 TO BE SHOWN''''''''''''''
+	'''' IF LESS THAN 15 DON'T SHOW THE WORLD BRANDS BUTTON'''''''
+	
+	If cdbl(brandcount) > 500 then
+		brandcount = 0.4*brandcount
+	elseIf (cdbl(brandcount) <= 500 AND cdbl(brandcount) <= 15) then
+		brandcount = 0.6*brandcount
+	End If
+%>
+
+    <%
+''response.write mcp_companiesCount & "T"
+if trim(completed) ="Y" then
+	''report completed so we are display direct companies
+	if mcp_companiesCount <> "" then
+		companies=mcp_companiesCount
+	end if
+  'response.write completed &  " N " & mcp_companiesCounts
+  else
+	''companies
+	''''ALGORITHM TO TWEEK THE companies COUNT'''''
+	'''' ADDED ON JUNE 30, 2020''''''''''''''''
+	'''' IF companies COUNT IS MORE THAN 500 THAN 70% TO BE SHOWN''''
+	'''' IF companies ARE 15 - 500 THAN 805 TO BE SHOWN''''''''''''''
+	'''' IF LESS THAN 15 DON'T SHOW THE WORLD companies BUTTON'''''''
+	
+	If cdbl(companies) > 500 then
+		companies = 0.4*companies
+	elseIf (cdbl(companies) <= 500 AND cdbl(companies) <= 15) then
+		companies = 0.6*companies
+	End If
+  end if
+ '''response.write completed &  " Y " & trim(Rptcompanies)
+  
+									''If trim(ucase(code)) ="MCP14598" then
+									''	companies = "81"
+									''End If
+									%>
+        <!---BEIGN: ABSTRACT, HIGHLIHTS, INSIDER---->
+        <div class="w-100 py-2">
+            <div id="main" class="">
+                <span class="d-flex flex-md-row flex-sm-row  justify-content-center">                                        
+                            <button class=" rounded-0 p-2   btn_type_01 " type="button" data-toggle="collapse" data-target="#abstract" aria-expanded="flase" aria-controls="collapseExample">
+                                ABSTRACT
+                            </button>
+                            <button class=" p-2 rounded-0     btn_type_01 " type="button" data-toggle="collapse" data-target="#highlights" aria-expanded="flase" aria-controls="collapseExample">
+                               HIGHLIGHTS 
+                            </button>
+                            <button class=" rounded-0 p-2    btn_type_01  " type="button" data-toggle="collapse" data-target="#insider" aria-expanded="flase" aria-controls="collapseExample" style="border-right:none;">
+                               INSIDER ACCESS
+                            </button>
+                            </span>
+                <style>
+                    button.accordion {
+                        text-align: left;
+                    }
+
+                </style>
+
+                <div class="collapse my-3 shadow show" id="abstract" data-parent="#main">
+                    <div class="card card-body rounded-0 p-4">
+                        <div class="w-100 text-left mb-2 ">
+                            <%if completed="Y" then%>
+                                <%=Replace(MCP_ABSTRACTS,"’","'")%>
+                                    <%else		
+										If trim(giatext)<>"" then
+												If trim(giatext3)<>"" then%>
+                                        <%=Replace(Replace(giatext,"’","'"),"will bring in healthy gains adding significant momentum to global growth.","segment will bring in healthy gains adding significant momentum to global growth.")%>
+                                            <%=Replace(giatext3,"’","'")%>
+
+                                                <%END IF%>
+                                                    <%END IF
+							end if%>
+                        </div>
+
+                    </div>
+                </div>
+
+                <% 
+								if (trim(fCPcodes)="" OR trim(fCPcodes)="NULL") then
+									fCPcodes = CPcodes
+								End If
+								
+								if isnull(fCPcodes) then
+									fCPcodes = CPcodes
+									
+								End If
+								if fCPcodes <> "" then
+									cpcodesSTR="'" & Replace(fCPcodes,"; ","','") & "'"
+									sql1="SELECT top 2000 * FROM InfluencersCompanies WHERE (Filename like ('%" & Replace(fCPcodes,"; ","%') or Filename like ('%")  & "%')) and company_status<>'N'"
+									
+									''Filename like ('%" & Replace(cpcodes,"; ","%') or Filename like ('%")  & "%')" 
+									'response.write sql1
+									''DIM CMPList1
+									CMPList1 = ""
+									Set RSInfluncer = Server.CreateObject("ADODB.Recordset")						
+									Set Conn1 = Server.CreateObject("ADODB.Connection")
+									Conn1.Open DataSource4
+									RSInfluncer.ActiveConnection = conn1
+									'RSInfluncer.CursorType = 3
+									'response.write sql1
+									RSInfluncer.OPEN sql1
+									MCPCODES_lIST = ""
+									If not RSInfluncer.EOF Then
+										While not RSInfluncer.EOF
+											If Len(CMPList1) > 10 Then	
+											CMPList1 = CMPList1 &"; <a href=""CompanyDetails.asp?CODE="&RSInfluncer("Filename_MD5")&"&cmpID="&RSInfluncer("CMP_Hidden_Code")&""" target=""_new"">"& RSInfluncer("company") &"</a>"
+											Else
+												CMPList1 = "<a href=""CompanyDetails.asp?CODE="&RSInfluncer("Filename_MD5")&"&cmpID="&RSInfluncer("CMP_Hidden_Code")&""" target=""_new"">"& RSInfluncer("company") &"</a>"
+											End if 
+										RSInfluncer.movenext
+										Wend
+									End If
+									Set RSInfluncer = Nothing
+									Set Conn1 = nothing
+								end if
+								
+										'''Market Segmentation & Geographic Coverage
+											''''Application (Food, Beverage, Healthcare, Personal Care, Other Applications); Technology (Active Packaging, Intelligent Packaging)
+											''''World; USA; Canada; Japan; China; Europe (France; Germany; Italy; UK; and Rest of Europe); Asia-Pacific; Rest of World.
+											'Dim LSSegCovered, LSRegionsCovered
+											'Dim LSSegSplit, LSRegionsSplit
+											LSSegCovered = Trim(Segments_Covered)
+											'response.write LSSegCovered
+											LSRegionsCovered = Trim(Regions_Covered)%>
+
+                    <div class="collapse  my-3 shadow" id="highlights" data-parent="#main">
+                        <div class="card card-body rounded-0 p-4">
+                            <div class="w-100 text-left mb-2 ">
+                                <h4 class="font-weight-bold  my-0 border-bottom"> SELECT PLAYERS</h4>
+                                <p>
+
+                                    <% response.write trim(Companynames)+""
+									   %>
+                                </p>
+                            </div>
+
+                            <div class="w-100 text-left mb-2 ">
+                                <h4 class="font-weight-bold  my-0 border-bottom"> SEGMENTS</h4>
+                                <p>
+                                    <%LSSegSplit = Split(LSSegCovered,";")
+										for each x in LSSegSplit
+											response.write(" &raquo; " & x & " ")
+										next%>
+                                </p>
+                            </div>
+
+                            <div class="w-100 text-left mb-2 ">
+                                <h4 class="font-weight-bold  my-0 border-bottom"> GEOGRAPHIES</h4>
+                                <p>
+                                    <%LSRegionsSplit = Split(LSRegionsCovered,";")
+										for each GeoName in LSRegionsSplit
+											GeoName = Replace(GeoName,"("," &raquo; ")
+											GeoName = Replace(GeoName,")","")
+											response.write(" &raquo; "&Replace(GeoName,".","") & " ")
+										next%>
+                                </p>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="collapse  my-3 shadow" id="collapseExample04" data-parent="#main">
+                        <div class="card card-body rounded-0 p-2">
+                            <div class="w-100 text-center mb-2 ">
+                                <h4 class="font-weight-bold font-size-20 my-0 border-bottom">  KEY DIFFERENTIATORS
+                                        </h4>
+                            </div>
+                            <div class="w-100">
+                                We are firmly committed to build upon perspectives from global executive insights. These engagements enrich our projects. Our primary research programs are fully validated and accessible by clients. <i>(Its a common industry-wide<span class="text-danger font-weight-bold">*</span></i> practice that no validated primary research is done! For the most part, remote resident analysts curate and write reports drawing on search engine research and data modeling.
+                                <p class="py-2 mb-0 font-italic " style="font-style: italic"><span class="text-danger font-weight-bold">*</span> A review of 262 off-the-shelf market report publishers worldwide. </p>
+                            </div>
+                            <div class="w-100">
+                                <h4 class="pt-0  text-center  my-2 line-height-normal"><span class="font-weight-bold font-size-15 my-2">WHAT SETS US APART</span>
+                                                    <br> Client companies can access multiple features on our MarketGlass™ platform. </h4>
+                            </div>
+                            <div class="d-flex  flex-md-row flex-row flex-sm-column border p-2">
+                                <div class=" w-sm-100 w-50">
+                                    <div class="accordion_new  my-0 p-2 p-sm-0">
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Primary Research </button>
+                                        <div class="panel3 border">
+                                            <p class="mb-0">Clients have full-stack insider access to our ongoing primary research program. We have a very successful incentive driven primary research program that benefits participating executives regardless of their purchase decision. Our platform presents a unique opportunity to collaborate with peers and review competitors’ inputs and response clusters.</p>
+                                        </div>
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Transparency</button>
+                                        <div class="panel3 border ">
+                                            <p class="mb-0">Detailed engagement stats are presented for every company and executive contacted. This is made available for our client reviews. (no other publisher offers this!)</p>
+                                        </div>
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset"> Data Stack Access</button>
+                                        <div class="panel3 border ">
+                                            <p class="mb-0">A full-stack access to clients of all primary and secondary source content. This can often run into thousands of pages. </p>
+                                        </div>
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Global Brand Intelligence</button>
+                                        <div class="panel3 border ">
+                                            <!--p>We present competitive brand intelligence that’s seldom covered by other publishers.</p-->
+                                            <p class="mb-0">Where relevent and possible we present competitive brands.</p>
+                                        </div>
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Peer Collaborations </button>
+                                        <div class="panel3 border ">
+                                            <p class="mb-0">Peer-to-peer online interactive collaborations. Allows for team curated bespoke analytics.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" w-sm-100 w-50 ">
+                                    <div class="accordion_new  my-0 p-2 p-sm-0">
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Bespoke Updates</button>
+                                        <div class="panel3 border">
+                                            <p class="mb-0">Customers can update and build bespoke versions of our analytics. Bespoke updates are fulfilled within a two-day turnaround.</p>
+                                        </div>
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Enterprise EcoConnect</button>
+                                        <div class="panel3 border">
+                                            <p class="mb-0">Discretely bounce off queries to participant pool of executives. Our embedded AI selectively pings participants geographically and by domain acumen. </p>
+                                        </div>
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Support Beyond Scope</button>
+                                        <div class="panel3 border">
+                                            <p class="mb-0">We pride in our commitment to provide support to our clients. We go beyond the scope of the study to get you timely answers. </p>
+                                        </div>
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Extended Shelf Life</button>
+                                        <div class="panel3 border ">
+                                            <p class="mb-0">Unlike the industry’s published PDF’s that are frozen in time from date of release, our research programs are ongoing and dynamic. Our reports are updated whenever there’s a major event impacting the marketplace. Your license offers seamless updates for one year. </p>
+                                        </div>
+                                        <button class="accordion_key border mt-1 ui-accordion ui-widget ui-helper-reset">Complimentary Updates</button>
+                                        <div class="panel3 border">
+                                            <p class="mb-0">All updates are offered for one year from date of your purchase without charge. Clients can opt for annual auto renewal and stay current without interruption. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse  my-3 shadow" id="insider" data-parent="#main">
+                        <div class="card card-body rounded-0 p-4">
+                            <div class="w-100 text-left mb-2 ">
+
+                                <h4 class="font-weight-bold  my-0 border-bottom"> INSIDER ACCESS PRIVILEGES</h4>
+
+
+                            </div>
+
+                            <div class="w-100">
+
+                                <div class="w-100 mb-2 ">
+                                    <i>Users of our portal have insider access to our data stacks based on project relevance and engagement status. Tiered access is offered to data stacks, managed based on user status - Opt-in, Active Panelist, Inactive Panelist, Active Client or Inactive Client. </i>
+                                </div>
+                                <div class="w-100  d-flex flex-wrap">
+                                    <div class="w-xl-20 w-lg-20 w-md-50 w-sm-50 p-1  ">
+                                        <div class="offer offer-secondary text-center insider my-0">
+                                            <div class="offer-content">
+                                                <h3 class="lead">
+                                                    ACTIVE CLIENT  
+                                                </h3>
+                                                <div class="insider_star_ranking">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-xl-20 w-lg-20  w-md-50 w-sm-50 p-1">
+                                        <div class="offer offer-secondary text-center insider my-0">
+                                            <div class="offer-content">
+                                                <h3 class="lead">
+                                                    INACTIVE CLIENT 
+                                                </h3>
+                                                <div class="insider_star_ranking">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-xl-20 w-lg-20  w-md-50 w-sm-50  p-1">
+                                        <div class="offer offer-secondary text-center insider my-0">
+                                            <div class="offer-content">
+                                                <h3 class="lead">
+                                                    ACTIVE PANELIST 
+                                                </h3>
+                                                <div class="insider_star_ranking">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-xl-20 w-lg-20  w-md-50 w-sm-50  p-1">
+                                        <div class="offer offer-secondary text-center insider my-0">
+                                            <div class="offer-content">
+                                                <h3 class="lead">
+                                                    INACTIVE PANELIST   
+                                                </h3>
+                                                <div class="insider_star_ranking">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-xl-20 w-lg-20  w-md-50 w-sm-50  p-1">
+                                        <div class="offer offer-secondary text-center insider my-0">
+                                            <div class="offer-content">
+                                                <h3 class="lead">
+                                                    OPT-INS 
+                                                </h3>
+                                                <div class="insider_star_ranking">
+                                                    <i class="fa fa-star"></i>
+                                                    <a herf="javascript:void(0)"><i class="fa fa-info-circle info"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+        </div>

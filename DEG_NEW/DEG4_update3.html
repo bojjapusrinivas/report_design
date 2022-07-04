@@ -1,0 +1,819 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        GIA - DEG Numbers
+    </title>
+    <!-- CSS STYLES-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="https://bojjapusrinivas.github.io/report_design/DEG_NEW/gia_switches.css" />
+    <link rel="stylesheet" href="deg_custom_styles.css" />
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <link href="../scripts/handel/handle-counter.min.css" rel="stylesheet"/>
+    <script src="../scripts/handel/handleCounter.js"></script>
+    <script src="../scripts/handel/NEW/plugin.js"></script>
+
+
+    <style>
+
+        .counter {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .c1-btn,.c2-btn {
+            width: 100px;
+            height: 32px;
+            background-color: orange;
+            color: white;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .c1-btn:hover,.c2-btn:hover{
+            background-color: #db8e00;
+        }
+
+        .c1-p,.c2-p {
+            color: gray;
+            font-size: 16px;
+        }
+
+        .c1-span,.c2-span {
+            color: green;
+        }
+        .container{
+            margin: 150px auto;
+            max-width: 960px;
+
+        }
+
+        </style>
+
+
+    <style>
+        #segment_allication .ranking_slider .irs.irs--big.js-irs-0.irs-with-grid:nth-child(2) {
+            display: NONE;
+        }
+
+        .js-range-slider {
+            DISPLAY: NONE;
+        }
+
+        #segment_allication .ranking_slider p,
+        #market-staging .ranking_slider p {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .segment_years_table_header {
+            list-style: none;
+            margin: 0px;
+            padding: 0px
+        }
+
+        .segment_years_table_header li {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+
+        .segment_years_table_header li:before {
+            content: '\f0da';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            font-family: FontAwesome;
+            color: #ccc;
+            margin-left: -11px;
+            font-size: 15px;
+            margin-top: -1px;
+        }
+
+        .segment_years_table_header li:nth-child(1):before {
+            content: '';
+        }
+
+
+        .slidecontainer {
+            width: 100%;
+        }
+
+        .slider {
+
+            width: 90%;
+            height: 30px !important;
+            border-radius: 30px;
+            background: linear-gradient(to bottom, #ddd -50%, white 150%);
+            border: 1px solid #ccc;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+
+
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(to bottom, white 0%, #B4B9BE 30%, white 100%);
+            box-shadow: 1px 1px 2px rgb(0 0 0 / 20%), inset 0 0 3px 1px white;
+            border: 1px solid #ccc;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #04AA6D;
+            cursor: pointer;
+        }
+    </style>
+
+
+<style>
+
+
+
+
+
+</style>
+
+
+
+</head>
+</div>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div id="wapper">
+                <span style="float:left;"><img src="https://www.strategyr.com/images/log_icon.png"
+                        style="width:45px;height:45px;" class="log_ico">
+                </span>
+                <span>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx"><i class="fa fa-table"></i> GIA</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Segments.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Segments</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BaseYearData.aspx"><i
+                            class="fas fa fa-cloud-upload"></i> Base Year Data</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BulkTocReset.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Reset TOC</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">DEG Numbers Link
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="row">
+                                <div class="column">
+                                    <a href="http://server2/gia_analytix/viewGIACountriesII.asp?sts=O&amp;code="
+                                        target="_blank">
+                                        <!--i class="fa fa-link" aria-hidden="true"></i--><i class="fa fa-home"
+                                            aria-hidden="true"></i> Generate Numbers Link</a>
+                                </div>
+                                <div class="column">
+                                    <a href="http://128.242.110.22/DEGNumbers/" target="_blank"><i
+                                            class="fa fa-external-link"></i>Online Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--a href="ExchangeRates.aspx"><i class="fa fa-th" aria-hidden="true"></i> ExchangeRates</a>
+   <a href="Simulator.aspx"><i class="fa fa-table" aria-hidden="true"></i> Simulator</a-->
+
+                </span>
+                <span style="float:right; padding-right: 10px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Logout.aspx"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i> Log Out</a>
+                </span>
+                <span style="float:right;padding-right: 50px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx#GIA_Analytix"><i class="fa fa-home"
+                            aria-hidden="true"></i> Welcome obili</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="wapper" class="border shadow-sm bg-white">
+
+
+        <div class="w-100 mb-3">
+            <div class="w-100 section_header">
+                <h3>F. GEOGRAPHIC SEGMENTATION SELECTOR</h3>
+            </div>
+            <div class="d-flex w-100 pl-2">
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="rdGEO" id="rdGEOA" customatt="radio_option" style="float:left"
+                        class="mr-2" checked>
+                    <b>GEO A</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="rdGEO" id="rdGEOB" customatt="radio_option" style="float:left"
+                        class="mr-2">
+                    <b>GEO B</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="rdGEO" id="rdGEOC" customatt="radio_option" style="float:left"
+                        class="mr-2">
+                    <b>MANUAL</b>
+                </div>
+
+            </div>
+
+            <div class="w-100 text-center">
+                <a class="mt-2  btn my-3 rounded-0 shadow-sm" data-toggle="collapse" data-target="#sevberityimapct"
+                    aria-expanded="true" aria-controls="collapseExample" target="new"
+                    style="background: green;width: 205px;color:white;">% SEVERITY IMPACT</a>
+            </div>
+
+            <div class="w-100 mx-0 p-0">
+                <div class="collapse show" id="sevberityimapct">
+
+
+                    <div class="w-100  p-1" style="background: #FFF1EB">
+                     
+                        <h4 style=" font-size: 18px;font-weight: bold; margin-left: 2px; margin-top: 2px;"> United States</h4>
+                       
+                    </div>
+
+                    <div class="w-100 section_subheader p-1" style="background: #efefef;">
+                        <div class="d-flex">
+                            
+                            <ul class="d-flex w-100 juistify-content-start flex-wrap segment_years_table_header mx-0 px-0 mx-0">
+                                <li class="mr-4"> End-Use # APP 1 Channel 1</li>
+                                <li class="mr-4"> Product Segment 1</li>
+                                <li class="mr-4"> </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    
+                      <div id="table-scroll" class="table-scroll table">
+                        <div class="table-wrap">
+                          <table class="main-table table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">2021</th>
+                                <th scope="col">2022</th>
+                                <th scope="col">2023</th>
+                                <th scope="col">2024</th>
+                                <th scope="col">2025</th>
+                                <th scope="col">2026</th>
+                                <th scope="col">2027</th>
+                                <th scope="col">2028</th>
+                                <th scope="col">2029</th>
+                                <th scope="col">2030</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                           
+                                <td>
+                                    <div class="handle-counter" id="handleCounter">
+
+                                        <button class="counter-minus btn btn-primary" disabled="">-</button>
+                                      
+                                             <input type="text" value="1" id="presentyeara" >
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <div class="row">
+                                        <!--input type="text" value="1" class="m-2 w-50 mx-auto text-center" id="newvalue"-->
+                                        <p class='c1-p'><span class='c1-span'>-</span></p>
+                                      </div>
+
+                                      <button class="c2-btn" onclick="onC1BtnClick()">Get Value</button>
+
+
+                                      <script>
+                                          $('#handleCounter').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                           
+
+                                          </script>
+                                          <script>
+                                            var dataID = element.getAttribute('data-num'); 
+                                            $('#presentyeara').on('change', function() {
+                                                   alert( this.dataID );
+                                              });
+
+                                        </script>
+                                      
+                                </td>
+
+                                <td>
+                                    <div class="handle-counter" id="handleCounter2">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1" >
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter2').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                                <td>
+                                    <div class="handle-counter" id="handleCounter3">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1">
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter3').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                                <td>
+                                    <div class="handle-counter" id="handleCounter4">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1">
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter4').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                                <td>
+                                    <div class="handle-counter" id="handleCounter5">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1">
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter5').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                                <td>
+                                    <div class="handle-counter" id="handleCounter6">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1">
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter6').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                                <td>
+                                    <div class="handle-counter" id="handleCounter7">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1">
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter7').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                                <td>
+                                    <div class="handle-counter" id="handleCounter8">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1">
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter8').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                                <td>
+                                    <div class="handle-counter" id="handleCounter9">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1">
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter9').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                                <td>
+                                    <div class="handle-counter" id="handleCounter10">
+
+                                        <button class="counter-minus btn btn-primary">-</button>
+                                      
+                                              <input type="text" value="1">
+                                      
+                                        <button class="counter-plus btn btn-primary">+</button>
+                                      
+                                      </div>
+
+                                      <script>
+                                          $('#handleCounter10').handleCounter({
+                                            minimum: -2,
+                                            maximize: 2,
+                                            })
+
+                                          </script>
+                                      
+                                </td>
+                              </tr>
+                             
+                          </tbody></table>
+                        </div>
+                      </div>
+                      
+                     
+
+
+<br>
+<br>
+
+
+
+                    <div class="w-100">
+                        <div class="w-100 section_subheader p-1" style="background: #efefef;">
+                            <div class="d-flex">
+                                <input type="checkbox" data-toggle="collapse" onclick="GetCountryseverityImpact('United_States')" data-target="#severityImpactUnited_States" aria-expanded="false" aria-controls="collapseExample" class="float-left mx-2 mt-1  collapsed">
+                                <ul class="d-flex w-100 juistify-content-start flex-wrap segment_years_table_header mx-0 px-0 mx-0">
+                                    <li class="mr-4"> End-Use # APP 1 Channel 1</li>
+                                    <li class="mr-4"> Product Segment 1</li>
+                                    <li class="mr-4"> United States </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="collapse show" id="severityImpactUnited_States" style="">
+                            <div class="card card-body border-0 p-0" id="severityImpactUnited_States_Tweek_table">
+
+                                <div class="d-flex flex-wrap align-items-center justify-content-around p-2">
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <span class="mr-3 d-block"> <b>2021</b></span>
+                                                <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                    <input type="range" min="-2" max="2" value="1" class="slider" id="myRange">
+                                                    <p class="mb-0 d-flex">Value: <span id="demo" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                var slider = document.getElementById("myRange");
+                                                var output = document.getElementById("demo");
+                                                output.innerHTML = slider.value;
+
+                                                slider.oninput = function () {
+                                                    output.innerHTML = this.value;
+                                                }
+                                            </script>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2022</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange1">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo1" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                               var slider1 = document.getElementById("myRange1");
+                                               var output1 = document.getElementById("demo1");
+                                               output1.innerHTML = slider.value;
+                                               slider1.oninput = function () {
+                                               output1.innerHTML = this.value;
+                                               }
+                                                                                          
+                                            </script> 
+                                            </div>
+
+                                    </div>
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2023</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange2">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo2" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                                var slider2 = document.getElementById("myRange2");
+                                               var output2 = document.getElementById("demo2");
+                                               output2.innerHTML = slider.value;
+                                               slider2.oninput = function () {
+                                               output2.innerHTML = this.value;
+                                               }
+                                               
+                                                                                          
+                                            </script> 
+                                            </div>
+                                            </div>
+
+                                   
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2024</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange3">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo3" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                               var slider3 = document.getElementById("myRange3");
+                                               var output3 = document.getElementById("demo3");
+                                               output3.innerHTML = slider.value;
+                                               slider3.oninput = function () {
+                                               output3.innerHTML = this.value;
+                                               }
+                                                                                          
+                                            </script> 
+                                            </div>
+                                            </div>
+
+                                    
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2025</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange4">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo4" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                               var slider4 = document.getElementById("myRange4");
+                                               var output4 = document.getElementById("demo4");
+                                               output4.innerHTML = slider.value;
+                                               slider4.oninput = function () {
+                                               output4.innerHTML = this.value;
+                                               }
+                                                                                          
+                                            </script> 
+                                            </div>
+                                            </div>
+
+                                  
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2026</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange5">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo5" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                               var slider5 = document.getElementById("myRange5");
+                                               var output5 = document.getElementById("demo5");
+                                               output5.innerHTML = slider.value;
+                                               slider5.oninput = function () {
+                                               output5.innerHTML = this.value;
+                                               }
+                                                                                          
+                                            </script> 
+                                            </div>
+                                            </div>
+
+                                    
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2027</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange6">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo6" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                               var slider6 = document.getElementById("myRange6");
+                                               var output6 = document.getElementById("demo6");
+                                               output6.innerHTML = slider.value;
+                                               slider6.oninput = function () {
+                                               output6.innerHTML = this.value;
+                                               }
+                                                                                          
+                                            </script> 
+                                            </div>
+                                            </div>
+
+                                  
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2028</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange7">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo7" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                               var slider7 = document.getElementById("myRange7");
+                                               var output7 = document.getElementById("demo7");
+                                               output7.innerHTML = slider.value;
+                                               slider7.oninput = function () {
+                                               output7.innerHTML = this.value;
+                                               }
+                                                                                          
+                                            </script> 
+                                            </div>
+                                            </div>
+
+                                
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2029</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange8">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo8" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                               var slider8 = document.getElementById("myRange8");
+                                               var output8 = document.getElementById("demo8");
+                                               output8.innerHTML = slider.value;
+                                               slider8.oninput = function () {
+                                               output8.innerHTML = this.value;
+                                               }
+                                                                                          
+                                            </script> 
+                                            </div>
+
+                                    </div>
+
+                                    <div class="w-45  mb-2 mx-3">
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                               <span class="mr-3 d-block"> <b>2030</b></span>
+                                               <div class="slidecontainer d-flex justify-content-between align-items-center">
+                                                  <input type="range" min="-2" max="2" value="1" class="slider" id="myRange9">
+                                                  <p class="mb-0 d-flex">Value: <span id="demo9" class="ml-2 border text-center" style="width: 30px; display: block;">1</span></p>
+                                               </div>
+                                            </div>
+                                            <script>
+                                               var slider9 = document.getElementById("myRange9");
+                                               var output9 = document.getElementById("demo9");
+                                               output9.innerHTML = slider.value;
+                                               slider9.oninput = function () {
+                                               output9.innerHTML = this.value;
+                                               }
+                                                                                          
+                                            </script> 
+                                            </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <br/>
+
+                    <br/>
+
+
+
+            
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>

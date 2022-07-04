@@ -1,0 +1,1455 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        GIA - DEG Numbers 
+    </title>
+    <!-- CSS STYLES-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="https://bojjapusrinivas.github.io/report_design/DEG_NEW/gia_switches.css" />
+    <link rel="stylesheet" href="deg_custom_styles2.css" />
+	<style>
+        #segment_allication .ranking_slider .irs.irs--big.js-irs-0.irs-with-grid:nth-child(2) {
+            display: NONE;
+        }
+
+        .js-range-slider {
+            DISPLAY: NONE;
+        }
+
+        #segment_allication .ranking_slider p,
+        #market-staging .ranking_slider p {
+            display: none;
+        }
+		#segment_allocation_primary p {
+		display: none !important;
+}
+    </style>
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+  	function ChkGiaData() {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(vGIANO); 
+				if (vGIANO != null && vGIANO != '' )		 
+				 {	 
+				  $.ajax({				        	
+							url: "AjaxChkGIAData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){
+							   //alert(data);
+								if (data.length > 1)
+									 { 
+									    alert('Recport Code '+ vGIANO +' ['+data+'] already exist!');
+										$("#txtGIA_NO").val(''); 	
+											$("#txtGIA_NO").focus();										
+									 }
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						});				
+				  } 
+		}		
+		
+		function GetCountryTypeTweeks(vCountry)
+		{
+		  
+		                    var vGIANO = $("#txtGIA_NO").val(); 
+		                    var GIOType = $("#HidGIO_Type").val(); 
+							 getCountryTweeksNEW(vGIANO,GIOType,vCountry);
+							// alert(vGIANO);
+							// alert(vCountry);
+							//  alert(GIOType);
+		
+		}
+		function AddGIAData()
+		{ 
+		 var vGIANO = $("#txtGIA_NO").val(); 
+		 var vTOPIC = $("#txtTOPIC").val(); 
+		 var vUnits = $("#txtUNITS").val(); 
+		 var vORIG_YEAR = $("#txtORIG_YEAR").val(); 
+		 var vSTART_YEAR = $("#txtSTART_YEAR").val();
+		 var vEND_YEAR = $("#txtEND_YEAR").val();		 		 
+		 var vMktsize = $("#txtmktsize").val(); 
+		 var vCAGR = $("#txtCAGR").val(); 
+		 var vGIOType = $("input[name='rdGEO']:checked").val(); 
+		 //  alert(vGIOType);
+		 if (vGIANO != null && vGIANO != '' )		 
+				 {	 
+				  $.ajax({				        	
+							url: "AjaxAddGIAData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&vGIOType='+encodeURIComponent(vGIOType)+'&vTOPIC='+encodeURIComponent(vTOPIC)+'&vUnits='+encodeURIComponent(vUnits)+'&vORIG_YEAR='+encodeURIComponent(vORIG_YEAR)+'&vSTART_YEAR='+encodeURIComponent(vSTART_YEAR)+'&vEND_YEAR='+encodeURIComponent(vEND_YEAR)+'&vMktsize='+encodeURIComponent(vMktsize)+'&vCAGR='+encodeURIComponent(vCAGR)+'',
+							success: function(data){
+							  alert('Data added Sucessfully');
+								
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						});				
+				  } 
+				  else
+				  {
+				  alert('Report Code can not be left blank');
+				  }
+		
+		}
+		
+		function getCountryTweeksNEW(vGIANO,GIOType,vCountry) {				
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getCountryTweeks.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&GIOType='+GIOType+'&vCountry='+vCountry+'',							    
+							success: function(data){
+							//alert(data); 
+							$('#'+vCountry).empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		}
+		
+		
+			function GetSegData(GIANO) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getSegData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){
+							
+							//var vGetSegData = data;
+								//alert(data);
+							//alert(data);
+							//REGION,UNITS, ORIG_YEAR, ORIG_VALUE, START_YEAR, START_VALUE, START_VALUE1,START_TWEAKED_VALUE,END_YEAR, END_VALUE,CAGR, TWEAKED_CAGR,Region_Type,type_count
+						    
+ 							 //var res = data.split("##");
+							 //var vTopic = res[0];
+						    // var vsegCount = res[1];		
+						     //var vB2B = res[2];	
+							 $('#segment_allication').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						});				
+				  } 	
+		}
+		
+		///segment_allocation_primary
+			function GetSegData_Primary(GIANO) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getSegData_Primary.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){
+							
+							//var vGetSegData = data;
+								//alert(data);
+							//alert(data);
+							//REGION,UNITS, ORIG_YEAR, ORIG_VALUE, START_YEAR, START_VALUE, START_VALUE1,START_TWEAKED_VALUE,END_YEAR, END_VALUE,CAGR, TWEAKED_CAGR,Region_Type,type_count
+						    
+ 							 //var res = data.split("##");
+							 //var vTopic = res[0];
+						    // var vsegCount = res[1];		
+						     //var vB2B = res[2];	
+							 $('#segment_allocation_primary').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						});				
+				  } 	
+		}
+		
+		function GetSegTypeData(GIANO) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getSegTypeData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){
+							
+							//var vGetSegData = data;
+								//alert(data);
+							//alert(data);
+							//REGION,UNITS, ORIG_YEAR, ORIG_VALUE, START_YEAR, START_VALUE, START_VALUE1,START_TWEAKED_VALUE,END_YEAR, END_VALUE,CAGR, TWEAKED_CAGR,Region_Type,type_count
+						    
+ 							 //var res = data.split("##");
+							 //var vTopic = res[0];
+						    // var vsegCount = res[1];		
+						     //var vB2B = res[2];	
+							 $('#modality_table').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						});				
+				  } 
+		}
+		
+		function GetSegTypePrimaryAppdata_C(GIANO) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getSegTypePrimaryAppdataData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){
+							
+							//var vGetSegData = data;
+								//alert(data);
+							//alert(data);
+							//REGION,UNITS, ORIG_YEAR, ORIG_VALUE, START_YEAR, START_VALUE, START_VALUE1,START_TWEAKED_VALUE,END_YEAR, END_VALUE,CAGR, TWEAKED_CAGR,Region_Type,type_count
+						    
+ 							 //var res = data.split("##");
+							 //var vTopic = res[0];
+						    // var vsegCount = res[1];		
+						     //var vB2B = res[2];	
+							 //
+							$('#SegPrimaryAppData').empty().append(data);
+							var addChanel="<div style='float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px'><input type='checkbox' name='rdSegType' customatt='radio_option' style='float:left' class='mr-2' ><b>End-Use</b>&nbsp;&nbsp;&nbsp;<input type='checkbox' name='rdSegType' <input type='checkbox' name='rdSegType' customatt='radio_option' style='float:left' class='mr-2' ><b>Technology</b>&nbsp;&nbsp;&nbsp;<input type='checkbox' data-toggle='collapse' data-target='#SHOW_ADD_APPLICATION' aria-expanded='false' aria-controls='collapseExample' class='float-left mx-2 mt-2'><b>Other</b> &nbsp;(select to add new)</div>";
+							/// below removing the data to show only the technology and end-use
+							///$('#SegPrimaryAppData1').empty().append(data+addChanel);
+							$('#SegPrimaryAppData1').empty().append(addChanel);
+							 
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						});				
+				  }
+		}
+		
+		
+		function GetSegTypePrimaryAppdata_B(GIANO) { 
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getSegTypePrimaryAppdataData_B.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){
+							
+							//var vGetSegData = data;
+								//alert(data);
+							//alert(data);
+							//REGION,UNITS, ORIG_YEAR, ORIG_VALUE, START_YEAR, START_VALUE, START_VALUE1,START_TWEAKED_VALUE,END_YEAR, END_VALUE,CAGR, TWEAKED_CAGR,Region_Type,type_count
+						    
+ 							 //var res = data.split("##");
+							 //var vTopic = res[0];
+						    // var vsegCount = res[1];		
+						     //var vB2B = res[2];	
+							 //SegPrimaryData
+							$('#SegPrimaryData').empty().append(data);							
+							 
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						});				
+				  }
+		}
+
+		//SegmentShowData
+
+		function GetSegmentShowData(GIANO) { 
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getSegmentShowData_SHORT.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){
+							
+							//var vGetSegData = data;
+								//alert(data);
+							//alert(data);
+							//REGION,UNITS, ORIG_YEAR, ORIG_VALUE, START_YEAR, START_VALUE, START_VALUE1,START_TWEAKED_VALUE,END_YEAR, END_VALUE,CAGR, TWEAKED_CAGR,Region_Type,type_count
+						    
+ 							 //var res = data.split("##");
+							 //var vTopic = res[0];
+						    // var vsegCount = res[1];		
+						     //var vB2B = res[2];	
+							 //SegPrimaryData
+							$('#SegmentShowData').empty().append(data);							
+							 
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText);
+							}
+						});				
+				  }
+		}
+		
+		function UpdateStagingCountry(str)
+		{
+		//alert('slider');
+		 var res = str.split("##"); 		
+			var vGIAType = res[0];
+		    var vCountry = res[1];
+			var vCountryVal = $("#rank_input_"+vCountry).val(); 
+			//alert(vGIAType);
+			//alert(vCountry);
+			//alert(vCountryVal);		
+				if (vGIAType != null && vGIAType != '' )		 
+				 {	
+				  $.ajax({
+							url: "AjaxUpdateCountryTweeks.asp",
+							type: "POST",
+							data:'vCountry='+vCountry+'&vCountryVal='+vCountryVal+'&vGIAType='+vGIAType+'',							    
+							success: function(data){
+							//alert('Done');
+							 //$('#secondary_attribute').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});				
+				  } 
+		}
+		
+		
+		function UpdatedMarketsizeData()
+		{
+		   var vGIANO = $("#txtGIA_NO").val();					
+			var vMarketYear = $("#txtMarket_YEAR").val(); 
+			var vMarketSize = $("#txtMarket_VALUE").val(); 
+			var vMarketCagr = $("#txtMarket_CAGR").val(); 
+		  
+		  if (vGIANO != null && vGIANO != '' )		 
+				 {	
+				 //alert(vGIANO);	
+				  $.ajax({
+							url: "AjaxAddMarketSizeData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&vMarketYear='+vMarketYear+'&vMarketSize='+vMarketSize+'&vMarketCagr='+vMarketCagr+'',							    
+							success: function(data){
+							//alert('Done');
+							ViewMarketsizeData();
+							 //$('#secondary_attribute').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});				
+				  }		  
+		}
+		
+		function UpdateSecondary_Market_Factors(vImpact_Type)
+		{
+		   
+		   var vGIANO = $("#txtGIA_NO").val();
+		   var vImpact_Type = vImpact_Type;	   
+		    var vImpact_YEAR;
+			var vImpact_Percentage;	
+			var vImpact_Factor= '';			
+			//alert('hi');
+			                 if(vImpact_Type=='PANDEMIC')
+							 {
+								 vImpact_YEAR = $("#txtCovid_YEAR").val(); 
+								 vImpact_Percentage = $("#rank_input_1").val(); 
+								 vImpact_Factor = $("input[name='q8']:checked").val();
+							 }
+							 else if(vImpact_Type=='SUPPLY CHAIN')
+							 {
+							     vImpact_YEAR = $("#txtSupplyChain_YEAR").val(); 
+								 vImpact_Percentage = $("#rank_input_2").val(); 
+								 vImpact_Factor = $("input[name='q7']:checked").val();								 
+							 }
+							 else if(vImpact_Type=='CHIP SHORTAGE')
+							 {	
+							     vImpact_YEAR = $("#txtChipShortage_YEAR").val(); 
+								 vImpact_Percentage = $("#rank_input_3").val(); 
+								 vImpact_Factor = $("input[name='q6']:checked").val();										 
+							 }
+							 
+			
+			// alert(vImpact_Percentage);	
+			//alert($("input[name='q7']:checked").val());
+			//alert($("input[name='q6']:checked").val());
+			
+		  if (vGIANO != null && vGIANO != '' )		 
+				 {	
+				 //alert(vImpact_Factor);	
+				  $.ajax({
+							url: "AjaxAddSecondaryMarketFactorsData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&vImpact_YEAR='+vImpact_YEAR+'&vImpact_Percentage='+encodeURIComponent(vImpact_Percentage)+'&vImpact_Type='+encodeURIComponent(vImpact_Type)+'&vImpact_Factor='+encodeURIComponent(vImpact_Factor)+'',							    
+							success: function(data){
+							//alert(PANDEMIC);  
+							// var vImpacs= $("HidImpacts").val();
+							//a = Split(vImpacs,',');
+							//for (i = 0; i < a.length; i++)
+							//{							
+							//  $('#'+a[i]+'_table').empty().append(data);
+							
+							//}
+							
+							
+							if(vImpact_Type=='PANDEMIC')
+								$('#PANDEMIC_Impact_table').empty().append(data);
+							 else if(vImpact_Type=='SUPPLY CHAIN')
+								$('#SUPPLY_CHAIN_table').empty().append(data);
+							 else if(vImpact_Type=='CHIP SHORTAGE')
+								$('#CHIP_SHORTAGE_table').empty().append(data); 
+								
+								ViewSecondary_Market_Factors(vImpact_Type);
+								
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  }
+				  else
+				  {alert('REPORT CODE can`t be left blank');}
+		  
+		}
+		
+		function ViewSecondary_Market_Factors(vImpact_Type) {
+		//alert(vImpact_Type);
+				var vGIANO = $("#txtGIA_NO").val();
+				var vImpact_Type = vImpact_Type;
+				if (vGIANO != null && vGIANO != '' )		 
+				 {		
+				//alert(vImpact_Type); 				 
+				  $.ajax({
+							url: "AjaxViewSecondaryMarketFactorsData.asp",
+							type: "POST",						
+							data:'vGIANO='+vGIANO+'&vImpact_Type='+encodeURIComponent(vImpact_Type)+'',						    
+							success: function(data){
+							//alert(vImpact_Type); 
+							 //alert(data);
+							// var vImpacs= $("HidImpacts").val();
+							//a = Split(vImpacs,',');
+							//for (i = 0; i < a.length; i++)
+							//{							
+							//  $('#'+a[i]+'_table').empty().append(data);
+							  //$('#COVID_Impace_table').empty().append(data);
+							//}
+							 
+							 
+							 if(vImpact_Type=='PANDEMIC')
+							 {
+								$('#PANDEMIC_Impact_table').empty().append(data);
+								 //alert('pan'); 
+								}
+							 else if(vImpact_Type=='SUPPLY_CHAIN')
+							 {
+								$('#SUPPLY_CHAIN_table').empty().append(data);
+								 //alert('supp'); 
+								}
+							 else if(vImpact_Type=='CHIP_SHORTAGE')
+							  {
+								$('#CHIP_SHORTAGE_table').empty().append(data);
+								 //alert('chip'); 
+								}
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 			 
+				
+		}
+		
+		function ViewMarketsizeData() {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {		 
+				  $.ajax({
+							url: "AjaxViewMarketSizeData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',							    
+							success: function(data){
+							
+							 $('#Marketsize_table').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		}
+		
+		function getCountryTweeks(GIANO,GIOType) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(GIOType);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "ViewgetCountryList.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&GIOType='+GIOType+'',							    
+							success: function(data){
+							
+							 $('#Country_Tweek_table').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		}
+		
+		
+		function funAddChannel() {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				var vSegTypeName=$("#Txt_Channel").val(); 
+				//alert(ChkVal);
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			 
+				  $.ajax({
+							url: "AjaxAddChannelTypes.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&vSegTypeName='+encodeURIComponent(vSegTypeName)+'',							    
+							success: function(data){
+							 //alert('Done');	
+                              
+							 GetSegData_Primary(vGIANO);
+							 GetSegTypePrimaryAppdata_C(vGIANO);
+							 GetSegData(vGIANO);
+							 
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});				
+				  } 
+		}
+		
+		function funAddChannel_id(val1) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				var vSegTypeName = $("#Txt_Channel"+val1).val(); 
+				//alert(ChkVal);
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			 
+				  $.ajax({
+							url: "AjaxAddChannelTypes.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&vSegTypeName='+encodeURIComponent(vSegTypeName)+'',							    
+							success: function(data){
+							 alert('Application Name Added Successfully');	
+                              
+							 //GetSegData_Primary(vGIANO);
+							 //GetSegTypePrimaryAppdata_C(vGIANO);
+							 //GetSegData(vGIANO);
+							 
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});				
+				  } 
+		}
+		
+		function ChangeChannelTypes(ChkVal) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				var vSegTypeName=ChkVal;
+				//alert(ChkVal);
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+							 
+				  $.ajax({
+							url: "AjaxUpdateChannelTypes.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&vSegTypeName='+encodeURIComponent(ChkVal)+'',							    
+							success: function(data){
+							//alert(data);
+							// $('#Country_Tweek_table').empty().append(data);
+							
+							 
+							
+							 GetSegData_Primary(vGIANO);
+							 GetSegTypePrimaryAppdata_C(vGIANO);
+							 GetSegData(vGIANO);
+							 
+							
+							 
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		}
+		
+		function getCountryATTRIBUTES(GIANO,GIOType) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert(GIOType);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getCountryATTRIBUTES.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'&GIOType='+GIOType+'',							    
+							success: function(data){
+							
+							 $('#secondary_attribute').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		} 
+		function GetSourceData() {
+				var vGIANO = $("#txtReportCode").val(); 
+			   // alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "AjaxViewSourceData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){							
+							 $('#BaseLine_Source_table').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		} 
+		
+		function AddSourceData() {
+				var vGIANO = $("#txtReportCode").val(); 
+				var vSrcText = $("#txtSrcText").val(); 
+				var vSrcLink = $("#txtSrcLink").val(); 
+				
+			
+				if (vGIANO != null && vGIANO != '' && vSrcLink != null && vSrcLink != '')		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "AjaxAddSourceData.asp",
+							type: "POST",
+							 data:'vGIANO='+encodeURIComponent(vGIANO)+'&vSrcText='+encodeURIComponent(vSrcText)+'&vSrcLink='+encodeURIComponent(vSrcLink)+'',
+							 success: function(data){
+							 alert('Done');
+							 GetSourceData()
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		}
+		
+		function ViewImpactData()		
+		{
+		
+		  var vGIANO = $("#txtGIA_NO").val(); 
+			   /// alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "AjaxViewSecondaryImpactData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){							
+							 $('#Impact_view').empty().append(data);
+							 
+							 $("#HidImpacts").val(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		
+		}
+		
+		function funAddImpacts() {
+				
+				var vGIANO = $("#txtGIA_NO").val(); 
+				var vImpact = $("#Txt_Impact").val(); 
+				//alert(vImpact);
+				//alert(vGIANO);
+				if (vGIANO != null && vGIANO != '' && vImpact != null && vImpact != '')		 
+				 {			
+				alert(vImpact);				 
+				  $.ajax({
+							url: "AjaxAddSecondaryImpactData.asp",
+							type: "POST",
+							 data:'vGIANO='+encodeURIComponent(vGIANO)+'&vImpact='+encodeURIComponent(vImpact)+'',
+							 success: function(data){
+							// alert(data);
+							ViewImpactData();
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 
+					/*else
+					{
+					 alert('Impact Name can't be left blank');
+					}*/				
+		}
+		
+		
+		function funAddSegments() {
+				
+				var vGIANO = $("#txtGIA_NO").val(); 
+				var vSegCount = $("#Txt_SegCount").val(); 
+				//var vSegName = $("#Txt_SegName").val();
+				var vSegName = $("#ApplicationName0").val();
+				if (vSegName=='Other')
+				{
+					vSegName=$("#Txt_Channel0").val(); 
+				}
+				//alert(vSegCount);	
+				var vTOPIC= $("#txtTOPIC").val();
+				
+				if (vTOPIC == '')
+				{
+					vTOPIC = 'Market Segment';
+				}				
+				//alert (vTOPIC);
+				// REPORT CODE
+				if (vGIANO != null && vGIANO != '' && vTOPIC != '' && vTOPIC != null)		 
+				 {	
+				  // SEGMENT COUNT
+				  if (vSegCount != null && vSegCount != '')		 
+				  {
+					  // SEGMENT COUNT
+					  //if (vSegName != null && vSegName != '')		 
+					  //{
+						  $.ajax({
+									url: "AjaxDisplaySegData.asp",
+									type: "POST",
+									 data:'vGIANO='+encodeURIComponent(vGIANO)+'&vSegCount='+encodeURIComponent(vSegCount)+'&vSegName='+encodeURIComponent(vSegName)+'',
+									 success: function(data){
+									 //alert(data); 
+									 //ViewImpactData();
+									 $('#MARKET_SEGMENT_table').empty().append(data);							 
+									},
+									error: function (xhr, ajaxOptions, thrownError) {
+									alert(xhr.status);
+									alert(thrownError);
+									alert(xhr.responseText); 
+									}
+								});				
+						//} 
+						//else
+						//{
+						//	 alert('SEGMENTATION TITLE IS NOT SELECTED');
+						//}
+				} 
+				else
+				{
+					 alert('SEGMENT COUNT cannot be left blank');
+				}
+				}
+				else
+				{
+					 alert('REPORT CODE/REPORT TITLE cannot be left blank');
+				}	
+		}
+
+		function funAddApplications_new() {
+				
+				var vGIANO = $("#txtGIA_NO").val(); 
+				var vAppCount = $("#Txt_AppCount").val(); 
+				//var vAppName = $("#Txt_AppCount").val();
+				//alert(vSegCount);	
+				
+			
+				// REPORT CODE
+				if (vGIANO != null && vGIANO != '')		 
+				 {	
+				  // APPLICATION COUNT
+				  if (vAppCount != null && vAppCount != '')		 
+				  {
+					 
+						  $.ajax({
+									url: "AjaxDisplayApplicationData_new.asp",
+									type: "POST",
+									 data:'vGIANO='+encodeURIComponent(vGIANO)+'&vAppCount='+encodeURIComponent(vAppCount)+'',
+									 success: function(data){
+									 //alert(data); 
+									 //ViewImpactData();
+									 $('#MARKET_APPLICATION_table').empty().append(data);							 
+									},
+									error: function (xhr, ajaxOptions, thrownError) {
+									alert(xhr.status);
+									alert(thrownError);
+									alert(xhr.responseText); 
+									}
+								});
+				} 
+				else
+				{
+					 alert('APPLICATION COUNT cannot be left blank');
+				}
+				}
+				else
+				{
+					 alert('REPORT CODE cannot be left blank');
+				}	
+		}
+		
+		
+		function getSegTypeallocation(GIANO) {
+				var vGIANO = $("#txtGIA_NO").val(); 
+				//alert('hi');
+				if (vGIANO != null && vGIANO != '' )		 
+				 {			
+				// alert(vGIANO);				 
+				  $.ajax({
+							url: "getSegTypeALLOCATIONS.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',
+							success: function(data){
+							
+							 $('#SegTypeALLOCATIONS').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 				 
+				
+		}
+		
+		function SegTotalvalueCalculation_100(vSegSno,vSgCnt,vCountry,vSegTypeName)
+		{
+		   var vSegTotal;
+		   //alert(vSegSno);
+		   vSegTotal = 0;
+		   var vSegTName=vSegTypeName;
+		   vSegTypeName=vSegTypeName.replace(' ','').replace('-','');
+		   for (var  i = 1; i <= vSgCnt; i++) 
+		   {
+		      vSegTotal = parseInt(vSegTotal) + parseInt($("#rank_input_"+i+'_'+vSgCnt+'_'+vCountry).val());
+		   }
+		   
+		        if (vSegTotal<100 || vSegTotal>100)
+					{
+					       alert('Segment values must equal to  100'); 					     
+					      //  var vtotFld="#txtTotal_"+vSegTypeName+"_"+vCountry							
+						   $("#txtTotal_"+vSegTypeName+"_"+vCountry).val(vSegTotal);	
+						//  $('#txtTotal_ProductSegment_United_States').val(vSegTotal);			
+					} 
+				else
+					{
+						$("#txtTotal_"+vSegTypeName+"_"+vCountry).val(vSegTotal);
+						
+						 for (var  i = 1; i <= vSgCnt; i++) 
+							   {	
+							      //vSegSno,vSgCnt,vCountry,vSegTypeName
+									var vGIOType;	
+									vGIOType = 'GEO_A';									
+								    var vSegval = $("#rank_input_"+i+'_'+vSgCnt+'_'+vCountry).val();
+									//alert($("#rank_input_"+i+'_'+vSgCnt+'_'+vCountry).val());
+									addCountryTweek(vSegTName,i,vGIOType,vSegval,vCountry);								
+							   }
+							   
+					}
+		   
+		  
+		    
+					
+
+		} 
+		function addCountryTweek(vSegTypeName,vSegSno,vGIOType,vSegval,vCountry)
+		{
+		
+		// GIA_NO,Segment_type,Seg_id
+		// alert(vSegTypeName);
+		// alert(vSegSno);
+		// alert(vGIOType);
+		// alert(vSegval);	 
+		 
+		    var vGIANO = $("#txtGIA_NO").val(); 
+				if (vGIANO != null && vGIANO != '' && vGIOType != null && vGIOType != '' && vSegval != null && vSegval != '')		 
+				 {			
+				//alert(vImpact);				 
+				  $.ajax({
+							url: "AjaxUpdateCoutryTweeks.asp",
+							type: "POST", 
+							 data:'vCountry='+encodeURIComponent(vCountry)+'&vSegval='+encodeURIComponent(vSegval)+'&vGIOType='+encodeURIComponent(vGIOType)+'&vGIANO='+encodeURIComponent(vGIANO)+'&vSegTypeName='+encodeURIComponent(vSegTypeName)+'&vSegSno='+encodeURIComponent(vSegSno)+'',
+							 success: function(data){
+							 //alert(data);
+							 //GetSourceData()
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				
+				  } 
+					
+		 
+		 
+		}
+		
+		function AddValue()
+		{
+			var vGIALink = $("#srcLink").val();
+			var vGIAText = $("#srcText").val();
+			if (vGIALink != null && vGIALink != '' )		 
+			{	
+				alert ("Baseline data added successfully!");
+			}
+			else
+			{
+				alert ("Source Link / Text cannot be empty");
+			}
+		}
+
+		function funAddAllSegments() {
+				
+				var vGIANO = $("#txtGIA_NO").val(); 
+				var vTOPIC = $("#txtTOPIC").val(); 
+				var vSegmentType = 'Market Segments'; //$("#Txt_SegName").val();
+				var vSegCount = $("#Txt_SegCount").val();				
+				//alert(vPrimaySegTitle);
+				//vGIANO,vTOPIC,vSegmentType,i,vSegmentName,v2019MSValue,vAllocationPer,vtxtCAGR_Percentage14,vtxtCAGR_Percentage20,vtxtCAGR_Percentage30
+				
+				if (vGIANO != null && vGIANO != '' )		 
+				{	
+					//alert ("Primary Market Segment Added successfully!");
+					for (var  i = 1; i <= vSegCount; i++) 
+					   {
+					        //alert(i);
+							var vSegmentName = $("#SegmentName"+i).val();  
+							var v2019MSValue = $("#gvSegments"+i).val();  
+							var vAllocationPer = $("#rank_input_"+i).val(); 
+							var vtxtCAGR_Percentage14 = $("#txtCAGR_Percentage14_"+i).val();
+							var vtxtCAGR_Percentage20 = $("#txtCAGR_Percentage20_"+i).val();
+							var vtxtCAGR_Percentage30 = $("#txtCAGR_Percentage30_"+i).val();
+							var vtxtNoofApps = $("#txtNoofApps_"+i).val();						
+							
+							/*alert(vSegmentName);
+							alert(v2019MSValue);
+							alert(vtxtCAGR_Percentage14);
+							alert(vtxtCAGR_Percentage20);
+							alert(vtxtCAGR_Percentage30);*/
+							alert(vtxtNoofApps);
+							
+														
+							if (vSegmentName != null && vSegmentName != '' && v2019MSValue != '' && v2019MSValue != '')		 
+									{
+											$.ajax({
+														url: "AjaxAddMarketSegmentsData.asp",
+														type: "POST",
+														 data:'vGIANO='+encodeURIComponent(vGIANO)+'&vtxtNoofApps='+encodeURIComponent(vtxtNoofApps)+'&vTOPIC='+encodeURIComponent(vTOPIC)+'&vSegmentType='+encodeURIComponent(vSegmentType)+'&i='+encodeURIComponent(i)+'&vSegmentName='+encodeURIComponent(vSegmentName)+'&v2019MSValue='+encodeURIComponent(v2019MSValue)+'&vAllocationPer='+encodeURIComponent(vAllocationPer)+'&vtxtCAGR_Percentage14='+encodeURIComponent(vtxtCAGR_Percentage14)+'&vtxtCAGR_Percentage20='+encodeURIComponent(vtxtCAGR_Percentage20)+'&vtxtCAGR_Percentage30='+encodeURIComponent(vtxtCAGR_Percentage30)+'',
+														 success: function(data){
+														 																		 
+														},
+														error: function (xhr, ajaxOptions, thrownError) {
+														alert(xhr.status);
+														alert(thrownError);
+														alert(xhr.responseText); 
+														} 
+													});
+									}
+							
+							
+							
+					   }
+					
+				
+				
+				  alert('Data added sucessfully'); 
+				}
+				
+			CreateApplications_Channels();	
+		}
+		
+		function CreateApplications_Channels()
+		{
+			
+		 var vGIANO = $("#txtGIA_NO").val(); 
+				 //alert(vGIANO);	
+				if (vGIANO != null && vGIANO != '' )		 
+				 {		
+						 
+				  $.ajax({
+							url: "AjaxDisplayApplicationData_new.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',							    
+							success: function(data){							
+							$('#MARKET_SEGMENT_Applications_table').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				  } 
+		}
+		
+		function funMSChannels()
+		{
+			var vGIANO = $("#txtGIA_NO").val(); 
+				// alert(vGIANO);	
+				if (vGIANO != null && vGIANO != '' )		 
+				 {		
+						 
+				  $.ajax({
+							url: "AjaxDisplayChannelSegData.asp",
+							type: "POST",
+							data:'vGIANO='+vGIANO+'',							    
+							success: function(data){							
+							$('#MARKET_SEGMENT_Applications_Data_table').empty().append(data);
+							},
+							error: function (xhr, ajaxOptions, thrownError) {
+							alert(xhr.status);
+							alert(thrownError);
+							alert(xhr.responseText); 
+							}
+						});
+				  } 
+		
+		}
+
+		
+		function funAddKEYaPPSegments(vsegtype,vSegCount) {
+				
+				var vGIANO = $("#txtGIA_NO").val(); 
+				var vTOPIC = $("#txtTOPIC").val(); 
+				
+				var vSegmentType = vsegtype;//$("#Txt_SegName").val();
+				var vSegmentType_Rep=vsegtype.replace("-","").replace(" ","");
+				var vSegCount = vSegCount; //($"#Txt_SegCount").val();
+				//alert(vPrimaySegTitle);
+				//vGIANO,vTOPIC,vSegmentType,i,vSegmentName,v2019MSValue,vAllocationPer,vtxtCAGR_Percentage14,vtxtCAGR_Percentage20,vtxtCAGR_Percentage30
+				
+				if (vGIANO != null && vGIANO != '' )		 
+				{	
+					//alert ("Primary Market Segment Added successfully!");
+					for (var  i = 1; i <= vSegCount; i++) 
+					   {
+					        //alert(i);
+							var vSegmentName = $("#SegmentName"+vsegtype+i).val();  
+							var v2019MSValue = $("#gvSegments"+vsegtype+i).val();  
+							var vAllocationPer = $("#rank_input_"+vSegmentType_Rep+i).val(); 
+							var vtxtCAGR_Percentage14 = $("#txtCAGR_Percentage14_"+vsegtype+i).val();
+							var vtxtCAGR_Percentage20 = $("#txtCAGR_Percentage20_"+vsegtype+i).val();
+							var vtxtCAGR_Percentage30 = $("#txtCAGR_Percentage30_"+vsegtype+i).val();			
+							
+							//alert(vSegmentName);
+							//alert(v2019MSValue);
+							//alert(vAllocationPer);
+								//alert(vtxtCAGR_Percentage14);
+								//alert(vtxtCAGR_Percentage20);
+								//alert(vtxtCAGR_Percentage30);
+								
+							if (vSegmentName != null && vSegmentName != '' && v2019MSValue != '' && v2019MSValue != '')		 
+									{
+											$.ajax({
+														url: "AjaxAddSegmentsData.asp",
+														type: "POST",
+														 data:'vGIANO='+encodeURIComponent(vGIANO)+'&vTOPIC='+encodeURIComponent(vTOPIC)+'&vSegmentType='+encodeURIComponent(vSegmentType)+'&i='+encodeURIComponent(i)+'&vSegmentName='+encodeURIComponent(vSegmentName)+'&v2019MSValue='+encodeURIComponent(v2019MSValue)+'&vAllocationPer='+encodeURIComponent(vAllocationPer)+'&vtxtCAGR_Percentage14='+encodeURIComponent(vtxtCAGR_Percentage14)+'&vtxtCAGR_Percentage20='+encodeURIComponent(vtxtCAGR_Percentage20)+'&vtxtCAGR_Percentage30='+encodeURIComponent(vtxtCAGR_Percentage30)+'',
+														 success: function(data){
+														//alert(data); 																			 
+														},
+														error: function (xhr, ajaxOptions, thrownError) {
+														alert(xhr.status);
+														alert(thrownError);
+														alert(xhr.responseText); 
+														} 
+													});
+									}
+							
+							
+							
+					   }
+					
+				}
+		} 
+		
+		
+		function funAddAllChannels(vChannelCNT)
+		{
+		 $('#MARKET_Count_table').empty();
+
+		 for (var  i = 1; i <= vChannelCNT; i++) 
+		   {
+				var vAppVal = $("#AppCount"+i).val();
+				//alert (vAppVal);
+				var vGIANO = $("#txtGIA_NO").val();  
+				var vsegtype=$("#ApplicationName"+i).val(); 
+				
+				if (vsegtype=='Other')
+				{
+					vsegtype=$("#Txt_Channel"+i).val(); 
+				}
+				//alert(vsegtype);
+				var vSegCount = vAppVal;
+				if (vGIANO != null && vGIANO != ''  && vsegtype!='')		 
+				{
+						$.ajax({
+									url: "AjaxDisplayAppData.asp",
+									type: "POST",
+									 data:'vGIANO='+encodeURIComponent(vGIANO)+'&vSegCount='+encodeURIComponent(vSegCount)+'&vsegtype='+encodeURIComponent(vsegtype)+'',
+									 success: function(data){
+									 //alert(data); 
+									 //ViewImpactData();
+									 $('#MARKET_Count_table').append(data);							 
+									},
+									error: function (xhr, ajaxOptions, thrownError) {
+									alert(xhr.status);
+									alert(thrownError);
+									alert(xhr.responseText); 
+									}
+								});
+				}
+		   }		
+
+			//alert('Data added sucessfully'); 		
+		}
+		
+		function toggle(val1) {
+			var cont = document.getElementById('SHOW_ADD_APPLICATION');
+			target = document.getElementById(this.value);
+			var vsegtype = $("#ApplicationName"+val1).val();
+			//alert (vsegtype);
+			if (vsegtype == 'Other')
+			{
+				cont.style.display = 'block';								
+			}
+			else 
+			{
+				cont.style.display = 'none';
+			}
+		}
+		
+		function toggle_sub(val1) {
+			var cont = document.getElementById("SHOW_ADD_APPLICATION"+val1);			
+			var vsegtype = $("#ApplicationName"+val1).val();
+			//alert (vsegtype);
+			if (vsegtype == 'Other')
+			{
+				cont.style.display = 'block';	
+				//$("#MARKET_APPLICATION_table"+val1).style.display = 'block';				
+			}
+			else 
+			{
+				cont.style.display = 'none';
+				//$("#MARKET_APPLICATION_table"+val1).style.display = 'none';
+			}
+		}
+		function toggle_sub0(val1) {
+			var cont = document.getElementById("SHOW_ADD_APPLICATION"+val1);			
+			var vsegtype = $("#ApplicationName"+val1).val();
+			//alert (vsegtype);
+			if (vsegtype == 'Other')
+			{
+				cont.style.display = 'block';	
+				//$("#MARKET_APPLICATION_table"+val1).style.display = 'block';				
+			}
+			else 
+			{
+				cont.style.display = 'none';
+				//$("#MARKET_APPLICATION_table"+val1).style.display = 'none';
+			}
+		}
+</script>
+</head>
+</div>
+<body data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="">
+    <nav>
+        <div class="navbar">
+            <div id="wapper">
+                <span style="float:left;"><img src="https://www.strategyr.com/images/log_icon.png" style="width:45px;height:45px;" class="log_ico">
+                </span>
+                <span>
+                    <a href="http://205.234.30.74/DEGNumbers/GIA.aspx" target="new"><i class="fa fa-table"></i> GIA</a>
+                    <a href="http://205.234.30.74/DEGNumbers/Segments.aspx" target="new"><i class="fa fa-list-alt" aria-hidden="true"></i> Segments</a>
+                   <!-- <a href="http://205.234.30.74/DEGNumbers/BaseYearData.aspx" target="new"><i class="fas fa fa-cloud-upload"></i> Base Year Data</a>-->
+                    
+                   <!-- <div class="dropdown">
+                        <button class="dropbtn">DEG Numbers Link
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="row">
+                                <div class="column">
+                                    <a href="http://server2/gia_analytix/viewGIACountriesII.asp?sts=O&amp;code="
+                                        target="_blank">
+                                        <!-i class="fa fa-link" aria-hidden="true"></i-><i class="fa fa-home"
+                                            aria-hidden="true"></i> Generate Numbers Link</a>
+                                </div>
+                                <div class="column">
+                                    <a href="http://205.234.30.74/DEGNumbers/" target="_blank"><i
+                                            class="fa fa-external-link"></i>Online Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!--a href="ExchangeRates.aspx"><i class="fa fa-th" aria-hidden="true"></i> ExchangeRates</a>
+   <a href="Simulator.aspx"><i class="fa fa-table" aria-hidden="true"></i> Simulator</a-->
+
+                </span>
+                <span style="float:right; padding-right: 10px;">
+                    <a href="http://205.234.30.74/DEGNumbers/Logout.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+                </span>
+                <span style="float:right;padding-right: 50px;">
+                    <a href="http://205.234.30.74/DEGNumbers/GIA.aspx#GIA_Analytix"><i class="fa fa-home" aria-hidden="true"></i> Welcome obili</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="wapper" class="border shadow-sm bg-white">
+
+         <!---BASELINE DATA-->
+         <div class="w-100">
+            <div class="w-100 section_header">
+                <h3>A. SET REPORT ARCHITECTURE</h3>
+            </div>
+            <div class="table-responsie">
+			
+			<form name="frmadd" method="post">
+                <table class="table border" id="baseline_data_table">
+                    <tbody>
+                        <tr>
+                            <td style="width: 15%"><b>
+                                    <font color="red"><sup>*</sup></font>REPORT CODE
+                                </b>:
+                                <input name="txtGIA_NO" type="text" onchange="ChkGiaData()" id="txtGIA_NO" placeholder=" GIA No" style="color: #000 !important; font-size: 15px; font-weight: 600;" tabindex="1">
+                                <br><span id="reqGIA_NO" class="ErrorMessageClass" style="display:none;">Report Code
+                                    cannot be left blank</span>
+                            </td>
+                            <td style="width: 55%" colspan="2">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>REPORT TITLE
+                                </b>: <input name="txtTOPIC" type="text" id="txtTOPIC" style="color: #000 !important; font-size: 15px; font-weight: 600;" tabindex="2">
+                                <br><span id="reqTOPIC" class="ErrorMessageClass" style="display:none;">Topic cannot be
+                                    left blank</span>
+                            </td>
+						</tr>
+
+
+                        <tr>
+
+                            <td colspan="2">
+
+                                <div class="w-100 d-flex justify-content-between align-items-middle">
+                                        <div class="w-30 mr-1">
+                                            <b>
+                                            <font color="red"><sup>*</sup></font>YEAR
+                                                </b>:
+                                                <select name="txtORIG_YEAR" id="txtORIG_YEAR">
+							
+                                                    <option value="2012">2012</option>
+                                                    <option value="2013">2013</option>
+                                                    <option selected="" value="2014">2014</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2020">2020</option>
+                        
+                                                </select>
+                                          
+                                        </div>
+
+                                        <div class="w-30 mr-1">
+                                            <b>
+                                            <font color="red"><sup>*</sup></font>COUNTRY
+                                                </b>:
+                                                <select name="txtORIG_YEAR" id="txtORIG_YEAR">
+							
+                                                    <option value="USA">USA</option>
+                                                    <option value="Japan">Japan</option>
+                                                    <option selected="" value="Canada">Canada</option>
+                                                    <option value="North USA">North USA</option>
+                                                    <option value="Japan">Japan</option>
+                                                    <option value="UK">UK</option>
+                                                    <option value="China">China</option>
+                                                    <option value="Asia">Asia</option>
+                                                    <option value="Latin America">Latin America</option>
+                        
+                                                </select>
+                                        </div>
+
+										<div class="w-30 mr-1">
+                                            <b>
+                                            <font color="red"><sup>*</sup></font>SEGMENT
+                                                </b>:
+                                                <select name="txtORIG_YEAR" id="txtORIG_YEAR">
+							
+                                                    <option value="SEGMENT-1">SEGMENT-1</option>
+                                                    <option value="SEGMENT-2">SEGMENT-2</option>
+                                                    <option selected="" value="SEGMENT-3">SEGMENT-3</option>
+                                                    <option value="SEGMENT-4">SEGMENT-4</option>
+                                                    <option value="SEGMENT-5">SEGMENT-5</option>
+                                                    <option value="SEGMENT-6">SEGMENT-6</option>
+                                                    <option value="SEGMENT-7">SEGMENT-7</option>
+                                                    <option value="SEGMENT-8">SEGMENT-8</option>
+                                                    <option value="SEGMENT-9">SEGMENT-9</option>
+                        
+                                                </select>
+                                        </div>
+                                       
+
+                                        <div class="w-10 mr-1">
+                                            <b>
+                                                <font color="red"><sup>*</sup></font>VALUE
+                                            </b>: <input name="txtTOPIC" type="text" id="txtTOPIC" style="color: #000 !important; font-size: 15px; font-weight: 600;" tabindex="2">
+                                            <br><span id="reqTOPIC" class="ErrorMessageClass" style="display:none;">Topic cannot be
+                                                left blank</span>
+                                        </div>
+                                       
+                                       
+
+                                </div>
+
+
+
+                            </td>
+
+
+						</tr>
+
+                        <tr>
+
+                            <td colspan="2" class="text-center">
+                                <input type="submit" name="btnAddGIA" style=" width: 105px; height: 38px; font-size: 16px;" class=" btn-primary p-2 shadow-sm border-0 mx-1 mb-2 mx-0" value="CALCULATE" id="btnAddGIA" onclick="AddGIAData()">
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+				</form>
+				
+            </div>
+        </div>
+       
+
+	
+       
+		
+
+
+</div></body>
+</html>

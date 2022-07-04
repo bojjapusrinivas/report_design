@@ -1,0 +1,296 @@
+/*==================
+CFDTable styles
+==================*/
+
+.CFDTable {
+    width: 100%;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+}
+.CFDTable tr {
+    width: 100%;
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+}
+.table-columns {
+    width: 100%;
+
+}
+
+
+.CFDTable thead .table-columns .col-1,
+.CFDTable tbody .table-columns .col-1
+ {
+    width: 70% !important;
+    padding: 0px 10px 0px 10px;
+}
+
+
+
+.CFDTable thead .table-columns .col-2,
+.CFDTable tbody .table-columns .col-2 {
+    width: 30% !important;
+    padding: 0px;
+}
+
+.CFDTable tbody .table-columns .col-1 {
+   padding-left: 10px !important;
+}
+
+
+
+.CFDTable thead .table-columns .col-2 span{
+    background: transparent !important;
+    position: relative;
+    
+}
+
+
+
+
+.CFDTable thead .table-columns .col-2 span.th-title h3
+    {
+     padding: 0px;
+    background-color: transparent;
+    font-size: 16px !important;
+    font-weight: bold;
+    display: block;
+    transform: rotate(-80deg);
+    transform-origin: left;
+    margin-top:70px;
+    color: #000;
+    line-height: normal;
+    width: 100%;
+    display: block;
+    word-break: inherit;
+    
+}
+
+
+
+#mytable2.CFDTable thead .table-columns .col-2 span.th-title h3
+    {
+     padding: 0px;
+    background-color: transparent;
+    font-size: 16px !important;
+    font-weight: bold;
+    display: block;
+    transform: rotate(-90deg);
+    transform-origin:center;
+    margin-top:70px;
+    color: #000;
+    line-height: normal;
+    width: 100%;
+    display: block;
+    word-break: inherit;
+}
+
+#mytable2 thead .table-columns .col-2 span.th-title:nth-child(4) h3
+    {
+       
+        margin-top:70px;
+        padding-right:40px;
+    }
+
+    #mytable2 thead .table-columns .col-2 span.th-title:nth-child(3) h3
+    {
+      
+       
+    }
+
+.CFDTable thead .table-columns .col-1 span.th-title
+    {
+        font-size: 16px !important;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        transform: translateY(0px);
+        color: #000;
+}
+
+#myTable thead .table-columns .col-1 span.th-title
+    {
+       
+        transform: translateY(-30px);
+      
+}
+
+
+#mytable2 thead .table-columns .col-2 .rank-control::before{
+        content: " TRUST FACTOR ";
+        width: 60%;
+        height: 30px;
+        position: absolute;
+        right: 0px;
+        top: -10px;
+        font-size: 18px;
+        padding: 5px;
+        font-weight: bold;
+        color: #000;
+        text-align: center;
+        border-bottom: rgba(0,0,0,0.09) solid 1px;
+ 
+}
+
+
+.CFDTable .table-columns .col-2 .rank-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+}
+
+
+.CFDTable thead .table-columns .col-2 .rank-control span {
+    display:block;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 50px;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+
+
+.CFDTable .table-columns .col-2 .rank-control span {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 30px;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+}
+
+
+
+
+.CFDTable .table-columns .col-2 span:nth-child(even) {
+
+    background: #E1EFDB
+}
+
+/*
+.CFDTable thead .table-columns .col-2 span:nth-child(even)::before{
+    content: "";
+    width: 95%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: #E1EFDB;
+    transform: skewX(-12deg);
+    margin-left: 10px;
+    
+}*/
+
+
+.CFDTable .table-columns .col-2 span:nth-child(odd) {
+    background: #C4E0B6
+}
+
+/*
+.CFDTable thead .table-columns .col-2 span:nth-child(odd)::before{
+    content: "";
+    width: 95%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: #C1E0B8;
+    transform: skewX(-12deg);
+    margin-left: 4px;
+    
+    
+}*/
+
+
+.CFDTable h3{
+    font-size: 15px;
+    color: #000;
+}
+
+/*---DATA TABLE ------*/
+
+
+h3{
+    line-height: normal;
+}
+
+
+
+table.dataTable.display tbody tr.odd>.sorting_1 {
+    background-color: #f1f1f1   !important
+   
+}
+
+table.dataTable.display tbody tr.even>.sorting_1 {
+    background-color: #fff   !important
+   
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 0px 0px 0px 0px !important;
+}
+
+#myTable_length, #myTable2_length,
+.dataTables_filter{
+    display: none;
+}
+
+/*----INCRMENT DECERMENT-BUTTON----*/
+
+
+.inc-dec-block input{
+    width: 55px;
+    height: 30px;
+
+    margin:0px 5px 10px 5px;
+}
+
+.inc-dec-block button{
+    border-radius: 100%;
+    border: none;
+    font-size: 16px;
+    margin:3px 5px 2px 5px;
+    
+    background: #fff;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/*-------------
+ table alignment
+--------------*/
+
+#myTable thead tr{
+    height: 80px;
+}
+
+#myTable thead  .table-columns .col-2 .rank-control{
+    margin-top: 10px;
+}
+
+
+#mytable2 thead tr{
+    height: 170px;
+}
+
+#mytable2 thead .table-columns .col-2 .rank-control{
+    margin-top:10px
+}
+
+
+#mytable2 tbody .table-columns:nth-child(odd) {
+    background-color: #f1f1f1 !important;
+}

@@ -1,0 +1,106 @@
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+<link rel="stylesheet" href="dist/jqueryui-mosaico-cropper.min.css" />
+<script src="dist/jqueryui-mosaico-cropper.min.js"></script>
+<script src="dist/urladapters.js"></script>
+
+<style>
+.croppable-image:hover {
+    outline: 2px solid #ff5722;
+}
+
+@-webkit-keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+img.my-cropper-loading {
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.orginal_img{
+	width:250px;
+	height:auto;	
+}
+</style>
+
+
+<script>
+
+$(function() {
+
+    // quando clicco si inizializza
+    $('.croppable-image').on("click", function(e) {
+        $(e.target).mosaicoCropper({
+            imgLoadingClass: "my-cropper-loading",
+            /* urlPrefix: urlprefix */
+            /* urlPostfix: urlpostfix */
+            autoClose: !e.shiftKey,
+            autoZoom: !e.shiftKey,
+            shiftWheel: e.shiftKey,
+            containerSelector: 'body',
+            urlAdapter: automaticURLAdapter(e.target)
+        });
+    });
+
+    $('.cropthemall').on("click", function(e) {
+        $('.croppable-image').each(function(index, el) {
+            $(el).mosaicoCropper({
+                imgLoadingClass: "my-cropper-loading",
+                autoClose: false,
+                autoZoom: false,
+                shiftWheel: true,
+                containerSelector: 'body',
+                urlAdapter: automaticURLAdapter(el)
+            });
+        });
+    });
+
+    $('.closethemall').on("click", function(e) {
+        $('.croppable-image.my-cropper-loading').mosaicoCropper("destroy");
+    });
+
+});
+
+</script>
+
+
+<div>
+
+<h3> CROPPED IMAGES </h3>
+
+<p> Click on image to zoom out  full image </p>
+
+<table border="0" cellpadding="5"><tr>
+    <td valign="top"><img class="croppable-image cloudinary" src="https://res.cloudinary.com/demo/image/upload/w_166,h_90,c_fill/balloons.jpg"></td>
+    <td valign="top"><img class="croppable-image cloudinary" src="https://res.cloudinary.com/demo/image/upload/w_330,h_213,c_scale/x_39,y_15,w_166,h_90,c_crop/sofa_cat.jpg"></td>
+    <td valign="top"><img class="croppable-image cloudinary" src="https://res.cloudinary.com/demo/image/upload/w_440,h_303,c_scale/x_65,y_66,w_166,h_90,c_crop/woman.jpg"></td>
+    <td valign="top"><img class="croppable-image cloudinary" src="https://res.cloudinary.com/idemo/image/upload/w_578,h_385,c_scale/x_200,y_100,w_166,h_92,c_crop/friends.jpg" width="166"></td>
+</tr></table>
+
+
+<h3> ORGINAL IMAGES </h3>
+
+<table border="0" cellpadding="5"><tr>
+    <td valign="top"><img class="orginal_img"  src="https://res.cloudinary.com/demo/image/upload/balloons.jpg"></td>
+    <td valign="top"><img class="orginal_img" src="https://res.cloudinary.com/demo/image/upload/sofa_cat.jpg"></td>
+    <td valign="top"><img class="orginal_img" src="https://res.cloudinary.com/demo/image/upload/woman.jpg"></td>
+    <td valign="top"><img class="orginal_img"  src="https://res.cloudinary.com/idemo/image/upload/friends.jpg" width="166"></td>
+</tr></table>
+
+
+
+</div>
+
+<html>

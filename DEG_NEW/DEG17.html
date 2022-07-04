@@ -1,0 +1,2717 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        GIA - DEG Numbers
+    </title>
+    <!-- CSS STYLES-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="https://bojjapusrinivas.github.io/report_design/DEG_NEW/gia_switches.css" />
+    <link rel="stylesheet" href="deg_custom_styles4.css" />
+    <link rel="stylesheet" href="range_slider_tables.css" />
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+
+    <style>
+        #segment_allication .ranking_slider .irs.irs--big.js-irs-0.irs-with-grid:nth-child(2) {
+            display: NONE;
+        }
+
+        .js-range-slider {
+            DISPLAY: NONE;
+        }
+
+        #segment_allication .ranking_slider p,
+        #market-staging .ranking_slider p {
+            display: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function Navigate() {
+            window.location.replace('http://205.234.30.74/degnumbers/GIA_DEG_Numbers_updated_3.asp');
+            return false;
+        }
+    </script>
+
+
+</head>
+</div>
+
+<body>
+    <!---NAV BAR-->
+    <nav>
+        <div class="navbar">
+            <div id="wapper">
+                <span style="float:left;"><img src="https://www.strategyr.com/images/log_icon.png"
+                        style="width:45px;height:45px;" class="log_ico">
+                </span>
+                <span>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx"><i class="fa fa-table"></i> GIA</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Segments.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Segments</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BaseYearData.aspx"><i
+                            class="fas fa fa-cloud-upload"></i> Base Year Data</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BulkTocReset.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Reset TOC</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">DEG Numbers Link
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="row">
+                                <div class="column">
+                                    <a href="http://server2/gia_analytix/viewGIACountriesII.asp?sts=O&amp;code="
+                                        target="_blank">
+                                        <!--i class="fa fa-link" aria-hidden="true"></i--><i class="fa fa-home"
+                                            aria-hidden="true"></i> Generate Numbers Link
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a href="http://128.242.110.22/DEGNumbers/" target="_blank"><i
+                                            class="fa fa-external-link"></i>Online Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--a href="ExchangeRates.aspx"><i class="fa fa-th" aria-hidden="true"></i> ExchangeRates</a>
+   <a href="Simulator.aspx"><i class="fa fa-table" aria-hidden="true"></i> Simulator</a-->
+
+                </span>
+                <span style="float:right; padding-right: 10px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Logout.aspx"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i> Log Out</a>
+                </span>
+                <span style="float:right;padding-right: 50px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx#GIA_Analytix"><i class="fa fa-home"
+                            aria-hidden="true"></i> Welcome obili</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="wapper" class="border shadow-sm bg-white">
+
+
+        <div class="row mx-0 my-5">
+
+            <!--B--->
+            <div class="w-100 section_header">
+                <h3 class="p-2">B. PRIMARY APPLICATION BASE YEAR PERCENTAGE ALLOCATION - TIER B &nbsp;&nbsp;&nbsp;<a
+                        href="http://205.234.30.74/DEGNumbers/GIA.aspx" target="new"><input type="submit" name="btnAdd"
+                            value="Add New Segment" id="btnAdd" class="float-right"></a></h3>
+            </div>
+
+            <div class="table-responisve w-100">
+                <div id="segment_allocation_primary">
+                    <table class="table w-100">
+                        <tbody>
+                            <!--tr>
+                                <th colspan="8" scope="col" align="center" style="color:black;background-color:#FFF;"></th>
+                            </tr-->
+                            <tr>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">APPLICATION ID</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">APPLICATION NAME</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2019 MARKET SIZE</th>
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;text-align: center !important;">%</th>-->
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" colspan="2"
+                                    class="text-center">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="ml-4">%</span>
+                                        <span class="mx-auto">ALLOCATION</span>
+                                    </div>
+                                </th>
+
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;" colspan="3" class="text-center">CAGR</th>-->
+
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" colspan="3"
+                                    class="text-center">% GROWTH RATES</th>
+
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">CAGR
+                                </th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">
+                                    MULTIPLIERS</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">OPTIONS</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center"></th>
+
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2012</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2019</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2030</th>
+
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;">2020-2030</th>-->
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;">2020-2030</th>-->
+                                <!--<th scope="col" style="color:black;background-color:#FFF1EB;"></th>-->
+                            </tr>
+
+                            <tr>
+                                <td class="GIA_NO">
+                                    <span>92925-TA-MS1</span>
+                                </td>
+                                <td class="SEGMENT">
+                                    <span>Marine Propellers</span>
+                                </td>
+                                <td class="Type">
+                                    <!--<span>Market Segments</span>-->
+                                    <input name="gvSegments142" type="text" class="mx-auto"
+                                        style="width:80px;display: block" value="5226">
+                                </td>
+                                <td class="Allocation_Percentage" colspan="2">
+                                    <div class="w-100">
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_142"
+                                                onchange="PrimarySegmentTotalvalueCalculation_100('142')"
+                                                id="rank_input_142" value="0" size="20" tabindex="3" placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                id="slide_142" tabindex="-1" readonly="">
+                                        </div>
+                                        <script>
+
+                                            var $slide_142 = $("#slide_142");
+                                            var $slide_input_142 = $("#rank_input_142");
+                                            var instance142;
+                                            var min = 0;
+                                            var vfromval = 100;
+                                            var max = 100;
+
+                                            $slide_142.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_142.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_142.prop("value", data
+                                                        .from);
+                                                },
+                                                onFinish: function (data) {
+                                                    // fired on pointer release
+                                                    $slide_input_142.prop("value", data
+                                                        .from);
+                                                    PrimarySegmentTotalvalueCalculation_100('142')
+
+                                                }
+                                            });
+
+                                            instance142 = $slide_142.data("ionRangeSlider");
+
+                                            $slide_input_142.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance142.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+                                    </div>
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage14_92925-1" type="text"
+                                        id="txtCAGR_Percentage14_92925-1" value="4.3"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage19_92925-1" type="text"
+                                        id="txtCAGR_Percentage19_92925-1" value="-9.4"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage30_92925-1" type="text"
+                                        id="txtCAGR_Percentage30_92925-1" value="4.5"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage12_92925-1" type="text"
+                                        id="txtCAGR_Percentage12_92925-1" value=""
+                                        style="width: 40px;text-align: center; ">
+
+                                </td>
+                                <td class="CAGR_Percentage">
+                                    <select name="MSplayers_92925-1" id="MSplayers_92925-1">
+                                        <option value="">Select</option>
+
+                                        <option value="L1-C1">L1-C1</option>
+
+                                        <option value="L1-C2">L1-C2</option>
+
+                                        <option value="L1-C3">L1-C3</option>
+
+                                        <option value="L1-C4">L1-C4</option>
+
+                                        <option value="L1-C5">L1-C5</option>
+
+                                        <option value="L1-C6">L1-C6</option>
+
+                                        <option value="L1-C7">L1-C7</option>
+
+                                        <option value="L1-C8">L1-C8</option>
+
+                                        <option value="L1-C9">L1-C9</option>
+
+                                        <option value="L1-C10">L1-C10</option>
+
+                                        <option value="L1-C11">L1-C11</option>
+
+                                        <option value="L1-C12">L1-C12</option>
+
+                                        <option value="L1-C13">L1-C13</option>
+
+                                        <option value="L1-C14">L1-C14</option>
+
+                                        <option value="L1-C15">L1-C15</option>
+
+                                        <option value="L1-C16">L1-C16</option>
+
+                                        <option value="L1-C17">L1-C17</option>
+
+                                        <option value="L1-C18">L1-C18</option>
+
+                                        <option value="L1-C19">L1-C19</option>
+
+                                        <option value="L1-C20">L1-C20</option>
+
+                                        <option value="L1-C21" selected="">L1-C21</option>
+
+                                        <option value="L1-C22">L1-C22</option>
+
+                                        <option value="L1-C23">L1-C23</option>
+
+                                        <option value="L1-C24">L1-C24</option>
+
+                                        <option value="L1-C25">L1-C25</option>
+
+                                        <option value="L1-C26">L1-C26</option>
+
+                                        <option value="L1-C27">L1-C27</option>
+
+                                        <option value="L1-C28">L1-C28</option>
+
+                                        <option value="L1-C29">L1-C29</option>
+
+                                        <option value="L1-C30">L1-C30</option>
+
+                                        <option value="L1-C31">L1-C31</option>
+
+                                    </select>
+                                </td>
+                                <td>
+                                    <a class="Edit" style="display: inline;cursor:pointer;"
+                                        onclick="Main_Seg_GR_Add_MS('92925-1','142')"><b>SAVE</b></a>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td class="GIA_NO"></td>
+                                <td class="SEGMENT" colspan="2" style="text-align: right;"><b> TOTAL: </b> <input
+                                        type="hidden" id="txtsegStr" name="txtsegStr" value="142"></td>
+                                <td colspan="8"><input name="txtCAGR_Percentage10" type="text" id="txtCAGR_Percentage10"
+                                        value="100.0"
+                                        style="width: 65px;text-align: center;font-size: 14px;font-weight: bold;color: #428bca;"
+                                        placeholder="###.#"></td>
+                            </tr>
+                            <!--tr><td colspan="8" style="text-align:center !important;">
+                            <a class="mt-2  btn my-3" href="https://www.strategyr.com/gia_analytix/viewGIACountriesBespoke.asp?sts=O&code=MCP92925" target="new"  style="background-color: #2196F3;width: 125px;color:white;">BUILD DATA 1</a>
+                            </td></tr-->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!--D--->
+
+            <div class="w-100 section_header">
+                <h3 class="p-2">D. SECONDARY APPLICATIONS MARKET BY CHANNEL - TIER D
+                    <!--<input type="submit" name="btnAdd" value="Add New Channel"  id="btnAdd" >-->
+                </h3>
+            </div>
+
+            <div class="table-responisve w-100">
+                <!--div  id="segment_allication"-->
+                <div id="segment_allication">
+                    <table class="table w-100">
+                        <tbody>
+
+                            <tr>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">APPLICATION ID</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">APPLICATION NAME</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2019 MARKET SIZE</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" colspan="2"
+                                    class="text-center">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="ml-4">%</span>
+                                        <span class="mx-auto">ALLOCATION</span>
+                                    </div>
+                                </th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" colspan="3"
+                                    class="text-center">% GROWTH RATES</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">CAGR
+                                </th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">
+                                    MULTIPLIERS</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">OPTIONS</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;"></th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center"></th>
+
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2012</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2019</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">2030</th>
+
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                                <th scope="col" style="color:black;background-color:#FFF1EB;">&nbsp;</th>
+                            </tr>
+
+                            <tr>
+                                <th colspan="11" align="center" style="color:black;background-color:#FFF1EB;"><b>Marine
+                                        Propellers - Application</b></th>
+                            </tr>
+
+                            <tr>
+                                <td class="GIA_NO">
+                                    <span>92925-TA-MS2</span>
+                                </td>
+                                <td class="SEGMENT">
+                                    <span>Merchant Ships</span>
+                                </td>
+                                <td class="Type">
+                                    <!--<span>Application</span>-->
+                                    <input name="gvSegments72348" type="text" class="mx-auto"
+                                        style="width:80px;display: block" value="2430.09">
+                                </td>
+                                <td class="Allocation_Percentage" colspan="2">
+                                    <div class="w-100">
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_72348"
+                                                onchange="PrimarySegmentTotalvalueCalculation_100('72348')"
+                                                id="rank_input_72348" value="0" size="20" tabindex="3"
+                                                placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                id="slide_72348" tabindex="-1" readonly="">
+                                        </div>
+                                        <script>
+
+                                            var $slide_72348 = $("#slide_72348");
+                                            var $slide_input_72348 = $("#rank_input_72348");
+                                            var instance72348;
+                                            var min = 0;
+                                            var vfromval = 47;
+                                            var max = 100;
+
+                                            $slide_72348.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_72348.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_72348.prop("value", data
+                                                        .from);
+                                                },
+                                                onFinish: function (data) {
+                                                    // fired on pointer release
+                                                    $slide_input_72348.prop("value", data
+                                                        .from);
+                                                    PrimarySegmentTotalvalueCalculation_100('72348')
+
+                                                }
+                                            });
+
+                                            instance72348 = $slide_72348.data("ionRangeSlider");
+
+                                            $slide_input_72348.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance72348.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+                                    </div>
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage14_92925-2" type="text"
+                                        id="txtCAGR_Percentage14_92925-2" value="4.9"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage19_92925-2" type="text"
+                                        id="txtCAGR_Percentage19_92925-2" value="-10.3"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage30_92925-2" type="text"
+                                        id="txtCAGR_Percentage30_92925-2" value="4.6"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage12_92925-2" type="text"
+                                        id="txtCAGR_Percentage12_92925-2" value=""
+                                        style="width: 40px;text-align: center; ">
+
+                                </td>
+                                <td class="CAGR_Percentage">
+                                    <select name="CHplayers_92925-2" id="CHplayers_92925-2">
+                                        <option value="">Select</option>
+
+                                        <option value="L1-C1">L1-C1</option>
+
+                                        <option value="L1-C2">L1-C2</option>
+
+                                        <option value="L1-C3">L1-C3</option>
+
+                                        <option value="L1-C4">L1-C4</option>
+
+                                        <option value="L1-C5">L1-C5</option>
+
+                                        <option value="L1-C6">L1-C6</option>
+
+                                        <option value="L1-C7">L1-C7</option>
+
+                                        <option value="L1-C8">L1-C8</option>
+
+                                        <option value="L1-C9">L1-C9</option>
+
+                                        <option value="L1-C10">L1-C10</option>
+
+                                        <option value="L1-C11">L1-C11</option>
+
+                                        <option value="L1-C12">L1-C12</option>
+
+                                        <option value="L1-C13">L1-C13</option>
+
+                                        <option value="L1-C14">L1-C14</option>
+
+                                        <option value="L1-C15">L1-C15</option>
+
+                                        <option value="L1-C16">L1-C16</option>
+
+                                        <option value="L1-C17">L1-C17</option>
+
+                                        <option value="L1-C18">L1-C18</option>
+
+                                        <option value="L1-C19">L1-C19</option>
+
+                                        <option value="L1-C20">L1-C20</option>
+
+                                        <option value="L1-C21">L1-C21</option>
+
+                                        <option value="L1-C22">L1-C22</option>
+
+                                        <option value="L1-C23">L1-C23</option>
+
+                                        <option value="L1-C24">L1-C24</option>
+
+                                        <option value="L1-C25">L1-C25</option>
+
+                                        <option value="L1-C26">L1-C26</option>
+
+                                        <option value="L1-C27">L1-C27</option>
+
+                                        <option value="L1-C28">L1-C28</option>
+
+                                        <option value="L1-C29">L1-C29</option>
+
+                                        <option value="L1-C30">L1-C30</option>
+
+                                        <option value="L1-C31">L1-C31</option>
+
+                                    </select>
+
+                                </td>
+                                <td>
+                                    <a class="Edit" style="display: inline;cursor:pointer;"
+                                        onclick="Main_Seg_GR_Add('92925-2','72348')"><b>SAVE</b></a>
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+                            <tr>
+                                <td class="GIA_NO"></td>
+                                <td class="SEGMENT" colspan="2" style="text-align: right;"><b> TOTAL: </b></td>
+                                <td colspan="8"><input name="txtVal_PercentageApplication" type="text"
+                                        id="txtVal_PercentageApplication" value="100.0"
+                                        style="width: 65px;text-align: center;font-size: 14px;font-weight: bold;color: #428bca;"
+                                        placeholder="###.#"></td>
+                            </tr>
+
+                            <tr>
+                                <th colspan="11" align="center" style="color:black;background-color:#FFF1EB;"><b>Marine
+                                        Propellers - Type</b></th>
+                            </tr>
+
+                            <tr>
+                                <td class="GIA_NO">
+                                    <span>92925-TA-MS6</span>
+                                </td>
+                                <td class="SEGMENT">
+                                    <span>Propellers</span>
+                                </td>
+                                <td class="Type">
+                                    <!--<span>Type</span>-->
+                                    <input name="gvSegments72352" type="text" class="mx-auto"
+                                        style="width:80px;display: block" value="2727.97">
+                                </td>
+                                <td class="Allocation_Percentage" colspan="2">
+                                    <div class="w-100">
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_72352"
+                                                onchange="PrimarySegmentTotalvalueCalculation_100('72352')"
+                                                id="rank_input_72352" value="0" size="20" tabindex="3"
+                                                placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                id="slide_72352" tabindex="-1" readonly="">
+                                        </div>
+                                        <script>
+
+                                            var $slide_72352 = $("#slide_72352");
+                                            var $slide_input_72352 = $("#rank_input_72352");
+                                            var instance72352;
+                                            var min = 0;
+                                            var vfromval = 52;
+                                            var max = 100;
+
+                                            $slide_72352.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_72352.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_72352.prop("value", data
+                                                        .from);
+                                                },
+                                                onFinish: function (data) {
+                                                    // fired on pointer release
+                                                    $slide_input_72352.prop("value", data
+                                                        .from);
+                                                    PrimarySegmentTotalvalueCalculation_100('72352')
+
+                                                }
+                                            });
+
+                                            instance72352 = $slide_72352.data("ionRangeSlider");
+
+                                            $slide_input_72352.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance72352.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+                                    </div>
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage14_92925-6" type="text"
+                                        id="txtCAGR_Percentage14_92925-6" value="5.3"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage19_92925-6" type="text"
+                                        id="txtCAGR_Percentage19_92925-6" value="-11.6"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage30_92925-6" type="text"
+                                        id="txtCAGR_Percentage30_92925-6" value="5"
+                                        style="width: 40px;text-align: center; ">
+                                </td>
+                                <td class="CAGR_Percentage">
+                                    <input name="txtCAGR_Percentage12_92925-6" type="text"
+                                        id="txtCAGR_Percentage12_92925-6" value=""
+                                        style="width: 40px;text-align: center; ">
+
+                                </td>
+                                <td class="CAGR_Percentage">
+                                    <select name="CHplayers_92925-6" id="CHplayers_92925-6">
+                                        <option value="">Select</option>
+
+                                        <option value="L1-C1">L1-C1</option>
+
+                                        <option value="L1-C2">L1-C2</option>
+
+                                        <option value="L1-C3">L1-C3</option>
+
+                                        <option value="L1-C4">L1-C4</option>
+
+                                        <option value="L1-C5">L1-C5</option>
+
+                                        <option value="L1-C6">L1-C6</option>
+
+                                        <option value="L1-C7">L1-C7</option>
+
+                                        <option value="L1-C8">L1-C8</option>
+
+                                        <option value="L1-C9">L1-C9</option>
+
+                                        <option value="L1-C10">L1-C10</option>
+
+                                        <option value="L1-C11">L1-C11</option>
+
+                                        <option value="L1-C12">L1-C12</option>
+
+                                        <option value="L1-C13">L1-C13</option>
+
+                                        <option value="L1-C14">L1-C14</option>
+
+                                        <option value="L1-C15">L1-C15</option>
+
+                                        <option value="L1-C16">L1-C16</option>
+
+                                        <option value="L1-C17">L1-C17</option>
+
+                                        <option value="L1-C18">L1-C18</option>
+
+                                        <option value="L1-C19">L1-C19</option>
+
+                                        <option value="L1-C20">L1-C20</option>
+
+                                        <option value="L1-C21">L1-C21</option>
+
+                                        <option value="L1-C22">L1-C22</option>
+
+                                        <option value="L1-C23">L1-C23</option>
+
+                                        <option value="L1-C24">L1-C24</option>
+
+                                        <option value="L1-C25">L1-C25</option>
+
+                                        <option value="L1-C26">L1-C26</option>
+
+                                        <option value="L1-C27">L1-C27</option>
+
+                                        <option value="L1-C28">L1-C28</option>
+
+                                        <option value="L1-C29">L1-C29</option>
+
+                                        <option value="L1-C30">L1-C30</option>
+
+                                        <option value="L1-C31">L1-C31</option>
+
+                                    </select>
+
+                                </td>
+                                <td>
+                                    <a class="Edit" style="display: inline;cursor:pointer;"
+                                        onclick="Main_Seg_GR_Add('92925-6','72352')"><b>SAVE</b></a>
+                                </td>
+                            </tr>
+
+
+
+
+
+
+                            <tr>
+                                <td class="GIA_NO"></td>
+                                <td class="SEGMENT" colspan="2" style="text-align: right;"><b> TOTAL: </b><input
+                                        type="hidden" id="txtsegStr" name="txtsegStr"
+                                        value="72348##72349##72350##72351##72352##72353##72354"></td>
+                                <td colspan="8"><input name="txtCAGR_Percentage10" type="text" id="txtCAGR_Percentage10"
+                                        value="100.0"
+                                        style="width: 65px;text-align: center;font-size: 14px;font-weight: bold;color: #428bca;"
+                                        placeholder="###.#"></td>
+                            </tr>
+                            <!--tr><td colspan="8" style="text-align:center !important;">
+                          <a class="mt-2  btn my-3" href="https://www.strategyr.com/gia_analytix/viewGIACountriesBespoke.asp?sts=O&code=MCP92925" target="new"  style="background-color: #2196F3;width: 125px;color:white;">BUILD DATA 1</a>
+                          </td></tr-->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!---E-->
+            <div class="w-100 section_header">
+                <h3>E. COMPOUNDED MACRODYNAMICS ADJUSTMENTS - BY COUNTRY - TIER E
+                    <!--- CY - COUNTRY -->
+                </h3>
+                <h6 style="font-size:14px; font-weight:600;"> COUNTRY MARKET TRJACTORY FOR CHANNEL APPLICATION KEY
+                    MARKET SEGMENT</h6>
+                <h6 style="font-size:14px; font-weight:600;"> GEOGRAPHIC TREND ADJUSTMENTS</h6>
+            </div>
+
+            <div id="Country_Tweek_table">
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('United_States')"
+                            data-target="#United_States" aria-expanded="true" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>United States</h3>
+                    </div>
+                    <div class="collapse show" id="United_States" style="">
+                        <script
+                            src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+                        <table id="market-staging">
+
+                            <tbody>
+                                <tr>
+                                    <th scope="col"> NAME </th>
+                                    <th scope="col" style="text-align: center">2019 MARKET SIZE</th>
+                                    <th scope="col" colspan="2" style="text-align: center">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="ml-4">%</span>
+                                            <span class="mx-auto">ADJUSTMENT</span>
+                                        </div>
+                                    </th>
+                                    <!--th scope="col" style="text-align: center">TREND</th-->
+                                    <th scope="col" colspan="4" style="text-align: center;">%GROWTH DELTA</th>
+                                    <th scope="col" style="text-align: center;">MULTIPLIERS</th>
+                                    <th scope="col" style="text-align: center;">OPTIONS</th>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="10">
+                                        <div style="background-color: #569ED0;" class="p-2">
+
+                                            <div class="d-flex justify-content-start font-weight-bold align-items-center"
+                                                style="font-size: 14px;">
+                                                <span class="text-white mr-3" style="width:110px;">1001-TA-MS1</span>
+                                                <span class="text-white mr-1" style="width:205px;">Marine Propellers -
+                                                    World Market Size </span>
+                                                <input name="gvSegments123311" type="text" class="mr-3 text-center"
+                                                    style="width: 75px;display: block;color: #569ed0;font-weight: bold;"
+                                                    value="">
+
+                                                <span class="text-white mr-1"> % Allocation</span>
+                                                <input name="gvSegments123311_2014" type="text" class="mr-3 text-center"
+                                                    style="width: 35px;display: block;color: #569ed0;font-weight: bold;"
+                                                    value="100">
+                                                <span class="text-white mr-1"> % 2012</span>
+
+                                                <input name="gvSegments123311" type="text" class="mr-3 text-center"
+                                                    style="width: 35px;display: block;color: #569ed0;font-weight: bold;"
+                                                    value="5.3">
+                                                <span class="text-white mr-1"> % 2019</span>
+
+                                                <input name="gvSegments123311_2020" type="text" class="mr-3 text-center"
+                                                    style="width: 35px;display: block;color: #569ed0;font-weight: bold;"
+                                                    value="-11.6">
+                                                <span class="text-white mr-1"> % 2030</span>
+
+                                                <input name="gvSegments123311_2030" type="text" class="mr-3 text-center"
+                                                    style="width: 35px;display: block;color: #569ed0;font-weight: bold;"
+                                                    value="5">
+                                                <span class="text-white mr-1"> DELTA (2019-2030)</span>
+
+                                                <input name="gvSegments123311_DELTA" type="text"
+                                                    class="mr-3 text-center"
+                                                    style="width: 35px;display: block;color: #569ed0;font-weight: bold;"
+                                                    value="16.6">
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                    <td scope="col" colspan="2"></td>
+
+                                    <td align="center" scope="col" class="font-weight-bold">2012</td>
+                                    <td align="center" scope="col" class="font-weight-bold">2019</td>
+                                    <td align="center" scope="col" class="font-weight-bold">2030</td>
+                                    <td align="center" scope="col" class="font-weight-bold">2019-2030</td>
+                                    <td align="center" scope="col" class="font-weight-bold"></td>
+                                    <td align="center" scope="col" class="font-weight-bold"></td>
+                                </tr>
+
+                                <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Merchant Ships-Application</th>
+        </tr>-->
+
+
+                                <tr>
+
+                                    <!-- NAME TD -->
+                                    <td>Merchant Ships</td>
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <td> <input name="txt_MSize92925_2_4_United_States" type="text"
+                                            id="txt_MSize92925_2_4_United_States" value=""
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#"></td>
+                                    <!-- SLIDER PERCENTAGE TD -->
+                                    <!-- rank_input_90001_3_8_United_States_Segment1-->
+                                    <td colspan="2">
+                                        <div class="w-100">
+                                            <div class="range-slider ranking_slider">
+                                                <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                                <input type="text" maxlength="4" class="js-input rank_input"
+                                                    onchange="SegTotalvalueCalculation_100('92925_2','2','4','United_States','Application','MarinePropellers');"
+                                                    name="rank_input_92925_2_1_4_United_States_MarinePropellers"
+                                                    id="rank_input_92925_2_4_United_States_MarinePropellers" value="0"
+                                                    size="20" tabindex="3" placeholder="##.#">
+                                               <input
+                                                    type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                    id="slide_92925_2_4_United_States_MarinePropellers" tabindex="-1"
+                                                    readonly="">
+                                            </div>
+                                            <script>
+                                                var $slide_92925_2_4_United_States_MarinePropellers = $("#slide_92925_2_4_United_States_MarinePropellers");
+                                                var $slide_input_92925_2_4_United_States_MarinePropellers = $("#rank_input_92925_2_4_United_States_MarinePropellers");
+                                                var instance92925_2_4_United_States_MarinePropellers;
+                                                var min = 0;
+                                                var vfromval = 42.8;
+                                                var max = 100;
+
+                                                $slide_92925_2_4_United_States_MarinePropellers.ionRangeSlider({
+                                                    skin: "big",
+                                                    type: "single",
+                                                    min: min,
+                                                    max: max,
+                                                    from: vfromval,
+                                                    grid: true,
+                                                    step: 0.01,
+                                                    grid_num: 10,
+
+                                                    onStart: function (data) {
+                                                        $slide_input_92925_2_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                    },
+                                                    onChange: function (data) {
+                                                        $slide_input_92925_2_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    },
+                                                    onFinish: function (data) {
+                                                        // fired on pointer release
+                                                        $slide_input_92925_2_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        SegTotalvalueCalculation_100('92925_2', '2', '4', 'United_States', 'Application', 'MarinePropellers')
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    }
+                                                });
+
+                                                instance92925_2_4_United_States_MarinePropellers = $slide_92925_24United_States_MarinePropellers.data("ionRangeSlider");
+
+                                                $slide_input_92925_2_4_United_States_MarinePropellers.on("input", function () {
+                                                    var val = $(this).prop("value");
+
+                                                    // validate
+                                                    if (val < min) {
+                                                        val = min;
+                                                    } else if (val > max) {
+                                                        val = max;
+                                                    }
+
+                                                    instance92925_2_4_United_States_MarinePropellers.update({
+                                                        from: val
+                                                    });
+
+                                                    $(this).prop("value", val);
+                                                });
+                                            </script>
+                                        </div>
+                                    </td>
+                                    <!-- TREND -VE +VE TD -->
+                                    <!--td> <div class="  d-flex align-items-center justify-content-center">
+                    
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_1_4_United_States"  checked class="mr-3 mt-2">
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_1_4_United_States"  class="mr-3 mt-2">
+                    </div></td-->
+                                    <!-- END TREND -VE +VE TD -->
+
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <!-- =trim(rsCountyTweek("Growth_Delta_2019"))  trim(rsCountyTweek("Growth_Delta_2030"))							-->
+                                    <td align="center"><input type="text"
+                                            name="GD2014_92925_2_4_United_States_MarinePropellers"
+                                            id="GD2014_92925_2_4_United_States_MarinePropellers" value="4.9"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2019_92925_2_4_United_States_MarinePropellers"
+                                            id="GD2019_92925_2_4_United_States_MarinePropellers" value="-10.3"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2030_92925_2_4_United_States_MarinePropellers"
+                                            id="GD2030_92925_2_4_United_States_MarinePropellers" value="4.6"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2012_92925_2_4_United_States_MarinePropellers"
+                                            id="GD2012_92925_2_4_United_States_MarinePropellers" value=""
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center">&nbsp;
+                                        <select name="Countryplayers_92925_2_4_United_States_MarinePropellers"
+                                            id="Countryplayers_92925_2_4_United_States_MarinePropellers">
+                                            <option value="">Select</option>
+
+                                            <option value="L1-C1">L1-C1</option>
+
+                                            <option value="L1-C2">L1-C2</option>
+
+                                            <option value="L1-C3">L1-C3</option>
+
+                                            <option value="L1-C4">L1-C4</option>
+
+                                            <option value="L1-C5">L1-C5</option>
+
+                                            <option value="L1-C6">L1-C6</option>
+
+                                            <option value="L1-C7">L1-C7</option>
+
+                                            <option value="L1-C8">L1-C8</option>
+
+                                            <option value="L1-C9">L1-C9</option>
+
+                                            <option value="L1-C10">L1-C10</option>
+
+                                            <option value="L1-C11">L1-C11</option>
+
+                                            <option value="L1-C12">L1-C12</option>
+
+                                            <option value="L1-C13">L1-C13</option>
+
+                                            <option value="L1-C14">L1-C14</option>
+
+                                            <option value="L1-C15">L1-C15</option>
+
+                                            <option value="L1-C16">L1-C16</option>
+
+                                            <option value="L1-C17">L1-C17</option>
+
+                                            <option value="L1-C18">L1-C18</option>
+
+                                            <option value="L1-C19">L1-C19</option>
+
+                                            <option value="L1-C20">L1-C20</option>
+
+                                            <option value="L1-C21">L1-C21</option>
+
+                                            <option value="L1-C22">L1-C22</option>
+
+                                            <option value="L1-C23">L1-C23</option>
+
+                                            <option value="L1-C24">L1-C24</option>
+
+                                            <option value="L1-C25">L1-C25</option>
+
+                                            <option value="L1-C26">L1-C26</option>
+
+                                            <option value="L1-C27">L1-C27</option>
+
+                                            <option value="L1-C28">L1-C28</option>
+
+                                            <option value="L1-C29">L1-C29</option>
+
+                                            <option value="L1-C30">L1-C30</option>
+
+                                            <option value="L1-C31">L1-C31</option>
+
+                                        </select>
+                                    </td>
+                                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td>-->
+                                    <td align="center">
+                                        <a class="Edit" style="display: inline;cursor:pointer;"
+                                            onclick="SegCountryTotalAdd('92925_2','1','4','United_States','Application','MarinePropellers');">SAVE</a>
+                                    </td>
+                                </tr>
+
+                                <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Naval Ships-Application</th>
+        </tr>-->
+
+
+                                <tr>
+
+                                    <!-- NAME TD -->
+                                    <td>Naval Ships</td>
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <td> <input name="txt_MSize92925_3_4_United_States" type="text"
+                                            id="txt_MSize92925_3_4_United_States" value=""
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#"></td>
+                                    <!-- SLIDER PERCENTAGE TD -->
+                                    <!-- rank_input_90001_3_8_United_States_Segment1-->
+                                    <td colspan="2">
+                                        <div class="w-100">
+                                            <div class="range-slider ranking_slider">
+                                                <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                                <input type="text" maxlength="4" class="js-input rank_input"
+                                                    onchange="SegTotalvalueCalculation_100('92925_3','2','4','United_States','Application','MarinePropellers');"
+                                                    name="rank_input_92925_3_2_4_United_States_MarinePropellers"
+                                                    id="rank_input_92925_3_4_United_States_MarinePropellers" value="0"
+                                                    size="20" tabindex="3" placeholder="##.#">
+                                               <input
+                                                    type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                    id="slide_92925_3_4_United_States_MarinePropellers" tabindex="-1"
+                                                    readonly="">
+                                            </div>
+                                            <script>
+                                                var $slide_92925_3_4_United_States_MarinePropellers = $("#slide_92925_3_4_United_States_MarinePropellers");
+                                                var $slide_input_92925_3_4_United_States_MarinePropellers = $("#rank_input_92925_3_4_United_States_MarinePropellers");
+                                                var instance92925_3_4_United_States_MarinePropellers;
+                                                var min = 0;
+                                                var vfromval = 28.6;
+                                                var max = 100;
+
+                                                $slide_92925_3_4_United_States_MarinePropellers.ionRangeSlider({
+                                                    skin: "big",
+                                                    type: "single",
+                                                    min: min,
+                                                    max: max,
+                                                    from: vfromval,
+                                                    grid: true,
+                                                    step: 0.01,
+                                                    grid_num: 10,
+
+                                                    onStart: function (data) {
+                                                        $slide_input_92925_3_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                    },
+                                                    onChange: function (data) {
+                                                        $slide_input_92925_3_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    },
+                                                    onFinish: function (data) {
+                                                        // fired on pointer release
+                                                        $slide_input_92925_3_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        SegTotalvalueCalculation_100('92925_3', '2', '4', 'United_States', 'Application', 'MarinePropellers')
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    }
+                                                });
+
+                                                instance92925_3_4_United_States_MarinePropellers = $slide_92925_34United_States_MarinePropellers.data("ionRangeSlider");
+
+                                                $slide_input_92925_3_4_United_States_MarinePropellers.on("input", function () {
+                                                    var val = $(this).prop("value");
+
+                                                    // validate
+                                                    if (val < min) {
+                                                        val = min;
+                                                    } else if (val > max) {
+                                                        val = max;
+                                                    }
+
+                                                    instance92925_3_4_United_States_MarinePropellers.update({
+                                                        from: val
+                                                    });
+
+                                                    $(this).prop("value", val);
+                                                });
+                                            </script>
+                                        </div>
+                                    </td>
+                                    <!-- TREND -VE +VE TD -->
+                                    <!--td> <div class="  d-flex align-items-center justify-content-center">
+                    
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_2_4_United_States"  checked class="mr-3 mt-2">
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_2_4_United_States"  class="mr-3 mt-2">
+                    </div></td-->
+                                    <!-- END TREND -VE +VE TD -->
+
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <!-- =trim(rsCountyTweek("Growth_Delta_2019"))  trim(rsCountyTweek("Growth_Delta_2030"))							-->
+                                    <td align="center"><input type="text"
+                                            name="GD2014_92925_3_4_United_States_MarinePropellers"
+                                            id="GD2014_92925_3_4_United_States_MarinePropellers" value="4"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2019_92925_3_4_United_States_MarinePropellers"
+                                            id="GD2019_92925_3_4_United_States_MarinePropellers" value="-6.5"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2030_92925_3_4_United_States_MarinePropellers"
+                                            id="GD2030_92925_3_4_United_States_MarinePropellers" value="4"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2012_92925_3_4_United_States_MarinePropellers"
+                                            id="GD2012_92925_3_4_United_States_MarinePropellers" value=""
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center">&nbsp;
+                                        <select name="Countryplayers_92925_3_4_United_States_MarinePropellers"
+                                            id="Countryplayers_92925_3_4_United_States_MarinePropellers">
+                                            <option value="">Select</option>
+
+                                            <option value="L1-C1">L1-C1</option>
+
+                                            <option value="L1-C2">L1-C2</option>
+
+                                            <option value="L1-C3">L1-C3</option>
+
+                                            <option value="L1-C4">L1-C4</option>
+
+                                            <option value="L1-C5">L1-C5</option>
+
+                                            <option value="L1-C6">L1-C6</option>
+
+                                            <option value="L1-C7">L1-C7</option>
+
+                                            <option value="L1-C8">L1-C8</option>
+
+                                            <option value="L1-C9">L1-C9</option>
+
+                                            <option value="L1-C10">L1-C10</option>
+
+                                            <option value="L1-C11">L1-C11</option>
+
+                                            <option value="L1-C12">L1-C12</option>
+
+                                            <option value="L1-C13">L1-C13</option>
+
+                                            <option value="L1-C14">L1-C14</option>
+
+                                            <option value="L1-C15">L1-C15</option>
+
+                                            <option value="L1-C16">L1-C16</option>
+
+                                            <option value="L1-C17">L1-C17</option>
+
+                                            <option value="L1-C18">L1-C18</option>
+
+                                            <option value="L1-C19">L1-C19</option>
+
+                                            <option value="L1-C20">L1-C20</option>
+
+                                            <option value="L1-C21">L1-C21</option>
+
+                                            <option value="L1-C22">L1-C22</option>
+
+                                            <option value="L1-C23">L1-C23</option>
+
+                                            <option value="L1-C24">L1-C24</option>
+
+                                            <option value="L1-C25">L1-C25</option>
+
+                                            <option value="L1-C26">L1-C26</option>
+
+                                            <option value="L1-C27">L1-C27</option>
+
+                                            <option value="L1-C28">L1-C28</option>
+
+                                            <option value="L1-C29">L1-C29</option>
+
+                                            <option value="L1-C30">L1-C30</option>
+
+                                            <option value="L1-C31">L1-C31</option>
+
+                                        </select>
+                                    </td>
+                                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td>-->
+                                    <td align="center">
+                                        <a class="Edit" style="display: inline;cursor:pointer;"
+                                            onclick="SegCountryTotalAdd('92925_3','2','4','United_States','Application','MarinePropellers');">SAVE</a>
+                                    </td>
+                                </tr>
+
+                                <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Recreational Boats-Application</th>
+        </tr>-->
+
+
+                                <tr>
+
+                                    <!-- NAME TD -->
+                                    <td>Recreational Boats</td>
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <td> <input name="txt_MSize92925_4_4_United_States" type="text"
+                                            id="txt_MSize92925_4_4_United_States" value=""
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#"></td>
+                                    <!-- SLIDER PERCENTAGE TD -->
+                                    <!-- rank_input_90001_3_8_United_States_Segment1-->
+                                    <td colspan="2">
+                                        <div class="w-100">
+                                            <div class="range-slider ranking_slider">
+                                                <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                                <input type="text" maxlength="4" class="js-input rank_input"
+                                                    onchange="SegTotalvalueCalculation_100('92925_4','2','4','United_States','Application','MarinePropellers');"
+                                                    name="rank_input_92925_4_3_4_United_States_MarinePropellers"
+                                                    id="rank_input_92925_4_4_United_States_MarinePropellers" value="0"
+                                                    size="20" tabindex="3" placeholder="##.#">
+                                              <input
+                                                    type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                    id="slide_92925_4_4_United_States_MarinePropellers" tabindex="-1"
+                                                    readonly="">
+                                            </div>
+                                            <script>
+                                                var $slide_92925_4_4_United_States_MarinePropellers = $("#slide_92925_4_4_United_States_MarinePropellers");
+                                                var $slide_input_92925_4_4_United_States_MarinePropellers = $("#rank_input_92925_4_4_United_States_MarinePropellers");
+                                                var instance92925_4_4_United_States_MarinePropellers;
+                                                var min = 0;
+                                                var vfromval = 20.1;
+                                                var max = 100;
+
+                                                $slide_92925_4_4_United_States_MarinePropellers.ionRangeSlider({
+                                                    skin: "big",
+                                                    type: "single",
+                                                    min: min,
+                                                    max: max,
+                                                    from: vfromval,
+                                                    grid: true,
+                                                    step: 0.01,
+                                                    grid_num: 10,
+
+                                                    onStart: function (data) {
+                                                        $slide_input_92925_4_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                    },
+                                                    onChange: function (data) {
+                                                        $slide_input_92925_4_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    },
+                                                    onFinish: function (data) {
+                                                        // fired on pointer release
+                                                        $slide_input_92925_4_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        SegTotalvalueCalculation_100('92925_4', '2', '4', 'United_States', 'Application', 'MarinePropellers')
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    }
+                                                });
+
+                                                instance92925_4_4_United_States_MarinePropellers = $slide_92925_44United_States_MarinePropellers.data("ionRangeSlider");
+
+                                                $slide_input_92925_4_4_United_States_MarinePropellers.on("input", function () {
+                                                    var val = $(this).prop("value");
+
+                                                    // validate
+                                                    if (val < min) {
+                                                        val = min;
+                                                    } else if (val > max) {
+                                                        val = max;
+                                                    }
+
+                                                    instance92925_4_4_United_States_MarinePropellers.update({
+                                                        from: val
+                                                    });
+
+                                                    $(this).prop("value", val);
+                                                });
+                                            </script>
+                                        </div>
+                                    </td>
+                                    <!-- TREND -VE +VE TD -->
+                                    <!--td> <div class="  d-flex align-items-center justify-content-center">
+                    
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_3_4_United_States"  checked class="mr-3 mt-2">
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_3_4_United_States"  class="mr-3 mt-2">
+                    </div></td-->
+                                    <!-- END TREND -VE +VE TD -->
+
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <!-- =trim(rsCountyTweek("Growth_Delta_2019"))  trim(rsCountyTweek("Growth_Delta_2030"))							-->
+                                    <td align="center"><input type="text"
+                                            name="GD2014_92925_4_4_United_States_MarinePropellers"
+                                            id="GD2014_92925_4_4_United_States_MarinePropellers" value="4.4"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2019_92925_4_4_United_States_MarinePropellers"
+                                            id="GD2019_92925_4_4_United_States_MarinePropellers" value="-12.2"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2030_92925_4_4_United_States_MarinePropellers"
+                                            id="GD2030_92925_4_4_United_States_MarinePropellers" value="4.5"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2012_92925_4_4_United_States_MarinePropellers"
+                                            id="GD2012_92925_4_4_United_States_MarinePropellers" value=""
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center">&nbsp;
+                                        <select name="Countryplayers_92925_4_4_United_States_MarinePropellers"
+                                            id="Countryplayers_92925_4_4_United_States_MarinePropellers">
+                                            <option value="">Select</option>
+
+                                            <option value="L1-C1">L1-C1</option>
+
+                                            <option value="L1-C2">L1-C2</option>
+
+                                            <option value="L1-C3">L1-C3</option>
+
+                                            <option value="L1-C4">L1-C4</option>
+
+                                            <option value="L1-C5">L1-C5</option>
+
+                                            <option value="L1-C6">L1-C6</option>
+
+                                            <option value="L1-C7">L1-C7</option>
+
+                                            <option value="L1-C8">L1-C8</option>
+
+                                            <option value="L1-C9">L1-C9</option>
+
+                                            <option value="L1-C10">L1-C10</option>
+
+                                            <option value="L1-C11">L1-C11</option>
+
+                                            <option value="L1-C12">L1-C12</option>
+
+                                            <option value="L1-C13">L1-C13</option>
+
+                                            <option value="L1-C14">L1-C14</option>
+
+                                            <option value="L1-C15">L1-C15</option>
+
+                                            <option value="L1-C16">L1-C16</option>
+
+                                            <option value="L1-C17">L1-C17</option>
+
+                                            <option value="L1-C18">L1-C18</option>
+
+                                            <option value="L1-C19">L1-C19</option>
+
+                                            <option value="L1-C20">L1-C20</option>
+
+                                            <option value="L1-C21">L1-C21</option>
+
+                                            <option value="L1-C22">L1-C22</option>
+
+                                            <option value="L1-C23">L1-C23</option>
+
+                                            <option value="L1-C24">L1-C24</option>
+
+                                            <option value="L1-C25">L1-C25</option>
+
+                                            <option value="L1-C26">L1-C26</option>
+
+                                            <option value="L1-C27">L1-C27</option>
+
+                                            <option value="L1-C28">L1-C28</option>
+
+                                            <option value="L1-C29">L1-C29</option>
+
+                                            <option value="L1-C30">L1-C30</option>
+
+                                            <option value="L1-C31">L1-C31</option>
+
+                                        </select>
+                                    </td>
+                                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td>-->
+                                    <td align="center">
+                                        <a class="Edit" style="display: inline;cursor:pointer;"
+                                            onclick="SegCountryTotalAdd('92925_4','3','4','United_States','Application','MarinePropellers');">SAVE</a>
+                                    </td>
+                                </tr>
+
+                                <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Other Applications-Application</th>
+        </tr>-->
+
+
+                                <tr>
+
+                                    <!-- NAME TD -->
+                                    <td>Other Applications</td>
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <td> <input name="txt_MSize92925_5_4_United_States" type="text"
+                                            id="txt_MSize92925_5_4_United_States" value=""
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#"></td>
+                                    <!-- SLIDER PERCENTAGE TD -->
+                                    <!-- rank_input_90001_3_8_United_States_Segment1-->
+                                    <td colspan="2">
+                                        <div class="w-100">
+                                            <div class="range-slider ranking_slider">
+                                                <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                                <input type="text" maxlength="4" class="js-input rank_input"
+                                                    onchange="SegTotalvalueCalculation_100('92925_5','2','4','United_States','Application','MarinePropellers');"
+                                                    name="rank_input_92925_5_4_4_United_States_MarinePropellers"
+                                                    id="rank_input_92925_5_4_United_States_MarinePropellers" value="0"
+                                                    size="20" tabindex="3" placeholder="##.#">
+                                             <input
+                                                    type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                    id="slide_92925_5_4_United_States_MarinePropellers" tabindex="-1"
+                                                    readonly="">
+                                            </div>
+                                            <script>
+                                                var $slide_92925_5_4_United_States_MarinePropellers = $("#slide_92925_5_4_United_States_MarinePropellers");
+                                                var $slide_input_92925_5_4_United_States_MarinePropellers = $("#rank_input_92925_5_4_United_States_MarinePropellers");
+                                                var instance92925_5_4_United_States_MarinePropellers;
+                                                var min = 0;
+                                                var vfromval = 8.5;
+                                                var max = 100;
+
+                                                $slide_92925_5_4_United_States_MarinePropellers.ionRangeSlider({
+                                                    skin: "big",
+                                                    type: "single",
+                                                    min: min,
+                                                    max: max,
+                                                    from: vfromval,
+                                                    grid: true,
+                                                    step: 0.01,
+                                                    grid_num: 10,
+
+                                                    onStart: function (data) {
+                                                        $slide_input_92925_5_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                    },
+                                                    onChange: function (data) {
+                                                        $slide_input_92925_5_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    },
+                                                    onFinish: function (data) {
+                                                        // fired on pointer release
+                                                        $slide_input_92925_5_4_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        SegTotalvalueCalculation_100('92925_5', '2', '4', 'United_States', 'Application', 'MarinePropellers')
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    }
+                                                });
+
+                                                instance92925_5_4_United_States_MarinePropellers = $slide_92925_54United_States_MarinePropellers.data("ionRangeSlider");
+
+                                                $slide_input_92925_5_4_United_States_MarinePropellers.on("input", function () {
+                                                    var val = $(this).prop("value");
+
+                                                    // validate
+                                                    if (val < min) {
+                                                        val = min;
+                                                    } else if (val > max) {
+                                                        val = max;
+                                                    }
+
+                                                    instance92925_5_4_United_States_MarinePropellers.update({
+                                                        from: val
+                                                    });
+
+                                                    $(this).prop("value", val);
+                                                });
+                                            </script>
+                                        </div>
+                                    </td>
+                                    <!-- TREND -VE +VE TD -->
+                                    <!--td> <div class="  d-flex align-items-center justify-content-center">
+                    
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_4_4_United_States"  checked class="mr-3 mt-2">
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_4_4_United_States"  class="mr-3 mt-2">
+                    </div></td-->
+                                    <!-- END TREND -VE +VE TD -->
+
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <!-- =trim(rsCountyTweek("Growth_Delta_2019"))  trim(rsCountyTweek("Growth_Delta_2030"))							-->
+                                    <td align="center"><input type="text"
+                                            name="GD2014_92925_5_4_United_States_MarinePropellers"
+                                            id="GD2014_92925_5_4_United_States_MarinePropellers" value="3.4"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2019_92925_5_4_United_States_MarinePropellers"
+                                            id="GD2019_92925_5_4_United_States_MarinePropellers" value="-7.8"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2030_92925_5_4_United_States_MarinePropellers"
+                                            id="GD2030_92925_5_4_United_States_MarinePropellers" value="3.4"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2012_92925_5_4_United_States_MarinePropellers"
+                                            id="GD2012_92925_5_4_United_States_MarinePropellers" value=""
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center">&nbsp;
+                                        <select name="Countryplayers_92925_5_4_United_States_MarinePropellers"
+                                            id="Countryplayers_92925_5_4_United_States_MarinePropellers">
+                                            <option value="">Select</option>
+
+                                            <option value="L1-C1">L1-C1</option>
+
+                                            <option value="L1-C2">L1-C2</option>
+
+                                            <option value="L1-C3">L1-C3</option>
+
+                                            <option value="L1-C4">L1-C4</option>
+
+                                            <option value="L1-C5">L1-C5</option>
+
+                                            <option value="L1-C6">L1-C6</option>
+
+                                            <option value="L1-C7">L1-C7</option>
+
+                                            <option value="L1-C8">L1-C8</option>
+
+                                            <option value="L1-C9">L1-C9</option>
+
+                                            <option value="L1-C10">L1-C10</option>
+
+                                            <option value="L1-C11">L1-C11</option>
+
+                                            <option value="L1-C12">L1-C12</option>
+
+                                            <option value="L1-C13">L1-C13</option>
+
+                                            <option value="L1-C14">L1-C14</option>
+
+                                            <option value="L1-C15">L1-C15</option>
+
+                                            <option value="L1-C16">L1-C16</option>
+
+                                            <option value="L1-C17">L1-C17</option>
+
+                                            <option value="L1-C18">L1-C18</option>
+
+                                            <option value="L1-C19">L1-C19</option>
+
+                                            <option value="L1-C20">L1-C20</option>
+
+                                            <option value="L1-C21">L1-C21</option>
+
+                                            <option value="L1-C22">L1-C22</option>
+
+                                            <option value="L1-C23">L1-C23</option>
+
+                                            <option value="L1-C24">L1-C24</option>
+
+                                            <option value="L1-C25">L1-C25</option>
+
+                                            <option value="L1-C26">L1-C26</option>
+
+                                            <option value="L1-C27">L1-C27</option>
+
+                                            <option value="L1-C28">L1-C28</option>
+
+                                            <option value="L1-C29">L1-C29</option>
+
+                                            <option value="L1-C30">L1-C30</option>
+
+                                            <option value="L1-C31">L1-C31</option>
+
+                                        </select>
+                                    </td>
+                                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td>-->
+                                    <td align="center">
+                                        <a class="Edit" style="display: inline;cursor:pointer;"
+                                            onclick="SegCountryTotalAdd('92925_5','4','4','United_States','Application','MarinePropellers');">SAVE</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="SEGMENT" colspan="2" style="text-align: right;"><b>APPLICATION TOTAL:
+                                        </b></td>
+                                    <td colspan="7" style="text-align: left;"><input
+                                            name="txt_Total_Application_united_states_MarinePropellers" type="text"
+                                            id="txt_Total_Application_United_States_MarinePropellers" value="100.0"
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#">
+                                        <!--input name="BTN_Application_United_States" type="button" id="BTN_Application_United_States" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;float:right;" Value="SAVE"-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="10" style="font-size: 17px;font-weight: bold;color: #900;">
+                                        <div class="w-100">
+                                            <h5 style="font-size: 15px; margin-bottom:0px;">GEOGRAPHY: UNITED STATES -
+                                                APPLICATION: TYPE</h5>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                    <td scope="col" colspan="2"></td>
+                                    <td align="center" scope="col" class="font-weight-bold">2012</td>
+                                    <td align="center" scope="col" class="font-weight-bold">2019</td>
+                                    <td align="center" scope="col" class="font-weight-bold">2030</td>
+                                    <td align="center" scope="col" class="font-weight-bold">2019-2030</td>
+                                    <td align="center" scope="col" class="font-weight-bold"></td>
+                                    <td align="center" scope="col" class="font-weight-bold"></td>
+                                </tr>
+
+
+                                <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Propellers-Type</th>
+        </tr>-->
+
+
+                                <tr>
+
+                                    <!-- NAME TD -->
+                                    <td>Propellers</td>
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <td> <input name="txt_MSize92925_6_3_United_States" type="text"
+                                            id="txt_MSize92925_6_3_United_States" value=""
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#"></td>
+                                    <!-- SLIDER PERCENTAGE TD -->
+                                    <!-- rank_input_90001_3_8_United_States_Segment1-->
+                                    <td colspan="2">
+                                        <div class="w-100">
+                                            <div class="range-slider ranking_slider">
+                                                <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                                <input type="text" maxlength="4" class="js-input rank_input"
+                                                    onchange="SegTotalvalueCalculation_100('92925_6','6','3','United_States','Type','MarinePropellers');"
+                                                    name="rank_input_92925_6_5_3_United_States_MarinePropellers"
+                                                    id="rank_input_92925_6_3_United_States_MarinePropellers" value="0"
+                                                    size="20" tabindex="3" placeholder="##.#">
+                                               <input
+                                                    type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                    id="slide_92925_6_3_United_States_MarinePropellers" tabindex="-1"
+                                                    readonly="">
+                                            </div>
+                                            <script>
+                                                var $slide_92925_6_3_United_States_MarinePropellers = $("#slide_92925_6_3_United_States_MarinePropellers");
+                                                var $slide_input_92925_6_3_United_States_MarinePropellers = $("#rank_input_92925_6_3_United_States_MarinePropellers");
+                                                var instance92925_6_3_United_States_MarinePropellers;
+                                                var min = 0;
+                                                var vfromval = 50.2;
+                                                var max = 100;
+
+                                                $slide_92925_6_3_United_States_MarinePropellers.ionRangeSlider({
+                                                    skin: "big",
+                                                    type: "single",
+                                                    min: min,
+                                                    max: max,
+                                                    from: vfromval,
+                                                    grid: true,
+                                                    step: 0.01,
+                                                    grid_num: 10,
+
+                                                    onStart: function (data) {
+                                                        $slide_input_92925_6_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                    },
+                                                    onChange: function (data) {
+                                                        $slide_input_92925_6_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    },
+                                                    onFinish: function (data) {
+                                                        // fired on pointer release
+                                                        $slide_input_92925_6_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        SegTotalvalueCalculation_100('92925_6', '6', '3', 'United_States', 'Type', 'MarinePropellers')
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    }
+                                                });
+
+                                                instance92925_6_3_United_States_MarinePropellers = $slide_92925_63United_States_MarinePropellers.data("ionRangeSlider");
+
+                                                $slide_input_92925_6_3_United_States_MarinePropellers.on("input", function () {
+                                                    var val = $(this).prop("value");
+
+                                                    // validate
+                                                    if (val < min) {
+                                                        val = min;
+                                                    } else if (val > max) {
+                                                        val = max;
+                                                    }
+
+                                                    instance92925_6_3_United_States_MarinePropellers.update({
+                                                        from: val
+                                                    });
+
+                                                    $(this).prop("value", val);
+                                                });
+                                            </script>
+                                        </div>
+                                    </td>
+                                    <!-- TREND -VE +VE TD -->
+                                    <!--td> <div class="  d-flex align-items-center justify-content-center">
+                    
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_1_3_United_States"  checked class="mr-3 mt-2">
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_1_3_United_States"  class="mr-3 mt-2">
+                    </div></td-->
+                                    <!-- END TREND -VE +VE TD -->
+
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <!-- =trim(rsCountyTweek("Growth_Delta_2019"))  trim(rsCountyTweek("Growth_Delta_2030"))							-->
+                                    <td align="center"><input type="text"
+                                            name="GD2014_92925_6_3_United_States_MarinePropellers"
+                                            id="GD2014_92925_6_3_United_States_MarinePropellers" value="5.3"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2019_92925_6_3_United_States_MarinePropellers"
+                                            id="GD2019_92925_6_3_United_States_MarinePropellers" value="-11.6"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2030_92925_6_3_United_States_MarinePropellers"
+                                            id="GD2030_92925_6_3_United_States_MarinePropellers" value="5"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2012_92925_6_3_United_States_MarinePropellers"
+                                            id="GD2012_92925_6_3_United_States_MarinePropellers" value=""
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center">&nbsp;
+                                        <select name="Countryplayers_92925_6_3_United_States_MarinePropellers"
+                                            id="Countryplayers_92925_6_3_United_States_MarinePropellers">
+                                            <option value="">Select</option>
+
+                                            <option value="L1-C1">L1-C1</option>
+
+                                            <option value="L1-C2">L1-C2</option>
+
+                                            <option value="L1-C3">L1-C3</option>
+
+                                            <option value="L1-C4">L1-C4</option>
+
+                                            <option value="L1-C5">L1-C5</option>
+
+                                            <option value="L1-C6">L1-C6</option>
+
+                                            <option value="L1-C7">L1-C7</option>
+
+                                            <option value="L1-C8">L1-C8</option>
+
+                                            <option value="L1-C9">L1-C9</option>
+
+                                            <option value="L1-C10">L1-C10</option>
+
+                                            <option value="L1-C11">L1-C11</option>
+
+                                            <option value="L1-C12">L1-C12</option>
+
+                                            <option value="L1-C13">L1-C13</option>
+
+                                            <option value="L1-C14">L1-C14</option>
+
+                                            <option value="L1-C15">L1-C15</option>
+
+                                            <option value="L1-C16">L1-C16</option>
+
+                                            <option value="L1-C17">L1-C17</option>
+
+                                            <option value="L1-C18">L1-C18</option>
+
+                                            <option value="L1-C19">L1-C19</option>
+
+                                            <option value="L1-C20">L1-C20</option>
+
+                                            <option value="L1-C21">L1-C21</option>
+
+                                            <option value="L1-C22">L1-C22</option>
+
+                                            <option value="L1-C23">L1-C23</option>
+
+                                            <option value="L1-C24">L1-C24</option>
+
+                                            <option value="L1-C25">L1-C25</option>
+
+                                            <option value="L1-C26">L1-C26</option>
+
+                                            <option value="L1-C27">L1-C27</option>
+
+                                            <option value="L1-C28">L1-C28</option>
+
+                                            <option value="L1-C29">L1-C29</option>
+
+                                            <option value="L1-C30">L1-C30</option>
+
+                                            <option value="L1-C31">L1-C31</option>
+
+                                        </select>
+                                    </td>
+                                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td>-->
+                                    <td align="center">
+                                        <a class="Edit" style="display: inline;cursor:pointer;"
+                                            onclick="SegCountryTotalAdd('92925_6','5','3','United_States','Type','MarinePropellers');">SAVE</a>
+                                    </td>
+                                </tr>
+
+                                <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Thrusters-Type</th>
+        </tr>-->
+
+
+                                <tr>
+
+                                    <!-- NAME TD -->
+                                    <td>Thrusters</td>
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <td> <input name="txt_MSize92925_7_3_United_States" type="text"
+                                            id="txt_MSize92925_7_3_United_States" value=""
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#"></td>
+                                    <!-- SLIDER PERCENTAGE TD -->
+                                    <!-- rank_input_90001_3_8_United_States_Segment1-->
+                                    <td colspan="2">
+                                        <div class="w-100">
+                                            <div class="range-slider ranking_slider">
+                                                <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                                <input type="text" maxlength="4" class="js-input rank_input"
+                                                    onchange="SegTotalvalueCalculation_100('92925_7','6','3','United_States','Type','MarinePropellers');"
+                                                    name="rank_input_92925_7_6_3_United_States_MarinePropellers"
+                                                    id="rank_input_92925_7_3_United_States_MarinePropellers" value="0"
+                                                    size="20" tabindex="3" placeholder="##.#">
+                                               <input
+                                                    type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                    id="slide_92925_7_3_United_States_MarinePropellers" tabindex="-1"
+                                                    readonly="">
+                                            </div>
+                                            <script>
+                                                var $slide_92925_7_3_United_States_MarinePropellers = $("#slide_92925_7_3_United_States_MarinePropellers");
+                                                var $slide_input_92925_7_3_United_States_MarinePropellers = $("#rank_input_92925_7_3_United_States_MarinePropellers");
+                                                var instance92925_7_3_United_States_MarinePropellers;
+                                                var min = 0;
+                                                var vfromval = 27.6;
+                                                var max = 100;
+
+                                                $slide_92925_7_3_United_States_MarinePropellers.ionRangeSlider({
+                                                    skin: "big",
+                                                    type: "single",
+                                                    min: min,
+                                                    max: max,
+                                                    from: vfromval,
+                                                    grid: true,
+                                                    step: 0.01,
+                                                    grid_num: 10,
+
+                                                    onStart: function (data) {
+                                                        $slide_input_92925_7_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                    },
+                                                    onChange: function (data) {
+                                                        $slide_input_92925_7_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    },
+                                                    onFinish: function (data) {
+                                                        // fired on pointer release
+                                                        $slide_input_92925_7_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        SegTotalvalueCalculation_100('92925_7', '6', '3', 'United_States', 'Type', 'MarinePropellers')
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    }
+                                                });
+
+                                                instance92925_7_3_United_States_MarinePropellers = $slide_92925_73United_States_MarinePropellers.data("ionRangeSlider");
+
+                                                $slide_input_92925_7_3_United_States_MarinePropellers.on("input", function () {
+                                                    var val = $(this).prop("value");
+
+                                                    // validate
+                                                    if (val < min) {
+                                                        val = min;
+                                                    } else if (val > max) {
+                                                        val = max;
+                                                    }
+
+                                                    instance92925_7_3_United_States_MarinePropellers.update({
+                                                        from: val
+                                                    });
+
+                                                    $(this).prop("value", val);
+                                                });
+                                            </script>
+                                        </div>
+                                    </td>
+                                    <!-- TREND -VE +VE TD -->
+                                    <!--td> <div class="  d-flex align-items-center justify-content-center">
+                    
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_2_3_United_States"  checked class="mr-3 mt-2">
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_2_3_United_States"  class="mr-3 mt-2">
+                    </div></td-->
+                                    <!-- END TREND -VE +VE TD -->
+
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <!-- =trim(rsCountyTweek("Growth_Delta_2019"))  trim(rsCountyTweek("Growth_Delta_2030"))							-->
+                                    <td align="center"><input type="text"
+                                            name="GD2014_92925_7_3_United_States_MarinePropellers"
+                                            id="GD2014_92925_7_3_United_States_MarinePropellers" value="3.7"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2019_92925_7_3_United_States_MarinePropellers"
+                                            id="GD2019_92925_7_3_United_States_MarinePropellers" value="-8.5"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2030_92925_7_3_United_States_MarinePropellers"
+                                            id="GD2030_92925_7_3_United_States_MarinePropellers" value="3.6"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2012_92925_7_3_United_States_MarinePropellers"
+                                            id="GD2012_92925_7_3_United_States_MarinePropellers" value=""
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center">&nbsp;
+                                        <select name="Countryplayers_92925_7_3_United_States_MarinePropellers"
+                                            id="Countryplayers_92925_7_3_United_States_MarinePropellers">
+                                            <option value="">Select</option>
+
+                                            <option value="L1-C1">L1-C1</option>
+
+                                            <option value="L1-C2">L1-C2</option>
+
+                                            <option value="L1-C3">L1-C3</option>
+
+                                            <option value="L1-C4">L1-C4</option>
+
+                                            <option value="L1-C5">L1-C5</option>
+
+                                            <option value="L1-C6">L1-C6</option>
+
+                                            <option value="L1-C7">L1-C7</option>
+
+                                            <option value="L1-C8">L1-C8</option>
+
+                                            <option value="L1-C9">L1-C9</option>
+
+                                            <option value="L1-C10">L1-C10</option>
+
+                                            <option value="L1-C11">L1-C11</option>
+
+                                            <option value="L1-C12">L1-C12</option>
+
+                                            <option value="L1-C13">L1-C13</option>
+
+                                            <option value="L1-C14">L1-C14</option>
+
+                                            <option value="L1-C15">L1-C15</option>
+
+                                            <option value="L1-C16">L1-C16</option>
+
+                                            <option value="L1-C17">L1-C17</option>
+
+                                            <option value="L1-C18">L1-C18</option>
+
+                                            <option value="L1-C19">L1-C19</option>
+
+                                            <option value="L1-C20">L1-C20</option>
+
+                                            <option value="L1-C21">L1-C21</option>
+
+                                            <option value="L1-C22">L1-C22</option>
+
+                                            <option value="L1-C23">L1-C23</option>
+
+                                            <option value="L1-C24">L1-C24</option>
+
+                                            <option value="L1-C25">L1-C25</option>
+
+                                            <option value="L1-C26">L1-C26</option>
+
+                                            <option value="L1-C27">L1-C27</option>
+
+                                            <option value="L1-C28">L1-C28</option>
+
+                                            <option value="L1-C29">L1-C29</option>
+
+                                            <option value="L1-C30">L1-C30</option>
+
+                                            <option value="L1-C31">L1-C31</option>
+
+                                        </select>
+                                    </td>
+                                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td>-->
+                                    <td align="center">
+                                        <a class="Edit" style="display: inline;cursor:pointer;"
+                                            onclick="SegCountryTotalAdd('92925_7','6','3','United_States','Type','MarinePropellers');">SAVE</a>
+                                    </td>
+                                </tr>
+
+                                <!--<tr>
+            <th colspan="9" scope="col" style="align:left;">&nbsp;Other Types-Type</th>
+        </tr>-->
+
+
+                                <tr>
+
+                                    <!-- NAME TD -->
+                                    <td>Other Types</td>
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <td> <input name="txt_MSize92925_8_3_United_States" type="text"
+                                            id="txt_MSize92925_8_3_United_States" value=""
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#"></td>
+                                    <!-- SLIDER PERCENTAGE TD -->
+                                    <!-- rank_input_90001_3_8_United_States_Segment1-->
+                                    <td colspan="2">
+                                        <div class="w-100">
+                                            <div class="range-slider ranking_slider">
+                                                <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                                <input type="text" maxlength="4" class="js-input rank_input"
+                                                    onchange="SegTotalvalueCalculation_100('92925_8','6','3','United_States','Type','MarinePropellers');"
+                                                    name="rank_input_92925_8_7_3_United_States_MarinePropellers"
+                                                    id="rank_input_92925_8_3_United_States_MarinePropellers" value="0"
+                                                    size="20" tabindex="3" placeholder="##.#">
+                                               <input
+                                                    type="text" value="0" class="js-range-slider irs-hidden-input"
+                                                    id="slide_92925_8_3_United_States_MarinePropellers" tabindex="-1"
+                                                    readonly="">
+                                            </div>
+                                            <script>
+                                                var $slide_92925_8_3_United_States_MarinePropellers = $("#slide_92925_8_3_United_States_MarinePropellers");
+                                                var $slide_input_92925_8_3_United_States_MarinePropellers = $("#rank_input_92925_8_3_United_States_MarinePropellers");
+                                                var instance92925_8_3_United_States_MarinePropellers;
+                                                var min = 0;
+                                                var vfromval = 22.3;
+                                                var max = 100;
+
+                                                $slide_92925_8_3_United_States_MarinePropellers.ionRangeSlider({
+                                                    skin: "big",
+                                                    type: "single",
+                                                    min: min,
+                                                    max: max,
+                                                    from: vfromval,
+                                                    grid: true,
+                                                    step: 0.01,
+                                                    grid_num: 10,
+
+                                                    onStart: function (data) {
+                                                        $slide_input_92925_8_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                    },
+                                                    onChange: function (data) {
+                                                        $slide_input_92925_8_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    },
+                                                    onFinish: function (data) {
+                                                        // fired on pointer release
+                                                        $slide_input_92925_8_3_United_States_MarinePropellers.prop("value", data
+                                                            .from);
+                                                        SegTotalvalueCalculation_100('92925_8', '6', '3', 'United_States', 'Type', 'MarinePropellers')
+                                                        //UpdateStagingCountry('GEO_A##United_States');
+                                                    }
+                                                });
+
+                                                instance92925_8_3_United_States_MarinePropellers = $slide_92925_83United_States_MarinePropellers.data("ionRangeSlider");
+
+                                                $slide_input_92925_8_3_United_States_MarinePropellers.on("input", function () {
+                                                    var val = $(this).prop("value");
+
+                                                    // validate
+                                                    if (val < min) {
+                                                        val = min;
+                                                    } else if (val > max) {
+                                                        val = max;
+                                                    }
+
+                                                    instance92925_8_3_United_States_MarinePropellers.update({
+                                                        from: val
+                                                    });
+
+                                                    $(this).prop("value", val);
+                                                });
+                                            </script>
+                                        </div>
+                                    </td>
+                                    <!-- TREND -VE +VE TD -->
+                                    <!--td> <div class="  d-flex align-items-center justify-content-center">
+                    
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input type="radio" name="rd_3_3_United_States"  checked class="mr-3 mt-2">
+                    <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input type="radio" name="rd_3_3_United_States"  class="mr-3 mt-2">
+                    </div></td-->
+                                    <!-- END TREND -VE +VE TD -->
+
+                                    <!-- MARKET SIZE 2019 TD -->
+                                    <!-- =trim(rsCountyTweek("Growth_Delta_2019"))  trim(rsCountyTweek("Growth_Delta_2030"))							-->
+                                    <td align="center"><input type="text"
+                                            name="GD2014_92925_8_3_United_States_MarinePropellers"
+                                            id="GD2014_92925_8_3_United_States_MarinePropellers" value="3.3"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2019_92925_8_3_United_States_MarinePropellers"
+                                            id="GD2019_92925_8_3_United_States_MarinePropellers" value="-4.9"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2030_92925_8_3_United_States_MarinePropellers"
+                                            id="GD2030_92925_8_3_United_States_MarinePropellers" value="3.4"
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center"><input type="text"
+                                            name="GD2012_92925_8_3_United_States_MarinePropellers"
+                                            id="GD2012_92925_8_3_United_States_MarinePropellers" value=""
+                                            placeholder"##.#"="" size="1"></td>
+                                    <td align="center">&nbsp;
+                                        <select name="Countryplayers_92925_8_3_United_States_MarinePropellers"
+                                            id="Countryplayers_92925_8_3_United_States_MarinePropellers">
+                                            <option value="">Select</option>
+
+                                            <option value="L1-C1">L1-C1</option>
+
+                                            <option value="L1-C2">L1-C2</option>
+
+                                            <option value="L1-C3">L1-C3</option>
+
+                                            <option value="L1-C4">L1-C4</option>
+
+                                            <option value="L1-C5">L1-C5</option>
+
+                                            <option value="L1-C6">L1-C6</option>
+
+                                            <option value="L1-C7">L1-C7</option>
+
+                                            <option value="L1-C8">L1-C8</option>
+
+                                            <option value="L1-C9">L1-C9</option>
+
+                                            <option value="L1-C10">L1-C10</option>
+
+                                            <option value="L1-C11">L1-C11</option>
+
+                                            <option value="L1-C12">L1-C12</option>
+
+                                            <option value="L1-C13">L1-C13</option>
+
+                                            <option value="L1-C14">L1-C14</option>
+
+                                            <option value="L1-C15">L1-C15</option>
+
+                                            <option value="L1-C16">L1-C16</option>
+
+                                            <option value="L1-C17">L1-C17</option>
+
+                                            <option value="L1-C18">L1-C18</option>
+
+                                            <option value="L1-C19">L1-C19</option>
+
+                                            <option value="L1-C20">L1-C20</option>
+
+                                            <option value="L1-C21">L1-C21</option>
+
+                                            <option value="L1-C22">L1-C22</option>
+
+                                            <option value="L1-C23">L1-C23</option>
+
+                                            <option value="L1-C24">L1-C24</option>
+
+                                            <option value="L1-C25">L1-C25</option>
+
+                                            <option value="L1-C26">L1-C26</option>
+
+                                            <option value="L1-C27">L1-C27</option>
+
+                                            <option value="L1-C28">L1-C28</option>
+
+                                            <option value="L1-C29">L1-C29</option>
+
+                                            <option value="L1-C30">L1-C30</option>
+
+                                            <option value="L1-C31">L1-C31</option>
+
+                                        </select>
+                                    </td>
+                                    <!--td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="26-45"></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="45-100" ></td>-->
+                                    <!--<td align="center"><input type="radio" name="countryUnited_States" SIZE="1" value="100+"></td>-->
+                                    <td align="center">
+                                        <a class="Edit" style="display: inline;cursor:pointer;"
+                                            onclick="SegCountryTotalAdd('92925_8','7','3','United_States','Type','MarinePropellers');">SAVE</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="SEGMENT" colspan="2" style="text-align: right;"><b>TYPE TOTAL: </b></td>
+                                    <td colspan="6" style="text-align: left;"><input
+                                            name="txt_Total_Type_United_States_MarinePropellers" type="text"
+                                            id="txt_Total_Type_United_States_MarinePropellers" value="100.0"
+                                            style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;"
+                                            placeholder="###.#"></td>
+                                    <td style="text-align: left;">
+                                        <!--input name="txttotalType_United_States" type="button" id="txttotalType_United_States" value="SAVE" style="width: 64px;text-align: center; font-weight:bold; color:#428BCA;" -->
+                                    </td>
+
+                                </tr>
+
+                                <!--<tr class="bg-white ">
+                <td colspan="9" style="text-align:center !important;">				
+<a class="mt-2  btn my-3" href="http://www.strategyr.com/gia_analytix/viewGIACountriesBespoke.asp?sts=D&code=MCP92925" target="new"  style="background-color: #2196F3;width: 125px;color:white;">TRAJECTORY</a>
+</td></tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Canada')"
+                            data-target="#Canada" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Canada</h3>
+                    </div>
+                    <div class="collapse" id="Canada">
+                        <div class="card card-body border-0 p-0" id="Canada_Tweek_table">
+                            Canada
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Japan')"
+                            data-target="#Japan" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Japan</h3>
+                    </div>
+                    <div class="collapse" id="Japan">
+                        <div class="card card-body border-0 p-0" id="Japan_Tweek_table">
+                            Japan
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('China')"
+                            data-target="#China" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>China</h3>
+                    </div>
+                    <div class="collapse" id="China">
+                        <div class="card card-body border-0 p-0" id="China_Tweek_table">
+                            China
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('France')"
+                            data-target="#France" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>France</h3>
+                    </div>
+                    <div class="collapse" id="France">
+                        <div class="card card-body border-0 p-0" id="France_Tweek_table">
+                            France
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Germany')"
+                            data-target="#Germany" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Germany</h3>
+                    </div>
+                    <div class="collapse" id="Germany">
+                        <div class="card card-body border-0 p-0" id="Germany_Tweek_table">
+                            Germany
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Italy')"
+                            data-target="#Italy" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Italy</h3>
+                    </div>
+                    <div class="collapse" id="Italy">
+                        <div class="card card-body border-0 p-0" id="Italy_Tweek_table">
+                            Italy
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('United_Kingdom')"
+                            data-target="#United_Kingdom" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>United Kingdom</h3>
+                    </div>
+                    <div class="collapse" id="United_Kingdom">
+                        <div class="card card-body border-0 p-0" id="United_Kingdom_Tweek_table">
+                            United_Kingdom
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Spain')"
+                            data-target="#Spain" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Spain</h3>
+                    </div>
+                    <div class="collapse" id="Spain">
+                        <div class="card card-body border-0 p-0" id="Spain_Tweek_table">
+                            Spain
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Russia')"
+                            data-target="#Russia" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Russia</h3>
+                    </div>
+                    <div class="collapse" id="Russia">
+                        <div class="card card-body border-0 p-0" id="Russia_Tweek_table">
+                            Russia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Rest_of_Europe')"
+                            data-target="#Rest_of_Europe" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Rest of Europe</h3>
+                    </div>
+                    <div class="collapse" id="Rest_of_Europe">
+                        <div class="card card-body border-0 p-0" id="Rest_of_Europe_Tweek_table">
+                            Rest_of_Europe
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Australia')"
+                            data-target="#Australia" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Australia</h3>
+                    </div>
+                    <div class="collapse" id="Australia">
+                        <div class="card card-body border-0 p-0" id="Australia_Tweek_table">
+                            Australia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('India')"
+                            data-target="#India" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>India</h3>
+                    </div>
+                    <div class="collapse" id="India">
+                        <div class="card card-body border-0 p-0" id="India_Tweek_table">
+                            India
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('South_Korea')"
+                            data-target="#South_Korea" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>South Korea</h3>
+                    </div>
+                    <div class="collapse" id="South_Korea">
+                        <div class="card card-body border-0 p-0" id="South_Korea_Tweek_table">
+                            South_Korea
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse"
+                            onclick="GetCountryTypeTweeks('Rest_of_Asia_Pacific')" data-target="#Rest_of_Asia_Pacific"
+                            aria-expanded="false" aria-controls="collapseExample" class="float-left mx-2 mt-2">
+                        <h3>Rest of Asia Pacific</h3>
+                    </div>
+                    <div class="collapse" id="Rest_of_Asia_Pacific">
+                        <div class="card card-body border-0 p-0" id="Rest_of_Asia_Pacific_Tweek_table">
+                            Rest_of_Asia_Pacific
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Argentina')"
+                            data-target="#Argentina" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Argentina</h3>
+                    </div>
+                    <div class="collapse" id="Argentina">
+                        <div class="card card-body border-0 p-0" id="Argentina_Tweek_table">
+                            Argentina
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Brazil')"
+                            data-target="#Brazil" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Brazil</h3>
+                    </div>
+                    <div class="collapse" id="Brazil">
+                        <div class="card card-body border-0 p-0" id="Brazil_Tweek_table">
+                            Brazil
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Mexico')"
+                            data-target="#Mexico" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Mexico</h3>
+                    </div>
+                    <div class="collapse" id="Mexico">
+                        <div class="card card-body border-0 p-0" id="Mexico_Tweek_table">
+                            Mexico
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse"
+                            onclick="GetCountryTypeTweeks('Rest_of_Latin_America')" data-target="#Rest_of_Latin_America"
+                            aria-expanded="false" aria-controls="collapseExample" class="float-left mx-2 mt-2">
+                        <h3>Rest of Latin America</h3>
+                    </div>
+                    <div class="collapse" id="Rest_of_Latin_America">
+                        <div class="card card-body border-0 p-0" id="Rest_of_Latin_America_Tweek_table">
+                            Rest_of_Latin_America
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Iran')"
+                            data-target="#Iran" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Iran</h3>
+                    </div>
+                    <div class="collapse" id="Iran">
+                        <div class="card card-body border-0 p-0" id="Iran_Tweek_table">
+                            Iran
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Israel')"
+                            data-target="#Israel" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Israel</h3>
+                    </div>
+                    <div class="collapse" id="Israel">
+                        <div class="card card-body border-0 p-0" id="Israel_Tweek_table">
+                            Israel
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Saudi_Arabia')"
+                            data-target="#Saudi_Arabia" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Saudi Arabia</h3>
+                    </div>
+                    <div class="collapse" id="Saudi_Arabia">
+                        <div class="card card-body border-0 p-0" id="Saudi_Arabia_Tweek_table">
+                            Saudi_Arabia
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse"
+                            onclick="GetCountryTypeTweeks('United_Arab_Emirates')" data-target="#United_Arab_Emirates"
+                            aria-expanded="false" aria-controls="collapseExample" class="float-left mx-2 mt-2">
+                        <h3>United Arab Emirates</h3>
+                    </div>
+                    <div class="collapse" id="United_Arab_Emirates">
+                        <div class="card card-body border-0 p-0" id="United_Arab_Emirates_Tweek_table">
+                            United_Arab_Emirates
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse"
+                            onclick="GetCountryTypeTweeks('Rest_of_Middle_East')" data-target="#Rest_of_Middle_East"
+                            aria-expanded="false" aria-controls="collapseExample" class="float-left mx-2 mt-2">
+                        <h3>Rest of Middle East</h3>
+                    </div>
+                    <div class="collapse" id="Rest_of_Middle_East">
+                        <div class="card card-body border-0 p-0" id="Rest_of_Middle_East_Tweek_table">
+                            Rest_of_Middle_East
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100">
+                    <div class="w-100 section_subheader">
+                        <input type="checkbox" data-toggle="collapse" onclick="GetCountryTypeTweeks('Africa')"
+                            data-target="#Africa" aria-expanded="false" aria-controls="collapseExample"
+                            class="float-left mx-2 mt-2">
+                        <h3>Africa</h3>
+                    </div>
+                    <div class="collapse" id="Africa">
+                        <div class="card card-body border-0 p-0" id="Africa_Tweek_table">
+                            Africa
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <a class="mt-2  btn my-3"
+                    href="https://www.strategyr.com/gia_analytix/viewGIACountriesBespoke_MAIN.asp?sts=O&amp;code=MCP92925"
+                    target="new" style="background-color: #2196F3;width: 200px;color:white;">BUILD TOPLINE DATA - STEP
+                    1</a>
+
+
+                &nbsp;&nbsp;
+                <a class="mt-2  btn my-3"
+                    href="https://www.strategyr.com/gia_analytix/viewGIACountriesBespoke_Main_sub.asp?sts=O&amp;code=MCP92925"
+                    target="new" style="background-color: #2196F3;width: 200px;color:white;">BUILD SECONDARY DATA - STEP
+                    2</a>
+
+
+
+                &nbsp;&nbsp;
+                <button class="mt-2  btn my-3" onclick="getGIApageRefresh('MCP92925')"
+                    style="background-color: #2196F3;width: 200px;color:white;"
+                    value="REFRESH SECONDARY DATA - STEP 3">REFRESH SECONDARY DATA - STEP 3</button>
+
+                &nbsp;&nbsp;
+                <a class="mt-2  btn my-3"
+                    href="https://www.strategyr.com/gia_analytix/viewGIACountriesBespoke_Main_sub_ChkTotals.asp?sts=O&amp;code=MCP92925"
+                    target="new" style="background-color: #2196F3;width: 200px;color:white;">BUILD FINAL TOTALS - STEP
+                    4</a>
+
+
+
+                &nbsp;&nbsp;
+                <a class="mt-2  btn my-3"
+                    href="https://www.strategyr.com/gia_analytix/API/Baseline_AutoGenRexJson.asp?giano=MCP92925&amp;MDE=False&amp;LAM=False&amp;ASP=False&amp;EUR=False"
+                    target="new" style="background-color: #2196F3;width: 200px;color:white;">BUILD FINAL DATA - STEP
+                    4</a>
+
+
+                <br>
+                STEP 1: PRIMARY BUILD - This will generate primary segment numbers <br>
+                STEP 2: SECONDARY BUILD - This will generate numbers for secondary segments using primary numbers<br>
+                STEP 3: SYNC DATA FOR ResX - This will create data that can be synced with ResX<br>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("#segment_allocation_primary table tr:nth-child(1) th:nth-child(5)").attr("colspan", "2")
+        $("#segment_allication table tr:nth-child(1) th:nth-child(5)").attr("colspan", "2")
+        $("#market-staging tr th:nth-child(4)").attr("colspan", "3")
+
+    })
+
+</script>
+
+
+
+
+
+</html>

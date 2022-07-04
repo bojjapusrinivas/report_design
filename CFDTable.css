@@ -1,0 +1,17 @@
+/*==================
+CFDTable styles
+==================*/
+
+.CFDTable {
+    width: 100%;
+}
+
+ .table-columns{
+    width: 100%;
+    
+}
+
+.CFDTable .table-columns .col-1,
+.CFDTable .table-columns .col-2{
+ width: 50%;
+}

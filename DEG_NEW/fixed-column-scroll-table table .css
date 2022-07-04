@@ -1,0 +1,110 @@
+#fixed-column-scroll-table table {
+    border-collapse:collapse
+}
+#fixed-column-scroll-table table tr{
+    padding:10px 0px
+}
+#fixed-column-scroll-table table tr:nth-child(odd), #fixed-column-scroll-table table tr:nth-child(odd) th {
+   background-color: #EFEFEF;
+
+}
+
+#fixed-column-scroll-table table td,  #fixed-column-scroll-table table th{
+    height: 35px;
+    position: relative;
+}
+
+#fixed-column-scroll-table table  .header-section td {
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#fixed-column-scroll-table table  .header-section td:last-child, #fixed-column-scroll-table table  tr td:last-child  {
+    background-color: #FFFF3F
+}
+
+#fixed-column-scroll-table table  .header-section td:last-child h3, #fixed-column-scroll-table table  tr td:last-child h3  {
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+#fixed-column-scroll-table table  .header-section:nth-child(1), #fixed-column-scroll-table table  .header-section:nth-child(1) th{
+    background-color: #00D4FC !important;
+    
+}
+
+
+#fixed-column-scroll-table table td,
+#fixed-column-scroll-table table td th {
+    margin: 0;
+    border: 3px solid grey;
+    border-top-width: 0px;
+    white-space: nowrap;
+}
+
+#fixed-column-scroll-table {
+    width: 860px !important;
+    overflow-x: scroll;
+    margin-left: 240px;
+    overflow-y: visible;
+    padding-bottom: 0px;
+}
+
+#fixed-column-scroll-table .headcol {
+    position: absolute;
+    width:250px;
+    left: 0;
+    top: auto;
+    border-right: 0px none black;
+    border-top-width: 3px;
+    margin-top: -2px;
+}
+
+#fixed-column-scroll-table .headcol h3{
+    font-size:14px;
+    font-weight: bold;
+    margin: 0px;
+    padding-top: 7px;
+    padding-left: 15px;
+}
+
+#fixed-column-scroll-table .headcol:before {
+    content: '';
+}
+
+#fixed-column-scroll-table .long {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+#fixed-column-scroll-table .long{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    height: 40px;
+    
+}
+
+
+#fixed-column-scroll-table .header-section th, 
+#fixed-column-scroll-table tr th {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    height: 40px;
+    
+}
+
+#fixed-column-scroll-table .long  input[type="text"] {
+    width: 60px;
+    font-size: 14px;
+    height: 99%;
+    border: rgba(0,0,0,0.08) solid 1px;
+    background:transparent;
+}

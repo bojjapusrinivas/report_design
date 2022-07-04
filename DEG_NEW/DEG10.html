@@ -1,0 +1,563 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        GIA - DEG Numbers
+    </title>
+    <!-- CSS STYLES-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="https://bojjapusrinivas.github.io/report_design/DEG_NEW/gia_switches.css" />
+    <link rel="stylesheet" href="deg_custom_styles.css" />
+    <link rel="stylesheet" href="range_slider_tables.css" />
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+
+    <style>
+        #segment_allication .ranking_slider .irs.irs--big.js-irs-0.irs-with-grid:nth-child(2) {
+            display: NONE;
+        }
+
+        .js-range-slider {
+            DISPLAY: NONE;
+        }
+
+        #segment_allication .ranking_slider p,
+        #market-staging .ranking_slider p {
+            display: none;
+        }
+    </style>
+
+<script type="text/javascript">
+    function Navigate(){   
+         window.location.replace('http://205.234.30.74/degnumbers/GIA_DEG_Numbers_updated_3.asp');
+        return false;
+    }
+   </script>
+
+
+</head>
+</div>
+
+<body>
+    <!---NAV BAR-->
+    <nav>
+        <div class="navbar">
+            <div id="wapper">
+                <span style="float:left;"><img src="https://www.strategyr.com/images/log_icon.png"
+                        style="width:45px;height:45px;" class="log_ico">
+                </span>
+                <span>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx"><i class="fa fa-table"></i> GIA</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Segments.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Segments</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BaseYearData.aspx"><i
+                            class="fas fa fa-cloud-upload"></i> Base Year Data</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BulkTocReset.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Reset TOC</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">DEG Numbers Link
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="row">
+                                <div class="column">
+                                    <a href="http://server2/gia_analytix/viewGIACountriesII.asp?sts=O&amp;code="
+                                        target="_blank">
+                                        <!--i class="fa fa-link" aria-hidden="true"></i--><i class="fa fa-home"
+                                            aria-hidden="true"></i> Generate Numbers Link
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a href="http://128.242.110.22/DEGNumbers/" target="_blank"><i
+                                            class="fa fa-external-link"></i>Online Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--a href="ExchangeRates.aspx"><i class="fa fa-th" aria-hidden="true"></i> ExchangeRates</a>
+   <a href="Simulator.aspx"><i class="fa fa-table" aria-hidden="true"></i> Simulator</a-->
+
+                </span>
+                <span style="float:right; padding-right: 10px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Logout.aspx"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i> Log Out</a>
+                </span>
+                <span style="float:right;padding-right: 50px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx#GIA_Analytix"><i class="fa fa-home"
+                            aria-hidden="true"></i> Welcome obili</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="wapper" class="border shadow-sm bg-white">
+       
+        <div class="row mx-0">
+            <div class="w-100">
+                <div class="collapse show" id="PANDEMIC" style="">
+                    <div class="card card-body border-0 p-0" id="PANDEMIC_Impact_table">					
+                        
+                            <div class="table-responsive">
+                            <table class="table w-100 border" id="yearly_table">
+                            <tbody>
+                        
+                            <tr>
+                            
+                                <td style="width:15%">
+                                <div class="d-flex justify-cotent-start align-items-center mt-2">
+                                    <b>YEAR: 2020</b>                                
+                                    </div>
+                                </td>
+                                <td style="width:15%">
+                                
+                                    <div class="d-flex align-items-center">
+                                    
+                                    <span style="font-size: 17px; font-weight: bold;" class="mr-2">+</span><input type="radio" name="PANDEMICq82020" id="q82020" value="+" checked="" class="mr-4 mt-1" style="width: 15px;">
+                                    <span style="font-size: 17px; font-weight: bold;" class="mr-2">-</span> <input type="radio" name="PANDEMICq82020" id="q82020" value="-" class="mr-3 mt-1" style="width: 15px;">	
+                                    </div>
+                               
+                            </td>
+                               <td class="Allocation_Percentage" colspan="2">
+                                <div class="range-slider ranking_slider w-100">
+                                    <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">IMPACT%</p>
+                                    <div class="extra-controls">
+                                        <input type="text" class="js-input" value="0" />
+                                    </div>
+                                    <div class="range-slider w-100">
+                                        <input type="text" class="js-range-slider w-100" value="" />
+                                    </div>
+                                   
+                                 </div>
+                                 <script>
+                                     var $range = $(".js-range-slider"),
+                                        $input = $(".js-input"),
+                                        instance,
+                                        min = -50,
+                                        vfromval = 6,
+                                        max = 200;
+
+                                    $range.ionRangeSlider({
+                                        skin: "big",
+                                        type: "single",
+                                        min: min,
+                                        max: max,
+                                        from: vfromval,
+                                        grid: true,
+                                                    step: 0.5,
+                                                    grid_num: 50,
+                                        onStart: function(data) {
+                                            $input.prop("value", data.from);
+                                        },
+                                        onChange: function(data) {
+                                            $input.prop("value", data.from);
+                                        }
+                                    });
+
+                                    instance = $range.data("ionRangeSlider");
+
+                                    $input.on("change keyup", function() {
+                                        var val = $(this).prop("value");
+
+                                        // validate
+                                        if (val < min) {
+                                            val = min;
+                                        } else if (val > max) {
+                                            val = max;
+                                        }
+
+                                        instance.update({
+                                            from: val
+                                        });
+                                    });
+
+
+                                     </script>
+
+                                  
+                                </td>
+                            </tr>
+                
+                            <tr>
+                            
+                                <td style="width:15%">
+                                <div class="d-flex justify-cotent-start align-items-center mt-2">
+                                    <b>YEAR: 2021</b>                                
+                                    </div>
+                                </td>
+                                <td style="width:15%">
+                                
+                                    <div class="d-flex align-items-center">
+                                    
+                                    <span style="font-size: 17px; font-weight: bold;" class="mr-2">+</span><input type="radio" name="PANDEMICq82021" id="q82021" value="+" checked="" class="mr-4 mt-1" style="width: 15px;">
+                                    <span style="font-size: 17px; font-weight: bold;" class="mr-2">-</span> <input type="radio" name="PANDEMICq82021" id="q82021" value="-" class="mr-3 mt-1" style="width: 15px;">	
+                                    </div>
+                               
+                            </td>
+                            <td class="Allocation_Percentage" colspan="2">
+                              
+                                <div class="range-slider ranking_slider w-100">
+                                    <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">IMPACT%</p>
+                                    <div class="extra-controls">
+                                        <input type="text" class="js-input01" value="0" />
+                                    </div>
+                                    <div class="range-slider w-100">
+                                        <input type="text" class="js-range-slider01 w-100" value="" />
+                                    </div>
+                                   
+                                 </div>
+                                 <script>
+                                     var $range = $(".js-range-slider01"),
+                                        $input = $(".js-input01"),
+                                        instance01,
+                                        min = -50,
+                                        vfromval = -15,
+                                        max = 200;
+
+                                    $range.ionRangeSlider({
+                                        skin: "big",
+                                        type: "single",
+                                        min: min,
+                                        max: max,
+                                        from: vfromval,
+                                        grid: true,
+                                                    step: 0.5,
+                                                    grid_num: 50,
+                                        onStart: function(data) {
+                                            $input.prop("value", data.from);
+                                        },
+                                        onChange: function(data) {
+                                            $input.prop("value", data.from);
+                                        }
+                                    });
+
+                                    instance01 = $range.data("ionRangeSlider");
+
+                                    $input.on("change keyup", function() {
+                                        var val = $(this).prop("value");
+
+                                        // validate
+                                        if (val < min) {
+                                            val = min;
+                                        } else if (val > max) {
+                                            val = max;
+                                        }
+
+                                        instance01.update({
+                                            from: val
+                                        });
+                                    });
+
+
+                                     </script>
+                          
+                            </td>
+                            </tr>
+                            
+                            
+                                
+                            
+                                
+                                 
+    
+                            <tr>
+                            
+                                <td style="width:15%">
+                                <div class="d-flex justify-cotent-start align-items-center mt-2">
+                                    <b>YEAR: 2022</b>                                
+                                    </div>
+                                </td>
+                                <td style="width:15%">
+                                
+                                    <div class="d-flex align-items-center">
+                                    
+                                    <span style="font-size: 17px; font-weight: bold;" class="mr-2">+</span><input type="radio" name="PANDEMICq82022" id="q82022" value="+" checked="" class="mr-4 mt-1" style="width: 15px;">
+                                    <span style="font-size: 17px; font-weight: bold;" class="mr-2">-</span> <input type="radio" name="PANDEMICq82022" id="q82022" value="-" class="mr-3 mt-1" style="width: 15px;">	
+                                    </div>
+                               
+                            </td>
+                            <td class="Allocation_Percentage" colspan="2">
+                                <div class="range-slider ranking_slider w-100">
+                                    <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">IMPACT%</p>
+                                    <div class="extra-controls">
+                                        <input type="text" class="js-input02" value="0" />
+                                    </div>
+                                    <div class="range-slider w-100">
+                                        <input type="text" class="js-range-slider02 w-100" value="" />
+                                    </div>
+                                   
+                                 </div>
+                                 <script>
+                                     var $range = $(".js-range-slider02"),
+                                        $input = $(".js-input02"),
+                                        instance02,
+                                        min = -50,
+                                        vfromval = -5.5,
+                                        max = 200;
+
+                                    $range.ionRangeSlider({
+                                        skin: "big",
+                                        type: "single",
+                                        min: min,
+                                        max: max,
+                                        from: vfromval,
+                                        grid: true,
+                                                    step: 0.5,
+                                                    grid_num: 50,
+                                        onStart: function(data) {
+                                            $input.prop("value", data.from);
+                                        },
+                                        onChange: function(data) {
+                                            $input.prop("value", data.from);
+                                        }
+                                    });
+
+                                    instance02 = $range.data("ionRangeSlider");
+
+                                    $input.on("change keyup", function() {
+                                        var val = $(this).prop("value");
+
+                                        // validate
+                                        if (val < min) {
+                                            val = min;
+                                        } else if (val > max) {
+                                            val = max;
+                                        }
+
+                                        instance02.update({
+                                            from: val
+                                        });
+                                    });
+
+
+                                     </script>
+                              
+                            </td>
+                            </tr>
+                            
+                            
+                                
+                            
+                                
+                                 
+    
+                            <tr>
+                            
+                                <td style="width:15%">
+                                <div class="d-flex justify-cotent-start align-items-center mt-2">
+                                    <b>YEAR: 2023</b>                                
+                                    </div>
+                                </td>
+                                <td style="width:15%">
+                                
+                                    <div class="d-flex align-items-center">
+                                    
+                                    <span style="font-size: 17px; font-weight: bold;" class="mr-2">+</span><input type="radio" name="PANDEMICq82023" id="q82023" value="+" checked="" class="mr-4 mt-1" style="width: 15px;">
+                                    <span style="font-size: 17px; font-weight: bold;" class="mr-2">-</span> <input type="radio" name="PANDEMICq82023" id="q82023" value="-" class="mr-3 mt-1" style="width: 15px;">	
+                                    </div>
+                               
+                            </td>
+                            <td class="Allocation_Percentage" colspan="2">
+                                <div class="range-slider ranking_slider w-100">
+                                    <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">IMPACT%</p>
+                                    <div class="extra-controls">
+                                        <input type="text" class="js-input03" value="0" />
+                                    </div>
+                                    <div class="range-slider w-100">
+                                        <input type="text" class="js-range-slider03 w-100" value="" />
+                                    </div>
+                                   
+                                 </div>
+                                 <script>
+                                     var $range = $(".js-range-slider03"),
+                                        $input = $(".js-input03"),
+                                        instance03,
+                                        min = -50,
+                                        vfromval = 26.5,
+                                        max = 200;
+
+                                    $range.ionRangeSlider({
+                                        skin: "big",
+                                        type: "single",
+                                        min: min,
+                                        max: max,
+                                        from: vfromval,
+                                        grid: true,
+                                                    step: 0.5,
+                                                    grid_num: 50,
+                                        onStart: function(data) {
+                                            $input.prop("value", data.from);
+                                        },
+                                        onChange: function(data) {
+                                            $input.prop("value", data.from);
+                                        }
+                                    });
+
+                                    instance03 = $range.data("ionRangeSlider");
+
+                                    $input.on("change keyup", function() {
+                                        var val = $(this).prop("value");
+
+                                        // validate
+                                        if (val < min) {
+                                            val = min;
+                                        } else if (val > max) {
+                                            val = max;
+                                        }
+
+                                        instance03.update({
+                                            from: val
+                                        });
+                                    });
+
+
+                                     </script>
+                              
+                            </td>
+                            
+                            
+                                
+                            
+                            </tr><tr> <td colspan="3"> 
+    <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" checked="" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2020</b>
+            </div>
+    
+            <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" checked="" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2021</b>
+            </div>
+    
+                    <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" checked="" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2022</b>
+            </div>
+    
+                            <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" checked="" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2023</b>
+            </div>
+    
+                                    <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2024</b>
+            </div>
+    
+                                            <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2025</b>
+            </div>
+    
+                                                    <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2026</b>
+            </div>
+    
+                                                            <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2027</b>
+            </div>
+    
+                                                                    <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2028</b>
+            </div>
+    
+                                                                            <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2029</b>
+            </div>
+    
+                                                                                                                                                            <div class="d-flex">
+            <div class="d-flex align-items-center mr-3">
+    <input type="checkbox" class="float-left mr-2 my-0" style="
+            width: 15px;
+            height: 15px;
+    "><b> 2030</b>
+            </div>
+                                                                                    
+    
+    
+    </div> 
+    
+      </div></div></div></div></div></div></div></div></div></div></td></tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+                </div>
+             </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+<script>
+    $(function () {
+        var $chk = $("#grpChkBox input:checkbox");
+        var $tbl = $("#someTable");
+
+        $chk.prop('checked', false);
+
+        $chk.click(function () {
+            var colToHide = $tbl.find("." + $(this).attr("name"));
+            $(colToHide).toggle();
+        });
+    });
+</script>
+
+
+
+
+
+</html>

@@ -1,0 +1,277 @@
+body {
+    font-size: 14px !important;
+    background-attachment: fixed !important;
+}
+
+/*===============================
+        SIMULATOR PAGE STYLES
+===============================*/
+
+* {
+    line-height: normal !important;
+}
+#simulator_table input::-webkit-input-placeholder,
+#simulator_table textarea::-webkit-input-placeholder,
+.simulator-input-text {
+    color: #000 !important;
+}
+
+/*PLACE HOLDER TEXT FOR FORM*/
+
+.text_field_block input::-webkit-input-placeholder,
+.text_field_block textarea::-webkit-input-placeholder,
+.simulator-input-text::-webkit-input-placeholder,
+#simulator_table tbody tr td input::-webkit-input-placeholder {
+    color: #ccc !important;
+}
+#simulator_page a {
+    cursor: pointer;
+}
+table td {
+    padding: 0px
+}
+
+/*----- SNIPTS----*/
+
+
+/*
+.bg_light_yellow {
+    background: #fff
+}
+@media screen and (min-width:300px) and (max-width: 767px) {
+    .bg_light_yellow {
+        background: #FFFFFF
+    }
+}
+
+
+.bg_light_gray {
+    background: #e0e0e0;
+}
+.primary_color {
+    color: #e37038
+}
+.success_color {
+    color: #0e98df;
+}
+.bg_black {
+    background: #000;
+}
+.bg_brown {
+    background: #900;
+}
+.text_brown {
+    color: #900;
+}
+.light_gray {
+    background: #e6e6e6;
+}
+
+
+.border-bottom-orange {
+    border-bottom: rgba(227, 112, 56, 0.2) solid 1px
+}
+*/
+
+#expert_panel.model {
+    padding: 3px !important;
+}
+
+/*---------------------------
+    simulator_top_header
+-------------------------
+
+.brand_cards {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.0);
+}
+.brand_cards .img-block {
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    padding: 2px;
+    overflow: hidden;
+}
+#brand_cards h3 {
+    color: #e37038 !important;
+    font-size: 20px;
+    line-height: normal !important;
+}
+#brand_cards h4 {
+    font-size: 15px;
+}
+#brand_cards h4 span.company_title1 {
+    display: inline-block;
+}
+#brand_cards h4.company_title {
+    display: none;
+}
+#brand_cards h5 {
+    font-size: 15px;
+}
+.fixed-top .brand_cards {
+    width: 1019px;
+    margin: 0 auto;
+    padding-left: 53px !important;
+    padding-right: 53px !important;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    /*transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;*/
+
+
+}
+/*
+.fixed-top {
+    position: fixed;
+    top: -10px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.star_rating {
+    margin-top: 2px;
+    width: 60px;
+    height: 14px;
+    display: block;
+}
+@media screen and (max-width: 959px) {
+    .fixed-top {
+        width: 710px;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .fixed-top {
+        width: 420px;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+}
+@media screen and (max-width: 479px) {
+    .fixed-top {
+        width: 320px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    #brand_cards h3 {
+        color: #e37038 !important;
+        font-size: 15px;
+        line-height: normal !important;
+    }
+    #brand_cards h4 {
+        font-size: 13px;
+    }
+    #brand_cards h5 {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .fixed-top {
+        width: 100%;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .brand_cards .img-block {
+        width: 70px;
+        height: 70px;
+    }
+    #brand_cards h3 {
+        color: #e37038 !important;
+        font-size: 15px;
+        line-height: normal !important;
+    }
+    #brand_cards h4 {
+        font-size: 13px;
+    }
+    #brand_cards h5 {
+        font-size: 12px;
+    }
+}
+
+/*---I PHONE LAND SCAPE STYLES--*/
+
+/*------ CURRENTCY SECTION ---
+
+
+#currency_block h2,
+#segment_block h2,
+#asia_pacific h2,
+#europe_con h2,
+#europe_con h2,
+#latin_america h2,
+{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #e37038 !important;
+    line-height: normal;
+    margin-top: 12px;
+}
+#currency_block .form-check-label,
+#segment_block .form-check-label,
+#asia_pacific .form-check-label,
+#europe_con .form-check-label,
+#latin_america .form-check-label {
+    font-weight: 700 !important;
+    margin-left: 3px;
+    margin-right: 3px;
+}*/
+
+/*------ CURRENTCY SECTION ---*/
+
+/*-----------------------------------
+     ACCORDION
+------------------------------------*/
+accordion_new .accordion_key {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 6px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    transition: 0.4s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.accordion_new .active,
+.accordion_new .accordion_key:hover {
+    background-color: #eee;
+}
+.accordion_new .accordion_key:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.accordion_new .active:after {
+    content: "\2212";
+}
+.accordion_new .panel3 {
+    padding: 0 18px;
+    background-color: white;
+    min-height: auto;
+    height: auto;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+@media only screen and (max-width:448px) {
+    .accordion_new .accordion_key {
+        background-color: #eee;
+        color: #000;
+        cursor: pointer;
+        padding: 6px 3px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+        transition: 0.4s;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
+/

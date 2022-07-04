@@ -1,0 +1,150 @@
+
+
+
+
+
+/*==========================
+        QUESTIONER STYLE
+===========================*/
+
+body
+{
+    counter-reset: Serial;           /* Set the Serial counter to 0 */
+    font-family: 'Lato', sans-serif !important;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+input[type="radio"],
+input[type="checkbox"]
+{
+    width: 12px;
+    height: 12px;
+}
+
+.input_block{
+    width: 12px;
+    height: 12px;
+    margin-right:10px;
+}
+
+
+
+/*============================
+        MARGIN
+============================*/
+
+.ml{
+    margin-left: 20px;
+}
+
+.note_msg{
+        font-size: 14px;
+        font-style: italic;
+        color: #5a5353;
+        font-weight: 500;
+        margin-bottom: 17px;
+        display: block;
+        margin-left: 5px;
+}
+
+
+/*============================
+        HEADER
+============================*/
+
+#questionnaire_title h1{
+    font-size: 20px;
+}
+
+#questionnaire_title h2{
+    font-size: 17px;
+    font-weight: 600 !important;
+    color: #000;
+    margin-bottom: 2px;
+}
+
+#questionnaire_block h3{
+    font-size: 15px;
+    line-height: normal;
+    color: #000000
+    font-weight: 600 !important;
+}
+
+
+/*============================
+        STYLES
+============================*/
+
+#questioner ul li{
+    margin-bottom: 15px;
+    padding: 8px 10px;
+}
+
+#questioner ul li:nth-child(even){
+    background-color: #f7f7f7
+}
+
+
+
+#questioner ul li h4{
+    margin-left: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000;
+}
+
+
+#questioner ul li label{
+    font-size: 14.5px;
+    font-weight: 600;
+    margin-bottom:7px;
+    color: #424141
+}
+
+
+#questioner ul li h4,
+#questioner ul li label
+{
+    line-height: 20px;
+    position: relative;
+  
+}
+
+
+#questioner ul li h4:before
+{
+  counter-increment: Serial;      /* Increment the Serial counter */
+  content: "" counter(Serial) ; /* Display the counter */
+  width:20px;
+  display: inline-block;
+  text-align: end;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 5px;
+  position: absolute;
+  left: -30px;
+
+}
+
+
+
+
+
+@media only screen and  (max-width:479px){
+
+#questionnaire_title h1{
+    font-size: 16px;
+}
+
+#questionnaire_title h2{
+    font-size: 15px;
+    
+}
+
+
+
+
+

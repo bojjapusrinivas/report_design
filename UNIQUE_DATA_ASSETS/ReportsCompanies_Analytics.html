@@ -1,0 +1,233 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0062)http://205.234.30.74/degnumbers/ReportsCompanies_Analytics.asp -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>
+		UNIQUE DATA ASSETS
+	</title>
+
+	<!-- CSS STYLES-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+	<link rel="stylesheet" href="https://bojjapusrinivas.github.io/report_design/DEG_NEW/gia_switches.css" />
+	<link rel="stylesheet" href="css/newstyle.css">
+	<link rel=" stylesheet" href="./css/handle-counter.min.css">
+	
+	<!--SCRIPTS-->
+	<script src="./GIA - ANALYTICAL TOOL_files/jquery.slim.min.js.download"></script>
+	<script src="./GIA - ANALYTICAL TOOL_files/bootstrap.bundle.min.js.download"></script>
+	<script src="./GIA - ANALYTICAL TOOL_files/ion.rangeSlider.min.js.download"></script>
+	<!--<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>-->
+	<script src="./GIA - ANALYTICAL TOOL_files/jquery.min.js.download"></script>
+
+	
+	<script>
+	
+	let UniqueData = [
+		{
+			companyTitle : "W. R. Grace & Co.",
+			companyLink: " ",
+			revenue: 1700,
+			featuredproduct: 22,
+			revenuePerproduct: 77.272,
+			totalmarket: 111155,
+			totalrevenue:1.53,
+			TiearA:"",
+			TiearB:"",
+			TiearC:"Checked",
+			TiearD:"",
+			sliderId:"r_slider01",
+			sliderinputId:"r_slider01_input",
+			Code:"CP-100580",
+			HQ: "United States",
+			Employee: 3930,
+		}
+
+	]
+
+	let userFullnames = UniqueData.map(function(element){
+    return `
+					<tr>
+						<td>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="comp-logo-block">
+									<img src="images/logo-grace.png" />
+								</div>
+
+								<div class="comp-title-link-block d-flex justify-content-start flex-column">
+									<h5>${element.companyTitle} </h5>
+									<a href=${element.companyLink}>Visit Website</a>
+								</div>
+
+							</div>
+
+						</td>
+						<td>
+							<input type="text" maxlength="4" name="input" id="" value="22" tabindex="3"
+								placeholder=${element.revenue} />
+						</td>
+						<td>
+							<input type="text" maxlength="4" name="input" id="" value="" tabindex="3"
+								placeholder=${element.featuredproduct} />
+						</td>
+						<td>
+							<input type="text" maxlength="4" name="input" id="" value="" tabindex="3"
+								placeholder=${element.revenuePerproduct} />
+						</td>
+						<td>
+							<input type="text" maxlength="4" name="input" id="" value="" tabindex="3"
+								placeholder=${element.totalmarket} />
+						</td>
+
+						<td>
+							<input type="text" maxlength="4" name="input" id="" value="24.6" tabindex="3"
+								placeholder=${element.totalrevenue} />
+						</td>
+						<td>
+							<div class="tier-block">
+								<span><input type="radio" id="a" name="tire" value="a"></span>
+								<span><input type="radio" id="b" name="tire" value="b"></span>
+								<span><input type="radio" id="c" name="tire" value="c"></span>
+								<span><input type="radio" id="d" name="tire" value="d"></span>
+							</div>
+
+						</td>
+
+						<td>
+
+						</td>
+
+					</tr>
+					<tr class="gray-bg">
+						<td colspan="8" class="py-1">
+							<div class="d-flex">
+								<p class="tr-foot-tetxt mr-3">HQ:<span> United States</span> </p>
+								<p class="tr-foot-tetxt mr-3">Employee:<span> 3930</span> </p>
+							</div>
+						</td>
+					</tr>
+	
+	
+	
+	 `;
+})
+
+document.getElementById(uniquedata).innerHTML = userFullnames;
+
+	</script>
+
+
+
+
+
+
+</head>
+
+<body>
+	<nav>
+		<div class="navbar">
+			<div id="wapper" class="" d-flex justify-content-between align-item-center>
+				<span style="float:left;"><img src="images/strategyr_logo.svg"
+						 class="log_ico">
+				</span>
+
+
+				<div class="mt-1">
+
+					<span style="float:right; padding-right: 10px;">
+						<a href="http://205.234.30.74/DEGNumbers/Logout.aspx"><i class="fa fa-sign-out"
+								aria-hidden="true"></i> Log Out</a>
+					</span>
+					<span style="float:right;padding-right: 50px;">
+						<a href="http://205.234.30.74/DEGNumbers/GIA.aspx#GIA_Analytix"><i class="fa fa-user-circle-o"
+								aria-hidden="true"></i></i> Welcome obili</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div id="wapper" class="shadow-sm bg-white mt-2">
+		<div class="w-100">
+			<div class="table-responsie">
+
+				<form name="frmadd" method="post">
+					<table class="w-100 report-code-table">
+						<tbody>
+							<tr>
+								<td style="width: 50%">
+										<h5><sup class="text-danger">*</sup></font>REPORT CODE</h4>
+									
+									<input name="txtGIA_NO" type="text" id="txtGIA_NO" 
+									value="MCP-1098" placeholder=" GIA No" style="color: #000 !important;  font-weight: 600; width: 90% !important;"
+										class="w-90 p-2 ">
+									<br>
+								</td>
+								<td style="width: 50%">
+									<h5><sup class="text-danger">*</sup></font>REPORT TITLE</h4>
+									<input name="txtTOPIC" type="text" id="txtTOPIC" value="Chiral Technology" 	style="color: #000 !important;  font-weight: 600; width: 90% !important;" class="w-90 p-2 ">
+									<br>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<div id="wapper" class="shadow-sm bg-white mt-2">
+		<div class="w-100 section_header">
+			<h3>UNIQUE DATA ASSETS</h3>
+		</div>
+
+		<div class="section-sub-title">
+			<h4>Chiral Technology [OPTION: WORLD]</h4>
+		</div>
+
+		<div id="UNIQUE_DATA_ASSETS">
+
+			<table class="w-100 table table-bordered my-3">
+				<thead>
+					<tr>
+						<th>COMPANY</th>
+						<th>REVENUE</th>
+						<th>FEATURED PRODUCTS</th>
+						<th>REVENUE PER PRODUCT</th>
+						<th>TOTAL MARKET</th>
+						<th>TOTAL REVENUE AS % OF TOTAL MARKET</th>
+						<th>
+							TIER
+							<div class="tier-block">
+								<span>A</span>
+								<span>B</span>
+								<span>C</span>
+								<span>D</span>
+							</div>
+
+						</th>
+						<th>% RANGE SLIDER</th>
+
+					</tr>
+				</thead>
+				<tbody id="uniquedata">
+
+
+				
+
+				</tbody>
+			</table>
+
+
+
+		</div>
+	</div>
+</body>
+
+</html>

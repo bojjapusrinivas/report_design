@@ -1,0 +1,76 @@
+/*============================
+    ECO SYSTEMS  STYELS
+===========================*/
+
+.eco_systems_list{
+    margin:0 auto;
+    list-style: none;
+    padding:0px;
+    width:100;
+  
+}
+
+
+.eco_systems_list li{
+    width: 32%;
+    height: auto;
+    margin-bottom: 11px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: #fff solid 1px;
+    color: #000;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+   
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px){
+    .eco_systems_list li{
+        width:48%;
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+    .eco_systems_list li{
+        width:48%;
+    }
+}
+
+.eco_systems_list li:hover{
+   
+    border: #1C6DBC solid 1px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+
+
+.eco_systems_list li a{
+    color: #000; 
+}
+
+.eco_systems_list li .eco_img{
+
+    min-height: 120px;
+    background: #f7f7f7;
+
+}
+
+.lead{
+    font-size: 13px  !important;
+        text-align: center;
+        font-weight: 500
+}
+
+.showMore, .showMore:hover, .showMore:active,.showMore:focus {
+    text-align: center;
+        width: 28px;
+        background: #256dbc;
+        padding: 5px;
+        color: #fff;
+        margin: 0 auto;
+}
+
+

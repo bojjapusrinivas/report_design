@@ -1,0 +1,202 @@
+/*===================
+    Dash Board
+===================*/
+
+.dash_board ul {
+    position: relative;
+}
+.dash_board ul li.list {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.dash_board ul li.list ul li {
+    font-size: 18px;
+    margin: 12px;
+    position: relative;
+}
+
+/*.dash_board ul li.list ul li:before {
+    content: "\f0da";
+    font-size: 12px;
+    color: #4c0404 !important;
+    font-family: FontAwesome;
+    position: absolute;
+    left: -10px;
+    top: 7px;
+}*/
+
+.dash_board ul li.list:nth-child(1) {
+    animation-name: fadein_fadeleft;
+    -webkit-animation-name: fadein_fadeleft;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.dash_board ul li.list:nth-child(2) {
+    animation-name: fadein_fadeleft;
+    -webkit-animation-name: fadein_fadeleft;
+    animation-delay: 6s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.dash_board ul li.list:nth-child(3) {
+    animation-name: fadein_fadeleft;
+    -webkit-animation-name: fadein_fadeleft;
+    animation-delay: 10s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.dash_board ul li.list:nth-child(4) {
+    animation-name: fadein_fadeleft;
+    -webkit-animation-name: fadein_fadeleft;
+    animation-delay: 14s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.dash_board ul li.list:nth-child(5) {
+    animation-name: fadein_fadeleft;
+    -webkit-animation-name: fadein_fadeleft;
+    animation-delay: 18s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.dash_board ul li.list:nth-child(6) {
+    animation-name: fadein;
+    -webkit-animation-name: fadein;
+    animation-delay: 22s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.data_stacks {
+    transform: scale(1, 1);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+.data_stacks:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+.opacity_animation {
+    animation-name: opacity_ani;
+    -webkit-animation-name: opacity_ani;
+    animation-duration: 1;
+    /*-webkit-animation-fill-mode: both;
+    animation-fill-mode: both;*/
+}
+
+/*======================
+   key Frame Animtaion
+========================*/
+
+@-webkit-keyframes fadein_fadeleft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-60px);
+        -ms-transform: translateY(-60px);
+        transform: translateY(-60px);
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-200px);
+        transform: translateX(-200px);
+    }
+}
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        color: #000 !important;
+    }
+    100% {
+        color: #077cb9 !important;
+    }
+}
+@-webkit-keyframes opacity_ani {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*====================
+    MEDIA QURIS
+====================*/
+
+@media only screen and (max-width:991px) {
+    .dash_board ul li.list ul li {
+        font-size: 15px;
+        margin: 15px;
+    }
+    .dash_board ul li.list ul li:before {
+        left: 9px;
+    }
+}
+@media only screen and (max-width:767px) {
+    .dash_board ul li.list {
+        position: absolute;
+        font-size: 16px;
+    }
+    .dash_board ul li.list ul {
+        margin-top: 10px;
+    }
+    .dash_board ul li.list ul li {
+        margin-top: 2px;
+        position: relative;
+    }
+    /*.dash_board ul li.list ul li:before {
+        content: "\f0da";
+        font-size: 12px;
+        color: #6c757d !important;
+        font-family: FontAwesome;
+        position: absolute;
+        left: -10px;
+        top: 7px;
+    }*/
+    .datastact_block {
+        margin-top: 115px !important;
+    }
+}
+@media only screen and (max-width:480px) {
+    .dash_board h3 {
+        font-size: 17px !important;
+    }
+}

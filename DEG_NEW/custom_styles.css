@@ -1,0 +1,14 @@
+/*===============================
+            DEG PAGE STYLES
+===============================*/
+
+body {
+    background: url("https://www.strategyr.com/images/bg/04.png") repeat  !important;
+    font-size: 13px;
+    line-height: 21px;
+    color: #000000;
+    padding-top: 0px !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    background:red;
+}

@@ -1,0 +1,366 @@
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0" bgcolor="#fff" class="table mt-4 shadow">
+<tr><td valign="top">
+	<table class="table w-100" id="sub_menu">
+	
+	<%
+	'response.write trim(session("utype"))
+	'response.end
+	If trim(session("utype"))<>"1" then
+		set rsgroups=server.CreateObject("ADODB.Recordset")
+		rsgroups.ActiveConnection=DataSource1
+		sqlUserPerms= "select * from Admin_Activity_Roles a, Admin_Activities b, admin_groups c where a.activity_id=b.activity_id and b.group_id=c.group_id and b.group_ID="&session("utype")&" order by c.group_id"
+		''response.write sqlUserPerm's
+		''response.end
+		rsgroups.open sqlUserPerms
+		dim oldval, newval
+		newval = "0"
+		if not rsgroups.eof then
+			while not rsgroups.eof
+				if trim(lcase(newval))<>trim(lcase(rsgroups("Group_Name"))) then
+				response.write "<tr>"
+			  	response.write "<td align=center height=""20"" class=""sidenav_title""><font color=""white"" size=2 face=verdana><b>"&rsgroups("Group_Name")&"</b></font></td>"
+				response.write "</tr>"
+				end if
+				newval = trim(rsgroups("Group_Name"))
+				response.write "<tr>"
+			  	response.write "<td align=left height=""20"" class=""sidenav_title""><a href="""&rsgroups("Activity_link")&"?ttype=A""  style=""text-decoration:none""><font color=""white"" size=2 face=verdana>&raquo; "&rsgroups("Activity_Name")&"</font></a></td>"
+				response.write "</tr>"
+			rsgroups.movenext
+			wend
+		end if
+	else%>
+		<tr>
+		  <td align=center height="20" class=""sidenav_title""><font  size=2 face=verdana><b>View</b></font></td>
+		</tr>
+		<%If cint(session("utype"))=1 then%>
+		<!--tr>
+		  <td align=left height="20"><a href="ViewCompanyList.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Company Data*</font></a></td>
+		</tr-->		
+		<tr>
+		  <td align=left height="20"><a href="ViewTransactionsGroup.asp?ttype=M"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View Transaction</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewAllUsers.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Registered Users</font></a></td>
+		</tr>		
+		<!--tr>
+		  <td align=left height="20"><a href="ViewAccessRequest.asp?ttype=P"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; RPP Requests</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=left height="20"><a href="ViewInfluencerRequest.asp?ttype=P"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Influencers Requests</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewSignUPUsers.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Expert Panel SignUPs</font></a></td>
+		</tr>
+		<!--tr>
+		  <td align=left height="20"><a href="ViewTOCRequest.asp?ttype=P"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; TOC Requests</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewSampleRequest.asp?ttype=P"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Research Sample Requests</font></a></td>
+		</tr-->
+		<!--tr>
+		  <td align=left height="20"><a href="RPP_Analysis.asp?ttype=P"  style="text-decoration:none"><font color="yellow" size=2 face=verdana>&raquo; RPP Analysis</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=left height="20"><a href="SearchTransactions.asp?ttype=P"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Search Trans</font></a></td>
+		</tr>	
+		<!--tr>
+		  <td align=left height="20"><a href="SearchKeywords.asp?ttype=P"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Search Keyword</font></a></td>
+		</tr-->	
+		
+		<!--tr>
+		  <td align=left height="20"><a href="InfluencerCompanies.asp?ttype=Y"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Influencers Companies</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=left height="20"><a href="ViewAllInfluencers.asp?ttype=Y"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Influencers List</font></a></td>
+		</tr>
+		
+		<!--tr>
+		  <td align=left height="20"><a href="ViewSignUPDownloads.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Download Newsletter Users</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AddAccessToUsers.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Add Report Access</font></a></td>
+		</tr-->		
+			
+		<!--tr>
+		  <td align=left height="20"><a href="ViewTOCLogs.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; TOC Log</font></a></td>
+		</tr-->	
+		<tr>
+		  <td align=left height="20"><a href="StraightPDF.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Straight PDF</font></a></td>
+		</tr>	
+		<tr>
+		  <td align=left height="20"><a href="StraightDRM.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Straight DRM</font></a></td>
+		</tr>	
+		<!--tr>
+		  <td align=left height="20"><a href="StampTOC.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Stamp TOC(MTR)</font></a></td>
+		</tr-->
+		<!--tr>
+		  <td align=left height="20"><a href="GOSStraightPDF.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; GOS Straight PDF</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=left height="20"><a href="ViewUserLogs.asp?ttype=PCI"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; User PCI Log</font></a></td>
+		</tr>	
+		<tr>
+		  <td align=left height="20"><a href="ViewAdminUserLogs.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Admin User Log</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewUserLoginLogs.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; User Login Log</font></a></td>
+		</tr>
+		<!--tr>
+		  <td align=left height="20"><a href="ViewEmailClicks.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; VerticalResponse Log</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=left height="20"><a href="ViewParameters.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Site Parameters</font></a></td>
+		</tr>
+		<%End If%>
+		<tr>
+		  <td align=left height="20"><a href="ViewIndustryCode.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Industry Category</font></a></td>
+		</tr>
+		
+		<!--tr>
+		  <td align=left height="20"><a href="justrelease.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Just Released</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=left height="20"><a href="ViewAllMCP.asp?ttype=MCP"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Reports (GSBR)</font></a></td>
+		</tr>		
+		<!--tr>
+		  <td align=left height="20"><a href="ViewAllMTR.asp?ttype=FOODMTR"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Reports (MTR)</font></a></td>
+		</tr-->	
+		<!--tr>
+		  <td align=left height="20"><a href="ViewPrivilegeAccess.asp?ttype=FOODMTR"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; RPP/RPI Codes</font></a></td>
+		</tr-->	
+		<!--tr>
+		  <td align=left height="20"><a href="ViewMCPID.asp?ttype=FOODMTR"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; MCPID</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=left height="20"><a href="ViewALLQuestionaire.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; eQuestionaire</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewResearchParticipation.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Research Participation Code</font></a></td>
+		</tr>
+		<!--tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>BizAcumen</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="BIZ_ViewTransactionsGroup.asp?ttype=M"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View Transaction</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="BIZ_ViewAllUsers.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Registered Users</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="BIZ_ViewUserDiscount.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; User Discount</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="BIZ_ViewTOCRequest.asp?ttype=P"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; TOC Requests</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="BIZ_StraightPDF.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; BIZ Straight PDF</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="BIZ_StraightDRM.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; BIZ Straight DRM</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="BIZ_ViewUserLoginLogs.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; User Login Log</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="BIZ_ViewIndustryCode.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Industry Category</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>License User</b></font></td>
+		</tr>
+		<!-- OLD with pdf link-->		
+		<!--tr>
+		  <td align=left height="20"><a href="ViewLicenseUser.asp?ttype=A" style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Add User</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="Upload_Licensed_Reports.asp" style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Upload Report</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AssignLicenseUser.asp?ttype=A" style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Assign Report</font></a></td>
+		</tr-->
+		<!-- New License link-->
+		<tr>
+		  <td align=left height="20"><a href="ViewMultiLicenseUser.asp?ttype=A" style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Add User</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="LicenseReports.asp" style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View Transactions</font></a></td>
+		</tr>
+		<tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>Customer Profile Database</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewMrktReportsUser.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Company Value Designation</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewMrktReports.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Individual Customer Offer / Reach Plan</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewOfferDetails.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View sent offers</font></a></td>
+		</tr>
+		
+		<tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>Facts Figures Forecast</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AllocationCode.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; FFF Code</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="FFFacToUser.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Assign Code</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="FFFViewUserDF.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View User Usage</font></a></td>
+		</tr>	
+		<tr>
+		  <td align=left height="20"><a href="fffViewDailyUsage.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View Excess Usage</font></a></td>
+		</tr>	
+
+		<tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>Admin Users</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewAdminRoles.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Admin Roles</font></a></td>
+		</tr>	
+		<tr>
+		  <td align=left height="20"><a href="ViewAdminGroups.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Activity Groups</font></a></td>
+		</tr>	
+		<tr>
+		  <td align=left height="20"><a href="ViewAdminActivities.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Admin Activities</font></a></td>
+		</tr>	
+		<tr>
+		  <td align=left height="20"><a href="AddRoleToActivity.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Role To Activitiy</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AddAdminUser.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Add User</font></a></td>
+		</tr>
+		<tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>User Discount</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewUserDiscount.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; User Discount</font></a></td>
+		</tr>
+
+		
+		<tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>Company Discount</b></font></td>
+		</tr>		
+		<tr>
+		  <td align=left height="20"><a href="AddCompanyDiscount.asp" style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Discount Code</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewCompanyCode.asp" style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; PCI Company</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewPCIPrePaidAdmin.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Pre-Paid Admin</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewPCIPrePaidUser.asp?ttype=A"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Pre-Paid User</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="PCIPrePaidUsage.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Pre-Paid Usage</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="PrePaidFlatFeeUsage.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Pre-Paid FlatFee Usage</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ViewPrePaidUserLogs.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Pre-Paid User Log</font></a></td>
+		</tr>
+
+		
+
+		<tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>Extract</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="Uploadfiles.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Reports (Excel)</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="Sources.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Sources (Excel)</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="Extract_MCPID.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; MCPID (Excel)</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="ProjectMgmtSum.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Project Mgmt Summary (Excel)</font></a></td>
+		</tr>
+				
+		<!--tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>Distributor</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AddOrder.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Add Orders</font></a></td>
+		</tr-->
+		<!--tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>TOC</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AddMain.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Add Chapters</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AddSub.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Add Sub Chapters</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AddOption.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Add Options</font></a></td>
+		</tr>		
+		<tr>
+		  <td align=left height="20"><a href="ViewAddedReports.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View Reports</font></a></td>
+		</tr-->	
+		<!--tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>Channel Partners</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="AddCpregister.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; New Registration</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="CPTransList.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View Orders</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="UploadCPOrders.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Upload Orders</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="CPReports.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; Reports</font></a></td>
+		</tr-->
+		<tr>
+		  <td align=center height="20" bgcolor="#FF8000"><font  size=2 face=verdana><b>eQuestionnaire</b></font></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="View_eQuestionnaire.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View ALL Questionnaires</font></a></td>
+		</tr>
+		<tr>
+		  <td align=left height="20"><a href="View_eQuestionnaire_ByReport.asp"  style="text-decoration:none"><font  size=2 face=verdana> <i class="fas fa-angle-double-right"></i> &raquo; View Questionnaires by Report</font></a></td>
+		</tr>
+	<%end if%>	
+		<tr>
+		  <td align=left height="20"><a href="logout.asp" style="text-decoration:none"><font  size=2 face=verdana><b><i class="fas fa-sign-out-alt"> </i> &raquo; Log out</b></font></a></td>
+		</tr>	
+	
+	</table>
+</td></tr>
+</table>
+<%'if trim(session("LogID"))<>"" then
+	''' insert file details to the log file	
+	'' split the file name
+	'dim actURL, sptURL, flURLName
+	'actURL = trim(request.servervariables("url"))
+	'sptURL = split(actURL,"/")
+	'flURLName = sptURL(ubound(sptURL))
+	'set conlogdetails=Server.CreateObject ("ADODB.Connection")
+	'conlogdetails.open DataSource1
+	'set cmdEdit=server.CreateObject("ADODB.Command")
+	'cmdEdit.ActiveConnection = conlogdetails			
+	'	with cmdEdit 				
+    	'		.CommandText = "SP_Admin_log_Details"
+	'		.CommandType = adcmdStoredProc
+	'		.Parameters.Append .CreateParameter ("@MyOption",advarchar,adparamInput,10,"INSERT")
+	'		.Parameters.Append .CreateParameter ("@MyLogDetails_ID",adInteger,adparamInputOutput,,0)
+	'		.Parameters.Append .CreateParameter ("@MyLog_ID",adInteger,adparamInputOutput,,trim(session("LogID")))
+	'		.Parameters.Append .CreateParameter ("@MyLog_Page",advarchar,adparamInputOutput,50,flURLName)
+	'		.Parameters.Append .CreateParameter ("@MyPageVisitDatetime",adDate,adparamInputOutput,,now())
+	''		.Parameters.Append .CreateParameter ("@MyResult",adInteger,adparamInputOutput,,1)						
+	'		.Execute			
+	'	end with
+	'	loadedval = cmdEdit.Parameters("@MyResult")
+	'set cmdEdit=nothing
+	'set conlogdetails=nothing
+
+'end if%>
+          
+

@@ -1,0 +1,34 @@
+/*===================
+    owl pagnation
+====================*/
+
+#owl_pagnation .item{
+    width: auto;
+    height: 20px;
+    background: #eaeaea;
+    font-size: 13px;
+    padding: 0px 6px;
+    color: #000;
+    font-weight: 600;
+    margin: 1px;
+
+}
+
+
+#owl_pagnation .item:hover,
+#owl_pagnation .item.active
+{
+    background: #0983D9;
+    color:#fff;
+}
+
+#owl_pagnation .item:hover a,
+#owl_pagnation .item.active a
+{
+    color:#fff;
+}
+
+#owl_pagnation .item a{
+    color: #000;
+ }
+ 

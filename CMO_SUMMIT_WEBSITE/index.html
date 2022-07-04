@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width">
+<title>TiEeco | Home</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+<link href="css/boot.css" type="text/css" rel="stylesheet" />
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="css/slider.css" rel="stylesheet" type="text/css">
+<link href="css/new_styles.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="css/owl.theme.green.css" rel="stylesheet" type="text/css">
+<script  src="http://code.jquery.com/jquery-3.2.1.js"  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
+</head>
+<body ng-app="TieApp" ng-controller="TieEcoCtrl">
+<div id="wrapper" class="clearfix">
+<style>
+        .global_form_search {
+            padding-top: 23px;
+            margin-right:30px;
+        }
+
+        #header.sticky-header:not(.static-sticky) #primary-menu.sub-title > ul > li .global_form_search {
+            padding-top:12px;
+        }
+        #header.sticky-header:not(.static-sticky) #primary-menu.sub-title > ul > li .global_form_search span {
+            display: block;
+        }
+
+        .global_form_search input {
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 0 0;
+        }
+
+        .global_form_search input:focus {
+            box-shadow: 0 0 0;
+            border-bottom: 1px solid #3c3c3c !important;
+        }
+
+        .global_form_search span button{
+            margin-top: 1px;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .global_form_search span button:hover {
+            background: 0;
+            border-bottom: 1px solid #3c3c3c;
+        }
+
+        .global_form_search span button:hover i {
+            color: #3c3c3c;
+        }
+    </style> 
+<header id="header" class="" ng-controller="HeaderCtrl">
+  	<div class="container">
+    <div id="header-wrap">
+      <div class="container clearfix">
+        <div id="primary-menu-trigger"> <i class="fa fa-bars" style="line-height: 50px; font-size: 25px"></i> </div>
+        <div id="logo"> <a class="standard-logo" href="/"> <img alt="TiEeco" src="new_img/logoecotie209.png"> </a> <a class="retina-logo" href="/"> <img alt="TiEeco" src="new_img/logoecotie209.png"> </a> </div>
+        <!-- #logo end --> 
+
+<!--TO NAV START--> 
+<nav class="sub-title" id="primary-menu">
+          <ul class="sf-js-enabled">
+            <li class=" current "> <a href="/" class="sf-with-ul">
+              <div>HOME</div>
+              </a> </li>
+            <li  > <a href="#" class="sf-with-ul dropdown-toggle dropdowncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> WE ARE <em class="caret"
+            ></em> </a>
+              <ul class="dropdown-menu">
+                <li > <a href="/profile/influencer-circle" class="sf-with-ul">
+                  <div>INFLUENCERS</div>
+                  </a> </li>
+                <li > <a href="/page/r/why-tieeco"
+                                   class="sf-with-ul">
+                  <div>WHY TIEECO?</div>
+                  </a> </li>
+              </ul> 
+</li>
+            <li> <a href="https://virtual.tiecon.org/"
+                           class="sf-with-ul" target="_blank">
+              <div>TiEcon 2017</div>
+              </a> </li>
+            <li class="dropdown"> <a role="button" id="dropdownMenuTop" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" class="dropdown-toggle" data-target="#" href="#"> PROGRAMS <em class="caret"></em> </a>
+              <ul class="dropdown-menu">
+                <li> <a href="http://www.tie50.org">TiE50</a>
+                  <ul>
+                  </ul>
+                </li>
+                <li> <a href="/page/r/anchor-program">STARTUP ANCHOR</a>
+                  <ul>
+                  </ul>
+                </li>
+              </ul> 
+</li>
+            <li  > <a href="#" class="sf-with-ul dropdown-toggle dropdowncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> BUZZ <em class="caret"></em> </a>
+              <ul class="dropdown-menu">
+                <li><a href="/news" class="sf-with-ul">
+                  <div>NEWS</div>
+                  </a> </li>
+                <li><a href="/articles" class="sf-with-ul">
+                  <div>BLOGS</div>
+                  </a> </li>
+                <li><a href="/video/list" class="sf-with-ul">
+                  <div>VIDEOS</div>
+                  </a> </li>
+              </ul> 
+</li>
+            <li> <a href="#" class="sf-with-ul dropdown-toggle dropdowncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EVENTS <em class="caret"></em> </a>
+              <ul class="dropdown-menu">
+                <li><a href="/categories/tie-sv/events" class="sf-with-ul">
+                  <div>TiE SV EVENTS</div>
+                  </a> </li>
+                <li><a href="/event/list" class="sf-with-ul">
+                  <div>WORLD EVENTS</div>
+                  </a> </li>
+              </ul> 
+</li>
+            <li class=" arrow"> <a href="/join"
+                               class="sf-with-ul">
+              <div>LOGIN</div>
+              </a> </li>
+          </ul>
+        </nav> 
+        <!--TO NAV END--> 
+</div>
+    </div>
+    </div>
+  </header>
+</div>
+<div id="content" class="pg-home">
+<!-- BANNER BEGIN -->
+<div class="container-fullwidth">
+  <div class="banner"> 
+    <!--BANNER MIDDLE-->
+    <div class="col-lg-10 col-sm-12 col-xs-10 no_float banner_content">
+      <div class="left_block col-lg-3 col-sm-4 col-xs-12 text-center">
+        <p>SANTA CLARA CONVENTION CENTER <br/>
+          SANTA CLARA </p>
+        <h4>5-6</h4>
+        <h5>MAY-2017</h5>
+      </div>
+      <div class="right_block col-lg-9 col-sm-8 col-xs-12">
+        <h4>HE WORLD’S LARGEST <strong>ENTREPRENEURSHIP</strong> CONFERENCE</h4>
+        <h5 class="text-right">FOSTERING ENTREPRENEURSHIP</h5>
+      </div>
+    </div>
+    <!--BANNER BOTTOM-->
+    <div class="banner_bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-11 col-sm-12 no_float banner_bottom_content">
+            <div class="left_block col-lg-3 col-sm-4 col-xs-12 text-center"> <a href="#" class="btn btn-lg col_bg_red col_white"><strong>VIRTUAL TiEeco.</strong></a> </div>
+            <div class="right_block col-lg-9 col-sm-8 col-xs-12">
+              <ul>
+                <li class="col-lg-3  col-xs-6 text-center">
+                  <p>Attendees</p>
+                  <h2><strong>4,700+</strong></h2>
+                </li>
+                <li class="col-lg-3 col-xs-6 text-center">
+                  <p>Speakers</p>
+                  <h2><strong>200+</strong></h2>
+                </li>
+                <li class="col-lg-3 col-xs-6 text-center">
+                  <p>Tracks/Programs</p>
+                  <h2><strong>20</strong></h2>
+                </li>
+                <li class="col-lg-3  col-xs-6 text-center">
+                  <p>Senior Leaders</p>
+                  <h2><strong>50%</strong></h2>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BANNER END -->
+<div class="space_large"></div>
+
+<!--ABOUT BEGIN-->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-lg-offset-1 col-sm-6 col-xs-12">
+      <h3 class="title">WHAT IS TiEeco?</h3>
+      <p>TiEeco is a one-of-a-kind platform that connects tech professionals & entrepreneurs worldwide. The platform is an initiative of TiE Silicon Valley, a non-profit committed to fostering technology entrepreneurship. The platform brings together the entire technology ecosystem for entrepreneurs through a myriad of programs and engagement features. This platform has cataloged more than 300,000 individuals and 120,000 companies that support and thrive on a global tech ecosystem.</p>
+    </div>
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+      <div class="col-lg-11" style="margin-top:25px;">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> TRENDSETTERS </a> </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body"> Stay engaged, informed, and connected with what’s happening in your area of domain interest! Promote yourself by sharing your profile, expertise, and interests through a single open self-managed public profile that allows you to upload your blogs, videos, social media links, and fully catalogued search engine links in one search enabled open link. Seek out and connect with professionals, experts, mentors, startups, and the total entrepreneur ecosystem worldwide. This is the right place to go for tech trendsetters who want to change the world! </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> LARGE TECH ENTERPRISES </a> </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">Strong branding value and visibility among tech professionals worldwide offering multiple opportunities including brand awareness for your products and services. Partner or acquire cutting edge technology startups or their technologies. Attract top talent in focused domains tailored to your requirements. Participate in sponsored tech summits and virtual events. </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> TECH CONFERENCES </a> </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--ABOUT BEGIN-->
+<div class="space_large"></div>
+
+<!--- WHY  TO ATTEND BEGIN-->
+   	<div class="container-fluid why_to">
+			<div class="layer">
+               <div class="col-lg-8 why_to_content">
+               <br/>
+               <h3 class="title col_white">WHY ATTEND</h3>
+               <p>Whether a senior technology professional or a first-time entrepreneur, come network with over 4,700 others
+    in the tech entrepreneur community</p>
+               </div>
+         </div>
+      </div>
+   <!-- WHY  TO ATTEND END -->
+    <div class="space_large"></div>
+   <!--KEY TRACKS BEGIN-->
+   	<div class="container">
+			<div class="row">
+					<div class="text-center">
+               	<h5 class="title">KEY TRACKS</h5>
+               </div>
+         </div>
+		   <div class="space_medium"></div>
+         <div class="row">
+				<ul class="key_tracks_list col-lg-11">
+            	<li class="col-lg-3 col-sm-4 col-xs-12"><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Software Defined Infrastructure</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#"> Internet of Things</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">FinTech & Blockchain</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">GovTech</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Security	</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Machine Learning</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Digital Health</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">AR/VR</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Entrepreneurship</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Autonomous Vehicles</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Social Impact</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Gaming</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">MarTech</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Drones</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Youth</a></li>
+               <li class="col-lg-3 col-sm-4 col-xs-12"><a href="#">Main Stage</a></li>
+            </ul>
+            
+         </div>
+         
+      </div>
+   <!--KEY TRACKS ENDS-->
+   <div class="space_medium"></div>
+  	<!--KEY BELOW BUTTON BEGIN-->
+		<div class="container-fluid col_bg_gray key_bottom">
+					<div class="container">
+      				<div class="row">
+                  		<div class="col-lg-6  col-xs-6 text-center">
+                        	<a href="#" class="btn btn-lg col_bg_red col_white"><strong>Register Now</strong></a>
+                        </div>
+                        
+                        <div class="col-lg-6 col-xs-6 text-center">
+                        	<a href="#" class="btn btn-lg col_bg_red col_white"><strong>Learn Now</strong></a>
+                        </div>
+                  </div>
+      
+               </div>
+     </div>
+      
+  	<!--KEY BELOW BUTTON END-->
+   <div class="space_large"></div>
+   
+	<!--SPEAKERS SECTION BEGIN-->
+   <div class="container">
+   				<div class="text-center">
+               	<h5 class="title">TiEeco 2017 SPEAKERS</h5>
+               </div>
+               <div class="space_medium"></div>
+               
+               <div class="owl-carousel owl-theme speakers_carousel">
+               
+                <div class="item">
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/01.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     </div>
+                     
+                     <div class="space_medium"></div>
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/02.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     </div>
+                 </div>
+               
+               	<div class="item">
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/03.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     </div>
+                     
+                     <div class="space_medium"></div>
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/04.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     
+                     </div>
+                 </div>
+                 
+                  <div class="item">
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/05.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     </div>
+                     
+                     <div class="space_medium"></div>
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/06.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     
+                     </div>
+                 </div>  
+                 
+                 
+                 <div class="item">
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/07.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     </div>
+                     
+                     <div class="space_medium"></div>
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/08.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     
+                     </div>
+                 </div>  
+                 
+                 <div class="item">
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/09.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     </div>
+                     
+                     <div class="space_medium"></div>
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/10.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     
+                     </div>
+                 </div> 
+                 
+                 <div class="item">
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/11.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     </div>
+                     
+                     <div class="space_medium"></div>
+                     <div class="row">
+                           <a href="#"><img src="new_img/speakers/12.jpg" class="img-responsive"/></a>
+                           <div class="spaker_info">
+                              <h4>Dr. Patrick Soon-Shiong</h4>
+                              <p>Chairman and CEO NantWorks</p>
+                           </div>
+                     
+                     </div>
+                 </div>  
+             
+            </div>
+  </div>
+  	<!--SPEAKERS SECTION END-->
+   
+   <div class="space_large"></div>
+   
+   <!--AGENDA SECTION BEGIN-->
+   <div class="container-fluid col_bg_light_gray">
+   	<div class="container">
+   			<div class="row">
+            		<div class="space_medium"></div>
+            		<div class="text-center">
+               		<h5 class="title">AGENDA</h5>
+               	</div>
+            </div>
+            <div class="space_medium"></div>
+            
+            <div class="row">
+            	<div class="col-lg-11 no_float">
+               	<table class="table table-bordered table-responsive agenda_table col_bg_light_blue text-center">
+                  	<tr>
+                     	<td>
+                        <p>Startup Bootcamp - Thursday May 4, 8:45 am - 05:30 pm Meeting Rooms 209-210 </p>
+                        </td>
+                     </tr>
+                  </table>
+              </div>
+            </div>
+            
+            <div class="space_medium"></div>
+            
+            <div class="row">
+            	<div class="col-lg-11 no_float">
+               	
+                        <p class="text-center">The TiEcon 2017 Exposition is open for attendees on Friday, May 5 th from 10:00 am to 7:00 pm; and on Saturday, May 6 th from 10:00 am to 6:00 pm.</p>
+                 
+              </div>
+            </div>
+            
+            <div class="space_medium"></div>
+             
+            <div class="day col-lg-3 no_float"> May 5th 2017</div>
+            <div class="row">
+		          	<div class="col-lg-11 no_float">
+                  		<div class="table-responsive">
+								<table class="table table-bordered agenda_table">
+                        	<tr>
+                           	<td></td>
+                              <td><strong>SOFTWARE DEFINED INFRASTRUCTURE HALL A1</strong></td>
+                              <td><strong>INTERNET OF THINGS HALL A3</strong></td>
+                           </tr>
+                           
+                           <tr>
+                           	<td>10:30 am</td>
+                              <td>Keynote: Guido Appenzeller (Chief Technology Strategy Officer, VMware)</td>
+                              <td>Keynote: Mark Relph (HEAD OF BD - IOT, MOBILE AND EMERGING TECHNOLOGY, AMAZON WEB SERVICES)</td>
+                           </tr>
+                           
+                           <tr>
+                           	<td>11:00 am</td>
+                              <td>Software Defined Infrastructure Expands Beyond the Data Center</td>
+                              <td>Big Data in an increasingly </td>
+                           </tr>
+                           
+                           <tr>
+                           	<td>11:30 am</td>
+                              <td>New Deployment Models: Containers, Microservices and Serverless Architectures</td>
+                              <td>Opportunities and Challenges for startups in IoT</td>
+                           </tr>
+                           
+                           <tr>
+                           	<td>12.00 pm</td>
+                              <td>Investor Interest in Software Defined Infrastructure</td>
+                              <td>Keynote: Chris Stern (Strategy and Development - Global Water and IoT, Trimble, Inc.)</td>
+                           </tr>
+                           
+                           <tr>
+                           	<td>12.30 pm</td>
+                              <td>Keynote: SHLOMI BEN HAIM (Co-Founder and CEO, JFrog)</td>
+                              <td>Where are the investments made in IoT?</td>
+                           </tr>
+                           
+                           <tr>
+                           	<td>1.00 pm</td>
+                              <td>LUNCH & NETWORKING</td>
+                              <td>LUNCH & NETWORKING</td>
+                           </tr>
+                        </table>
+                        </div>
+
+                  </div>
+            </div>
+      </div>
+      <div class="space_large"></div>
+   </div>
+   <!--AGENDA SECTION END-->
+  
+  	<div class="space_large"></div>
+   
+   <!-- SPONSORS  BEGIN-->
+   	<div class="container">
+      		<div class="row">
+            		<div class="text-center">
+               		<h5 class="title">SPONSOSRS</h5>
+               	</div>
+            </div>
+            
+            <div class="space_medium"></div>
+            <div class="row">
+            		<div class="col-lg-9 no_float sponsors">
+                  	<ul class="sponsors_list">
+                     	<li class="col-lg-4 col-sm-4 text-center"><span class="col-lg-10 no_float"><img src="new_img/spon/sp_01.png"/></span></li>
+                        <li class="col-lg-4 col-sm-4 text-center"><span class="col-lg-10 no_float"><img src="new_img/spon/sp_02.png"/></span></li>
+                        <li class="col-lg-4 col-sm-4 text-center"><span class="col-lg-10 no_float"><img src="new_img/spon/sp_03.png"/></span></li>
+                     </ul>
+                  </div>
+            </div>
+            
+            <div class="space_medium"></div>
+            <div class="row">
+            		<div class="col-lg-12 no_float sponsors">
+                  	<ul class="sponsors_list">
+                     	<li class="col-lg-3 col-sm-3 text-center"><span class="col-lg-9 no_float"><img src="new_img/spon/sp_04.png"/></span></li>
+                        <li class="col-lg-3 col-sm-3 text-center"><span class="col-lg-9 no_float"><img src="new_img/spon/sp_05.png"/></span></li>
+                        <li class="col-lg-3 col-sm-3 text-center"><span class="col-lg-9 no_float"><img src="new_img/spon/sp_06.png"/></span></li>
+                        <li class="col-lg-3 col-sm-3 text-center"><span class="col-lg-9 no_float"><img src="new_img/spon/sp_07.png"/></span></li>
+                     </ul>
+                  </div>
+            </div>
+            
+            <div class="space_medium"></div>
+            <div class="row">
+            		<div class="col-lg-12 no_float sponsors">
+                  	<ul class="sponsors_list">
+                     	<li class="col-lg-3 col-sm-3 text-center"><span class="col-lg-9 no_float"><img src="new_img/spon/sp_08.png"/></span></li>
+                        <li class="col-lg-3 col-sm-3 text-center"><span class="col-lg-9 no_float"><img src="new_img/spon/sp_09.png"/></span></li>
+                        <li class="col-lg-3 col-sm-3 text-center"><span class="col-lg-9 no_float"><img src="new_img/spon/sp_10.png"/></span></li>
+                        <li class="col-lg-3 col-sm-3 text-center"><span class="col-lg-9 no_float"><img src="new_img/spon/sp_11.png"/></span></li>
+                     </ul>
+                  </div>
+            </div>
+            
+   	</div>
+   <!-- SPONSORS  END-->
+   
+   <div class="space_large"></div>
+
+</div>
+<!--footer start-->
+
+<div id="footer">
+  <style>
+        .global_form_search {
+            /*padding-top: 23px;*/
+            /*margin-right:30px;*/
+            /*top: -10px !important;*/
+        }
+
+        #header.sticky-header:not(.static-sticky) #primary-menu.sub-title > ul > li .global_form_search {
+            padding-top:12px;
+        }
+        #header.sticky-header:not(.static-sticky) #primary-menu.sub-title > ul > li .global_form_search span {
+            display: block;
+        }
+
+        .global_form_search input {
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 0 0;
+        }
+
+        .global_form_search input:focus {
+            box-shadow: 0 0 0;
+            border-bottom: 1px solid #3c3c3c !important;
+        }
+
+        .global_form_search span button{
+            margin-top: 1px;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .global_form_search span button:hover {
+            background: 0;
+            border-bottom: 1px solid #3c3c3c;
+        }
+
+        .global_form_search span button:hover i {
+            color: #3c3c3c;
+        }
+        .android_app {
+            width: 100px;
+        }
+        .ios_app {
+            width: 100px; margin-top: -1px;
+        }
+        .windows_app {
+            width: 125px;
+        }
+    </style>
+  <div id="subFooter" style="background:#161616; color:white">
+    <div id="lastSectHome" class="next-conf">
+      <section id="parallax1" class="module parallax parallax-1">
+        <div class="container" id="home-affiliates"> 
+          <!-- affiliate program --> 
+          
+        </div>
+        <div class="container">
+          <div class="pull-left">
+            <ul class="social-icons pull-right">
+              <li class="link hidden-sm hidden-md hidden-lg"> <a href="/page/r/privacy-policy"
+                               class="sf-with-ul"> <small>PRIVACY POLICY</small> </a> </li>
+              <li class="link hidden-xs"> <a href="/page/r/privacy-policy"
+                               class="sf-with-ul"> PRIVACY POLICY </a> </li>
+              <li class="link hidden-xs">|</li>
+              <li class="link hidden-xs"> <a href="/page/r/user-agreement"
+                               class="sf-with-ul">USER AGREEMENT</a> </li>
+              <li class="link hidden-sm hidden-md hidden-lg"> <a href="/page/r/user-agreement"
+                               class="sf-with-ul"><small>USER AGREEMENT</small></a> </li>
+              <li class="link hidden-xs">|</li>
+              <li class="link hidden-xs"> <a href="/join-us"  class="sf-with-ul"> LOGIN </a> </li>
+              <li class="link hidden-sm hidden-md hidden-lg"> <a href="/join-us"> <small>LOGIN</small> </a> </li>
+              <li class="link hidden-xs">|</li>
+              <li class="link hidden-xs"> <a href="/contact" class="sf-with-ul">CONTACT</a> </li>
+              <li class="link hidden-sm hidden-md hidden-lg"> <a href="/contact" class="sf-with-ul"><small>CONTACT</small></a> </li>
+              <li class="link hidden-xs">|</li>
+              <li class="link hidden-xs"> <a href="/expo/sponsors" class="sf-with-ul">SPONSORS</a> </li>
+              <li class="link hidden-sm hidden-md hidden-lg"> <a href="/expo/sponsors" class="sf-with-ul"><small>SPONSORS</small></a> </li>
+              <li class="link hidden-xs">|</li>
+              <li class="link hidden-xs"> <a href="/membership" class="sf-with-ul">MEMBERSHIP</a> </li>
+              <li class="link hidden-sm hidden-md hidden-lg"> <a href="/membership" class="sf-with-ul"><small>MEMBERSHIP</small></a> </li>
+              <li class="link hidden-xs">|</li>
+              <li class="link hidden-xs"> <a href="/company/resource/start-up" class="sf-with-ul">RESOURCES</a> </li>
+              <li class="link hidden-sm hidden-md hidden-lg"> <a href="/company/resource/start-up" class="sf-with-ul"><small>RESOURCES</small></a> </li>
+              <li class="link hidden-xs">|</li>
+              <li class="link hidden-xs"> <a href="/search" class="sf-with-ul">SEARCH</a> </li>
+              <li class="link hidden-sm hidden-md hidden-lg"> <a href="/search" class="sf-with-ul"><small>SEARCH</small></a> </li>
+            </ul>
+          </div>
+          <div class="pull-right _sectCopyRight hidden-xs"> <span>Copyright &copy; 2015-2017 TiE Silicon Valley</span> </div>
+          <div class="pull-left _sectCopyRight hidden-sm hidden-md hidden-lg"> <small>Copyright &copy; 2015-2017 TiE Silicon Valley</small> </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center hidden-xs" style="margin-top: 10px;"> <a href="https://itunes.apple.com/ro/app/tieeco/id1079204720?mt=8"> <img class="img" src="new_img/App_Store35.png" /> </a> &nbsp; <a href="https://play.google.com/store/apps/details?id=org.tieeco.tieeco"> <img class="img" src="new_img/Android-app-on-google-play35.png" /> </a> &nbsp; <a href="https://www.microsoft.com/en-us/store/p/tieeco/9nblggh4w0z0"> <img class="img" src="new_img/windows-store-icon-logo35.png" /> </a> </div>
+            <div class="col-xs-12 visible-xs-block">
+              <div class="col-xs-4"><a href="https://itunes.apple.com/ro/app/tieeco/id1079204720?mt=8"> <img class="img img-responsive" src="new_img/App_Store35.png" /> </a> </div>
+              <div class="col-xs-4"><a href="https://play.google.com/store/apps/details?id=org.tieeco.tieeco"> <img class="img img-responsive" src="new_img/Android-app-on-google-play35.png" /> </a></div>
+              <div class="col-xs-4"><a href="https://www.microsoft.com/en-us/store/p/tieeco/9nblggh4w0z0"> <img class="img img-responsive" src="new_img/windows-store-icon-logo35.png" style="padding-right:11px" /> </a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!--footer end-->
+
+<!--script src="JS/jquery.js"></script--> 
+<!--script src="JS/router.js"></script--> 
+<script src="JS/slider.js"></script> 
+<!--script src="JS/swiper.js"></script--> 
+<script src="new_js/owl.carousel.js"></script>
+<script src="new_js/custom_js.js"></script>
+<script src="new_js/bootstrap.js"></script>
+
+<!--script>
+    app.requires.push('ui.slimscroll');
+    app.requires.push('gia.activitystream.notification');
+    app.constant('ASSETS_VERSION', '2.0.0.170');
+    
+    app.factory('AppSecurity', function () {
+        var private = {
+            user: null        };
+
+        var that = {};
+        
+        that.getUser = function() {
+            return private.user;
+        };
+        
+        that.isLoggedIn = function () {
+            return private.user && typeof private.user.id !== "undefined" ? true : false;
+        };
+        
+        return that;
+    });
+    
+    var GiaBPLoader = {
+        show: function() {
+            this.hide();
+
+            $('body').append($("#tpl-bp-loader").html());
+
+            return this;
+        },
+        hide: function() {
+            $("#bp-loader").remove();
+
+            return this;
+        }
+    };
+    $('.sf-js-enabled li').mouseover(function() {
+        $(this).addClass('open');
+    });
+    $('.sf-js-enabled li').mouseleave(function() {
+        $(this).removeClass('open');
+    });
+    
+    </script--> 
+    
+<!--script type="text/angular-template" id="tpl-bp-loader">
+    <div id="bp-loader" style="z-index: 10000; position: absolute; top: 0; left: 0;width: 100%; height: 100%; background: url('/images/custom/select2-spinner.gif') 50% 50% no-repeat; position: absolute"></div>
+</script-->
+
+<!--div ng-show="pageLoader.show" id="page-loader"></div-->
+
+
+
+<!---MODEL KEY--->
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg custom_modal_lg" role="document">
+    <div class="modal-content custom_modal-content">
+    		 
+          <div class="clearfix">
+          	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-header custom_modal_header">
+	             
+          </div>
+          
+          <div class="modal-body">
+          	<div class="row">
+					<div class="col-lg-10" style="float:none; margin:0 auto">
+	                <h4 class="key_caption">“It is not the strongest of the species that survives, nor the most intelligent, 
+	                		  but the one most responsive to change.”</h4>
+                          
+                    <h4 class="text-right"><i>“Charles Darwin, 1809</i></h4>
+                    <hr/>
+               </div>
+            </div>
+            
+            <div class="row">
+					<div class="col-lg-10" style="float:none; margin:0 auto">
+	                <p>Thanks to new technologies in fintech, major breakthroughs are being made in areas such as money transfer, retail banking, online lending, financial literacy, credit ratings, and there’s even been the dawn of crypto-currencies such as bitcoin. Collectively these have come around to disrupt the status quo in financial services, now penetrating almost every area of a sector known to be historically conservative to change. And by transforming the system and making it increasingly efficient, fintech is a field well-positioned to truly change how we go about business. There’s a reason why fintech startups exceeded $38 billion in 2016: its innovations today already help reduce costs, enable companies to provide differentiated offerings, and improve customer retention.
+
+Taking center stage in the market is blockchain technology, which can potentially reach over $2.6 billion by 2022. Blockchain technologies stand to benefit from the growing confidence in its disruptive ability to generate immense value in payments, settlements, and clearing in securities processing by making financial services safer, faster, cheaper, secure, and transparent.
+
+The United States represents the largest fintech market worldwide, due primarily to the early adoption of these technologies in the US compared to other geographic markets, as well as the presence of a vast number of startups with innovative blockchain-based applications in development.
+
+We’re thrilled to offer a fintech-specific track at TiEcon 2017 for entrepreneurs in this exciting field to learn from those currently shaking it up.</p>
+                   
+               </div>
+            </div>
+            
+            <div class="row col_bg_red">
+					<div class="col-lg-10" style="float:none; margin:0 auto">
+	                <h3 class="col_white"><strong>May 05th</strong> </h3>
+               </div>
+            </div>
+            <div class="row col_bg_red">
+					<div class="col-lg-10" style="float:none; margin:0 auto">
+	                <h3 class="col_white"><strong>May 05th</strong> </h3>
+               </div>
+            </div>
+           </div>
+     </div>
+  </div>
+</div>
+
+
+</body>
+</html>

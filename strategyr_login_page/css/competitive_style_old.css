@@ -1,0 +1,398 @@
+
+/*-------COMPATTIVE STYLES-----------*/
+
+input::-webkit-input-placeholder,
+     textarea::-webkit-input-placeholder
+     {
+        color: #000 !important;
+    }
+    
+     input::-webkit-input-placeholder,
+     textarea::-webkit-input-placeholder
+    
+    {
+        color: #ccc !important;
+    }
+     
+ .tooltippopup[title]:hover:after {
+            content: attr(title);
+            position: absolute;
+            display: block;
+            min-width: 70px;
+            line-height: 17px;
+            letter-spacing: normal;
+            padding: 3px;
+            font-size: 11px;
+            min-height: auto;
+            color: #000;
+            bottom: 19px;
+            background: #fff;
+            /* font-family: 'Open Sans'; */
+            border: rgba(0, 0, 0, 0.2) solid 1px;
+            right: -12px;
+            text-align: center;
+    }
+
+
+#competitive_metrics_table{
+        position: relative;
+        width: 640px;
+        margin: 0 auto;
+        border: rgba(0,0,0,0.08) solid 1px;
+        padding: 2px;
+        box-sizing: border-box;
+        font-weight: 500 !important;
+}
+}
+
+.table-responsive{
+    padding-bottom:10px !important;
+}
+
+#validate_msg{
+        font-size: 12px !important;
+        font-style: italic;
+        margin-top: 10px !important;
+        margin-bottom: 14px !important;
+        line-height: normal;
+        font-weight: 500 !important;
+        width: 640px;
+        margin: 0 auto;
+}
+
+.highlight{
+    background:#FFF1EB !important;
+}
+
+
+
+#competitive_metrics_table tr td,
+#competitive_metrics_table tr th{
+    padding: 2px 13px !important;
+    vertical-align: middle;
+    border: none !important;
+    box-sizing: border-box;
+
+}
+
+#competitive_metrics_table tr{
+    border-top:rgba(0,0,0,0.08) solid 1px
+}
+
+#competitive_metrics_table thead tr{
+   background-color: #FFF1EB
+}
+
+#competitive_metrics_table tr td:nth-child(1),
+#competitive_metrics_table tr th:nth-child(1){
+    width: 60%;
+    text-align: left;
+}
+
+
+#competitive_metrics_table tr td:nth-child(2),
+#competitive_metrics_table tr th:nth-child(2){
+    width: 35%;
+    text-align: center
+}
+
+#competitive_metrics_table tr td:nth-child(3),
+#competitive_metrics_table tr th:nth-child(3){
+    width: 5%;
+    text-align: center;
+    position: relative;
+}
+
+
+    
+#competitive_metrics_table tr th h4{
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 700 !important;
+        
+}   
+
+#competitive_metrics_table tr th:nth-child(2) span.short_text{
+    font-size: 16px;
+    line-height: normal;
+    padding: 0 16px !important;
+    color: #000;
+}  
+    
+
+
+#competitive_metrics_table tr td:nth-child(2) span.short_text,
+#competitive_metrics_table tr th:nth-child(2) span.short_text{
+    padding:0px 11px;
+    border-right:rgba(0,0,0,0.1) solid 1px;
+    position: relative;
+}
+
+#competitive_metrics_table tr td:nth-child(2) span.short_text:last-child,
+#competitive_metrics_table tr th:nth-child(2) span.short_text:last-child{
+    border-right:rgba(0,0,0,0.0) solid 0px;
+}
+
+
+
+#competitive_metrics_table tr th:nth-child(3) h4 span.text-danger{
+    font-size: 19px;
+    font-weight: 900;
+}
+
+
+#competitive_metrics_table tr td:nth-child(1) h4 {
+ font-size: 14px;
+ font-weight: 600;
+ line-height: normal;
+}
+
+
+#competitive_metrics_table tr td:nth-child(3) input{
+
+    width: 53px;
+    margin: 0 auto;
+    padding: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: rgba(0,0,0,0.05) solid 1px;
+}
+
+#competitive_metrics_table tbody tr:nth-child(even){
+    background-color: #f5f5f5;
+
+}
+
+
+
+.input_popup_msg {
+    position: absolute;
+    width: 100%;
+    font-size: 10px !important;
+    top: -1px;
+    z-index: 999;
+    line-height: normal;
+    left: 0px;
+    background: #fff;
+    border: rgba(0,0,0,0.2) solid 1px;
+    display: none;
+}
+
+.active .input_popup_msg {
+    display: block !important;
+}
+
+.competitive_table_message{
+    
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    display: none;
+   
+
+}
+
+.submit-button{
+    width: 125px;
+    color: #fff !important;
+    border-radius: 17px;
+    /*background: linear-gradient(0deg, rgba(0,154,50,1) 0%, rgba(5,200,68,1) 100%);*/
+    background-color: #008CDA;
+    text-align: center;
+    height: 29px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    position: relative;
+    padding-left:30px;
+    margin-top: 14px !important;
+    margin-bottom: 14px !important;
+}
+
+.submit-button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: rgba(255,255,255,0.5) solid 3px;
+    top:0px;
+    left:0px;
+    z-index: 999;
+    border-radius: 17px;
+    border-bottom:#269cde
+ }
+
+ .submit-button::after{
+    content: "\f061";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        padding-top: 3px;
+        top: -3px;
+        left: 10px;
+        font-family: FontAwesome;
+        z-index: 999;
+        border-radius: 100px;
+        background: radial-gradient(circle, rgba(246,246,246,1) 0%, rgba(255,255,255,1) 100%);
+        border: #ece9e9 solid 2px;
+        color: #269cde;
+        box-shadow: 0px 0px 5px rgb(0 0 0 / 20%) !important
+ }
+.view_deeper{
+    padding-top:20px;
+    padding-bottom: 20px;;
+}
+.view_deeper a button{
+ cursor: pointer !important;
+ background: #585858;
+ border-radius: 3px !important;
+ color: #fff;
+ font-weight: bold;
+ width: auto;
+}
+/*
+.comp_sub{
+    position: relative;
+}
+
+.comp_sub:before{
+        content: "\f07e ";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        padding-top: 3px;
+        top: 5px;
+        left: 10px;
+        font-size: 19px;
+        font-family: FontAwesome;
+        text-align: center;
+        display: none;
+
+}
+
+.comp_sub::after{
+    content: "\f25a";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        padding-top: 3px;
+        top: 19px;
+        left: 12px;
+        font-size: 16px;
+        font-family: FontAwesome;
+        text-align: center;
+        display: none;
+
+}
+*/
+
+/*==============================================
+            MEDIA QURIES
+============================================*/
+
+@media only screen and (min-width:300px) and  (max-width: 479px){
+
+    #competitive_metrics_table{
+        width: 450px;
+    }
+
+    #competitive_metrics_table tr th h4 {
+        font-weight: bold !important;
+        font-size: 14px;
+    }
+
+    #competitive_metrics_table tr td:nth-child(1) {
+        font-size: 13px;
+       
+    }
+
+    #competitive_metrics_table tr td:nth-child(2) span.short_text, #competitive_metrics_table tr th:nth-child(2) span.short_text {
+        padding: 0px 6px;
+    }
+
+    .competitive_table_message{
+      display: none;
+    }
+
+    #validate_msg{
+        width: 100%;
+    }
+
+    .view_deeper a button{
+        width: 115px;
+        font-size: 11px;
+        margin-bottom: 10px;
+       }
+
+       .comp_sub:before,
+       .comp_sub::after{
+           display: block;
+
+       }    
+
+}
+
+@media only screen and (min-width:480px) and  (max-width: 767px){
+
+    #competitive_metrics_table{
+        width: 450px;
+    }
+
+    competitive_metrics_table tr th h4 {
+        font-weight: bold !important;
+        font-size: 14px;
+    }
+
+    #competitive_metrics_table tr td:nth-child(1) {
+        font-size: 13px;
+       
+    }
+
+    #competitive_metrics_table tr td:nth-child(2) span.short_text, #competitive_metrics_table tr th:nth-child(2) span.short_text {
+        padding: 0px 6px;
+    }
+
+    .competitive_table_message{
+        display: none;
+    }
+
+    #validate_msg{
+        width: 100%;
+    }
+
+    .view_deeper a button{
+        width: 150px;
+        font-size: 13px;
+        margin-bottom: 10px;
+       }
+
+
+       .comp_sub:before,
+       .comp_sub::after{
+           display: block;
+
+       }  
+}
+
+
+@media only screen and (min-width:768px) and  (max-width: 959px){
+
+    #competitive_metrics_table{
+        width: 640px;
+    }
+
+    #validate_msg{
+        width: 640px;
+    }
+
+    .comp_sub:before,
+    .comp_sub::after{
+        display: none;
+
+    }  
+
+}
+
+{"mode":"full","isActive":false}

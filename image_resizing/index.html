@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		
+	.container{
+		padding: 50px;
+		width: 960px;0 auto
+		text-align: center;;
+		margin: 0 auto;
+		border: rgba(0,0,0,0.1) solid 1px;
+		margin-top: 30px;
+	}
+	#company_logo_display{
+		margin:0 auto;
+		display: none;
+	}
+
+	</style>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+	<div class="container">
+		<img src=" https://www.strategyr.com/uploads/images/CP-100035/images (3).png" id="company_logo_display">
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+
+	<script>
+	 $(document).ready(function(){
+ 	 	
+ 	 	var myImg = document.getElementById("company_logo_display");
+ 	 	var currWidth = myImg.clientWidth;
+ 	 	var currHeight = myImg.clientHeight;
+ 	 	//alert("Current width=" + currWidth + ", " + "Original height=" + currHeight);
+
+
+		if(currWidth > 110 && currWidth < 300){
+  			$('#company_logo_display').css({'width' : '90px', 'height': 'auto'});
+  		    $("#company_logo_display").css("display", "block");
+  			
+		}
+
+		if(currWidth > 301){
+
+       		$('#company_logo_display').css({'width' : '175px', 'height': 'auto'});
+       		$("#company_logo_display").css("display", "block");
+       		
+      	}
+ 	 })	
+	</script>
+
+
+
+
+	
+	
+
+</body>
+</html>

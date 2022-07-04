@@ -1,0 +1,1793 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0063)file:///C:/Users/srinivasb/Desktop/GIA%20-%20DEG%20Numbers.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>
+        GIA - DEG Numbers
+    </title>
+
+    <!-- CSS STYLES-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="gia_switches.css" />
+    <link rel="stylesheet" href="deg_custom_styles.css" />
+
+
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+
+
+</head>
+
+
+</div>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+
+            <div id="wapper">
+
+
+                <span style="float:left;"><img src="https://www.strategyr.com/images/log_icon.png"
+                        style="width:45px;height:45px;" class="log_ico">
+                </span>
+                <span>
+
+
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx"><i class="fa fa-table"></i> GIA</a>
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Segments.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Segments</a>
+
+
+
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BaseYearData.aspx"><i
+                            class="fas fa fa-cloud-upload"></i> Base Year Data</a>
+
+                    <a href="http://183.82.102.108/DEGNumbers_Local/BulkTocReset.aspx"><i class="fa fa-list-alt"
+                            aria-hidden="true"></i> Reset TOC</a>
+
+                    <div class="dropdown">
+
+                        <button class="dropbtn">DEG Numbers Link
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="row">
+
+                                <div class="column">
+                                    <a href="http://server2/gia_analytix/viewGIACountriesII.asp?sts=O&amp;code="
+                                        target="_blank">
+                                        <!--i class="fa fa-link" aria-hidden="true"></i--><i class="fa fa-home"
+                                            aria-hidden="true"></i> Generate Numbers Link</a>
+                                </div>
+
+                                <div class="column">
+                                    <a href="http://128.242.110.22/DEGNumbers/" target="_blank"><i
+                                            class="fa fa-external-link"></i>Online Link</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--a href="ExchangeRates.aspx"><i class="fa fa-th" aria-hidden="true"></i> ExchangeRates</a>
+   <a href="Simulator.aspx"><i class="fa fa-table" aria-hidden="true"></i> Simulator</a-->
+
+                </span>
+                <span style="float:right; padding-right: 10px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/Logout.aspx"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i> Log Out</a>
+                </span>
+                <span style="float:right;padding-right: 50px;">
+                    <a href="http://183.82.102.108/DEGNumbers_Local/GIA.aspx#GIA_Analytix"><i class="fa fa-home"
+                            aria-hidden="true"></i> Welcome obili</a>
+
+                </span>
+            </div>
+
+        </div>
+
+
+    </nav>
+
+
+    <div id="wapper" class="border shadow-sm bg-white">
+
+
+        <!---UPDATE BASE LINE DATA -->
+
+        <div class="w-100 mb-2">
+
+            <div class="w-100 section_header">
+                <input type="checkbox" data-toggle="collapse" data-target="#udata_datab_base" aria-expanded="false"
+                    aria-controls="collapseExample" class="float-left mx-2 mt-2" />
+                <h3> UPDATE BASELINE DATA</h3>
+            </div>
+
+            <div class="w-100">
+
+                <div class="collapse" id="udata_datab_base">
+                    <div class="card card-body">
+                        <div class="table-responsive">
+
+                            <table class="table w-100 mb-1 border-0" id="update-table">
+                                <tbody>
+
+                                    <tr>
+                                        <td class="border-0">
+                                            <div class="d-flex flex-wrap justify-content-start">
+                                                <div class="col-lg-4 col-xl-4">
+                                                    <input type="radio" name="s2" customatt="radio_option"
+                                                        style="float:left mr-2">
+                                                    <b>Google Search Vault</b><br /> LINK:&nbsp; <input type="textbox"
+                                                        name="" value="" class="w-80">
+                                                </div>
+                                                <div class="col-lg-4 col-xl-4">
+                                                    <input type="radio" name="s2" customatt="radio_option"
+                                                        style="float:left mr-2">
+                                                    <b>Third-Party Sources' Vault</b><br /> LINK:&nbsp; <input
+                                                        type="textbox" name="" value="" class="w-80">
+                                                </div>
+                                                <div class="col-lg-4 col-xl-4">
+                                                    <input type="radio" name="s2" customatt="radio_option">
+                                                    <b>10K Vault</b> <br /> LINK:&nbsp; <input type="textbox" name=""
+                                                        value="" class="w-80">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="w-100 text-center">
+                                                <input type="submit" name="btnAdd" class="mt-2 btn-primary"
+                                                    value="UPDATE BASELINE DATA"
+                                                    onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnAdd&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+                                                    id="btnAdd">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!---BASELINE DATA-->
+
+        <div class="w-100">
+
+            <div class="w-100 section_header">
+                <h3>BASELINE DATA</h3>
+            </div>
+
+            <div class="table-responsie">
+                <table class="table border" id="baseline_data_table">
+                    <tbody>
+                        <tr>
+                            <td style="width: 15%"><b>
+                                    <font color="red"><sup>*</sup></font>REPORT CODE
+                                </b>:
+                                <input name="txtGIA_NO" type="text" id="txtGIA_NO" placeholder=" NT10183"
+                                    style="color: #000 !important; font-size: 15px; font-weight: 600;">
+                                <br><span id="reqGIA_NO" class="ErrorMessageClass" style="display:none;">Report Code
+                                    can`t be left blank</span>
+                            </td>
+                            <td style="width: 55%" colspan="2">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>REPORT TITLE
+                                </b>: <input name="txtTOPIC" type="text" id="txtTOPIC"
+                                    placeholder="Aerospace Crew Seats"
+                                    style="color: #000 !important; font-size: 15px; font-weight: 600;">
+                                <br><span id="reqTOPIC" class="ErrorMessageClass" style="display:none;">Topic can`t be
+                                    left blank</span>
+                            </td>
+
+                            <td style="width: 15%">
+                                <b>SEGMENT COUNT</b>:
+                                <select name="txtSEG_NO" id="txtSEG_NO">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+
+                                </select>
+                            </td>
+
+                            <td style="width: 15%" colspan="2">
+                                <b>END USE COUNT</b>:
+                                <select name="txtEND_Use_No" id="txtEND_Use_No">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+
+                                </select>
+                            </td>
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+
+            </div>
+
+
+        </div>
+
+        <!----SIGMENT ALLICATION--->
+
+        <div class="w-100">
+
+
+            <div class="w-100 section_header">
+                <h3>SEGMENTS ALLOCATIONS <input type="submit" name="btnAdd" value="Add"
+                        onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnAdd&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+                        id="btnAdd" style="
+                    float: right;margin-right: 10px; "></h3>
+            </div>
+
+            <div class="table-responisve">
+
+                <table class="table w-100" id="segment_allication">
+                    <tbody>
+                        <tr>
+
+                            <th scope="col" style="color:black;background-color:#FFF1EB;">SEG ID</th>
+                            <th scope="col" style="color:black;background-color:#FFF1EB;">SEGMENT NAME</th>
+
+                            <th scope="col" style="color:black;background-color:#FFF1EB;">TYPE</th>
+
+                            <th scope="col" style="color:black;background-color:#FFF1EB;" class="text-center">ALLOCATION
+                                %</th>
+                            <th scope="col" style="color:black;background-color:#FFF1EB;">CAGR %</th>
+                            <th scope="col" style="color:black;background-color:#FFF1EB;">OPTIONS</th>
+                        </tr>
+                        <tr>
+
+                            <td class="GIA_NO">
+                                <span>NT10183</span>
+                            </td>
+                            <td class="SEGMENT">
+                                <span>Commercial, Business & Cargo Aviation</span>
+                            </td>
+
+                            <td class="Type">
+                                <span>Application</span>
+                                <input name="gvSegments$ctl02$ctl06" type="text" style="width:80px;display: none">
+                            </td>
+
+
+
+
+
+                            <td class="Allocation_Percentage">
+
+                                <div class="w-100">
+
+
+                                    <div class="range-slider ranking_slider">
+                                        <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                        <input type="text" maxlength="4" class="js-input rank_input"
+                                            name="rank_input_05" id="rank_input_010" value="0" maxlength='4' size='20'
+                                            tabindex='3' placeholder="##.#">
+                                        <input type="text" value="0" class="js-range-slider" id="slide_010" />
+                                    </div>
+                                    <script>
+                                        var $slide_010 = $("#slide_010");
+                                        var $slide_input_010 = $("#rank_input_010");
+                                        var instance010;
+                                        var min = 0;
+                                        var vfromval = 0;
+                                        var max = 100;
+
+                                        $slide_010.ionRangeSlider({
+                                            skin: "big",
+                                            type: "single",
+                                            min: min,
+                                            max: max,
+                                            from: vfromval,
+                                            grid: true,
+                                            step: 0.5,
+                                            grid_num: 10,
+
+                                            onStart: function (data) {
+                                                $slide_input_010.prop("value", data
+                                                    .from);
+                                            },
+                                            onChange: function (data) {
+                                                $slide_input_010.prop("value", data
+                                                    .from);
+                                            }
+                                        });
+
+                                        instance010 = $slide_010.data("ionRangeSlider");
+
+                                        $slide_input_010.on("input", function () {
+                                            var val = $(this).prop("value");
+
+                                            // validate
+                                            if (val < min) {
+                                                val = min;
+                                            } else if (val > max) {
+                                                val = max;
+                                            }
+
+                                            instance010.update({
+                                                from: val
+                                            });
+
+                                            $(this).prop("value", val);
+                                        });
+                                    </script>
+
+
+                                </div>
+
+
+
+                            </td>
+                            <td class="CAGR_Percentage">
+                                <input name="txtSTART_VALUE" type="text" id="txtSTART_VALUE" value="4.2"
+                                    style="width: 40px;text-align: center; ">
+                            </td>
+                            <td>
+                                <a class="Edit"
+                                    href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;gvSegments$ctl02$ctl15&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
+                                    style="display: inline;">Edit</a>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="GIA_NO">
+                                <span>NT10183</span>
+                            </td>
+                            <td class="SEGMENT">
+                                <span>Military Aviation</span>
+                            </td>
+
+                            <td class="Type">
+                                <span>Application</span>
+                                <input name="gvSegments$ctl02$ctl06" type="text" style="width:80px;display: none">
+                            </td>
+
+
+                            <td class="Allocation_Percentage">
+
+                                <div class="w-100">
+
+
+                                    <div class="range-slider ranking_slider">
+                                        <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                        <input type="text" maxlength="4" class="js-input rank_input"
+                                            name="rank_input_05" id="rank_input_011" value="0" maxlength='4' size='20'
+                                            tabindex='3' placeholder="##.#">
+                                        <input type="text" value="0" class="js-range-slider" id="slide_011" />
+                                    </div>
+                                    <script>
+                                        var $slide_011 = $("#slide_011");
+                                        var $slide_input_011 = $("#rank_input_011");
+                                        var instance011;
+                                        var min = 0;
+                                        var vfromval = 0;
+                                        var max = 100;
+
+                                        $slide_011.ionRangeSlider({
+                                            skin: "big",
+                                            type: "single",
+                                            min: min,
+                                            max: max,
+                                            from: vfromval,
+                                            grid: true,
+                                            step: 0.5,
+                                            grid_num: 10,
+
+                                            onStart: function (data) {
+                                                $slide_input_011.prop("value", data
+                                                    .from);
+                                            },
+                                            onChange: function (data) {
+                                                $slide_input_011.prop("value", data
+                                                    .from);
+                                            }
+                                        });
+
+                                        instance011 = $slide_011.data("ionRangeSlider");
+
+                                        $slide_input_011.on("input", function () {
+                                            var val = $(this).prop("value");
+
+                                            // validate
+                                            if (val < min) {
+                                                val = min;
+                                            } else if (val > max) {
+                                                val = max;
+                                            }
+
+                                            instance011.update({
+                                                from: val
+                                            });
+
+                                            $(this).prop("value", val);
+                                        });
+                                    </script>
+
+
+                                </div>
+
+
+
+                            </td>
+                            <td class="CAGR_Percentage">
+                                <input name="txtSTART_VALUE" type="text" id="txtSTART_VALUE" value="4.7 "
+                                    style="width: 40px;text-align: center; ">
+                            </td>
+                            <td>
+                                <a class="Edit"
+                                    href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;gvSegments$ctl02$ctl15&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
+                                    style="display: inline;">Edit</a>
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!---YEARLY ORGIN TABLE-->
+        <div class="w-100">
+
+
+
+            <div class="table-responsive">
+
+                <table class="table w-100 border" id="yearly_table">
+                    <tbody>
+
+                        <tr>
+                            <td style="width:15%">
+                                <b>ORIG YEAR</b>:
+                                <select name="txtORIG_YEAR" id="txtORIG_YEAR">
+
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+
+
+                                </select>
+                            </td>
+
+                            <td style="width:35%"> <b>
+                                    <font color="red"><sup>*</sup></font>ORIG VALUE
+                                </b>: <input name="txtORIG_VALUE" type="text" id="txtORIG_VALUE"
+                                    onkeyup="checkDec(this);">
+                                <br><span id="reqORIG_VALUE" class="ErrorMessageClass" style="display:none;">Original
+                                    value can`t be left blank</span>
+                            </td>
+
+                            <td style="width:15%">
+                                <b>START YEAR</b>:
+                                <select name="txtSTART_YEAR" id="txtSTART_YEAR">
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+
+                                </select>
+                            </td>
+
+                            <td style="width:35%"> <b>
+                                    <font color="red"><sup>*</sup></font>START VALUE
+                                </b>: <input name="txtSTART_VALUE" type="text" id="txtSTART_VALUE"
+                                    onkeyup="checkDec(this);">
+                                <span id="reqSTART_VALUE" class="ErrorMessageClass" style="display:none;">Start
+                                    Value can`t be left blank</span>
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>START VALUE1
+                                </b>: <input name="txtSTART_VALUE1" type="text" id="txtSTART_VALUE1"
+                                    onkeyup="checkDec(this);">
+                                <span id="reqSTART_VALUE1" class="ErrorMessageClass" style="display:none;">Start
+                                    Value1 can`t be left blank</span>
+                            </td>
+                            <td style="width: 10%" colspan="3">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>START TWEAKED VALUE
+                                </b>: <input name="txtSTART_TWEAKED_VALUE" type="text" id="txtSTART_TWEAKED_VALUE"
+                                    onkeyup="checkDec(this);">
+                                <span id="reqSTART_TWEAKED_VALUE" class="ErrorMessageClass" style="display:none;">Start
+                                    Tweaked Value can`t be left blank</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%">
+                                <b>END YEAR</b>:
+                                <select name="txtEND_YEAR" id="txtEND_YEAR">
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+
+                                </select>
+
+                            </td>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>END VALUE
+                                </b>: <input name="txtEND_VALUE" type="text" id="txtEND_VALUE"
+                                    onkeyup="checkDec(this);">
+                                <span id="reqEND_VALUE" class="ErrorMessageClass" style="display:none;">End Value
+                                    can`t be left blank</span>
+                            </td>
+                            <td style="width: 10%" colspan="2">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>TWEAKED END VALUE
+                                </b>: <input name="txtTWEAKED_END_VALUE" type="text" id="txtTWEAKED_END_VALUE"
+                                    onkeyup="checkDec(this);">
+                                <span id="reqTWEAKED_END_VALUE" class="ErrorMessageClass" style="display:none;">Tweaked
+                                    End Value can`t be left blank</span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>CAGR:
+                                    <input name="txtCAGR" type="text" id="txtCAGR" onkeyup="checkDec(this);">
+                                    <span id="Regex2" class="ErrorMessageClass" style="display:none; ">Please enter
+                                        valid decimal number.</span>
+                            </td>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>CAGR TWEAK PERCENTAGE
+                                </b>: <input name="txtCAGR_TWEAK_PERCENTAGE" type="text" id="txtCAGR_TWEAK_PERCENTAGE"
+                                    onkeyup="checkDec(this);">
+                                <span id="reqCAGR_TWEAK_PERCENTAGE" class="ErrorMessageClass" style="display:none;">CAGR
+                                    Tweak % can`t be left blank</span>
+                            </td>
+                            <td style="width: 10%" colspan="2">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>TWEAKED CAGR
+                                </b>: <input name="txtTWEAKED_CAGR" type="text" id="txtTWEAKED_CAGR"
+                                    onkeyup="checkDec(this);">
+                                <span id="reqTWEAKED_CAGR" class="ErrorMessageClass" style="display:none;">Tweaked
+                                    CAGR % can`t be left blank</span>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td style="width: 10%">
+                                <input name="txtReport_ID" type="text" id="txtReport_ID"
+                                    style="width:60px;display:none;">
+                            </td>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>Rank
+                                </b>:<input name="txtRank" type="text" id="txtRank" value="A">
+                            </td>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>SOURCE_URL
+                                </b>:<br><input name="txtSOURCE_URL" type="text" id="txtSOURCE_URL">
+                            </td>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>SOURCE_TEXT
+                                </b>:<br><input name="txtSOURCE_TEXT" type="text" id="txtSOURCE_TEXT">
+                            </td>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>COMPANY_NAMES
+                                </b>:<br><input name="txtCOMPANY_NAMES" type="text" id="txtCOMPANY_NAMES">
+                            </td>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>COMPANIES_IDs
+                                </b>:<br><input name="txtCOMPANIES_IDs" type="text" id="txtCOMPANIES_IDs">
+
+                            </td>
+                            <td style="width: 10%">
+                                <b>
+                                    <font color="red"><sup>*</sup></font>REGION
+                                </b>:<br><input name="txtREGION" type="text" id="txtREGION">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <!---BUSINESS POSITIONING-->
+        <div class="w-100 mb-3">
+            <div class="w-100 section_header">
+                <h3>BUSINESS POSITIONING</h3>
+            </div>
+            <div class="d-flex w-100 pl-2">
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="busines" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>B2B</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="busines" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>B2C</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="busines" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>B2G</b>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!---PANDEMIC  IMPACT -->
+        <div class="w-100 mb-3">
+            <div class="w-100 section_header">
+                <h3>PANDEMIC IMPACT</h3>
+            </div>
+            <div class="d-flex w-100 pl-2 justify-content-start">
+                <div class=" d-flex align-items-center mr-3">
+
+                    <b>SEVERE</b>
+                    <div class="ml-3">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">+</span> <input type="radio"
+                            name="q8" class="mr-2 mt-1">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">-</span> <input type="radio"
+                            name="q8" class="mr-2 mt-1">
+                    </div>
+
+                </div>
+                <div class=" d-flex align-items-center mr-3">
+
+                    <b>STRONG</b>
+                    <div class="ml-3">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">+</span> <input type="radio"
+                            name="q8" class="mr-2 mt-1">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">-</span> <input type="radio"
+                            name="q8" class="mr-2 mt-1">
+                    </div>
+                </div>
+                <div class=" d-flex align-items-center mr-3">
+
+                    <b>MODERATE</b>
+                    <div class="ml-3">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">+</span> <input type="radio"
+                            name="q8" class="mr-2 mt-1">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">-</span> <input type="radio"
+                            name="q8" class="mr-2 mt-1">
+                    </div>
+                </div>
+                <div class=" d-flex align-items-center mr-2">
+
+                    <b>TRIVIAL</b>
+                    <div class="ml-3">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">+</span> <input type="radio"
+                            name="q8" class="mr-2 mt-1">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">-</span> <input type="radio"
+                            name="q8" class="mr-2 mt-1">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!---SUPPLY CHAIN  IMPACT -->
+        <div class="w-100 mb-3">
+            <div class="w-100 section_header">
+                <h3>SUPPLY CHAIN IMPACT</h3>
+            </div>
+            <div class="d-flex w-100 pl-2 justify-content-start">
+                <div class=" d-flex align-items-center mr-3">
+
+                    <b>SEVERE</b>
+                    <div class="ml-3">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">+</span> <input type="radio"
+                            name="q7" class="mr-2 mt-1">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">-</span> <input type="radio"
+                            name="q7" class="mr-2 mt-1">
+                    </div>
+
+                </div>
+                <div class=" d-flex align-items-center mr-3">
+
+                    <b>STRONG</b>
+                    <div class="ml-3">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">+</span> <input type="radio"
+                            name="q7" class="mr-2 mt-1">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">-</span> <input type="radio"
+                            name="q7" class="mr-2 mt-1">
+                    </div>
+                </div>
+                <div class=" d-flex align-items-center mr-3">
+
+                    <b>MODERATE</b>
+                    <div class="ml-3">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">+</span> <input type="radio"
+                            name="q7" class="mr-2 mt-1">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">-</span> <input type="radio"
+                            name="q7" class="mr-2 mt-1">
+                    </div>
+                </div>
+                <div class=" d-flex align-items-center mr-2">
+
+                    <b>TRIVIAL</b>
+                    <div class="ml-3">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">+</span> <input type="radio"
+                            name="q7" class="mr-2 mt-1">
+                        <span style="font-size: 17px; font-weight: bold;" class="mr-0">-</span> <input type="radio"
+                            name="q7" class="mr-2 mt-1">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!---PRMARY ATTRIBUTE (Select One) -->
+        <div class="w-100 mb-3">
+            <div class="w-100 section_header">
+                <h3>PRIMARY ATTRIBUTE</h3>
+            </div>
+            <div class="d-flex w-100 pl-2">
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="PRMARY" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>POPULATION</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="PRMARY" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>PER CAPITA</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="PRMARY" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>GDP</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="PRMARY" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>UNIQUE</b>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!---SECONDARY ATTRIBUTES (SELECT ALL THAT APPLY) -->
+
+        <div class="w-100 mb-3">
+            <div class="w-100">
+                <div class="table-responsive">
+                    <table class="table border" id="secondary_attribute">
+                        <tbody>
+                            <tr>
+                                <th scope="col">SECONDARY ATTRIBUTES</th>
+                                <th scope="col">IMPACT</th>
+                                <th scope="col" colspan="3" style="text-align: center;">
+                                    <span><b>%</b></span>
+                                    <span>PERCENTAGE SLIDER</span>
+                                </th>
+
+                            </tr>
+
+
+                            <tr>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center pl-0">
+                                        <input type="checkbox" name="q7" customatt="radio_option" class="mr-2 mt-0 ">
+                                        <b>POPULATION</b>
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                    </div>
+                                </td>
+                                <td scope="col" colspan="3" style="text-align: center;">
+
+                                    <div class="secondary_ranking_slider">
+
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_01" id="rank_input_01" value="0" maxlength='4'
+                                                size='20' tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_01" />
+                                        </div>
+                                        <script>
+                                            var $slide_1 = $("#slide_01");
+                                            var $slide_input_1 = $("#rank_input_01");
+                                            var instance01;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+
+                                            $slide_1.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_1.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_1.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+
+                                            instance01 = $slide_1.data("ionRangeSlider");
+
+                                            $slide_input_1.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance01.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center pl-0">
+                                        <input type="checkbox" name="q7" customatt="radio_option" class="mr-2 mt-0 ">
+                                        <b>PER CAPITA</b>
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center justify-content-center">
+
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                    </div>
+                                </td>
+                                <td scope="col" colspan="3" style="text-align: center;">
+                                    <div class="secondary_ranking_slider">
+
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_01" id="rank_input_02" value="0" maxlength='4'
+                                                size='20' tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_02" />
+                                        </div>
+                                        <script>
+                                            var $slide_2 = $("#slide_02");
+                                            var $slide_input_2 = $("#rank_input_02");
+                                            var instance02;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+
+                                            $slide_2.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_2.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_2.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+
+                                            instance02 = $slide_2.data("ionRangeSlider");
+
+                                            $slide_input_2.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance02.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center pl-0">
+                                        <input type="checkbox" name="q7" customatt="radio_option" class="mr-2 mt-0 ">
+                                        <b>GDP</b>
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div class="  d-flex align-items-center justify-content-center">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                    </div>
+                                </td>
+                                <td scope="col" colspan="3" style="text-align: center;">
+                                    <div class="secondary_ranking_slider">
+
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_03" id="rank_input_03" value="0" maxlength='4'
+                                                size='20' tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_03" />
+                                        </div>
+                                        <script>
+                                            var $slide_3 = $("#slide_03");
+                                            var $slide_input_3 = $("#rank_input_03");
+                                            var instance03;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+
+                                            $slide_3.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_3.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_3.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+
+                                            instance03 = $slide_3.data("ionRangeSlider");
+
+                                            $slide_input_3.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance03.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center pl-0">
+                                        <input type="checkbox" name="q7" customatt="radio_option" class="mr-2 mt-0 ">
+                                        <b>GENDER</b>
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center justify-content-center">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                    </div>
+                                </td>
+
+                                <td scope="col" colspan="3" style="text-align: center;">
+
+                                    <div class="secondary_ranking_slider">
+
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_04" id="rank_input_04" value="0" maxlength='4'
+                                                size='20' tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_04" />
+                                        </div>
+                                        <script>
+                                            var $slide_4 = $("#slide_04");
+                                            var $slide_input_4 = $("#rank_input_04");
+                                            var instance04;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+
+                                            $slide_4.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_4.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_4.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+
+                                            instance04 = $slide_4.data("ionRangeSlider");
+
+                                            $slide_input_4.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance04.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center pl-0">
+                                        <input type="checkbox" name="q7" customatt="radio_option" class="mr-2 mt-0 ">
+                                        <b>SEASONAL</b>
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center justify-content-center">
+
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                    </div>
+                                </td>
+                                <td scope="col" colspan="3" style="text-align: center;">
+                                    <div class="secondary_ranking_slider">
+
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_05" id="rank_input_05" value="0" maxlength='4'
+                                                size='20' tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_05" />
+                                        </div>
+                                        <script>
+                                            var $slide_5 = $("#slide_05");
+                                            var $slide_input_5 = $("#rank_input_05");
+                                            var instance05;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+
+                                            $slide_5.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_5.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_5.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+
+                                            instance05 = $slide_5.data("ionRangeSlider");
+
+                                            $slide_input_5.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance05.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center pl-0">
+                                        <input type="checkbox" name="q7" customatt="radio_option" class="mr-2 mt-0 ">
+                                        <b>GEOGRAPHIC WEATHER</b>
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center justify-content-center">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                    </div>
+                                </td>
+                                <td scope="col" colspan="3" style="text-align: center;">
+                                    <div class="secondary_ranking_slider">
+
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_04" id="rank_input_06" value="0" maxlength='4'
+                                                size='20' tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_06" />
+                                        </div>
+                                        <script>
+                                            var $slide_6 = $("#slide_06");
+                                            var $slide_input_6 = $("#rank_input_06");
+                                            var instance05;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+
+                                            $slide_6.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_6.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_6.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+
+                                            instance05 = $slide_6.data("ionRangeSlider");
+
+                                            $slide_input_6.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance05.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+
+
+                                    </div>
+
+                            </tr>
+
+                            <tr>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center pl-0">
+                                        <input type="checkbox" name="q7" customatt="radio_option" class="mr-2 mt-0 ">
+                                        <b>SOCIAL TREND</b>
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div class="  d-flex align-items-center justify-content-center">
+
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                    </div>
+                                </td>
+                                <td scope="col" colspan="3" style="text-align: center;">
+
+                                    <div class="secondary_ranking_slider">
+
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_04" id="rank_input_07" value="0" maxlength='4'
+                                                size='20' tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_07" />
+                                        </div>
+                                        <script>
+                                            var $slide_7 = $("#slide_07");
+                                            var $slide_input_7 = $("#rank_input_07");
+                                            var instance07;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+
+                                            $slide_7.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_7.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_7.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+
+                                            instance07 = $slide_7.data("ionRangeSlider");
+
+                                            $slide_input_7.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance07.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td scope="col">
+                                    <div class=" d-flex align-items-center pl-0">
+                                        <input type="checkbox" name="q7" customatt="radio_option" class="mr-2 mt-0 ">
+                                        <b>NATURALLY OCCURING</b>
+                                    </div>
+                                </td>
+                                <td scope="col">
+                                    <div class="  d-flex align-items-center justify-content-center">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">+</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                        <span style="font-size: 22px; font-weight: bold;" class="mr-1">-</span> <input
+                                            type="radio" name="q7" class="mr-3 mt-2">
+                                    </div>
+                                </td>
+                                <td scope="col" colspan="3" style="text-align: center;">
+
+                                    <div class="secondary_ranking_slider">
+
+                                        <div class="range-slider ranking_slider">
+                                            <p style="font-size: 15px;  font-weight: bold; margin-top: 13px;">%</p>
+                                            <input type="text" maxlength="4" class="js-input rank_input"
+                                                name="rank_input_04" id="rank_input_08" value="0" maxlength='4'
+                                                size='20' tabindex='3' placeholder="##.#">
+                                            <input type="text" value="0" class="js-range-slider" id="slide_08" />
+                                        </div>
+                                        <script>
+                                            var $slide_8 = $("#slide_08");
+                                            var $slide_input_8 = $("#rank_input_08");
+                                            var instance08;
+                                            var min = 0;
+                                            var vfromval = 0;
+                                            var max = 100;
+
+                                            $slide_8.ionRangeSlider({
+                                                skin: "big",
+                                                type: "single",
+                                                min: min,
+                                                max: max,
+                                                from: vfromval,
+                                                grid: true,
+                                                step: 0.5,
+                                                grid_num: 10,
+
+                                                onStart: function (data) {
+                                                    $slide_input_8.prop("value", data
+                                                        .from);
+                                                },
+                                                onChange: function (data) {
+                                                    $slide_input_8.prop("value", data
+                                                        .from);
+                                                }
+                                            });
+
+                                            instance08 = $slide_8.data("ionRangeSlider");
+
+                                            $slide_input_8.on("input", function () {
+                                                var val = $(this).prop("value");
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+
+                                                instance08.update({
+                                                    from: val
+                                                });
+
+                                                $(this).prop("value", val);
+                                            });
+                                        </script>
+
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!---GEOGRAPHIC SEGMENTATION SELECTOR -->
+        <div class="w-100 mb-3">
+            <div class="w-100 section_header">
+                <h3>GEOGRAPHIC SEGMENTATION SELECTOR</h3>
+            </div>
+            <div class="d-flex w-100 pl-2">
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="GEO" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>GEO A</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="GEO" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>GEO B</b>
+                </div>
+                <div
+                    style="float:left; display: flex; justify-content: start; align-items: center; margin:4px 20px 5px 0px">
+                    <input type="radio" name="GEO" customatt="radio_option" style="float:left" class="mr-2">
+                    <b>MANUAL</b>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!---MARKET STAGING BY COUNTRY---->
+
+        <div class="w-100">
+            <div class="w-100 section_header">
+                <h3>MARKET STAGING BY COUNTRY</h3>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table border" id="market-staging">
+                    <tbody>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col"> <span>COUNTRY</span> <span>REGION</span></th>
+
+
+                            <th scope="col" colspan="3" style="text-align: center;">STAGING</th>
+
+                        </tr>
+                        <tr>
+                            <td scope="col"></td>
+                            <td scope="col">
+                                </th>
+                            <td align="center" scope="col" class="font-weight-bold">MATURE</t>
+                            <td align="center" scope="col" class="font-weight-bold">EVOLVING</th>
+                            <td align="center" scope="col" class="font-weight-bold">RAPID</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td> <span>Africa </span> <span>Africa </span></td>
+
+                            <td align="center"><input type="radio" name="country1"></td>
+                            <td align="center"><input type="radio" name="country1" checked></td>
+                            <td align="center"><input type="radio" name="country1"></td>
+
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td> <span>Asia-Pacific </span> <span>Asia-Pacific </span> </td>
+
+                            <td align="center"><input type="radio" name="country18"></td>
+                            <td align="center"><input type="radio" name="country18"></td>
+                            <td align="center"><input type="radio" name="country18" checked></td>
+
+                        <tr>
+                            <td>4</td>
+                            <td> <span> Australia </span> <span>Asia-Pacific </span> </td>
+
+                            <td align="center"><input type="radio" name="country2"></td>
+                            <td align="center"><input type="radio" name="country2" checked></td>
+                            <td align="center"><input type="radio" name="country2"></td>
+
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td> <span>India </span> <span>Asia-Pacific </span> </td>
+
+                            <td align="center"><input type="radio" name="country3" checked></td>
+                            <td align="center"><input type="radio" name="country3"></td>
+                            <td align="center"><input type="radio" name="country3"></td>
+
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td> <span> Canada </span> <span>Canada </span> </td>
+
+                            <td align="center"><input type="radio" name="country4"></td>
+                            <td align="center"><input type="radio" name="country4"></td>
+                            <td align="center"><input type="radio" name="country4" checked></td>
+
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td><span>China</span> <span>China </span> </td>
+
+                            <td align="center"><input type="radio" name="country5"></td>
+                            <td align="center"><input type="radio" name="country5"></td>
+                            <td align="center"><input type="radio" name="country5" checked></td>
+
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td> <span> France </span> <span>Europe </span> </td>
+
+                            <td align="center"><input type="radio" name="country6" checked></td>
+                            <td align="center"><input type="radio" name="country6"></td>
+                            <td align="center"><input type="radio" name="country6"></td>
+
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td> <span> Germany </span> <span>Europe </span> </td>
+
+                            <td align="center"><input type="radio" name="country7"></td>
+                            <td align="center"><input type="radio" name="country7"></td>
+                            <td align="center"><input type="radio" name="country7"></td>
+
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td> <span>United Kingdom </span> <span>Europe </span> </td>
+
+                            <td align="center"><input type="radio" name="country8" checked></td>
+                            <td align="center"><input type="radio" name="country8"></td>
+                            <td align="center"><input type="radio" name="country8"></td>
+
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td> <span>Japan </span> <span>Japan</span> </td>
+
+                            <td align="center"><input type="radio" name="country9"></td>
+                            <td align="center"><input type="radio" name="country9"></td>
+                            <td align="center" checked><input type="radio" name="country9"></td>
+
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td> <span>United States </span> <span> United States </span> </td>
+
+                            <td align="center"><input type="radio" name="country10"></td>
+                            <td align="center"><input type="radio" name="country10" checked></td>
+                            <td align="center"><input type="radio" name="country10"></td>
+
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td> <span>Chile </span> <span>Latin America </span> </td>
+
+                            <td align="center"><input type="radio" name="country11"></td>
+                            <td align="center"><input type="radio" name="country11"></td>
+                            <td align="center"><input type="radio" name="country11" checked></td>
+
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td> <span> Brazil </span> <span>Latin America </span> </td>
+
+                            <td align="center"><input type="radio" name="country12" checked></td>
+                            <td align="center"><input type="radio" name="country12"></td>
+                            <td align="center"><input type="radio" name="country12"></td>
+
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td> <span>Argentina </span> <span>Latin America</span> </td>
+
+                            <td align="center"><input type="radio" name="country13"></td>
+                            <td align="center"><input type="radio" name="country13" checked></td>
+                            <td align="center"><input type="radio" name="country13"></td>
+
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td> <span> Saudi Arabia </span> <span>Middle East </span> </td>
+
+                            <td align="center"><input type="radio" name="country14"></td>
+                            <td align="center"><input type="radio" name="country14"></td>
+                            <td align="center"><input type="radio" name="country14" checked></td>
+
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td> <span>United Arab Emirates</span> <span>Middle East </span> </td>
+
+                            <td align="center"><input type="radio" name="country15" checked></td>
+                            <td align="center"><input type="radio" name="country15"></td>
+                            <td align="center"><input type="radio" name="country15"></td>
+
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><span>Israel </span> <span>Middle East </span> </td>
+
+                            <td align="center"><input type="radio" name="country1"></td>
+                            <td align="center"><input type="radio" name="country1"></td>
+                            <td align="center"><input type="radio" name="country1" checked></td>
+
+                        </tr>
+
+
+                        <tr class="bg-white ">
+                            <td colspan="10" align="left" style="text-align:left !important; padding-left:25px">
+                                <i>M=Mature; E=Evolving; R=Rapid </i><br />
+                                <i>MATURE = 3-6% random select with 3-5% growth spread over 10 years
+                                    YOY to years 2030 <br>
+                                    EVOLVING = 8-15% random select with 7-10% growth spread over 10 years YOY to
+                                    years 2030<br>
+                                    RAPID = REQUIRES MANUAL ENTRIES FOR 2020 &amp; 2030</i></td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
