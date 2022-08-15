@@ -1,0 +1,344 @@
+
+.record_table tbody tr:nth-child(1){
+    display: none;
+}
+
+/*==============================
+        LAYOUT
+===============================*/
+.page-content .container{
+    margin:0 auto !important;
+}
+
+@media only screen and (max-width: 767px){
+    #wrapper,
+    #footer,
+    #footer-bottom,
+    .container  {
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
+}
+/*==============================
+        FONT
+===============================*/
+.record_table tr td{
+    
+}
+
+h1{
+    font-size: 16px !important;
+    font-weight: bold;
+    line-height: normal;
+      margin-bottom: 10px;
+}
+
+td.text-black.font-weight-bold{
+    font-size: 16px;
+    padding-top: 12px !important;
+}
+
+td.font-weight-bold font{
+    font-size: 15px;
+
+}
+
+/*==============================
+        snipts
+===============================*/
+table tr td br{
+    display: none;
+}
+
+
+/*==============================
+        img
+===============================*/
+
+table tr td img{
+    width: 400px;
+    float: none;
+    margin: 0 auto;
+
+}
+
+@media only screen and (max-width:959px) {
+table tr td img{
+        width: 700px !important;
+        max-width: 700 !important;
+      
+        float: left;
+}
+}
+
+@media only screen and (max-width:767px) {
+    table tr td img{
+            width: 360px !important;
+            
+            float: left;
+    }
+}
+
+
+    @media only screen and (max-width:479px) {
+        table tr td img{
+                width: 270px !important;
+                
+                float: left;
+        }
+
+}
+
+/*==============================
+        Note
+===============================*/
+
+.note {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    z-index: 999;
+    text-align: center;
+    background: blue;
+    color: #fff;
+    padding: 5px;
+    display: none;
+}
+@media only screen and (max-width:480px) {
+    .note {
+        display: block;
+    }
+}
+
+
+/*==============================
+        DIV COLLAPSE
+===============================*/
+div.collapse{
+    font-weight: normal;
+    font-size: 13px;
+    box-sizing: border-box;
+    padding-top: 16px !important;
+    border:none imp !important;
+    }
+
+/*==============================
+        BUTTON STYLING
+===============================*/
+.btn.btn-primary{
+    border-radius: 0px;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+    /* margin-top: 3px; */
+    background: none !important;
+    border: none !important;
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+.btn.btn-primary::before{
+    position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -4px;
+        left: 0px;
+        color: #000;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 99999;
+}
+
+.btn.btn-primary.collapsed::before{
+    content: '\002B';
+}
+.btn.btn-primary::before
+{
+    content: "\2212";
+}
+
+/*==============================
+    SECTION HEADER STYLES
+===============================*/
+
+td.text-blue.font-weight-bold{
+    color: #000 !important;
+    font-size: 16px;
+    padding: 5px 0px !important;
+    border-bottom: rgba(0,0,0,0.05) solid 1px;
+}
+
+/*==============================
+        FONTS
+===============================*/
+
+.record_table tr td h1{
+    font-size: 16px;
+}
+
+.record_table tr td h2{
+    font-size: 15px;
+}
+
+.record_table tr td p{
+    margin-bottom: 0 !important;
+}
+
+.text-black.font-weight-bold font div.table-responsive{
+    font-size: 15px;;
+}
+
+
+
+/*==============================
+        STYLING TABLES
+===============================*/
+.record_table{
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.record_table tr td{
+    padding: 2px 0px !important;
+    box-sizing: border-box;
+    border:none !important;
+    padding-left: 0px !important;
+    position: relative;
+    
+}
+.record_table tr td table tr td,
+.record_table tr td table tr th{
+    padding: 8px !important;
+    border: rgba(0,0,0,0.08) solid 1px  !important;
+}
+    
+.table-bordered,
+.table-bordered tr td {
+    border: 1px solid #dee2e6 !important;
+}
+
+@media only screen and (max-width:959px) {
+.dataset-block,
+.table-responsive{
+     display: block;
+     width: 650px !important;
+     overflow-x:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+}
+
+@media only screen and (max-width:767px) {
+    .dataset-block,
+    .table-responsive{
+         display: block;
+         width: 350px !important;
+         overflow-x:scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+ }
+
+ @media only screen and (max-width:479px) {
+    .dataset-block,
+    .table-responsive{
+         display: block;
+         width: 280px !important;
+         overflow-x:scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+ }
+
+
+ /*============================
+        DATA TABLE ALIGNMENT
+ =============================*/
+
+ .table-responsive table,
+ .dataset-block table{
+    margin: 0 auto;
+    margin-bottom: 20px;
+ }
+
+ #IIEXECUTIVESUMMARY table tr td .table-responsive table tr td:nth-child(1),
+ #IIEXECUTIVESUMMARY table tr td .dataset-block table tr td:nth-child(1),
+ #IIEXECUTIVESUMMARY table tr td .table-responsive table tr td:nth-child(1) p,
+ #IIEXECUTIVESUMMARY table tr td .dataset-block table tr td:nth-child(1) p{
+    text-align: left !important;
+ }
+ 
+ #IIEXECUTIVESUMMARY table tr td .table-responsive table tr td p,
+ #IIEXECUTIVESUMMARY table .dataset-block table tr td p{
+    text-align: left
+ }
+
+ .dataset-block table tr:nth-child(1), 
+ .table-responsive table tr:nth-child(1){
+ background:#A1C1E7
+ }
+
+ #IIIMARKETANALYSIS table tr td  .table-responsive table  tr:last-child td strong,
+ #IIIMARKETANALYSIS table tr td  .dataset-block  table tr:last-child td strong,
+ #IIIMARKETANALYSIS table tr td  .table-responsive table  tr:last-child td ,
+ #IIIMARKETANALYSIS table tr td  .dataset-block  table tr:last-child td,
+ #IIIMARKETANALYSIS table tr td  .table-responsive table  tr:last-child th ,
+ #IIIMARKETANALYSIS table tr td  .dataset-block  table tr:last-child th  {
+     font-weight: 900 !important
+ }
+
+ #IIIMARKETANALYSIS table tr td .table-responsive table tr td:nth-child(1),
+ #IIIMARKETANALYSIS table tr td .dataset-block table tr td:nth-child(1){
+    text-align: left !important;
+ }
+
+ #IIIMARKETANALYSIS table tr td .table-responsive table tr td,
+ #IIIMARKETANALYSIS table .dataset-block table tr td{
+    text-align: right !important;
+ }
+
+
+/*==============================
+    III MARKETANALYSIS
+===============================*/
+
+#IIIMARKETANALYSIS .report_innner_tables tr td table{
+    margin:0 auto;
+}
+
+#IIIMARKETANALYSIS .report_innner_tables tr td table tr td,
+#IIIMARKETANALYSIS .report_innner_tables tr td table tr th{
+    border:rgba(0,0,0,0.09) solid 1px;
+    padding: 3px !important;
+}
+
+/*==============================
+    IV COMPETITION
+===============================*/
+
+#IVCOMPETITION{
+    margin: 0px;
+    word-break: break-word;
+}
+
+#IVCOMPETITION table tr td{
+    border:none !important;
+}
+
+/*==============================
+    V Appendix
+===============================*/
+
+#Appendix ul{
+    margin: 0px;
+}
+#Appendix ul li{
+    margin-bottom: 10px;
+    width: 100%;
+    word-break: break-word;
+}
+#Appendix table tr td{
+    border:none !important;
+}

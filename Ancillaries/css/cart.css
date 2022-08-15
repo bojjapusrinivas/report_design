@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.shop_cart_table,
+.shop_cart_table2 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Zebra striping */
+
+.shop_cart_table tr:nth-of-type(odd),
+.shop_cart_table2 tr:nth-of-type(odd) {
+    background: #eee;
+}
+.cart_tot_value {
+    text-align: right !important;
+    padding-right: 15px;
+}
+.cart_tot_txt {
+    width: 80%;
+    text-align: right;
+    padding-left: 10px;
+}
+.shop_cart_table th,
+.shop_cart_table2 th {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+.shop_cart_table td,
+.shop_cart_table2 td,
+th {
+    padding: 5px;
+    text-align: left;
+}
+.option {
+    text-align: center !important;
+}
+.rptid {}
+.title {}
+.ptype {}
+.rptformat {}
+.rptprice {}
+.shop_cart_table td:before,
+.shop_cart_table2 td:before {
+    display: none;
+}
+
+/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+
+@media only screen and (min-width:768) and (max-width:959px) {
+    .shop_cart_table tr th,
+    .shop_cart_table tr td {
+        font-size: 11px !important;
+    }
+}
+@media only screen and (max-device-width: 767px) {
+    .shop_cart_table td:before,
+    .shop_cart_table2 td:before {
+        display: block;
+    }
+    .option {
+        width: 100% !important;
+        text-align: center !Important;
+    }
+    .shop_cart_table,
+    .shop_cart_table thead,
+    .shop_cart_table tbody,
+    .shop_cart_table th,
+    .shop_cart_table td,
+    .shop_cart_table tr {
+        display: block;
+    }
+    .shop_cart_table2,
+    .shop_cart_table2 thead,
+    .shop_cart_table2 tbody,
+    .shop_cart_table2 th,
+    .shop_cart_table2 td,
+    .shop_cart_table2 tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .shop_cart_table thead tr,
+    .shop_cart_table2 thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .shop_cart_table tr,
+    .shop_cart_table2 tr {
+        margin: 0px 0px;
+    }
+    .shop_cart_table td,
+    .shop_cart_table2 td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+        padding-left: 40%;
+        text-align: left !important;
+    }
+    .shop_cart_table td:nth-child(1),
+    .shop_cart_table2 td:nth-child(1) {
+        margin-top: 0px;
+    }
+    .shop_cart_table,
+    .shop_cart_table2,
+    .cart_tot_price {
+        width: 100% !important;
+        margin: 0px auto !important;
+    }
+    .cart_tot_value {
+        text-align: left !important
+    }
+    .cart_tot_txt {
+        width: 50%;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .shop_cart_table td:before,
+    .shop_cart_table2 td:before {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        white-space: nowrap;
+        background: #eeeeee;
+        color: #000 !important;
+        height: 100%;
+        width: 35%;
+        text-align: left;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border-right: rgba(0, 0, 0, 0.12) solid 1px;
+        border-bottom: rgba(0, 0, 0, 0.12) solid 1px;
+    }
+    .shop_cart_table tr:nth-of-type(odd),
+    .shop_cart_table2 tr:nth-of-type(odd) {
+        background: #fff;
+    }
+    .shop_cart_table td:before:nth-child(1),
+    .shop_cart_table2 td:before:nth-child(1) {
+        border-top: rgba(0, 0, 0, 0.12) solid 1px !important;
+    }
+}
+
+/*
+		Label the data
+		*/
+
+.shop_cart_table td:nth-of-type(1):before {
+    content: "Code";
+}
+.shop_cart_table td:nth-of-type(2):before {
+    content: "Title";
+}
+.shop_cart_table td:nth-of-type(3):before {
+    content: "Price";
+}
+.shop_cart_table td:nth-of-type(4):before {
+    content: "REMOVE";
+}
+.shop_cart_table2 td:nth-of-type(1):before {
+    content: "CODE";
+}
+.shop_cart_table2 td:nth-of-type(2):before {
+    content: "TITLE";
+}
+.shop_cart_table2 td:nth-of-type(3):before {
+    content: "PAGE NO";
+}
+.shop_cart_table2 td:nth-of-type(4):before {
+    content: "PRICE($)";
+}
+
+/*.shop_cart_table td:nth-of-type(5):before {
+    content: "Format";
+}
+.shop_cart_table td:nth-of-type(6):before {
+    content: "Price($)";
+}*/
+
+
+}

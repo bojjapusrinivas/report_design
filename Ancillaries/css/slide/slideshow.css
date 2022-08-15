@@ -1,0 +1,159 @@
+
+/*--------------------------- SLIDE SHOW STYLES ------------------*/
+
+#main-slider { visibility:hidden;  position:relative;  border-bottom:1px solid #E7E7E7;  margin-top:2px;  padding-bottom:2px }
+
+
+#main-slider ul.slides li img { -moz-opacity:0; -webkit-opacity:0; opacity:0; filter:alpha(opacity=0) }
+
+
+#main-slider ul.slides li { zoom:1; margin-bottom:0}
+
+
+#main-slider ul.slides li .flex-caption { color:#fff; left:40px; margin:0; bottom:0; position:absolute; max-width:47%; z-index:10; -moz-opacity:0.9;
+   										  -webkit-opacity:0.9; opacity:0.9;	filter:alpha(opacity=90)}
+
+
+#main-slider ul.slides li .flex-caption p.cap-title { line-height:1.3em; padding:7px 10px; display:inline-block; margin-bottom:2px; font-size:18px; 
+													  text-transform:capitalize; background-color:#969 }
+													  
+#main-slider .flex-caption .cap-content { padding:15px 10px; background-color:#404040 }
+
+
+/*============================== Navigation Arrows ============================================*/
+
+.flex-direction-nav li { margin-bottom:0 }
+
+
+#main-slider .flex-direction-nav li a,.post-slider .flex-direction-nav li a { top:50% }
+
+.flex-direction-nav li a { -moz-opacity:0; -webkit-opacity:0; opacity:0;  position:absolute; filter:alpha(opacity=0); display:block; z-index:1;
+    overflow:hidden; text-indent:-1000px; margin-top:-19px; text-align:center; outline:0; z-index:100; height:38px; width:38px; background-position:50% 50%; background-repeat:no-repeat }
+
+#main-slider .flex-direction-nav li a.flex-prev  { left:21px; background: url(../../images/slides/main-slider-arrows.png) #169FE6 ; background-repeat:no-repeat; background-position:50% 50% }
+
+#main-slider .flex-direction-nav li a.flex-prev, .flex-direction-nav li a{-moz-border-radius:50px; -webkit-border-radius:50px;  border-radius:50px}
+
+
+#main-slider .flex-direction-nav li a.flex-next  { right:21px ; background: url(../../images/slides/main-slider-arrows-next.png) #169FE6 ; background-repeat:no-repeat; background-position:50% 50%; border-radius:50%}
+
+
+.post-slider .flex-direction-nav li a.flex-prev,.carousel .flex-direction-nav li a.flex-prev { background-image: url(../../images/slides/main-slider-arrows-next.png); left:0 }
+
+
+.post-slider .flex-direction-nav li a.flex-next,.carousel .flex-direction-nav li a.flex-next {right:0}
+
+
+/*============================ BOTTOM  Navigation Links=================================== */
+
+#main-slider ol.flex-control-nav {  z-index:1; position:absolute; display:none; left:0; right:0; bottom:-2px; overflow:hidden; padding-left:40px;
+   									outline:0; list-style:none;  }
+
+
+#main-slider ol.flex-control-nav li { display:block;  float:left; margin:0 2px 0 0; width:15%; }
+
+
+#main-slider ol.flex-control-nav li a { overflow:hidden; text-indent:-1000px; display:block; cursor:pointer; height:2px; outline:0 ;  }
+
+
+/*===================COLOR FOR SLIDE===================*/
+
+#main-slider ol.flex-control-nav li a.active,#main-slider .flex-caption .cap-title{  background-color:#FFF }
+
+
+
+#main-slider ol.flex-control-nav li,#main-slider .flex-caption .cap-content { background-color:#FFF}
+
+
+
+/*========================MORE STYLES ( NO NEED OF EDITING FOR NORMAL USE )======================*/
+
+.slides,.flex-control-nav,.flex-direction-nav { margin: 0; padding: 0; list-style: none!important; }
+
+
+
+#main-slider .slides > li,.post-slider .slides > li,.carousel .slides > li { display: none;   -webkit-backface-visibility: hidden;}
+
+/* FlexSlider Necessary Styles
+*********************************/
+
+#main-slider .slides > li,.post-slider .slides > li,.carousel .slides > li { display: none;  -webkit-backface-visibility: hidden; }
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.slides img { max-width: 100%; display: block;}
+
+/* Clearfix for the .slides element */
+
+div.flex-viewport:before, ul.slides:before, div.flex-viewport:after, ul.slides:after { content: "."; display: block; clear: both; visibility: hidden;
+    line-height: 0; width:0; height: 0;}
+
+html[xmlns] .slides { display: block;}
+
+* html .slides { height: 1%; }
+
+/* FlexSlider Default Theme
+*********************************/
+.flex-direction-nav { height: 0; }
+
+#main-slider .slides,.post-slider .slides,.carousel .slides { zoom: 1; }
+
+#main-slider .slides > li  { position: relative; }
+
+/*========================MEDIA STYLES ( NO NEED OF EDITING FOR NORMAL USE )======================*/
+
+/*Layout 772px*/
+/*(940px+2x40px+20px)*/ @media only screen and (max-width: 1040px) {
+	
+	
+	#main-slider ul.slides li .flex-caption {
+        
+        left:30px
+        
+    }
+    
+    
+    #main-slider .flex-direction-nav li a.flex-prev {
+    	left:15px
+    }
+    
+    
+    #main-slider .flex-direction-nav li a.flex-next {
+    	right:15px
+    }
+    
+    
+    #main-slider ol.flex-control-nav {
+        
+        padding-left:30px
+        
+    }
+    
+    
+    .flex-caption .cap-content {
+        
+        display:none
+        
+    }
+    
+	
+}
+
+
+/*Layout 765px*/
+/*(940px+2x40px+20px)*/ @media only screen and (max-width: 872px) {
+    
+      
+    #main-slider ul.slides li .flex-caption p.cap-title {
+        
+        display:none
+        
+    }
+    
+ 
+    
+}
+    
+
+@charset "utf-8";
+/* CSS Document */
+

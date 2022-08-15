@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
+
+/*============================
+        CUSTOM STYLES
+============================*/
+
+body {
+    background: #E8E8E8;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+/*----HEADER----*/
+
+.top-strip {
+    height: 40px;
+}
+.main-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+	font-family:arial;
+}
+.user_icon {
+    width: 35px;
+    height: 45x;
+    border-radius: 100%;
+    border: #fff solid 1.5px;
+    overflow: hidden
+}
+.user_icon2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: #fff solid 1.5px;
+    overflow: hidden
+}
+
+.custom_nav{
+	/*background: #1C6CBC !important;*/
+	background: #073a6f !important;
+}
+
+.custom_nav .nav-item {
+    border-right: rgba(255, 255, 255, 0.09) solid 1px;
+    padding: 0px 3px;
+}
+.custom_nav .nav-item:nth-child(2) {
+    border-right: rgba(255, 255, 255, 0.09) solid 0px;
+}
+.custom_nav .navbar-nav .nav-link {
+    color: #141a1f;
+    font-weight: 400;
+    font-size: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.custom_nav .navbar-nav .nav-link:hover,
+.custom_nav .navbar-nav .nav-item.active .nav-link {
+    color: #007636
+}
+.main {
+    padding-top: 25px;
+}
+
+
+footer{
+	background:#000 !important;	
+}
+/*---FORM CONTROL---*/
+
+.form-control {
+    font-size: 14px;
+}
+.form-control .btn {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*---DATA TABLE---*/
+
+.assignment_data th,
+.assignment_data td {
+    padding: 2px 5px;
+    text-align: center;
+}
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:after {
+    bottom: 5px !important;
+}
+#example_length,
+#example_filter {
+    display: none;
+}
+/*#example #example_length,
+#example #example_filter {
+    display: block;
+}*/
+#example_wrapper
+{
+display:flex;
+flex-direction : column !important;
+}
+#example_wrapper .row
+{
+ width:100%;
+}
+
+/*----login & Register Page---*/
+
+#login_page,
+#register_page {
+    /*background-image: url(../img/bg-blue-gradient-lg.jpg);
+    background-size: cover;*/
+	 background-color: #073a6f;
+}
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 350px;
+    border: 1px solid #fff;
+    background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
+#login .user_icon {
+    width: 75px;
+    height: 75px;
+    margin-top: -75px;
+}

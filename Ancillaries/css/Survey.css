@@ -1,0 +1,240 @@
+
+    /*==========================
+            STYLES
+    ==========================*/
+    
+    .btn_type_03 {
+        border: none !important;
+        background: #255E91 !important;
+        font-size: 16px;
+        font-family: arial !important;
+         font-weight:500 !important;
+        color: #fff !important;
+        width: 150px;
+        height: 30px;
+        margin: 2px !important;
+        border: none;
+        cursor: pointer !important;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    p{
+        color:#000;
+    }
+
+
+    @media only screen and (min-width: 300px) and (max-width: 450px){
+        .btn_type_03 {
+            font-size: 10px !important;
+            width: 100px;
+            height: 30px;
+        }
+    }
+
+    @media only screen and (min-width: 451px) and (max-width: 767px){
+        .btn_type_03 {
+            font-size: 12px !important;
+            width: 115px;
+        }
+    }
+
+
+    /*=====Ttitle=======*/
+
+
+    #survey_title h2{
+        font-size: 20px;
+        font-weight: bold;
+        line-height: normal;
+        color:#E37038;
+     }
+
+
+    #survey_title h3{
+        font-size: 18px;
+        font-weight: 700 !important;
+        margin-bottom: 3px !important;
+        color: #E37038;
+        margin-top: 4px !important;
+    }
+
+    @media only screen and (min-width: 451px) and (max-width: 767px){
+
+        #survey_title h2{
+            font-size: 19px;
+           
+         }
+    
+    
+        #survey_title h3{
+            font-size: 17px;
+          
+        }
+
+    }
+
+    @media only screen and (min-width: 300px) and (max-width: 450px){
+
+        #survey_title h2{
+            font-size: 18px;
+           
+         }
+    
+    
+        #survey_title h3{
+            font-size: 16px;
+          
+        }
+
+    }
+
+    .question_span {
+        width: 95%;
+        display: block;
+        font-size: 13px;
+        font-weight: 600 !important;
+        color: #000;
+    }
+    
+    #survey_dash_board{
+        margin: 20px 0px 20px 0px;
+       
+    }
+
+    #survey_dash_board h5{
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+       
+    }
+
+    #survey_dash_board h6{
+        color: #169FE6 !important;
+        font-size: 23px !important;
+        font-weight: bold;
+        margin-top: 5px !important;
+        padding-top: 5px !important;
+        display: block;
+        margin-left: 10px;
+    }
+
+  
+
+.asterisk{
+    color: #169FE6 !important;
+        font-size:16px !important;
+        font-weight: bold;
+        margin-top: 5px !important;
+        padding: 0px;
+        }
+
+    #survey_dash_board .img_icon{
+        width: 35px !important;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        display: none !important;
+    }
+
+    /*===== DASH BOARD BLOCK =========*/
+
+    .dashboard_block{
+        border: 1px solid #dee2e6 !important;
+        padding: 10px 20px;
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+        margin:0px 10px;
+    }
+
+
+    @media only screen and (min-width: 451px) and (max-width: 767px){
+        #survey_dash_board h5{
+            font-size: 15px;
+        }
+        #survey_dash_board h6{
+            font-size: 20px !important;
+        }
+    }
+
+    @media only screen and (min-width: 300px) and (max-width: 450px){
+        #survey_dash_board h5{
+            font-size: 14px;
+        }
+        #survey_dash_board h6{
+            font-size: 18px !important;
+        }
+
+        .dashboard_block{
+            border: 0px solid #dee2e6 !important;
+            padding: 7px 15px;
+            box-shadow: 0 0rem 0rem rgb(0 0 0 / 15%) !important;
+            margin:0px 3px;
+        }
+    }
+
+
+    
+
+
+    a {
+        color: #2694e0 !important;
+        font-weight: 600;
+    }
+
+    a:visited {
+        color: #2694e0 !important;
+        font-weight: 600;
+    }
+
+
+       @media only screen and (min-width: 300px) and (max-width: 767px) {
+
+        .container .one.column,
+        .container .one.columns,
+        .container .one.floated,
+        .container .two.columns,
+        .container .two.floated,
+        .container .three.columns,
+        .container .three.floated,
+        .container .four.columns,
+        .container .four.floated,
+        .container .five.columns,
+        .container .five.floated,
+        .container .six.columns,
+        .container .six.floated,
+        .container .seven.columns,
+        .container .seven.floated,
+        .container .eight.columns,
+        .container .eight.floated,
+        .container .nine.columns,
+        .container .nine.floated,
+        .container .ten.columns,
+        .container .ten.floated,
+        .container .eleven.columns,
+        .container .eleven.floated,
+        .container .twelve.columns,
+        .container .twelve.floated,
+        .container .thirteen.columns,
+        .container .thirteen.floated,
+        .container .fourteen.columns,
+        .container .fourteen.floated,
+        .container .fifteen.columns,
+        .container .fifteen.floated,
+        .container .sixteen.columns,
+        .container .sixteen.floated,
+        .container .one-third.column,
+        .container .two-thirds.column {
+            width: 95%!important;
+        }
+
+#wrapper, #footer, #footer-bottom {
+    width: 97% !important;
+    padding: 10px;
+    margin: 0 auto !important;
+}
+.container{
+    width: 95% !important;
+}
+
+
+}

@@ -1,0 +1,58 @@
+
+
+/*========INPUT==========*/
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #000 !important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc !important;
+}
+
+input[type="text"] {
+    display: block !important;
+}
+
+
+
+
+/*==============================================
+            MEDIA QURIES
+============================================*/
+
+@media only screen and (min-width:768px) and (max-width: 959px) {
+
+
+
+}
+
+
+@media only screen and (min-width:480px) and (max-width: 767px) {
+
+
+}
+
+
+@media only screen and (min-width:300px) and (max-width: 479px) {
+
+
+
+  
+}
+
+
+
+@media only screen and (min-width:300px) and (max-width: 480px) {
+
+#wrapper, #footer, #footer-bottom, .container {
+    width: 95% !important;
+    margin: 0 auto !important;
+}
+
+}
+
+
+

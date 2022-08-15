@@ -1,0 +1,44 @@
+
+/*==========================
+        STYLES
+===========================*/
+
+.gray_bg{
+
+
+}
+
+.text-blue{
+    color: #256dbc;
+}
+
+.img-block  {
+    margin-right: 0px;
+        width: 130px;
+        height: 130px;
+        overflow: hidden;
+        border: #fff solid 5px;
+
+}
+
+#landing_page  h3{
+    font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+}
+
+#landing_page  h4{
+
+font-size: 16px;
+        line-height: 18px;
+        font-weight: 600;
+
+}
+
+#label_container .star_rating {
+    margin-top: 0px;
+    width: 68px;
+    height: auto;
+    display: block;
+    margin-top: 2px;
+}

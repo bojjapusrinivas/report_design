@@ -1,0 +1,260 @@
+    /*===============================
+        SIMULATOR PAGE STYLES
+===============================*/
+    /*----- SNIPTS----*/
+    
+    .bg_light_yellow {
+        background: #FFD4AA
+    }
+    .bg_light_gray {
+        background: #e0e0e0;
+    }
+    /*----HEADER SECTION-----*/
+    
+    .header_titles p {
+        font-size: 20px;
+        margin: 5px 0px;
+    }
+    @media screen and (max-width: 480px) {
+        .header_titles p {
+            font-size: 16px;
+        }
+    }
+    /*------ CURRENTCY SECTION ---*/
+    
+    #currency_block h2 {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #900;
+        line-height: normal;
+        margin-top: 12px;
+    }
+    #currency_block .form-check-label {
+        font-weight: 700 !important;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    #currency_block a.close-modal {
+        top: 7.5px;
+        right: 7.5px;
+        display: block;
+        width: 25px;
+        height: 25px
+    }
+    /*====== TABLE STYLES =======*/
+    /* Mask for background, by default is not display */
+    
+    td,
+    tr {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    .table_responsive {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0 auto;
+        padding: 0;
+        width: 930px;
+        table-layout: fixed;
+        color: #000;
+        font-size: 14px;
+    }
+    .table_responsive caption {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .table_responsive tr {
+        border: 1px solid #ddd;
+        padding: .35em;
+    }
+    .table_responsive tr.cluster_row {
+        background: #e0e0e0;
+    }
+    .table_responsive th,
+    .table_responsive td {
+        text-align: center;
+        border: rgba(0, 0, 0, 0.2) solid 1px;
+        position: relative;
+        vertical-align: baseline;
+    }
+    .table_responsive th {
+        font-weight: bold;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: normal;
+    }
+    .table_responsive input {
+        width: 75px;
+        margin: 0 auto;
+        border-radius: 0px;
+        border: rgba(0, 0, 0, 0.3) solid 1px;
+    }
+    .table_responsive td span {
+        font-size: 12px;
+    }
+    .feedback_input {
+        width: 200px !important;
+    }
+    #region_block button {
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 0px !important;
+        padding: 0px;
+    }
+    #region_block button i {
+        font-size: 12px;
+        padding: 0px;
+        margin: 0px;
+        display: block;
+    }
+    /*
+        @media screen and (max-width: 767px) {
+            .table_responsive {
+                border: 0;
+            }
+            .table_responsive caption {
+                font-size: 1.3em;
+            }
+            .table_responsive thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+            .table_responsive tr {
+                border-bottom: 3px solid #ddd;
+        
+        display: block;
+        margin-bottom: .625em;
+    }
+    .table_responsive td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    .table_responsive td::before {
+        
+        
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: absolute;
+        left: calc(100% - 96%);
+        top: calc(100% - 70%);
+    }
+    .table_responsive td:last-child {
+        border-bottom: 0;
+    }
+    
+    .table_responsive td:nth-child(1) {
+        text-align: center;
+        font-size: 16px;
+        background: #404040;
+        color: #fff;
+    }
+    .table_responsive td:nth-child(1)::before,
+    .table_responsive td:nth-child(6)::before {
+        display: none;
+    }
+    .table_responsive tr.cluster_row td:nth-child(6) {
+        display: none;
+    }
+    .table_responsive tr.cluster_row td {
+        padding: 5px 0px
+    }
+}
+*/
+    
+    .table_capiton {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+    }
+    .expert_details {
+        width: 265px;
+        margin: 0 auto;
+    }
+    .expert_details h3 {
+        font-size: 19px;
+        text-transform: uppercase;
+        line-height: normal;
+    }
+    .expert_details h4 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .expert_details .star_rating {
+        margin-top: 2px;
+        width: 60px;
+        height: 14px;
+        display: block;
+    }
+    .expert_details .brand_cards .img-block {
+        width: 65px;
+        height: 65px;
+        align-items: center;
+        padding: 2px;
+        overflow: hidden;
+    }
+    .responsive_table {
+        width: 934px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 959px) {
+        .responsive_table {
+            width: 675px;
+        }
+        .table_responsive {
+            width: 632px;
+        }
+        .table_responsive input {
+            width: 50px;
+        }
+        .table_responsive th,
+        .table_responsive td {
+            font-size: 13px
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .container {
+            width: 300px;
+        }
+        .sixteen.columns {
+            width: 100%;
+        }
+        .responsive_table,
+        .table_responsive {
+            width: 356px;
+        }
+        .table_responsive input {
+            width: 40px
+        }
+        .table_responsive tbody tr td:nth-child(6) a.btn {
+            font-size: 12px;
+        }
+        .table_responsive thead tr th {
+            font-size: 11px;
+            padding: 10px 0px !important;
+        }
+        .table_responsive td span {
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 490px) {
+        .responsive_table {
+            width: 270px;
+        }
+        .table_capiton {
+            font-size: 15px;
+        }
+    }

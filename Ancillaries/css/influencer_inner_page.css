@@ -1,0 +1,73 @@
+a.submit_button:hover ., a.submit_button:focus {
+    color: #fff !important
+}
+
+#dsTable {
+width: 650px;
+margin: 0 auto;
+}
+
+#dsTable  thead tr  th:nth-child(1),
+#dsTable  tbody tr  td:nth-child(1){
+width:450px;
+}
+
+#dsTable  thead tr  th:nth-child(2),
+#dsTable  tbody tr  td:nth-child(2){
+width:50px;
+text-align: center;
+}
+
+#dsTable  thead tr  th:nth-child(3),
+#dsTable  tbody tr  td:nth-child(3){
+width:25px;
+}
+
+#dsTable  tbody tr  td{
+font-size: 15px;
+}
+
+
+
+#dsTable  thead tr  th{
+font-size: 16px;
+font-weight: bold;
+}
+#dsTable  thead tr {
+background: #f9ede8;
+}
+
+#dsTable input{
+background: transparent;
+padding:0px;
+margin: 0px;
+color: #169FE6;
+font-weight:400
+}
+
+.profile_image_block{
+width: 80px;
+height: 80px;
+background: #ccc;
+margin: 0 auto;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 767px){
+.container {
+width: 90% !important;
+}
+#dsTable {
+width: 100% !important;
+}
+
+
+#wrapper, #footer, #footer-bottom {
+width: 95% !important;
+margin: 0 auto !important;
+}
+}

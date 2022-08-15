@@ -1,0 +1,441 @@
+/*==================
+CFDTable styles
+==================*/
+/*---TABLE WIDTH---*/
+.CFDTable {
+    width: 100%;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+}
+.CFDTable tr {
+    width: 100%;
+}
+
+.CFDTable thead tr {
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+/*---TABLE ROW---*/
+.CFDTable .table-columns {
+    width: 100%;
+}
+
+.CFDTable .table-columns:nth-child(odd) {
+    background: #f1f1f1
+}
+
+.CFDTable thead{
+    table-layout: fixed;
+}
+
+/*---TABLE COLUMN---*/
+
+.CFDTable tbody .table-columns .col-1, .CFDTable thead .table-columns .col-1 {
+    width: 70%;
+    position: relative;
+    vertical-align: middle;
+}
+
+.CFDTable tbody .table-columns .col-2, .CFDTable thead .table-columns .col-2 {
+    width: 30%;
+    padding: 0;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.CFDTable tbody .table-columns .col-1 {
+    padding-left: 10px !important;
+}
+
+/*---Aletranage Columns---*/
+
+.CFDTable thead .table-columns .col-2 span:nth-child(odd){
+    background:transparent;
+}
+
+.CFDTable tbody .table-columns .col-2 span:nth-child(odd) {
+    background:#fff;
+    position: relative;
+}
+
+.CFDTable tbody .table-columns .col-2 span:nth-child(even) {
+    background: #f1f1f1;
+    position: relative;
+}
+
+/*---second span alignment---*/
+
+.CFDTable .table-columns .col-2 .rank-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+
+.CFDTable thead .table-columns .col-1  span
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+}
+
+.CFDTable thead .table-columns .col-1  span,
+.CFDTable thead .table-columns .col-2 .rank-control span{
+    height: 85px !important
+}
+
+.CFDTable thead .table-columns .col-2 span.th-title,
+.CFDTable tbody .table-columns .col-2 .rank-control span {
+    display: flex;
+    flex-grow: 1;
+   
+    height: 40px;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50px;
+    position: relative;
+}
+
+
+
+.CFDTable tbody .table-columns .col-2 .rank-control span:nth-child(1) {
+    border-left: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+
+.CFDTable thead .table-columns .col-2 span::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left: 0px;
+    border:#fff solid 1px;
+    transform: skew(-20deg);
+}
+
+.CFDTable thead .table-columns .col-2 span:nth-child(odd):before{
+    background-color: #fff;
+}
+
+.CFDTable thead .table-columns .col-2 span:nth-child(even):before{
+    background-color: #f1f1f1;
+}
+
+.CFDTable thead .table-columns .col-2 .rank-control{
+    margin-left: 12px;
+
+}
+
+/*---TABLE HEAD TITLE---*/
+
+.CFDTable thead .table-columns  span.th-title h3{
+    font-size: 14px;
+    font-weight: bold;
+     line-height: normal  !important
+}
+
+.CFDTable thead .table-columns .col-2 span.th-title h3{
+    position: absolute;
+    transform: rotate(-68deg);
+    -o-transform-origin:left;
+    bottom: 29px;
+   
+}
+
+.CFDTable thead .table-columns .col-2 span.th-title:nth-child(1) h3{
+    left: -15px
+}
+
+.CFDTable thead .table-columns .col-2 span.th-title:nth-child(2) h3{
+    left: -3px
+}
+
+.CFDTable thead .table-columns .col-2 span.th-title:nth-child(4) h3{
+    left: -9px
+}
+
+
+.CFDTable h3{
+    line-height: normal !important;
+}
+
+
+/*===TABLE===*/
+
+.myTable-1.CFDTable tbody, .myTable-1.CFDTable thead
+{
+    display: block;
+}
+
+.myTable-1.CFDTable .table-columns {
+    display: flex;
+}
+
+
+.myTable-1.CFDTable tbody 
+{
+   overflow: auto;
+   height: 600px;
+}
+
+.myTable-1.CFDTable {
+    width: 100% /* can be dynamic */
+}
+
+.myTable-1.CFDTable input{
+    width: 15px;
+    height: 15px;
+}
+
+/*=======FIXED HEIGHT=====*/
+.fixed-height{
+ height: 600px;
+overflow: auto;
+}
+
+/*===TABLE 2===*/
+
+.myTable-2.CFDTable tbody .table-columns .col-1, .CFDTable thead .table-columns .col-1 {
+    width: 69.5%;
+    position: relative;
+}
+
+.myTable-2.CFDTable tbody .table-columns .col-2, .CFDTable thead .table-columns .col-2 {
+    width: 30%;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+.myTable-2.CFDTable thead .table-columns .col-2 span.th-title:nth-child(1),
+.myTable-2.CFDTable tbody .table-columns .col-2 .rank-control span:nth-child(1){
+    width: 100px !important
+}
+
+
+
+
+
+
+
+
+.myTable-2.CFDTable thead .table-columns .col-2 span.th-title:nth-child(1) h3 {
+    left: -2px;
+    top: 23px;
+    padding-top: 10px
+}
+
+.myTable-2.CFDTable thead .table-columns .col-2 span.th-title h3 {
+    bottom: 24px;
+}
+
+#table2-header .col-1 span, #table2-header .col-2 .rank-control span {
+    height: 114px 
+}
+
+.myTable-2.CFDTable thead .table-columns .col-2 .rank-control {
+    margin-left: 19px;
+}
+
+.myTable-2.CFDTable thead .table-columns .col-2 span.th-title:nth-child(2) h3 {
+    left: -8px;
+        top: 85px;
+}
+
+.myTable-2.CFDTable thead .table-columns .col-2 span.th-title:nth-child(3) h3 {
+    left: -14px;
+    bottom: 34px;
+}
+
+.myTable-2.CFDTable thead .table-columns .col-2 span.th-title:nth-child(4) h3 {
+    left: -8px;
+        top: 85px;
+}
+
+
+
+
+.myTable-2.CFDTable thead .table-columns .col-1 span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+}
+
+.myTable-2.CFDTable thead .table-columns .col-2 span:nth-child(1):before{
+        width: 103px;
+        height: 100%;
+}
+
+
+
+
+/*===== SCROLL STYLING ======*/
+/* width */
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #0e7abe #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #F1F1F1;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #0e7abe;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+
+
+
+/*----INCRMENT DECERMENT-BUTTON----*/
+
+
+
+.inc-dec-block input {
+    width: 55px;
+    height: 30px;
+    margin: 2px;
+    text-align: center;
+}
+
+.inc-dec-block button {
+    
+    border: none;
+    font-size: 20px;
+    margin: 2px;
+     font-weight: bold;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.inc-dec-block  .cart-qty-plus{
+    background:transparent;
+    color: green;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+}
+
+.inc-dec-block  .cart-qty-minus{
+    background:transparent;
+    color: red;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 29px;
+}
+
+.myTable-2.CFDTable input[type='radio'] {
+    width: 15px;
+    height: 15px;
+}
+
+
+
+
+.myTable-2.CFDTable thead .table-columns .col-2 .rank-control::before{
+    content: " TRUST FACTOR ";
+    width: 55%;
+    height: 21px;
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    font-size: 15px;
+    /* padding: 5px; */
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    border-bottom: rgba(0,0,0,0.09) solid 1px;
+    z-index: 998;
+    padding-right: 10px;
+        z-index: 998;
+}
+
+
+
+
+
+
+
+
+
+/*-------------
+@MEDIA QURIES
+--------------*/
+
+@media only screen and (max-width: 767px){
+
+    .CFDTable h3{
+        line-height: normal !important;
+        font-size: 14px;
+        padding-top: 2px;
+    }
+
+    .CFDTable tbody .table-columns .col-1, .CFDTable thead .table-columns .col-1 {
+        width: 50% !important;
+      
+    }
+    
+    .CFDTable tbody .table-columns .col-2, .CFDTable thead .table-columns .col-2 {
+        width: 50% !important;
+       
+    }
+
+
+    .myTable-2.CFDTable tbody .table-columns .col-1, .CFDTable thead .table-columns .col-1 {
+        width: 50% !important;
+      
+    }
+    
+    .myTable-2.CFDTable tbody .table-columns .col-2, .CFDTable thead .table-columns .col-2 {
+        width: 50% !important;
+       
+    }
+
+
+    .CFDTable thead .table-columns span.th-title h3 {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: normal !important;
+}
+
+}
+
+
+@media only screen and (max-width: 767px){
+    #wrapper, #footer, #footer-bottom {
+            width: 90%;
+            margin: 0 auto !important;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto !important;
+}
+
+}
+
+
+
