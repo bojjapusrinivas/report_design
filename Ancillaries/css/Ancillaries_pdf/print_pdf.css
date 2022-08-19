@@ -1,0 +1,51 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    width: 8.268in important;
+    height: 11.693in !important
+}
+
+#save {
+    display: none;
+}
+
+.container,
+#wrapper {
+    width: 8in !important;
+    margin-top: -20px;
+
+}
+
+.top-fixed {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    z-index: 999;
+    height: 50px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.logo_text {
+    width: 421px;
+    height: 69px;
+    margin: 0 auto;
+
+    background-size: 59%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.newpage_break {
+    page-break-inside: auto;
+}
+
+#main_subtable {
+    width: 650px !important;
+    margin: 0 auto;
+}
