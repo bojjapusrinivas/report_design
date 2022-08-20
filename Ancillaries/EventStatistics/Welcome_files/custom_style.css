@@ -1,0 +1,160 @@
+/*============================
+        CUSTOM STYLE
+===========================*/
+
+body{
+    background-image:url(../img/bg/bg_01.png);
+    background-repeat: repeat;
+    font-family: 'Poppins', ;
+   /* font-family: 'Playfair Display', ;
+    font-family: 'Playfair Display SC', ;*/
+}
+
+
+main{
+    
+    padding-top:80px;
+}
+/*============================
+        CLASSES STYLE
+===========================*/
+
+.bg_white{
+    background:#fff;
+}
+
+.f_white{
+    color:#fff;
+}
+
+.bg_black{
+    background:#000;
+}
+
+.page_title{
+    color: #0f1519;
+    font-weight: bold;
+    font-size: 25px;
+}
+.btn_blue-dark {
+    background: #255E91;
+}
+
+.btn_blue-dark:hover {
+    background: #1E74C1;
+}
+.bg_light {
+    background: #f8f9fa;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 85px;
+    right: 5px;
+    display: none;
+    background:  #255E91;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.back-to-top:hover {
+    
+    background: #1E74C1;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/*============================
+        HEADER STYLE
+===========================*/
+
+#header{
+    background:#fff;
+    border-bottom:#1C75BC solid 2px;
+    z-index: 9999;
+}
+
+#header .brand_title img{
+    width:380px;
+}
+
+/*============================
+        Accordion STYLE
+===========================*/
+
+#template_01 #accordion-style-1 .card-header{
+    position: relative;
+}
+
+#template_01 #accordion-style-1 .card-header .card-title .fa.main{
+    display: none;
+}
+
+#template_01 #accordion-style-1 .card-header.collapsed .card-title .fa.main{
+    display: none;
+}
+
+#template_01 #accordion-style-1 .card-header  .fa.main{
+	background: #1c75bc;
+    padding: 13px 16px;
+    color: #ffffff;
+    width: 46px;
+    height: 42px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+	display:none;
+}
+#template_01 #accordion-style-1 .card-body {
+    border-bottom: 2px solid #1c75bc;
+}
+
+
+
+#template_01 #accordion-style-1 .card-header{
+    
+    padding:10px !important;
+}
+
+#template_01  .card-header .card-title {
+    font-weight: 400;
+    color: #1a1e21;
+    text-decoration: none !important;
+    font-size: 15px;
+    font-weight: bold;
+	
+}
+
+
+
+
+#template_01 .form-check-inline{
+    
+    margin-right: 0px !important;
+}
+
+#template_01 .form-check-label{
+    font-size: 12.5px !important;
+}
+
+/*===========================
+     SEARCH BOX SECTION
+===========================*/
+
+#template_01 .form-control {
+    font-size: 15px;
+    padding: 22px 10px;
+    position: relative;
+}
+#template_01 .form-control:focus {
+    border-color: #ccc;
+    box-shadow: none;
+}
+#template_01 .search_section button {
+    padding: 9px 10px;
+}
+#template_01 .search_section .form-check {
+    text-align: left;
+}
