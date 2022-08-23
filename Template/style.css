@@ -24,6 +24,12 @@ body {
     }
 }
 
+div {
+    align: left white-space: pre-wrap;
+    /* default = normal */
+    word-wrap: break-word;
+    /* default = normal */
+}
 
 
 
@@ -135,6 +141,29 @@ body {
 
 .container-wrapper ul li .compnay-value input:focus-visible {
     outline: 1px solid rgba(0, 0, 0, 0.09)
+}
+
+
+.container-wrapper ul li .compnay-value input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 100;
+    /* Firefox */
+}
+
+.container-wrapper ul li .compnay-value input :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.container-wrapper ul li .compnay-value input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 100;
 }
 
 
