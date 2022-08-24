@@ -10,7 +10,7 @@ body {
 }
 
 .container-wrapper {
-    width:630px;
+    width:540px;
     margin: 0 auto;
     padding: 4px;
 }
@@ -18,7 +18,7 @@ body {
 .container-wrapper h3 {
     color: #E85D52;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 40px;
 }
 
@@ -40,7 +40,7 @@ div {
     display: flex;
     justify-content: start;
     align-items: center;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -107,11 +107,11 @@ div {
 .container-wrapper ul li .compnay-info h4 {
     margin: 0 10px 1px 10px;
     color: #000;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 0;
     font-weight: 600;
     white-space: nowrap;
-    width: 400px;
+    width: 330px;
     overflow: hidden;
     text-overflow: ellipsis;
   
@@ -120,7 +120,7 @@ div {
 .container-wrapper ul li .compnay-info h5 {
     margin: 3px 10px 0px 10px;
     color: #c8c7c7;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
 }
 
@@ -198,19 +198,19 @@ div {
     }
 
     .container-wrapper h3 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .container-wrapper ul li .compnay-info h4 {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .container-wrapper ul li .compnay-info h5 {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .container-wrapper ul li.header-section {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .container-wrapper ul li.header-section div:nth-child(1) {
@@ -218,7 +218,7 @@ div {
     }
 
     .container-wrapper ul li .compnay-value h6 {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
@@ -238,26 +238,26 @@ div {
     
  
     .container-wrapper h3 {
-        font-size: 17px;
+        font-size: 16px;
         margin-left: 35px;
     }
 
     .container-wrapper ul li.header-section {
-        font-size: 16px;
+        font-size: 15px;
     }
 
 
     .container-wrapper ul li .compnay-info h4 {
         width:218px;
-        font-size: 17px;
+        font-size: 14px;
     }
 
     .container-wrapper ul li .compnay-info h5 {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .container-wrapper ul li .compnay-value h6 {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .container-wrapper ul li .compnay-value,
@@ -291,26 +291,26 @@ div {
     
  
     .container-wrapper h3 {
-        font-size: 16px;
+        font-size: 14px;
         margin-left: 35px;
     }
 
     .container-wrapper ul li.header-section {
-        font-size: 15px;
+        font-size: 13px;
     }
 
 
     .container-wrapper ul li .compnay-info h4 {
         width:155px;
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .container-wrapper ul li .compnay-info h5 {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .container-wrapper ul li .compnay-value h6 {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .container-wrapper ul li .compnay-value,
