@@ -45,9 +45,9 @@ div {
     text-transform: uppercase;
     text-align: center;
     position: sticky;
-    color: #209AA0;
+    color: #01BA8E;
     top: 0;
-    border-bottom: #209AA0 solid 3px;
+    border-bottom: #01BA8E solid 3px;
 }
 
 .container-wrapper ul li.header-section div:nth-child(1) {
