@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Styling Tempalte</title>
+
+    <link href="style.css" rel="stylesheet"/>
+    <link href="gia_theme_styles.css" rel="stylesheet"/>
+
+
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        .header{
+            text-align:center;
+            font-size:18px;
+            width:100%; 
+            border-bottom:rgba(0,0,0,0.2) solid 1px;
+            margin-bottom: 10px;
+            position: sticky;
+            top:10px;
+            padding:5px;
+            background-color: #fff;
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .header h1{
+            margin: 4px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!---HEADER BEGIN-->
+        <div class="header">
+            <h1 style=""> GIA THEME STYLES</h1>
+        </div>
+    <!---HEADER END-->
+    <div class="container">
+        <h1>Theme Switcher</h1>
+        <button id="switch" onclick="toggleTheme()">Switch</button>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+    // function to set a given theme/color-scheme
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+            setTheme('theme-light');
+        } else {
+            setTheme('theme-dark');
+        }
+    }
+
+    // Immediately invoked function to set the theme on initial load
+    (function () {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+            setTheme('theme-dark');
+        } else {
+            setTheme('theme-light');
+        }
+    })();
+</script>
+
+</html>
