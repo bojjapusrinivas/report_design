@@ -399,7 +399,8 @@ li, p, ul {
     width: 121px;
     text-align: center;
     font-weight: 600;
-    font-size: var(--font-size-15);
+    font-size: var(--font-medium);
+    color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -408,11 +409,12 @@ li, p, ul {
 }
 
 .stats .d-flex span i{
-    color: var(--gray);
+    color: var(--black);
     margin-left: 5px;
     font-style: normal;
     font-weight: 400;
-    font-size:var(--font-size-13);
+    font-size:var(--font-normal-2);
+    text-transform:capitalize;
 }
 
 
