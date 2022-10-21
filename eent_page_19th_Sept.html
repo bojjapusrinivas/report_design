@@ -532,7 +532,7 @@
                                                                     <div class="img-block" style="margin-right: 0px">
                                                                         <div class="w-100 h-100  d-flex justify-content-center align-items-center"
                                                                             style="overflow: hidden">
-                                                                            <img src="https://cbcrawler.marketglass.com/uploads/images/companies/5/w/5/i/e/2584f6653b51b9b98e6b4147e4e1d452d5844a73.png"
+                                                                            <img src="https://cbcrawler.marketglass.com/uploads/images/compani/5/w/5/i/e/2584f6653b51b9b98e6b4147e4e1d452d5844a73.png"
                                                                                 class="img-fluid">
                                                                         </div>
                                                                     </div>
@@ -580,7 +580,7 @@
                                                                     <div class="img-block" style="margin-right: 0px">
                                                                         <div class="w-100 h-100  d-flex justify-content-center align-items-center"
                                                                             style="overflow: hidden">
-                                                                            <img src="https://cbcrawler.marketglass.com/uploads/images/companies/5/w/5/i/e/2584f6653b51b9b98e6b4147e4e1d452d5844a73.png"
+                                                                            <img src="https://cbcrawler.marketglass.com/uploads/images/companies/5/w/5/i/e/2584f6653b51b9b98e6b4147e4e1d452d5844a.png"
                                                                                 class="img-fluid">
                                                                         </div>
                                                                     </div>
@@ -661,7 +661,25 @@
     var userList = new List('users', options);
 </script>
 
+<script>
 
+    $(document).ready(function () {
+        $(".img-block img").each(function () {
+            var img = $(this);
+            var image = new Image();
+            image.src = $(img).attr("src");
+            var no_image = "https://dummyimage.com/100x100/cccccc/000000&text=No+image";
+            if (image.naturalWidth == 0 || image.readyState == 'uninitialized') {
+                $(img).unbind("error").attr("src", no_image).css({
+                    height: $(img).css("height"),
+                    width: $(img).css("width"),
+                });
+            }
+        });
+    });
+
+
+</script>
 
 
 
