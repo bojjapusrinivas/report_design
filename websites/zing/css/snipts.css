@@ -1,0 +1,383 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --color_1: #606060;
+    /*--color_2: #00B9E8;*/
+    --color_2: #AF2024;
+    --color_3: #ffefaa;
+    --color_4: #2f2e2e;
+    --transition: all 0.3s linear;
+    --border-radius: 10px !important;
+    --border: rgba(0, 0, 0, 0.2) solid 1px;
+    --shadows: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    --shadows-down: 0px 0px 0px rgba(0, 0, 0, 0);
+    --letterspacing1: 1px;
+    --letterspacing2: 1.5px;
+    --letterspacing3: 2px;
+    --margin-xxl: 50px;
+    --margin-xl: 35px;
+    --margin-l: 25px;
+    --margin-m: 20px;
+    --margin-sm: 15px;
+    --margin-xsm: 8px;
+
+    --margin75: 75px;
+    --margin100: 100px;
+    --margin125: 125px;
+    --margin150: 150px;
+
+    --padding-xxl: 50px;
+    --padding-xl: 35px;
+    --padding-l: 25px;
+    --padding-m: 20px;
+    --padding-sm: 15px;
+    --padding-xsm: 8px;
+
+    --font_default: normal normal normal 16px/normal -apple-system, BlinkMacSystemFont;
+    --btn_font: normal normal 16px/normal -apple-system, BlinkMacSystemFont;
+
+}
+
+body,
+p {
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        "Liberation Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+/*=======================
+       LAYOUT
+=======================*/
+
+main {
+    margin-top: 75px;
+}
+
+#main-content {
+    margin-top: 50px
+}
+
+
+/*=======================
+       SPACING
+=======================*/
+.margin-xxl {
+    margin-top: var(--margin-xxl);
+    margin-bottom: var(--margin-xxl);
+}
+
+.margin-xl {
+    margin-top: var(--margin-xl);
+    margin-bottom: var(--margin-xl);
+}
+
+.margin-l {
+    margin-top: var(--margin-l);
+    margin-bottom: var(--margin-l);
+}
+
+.margin-m {
+    margin-top: var(--margin-m);
+    margin-bottom: var(--margin-m);
+}
+
+.margin-sm {
+    margin-top: var(--margin-sm);
+    margin-bottom: var(--margin-sm);
+}
+
+
+.margin-xsm {
+    margin-top: var(--margin-xsm);
+    margin-bottom: var(--margin-xsm);
+}
+
+.margin-75 {
+    margin-top: var(--margin75);
+}
+
+.margin-100 {
+    margin-top: var(--margin100);
+}
+
+.margin-125 {
+    margin-top: var(--margin125);
+}
+
+.margin-150 {
+    margin-top: var(--margin150);
+}
+
+
+
+.padding-xxl {
+    padding-top: var(--padding-xxl);
+    padding-bottom: var(--padding-xxl);
+}
+
+.padding-xl {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+}
+
+.padding-l {
+    padding-top: var(--padding-l);
+    padding-bottom: var(--padding-l);
+}
+
+.padding-m {
+    padding-top: var(--padding-m);
+    padding-bottom: var(--padding-m);
+}
+
+.padding-sm {
+    padding-top: var(--padding-sm);
+    padding-bottom: var(--padding-sm);
+}
+
+.padding-xsm {
+    padding-top: var(--padding-xsm);
+    padding-bottom: var(--padding-xsm);
+}
+
+
+
+
+
+/*=======================
+        Buttons
+=======================*/
+.btn-xxxxl,
+.btn-xxxl,
+.btn-xxl,
+.btn-xl,
+.btn-xl {
+    height: auto;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    box-shadow: var(--shadows);
+    margin-top: var(--margin-sm);
+    margin-bottom: var(--margin-sm);
+
+}
+
+.btn-xxxxl:hover,
+.btn-xxxl:hover,
+.btn-xxl:hover,
+.btn-xl:hover,
+.btn-xl:hover {
+    box-shadow: var(--shadows-down);
+}
+
+
+
+.btn-xxxxl {
+    width: 340px;
+
+}
+
+.btn-xxxl {
+    width: 290px;
+
+}
+
+.btn-xxl {
+    width: 240px;
+
+}
+
+.btn-xl {
+    width: 190px;
+
+}
+
+/*=======================
+    LINKS & BTTON THEME
+=======================*/
+
+
+.theme1,
+.theme1:hover,
+.theme2,
+.theme1:hover,
+.theme3,
+.theme3:hover,
+.theme4,
+.theme4:hover,
+.theme5,
+.theme5:hover,
+.theme6,
+.theme6:hover,
+.theme7,
+.theme7:hover,
+.theme8,
+.theme8:hover {
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    text-decoration: none;
+
+}
+
+.theme1 {
+    background: var(--color_3) !important;
+    color: var(--color_2) !important;
+
+}
+
+.theme1:hover {
+    background: var(--color_4) !important;
+    color: var(--color_2) !important;
+    font-size: ;
+}
+
+
+.theme2 {
+    background: var(--white) !important;
+    color: var(--color_2) !important;
+
+}
+
+.theme2:hover {
+    background: var(--color_4) !important;
+    color: var(--color_2) !important;
+    font-size: ;
+}
+
+.theme3 {
+    background: transparent;
+    color: var(--white) !important;
+    border: var(--color_4) solid 2px;
+}
+
+.theme3:hover {
+    background: var(--color_4) !important;
+    color: var(--white) !important;
+    font-size: ;
+}
+
+
+.theme4 {
+
+    color: var(--color_3) !important;
+
+
+}
+
+.theme4:hover {
+    color: var(--color_4) !important;
+}
+
+
+.theme5 {
+    background: var(--color_2) !important;
+    color: var(--white) !important;
+
+}
+
+.theme5:hover {
+    background: var(--color_4) !important;
+    color: var(--white) !important;
+
+}
+
+
+
+
+
+/*=======================
+       Fonts
+=======================*/
+
+.display1,
+.display2,
+.display3,
+.display4,
+.display5,
+.display6,
+.display7 {
+    margin-top: var(--margin-m);
+    margin-bottom: var(--margin-m);
+    letter-margin: var(--lettermargin1);
+}
+
+
+.display1 {
+    font-size: 60px;
+    line-height: 68px;
+}
+
+
+.display2 {
+    font-size: 40px;
+
+}
+
+
+.display3 {
+    font-size: 26px;
+
+}
+
+.display4 {
+    font-size: 23px;
+
+}
+
+.display7 {
+    font-size: 18px;
+}
+
+
+/*=======================
+       colors
+=======================*/
+
+.text_white {
+    color: var(--white);
+}
+
+.text_black {
+    color: var(--black)
+}
+
+/*=======================
+       colors
+=======================*/
+
+.list {
+    list-style: none;
+
+}
+
+.list li {
+    margin-bottom: var(--margin-xsm);
+}
+
+.list-doted {
+    list-style: square !important
+}
+
+
+.list-span li span {
+    padding: 0px 5px;
+}
+
+.list-span-border-right li span {
+    border-right: var(--border);
+
+}
+
+.last-child-border-none li span:last-child {
+    border: none !important
+}

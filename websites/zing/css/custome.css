@@ -1,0 +1,161 @@
+@import url("snipts.css");
+
+
+
+/*=======================
+        NavBar
+=======================*/
+
+.zingNavBar {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.zing-navbar-brand img {
+    width: 200px;
+}
+
+.zing-navbar-nav li {
+    border-right: var(--border);
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.zing-navbar-nav li:last-child {
+    border-right: none
+}
+
+.zing-navbar-nav li a {
+    color: var(--color_1);
+    font-size: 17px;
+    font-weight: 600;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*** Hover & Active & Focus ***/
+
+.zing-navbar-nav li.active,
+.zing-navbar-nav li:hover {
+    background: var(--color_2) !important;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+
+}
+
+
+.zing-navbar-nav li:hover a,
+.zing-navbaer-nav li.active a,
+.zing-navbaer-nav li.nav-item.active .nav-link,
+.zing-navbaer-nav li a:visited {
+    color: var(--white) !important;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+
+}
+
+/*** Media quris ***/
+
+@media (max-width: 991.98px) {
+
+    .zing-navbar-nav li {
+        border-right: none;
+        border-bottom: var(--border)
+    }
+
+    .zing-navbar-nav li:last-child {
+        border-bottom: none
+    }
+
+}
+
+
+
+/*=======================
+        BANNER
+=======================*/
+
+.banner {
+    background-color: var(--color_2);
+    padding: 15px 0px;
+}
+
+
+/*=======================
+        COUNCILE
+=======================*/
+
+
+.conuncilList {
+    margin-top: 50px;
+
+}
+
+.conuncilList li {
+    margin-bottom: 35px;
+
+}
+
+.topImageBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.topImageBlock div {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    border: var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.topImageBlock div:nth-child(2) {
+    margin-left: -10px;
+    z-index: 9;
+}
+
+.concilInfo {
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.concilInfo h3 {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.concilInfo h4 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*=======================
+        FOOTER
+=======================*/
+
+footer {
+    border-top: var(--color_2) solid 1px
+}
+
+.footer_logo {
+    width: 75px;
+    height: auto;
+}
+
+.social-links img {
+    width: 30px;
+
+}
