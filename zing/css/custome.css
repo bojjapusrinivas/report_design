@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*==============
+   Body
+==============*/ 
+
+body{
+    font-family: 'Poppins', sans-serif !important
+}
+
+/*===============
+    bg-color
+================*/
+.light_bg_1{
+    background-color: #F9F9F9;
+}
+
+.text-black{
+    color: #000;
+}
+
+/*==============
+   Nav bar
+==============*/ 
+
+
+.zingLogo{
+    width: 60px;
+    height: auto;
+}
+
+/*==============
+    BANNER
+==============*/ 
+
+.gradient-banner{
+    background-image: url(../images/zing/bg_banner.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;   
+}
+
+
+.bannerTitleBlock{
+    position: relative;
+}
+
+
+
+.bannertitle{
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight:600 !important;
+    margin: 0px;
+    line-height: normal;
+}
+
+.bannertagline{
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight:300 !important;
+    margin: 0px;
+    letter-spacing: 1.3px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+    line-height: normal;
+}
+
+
+
+
+.bannerSearchbar{
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 3px;
+}
+
+.bannerSearchbar input[type=text], .bannerSearchbar  input:focus, input:focus-visible{
+    background: none;
+    box-shadow: none;
+    border: #fff solid 1px !important;
+    margin: 0px 6px;
+    padding: 9px;
+
+}
+
+.bannerSearchbar input[type=text]::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+    font-size: 12px;
+    font-weight: 200;
+  }
+  
+
+.bannerSearchbar input[type=text]::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white !important;
+   }
+   
+   .bannerSearchbar input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
+    color: white !important;
+   }
+
+.bannerSearchbar button{
+    width: 55px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold !important;
+    background:#B41C21;
+    border:none;
+    opacity: 1 !important;
+
+}
+
+.bannerSearchbar button:hover{
+    width: 55px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold !important;
+    background:#851317 !important;
+    border:none;
+    opacity: 1 !important;
+
+}
+
+
+.gradient-banner {
+    padding: 22px 0 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pull-top {
+    margin-top: 0px !important
+}
+
+@media (min-width: 1200px){
+    .bannertitle{
+        font-size: 48px;
+        
+    }
+    .bannertagline{
+        font-size: 24px;
+    }
+
+    .gradient-banner {
+        padding: 130px 0 170px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .pull-top {
+        margin-top: -100px !important
+    }
+
+}
+
+@media (min-width: 768px){
+
+
+
+}
+
+
+@media (min-width: 576px){
+
+    .bannertitle {
+        font-size: 41px;
+    }
+
+    .bannertagline {
+        font-size: 20px;
+    }
+
+}
+/*===================
+   Dash Board 
+====================*/
+
+.dashboard{
+    box-sizing: border-box;
+    padding: 0px !important;
+}
+
+.dashboard .dashboard-list {
+    padding: 16px 10px !important
+}
+
+.dashboard .dashboard-list{
+    border-bottom: rgba(0,0,0,0.2) solid 1px;
+}
+
+.dashboard-list h3{
+
+    font-weight: bold;
+    font-size:22px;
+}
+
+.dashboard-list img {
+    width: 40px;
+    height: auto;
+}
+
+.counter{
+    font-weight: 400 !important;
+    
+    
+}
+
+
+@media (min-width: 1200px){
+
+    .dashboard-list h3{
+        font-size: 23px;
+        font-weight: 700;
+        color:#000;
+    }
+
+    .counter{
+        font-weight: 500;
+        font-size: 23px !important;
+        color: #000 !important;
+        
+    }
+
+}
+
+
+@media (min-width: 767px){
+
+    .dashboard .dashboard-list:nth-child(1){
+        border-right: rgba(0,0,0,0.2) solid 1px;
+        border-bottom: rgba(0,0,0,0.2) solid 1px;
+    }
+
+    .dashboard .dashboard-list:nth-child(3){
+        border-right: rgba(0,0,0,0.2) solid 1px;
+        border-bottom: rgba(0,0,0,0.2) solid 0px;
+    }
+
+    .dashboard .dashboard-list:nth-child(5){
+        border-left: rgba(0,0,0,0.2) solid 0px;
+        border-top: rgba(0,0,0,0.2) solid 1px;
+        border-right: rgba(0,0,0,0.2) solid 1px;
+    }
+
+    .dashboard .dashboard-list:nth-child(2),
+    
+    .dashboard .dashboard-list:nth-child(4){
+       
+        border-bottom: rgba(0,0,0,0.2) solid 1px;
+    }
+
+}
+
+
+@media (min-width: 991px){
+
+    .dashboard .dashboard-list:nth-child(1){
+        border-right: rgba(0,0,0,0.2) solid 1px;
+        border-bottom: rgba(0,0,0,0.2) solid 1px;
+    }
+
+    .dashboard .dashboard-list:nth-child(3){
+        border-left: rgba(0,0,0,0.2) solid 1px;
+        border-bottom: rgba(0,0,0,0.2) solid 1px;
+    }
+
+    .dashboard .dashboard-list:nth-child(5){
+        border-left: rgba(0,0,0,0.2) solid 1px;
+        border-top: rgba(0,0,0,0.2) solid 1px;
+        border-right: rgba(0,0,0,0.2) solid 1px;
+    }
+
+    .dashboard-list img{
+        width: 40px;
+        height: auto;
+    }
+
+    .dashboard-list h3{
+        font-size: 25px;
+        font-weight: 600;
+        color:#000;
+    }
+
+    .counter{
+        font-weight: 500;
+        font-size: 25px !important;
+        color: #000 !important;
+        
+    }
+}
+/*===================
+    FORM STYLES
+====================*/
+input[type=text]{
+    border-bottom: rgba(0,0,0,0.2) solid 1px;
+    padding: 2px 10px;
+
+}
+
+lable{
+    font-weight: bold !important;
+}
+
+input:focus,
+input:focus-visible{
+    border: #4277bc solid 1px !important
+}
+/*====================
+    Data tables
+=====================*/
+.datatables{
+    margin: 0px 15px !important;
+}
+
+.datatables tr td{
+    font-size: 14px;
+    color:#000;
+}
+
+.datatables thead{
+    background: #4277bc;
+    color: #fff;
+}
+.datatables thead tr th{
+    width: 14px;
+    font-weight: bold;
+    text-transform:uppercase;
+    text-align: center !important
+}
+
+.datatables thead tr th:nth-child(1).sorting_asc::before,
+.datatables thead tr th:nth-child(1).sorting_asc::after{
+    display: none;
+}
+.datatables thead tr th:nth-child(1),
+.datatables tbody tr td:nth-child(1){
+    width: 14px !important;
+    
+  
+}
+
+.dataTables_filter{
+    width: 140px;
+    height: 20px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.dataTables_info{
+    display: none;
+}
+
+.dataTables_scrollBody{
+    overflow-x: hidden !important;
+}
+
+/*=============================
+    CURATE TABLE
+==========================---*/
+
+.curate_table tbody tr td{
+    text-align: center !important;
+}
+.curate_table tbody tr td:nth-child(2){
+    text-align: left !important;
+   
+}
+.curate_table thead tr th:nth-child(2),
+.curate_table tbody tr td:nth-child(2){
+    width: 350px !important;
+}
+
+.curate_table thead tr th:nth-child(5),
+.curate_table tbody tr td:nth-child(5){
+    width: 80px !important;
+}
+
+/*=============================
+    speakers
+==========================---*/
+
+.speakers_table tbody tr td{
+    text-align: center !important;
+}
+.speakers_table tbody tr td:nth-child(2){
+    text-align: left !important;
+   
+}
+.speakers_table thead tr th:nth-child(2),
+.speakers_table tbody tr td:nth-child(2){
+    width:45px !important;
+}
+
+.speakers_table thead tr th:nth-child(3),
+.speakers_table tbody tr td:nth-child(3){
+    width:250px !important;
+}
+
+.speakers_table tbody tr td:nth-child(3){
+   text-align: left !important;
+}
+
+
+/*=============================
+    Footer Logo
+==========================---*/
+
+footer .block img, footer .block .footerLinks, footer .block .social-icon{
+    margin-bottom: 0px !important;
+}
+
+
+.footer-logo{
+    width: 38px;
+    height: auto;
+
+}
+
+.footerLinks{
+    display:flex;
+    justify-content:center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footerLinks li{
+    margin: 5px 15px;
+    font-size: 13px;
+}
+
+.footer-main .block ul.social-icon li a {
+    text-decoration: none;
+  
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: rgb(63, 63, 67);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height:normal;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-main .block ul.social-icon li a i{
+    font-size: 15px !important;
+}
+
