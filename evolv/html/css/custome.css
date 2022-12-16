@@ -30,8 +30,9 @@ body{
 =================*/
 
 .brandImg{
-    width: 210px;
+    width: 199px;
     height: auto;
+    margin-top: 5px;
 }
 
 .customeNavBar{
