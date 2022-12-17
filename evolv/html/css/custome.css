@@ -382,6 +382,44 @@ body{
 
 
 /*==============================
+       Eco system Dash Board
+===============================*/
+
+.ecosysem-dashboard h3 span{
+    color:var(--maincolor)
+}
+
+
+.ecosysem-dashboard hr{
+    border-top: 2px solid var(--fourthcolor);
+}
+
+.ecosysem-dashboard ul  {
+    margin-bottom:30px  !important;
+ }
+ 
+
+.ecosysem-dashboard ul  li{
+   padding:4px 0px 4px 10px !important;
+}
+
+
+.ecosysem-dashboard ul  li:before {
+    content: '\f0da';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-family: FontAwesome;
+    color: var(--maincolor);
+    margin-left: -11px;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+
+
+
+/*==============================
         map animation
 ===============================*/
 
