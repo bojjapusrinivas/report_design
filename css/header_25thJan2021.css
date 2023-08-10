@@ -1,0 +1,108 @@
+/*=============================
+     header_footer style
+=============================*/
+
+
+/*======= HEADER========*/
+
+header#header {
+    height: auto;
+    margin-bottom: 6px;
+}
+#top-line {
+    box-shadow: none !important;
+}
+
+/*--nav---*/
+
+#gia_nav_new {
+    margin-bottom: 10px
+}
+#gia_nav_new #navigation {
+    background: none !important;
+    border-radius: 0px !important;
+    display: flex;
+    -webkit-display: flex;
+    justify-content: center;
+}
+#gia_nav_new #navigation .menu li a {
+    padding: 2px 10px;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    border-right: rgba(0, 0, 0, 0.2) solid 1px;
+    transition: background linear 0.25s;
+    -webkit-transition: background linear 0.25s;
+    -moz-transition: background linear 0.25s;
+}
+#gia_nav_new #navigation .menu li a:active,
+#gia_nav_new #navigation .menu li a:hover {
+    background: #169fe6;
+    color: #fff;
+    transition: background linear 0.25s;
+    -webkit-transition: background linear 0.25s;
+    -moz-transition: background linear 0.25s;
+}
+
+/*---HIDING SEARCH ICON FOR DESKTOP---*/
+
+#gia_nav_new #navigation .menu li:nth-child(7) a {
+    border-right: none;
+}
+#gia_nav_new #navigation .menu li.search_on_mobile {
+    display: none;
+}
+#gia_nav_new #navigation .menu li.insider_desktop,
+#gia_nav_new #navigation .menu li.search_desktop {
+    display: block;
+}
+
+/*---- HIDING MOBILE DROP DOWN MENU -----*/
+
+@media only screen and (max-width: 959px) and (min-width: 300px) {
+    #gia_nav_new #navigation .menu li:nth-child(8) a {
+        border-right: none;
+    }
+    #gia_nav_new #navigation #selectnav2,
+    #gia_nav_new #navigation #selectnav1 {
+        display: none !important;
+    }
+    #gia_nav_new #navigation .menu {
+        display: block
+    }
+    #gia_nav_new #navigation .menu li.search_on_mobile {
+        display: block;
+    }
+    #gia_nav_new #navigation .menu li.insider_desktop,
+    #gia_nav_new #navigation .menu li.search_desktop {
+        display: none;
+    }
+    header#header {
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+/*---- CHINGING FONT VIEW -----*/
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+    #gia_nav_new #navigation .menu li a {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 479px) {
+    #gia_nav_new #navigation .menu li a {
+        padding: 2px 6px;
+        color: #000;
+        font-weight: 600;
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 480px) and (min-width:250px) {
+    #gia_nav_new #navigation .menu li a {
+        padding: 1px 3px;
+        color: #000;
+        font-weight: 600;
+        font-size: 11px;
+    }
+}

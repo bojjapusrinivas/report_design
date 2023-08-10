@@ -31,7 +31,7 @@
 .chosen-wrapper .chosen-container .chosen-single {
     border-radius: 0;
     height: 30px;
-
+	text-align:left;
     background: #fff;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.5);
@@ -42,7 +42,7 @@
     /* background: #f00; */
     width: 100%;
     display: block;
-    margin: 25px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
     border-bottom: #ccc solid 1px;
 }
 
@@ -95,21 +95,22 @@
     color: #000;
     max-height: 0px;
     margin: 0;
-    padding: 0;
+    padding: 4px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background: #fff;
-    border: #ccc solid 1px;
+    border: rgba(0,0,0,0.005) solid 1px;
     height: auto;
     overflow: auto;
-    min-height: 159px;
+    max-height: 159px;
 }
 
 .chosen-wrapper .chosen-container .chosen-results li {
     padding: 5px 0px 5px 17px;
     width: 250px;
     margin: 0;
+	text-align:left;
     font-size: 15px;
     -webkit-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
     -o-transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -222,10 +223,9 @@
 
     .chosen-wrapper .chosen-container .chosen-results li {
         padding: 5px 10px;
-        width: 200px;
+        width: 300px;
         margin: 0;
         font-size: 13px;
-
     }
 
 
@@ -245,9 +245,9 @@
 
     .chosen-wrapper .chosen-container .chosen-results li {
         padding: 3px 0px 3px 17px;
-        width: 195px;
+        width: 100%;
         margin: 0;
-        font-size: 12px;
+        font-size: 13px;
 
     }
 

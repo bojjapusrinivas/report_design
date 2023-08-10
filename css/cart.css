@@ -99,9 +99,9 @@ th {
     .shop_cart_table td,
     .shop_cart_table2 td {
         /* Behave  like a "row" */
-        border: none;
+        border: none !important;
         position: relative;
-        padding-left: 40%;
+        padding-left: 40% !important;
         text-align: left !important;
     }
     .shop_cart_table td:nth-child(1),

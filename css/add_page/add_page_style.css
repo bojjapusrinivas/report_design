@@ -13,7 +13,14 @@ body {
 }
 .ecosystem_block {
     height: auto;
+	font-size:12px;
 }
+.ecosystem_block  .five.columns{
+   margin-top:0px !important;
+   
+}
+
+
 @media only screen and (max-width:767px) {
     .mobile_display {
         display: none !important;
@@ -31,6 +38,120 @@ body {
         display: none !important;
     }
     #add_page button {
+        font-size: 12px;
+    }
+}
+
+/*---------------------------
+    simulator_top_header
+-------------------------*/
+
+.brand_cards {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.0);
+}
+.brand_cards .img-block {
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    padding: 2px;
+    overflow: hidden;
+}
+#brand_cards h3 {
+    color: #e37038 !important;
+    font-size: 20px;
+    line-height: normal !important;
+}
+#brand_cards h4 {
+    font-size: 15px;
+    line-height: 17px;
+}
+#brand_cards h4 span.company_title1 {
+    display: inline-block;
+}
+#brand_cards h4.company_title {
+    display: none;
+}
+#brand_cards h5 {
+    font-size: 15px;
+}
+.fixed-top .brand_cards {
+    width: 1019px;
+    margin: 0 auto;
+    padding-left: 53px !important;
+    padding-right: 53px !important;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    /*transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;*/
+}
+.fixed-top {
+    position: fixed;
+    top: -10px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.star_rating {
+    margin-top: 8px;
+    width: 60px;
+    height: 14px;
+    display: block;
+}
+@media screen and (max-width: 959px) {
+    .fixed-top .brand_cards {
+        width: 710px;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+    .ecosystem_block .five.columns {
+        width: 250px !important;
+        float: left;
+    }
+}
+@media screen and (max-width: 767px) {
+    .fixed-top .brand_cards {
+        width: 420px;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+}
+@media screen and (max-width: 479px) {
+    .fixed-top .brand_cards {
+        width: 320px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    #brand_cards h3 {
+        color: #e37038 !important;
+        font-size: 15px;
+        line-height: normal !important;
+    }
+    #brand_cards h4 {
+        font-size: 13px;
+    }
+    #brand_cards h5 {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .fixed-top .brand_cards {
+        width: 100%;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .brand_cards .img-block {
+        width: 70px;
+        height: 70px;
+    }
+    #brand_cards h3 {
+        color: #e37038 !important;
+        font-size: 15px;
+        line-height: normal !important;
+    }
+    #brand_cards h4 {
+        font-size: 13px;
+    }
+    #brand_cards h5 {
         font-size: 12px;
     }
 }

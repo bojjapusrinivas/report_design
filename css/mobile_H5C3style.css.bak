@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; --color:#666666; 	color:#000000; margin-left:0px;
+	margin-top:0px; margin-right:0px; margin-bottom:0px; height:100%; background:#f2f2f2 url(/images/Mobile-Top_bg.png) repeat-x;  }
+
+.main_shell{ width:70%; margin:0px auto; height:100%; padding:0px 10px}
+
+/*-----------------------welcome-Guest-------------*/
+.welcome{width:55%; float:left; margin:0px; padding:8px 8px}
+
+.lang_pan{width:20%; float:left; margin-top:2px;  height:28px; margin:0px;}
+
+.implinks{width:100%px; float:left; margin:0px 0px 0px 0px; padding:0px 0px; text-align:left;}
+.implinks ul li{ margin:5px 0px 0px 0px ; padding:0px 2px; list-style:none; display:inline; float:right; border-right:solid 1px #FFFFFF; line-height:7px;}
+.implinks ul li a{margin:0px; padding:0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#FFFFFF; line-height:1px }
+
+/*------------------------ welcome-Guest end ------------------------*/
+
+/*------------------------ Identity starts ------------------------*/
+.logo{ width:100%; height:auto; float:left; margin:15px 0px 0px 0px ; padding:0px 0px;}
+.search{ width:100%; float:right; margin:10px 0px 0px 0px ; padding:0px 0px; text-align:right; }
+.round_box{ background:#0167ab; height:60px; padding:5px 5px; border:solid 2px #FFFFFF; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:5px; text-align:center}
+.text_box{margin:10px 0px 0px 30px; width:70%}
+.search_img{margin:7px 0px 0px 0px}
+/*--------------------------Nav_bar-------------------*/
+
+/* Navigation starts */
+
+.navigation{ width:100%;background-color:#00a8e8; height:25px; padding:0px; margin:0px; -moz-border-radius:5px;
+	-webkit-border-radius:5px; border-radius:0px; behavior:url("css/border-radius.htc");border:none; float:left; height:auto }
+
+.navigation ul{ margin:0px 0px; padding:0px; background:#00a8e8 ; border:none; width:100%;line-height:25px;}
+
+.navigation ul li{ margin:0px; padding:0px; list-style:none; float:left; display:inline; border: #CCC solid 1px; width:100%; height:30px; }
+.navigation ul li a{margin:0px; padding:0px 30px; color:#FFFFFF; font-weight:bold;*/line-height:25px; height:25px;	border:none; font-size:12px; width:71% }
+.navigation ul li a:hover{ color:#C90; border:none; background:#00a8e8}
+.navigation ul li a.selected{ color:#090; border:none; background:#0167ab}
+/*-------------------content------------------------*/
+.container{	float:left; width:100%; margin:5px auto; padding:0px}
+.left_pannel{ float:left; width:100%; height:auto; margin:0px;	padding:0px;}
+.wrapper{float:left;width:100%; height:auto; background:#e3e3e3 none}
+#display{ width:95%; margin:10px; font-family:Verdana, Geneva, sans-serif; font-size:10px; font-weight:600; color:#00417c; text-align:justify; clear:left }
+#display ul li{width:95%; text-align:left; list-style: url(/images/tickmark.png); float:left; line-height:25px}
+
+#sub-wappermobile{float:left; margin:0px; width:100%; visibility:visible}	
+#sub-wappermobile h5{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:13px; color:#FFF; border-bottom:solid 1px #00adef; margin:0px; background-color:#00a8e8; padding:5px; padding-left:20px; display:block; width:93%; float:left; text-align:center; -webkit-border-top-right-radius:7px; -webkit-border-top-left-radius:7px;visibility:visible; height:20px}
+
+#sub-wapper h4{visibility: collapse; height:0px; width:0px }
+#sub-wapper h3{visibility: collapse; height:0px; width:0px}
+#sub-wapper{ visibility:collapse;height:0px; width:0px}
+
+
+.research{float:left; margin-top:40px; width:100%}
+	
+/*--------------------------------------------------------display wapper------------------------------------------*/
+
+
+
+.category{ float:left; width:100%; margin:0px 20px 0px 0px; padding:0px; margin-top:10px; }
+.category ul{margin:0px; padding:0px; float:left; background: none}
+
+.category ul li a{ margin:0px; padding:0px 0px 0px 10px; list-style:none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px;
+	--color:#666666; color:#000000; background: url(/images/arrow.gif) no-repeat 0px 7px; float:left; line-height:20px; display:block; width:100%}
+	
+.right_pannel{ float:left; width:120%; height:auto; padding:0px; margin:0px 0px 0px 5px } 
+
+.rounded_box{ background-color:#FFFFFF; height:auto; padding:10px; border:1px solid #00adef; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+	-khtml-border-radius: 5px; behavior:url("http://www.strategyr.com/gia_new/strategyr_new/css/border-radius.htc"); float:left; display:block;
+	width:65%; margin:15px }
+	
+
+/*-------------------footer-----------------------*/
+
+.bottom_nav{width:100%;float:left;}
+.bottom_nav ul{margin:0px;padding:0px;width:100%;}
+.bottom_nav ul li{margin:0px; padding:0px 2px;	list-style:none; display:inline; float:left; border-right:solid 1px #666666;line-height:12px;}
+
+
+.bottomicons{ width:100%; float:left; text-align:right; }
+.bottomicons img{ border:none; margin-left:2px; }
+
+

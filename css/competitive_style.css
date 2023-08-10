@@ -385,6 +385,7 @@ h4.font-weight-bold {
 
  .region_selection_block{
      background-color: #FFF1EB;
+	 overflow:auto;
  }
  
 #region_selection_dropdown_01{
@@ -415,10 +416,14 @@ h4.font-weight-bold {
 
 @media only screen and (min-width:300px) and  (max-width: 479px){
 
-
+#wrapper, #footer, #footer-bottom {
+        width: 331px !important;
+        margin: 0 auto !important;
+}
     .container {
-        width: 310px !important;
+        width: 330px !important;
     }
+	
 	#footer .container{ width:260px !important}
 
     #fixed_height{
@@ -432,7 +437,7 @@ h4.font-weight-bold {
 
 
     #competitive_metrics_table{
-        width: 290px;
+        width: 310px;
     }
 
 
@@ -515,7 +520,7 @@ h4.font-weight-bold {
             
            #region_selection_dropdown_01{
               
-               width: 80%;
+               width: 70%;
                margin-right: 0px;
                float: none;
                margin: 0 auto;

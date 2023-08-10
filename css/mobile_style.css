@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	--color:#666666;
+	color:#000000;
+	margin-left:0px;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	height:100%;
+	border-top:solid 75px #BD7900;
+	background:#f2f2f2; }
+	
+.implinks{width:auto; float:left; margin:0px; text-align:right }
+.welcome{ width:auto; float:left; margin:0px }
+	
+
+.logo{width:479px;float:left;margin:0px;padding:5px 0px; caption-side; clear:right; margin-top:15px}
+.search{ width:350px; float:left; margin:0px; padding:0px 0px; text-align:Center}
+.round_box{ background:#0167ab; height:50px; padding:5px 8px;float:left;}
+.text_box{float:left}
+
+.navigation{width:350px; background-color:#0167ab; height:auto; padding:0px; margin:0px; float:left;border:none;}
+	
+.navigation ul{ margin:0px ;padding:0px; float:left; border:none; width:350px; height;auto; clear:right;}
+	/*line-height:25px;
+	height:25px;*/
+
+.navigation ul li{ margin:0px; padding:0px; list-style:none; float:left; display:inline; border:none; width:348px;  border:#666 solid 1px; }
+.navigation ul li a{ float:left; margin:0px; padding:0px 19px; color:#FFFFFF; font-weight:bold; background:#0167ab; line-height:25px; height:25px; border:none; font-size:11px; height:auto }
+.navigation ul li a:hover{ background:#0167ab; border:none }
+
+.container{	float:left; width:450px; height:auto;margin:5px auto;padding:0px;}
+.left_pannel{ float:left; width:450px; height:auto; margin:0px; padding:0px;}
+.wrapper{float:left; width:480px;height:180px; background-color:#CCC }
+
+ul.pagination{ float:left; list-style:none; height:27px; margin:0px; padding:0px; width:480px; position:relative; z-index:98; }
+ul.pagination li {float:left; cursor:pointer; width:144px; height:27px; padding:5px 0px; margin:0 5px 0 0; text-align:center; color:#000000}
+ul.pagination li:hover{ background:url(../images/ban_but_over.gif) no-repeat;  color:#FFFFFF; }
+ul.pagination li.current{background:url(../images/ban_but_over.gif) no-repeat;color:#FFFFFF}
+.research h4{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#0167ab; border-bottom:solid 1px #00adef; margin:0px;
+	padding:0px 0px 5px 0px; width:480px }
+
+.category{
+	float:left;
+	width:250px;
+	margin:0px 30px 0px 0px;
+	padding:0px;
+	margin-top:10px;
+}
+.catrightmar{margin-right:0px;}
+.category ul{margin:0px; padding:0px;float:left;background:url(../images/divide.png) no-repeat right;}
+.category ul li{margin:0px;	padding:0px; list-style:none;float:left; width:100%;border-right:none }
+.category ul li a{	margin:0px;	padding:0px 0px 0px 8px; list-style:none;font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	--color:#666666;
+	color:#000000;
+	background:url(../images/arrow.gif) no-repeat 0px 7px;
+	float:left;
+	line-height:20px;
+	display:block;
+	width:autopx;
+}
+.category ul li a:hover{ text-decoration:underline;}
+
+.footer{ float:left; width:480px; height:auto; margin:10px auto; padding:10px 0px; 	border-top:solid 1px #BD7900;}
+
+.bottom_nav{ width:30%; float:left; }
+.bottom_nav ul{ margin:0px; padding:0px; width:30%; }
+.bottom_nav ul li{ margin:0px; padding:0px 10px; list-style:none; display:inline; float:left; border-right:solid 1px #666666; line-height:12px; }
+.bottom_nav ul li a{ margin:0px; padding:0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#666666}
+
+.bottomicons{ width:70%; float:left; text-align:right;}
+.bottomicons img{ border:none; margin-left:5px }

@@ -1,0 +1,12 @@
+@import "./theme.css";
+
+/*==================
+    FORM STYLES
+===================*/
+
+#giaform_group .form-wapper {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    background: var(--BdazzledBlue) !important;
+}

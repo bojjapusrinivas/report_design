@@ -1,34 +1,60 @@
+
+
+
+
+
+
+
+
 /* All Mobile Sizes (devices and browsers)
 ====================================================================== */
+@media only screen and (max-width: 767px) {
 
-@media only screen and (max-width: 767px) {}
+	
+}
+
 
 /*==========================================================================*/
 
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers)
 ====================================================================== */
-
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .submitbut {
-        /*margin-left:30px !important;*/
-    }
+	
+	.submitbut{
+		
+		/*margin-left:30px !important;*/
+	}
+	
+	
 }
 
 /*==========================================================================*/
 
 
+
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
 ====================================================================== */
-
 @media only screen and (max-width: 479px) {
-    .reset_button,
-    .submitbut {
-        display: block;
-        margin-bottom: 10px !important;
-    }
-    .bar_graph_image {
-        width: 150px !important;
-        height: 50px !important;
-    }
+
+.reset_button, .submitbut{
+	
+		display:block;
+		margin-bottom:10px !important;
+		
+		
+	}
+	
+
+.bar_graph_image{
+	
+	width:150px !important;
+	height:50px !important;
 }
+
+
+}
+
+
+
+

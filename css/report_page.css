@@ -1,59 +1,7 @@
-@import url("style.css");
-@import url("gia.css");
-@import url("colors/.css");
-@import url("all-ie-only.css");
-@import url("tri_page.css");
-@import url("gia_switches.css");
-@import url("font-awesome.css");
-@import url("wedges_effect.css");
-
 /*======================
  GIA REPORT PAGE STYLING
 ========================*/
 
-
-/*---------------------
-    ONPAGE POPUP
-----------------------*/
-
-.pageload_popup {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.9);
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    z-index: 999
-}
-.pageload_popup .card {
-    top: -50px;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    position: relative;
-}
-.pageload_popup.pop_active {
-    opacity: 1;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-}
-.pageload_popup.pop_active .card {
-    top: 0px;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-}
-.pageload_popup .card button.close {
-    float: right;
-    height: 15px !important;
-    width: 15px !important;
-}
 
 /*---------------------
  DATA POOL NUMBER COUNT
@@ -63,60 +11,174 @@
 .count1,
 .count2,
 .count3 {
-    font-size: 22px !important;
+    font-size: 18px !important;
     font-weight: 500;
 }
 
-/*---------------------
-  Covid19 Placekeeper
-----------------------*/
+/*---REPORT PAGE-----*/
 
-.covid_placekeeper a.covid_19_Acc {
-    position: relative;
-    font-size: 20px;
+#report_page_title h2,
+#report_page_title h3 {
+    margin: 1px 0px;
+    padding: 0px 0px;
 }
-.covid_placekeeper a.covid_19_Acc:before {
-    content: '\002B';
-    color: #ffffff;
-    width: 25px;
-    height: 25px;
-    top: 3px;
-    left: 65%;
-    position: absolute;
-    font-size: 25px;
-    font-weight: bold;
-    background: #169fe6;
-    padding: -2px !important;
-    border-radius: 100%;
-    line-height: 23px;
+#report_page_title h2 {
+    font-size: 18px;
 }
-.covid_placekeeper a.covid_19_Acc.collapsed:before {
-    content: '\002B';
-    color: #ffffff;
-    width: 25px;
-    height: 25px;
-    top: 3px;
-    left: 65%;
-    position: absolute;
-    font-size: 25px;
-    font-weight: bold;
-    background: #169fe6;
-    padding: -2px !important;
-    border-radius: 100%;
-    line-height: 23px;
+#report_page_title h3 {
+    font-size: 16px;
 }
-.covid_placekeeper a.covid_19_Acc:before {
-    content: '\2212';
+
+/*---REPORT INFO TABLE-----*/
+
+#report_info_table h3 {
+    font-size: 14px;
+}
+
+/*---REPORT TOP BUTTON---*/
+
+.btn_type_01 {
+    background: #e6e6e6;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin: 2px
+}
+.btn_type_02 {
+    background: #255E91;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    width: 150px;
+    margin: 2px
+}
+.btn_type_02:hover {
+    background: #074073;
+    color: #fff;
+    margin: 3px;
+}
+@media only screen and (max-width:959px) and (min-width:768px) {
+    .btn_type_01 {
+        background: none;
+        color: #169FE6;
+        box-shadow: none !important;
+        margin-bottom: 1px;
+        font-weight: 600;
+        padding: 0px 6px 0px 6px !important;
+        font-weight: bold;
+        border-right: rgba(0, 0, 0, 0.2) solid 1px;
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+    .btn_type_01 {
+        background: none;
+        color: #169FE6;
+        box-shadow: none !important;
+        font-size: 13px;
+        margin: 0px;
+        padding: 0px 6px 0px 6px !important;
+        font-weight: bold;
+        border-right: rgba(0, 0, 0, 0.2) solid 1px;
+    }
+    .btn_type_02 {
+        font-size: 12px
+    }
+}
+@media only screen and (max-width:479px) and (min-width:310px) {
+    .btn_type_01 {
+        background: none;
+        color: #169FE6;
+        box-shadow: none !important;
+        font-size: 11px;
+        padding: 0px 5px 0px 0px !important;
+        font-weight: bold;
+        border-right: rgba(0, 0, 0, 0.2) solid 1px;
+    }
+    .btn_type_02 {
+        font-size: 12px
+    }
+    .btn_type_02 {
+        background: #255E91;
+        font-size: 10px;
+        font-weight: 600;
+        color: #fff;
+        width: 122px;
+        margin: 1px;
+        ;
+    }
+}
+
+/*=================================
+ report_page_executive_engagement
+=================================*/
+
+@media only screen and (max-width: 767px) {
+    #report_page_executive_engagement h3 {
+        font-size: 13px !important;
+        line-height: normal;
+    }
+    /*---------------------
+ DATA POOL NUMBER COUNT
+---------------------*/
+    .count,
+    .count1,
+    .count2,
+    .count3 {
+        font-size: 16px !important;
+        font-weight: 500;
+    }
 }
 @media only screen and (max-width:992px) {
+    #report_page_title h2 {
+        font-size: 16px !important;
+        line-height: normal;
+    }
+    #report_page_title h3 {
+        font-size: 15px !important;
+        line-height: normal;
+    }
+    #report_page .selectnav {
+        display: none !important;
+    }
+    #report_page #navigation {
+        height: auto !important;
+    }
+    #report_page #responsive {
+        height: auto !important;
+        min-height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-top: rgba(0, 0, 0, 0.1) solid 1px;
+    }
+    #report_page #responsive li a {
+        padding: 5px 10px 5px 10px;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 1px 0px;
+    }
     .covid_placekeeper a.covid_19_Acc:before {
         left: 73%;
     }
     .covid_placekeeper a.covid_19_Acc.collapsed:before {
         left: 73%;
     }
+    #footer-bottom {
+        display: block;
+    }
 }
 @media only screen and (max-width:767px) {
+    #report_page_title h2 {
+        font-size: 14px !important;
+        line-height: normal;
+    }
+    #report_page_title h3 {
+        font-size: 13px !important;
+        line-height: normal;
+    }
+    #report_page #responsive li a {
+        font-size: 11px !important;
+        padding: 5px 5px 5px 5px;
+    }
     .covid_placekeeper a.covid_19_Acc {
         position: relative;
         font-size: 15px;
@@ -139,9 +201,12 @@
         background: #169fe6;
         padding: 10px 0px !important;
         border-radius: 0px;
-        height: 100%;
+        height: 133%;
         line-height: 15px;
         font-size: 15px;
+    }
+    #report_page #footer-bottom {
+        display: none !important;
     }
 }
 @media only screen and (max-width:448px) {
@@ -150,6 +215,56 @@
     }
     .covid_placekeeper a.covid_19_Acc:before {
         left: 91%;
+    }
+}
+@media only screen and (max-width:467px) {
+    #report_page_title h2 {
+        font-size: 14px !important;
+        line-height: normal;
+    }
+    #report_page_title h3 {
+        font-size: 13px !important;
+        line-height: normal;
+    }
+    #report_page #responsive li a {
+        font-size: 11px !important;
+    }
+    #report_page #footer-bottom {
+        display: none !important;
+    }
+}
+
+/*----------------------------- report_info_table -----------------------------*/
+
+#report_info_table {
+    border-top: 1px solid #dee2e6 !important;
+}
+@media only screen and (max-width:767px) {
+    #report_info_table h4,
+    #report_info_table h3 {
+        font-size: 11px !important;
+    }
+    #report_info_table div {
+        border-left: rgba(0, 0, 0, 0.2) solid 1px;
+    }
+    #report_info_table div:nth-last-child(5) {
+        border-left: rgba(0, 0, 0, 0.2) solid 0px;
+    }
+    #report_info_table {
+        border-top: 0px solid #dee2e6 !important;
+    }
+}
+@media only screen and (max-width:467px) {
+    #report_info_table h4,
+    #report_info_table h3 {
+        font-size: 10px !important;
+        line-height: normal;
+    }
+    #report_info_table div {
+        border-left: rgba(0, 0, 0, 0.2) solid 1px;
+    }
+    #report_info_table div:nth-last-child(5) {
+        border-left: rgba(0, 0, 0, 0.2) solid 0px;
     }
 }
 
@@ -207,7 +322,7 @@ SEGMENTS TAB & ACCORDION
         display: none;
     }
     .tabs-container .tab_accordion {
-        font-size: 15px;
+        font-size: 11px;
         background-color: #eee;
         /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -280,9 +395,12 @@ ABSTRACT ACCORDION
 .released_abstract .panel2 {
     background-color: #fff;
     max-height: auto !important;
-    padding: 2px 18px;
+    padding: 2px 18px 2px 7px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
+}
+.released_abstract .panel2 br {
+    display: none !important;
 }
 .released_abstract . .panel2 p {
     margin-top: 0px;
@@ -357,6 +475,7 @@ ABSTRACT ACCORDION-2
 
 .released_abstract .accordion_2 {
     margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }
 .released_abstract .accordion_2 .accordion {
     background-color: #fff;
@@ -371,6 +490,7 @@ ABSTRACT ACCORDION-2
     font-weight: 600;
     line-height: 18px;
     position: relative;
+    width: 100%;
 }
 .released_abstract .accordion_2 .accordion.active,
 .released_abstract .accordion_2 .accordion:hover {
@@ -388,15 +508,15 @@ ABSTRACT ACCORDION-2
     content: "\2212";
     color: #fff;
 }
-.released_abstract .accordion_2 .panel1 {
+.released_abstract .accordion_2 .panel {
     background-color: #fff;
     max-height: auto !important;
-    padding: 2px 18px;
+    padding: 2px 18px 2px 7px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     margin-bottom: 5px;
 }
-.released_abstract .accordion_2 .panel1 p {
+.released_abstract .accordion_2 .panel p {
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -429,7 +549,7 @@ ABSTRACT ACCORDION-2
         position: absolute;
         top: calc(100% - 70%);
     }
-    .released_abstract .accordion_2 .panel1 {
+    .released_abstract .accordion_2 .panel {
         max-height: 0px;
     }
 }
@@ -489,70 +609,8 @@ ABSTRACT ACCORDION-2
         font-weight: 600;
     }
 }
-
-/*--- AFFILIATES---*/
-
-.affiliates .accordion_new,
-.affiliates .accordion_new .affiliates_block {
-    position: relative;
-}
-.affiliates .accordion_new .accordion_key2 {
-    background-color: #eee;
-    color: #000;
-    cursor: pointer;
-    padding: 6px 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 14px;
-    transition: 0.4s;
-    text-transform: uppercase;
-    font-weight: bold;
-    height: 40px;
-    overflow: hidden;
-}
-.affiliates .accordion_new .active,
-.affiliates .accordion_new .accordion_key2:hover {
-    background-color: #eee;
-}
-.affiliates .accordion_new .accordion_key2:after {
-    content: '\002B';
-    color: #000;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-.affiliates .accordion_new .active:after {
-    content: "\2212";
-}
-.affiliates .accordion_new .panel5 {
-    padding: 0 18px;
-    background-color: #eaeaea;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    position: absolute;
-    left: 0px;
-    top: 41px;
-    z-index: 999;
-    width: 100%;
-}
-@media only screen and (max-width:448px) {
-    .affiliates .accordion_new .accordion_key2 {
-        background-color: #eee;
-        color: #000;
-        cursor: pointer;
-        padding: 6px 3px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 14px;
-        transition: 0.4s;
-        text-transform: capitalize;
-        font-weight: 600;
-    }
+#report_page_title {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !import
 }
 
 /*=================
@@ -573,7 +631,7 @@ ABSTRACT ACCORDION-2
     display: block;
     border-radius: 100% !important;
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     padding: 2px;
     font-weight: bold;
     position: absolute;
@@ -581,9 +639,10 @@ ABSTRACT ACCORDION-2
     left: 40%;
 }
 .insider .offer-content .lead {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 2px;
+    line-height: normal;
 }
 
 }

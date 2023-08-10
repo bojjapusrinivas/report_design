@@ -51,14 +51,14 @@
   font-size: 0;
 }
 .slider-container .scale ins {
-  font-size: 13px;
+  font-size: 16px;
   text-decoration: none;
   position: absolute;
   left: -2px;
   top: 5px;
   color: rgb(0, 0, 0);
   line-height: 1;
-  font-weight:600;
+  font-weight: bold;
 }
 .slider-container.slider-readonly .clickable-dummy,
 .slider-container.slider-readonly .pointer {
@@ -122,8 +122,7 @@
 
 .theme-green .scale span:nth-child(even) {
   border-right: #cac5c5 solid 1px;
-  height: 12px;
-
+  height: 23px;
 }
 
 .theme-green .scale ins {

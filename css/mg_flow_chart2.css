@@ -1,0 +1,436 @@
+
+/*=======================================
+        Snipts
+=======================================*/
+
+.blue_border{
+    border:#1C6DBC solid 2px;
+}
+
+.black_border{
+    border:#000 solid 2px;
+}
+
+.dotted_black_border{
+    border: rgba(0,0,0,0.5) dotted 2px;
+}
+
+#flow_chart_block h3 {
+    font-size: 23px !important;
+    margin-bottom: 20px;
+    color: #1C6DBC !important;
+    font-weight: bold;
+}
+
+
+#flow_chart_block h4 {
+    font-size: 14px;
+    line-height: normal;
+    font-weight: bold;
+}
+
+
+#flow_chart_content p,
+#flow_chart_content span,
+#flow_chart_content ul li{
+    color: #000 !important;
+    font-size: 13px;
+    font-weight:bold;
+    line-height: normal;
+    margin-bottom: 2px;
+}
+
+#flow_chart_content ul li{
+
+list-style: square;
+}
+
+.squre_box{
+    width:120px;
+    height:120px;
+}
+
+.transform_rotate_45{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-webkit-transform: rotate(45deg);
+}
+
+.transform_rotate_45_opposite{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-webkit-transform: rotate(-45deg);
+}
+
+.fa{
+    font-size: 14px;
+    color: #1C6DBC;
+    font-weight: 100;
+}
+
+
+
+
+/*======================================
+         MARKET GLASS FLOW CHART
+======================================*/
+
+#flow_chart_block {
+    width: 480px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*======FIRST & SIXTH BLOCK======*/
+#flow_chart_block_01,
+#flow_chart_block_06,
+#flow_chart_block_07,
+#flow_chart_block_08{
+    width: 260px;
+    margin: 0 auto;
+}
+
+/*======SECOND BLOCK======*/
+#flow_chart_block_02{
+    width: 100%;
+}
+
+#flow_chart_block_02 .left_block,
+#flow_chart_block_02 .right_block{
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*======FOURTH BLOCK======*/
+#flow_chart_block_04 .left_block,
+#flow_chart_block_04 .right_block,
+#flow_chart_block_11 .left_block,
+#flow_chart_block_11 .right_block{
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*======FOURTH BLOCK======*/
+#flow_chart_block_05 .left_block{
+ width: 180px;
+}
+
+#flow_chart_block_05 .right_block{
+  width: 300px;
+}
+
+/*==== FLOW STYLES =====*/
+
+/*---- FLOW-1---*/
+.flow_01{
+        width: 260px;
+        margin: 0 auto;
+        border-top: #1C6DBC solid 2px;
+        height: 10px;
+        margin-top: 18px;
+        position: relative;
+}
+
+.flow_01::before{
+    content: "";
+    width:2px;
+    height:20px;
+    background:#1C6DBC;
+    position:absolute;
+    left:50%;
+    top:-20px
+
+}
+
+.flow_01 .float-left{
+        margin-top: -2px;
+        margin-left: -6px
+}
+
+.flow_01 .float-right{
+    margin-top: -2px;
+    margin-right: -6px
+}
+
+
+/*---- FLOW-2---*/
+.flow_02{
+    width: 260px;
+    height: 15px;
+    margin: 0 auto;
+    border-bottom: #1C6DBC solid 2px;
+    border-left: #1C6DBC solid 2px;
+    border-right: #1C6DBC solid 2px;
+    margin-top: -8px;
+    position: relative;
+    margin-bottom: 40px;
+
+}
+
+.flow_02::before{
+    content: "\f063";
+    width:2px;
+    height:20px;
+    color:#1C6DBC;
+    position:absolute;
+    font-family: FontAwesome;
+    font-size: 14px;
+    left: 47.5%;
+    bottom: -18px;
+
+}
+
+/*---- FLOW-3---*/
+.flow_03{
+    width: 260px;
+    margin: 0 auto;
+    border-top: #1C6DBC solid 2px;
+    height: 10px;
+    margin-top: 42px;
+    position: relative;
+}
+
+.flow_03::before{
+content: "";
+width:2px;
+height:20px;
+background:#1C6DBC;
+position:absolute;
+left:50%;
+top:-20px
+
+}
+
+.flow_03 .float-left{
+    margin-top: -2px;
+    margin-left: -6px
+}
+
+.flow_03 .float-right{
+margin-top: -2px;
+margin-right: -6px
+}
+
+/*---- FLOW-4---*/
+.flow_04{
+    width: 260px;
+    margin: 0 auto;
+    height: 10px;
+    margin-top:-5px;
+    position: relative;
+}
+
+
+.flow_04 .float-left{
+    margin-top: -2px;
+    margin-left: -6px
+}
+
+.flow_04 .float-right{
+margin-top: -2px;
+margin-right: -6px
+}
+
+/*---- FLOW-5---*/
+.flow_05{
+    width: 260px;
+    height: 15px;
+    margin: 0 auto;
+    border-bottom: #1C6DBC solid 2px;
+    border-left: #1C6DBC solid 2px;
+    border-right: #1C6DBC solid 2px;
+    margin-top: -8px;
+    position: relative;
+    margin-bottom: 15px;
+
+}
+
+.flow_05::before{
+    content: "\f063";
+    width:2px;
+    height:20px;
+    color:#1C6DBC;
+    position:absolute;
+    font-family: FontAwesome;
+    font-size: 14px;
+    left: 47.5%;
+    bottom: -17px;
+
+}
+
+/*---- FLOW-6---*/
+.flow_06{
+    width: 318px;
+    height: 15px;
+    margin: 0 auto;
+    border-top: #1C6DBC solid 2px;
+    text-align: center;
+    margin-top: -22px;
+    position: relative;
+    margin-bottom: 15px;
+ 
+}
+
+.flow_06 .fa{
+    font-size: 24px;
+
+}
+
+.flow_06 .float-right {
+    margin-top: -2px;
+    margin-right: -6px;
+}
+
+.flow_06 .float-left {
+    margin-top: -2px;
+    margin-left: -6px;
+}
+
+
+   /*===== RIGHT ARROWS =====*/
+
+   .right_arrows{
+    position: relative;
+    }
+
+.right_arrows::before{
+    content: "\f07e";
+    width: 25px;
+    height: 100%;
+    color: #1C6DBC;
+    font-family: FontAwesome;
+    position: absolute;
+    font-size: 17px;
+    font-weight: 100;
+    right: -28px;
+    
+}
+
+.bottom_arrow{
+    position:relative;
+}
+
+.bottom_arrow::before{
+    content: "\f175";
+    width: 25px;
+    height: 100%;
+    color: #1C6DBC;
+    font-family: FontAwesome;
+    position: absolute;
+    font-size: 24px;
+    font-weight: 100;
+    left: 48%;
+    top: 102%;
+    
+}
+
+
+/*======================================
+        Media Quries
+======================================*/
+
+@media only screen and (max-width: 767px) and (min-width: 480px){
+
+    #wrapper, #footer, #footer-bottom,  .container {
+        width: 95% !important;
+        margin: 0 auto !important;
+    }
+
+    #flow_chart_block {
+        width: 100%;
+    }
+
+    /*======SECOND BLOCK======*/
+    #flow_chart_block_02 .left_block,
+    #flow_chart_block_02 .right_block,
+    #flow_chart_block_04 .left_block,
+    #flow_chart_block_04 .right_block,
+    #flow_chart_block_011 .left_block,
+    #flow_chart_block_011 .right_block{
+     width: 50%;
+    }
+
+
+    /*======FIFTH BLOCK======*/
+    #flow_chart_block_05 .left_block{
+    width: 40%;
+   }
+   
+   #flow_chart_block_05 .right_block{
+     width: 60%;
+   }
+
+   /*======FLOW======*/
+
+   .flow_01. .flow_02, .flow_03, .flow_04, .flow_05{
+    width: 60%
+   }
+
+   .right_arrows::before{
+    
+    font-size: 17px;
+    right: -21px;
+    
+    }
+
+    .bottom_arrow::before{
+        top:100%
+     }
+
+}
+
+
+@media only screen and (max-width:479px) and (min-width:300px){
+
+    #wrapper, #footer, #footer-bottom,  .container {
+        width: 96% !important;
+        margin: 0 auto !important;
+    }
+
+
+    #flow_chart_block {
+        width: 100%;
+    }
+
+       /*======SECOND & FOURTH BLOCK======*/
+       #flow_chart_block_02 .left_block,
+       #flow_chart_block_02 .right_block,
+       #flow_chart_block_04 .left_block,
+       #flow_chart_block_04 .right_block,
+       #flow_chart_block_011 .left_block,
+       #flow_chart_block_011 .right_block{
+        width: 50%;
+       }
+
+           /*======FIFTH BLOCK======*/
+         #flow_chart_block_05 .left_block{
+        width: 40%;
+        }
+       
+       #flow_chart_block_05 .right_block{
+         width: 60%;
+       }
+
+        /*======FLOW======*/
+
+        .flow_01. .flow_02, .flow_03, .flow_04, .flow_05{
+            width: 60%
+           }
+
+           .right_arrows::before{
+    
+            font-size: 17px;
+            right: -21px;
+            
+            }
+
+            .bottom_arrow::before{
+               top:100%
+            }
+
+}

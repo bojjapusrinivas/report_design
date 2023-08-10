@@ -27,6 +27,114 @@
     min-height: 70px;
     border: rgba(0, 0, 0, 0.15) solid 1px;
 }
+<style>
+
+.competitive_executive_block {
+    display: flex;
+    -webkit-display: flex;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;  
+    height: auto;
+  
+}
+
+.competitive_executive_block .four{
+
+	height: auto;
+	text-aling: center;
+        width: 40%;
+	float:none;
+	margin-bottom:20px
+}
+
+
+
+.competitive_executive_block .four .totalpool .tooltip {
+    position: absolute;
+    width: 100%;
+    height:auto;
+    bottom: -20px !important;
+    left:0px !important
+    background:transperent !important
+}
+
+
+
+
+.competitive_executive_block .four:nth-child(1){
+	border-bottom:rgba(0,0,0,0.3) solid 0px;
+}
+
+
+
+
+@media only screen and (max-width: 767px){
+.competitive_executive_block {
+    display: flex;
+    -webkit-display: flex;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    flex-direction: column;
+}
+
+
+.competitive_executive_block .four{
+	height: auto;
+	text-aling: center;
+        width: 100% !important;
+	float:none;
+	margin-bottom:40px
+}
+
+.competitive_executive_block .four:nth-child(1){
+	border-bottom:rgba(0,0,0,0.3) solid 0px;
+}
+
+.competitive_executive_block .four .totalpool .tooltip {
+    position: absolute;
+    width: 100%;
+    height:auto;
+    top: -24px !important;
+    left:0px !important;
+    background:transperent !important
+}
+
+
+
+}
+
+.litick {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom:8px;
+  line-height:18px;
+ float:left;
+  text-align: left;
+
+}
+.litick:before {
+  position: absolute;
+  left: 0;
+  content:"\2714\0020" ;
+}
+.lidecimal {
+  position: relative;
+  padding-left: 10px;
+  padding-bottom:8px;
+  line-height:18px;
+  /*float:left;*/
+  text-align:left;
+ 
+
+}
+.lidecimal:before {
+  position: absolute;
+  left: 0;
+  
+  list-style-type:decimal;
+}
 @media only screen and (max-width: 959px) {
     .company_cont_block:hover {
         box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.0);

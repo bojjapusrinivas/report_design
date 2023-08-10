@@ -1,260 +1,662 @@
-    /*===============================
+body {
+    font-size: 14px !important;
+    background-attachment: fixed !important;
+}
+
+/*===============================
         SIMULATOR PAGE STYLES
 ===============================*/
-    /*----- SNIPTS----*/
-    
-    .bg_light_yellow {
-        background: #FFD4AA
+
+* {
+    line-height: normal !important;
+}
+#simulator_page a {
+    cursor: pointer;
+}
+table td {
+    padding: 0px
+}
+
+/*----- SNIPTS----*/
+
+.bg_light_yellow {
+    background: #FFD4AA
+}
+.bg_light_gray {
+    background: #e0e0e0;
+}
+.primary_color {
+    color: #e37038
+}
+.success_color {
+    color: #0e98df;
+}
+.bg_black {
+    background: #000;
+}
+.light_gray {
+    background: #e6e6e6;
+}
+.blocker {
+    z-index: 999999 !important;
+}
+.border-bottom-orange {
+    border-bottom: rgba(227, 112, 56, 0.2) solid 1px
+}
+.left_column h4 {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+/*======================
+        BOTTOM LINKS
+=======================*/
+
+.bottom_links a {
+    color: #169fe6;
+    font-weight: 600;
+    padding: 8px;
+    text-align: center;
+    /*border: rgba(0, 0, 0, 0.1)  1px;*/
+    border: rgba(22, 159, 230) line 1px;
+    font-size: 14px
+}
+.bottom_links a:hover,
+.bottom_links a:active {
+    background-color: #1397DB;
+    color: #fff;
+}
+.bottom_links a.bt-1,
+.bottom_links a.bt-2 {
+    width: 125px;
+    margin: 2px 0px;
+}
+.bottom_links a.bt-3 {
+    width: 65px;
+    margin: 2px 0px;
+}
+@media screen and (max-width: 767px) {
+    .bottom_links {
+        width: 80%;
     }
-    .bg_light_gray {
-        background: #e0e0e0;
+    .bottom_links a.bt-1,
+    .bottom_links a.bt-2 {
+        width: 85px;
+        font-size: 10px;
+        font-weight: bold
     }
-    /*----HEADER SECTION-----*/
-    
-    .header_titles p {
-        font-size: 20px;
-        margin: 5px 0px;
-    }
-    @media screen and (max-width: 480px) {
-        .header_titles p {
-            font-size: 16px;
-        }
-    }
-    /*------ CURRENTCY SECTION ---*/
-    
-    #currency_block h2 {
-        font-size: 18px;
-        text-transform: uppercase;
-        color: #900;
-        line-height: normal;
-        margin-top: 12px;
-    }
-    #currency_block .form-check-label {
-        font-weight: 700 !important;
-        margin-left: 3px;
-        margin-right: 3px;
-    }
-    #currency_block a.close-modal {
-        top: 7.5px;
-        right: 7.5px;
-        display: block;
-        width: 25px;
-        height: 25px
-    }
-    /*====== TABLE STYLES =======*/
-    /* Mask for background, by default is not display */
-    
-    td,
-    tr {
-        padding: 0px !important;
-        margin: 0px !important;
-    }
-    .table_responsive {
-        border: 1px solid #ccc;
-        border-collapse: collapse;
-        margin: 0 auto;
-        padding: 0;
-        width: 930px;
-        table-layout: fixed;
-        color: #000;
-        font-size: 14px;
-    }
-    .table_responsive caption {
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .table_responsive tr {
-        border: 1px solid #ddd;
-        padding: .35em;
-    }
-    .table_responsive tr.cluster_row {
-        background: #e0e0e0;
-    }
-    .table_responsive th,
-    .table_responsive td {
-        text-align: center;
-        border: rgba(0, 0, 0, 0.2) solid 1px;
-        position: relative;
-        vertical-align: baseline;
-    }
-    .table_responsive th {
-        font-weight: bold;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        font-size: 14px;
-        line-height: normal;
-    }
-    .table_responsive input {
-        width: 75px;
-        margin: 0 auto;
-        border-radius: 0px;
-        border: rgba(0, 0, 0, 0.3) solid 1px;
-    }
-    .table_responsive td span {
-        font-size: 12px;
-    }
-    .feedback_input {
-        width: 200px !important;
-    }
-    #region_block button {
-        width: 20px !important;
-        height: 20px !important;
-        border-radius: 0px !important;
-        padding: 0px;
-    }
-    #region_block button i {
-        font-size: 12px;
-        padding: 0px;
-        margin: 0px;
-        display: block;
-    }
-    /*
-        @media screen and (max-width: 767px) {
-            .table_responsive {
-                border: 0;
-            }
-            .table_responsive caption {
-                font-size: 1.3em;
-            }
-            .table_responsive thead {
-                border: none;
-                clip: rect(0 0 0 0);
-                height: 1px;
-                margin: -1px;
-                overflow: hidden;
-                padding: 0;
-                position: absolute;
-                width: 1px;
-            }
-            .table_responsive tr {
-                border-bottom: 3px solid #ddd;
-        
-        display: block;
-        margin-bottom: .625em;
-    }
-    .table_responsive td {
-        border-bottom: 1px solid #ddd;
-        display: block;
-        font-size: .8em;
-        text-align: right;
-    }
-    .table_responsive td::before {
-        
-        
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-        position: absolute;
-        left: calc(100% - 96%);
-        top: calc(100% - 70%);
-    }
-    .table_responsive td:last-child {
-        border-bottom: 0;
-    }
-    
-    .table_responsive td:nth-child(1) {
-        text-align: center;
-        font-size: 16px;
-        background: #404040;
-        color: #fff;
-    }
-    .table_responsive td:nth-child(1)::before,
-    .table_responsive td:nth-child(6)::before {
-        display: none;
-    }
-    .table_responsive tr.cluster_row td:nth-child(6) {
-        display: none;
-    }
-    .table_responsive tr.cluster_row td {
-        padding: 5px 0px
+    .bottom_links a.bt-3 {
+        width: 60px;
+        font-size: 10px;
+        font-weight: bold
     }
 }
-*/
-    
-    .table_capiton {
-        font-size: 18px;
-        font-weight: bold;
-        color: #000;
+@media screen and (max-width: 480px) {
+    .bottom_links {
+        width: 100%;
     }
-    .expert_details {
-        width: 265px;
-        margin: 0 auto;
+}
+@media screen and (max-width:500px)and (orientation:portrait) {
+    .bottom_links a.bt-1,
+    .bottom_links a.bt-2 {
+        width: 48%;
+        font-size: 12px;
+        font-weight: 200;
+        background: none;
+        color: #169FE6;
+        box-shadow: none;
+        font-weight: 600;
     }
-    .expert_details h3 {
-        font-size: 19px;
-        text-transform: uppercase;
-        line-height: normal;
+    .bottom_links a.bt-3 {
+        width: 48%;
+        font-size: 12px;
+        font-weight: 200;
+        background: none;
+        color: #169FE6;
+        box-shadow: none;
+        font-weight: 600;
     }
-    .expert_details h4 {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: normal;
+}
+
+/*======================
+    BUTTON STYLES
+=======================*/
+
+#simulator_page .btn {
+    font-size: 14px;
+    background: #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 480px) {
+    #simulator_page .btn {
+        font-size: 12px;
     }
-    .expert_details .star_rating {
-        margin-top: 2px;
-        width: 60px;
-        height: 14px;
+}
+
+/*======================
+     Header style
+=======================*/
+
+.signatrue_logo {
+    display: block
+}
+@media screen and (max-width: 767px) {
+    .signatrue_logo {
+        display: none;
+    }
+}
+
+/*---------------------------
+    simulator_top_header
+-------------------------*/
+
+.brand_cards {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.0);
+}
+.brand_cards .img-block {
+    width: 90px;
+    height: 100px;
+    align-items: center;
+    padding: 2px;
+    overflow: hidden;
+    align-self: center;
+}
+#brand_cards h3 {
+    color: #e37038 !important;
+    font-size: 20px;
+    line-height: normal !important;
+    display: block
+}
+#brand_cards h3.textlimit {
+    display: none;
+}
+#brand_cards h4.textlimit {
+    display: none;
+}
+#brand_cards h4 {
+    font-size: 15px;
+    display: block
+}
+#brand_cards h4 span.company_title1 {
+    display: inline-block;
+}
+#brand_cards h4.company_title {
+    display: none;
+}
+#brand_cards h5 {
+    font-size: 15px;
+}
+.fixed-top .brand_cards {
+    width: 1019px;
+    margin: 0 auto;
+    padding-left: 53px !important;
+    padding-right: 53px !important;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    /*transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;*/
+}
+.fixed-top {
+    position: fixed;
+    top: -10px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.star_rating {
+    margin-top: 2px;
+    width: 60px;
+    height: 14px;
+    display: block;
+}
+@media screen and (max-width: 959px) {
+    .fixed-top .brand_cards {
+        width: 710px;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .fixed-top .brand_cards {
+        width: 420px;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+    #brand_cards h3 {
+        display: none;
+    }
+    #brand_cards h3.textlimit {
         display: block;
     }
-    .expert_details .brand_cards .img-block {
-        width: 65px;
-        height: 65px;
-        align-items: center;
-        padding: 2px;
-        overflow: hidden;
+    #brand_cards h4 {
+        display: none;
     }
-    .responsive_table {
-        width: 934px;
-        overflow-x: scroll;
-        overflow-y: hidden;
+    #brand_cards h4.textlimit {
+        display: block;
+    }
+}
+@media screen and (max-width: 479px) {
+    .fixed-top .brand_cards {
+        width: 320px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    #brand_cards h3 {
+        color: #e37038 !important;
+        font-size: 15px;
+        line-height: normal !important;
+    }
+    #brand_cards h4 {
+        font-size: 13px;
+    }
+    #brand_cards h5 {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .fixed-top .brand_cards {
+        width: 100%;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .brand_cards .img-block {
+        width: 70px;
+        height: 70px;
+    }
+    #brand_cards h3 {
+        color: #e37038 !important;
+        font-size: 15px;
+        line-height: normal !important;
+    }
+    #brand_cards h4 {
+        font-size: 13px;
+    }
+    #brand_cards h5 {
+        font-size: 12px;
+    }
+}
+
+/*---I PHONE LAND SCAPE STYLES--*/
+
+
+/*------ CURRENTCY SECTION ---*/
+
+#currency_block h2,
+#segment_block h2,
+#asia_pacific h2,
+#europe_con h2,
+#europe_con h2,
+#latin_america h2,
+{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #e37038 !important;
+    line-height: normal;
+    margin-top: 12px;
+}
+#currency_block .form-check-label,
+#segment_block .form-check-label,
+#asia_pacific .form-check-label,
+#europe_con .form-check-label,
+#latin_america .form-check-label {
+    font-weight: 700 !important;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+#currency_block a.close-modal,
+#segment_block a.close-modal,
+#asia_pacific a.close-modal,
+#europe_con a.close-modal,
+#latin_america a.close-modal {
+    top: 7.5px;
+    right: 7.5px;
+    display: block;
+    width: 25px;
+    height: 25px
+}
+
+/*----HEADER SECTION-----*/
+
+.header_titles p {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+@media screen and (max-width: 480px) {
+    .header_titles p {
+        font-size: 16px !important
+    }
+}
+
+/*------ CURRENTCY SECTION ---*/
+
+#simulator_block {
+    margin: 0 !important;
+}
+#simulator_block h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+#simulator_table thead tr {
+    background: #E37038;
+}
+#simulator_table th,
+#simulator_table td {
+    width: 15%;
+    border: #fff solid 1px;
+    border-top: none !important;
+    padding: 6px;
+}
+#simulator_table th {
+    font-size: 16px;
+    font-weight: 700;
+}
+#simulator_table tbody tr {
+    background: #e4e4e4;
+}
+#simulator_table tbody tr td:nth-child(1) {
+    background: #dedede;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 50px;
+}
+#simulator_table tbody tr td {
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+}
+#simulator_table tbody tr td input {
+    width: 55px;
+    margin: 0px 10px;
+    border: #b3b3b3 solid 1px;
+    border-radius: 0px;
+}
+#simulator_table tbody tr td input:focus {
+    border: #b3b3b3 solid 1px !important;
+    border-radius: 0px;
+}
+#simulator_table a,
+#simulator_table tbody tr td span {
+    color: #0e98df;
+    font-size: 12px;
+}
+.activity_block {
+    background: #f4e5ce;
+    padding: 10px 0px;
+}
+.activity_block .table thead tr {
+    background: #42210b;
+}
+.activity_block .table thead tr th {
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+.activity_block .table thead tr th,
+.activity_block .table tbody tr td {
+    border: #fff solid 1px;
+    padding: 6px 0px !important;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500
+}
+.activity_block .table tbody tr td {
+    background: #d6ccc4
+}
+@media screen and (max-width: 959px) {
+    #simulator_table th,
+    #simulator_table td {
+        width: 13%;
+    }
+    #simulator_table th {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    #simulator_table tbody tr td:nth-child(1) {
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    #simulator_table th,
+    #simulator_table td {
+        padding: 2px;
+        width: 60px;
+    }
+    #simulator_table th {
+        font-size: 13px;
+        font-weight: bold;
+    }
+    #simulator_table a,
+    #simulator_table tbody tr td span,
+    #simulator_table tbody tr td div {
+        font-size: 11px;
+        font-weight: 500;
+    }
+    #simulator_table tbody tr td:nth-child(1) {
+        padding-left: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 2px;
+        padding-top: 4px !important;
+    }
+    #simulator_table tbody tr td input {
+        width: 35px;
         margin: 0 auto;
     }
-    @media screen and (max-width: 959px) {
-        .responsive_table {
-            width: 675px;
-        }
-        .table_responsive {
-            width: 632px;
-        }
-        .table_responsive input {
-            width: 50px;
-        }
-        .table_responsive th,
-        .table_responsive td {
-            font-size: 13px
-        }
+    #simulator_table td:nth-child(6) div {
+        margin-top: 22px !important;
     }
-    @media screen and (max-width: 767px) {
-        .container {
-            width: 300px;
-        }
-        .sixteen.columns {
-            width: 100%;
-        }
-        .responsive_table,
-        .table_responsive {
-            width: 356px;
-        }
-        .table_responsive input {
-            width: 40px
-        }
-        .table_responsive tbody tr td:nth-child(6) a.btn {
-            font-size: 12px;
-        }
-        .table_responsive thead tr th {
-            font-size: 11px;
-            padding: 10px 0px !important;
-        }
-        .table_responsive td span {
-            font-size: 10px;
-        }
+    #simulator_table td:nth-child(4) div:nth-child(2),
+    #simulator_table td:nth-child(5) div:nth-child(2) {
+        position: absolute;
+        bottom: 2px;
+        left: calc(100% - 70%);
     }
-    @media screen and (max-width: 490px) {
-        .responsive_table {
-            width: 270px;
-        }
-        .table_capiton {
-            font-size: 15px;
-        }
+    #simulator_table td:nth-child(1) div i:nth-child(2) {
+        position: absolute;
+        bottom: 2px;
+        left: 3px;
     }
+    #simulator_table a,
+    #simulator_table tbody tr td span {
+        color: #0e98df;
+    }
+    .activity_block .table thead tr th,
+    .activity_block .table tbody tr td {
+        border: #fff solid 1px;
+        padding: 2px 0px !important;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    #simulator_block,
+    #simulator_table,
+    .activity_block .table {
+        width: 430px !important;
+    }
+    #simulator_block h2 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 480px) {
+    #simulator_table tbody tr td:nth-child(1) {
+        padding-left: 5px;
+        font-size: 12px !important;
+        font-weight: 500;
+    }
+}
+
+/*==================================
+        Grid style
+====================================*/
+
+#region_section button {
+    background: #e37038 !important;
+    border: #e37038 solid 1px;
+}
+#region_section selection {
+    width: 200px;
+}
+@media screen and (max-width: 959px) {
+    #region_section .three.columns {
+        width: 165px;
+    }
+    #region_section .two.columns {
+        width: 165px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #region_section selection {
+        width: 150px !important;
+    }
+    #region_section .two.columns {
+        width: 100px !important;
+    }
+    #region_section .add_country {
+        font-size: 12px !important;
+    }
+}
+
+/*==================================
+        Grid style
+====================================*/
+
+#simulator_page .left_column {
+    width: 16%;
+    float: left;
+}
+#simulator_page .right_column {
+    width: 84%;
+    float: left;
+}
+@media screen and (max-width: 959px) {
+    #simulator_page .left_column {
+        width: 25%;
+        float: left;
+    }
+    #simulator_page .right_column {
+        width: 75%;
+        float: left;
+    }
+}
+@media screen and (max-width: 767px) {
+    #simulator_page .left_column {
+        width: 100%;
+        float: left;
+    }
+    #simulator_page .right_column {
+        width: 100%;
+        float: left;
+    }
+}
+
+/*-----------------------------------
+     ACCORDION
+------------------------------------*/
+
+accordion_new .accordion_key {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 6px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    transition: 0.4s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.accordion_new .active,
+.accordion_new .accordion_key:hover {
+    background-color: #eee;
+}
+.accordion_new .accordion_key:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.accordion_new .active:after {
+    content: "\2212";
+}
+.accordion_new .panel3 {
+    padding: 0 18px;
+    background-color: white;
+    min-height: auto;
+    height: auto;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+@media only screen and (max-width:448px) {
+    .accordion_new .accordion_key {
+        background-color: #eee;
+        color: #000;
+        cursor: pointer;
+        padding: 6px 3px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+        transition: 0.4s;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
+
+/*---stats_block-----*/
+
+#stats table {
+    padding: 0px;
+    margin: 0px;
+}
+#stats table thead tr th,
+#stats table tbody tr td {
+    padding: 3px !important;
+    margin: 0px;
+    !important;
+    text-align: center;
+}
+
+/* MEDIA QURIES FOR IPHONE  AND LANDSCAPE */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+    #brand_cards .three.columns {
+        width: 113px;
+    }
+    #brand_cards h3.textlimit {
+        display: none;
+    }
+    #brand_cards h4.textlimit {
+        display: none;
+    }
+    #brand_cards h3 {
+        display: block;
+    }
+    #brand_cards h4 {
+        display: block;
+    }
+}
+@media only screen and (min-device-width:280px) and (max-device-width: 448px) and (orientation:portrait) {
+    #brand_cards .custom_flex_style {
+        flex-flow: column !important;
+    }
+}
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+    #brand_cards .three.columns {
+        width: 140px !important;
+    }
+}
+
+/*-------------------*/
+
+@media only screen and (max-width:380px) {
+    .modal {
+        width: 280px !important;
+    }
+}
+@media screen and (max-width: 767px)

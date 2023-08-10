@@ -1,0 +1,208 @@
+/*--Google fonts---*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,700&family=Montserrat:wght@100;200;300;400;500;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,600&family=Roboto+Slab:wght@100;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,500&display=swap');
+
+/*-----------------------
+	css variables
+------------------------*/
+
+:root {
+    --font-sample1: 'Inter', sans-serif;
+    --font-sample2: 'Lato', sans-serif;
+    --font-sample3: 'Merriweather', serif;
+    --font-sample4: 'Montserrat', sans-serif;
+    --font-sample5: 'Playfair Display', serif;
+    --font-sample6: 'Poppins', sans-serif;
+    --font-sample7: 'Raleway', sans-serif;
+    --font-sample8: 'Roboto', sans-serif;
+    --font-sample9: 'Roboto Slab', serif;
+    /*--shadow samples---*/
+    --shadow-sample1: "rgba(149, 157, 165, 0.2) 0px 8px 24px;";
+    --shadow-sample1-hover: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;";
+    --shadow-sample2: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;";
+    --shadow-sample2-hover: "rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;";
+    --shadow-sample3: "rgba(149, 157, 165, 0.2) 0px 8px 24px;";
+    --shadow-sample2-hover: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;";
+    --shadow-sample3: "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;";
+    --shadow-sample3-hover: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;";
+
+}
+
+
+
+.card-desing-1 {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    color: #000;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    position: relative;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+}
+
+.card-desing-1:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #04489b;
+    bottom: 0px;
+    left: 0px;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+}
+
+.card-desing-1 .left-block {
+    width: 90px;
+    height: 80px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    border: #fff solid 1px;
+
+
+}
+
+.card-desing-1 .left-block img {
+    object-fit: cover;
+}
+
+.card-desing-1 .right-block {
+    width: 100%;
+    margin-top: 0px;
+}
+
+.card-desing-1 .right-block .title {
+    width: 100%;
+    /*border-top: rgb(157 157 157 / 20%) solid 1px;
+		border-bottom: rgb(157 157 157 / 20%) solid 1px;
+		*/
+
+}
+
+.card-desing-1 h2 {
+    font-weight: bold;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    margin-bottom: 6px;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-desing-1 h3 {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: normal;
+    margin-top: 2px;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+}
+
+.card-desing-1 h2,
+.card-desing-1 h3 {
+    font-family: Inter;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+
+}
+
+.card-desing-1 .bootom-icon a {
+    color: #ccc;
+    padding: 5px;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    font-size: 15px;
+    border-radius: 3px;
+
+}
+
+/*=================================
+     CARD HOVER STYLES
+==================================*/
+.card-desing-1:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+}
+
+.card-desing-1:hover:before {
+    width: 100%;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+}
+
+
+.card-desing-1:hover .left-block {
+    transform: scale(0.9, 0.9);
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+
+}
+
+.card-desing-1:hover h2,
+.card-desing-1:hover h3 {
+
+    overflow: auto;
+    white-space: normal;
+
+}
+
+/*======================================
+     pagnation styles
+======================================*/
+
+a.a_back.a_nav i,
+a.a_next.a_nav i {
+    font-size: 38px;
+    color: #E82329;
+}
+
+.Alp_Display a.active,
+.Alp_Display a:hover {
+    background: var(--maincolor);
+    color: #fff;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.Alp_Display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 4px;
+}
+.Alp_Display a.active {
+    background: #04489b;
+    color: #fff;
+}
+
+.Alp_Display a {
+    margin: 1px;
+    color: #000;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    display: block;
+    font-size: 15px;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    margin-bottom: 0px !important;
+}
+
+@media only screen and (max-width: 479px) {
+
+    .Alp_Display {
+        width: 80% !important;
+    }
+
+
+}

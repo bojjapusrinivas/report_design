@@ -114,15 +114,27 @@
     padding: 0;
     top: 0;
     right: 0;
-    margin: 1px 0 0 -35px;
-    background: url('../images/search.png') center center no-repeat;
+    margin: 1px 0 0 0px;
+   /* background: url('../images/search.png') center center no-repeat;*/
     width: 35px;
     height: 32px;
     cursor: pointer;
     border: none;
     z-index: 100;
     box-shadow: none;
+	background: #fff;
 }
+
+.search-btn.search-btn2 i{
+		font-size:18px;
+}
+
+
+.search-btn.search-btn2:hover i{
+		color:#169FE6
+}
+
+
 .search-field {
     float: right;
     position: relative;
@@ -259,7 +271,7 @@
 ====================================*/
 
 #navigation {
-    height: 34px;
+    height:50px;
     width: 950px;
     margin: 0 auto !important;
     /*background: url(../images/menu_bg.png) repeat-x #444445;
@@ -4282,10 +4294,11 @@ table.standard-table.shop td {
         background: url(../images/categories@2x.png) no-repeat left 47%;
         background-size: 5px auto;
     }
+	/*
     .search-btn {
         background: url('../images/search@2x.png') center center no-repeat;
         background-size: 13px auto;
-    }
+    }*/
     .search-btn-widget {
         background: url(../images/search-2@2x.png) 50% no-repeat;
         background-color: #169fe6;

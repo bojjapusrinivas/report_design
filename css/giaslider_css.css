@@ -4,7 +4,7 @@
 
 .gia_slider{
 	width:100%;
-	height:260px;
+	height:245px;
 	over-flow:auto;
 	-webkit-perspective: 1450px; /* Safari 4-8 */
    	perspective:1450px;
@@ -15,7 +15,8 @@
 	width:93%;
 	margin:0 auto;
 	min-height:143px;
-	osition:relative;
+	
+	position:relative;
 	overflow:auto;
 	height:auto;
 	position:relative;
@@ -53,6 +54,15 @@
 	border:#fff solid 1px;
 	box-shadow:0px 0px 3px rgba(0,0,0,0.3);
 }
+.info:hover{
+	
+	background:#0972B8;
+	
+	border:#0972B8 solid 2px;
+	
+}
+
+
 
 .info_img_block{
 	position:relative;	
@@ -60,6 +70,15 @@
 	image-rendering:initial;
 	overflow:hidden;
 	cursor:pointer
+}
+
+.info_img_block:hover{
+	position:relative;	
+	width:100%;
+	image-rendering:initial;
+	overflow:hidden;
+	cursor:pointer
+	border:rgba(50,0,255) solid 1px;
 }
 
 .info_img_block .info_title_block{
@@ -78,12 +97,13 @@
 		transition:all linear 0.25s;
 		-webkit-transition:all linear 0.25s;
 		-moz-transition:all linear 0.25s;
+		line-height:15px;
 
 }
 
 
 .info:hover .info_title_block{
-	bottom: -50px;
+	bottom: 0px;
 	transition:all linear 0.25s;
 	-webkit-transition:all linear 0.25s;
 	-moz-transition:all linear 0.25s;
@@ -91,35 +111,34 @@
 }
 
 
-.inf_02 info img{
+.info_img_block img{
 	width:100%;
 	height:auto;	
 }
 
-.inf_01{
+.inf_01, .inf_06 {
 transform: rotateY(26deg);	
 	
 }
 
-.inf_02{
+.inf_02, .inf_07{
 transform: rotateY(13deg);	
 	
 }
 
-.inf_03{
+.inf_03, .inf_08{
 
 top: 110px!important;
 }
 
-.inf_04{
+.inf_04, .inf_09{
 	
 	transform: rotateY(-13deg);
 }
 
-.inf_05{
+.inf_05, .inf_010{
 transform: rotateY(-26deg);
 }
-
 
 .gia_info_text h2{
 	font-size:22px;
@@ -131,7 +150,7 @@ transform: rotateY(-26deg);
 
 .gia_slider{
 	width:100%;
-	height:200px;
+	height:180px;
 	over-flow:auto;
 	-webkit-perspective: 1450px; /* Safari 4-8 */
    	perspective:1450px;
@@ -143,27 +162,27 @@ transform: rotateY(-26deg);
 }
 
 
-.inf_01{
+.inf_01, .inf_06{
 transform: rotateY(18deg);	
 	
 }
 
-.inf_02{
+.inf_02, .inf_07{
 transform: rotateY(9deg) !important;	
 	
 }
 
-.inf_03{
+.inf_03, .inf_08{
 
 top: 110px!important;
 }
 
-.inf_04{
+.inf_04, .inf_09{
 	
 	transform: rotateY(-9deg) !important;
 }
 
-.inf_05{
+.inf_05, .inf_010{
 transform: rotateY(-18deg);
 }
 

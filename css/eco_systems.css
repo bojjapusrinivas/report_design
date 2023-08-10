@@ -12,9 +12,9 @@
 
 
 .eco_systems_list li{
-    width: 32%;
+    width: 24%;
     height: auto;
-    margin-bottom: 11px;
+   /* margin-bottom: 11px;*/
     text-align: center;
     font-weight: 600;
     text-transform: uppercase;
@@ -32,19 +32,19 @@
 }
 
 
-@media only screen and (min-width: 480px) and (max-width: 768px){
+@media only screen and (min-width: 300px) and (max-width: 768px){
     .eco_systems_list li{
-        width:48%;
+        width:100%;
     }
 }
 
-.eco_systems_list li:hover{
+/*.eco_systems_list li:hover{
    
     border: #1C6DBC solid 1px;
     transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
-}
+}*//
 
 
 .eco_systems_list li a{
@@ -53,7 +53,7 @@
 
 .eco_systems_list li .eco_img{
 
-    min-height: 120px;
+   /* min-height: 60px;*/
     background: #f7f7f7;
 
 }

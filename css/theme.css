@@ -1,0 +1,19 @@
+:root {
+    --BdazzledBlue: "#255E91";
+    --BdazzledBlueHover: "#074073";
+    --Blue: "#169FE6";
+    --BlueHover: "#1389C6";
+    --White: "#FFFFFF";
+    --Gray: "#808080";
+    --DarkGray: "#aaaaaa";
+    --LightGray: "#d1d3d4";
+    --Linkblue: "#00F";
+    --Red: "#F00";
+    --DarkRed: "#900";
+    --Black: "#000";
+    --Fulvous: "#E89000";
+    --SkobelOff: "#067574";
+    --LightBlue: "#dbeeff";
+    --ButtonShadow: "rgb(17 17 26 / 5%) 0px 1px 0px, rgb(17 17 26 / 10%) 0px 0px 8px;";
+    --ButtonShadowHover: "rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;";
+}

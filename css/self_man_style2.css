@@ -7,22 +7,19 @@
 	height: auto;
 }
 .coll_acc {
-	/*border: 1px solid rgba(224, 224, 224,0.5);*/
-	border:none !important;
-	background:#fff !important;
-	
+	border: 1px solid rgba(224, 224, 224,0.5);
 }
 .coll_acc button, .coll_acc .coll_alink {
 	width: 100%;
-        display: block;
-        background: none !important;
-        padding: 6px 15px;
-        color: rgb(112, 112, 112);
-        text-align: left;
-        cursor: pointer;
-        font-size: 13px;
-        box-sizing: border-box;
-        border: none !important;
+	display: block;
+	background: #FCFCFC;
+	padding: 10px 15px;
+	color: hsl(0, 0%, 44%);
+	text-align: left;
+	cursor: pointer;
+	font-size: 13px;
+	box-sizing: border-box;
+	border: none;
 }
 .coll_acc .ui-accordion-icon, .ui-accordion-icon-active {
 	margin-top: 0px;

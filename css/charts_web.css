@@ -1,0 +1,808 @@
+
+
+
+
+#desingContainer {
+    width: 720px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+/*===========================
+    HISTORY & MILESTONES
+===========================*/
+
+#HistoryMilestones{
+    width: 100%;
+}
+
+    #HistoryMilestones h3{
+        text-align: center;
+        color: #990000;
+        margin-bottom: 10px;
+  
+        font-size: 18px;
+        font-weight: bold;
+}
+
+.IntegrityBlock{
+    width: 100%;
+    padding: 10px;
+}
+
+.IntegrityBlock .line{
+    width: 100%;
+    height: 2px;
+    margin: 0px;
+    top:-23px;
+    background: #7F7F7F;
+    display: block;
+    margin-top: 40px;
+    position: relative;
+
+}
+
+.IntegrityBlock .line::before,
+.IntegrityBlock .line::after{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color:#7F7F7F;
+    top: -3px;
+}
+
+.IntegrityBlock .line::before{
+    left: 0px;
+}
+
+.IntegrityBlock .line::after{
+    right: 0px;
+}
+
+.IntegrityBlock ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    position: relative;
+    width: 100%;
+}
+
+.IntegrityBlock ul li{
+    width: 150px;
+    text-align: center;
+    line-height: 18px;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 7px 10px;
+    position: relative;
+    height: auto;
+
+}
+
+.IntegrityBlock ul li::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height:15px;
+    border-radius: 100%;
+    border:rgba(0,0,0,1) solid 3px;
+    background-color: #3C8BC8;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    top:-32px
+}
+
+
+#MilestonesBlock{
+    position: relative;
+    height: 520px;
+    margin-left: -26px;
+}
+
+
+#MilestonesBlock  .step{
+    width: 100px;
+    padding: 0px;
+    position:absolute;
+}
+
+
+#MilestonesBlock  .step .year{
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#MilestonesBlock  .step .step_content{
+    width: 170px;
+}
+
+#MilestonesBlock  .step .step_content h4{
+    margin-top: 20px;
+    margin-bottom: 4px;
+    color: #000 !important;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: normal;
+   
+}
+
+#MilestonesBlock  .step .step_content p{
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 15px !important;
+ }
+
+#MilestonesBlock  .step:nth-child(even) .step_content{
+    position: absolute;
+    margin-top: 30px;
+    left: 28px;
+   
+}
+
+#MilestonesBlock  .step:nth-child(odd) .step_content{
+    left: 0px;
+    position: absolute;
+    top: -180px !important;
+    height: 140px;
+     display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: end;
+ 
+}
+
+.step_content ul{
+    margin: 0px;
+    padding: 0px 0px 0px 16px;
+    list-style: disc;
+    font-size: 14px;
+}
+
+.step_content ul li{
+    line-height: 21px;
+}
+
+
+#MilestonesBlock  .step:nth-child(even) .year{
+  color: #3C8BC8;
+}
+
+#MilestonesBlock  .step:nth-child(odd) .year{
+    color: #000
+  }
+  
+
+
+#MilestonesBlock  .step .step-canves{
+    border-radius: 10px 0px 0px 0px;
+    height: 50px;
+    position: relative;
+}
+
+#MilestonesBlock  .step:nth-child(even) .step-canves{
+   border-top:#3C8BC8 solid 4px;
+   border-left:#3C8BC8 solid 4px;
+}
+
+#MilestonesBlock  .step:nth-child(odd) .step-canves{
+    border-top:#000 solid 4px;
+    border-left:#000 solid 4px;
+ }
+
+ #MilestonesBlock  .step:nth-child(even) .step-canves::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #398CC9;
+    border: #fff solid 1px;
+    border-radius: 100%;
+    right: -7px;
+    top: -7px;
+    z-index: 999;
+ }
+
+ #MilestonesBlock  .step:nth-child(odd) .step-canves::before{
+
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border: #fff solid 1px;
+    border-radius: 100%;
+    right: -7px;
+    top: -7px;
+    z-index: 999;
+    
+}
+
+
+
+
+
+ #MilestonesBlock  .step:nth-child(odd) .step-canves .year{
+   margin-top: -42px;
+ }
+
+ 
+ #MilestonesBlock  .step:nth-child(even) .step-canves .year{
+    margin-top: 8px;
+  }
+ 
+
+
+#MilestonesBlock  .step:nth-child(1){
+bottom: 0px;
+left: 0px;
+
+}
+
+#MilestonesBlock  .step:nth-child(2){
+    bottom: 50px;
+    left: 100px
+ 
+ }
+
+ #MilestonesBlock  .step:nth-child(3){  
+    bottom: 100px;
+    left: 200px
+ 
+ }
+
+ #MilestonesBlock  .step:nth-child(4){  
+    bottom: 150px;
+    left: 300px
+ 
+ }
+
+ #MilestonesBlock  .step:nth-child(5){  
+    bottom: 200px;
+    left: 400px
+ 
+ }
+
+ 
+ #MilestonesBlock  .step:nth-child(6){  
+    bottom: 250px;
+    left: 500px
+ 
+ }
+
+ #MilestonesBlock  .step:nth-child(7){  
+    bottom: 300px;
+    left: 600px
+ 
+ }
+
+
+ #MilestonesBlock  .step .step-canves i{
+    position: absolute;
+    right: -8px;
+    font-size: 30px;
+    top: -18px;
+    z-index: 9999999;
+  }
+ 
+
+  .year_mobile{
+    display: none 
+  }
+
+
+
+  /*===========================
+    END OF HISTORY & MILESTONES
+===========================*/
+
+.DesktopDisplay{
+    display: block;
+}
+
+.mobileDisplay{
+    display:none;
+}
+
+
+/*
+@media only screen and (min-width: 768px) and (max-width: 959px){
+    .DesktopDisplay{
+        display: none;
+    }
+    
+    .mobileDisplay{
+        display:block;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    .DesktopDisplay{
+        display: none;
+    }
+    
+    .mobileDisplay{
+        display:block;
+    }
+}
+@media only screen and (max-width: 479px){
+    .DesktopDisplay{
+        display: none;
+    }
+    
+    .mobileDisplay{
+        display:block;
+    }
+}
+
+*/
+
+@media only screen and (max-width: 959px){
+
+
+    .year_mobile{
+		font-size:16px !important;
+        display: block;
+        margin-bottom: 0px !important;
+        color: #3C8BC8 !important;
+      }
+
+      
+
+    #desingContainer {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        z-index: 9999;
+        word-break: break-word;
+    }
+
+    #MilestonesBlock .step .step_content h4 {
+        margin-top: 4px;
+        
+        font-size: 15px;
+  
+    }
+
+    .step_content ul {
+        margin-bottom: 10px;
+    }
+
+
+    .IntegrityBlock .line{
+        display:none
+    }
+
+    .IntegrityBlock ul {
+        list-style:disc !important;
+        padding: 0px;
+        margin: 0px 20px;
+        flex-direction: column;
+        justify-content:start
+        align-items: baseline;
+        position: relative;
+        width: 100%;
+        mar
+    }
+
+    .IntegrityBlock ul li {
+        text-align: left;
+        width: 100%;
+
+    }
+
+    .IntegrityBlock ul li::before{
+        display: none;
+    }
+
+
+    #MilestonesBlock {
+        position: relative;
+        height: auto;
+        margin-left:0px;
+        display: flex;
+        flex-direction: column !important;
+		border-left:rgba(0,0,0,0.2) solid 1px;
+    }
+	
+	
+
+    #MilestonesBlock .step {
+        width: 100%;
+        padding: 0px 15px;
+        position:relative !important;
+        left: 0px !important;
+        top: 0px !important;
+        box-sizing: border-box;
+		display:flex;
+		flex-direction:column-reverse;
+		margin-top:10px;
+		padding-bottom:5px;
+        
+    }
+
+    #MilestonesBlock .step .step_content {
+       
+        position:relative;
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: end;
+        width: 100%;
+    }
+	
+	#MilestonesBlock .step:nth-child(even) .step-canves::before,
+	#MilestonesBlock .step:nth-child(odd) .step-canves::before{
+		display:none !important;
+		
+	}
+	
+	#MilestonesBlock .step:nth-child(odd) .step-canves .year,
+	#MilestonesBlock .step:nth-child(even) .step-canves .year	{
+     margin-top: 0px !important;
+	 text-align:left;
+	 color:#1C6DBC;
+	 margin-bottom: 0px;
+		font-size: 18px;
+
+	}
+	
+		#MilestonesBlock .step .step-canves .year{
+			positon:relative;
+		}
+	
+	#MilestonesBlock .step .step-canves .year:before{
+		content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #1C6DBC;
+    position: absolute;
+    left: -20px;
+    top: 11px;
+		
+		
+		
+	}
+	
+	#MilestonesBlock .step .step-canves i{
+		display:none !important;
+	}
+
+    #MilestonesBlock .step .step-canves{
+        position: relative;
+        border: none !important;
+        display: block;
+		height:auto !important;
+    }
+	
+	
+
+    #MilestonesBlock .step:nth-child(odd) .step_content,
+    #MilestonesBlock .step:nth-child(even) .step_content, {
+        left: 0px;
+        position:relative
+        /* top: -180px !important; */
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: end;
+    }
+
+    #MilestonesBlock .step:nth-child(odd) .step_content {
+        left: 0px;
+        position: relative;
+        top: 0px !important; 
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: end;
+    }
+
+    #MilestonesBlock .step:nth-child(even) .step_content {
+        position: relative;
+        margin-top: 0px;
+        left: 0px;
+        width: 100% !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#desingContainer h1.title {
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #fff;
+    -webkit-text-stroke: 1.5px #398CC9;
+    letter-spacing: 1px;
+
+}
+
+.text-center{
+    text-align: center;
+}
+
+span {
+    position: relative;
+}
+
+#desingContainer .w-100 {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.box-bordered {
+    background-color: #fff;
+    border: #398CC9 solid 2px;
+    border-radius: 8px;
+}
+
+.font-xl {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.font-lg {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.font-sm {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.rounded-0 {
+    border-radius: 0px !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+
+.w-xl {
+    width: 225px;
+}
+
+.w-lg {
+    width: 182px;
+}
+
+/*=============================
+          connector
+=============================*/
+
+.connector {
+    height: 25px;
+    width: 66%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.connector-middle {
+    height: 20px;
+    width: 2px;
+    background-color: #398CC9;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.connector-side {
+    height: 2px;
+    width: 97px;
+    background-color: #398CC9;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+
+}
+
+.connector-3 {
+    position: relative;
+
+}
+
+.connector-3::before {
+    content: '';
+    height: 72px;
+    width: 2px;
+    background-color: #398CC9;
+    position: absolute;
+    top: 33px;
+    left: -19px;
+
+}
+
+.connector-side.left {
+    left: -98px;
+}
+
+.connector-side.right {
+    right: -98px;
+}
+
+.long-connector-1 {
+    width: 2px;
+    background-color: #398CC9;
+    margin: 0 auto;
+    height: 82px;
+    position: absolute;
+    bottom: -83px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.long-connector-2 {
+    width: 2px;
+    background-color: #398CC9;
+    margin: 0 auto;
+    height: 45px;
+    position: absolute;
+    bottom: -46px;
+    left: -2px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*=============================
+          BORDER
+=============================*/
+
+.border-top {
+    border-top: #398CC9 solid 2px;
+}
+
+.border-left {
+    border-left: #398CC9 solid 2px;
+}
+
+.border-right {
+    border-right: #398CC9 solid 2px;
+}
+
+.border-bottom {
+    border-bottom: #398CC9 solid 2px;
+}
+
+/*=============================
+         squre-box
+=============================*/
+
+.squre-box {
+    width: 125px;
+    height: 125px;
+    transform: rotate(45deg);
+    border: #398CC9 solid 2px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.squre-text {
+    transform: rotate(-45deg);
+    font-weight: bold;
+    line-height: normal;
+
+}
+
+.secondary.squre-box .squre-text::before {
+    content: '';
+    height: 72px;
+    width: 2px;
+    background-color: #398CC9;
+    position: absolute;
+    top: -137px;
+    left: 60px;
+}
+
+
+/*=============================
+       flow-list
+=============================*/
+
+.flowlist li {
+    margin-bottom: 5px;
+}
+
+
+/*============================
+        Arrow pointer
+=============================*/
+
+.arrow-pointer {
+    content: "";
+    position: absolute;
+    font-size: 19px;
+    color: #398CC9;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.arrow-pointer.right {
+    top: 9px;
+    left: -7px;
+
+}
+
+.arrow-pointer.left {
+    right: -6px;
+    top: 9px;
+}
+
+.double_arrow {
+    color: #398CC9;
+    position: absolute;
+    font-size: 19px;
+    right: -44px;
+    top: 16px;
+}
+
+.double_arrow_1 {
+    color: #398CC9;
+    position: absolute;
+    font-size: 19px;
+    top: 17px;
+
+}
+
+.double_arrow_1.left {
+    right: -25px;
+}
+
+.double_arrow_1.right {
+    left: -25px;
+}
