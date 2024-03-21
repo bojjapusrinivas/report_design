@@ -33,6 +33,7 @@
         animation: "", // http://daneden.me/animate/ - any entrance animations
         fallback: 400,
         minHeight: true,
+        totalcount:466,
         callback: undefined // function( pages, items ) { }
       };
 
@@ -159,7 +160,9 @@
         navhtml += "</a>";
         if (i === this.options.startRange || i === this._numPages - this.options.endRange)
           navhtml += "<span>...</span>";
+         
       }
+      navhtml += "&nbsp;&nbsp;<a>"+ this.options.totalcount+"</a>";
       navhtml += this.writeBtn("next") + this.writeBtn("last") + "</div>";
       return navhtml;
     },

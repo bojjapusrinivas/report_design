@@ -10,20 +10,168 @@
 
     .right-border {
         border-right: 0px solid #dee2e6 !important;
-    
+
     }
 
 }
 
 /*=======================
     ECO SYSTEM BLOCK
-======================*/
+#======================*/
+
+#ExpertInsight_page_btn .btn {
+
+    color: #255e91 !important;
+    /* border-bottom: 5px solid #255e91;*/
+    font-weight: bold;
+
+}
+
+
+/*#ExpertInsight_page_btn .btn[aria-expanded="true"]:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    top: 37px;
+    z-index: 9999;
+    border-top: 10px solid #255e91;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+}*/
+
+#ecoSystem_page_btn .btn {
+    border: none !important;
+    background: #255E91 !important;
+    font-size: 13px !important;
+    font-family: arial !important;
+    /* font-weight: 600 !important; */
+    color: #fff !important;
+    width: 140px;
+    height: 36px;
+    margin: 2px !important;
+    border: none;
+    border-radius: 3px !Important;
+    cursor: pointer !important;
+    text-align: center;
+    box-shadow: rgb(17 17 26 / 5%) 0px 1px 0px, rgb(17 17 26 / 10%) 0px 0px 8px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+
+}
+
+#ecoSystem_page_btn .btn:hover,
+#ecoSystem_page_btn .btn.active {
+    background: #074073 !important;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+
+
+#ecoSystem_page_btn .btn.active::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #074073;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: -3px;
+    left: calc(100% - 53%);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 766px) {
+
+    #ecoSystem_page_btn .btn {
+        font-size: 15px !important;
+        width: 150px !important;
+
+    }
+}
+
+
+
+#ecoSystem_dRoom_btn .btn  {
+    border: none !important;
+    background: #01646A !important;
+    font-size: 13px !important;
+    font-family: arial !important;
+    /* font-weight: 600 !important; */
+    color: #fff !important;
+    width: 175px;
+    height: 36px;
+    margin: 2px !important;
+    border: none;
+    border-radius: 3px !Important;
+    cursor: pointer !important;
+    text-align: center;
+    box-shadow: rgb(17 17 26 / 5%) 0px 1px 0px, rgb(17 17 26 / 10%) 0px 0px 8px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+
+}
+
+#ecoSystem_dRoom_btn .btn.hover,
+#ecoSystem_dRoom_btn .btn.active  {
+    background: #044044 !important;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+
+#ecoSystem_dRoom_btn .btn.active::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #044044;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: -3px;
+    left: calc(100% - 53%);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 958px) {
+
+    #ecoSystem_dRoom_btn .btn  {
+        font-size: 12px !important;
+        width: 164px !important;
+
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 766px) {
+
+    #ecoSystem_dRoom_btn .btn  {
+        font-size: 15px !important;
+        width: 221px !important;
+
+    }
+}
 
 /*---Text Block---*/
 #ecosystems_block h1 {
-    font-size: 18px;
+    font-size: 24px;
+    leater-spacing: 1px;
     font-weight: bold;
-    color: #900;
+    color: #255E91;
     line-height: normal;
     text-transform: uppercase;
 
@@ -48,7 +196,7 @@
 
 @media only screen and (min-width: 481px) and (max-width:767px) {
     #ecosystems_block h1 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
 
@@ -67,7 +215,7 @@
 
 @media only screen and (min-width: 300px) and (max-width: 480px) {
     #ecosystems_block h1 {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     #ecosystems_block h2 {
@@ -88,7 +236,7 @@
 
 #ecosystems_block .three_col_block {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 
@@ -112,13 +260,13 @@
 
 #ecosystems_block ul {
     list-style: none;
-    padding: 5px 10px;
+    padding: 5px 10px 0px 10px;
 
 }
 
 #ecosystems_block ul li {
     position: relative;
-    font-size: 14px;
+    font-size: 15px;
     color: #000;
     line-height: normal;
     margin-bottom: 6px;
@@ -130,7 +278,7 @@
     width: 20px;
     height: 20px;
     font-family: FontAwesome;
-    color: #900;
+    color: #E37038;
     margin-left: -11px;
     font-size: 15px;
     margin-top: 2px;
@@ -138,7 +286,7 @@
 
 @media only screen and (min-width: 481px) and (max-width:767px) {
     #ecosystems_block ul li {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -147,4 +295,59 @@
         font-size: 13px;
     }
 
+}
+
+/*=========================
+
+=========================*/
+
+#ecosystem-read-block #loadMore {
+
+    background: #255E91 !important;
+    font-size: 13px !important;
+    font-family: arial !important;
+    font-weight: 500 !important;
+    color: #fff !important;
+    width: 96px;
+    height: 36px;
+    margin: 2px !important;
+    border-radius: 3px !Important;
+    cursor: pointer !important;
+    border: none !important;
+    line-height: 22px;
+    text-align: center;
+    box-shadow: rgb(17 17 26 / 5%) 0px 1px 0px, rgb(17 17 26 / 10%) 0px 0px 8px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+
+#ecosystem-read-block #loadMore:hover,
+#ecosystem-read-block #loadMore.active {
+    background: #074073 !important;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+
+/*================================
+       Navagation Button
+================================*/
+
+#a_back_nav,
+#a_next_nav {
+    color: #cb0707 !important;
+    font-size: 30px !important;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+
+#a_back_nav:hover,
+#a_next_nav:hover {
+    color: green !important;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
 }

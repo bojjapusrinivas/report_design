@@ -187,7 +187,7 @@ border-bottom: solid 1px transparent;
 
         
 #tieevent .speaker-visible-node{
-    width: 50%;
+    width: 30%;
     padding: 8px;
     text-align: center;
 }
@@ -204,9 +204,23 @@ border-bottom: solid 1px transparent;
 @media only screen and (max-width:480px){
 
     #tieevent .keybox{
+        width: 50%;
+       
+    }
+        
+#tieevent .speaker-visible-node{
+    width: 48%;
+    padding: 10px;
+    text-align: center;
+}
+
+}
+@media only screen and (max-width:350px){
+ #tieevent .keybox{
         width: 100%;
        
     }
+   
         
 #tieevent .speaker-visible-node{
     width: 100%;

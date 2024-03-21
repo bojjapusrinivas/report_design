@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+#label_container {
+    font-family: 'Open Sans', sans-serif;
+    line-height: normal;
+    font-weight: normal;
+    display: block;
+}
+.label_border_bottom {
+    border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
+}
+.label_border_top {
+    border-top: rgba(0, 0, 0, 0.15) solid 1px;
+}
+.label_border_left {
+    border-left: rgba(0, 0, 0, 0.15) solid 1px;
+}
+.label_border_right {
+    border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
+}
+
+
+/*============================
+        TITLES
+============================*/
+
+h1.tracking,
+h2.tracking_value{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: normal;
+}
+
+
+h1.tracking{
+           color: #900;
+    
+}
+
+h2.tracking_value{
+ 
+    color: #000;
+   
+}   
+
+
+/*==================================
+            TOP FIXED
+==================================*/
+
+.topfixed {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        left: 0px;
+        padding-top: 5px;
+        top: 0px;
+        transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        -moz-transition: all .2s ease-in;
+        z-index: 99999;
+        background: #fff;
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+
+    }
+
+
+
+
+.s_icon{
+    width:16px;
+    height: auto;
+}
+
+/*================================
+        Lable styling
+===============================*/
+
+#label_container {
+    position: relative;
+
+}
+#label_container .lable_aside h3 {
+    display: block;
+    text-transform:capitalize
+}
+#label_container .img-block {
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    padding: 5px;
+    overflow: hidden;
+       margin-top: -10px;
+       margin-bottom: 3px;
+}
+#label_container .img-block.l4 {
+    margin-right: 0px;
+}
+#label_container h3 {
+    color: #900 !important;
+    font-size: 16px;
+    line-height: normal;
+    margin: 2px 0px !important;
+    text-transform: uppercase;
+}
+#label_container h4 {
+   
+        font-size: 15px;
+        line-height: 14px !important;
+        text-transform: capitalize;
+        margin: 8px 0px !important;
+
+}
+#label_container h3::first-letter,
+#label_container h4::first-letter{
+
+    text-transform: capitalize !important;
+
+}
+
+#label_container h6,
+#label_container h6.textlimit35 {
+    font-size: 16px;
+    line-height: 20px !important;
+} 
+
+#label_container .star_rating {
+    margin-top: 0px;
+    width: 68px;
+    height: auto;
+    display: block;
+}
+#label_container .label_aside {
+    margin-left: 17px;
+}
+.label_bottom_block {
+    margin-top: 2px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #label_container h3 {
+        font-size: 17px;
+    }
+    #label_container h4 {
+        font-size: 16px;
+    }
+
+    #label_container h6,
+    #label_container h6.textlimit35 {
+    font-size: 16px;
+    line-height: 20px !important;
+} 
+
+
+#label_container .img-block {
+    margin-right:0px;
+    margin-top: -9px;
+}
+
+}
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    .label_middle_block {
+        margin-top: 6px !important;
+    }
+
+    #label_container h3 {
+        font-size: 17px;
+        line-height: normal;
+    }
+
+    #label_container h6,
+    #label_container h6.textlimit35 {
+    font-size: 16px;
+    line-height: 20px !important;
+} 
+
+    #label_container h4 {
+        font-size: 14px;
+    }
+    #label_container .img-block {
+        width: 80px;
+        height: 76px;
+        margin-right: 0px;
+    }
+    #landing_page .report_lable {
+        border-right: rgba(0, 0, 0, 0.15) solid 0px;
+        border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
+    }
+}
+
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+#label_container .label_aside {
+    margin-left: 10px;
+}
+
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 479px) {
+   
+    #label_container h3 {
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    #label_container h6,
+    #label_container h6.textlimit35 {
+    font-size: 15px;
+    line-height: 20px !important;
+} 
+
+   
+    #label_container h4 {
+        font-size: 14px 
+    }
+
+    #label_container .img-block {
+        width: 70px;
+        height: 60px;
+        margin-right: -5px;
+        margin-top: 1px;
+    }
+    #label_container .label_aside {
+        margin-left: 12px;
+        margin-bottom: -2px;
+    }
+    .label_bottom_block {
+        margin-top: 6px;
+    }
+    #landing_page .report_lable {
+        border-right: rgba(0, 0, 0, 0.15) solid 0px;
+        border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
+    }
+}

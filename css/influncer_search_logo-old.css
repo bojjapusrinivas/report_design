@@ -1,0 +1,613 @@
+/*--- Model ---*/
+
+
+    
+   .jq-stars {
+  display: inline-block;
+}
+
+.jq-rating-label {
+  font-size: 22px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  font-family: helvetica, arial, verdana;
+}
+
+.jq-star {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.jq-star-svg {
+  padding-left: 3px;
+  width: 100%;
+  height: 100% ;
+}
+
+.jq-star:hover .fs-star-svg path {
+}
+
+.jq-star-svg path {
+  /* stroke: #000; */
+  stroke-linejoin: round;
+}
+
+/* un-used */
+.jq-shadow {
+  -webkit-filter: drop-shadow( -2px -2px 2px #888 );
+  filter: drop-shadow( -2px -2px 2px #888 );
+}
+    
+   
+.modal {
+    padding: 10px !important;
+    max-width: 500px !important;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    -moz-box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    -o-box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    -ms-box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    text-align: left;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+.modal_purge {
+    padding: 10px !important;
+    max-width: 1000px !important;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    -moz-box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    -o-box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    -ms-box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.09) !important ;
+    text-align: left;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+.blocker {
+    background-color: rgba(220, 223, 224, 0.75) !important;
+   
+    text-align: center;
+}
+
+/*--- Influncer Result Block ---*/
+
+.influser_profile_list {
+    margin: 30px 0px;
+    box-sizing: border-box;
+}
+
+.influser_profile_list #panagration_list{
+    display: flex;
+    display: -webkit-flex;
+    -webkit-display:flex;
+    -moz-display:flex;
+        
+    justify-content: right;
+    -webkit-justify-content: right;
+    -moz-justify-content: right;
+    
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    
+    flex-wrap: wrap;
+    -webkit-flex-wrap:wrap;
+    -moz-flex-wrap:wrap;
+    
+    padding: 0px !important;
+    
+}
+
+
+.influser_profile_list ul#panagration_list > li{
+   width: 30.5% !important;
+   margin-right: 1.5%;
+   margin-bottom:1.5%; 
+   
+}
+
+/*--- Influncer profile content block ---*/
+
+.profile_content {
+    position: relative;
+    box-sizing: border-box;
+    padding:0px
+    margin: 5px 0px;
+    background: #fff;
+   overflow:auto;
+    height: auto;
+   /* min-height: 100%*/
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border: rgba(0, 0, 0, 0.08) solid 1px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transform: translateY(-5px);
+	margin-bottom: 10px;
+}
+
+.profile_content:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    border: rgba(0, 0, 0, 0.08) solid 1px;
+    border-bottom: #169fe6 solid 1px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transform: translateY(-5px);
+}
+
+/*--- Influncer profile image ---*/
+
+
+
+/*--- Influncer profile Title Block ---*/
+
+.profile_content .profile_title_block {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px 5px 0px;
+    box-sizing: border-box;
+}
+
+.profile_content .profile_title_block h4 {
+    line-height:16px;
+    font-size:13px;
+}
+
+
+
+/*--------INDIVIDUAL PROFILE ----*/
+
+.influser_profile {
+    padding: 10px;
+    box-sizing: border-box;
+    /* border:rgba(0,0,0,0.06) solid 1px;
+    text-align: center;*/
+}
+
+.influser_profile h2{
+    margin-bottom: 7px;
+    margin-top:0px;
+}
+
+
+.influser_profile .left_block {
+   width: 35%;
+    float: left;
+    text-align: center;
+    display: flex;
+    -webkit-display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    overflow:auto
+}
+
+
+.influser_profile .right_block {
+    width: 65%;
+   
+    float: right;
+    box-sizing: border-box;
+    position: relative;
+      overflow:auto
+   /* border-left: rgba(0, 0, 0, 0.08) solid 1px;*/
+}
+ /*.influser_profile .right_block:before {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 40%;
+    left: -3px;
+    top: calc(100% - 65%);
+   background-color: #169fe6;
+}*/
+.influser_profile .profile_full_pic {
+    
+	width: 60px;
+    margin: 0 auto;
+    margin-top: 5px;
+    height: auto;
+    
+    
+}
+ .bottom_block {   
+    margin: 0 auto;
+	border-left: rgba(0, 0, 0, 0.05) solid 1px;
+	overflow:hidden;
+	margin-top: 10px;
+	display:flex;
+	align-items: center;
+	min-height:60px;
+}
+.influser_profile .prifile_company_log {   
+    width: 60px;
+    margin: 0 auto;
+    margin-top: 5px;
+    height: auto;
+}
+
+.influser_profile .right_block .title {
+    padding-bottom: 5px;
+	min-height:90px;
+    display: flex;
+    align-items: center;
+}
+.influser_profile h2 {
+    font-size: 15px;
+    margin-top: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 18px;
+	word-break: break-all;
+	text-align:left;
+}
+.influser_profile h3 {
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    color: #000; margin: 0px;
+    line-height: 15px;
+}
+.influser_profile h5 {
+    font-size: 13.5px;
+    font-weight: bold;
+    margin-top: 7px;
+	line-height: 15px;
+}
+.influser_profile h5 a {
+    color: #169fe6
+}
+.influser_profile .social_icon ul {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    margin-bottom: 13px;
+}
+
+.influser_profile .social_icon ul > li {
+    padding: 5px 8px !important ;
+}
+.influser_profile .social_icon ul li a {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    margin-top: 5px;
+    margin-left:2px;
+}
+.influser_profile .social_icon ul li a:hover {
+    background: rgba(0, 0, 0, 0.2) !important;
+    color: #000 !important;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
+.influser_profile .social_icon ul li a i {
+    font-size: 13px;
+}
+.influser_profile li a.face {
+    background: #39579B !important
+}
+.influser_profile li a.twitter {
+    background: #00A7E7 !important
+}
+.influser_profile li a.linked {
+    background: #006094 !important
+}
+.influser_profile li a.youtube {
+    background: #DE2A25 !important
+}
+.speaker_confrence h6 {
+    font-size: 14px;
+    margin: 0px 0px 6px 0px;
+}
+#speaker_confrence_list {
+    margin: 5px 0px 0px 0px;
+    font-size: 14px;
+    width: 80%;
+    padding: 10px 0px;
+    display: none
+}
+#speaker_confrence_list ol {
+    padding: 0px;
+}
+#speaker_confrence_list ol li {
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 14px;
+}
+#speaker_cont {
+    color: #169fe6;
+    cursor: pointer;
+}
+
+/*---RATING---*/
+
+
+/* Rating Star Widgets Style */
+
+.rating-stars ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 7px;
+    border-bottom: rgba(0, 0, 0, 0.08) solid 1px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    padding-bottom: 10px;
+}
+.rating-stars ul>li.star {
+    display: inline-block;
+    margin:2px;
+}
+.rating_title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 13px;
+    float: left;
+    margin-right: 5px;
+}
+.rating_title a {
+    color: #000;
+}
+
+/* Idle State of the stars */
+
+.rating-stars ul>li.star>i.fa {
+    font-size: 12px;
+    /* Change the size of the stars */
+    color: #ccc;
+    /* Color on idle state */
+}
+
+/* Hover state of the stars */
+
+.rating-stars ul>li.star.hover>i.fa {
+    color: #FFCC36;
+}
+
+/* Selected state of the stars */
+
+.rating-stars ul>li.star.selected>i.fa {
+    color: #f7d115;
+}
+
+
+.influser_profile .privileg_box {
+    padding: 0;
+     width: 100% !Important; */
+    margin: 0 auto !Important;
+    border-radius: 0px;
+    box-shadow: 0 2px 6px rgba( 0, 0,0,0.2);
+}
+
+.influser_profile .button1 {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #255E91 !important;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 13px;
+    padding: 3px;
+    width: 230px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    /* font-weight: bold; */
+}
+
+.influser_profile .txtbox140{
+    width: 95%;
+    margin: 0px 0px !important;
+    box-sizing: border-box;
+    margin: 0 auto !important;
+}
+
+/*==========================
+        MEDIA QURIES
+==========================*/
+
+/*----MEDIA QURIES FOR TAB---*/
+
+@media only screen and (max-width: 959px) {
+    
+    .influser_profile_list ul#panagration_list > li {
+    width: 46.5% !important;
+    margin-right: 1.5%;
+    margin-bottom:1.5%;    
+    }
+    
+    
+    
+    .profile_content .img_block {
+         width: 100% !important;
+         height: auto;
+    }
+    
+    
+    .profile_content .img_block img{
+         width: 100%;
+        height: auto;
+    }
+    
+    .profile_content .view_profile {
+    width: 81%;
+   
+    left: 9.5%;
+   
+}
+    
+    
+}
+
+/*----MEDIA QURIES FOR MOBILE---*/
+
+@media only screen and (max-width: 767px) {
+    .modal {
+   
+    max-width:100% !important;
+   
+}
+    
+    .influser_profile_list ul#panagration_list > li {
+		width: 100% !important;
+		margin-right:0px;
+		margin-bottom:2%;    
+    }
+
+	.influser_profile .right_block .title {   
+	    min-height:50px;  
+    }
+    
+.influser_profile h2 {    
+	text-align: center;
+	width: 100%;
+}
+    .profile_content .img_block {
+         width: 150px !important;
+         height: 150px !important;
+    }
+    
+    
+    .profile_content .img_block img{
+         width: 100%;
+        height: auto;
+    }
+    
+    
+    .profile_content .view_profile {
+    width: 41.5%;
+    left: 29.3%;
+}
+    .influser_profile_list .row{
+   
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+}
+    
+    .profile_content .profile_title_block h4 {
+    line-height: 16px;
+    font-size: 16px;
+}
+   
+    .left_block, .right_block{
+        float:none !important;
+        width: 100% !important;
+        text-align: center !important;
+		height:auto;
+      
+    }
+    
+    .right_block{
+      padding-left:0px !important;
+        border-left: rgba(0, 0, 0, 0.08) solid 0px !important;
+    }
+     .right_block:before{
+         background:transparent !important;
+         
+    
+    }
+    
+    .influser_profile .profile_full_pic {
+    width: 100px;
+}
+    
+    .influser_profile h2 {
+    font-size: 20px;
+}
+    
+    .influser_profile h3, .speaker_confrence h6, .influser_profile h5, .rating_title {
+    font-size: 17px !important;
+        margin-top: 5px !important;
+   
+    }
+    
+   
+    
+    .speaker_confrence h6
+    
+    .influser_profile .right_block .title {
+    padding-bottom: 5px;
+    min-height: auto;
+}
+    
+    .influser_profile .social_icon ul {
+   
+    justify-content: center !important;
+    
+}
+    
+    .rating_title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 2px;
+    float: none;
+    margin-right: 0px;
+}
+    
+    #speaker_confrence_list {
+    margin: 5px 0px 0px 0px;
+    font-size: 14px;
+    width: 100%;
+    padding: 0px 0px;
+    display: none;
+}
+    
+    #speaker_confrence_list ol {
+    padding: 0px;
+        margin-left: 0px;
+        list-style: none;
+        margin-bottom: 10px;
+}
+    
+    #speaker_confrence_list ol li {
+    margin-bottom: 5px;
+}
+    
+    .influser_profile .left_block {
+   
+    display: flex;
+    -webkit-display: flex;
+    display: -webkit-flex;
+    flex-direction:column-reverse
+    
+    
+}
+
+    .influser_profile .bottom_block {
+       margin-bottom:2px;
+       border-bottom:rgba(0, 0, 0, 0.08) solid 1px;
+        
+}
+    
+    .influser_profile .prifile_company_log {
+    width: 90px;
+    
+}
+    
+/*----MEDIA QURIES FOR MOBILE---*/
+
+

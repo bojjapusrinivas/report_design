@@ -1,0 +1,123 @@
+#overlay{
+    position:fixed;
+    z-index:99999;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:rgba(200,200,200,0.9);
+    transition: 1s 0.4s;
+    overflow: hidden;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  #progress{
+    height:1px;
+    background:#169fe6;
+    position:absolute;
+    width:0;
+    top:50%;
+  }
+  #progstat{
+    font-size:0.7em;
+    letter-spacing: 3px;
+    position:absolute;
+    top:50%;
+    margin-top:-40px;
+    width:100%;
+    text-align:center;
+    color:#000;
+	font-weight:bold;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  #progstat div{
+  
+  width: 28px;
+      margin-right: 25px;
+    }
+  
+   #progstat div span {
+    font-size: 30px;
+  }
+  
+  
+  
+  #progstat span:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+    color:#169fe6
+  }
+  
+  @keyframes ellipsis {
+    to {
+      width: 1.25em;    
+    }
+  }
+  
+  @-webkit-keyframes ellipsis {
+    to {
+      width: 1.25em;    
+    }
+  }
+  a.a_nav {
+    width: 18px;
+   /*background: #ebebeb;*/
+    display: flex;
+    justify-content: center;
+    height: 18px;
+    padding: 12px;
+    position:relative;
+}
+
+a.a_nav i {
+	font-size: 33px;
+    	color: #E82329;
+
+}	
+
+a.a_back.a_nav:hover {
+    background: #E82329;
+}
+a.a_back.a_nav:hover, a.a_next.a_nav:hover  {
+    background: #E82329;
+}
+
+
+a.a_back.a_nav:hover i {
+    color: #fff;
+}
+a.a_back.a_nav:hover i, a.a_next.a_nav:hover i {
+    color: #fff;
+}
+
+a.a_back.a_nav:hover:before {
+
+    content: "Back";
+    position: absolute;
+    font-size: 12px;
+    top: 22px;
+    color: black;
+}
+
+a.a_next.a_nav:hover:before {
+
+    content: "Next";
+    position: absolute;
+    font-size: 12px;
+    top: 22px;
+    color: black;
+}
+
+
+a.a_nav {
+    width: 18px
+
+  

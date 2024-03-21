@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; --color:#666666; 	color:#000000; margin-left:0px;
+	margin-top:0px; margin-right:0px; margin-bottom:0px; height:100%; border-top:solid 30px #BD7900; background:#f2f2f2 }
+
+.outer_shell{ position:absolute; width:100%; height:100%; top:0; left:0}
+
+.main_shell{ width:88%; margin:0px auto; height:100%; padding:0px 10px; }
+
+/* usefull links and welcome styles starts */
+.welcome{width:25%; float:left; margin:0px; padding:8px 8px}
+.implinks{width:40%px; float:right; margin:0px; padding:7px 0px; text-align:right;}
+
+/* usefull links and welcome styles ends */
+
+/* logo and search styles starts*/
+identity{ width:88%; float:left}
+.logo{ width:350px; height:52px; float:left; margin:0px; padding:5px 0px; background-image:url(/Images/logo1_tablet.jpg) }
+.search{ width:300px; float:right; margin:0px; padding:15px 0px; text-align:right; }
+.round_box{ background:#0167ab; height:50px; padding:3px 3px; border:solid 2px #FFFFFF; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:5px;
+	behavior:url(css/border-radius.htc); float:right;}
+/* logo and search styles ends */
+/* Navigation starts */
+
+.navigation{ width:100%;background-color:#00a8e8; height:25px; padding:0px; margin:0px; -moz-border-radius:5px;
+	-webkit-border-radius:5px; border-radius:0px; behavior:url("css/border-radius.htc"); float:right; border:none; }
+
+.navigation ul{ margin:0px 0px; padding:0px; float:left; background:#00a8e8 ; border:none; width:100%;line-height:25px; }
+
+.navigation ul li{ margin:0px; padding:0px; list-style:none; float:left; display:inline; border:none;}
+.navigation ul li a{ float:left; margin:0px; padding:0px 7px; color:#FFFFFF; font-weight:bold;*/line-height:25px; height:25px;	border:none; font-size:11px;  }
+/*container*/
+
+.container{	float:left; width:100%; height:auto; margin:5px auto; padding:0px}
+.left_pannel{ float:left; width:100%; height:auto; margin:0px;	padding:0px;}
+.wrapper{float:left;width:100%; height:141px;; background:#CCC url(/Images/BANNER%20_tablet.jpg)}
+.research{float:left; margin-top:15px; width:100%}
+
+.category{width:100%; float:left}
+
+.category{ float:left; width:30%; margin:0px 20px 0px 0px; padding:0px; margin-top:10px; }
+.catrightmar{margin-right:0px; }
+.category ul{margin:0px; padding:0px; float:left; background:url(/images/divide.png) no-repeat right}
+
+.category ul li{ margin:0px; padding:0px; list-style:none; float:left; width:100%; border-right:none;}
+.category ul li a{ margin:0px; padding:0px 0px 0px 8px; list-style:none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;
+	--color:#666666; color:#000000; background:url(/images/arrow.gif) no-repeat 0px 7px; float:left; line-height:20px; display:block;
+	width:autopx}
+.category ul li a:hover{ text-decoration:underline;}
+
+#category_pan{ border-bottom:#09F solid 1px; width:97%}
+
+.right_pannel{ float:left; width:500px; height:auto; padding:0px; margin:20px 0px 0px 80px } 
+
+
+
+
+.bottom_nav{width:60%;float:left;}
+.bottom_nav ul{margin:0px;padding:0px;width:100%;}
+.bottom_nav ul li{margin:0px; padding:0px 2px;	list-style:none; display:inline; float:left; border-right:solid 1px #666666;line-height:12px;}
+
+
+.bottomicons{ width:40%; float:left; text-align:right; }
+.bottomicons img{ border:none; margin-left:2px; }
+

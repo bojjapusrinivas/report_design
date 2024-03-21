@@ -69,11 +69,11 @@
     background-color: #f9f9f9;
 } 
 
-.question-title, ul li {
-    font-weight: 600;
-    line-height: 20px;
+.question-title, ul li,p {
+   
+    line-height: 22px !important;
     color: #000;
-    font-size: 15px;
+    font-size: 14px !important;
 }
 
 

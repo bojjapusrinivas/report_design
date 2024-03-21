@@ -1,0 +1,274 @@
+
+.datagraphicLeftCol{
+    width: 40%;
+    padding: 12px;
+    position: relative;
+}
+
+.datagraphicRightCol{
+    width: 60%;
+    padding: 12px;
+    position: relative;
+}
+
+.semi-chart-block{
+position: relative;
+animation: reveal 2.5s forwards;
+overflow: hidden;
+height: 190px;
+
+}
+
+@keyframes reveal {
+    from {
+      clip-path: inset(100% 0   0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+}
+
+
+.semiGraph-Content{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    z-index: 99999;
+    top: 0px;
+    left: 0px;
+}
+
+.semiGraph-Content .topBlock,
+.semiGraph-Content .bottomBlock{
+    height: 50%;
+    width: 100%;
+    padding-top: 25px;
+    
+}
+
+.semiGraph-Content .topBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:58px;
+}
+
+
+.semiGraph-Content .bottomBlock{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+
+.grph-section{
+    width: 110px;
+}
+
+
+.topBlock  .grph-section:nth-child(1){
+    margin-left: 6px;
+}
+.topBlock  .grph-section:nth-child(2){
+    padding-right: 20px;
+}
+
+.bottomBlock .grph-section:nth-child(1){
+    margin-left: 25px;
+}
+.bottomBlock .grph-section:nth-child(2){
+    margin-right: 25px;
+}
+
+
+.semiGraph-Content h5{
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+
+
+.semiGraph-Content h6 {
+    font-size: 16px;
+    color: #fff;
+    font-weight:900;
+    text-align: center;
+}
+
+
+
+#semi-charts{
+    width: 444px;
+    height:444px
+}
+
+
+.ReportDashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 22px 5px;
+}
+
+
+
+.datagraphicTitle{
+    margin-bottom: 15px;
+}
+
+.datagraphicTitle h3 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.datagraphicTitle h4 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+
+
+.dataassets {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top:24px;
+}
+
+
+.dataassets li {
+    width: 48%;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+}
+
+.dataassets li:nth-child(1){
+    background:#4D81BB;
+}
+
+.dataassets li:nth-child(2){
+    background:#4a4f74;
+}
+
+.dataassets li:nth-child(3){
+    background:#31C9BC;
+}
+
+.dataassets li:nth-child(4){
+    background:#FA8F2F;
+}
+
+.dataassets li:nth-child(5){
+    background:#D82525;
+}
+
+
+.dataassets li {
+    width: 45%;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 12px 22px;
+    box-sizing: border-box;
+    border-radius: 10px 0px 10px 0px;
+    margin-bottom: 10px 
+}
+
+.dataassets li div:nth-child(2){
+    font-weight:bold;
+    font-size: 16px;
+    padding-left: 4px;
+}
+
+.datagraphicdomain {
+    margin-top: 0px;
+    background: #f4f4f4;
+    padding: 18px 0px;
+    border-radius: 17px;
+}
+.datagraphicdomain h3{
+    font-size:22px;
+    font-weight: bold;
+    color: #000;
+}
+
+.domain-list{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top:24px;
+}
+
+
+
+#domainlist1,
+#domainlist2,
+#domainlist3,
+#domainlist4,
+#domainlist5{
+    width: 140px;
+    height: auto;
+    transform: scale(1.2, 1.2);
+
+}
+
+.domain-list li{
+    position: relative;
+}
+
+.domain-list li p {
+    position: absolute;
+    top: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    left: 0px;
+    line-height: 18px;
+}
+
+.datagraphiclinkto{
+    margin-top:32px;
+    margin-bottom:18px;
+}
+
+.datagraphiclinkto a{
+    padding: 10px;
+    border: #255E91 solid 1px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #255e91;
+    transition: all 0.25 linear;
+    -webkit-transition: all 0.25 linear;
+
+}
+
+.datagraphiclinkto a:hover{
+    color: #fff;
+    background:#255e91 ;
+    transition: all 0.25 linear;
+    -webkit-transition: all 0.25 linear;
+}

@@ -19,6 +19,10 @@
 .ecosystem-data {
     width: 100%;
 }
+.ecosystem-data .executives {
+    display:none;
+	
+}
 
 .ecosystem-data h4 {
     width: 60%;

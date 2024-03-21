@@ -1,0 +1,19 @@
+// 20231211152120
+// https://www.evolv.cc/data/calender.json
+
+{
+    "influencerlist": [
+      {
+        "name": "ramkreddy",
+        "Title": "Evolv™ 2024",
+        "Title2": "",
+        "Links": "javascript:void(0)",
+        "Multi": "",
+        "dg": "",
+        "date": "March 2024",
+        "location": "Silicon Valley, CA, USA",
+        "live": "live",
+        "icon": "./images/evolv/icons/calender/live.png"
+      }
+    ]
+  }
