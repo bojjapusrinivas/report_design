@@ -217,8 +217,8 @@
 
                             <div id="ReportDashboard" class="ReportDashboard">
                                 <div class="w-100 datagraphicTitle">
-                                    <h3>ADVANCED CERAMICS</h3>
-                                    <h4>A GLOBAL STRATEGIC BUSINESS REPORT</h4>
+                                    <h3 class="wow fadeInUp" data-wow-delay="0.2s">ADVANCED CERAMICS</h3>
+                                    <h4 class="wow fadeInUp" data-wow-delay="0.4s">A GLOBAL STRATEGIC BUSINESS REPORT</h4>
                                 </div>
 
                                 <div class="datagraphicLeftCol">
@@ -274,21 +274,21 @@
                                                 
                                                 <div class="grph-section wow fadeInUp" data-wow-delay="0.6s">
                                                     <h5>EXECUTIVE INSIGHTS</h5>
-                                                    <h6>7259</h6>
+                                                    <h6 class="value" akhi="7259"></h6>
                                                 </div>
                                                 <div class="grph-section wow fadeInUp" data-wow-delay="0.6s">
                                                     <h5>DOMAIN EXPERTS</h5>
-                                                    <h6>35</h6>
+                                                    <h6 class="value" akhi="35"></h6>
                                                 </div>
                                             </div>
                                             <div class="w-100 bottomBlock wow fadeInUp" data-wow-delay="0.3s">
                                                 <div class="grph-section" >
                                                     <h5>PLAYERS</h5>
-                                                    <h6 id="shiva"> <span class="count">211</span></h6>
+                                                    <h6 class="value" akhi="211"></h6>
                                                 </div>
                                                 <div class="grph-section wow fadeInUp" data-wow-delay="0.3s">
                                                     <h5>PARTICIPANTS</h5>
-                                                    <h6>772</h6>
+                                                    <h6 class="value" akhi="772"></h6>
                                                 </div>
                                             </div>
 
@@ -317,14 +317,14 @@
                                         </li>
                                         <li class="wow fadeInUp" data-wow-delay="1.5s"">
                                             <div>SEGMENTS ANALYZED:</div>
-                                            <div>7</div>
+                                            <div >7</div>
                                         </li>
                                     </ul>
 
                                     
                                 </div>
                                 <div class="w-100 datagraphicdomain">
-                                    <h3 class="text-center">DIFFERENTIATORS</h3>
+                                    <h3 class="text-center wow fadeInUp">DIFFERENTIATORS</h3>
 
                                    
 
@@ -352,7 +352,7 @@
    
 </li>
 
-<li class="wow fadeInUp" data-wow-delay="0.9s"">
+<li class="wow fadeInUp" data-wow-delay="0.9s">
     <svg id="domainlist2" viewBox="0 0 134 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.8721 54.4915C23.9549 56.2714 27.753 56.2713 30.8358 54.4915L46.009 45.7312C49.0918 43.9514 50.9908 40.6622 50.9908 37.1025V19.5819C50.9908 16.0223 49.0918 12.733 46.009 10.9532L30.8357 2.19292C27.753 0.413094 23.9549 0.413097 20.8721 2.19293L5.69889 10.9532C2.61613 12.733 0.717085 16.0223 0.717085 19.5819V37.1025C0.717085 40.6622 2.61614 43.9514 5.69889 45.7312L20.8721 54.4915Z" fill="#C4ECAB"/>
         <rect x="1.81937" y="11.9935" width="131.609" height="35.3906" rx="9.96362" fill="#C4ECAB"/>
@@ -369,8 +369,7 @@
         <rect x="1.8147" y="11.8546" width="131.609" height="35.3906" rx="9.96362" fill="#B6DEFA"/>
         </svg>
         <p>PEER-TO-PEER COLLABORATION</p>
-        
-   
+  
 </li>
 
 <li class="wow fadeInUp" data-wow-delay="1.5s"">
@@ -389,7 +388,7 @@
                                    
                                 </div>
 
-                                <div class="w-100 datagraphiclinkto text-center">
+                                <div class="w-100 datagraphiclinkto text-center wow fadeInUp"  data-wow-delay="0.3s">
                                     <a href="javascipt:valid(0)">VIEW OR DOWNLOAD FULL-STACK REPORT</a>
                                 </div>
 
@@ -565,7 +564,29 @@ if (!$(".goto").hasClass("animated")) {
 </script>
 
 
+<script>
+    const counters = document.querySelectorAll('.value');
+const speed = 5000;
 
+counters.forEach( counter => {
+   const animate = () => {
+      const value = +counter.getAttribute('akhi');
+      const data = +counter.innerText;
+     
+      const time = value / speed;
+     if(data < value) {
+          counter.innerText = Math.ceil(data + time);
+          setTimeout(animate, 1);
+        }else{
+          counter.innerText = value;
+        }
+     
+   }
+   
+   animate();
+});
+
+</script>
 
 
 </html>

@@ -42,7 +42,7 @@ height: 190px;
 .semiGraph-Content .bottomBlock{
     height: 50%;
     width: 100%;
-    padding-top: 25px;
+    padding-top: 16px;
     
 }
 
@@ -93,7 +93,7 @@ height: 190px;
 
 
 .semiGraph-Content h6 {
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     font-weight:900;
     text-align: center;
