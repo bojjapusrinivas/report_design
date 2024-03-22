@@ -130,14 +130,14 @@
 
 .datagraphicTitle h3 {
     text-align: center;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 900;
     color: #255E91;
 }
 
 .datagraphicTitle h4 {
     text-align: center;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 600;
     margin-top: 4px;
 }
@@ -331,4 +331,293 @@
     background: #255e91;
     transition: all 0.25 linear;
     -webkit-transition: all 0.25 linear;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    .ReportDashboard {
+        flex-direction: column;
+    }
+
+    .datagraphicRightCol {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .datagraphicLeftCol {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .dataassets {
+        gap: 0;
+        margin-top: 5px;
+    }
+
+    .dataassets li {
+        margin-bottom: 12px;
+    }
+
+    .semi-chart-block {
+        height: 260px;
+    }
+
+    .bottomBlock .grph-section:nth-child(2) {
+        margin-right: 52px;
+    }
+
+    .bottomBlock .grph-section:nth-child(1) {
+        margin-left: 55px;
+    }
+
+    .domain-list {
+
+        gap: 35px;
+
+    }
+
+    .topBlock .grph-section:nth-child(1) {
+        margin-left: -14px;
+    }
+
+    .topBlock .grph-section:nth-child(2) {
+        padding-right: 0px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+
+    .ReportDashboard {
+        flex-direction: column;
+    }
+
+    .datagraphicRightCol {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -20px;
+    }
+
+    .datagraphicLeftCol {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+
+    .dataassets {
+        gap: 0;
+        margin-top: 5px;
+    }
+
+    .dataassets li {
+        width: 95%;
+        margin-bottom: 4px;
+    }
+
+    .semi-chart-block {
+        height: 170px;
+    }
+
+    .datagraphicdomain h3 {
+        font-size: 19px;
+    }
+
+    .bottomBlock .grph-section:nth-child(2) {
+        margin-right: 21px;
+    }
+
+    .bottomBlock .grph-section:nth-child(1) {
+        margin-left: 23px;
+    }
+
+    .domain-list {
+
+        gap: 12px;
+
+    }
+
+    .semiGraph-Content .topBlock,
+    .semiGraph-Content .bottomBlock {
+        height: 43%;
+        width: 100%;
+        padding-top: 62px;
+    }
+
+    .semiGraph-Content h5 {
+        font-size: 13px;
+    }
+
+    .semiGraph-Content h6 {
+        font-size: 15px;
+
+    }
+
+    .semiGraph-Content h5 {
+        margin-bottom: 1px;
+    }
+
+    .topBlock .grph-section:nth-child(1) {
+        margin-left: 37px;
+    }
+
+    .topBlock .grph-section:nth-child(2) {
+        padding-right: 50px;
+        margin-left: 9px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    .ReportDashboard {
+        flex-direction: column;
+    }
+
+    .datagraphicRightCol {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -20px;
+    }
+
+    .datagraphicLeftCol {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+
+    .dataassets {
+        gap: 0;
+        margin-top: 5px;
+    }
+
+    .dataassets li {
+        width: 100%;
+        padding: 12px 0px;
+        margin-bottom: 4px;
+    }
+
+    .semi-chart-block {
+        height: 120px;
+    }
+
+    .dataassets li {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .dataassets li div:nth-child(2) {
+
+        font-size: 14px;
+
+    }
+
+    .datagraphicdomain h3 {
+        font-size: 15px;
+    }
+
+    .bottomBlock .grph-section:nth-child(2) {
+        margin-right: 12px;
+    }
+
+    .domain-list li p {
+        font-size: 14px;
+    }
+
+    .domain-list li span {
+        font-size: 14px;
+    }
+
+    .bottomBlock .grph-section:nth-child(1) {
+        margin-left: 13px;
+    }
+
+    .datagraphicTitle {
+        margin-bottom: -6px;
+    }
+
+    .domain-list {
+
+        gap: 8px;
+
+    }
+
+    .domain-list {
+
+        margin-top: 10px;
+    }
+
+    .domain-list li {
+
+        width: 115px;
+
+    }
+
+    .semiGraph-Content .topBlock,
+    .semiGraph-Content .bottomBlock {
+        height: 43%;
+        width: 100%;
+        padding-top: 62px;
+    }
+
+    .semiGraph-Content h5 {
+        font-size: 10px;
+    }
+
+    .grph-section {
+        width: 88px;
+    }
+
+    .semiGraph-Content h6 {
+        font-size: 11px;
+    }
+
+    .semiGraph-Content .topBlock,
+    .semiGraph-Content .bottomBlock {
+        height: 40%;
+        width: 100%;
+        padding-top: 52px;
+    }
+
+    .datagraphicTitle h3 {
+
+        font-size: 18px;
+
+    }
+
+    .datagraphiclinkto a {
+
+        font-size: 10px;
+    }
+
+    .datagraphicTitle h4 {
+        text-align: center;
+        font-size: 15px;
+
+        margin-top: 2px;
+    }
+
+    .semiGraph-Content h6 {
+        font-size: 12px;
+
+    }
+
+    .semiGraph-Content h5 {
+        margin-bottom: 1px;
+        line-height: 12px;
+    }
+
+    .semiGraph-Content h5 {
+        margin-bottom: 1px;
+    }
+
+    .topBlock .grph-section:nth-child(1) {
+        margin-left: 7px;
+    }
+
+    .topBlock .grph-section:nth-child(2) {
+        padding-right: 50px;
+        margin-left: 17x;
+    }
 }
