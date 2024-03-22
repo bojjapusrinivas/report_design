@@ -1,7 +1,8 @@
-@import url("gia_form_group.css");
+@charset "utf-8";
 
 
-
+/*====================================
+    FORMS STYLES FOR ALL PAGES    @charset "utf-8";
 /* CSS Document */
 html,
 body {
@@ -16,19 +17,53 @@ body {
 
 .button1 {
     display: inline-block;
-    border-radius: 4px;
-    background-color: #255E91 !important;
+    background: #255E91 !important;
+    font-size: 13px !important;
+    font-family: arial !important;
+    border-radius: 3px;
+    color: #fff !important;
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 13px;
     padding: 10px;
     width: 230px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    /*font-weight: bold;*/
+    box-shadow: rgb(17 17 26 / 5%) 0px 1px 0px, rgb(17 17 26 / 10%) 0px 0px 8px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
 }
+
+
+
+.button1:hover,
+.button1.active {
+    background: #074073 !important;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px !important;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transiti: all 0.2s linear;
+}
+
+.button1.active::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #074073;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: -3px;
+    left: calc(100% - 53%);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+
+
+
+
 
 .txtbox140 {
     width: 60%;
@@ -60,8 +95,7 @@ textarea::-webkit-input-placeholder {
     transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
-    border-radius: 3px !importnat;
-
+    border-radius: 3px !important;
 }
 
 
@@ -219,7 +253,8 @@ textarea::-webkit-input-placeholder {
 =======================================*/
 
 .bor-radius {
-    border-radius: 10px 10px 0 0 !important -moz-border-radius: 10px 10px 0 0 !important;
+    border-radius: 10px 10px 0 0 !important;
+    -moz-border-radius: 10px 10px 0 0 !important;
     -o-border-radius: 10px 10px 0 0 !important;
     -webkit-border-radius: 10px 10px 0 0 !important
 }
@@ -356,8 +391,8 @@ textarea::-webkit-input-placeholder {
 
 .logo_block {
     display: flex;
-    -webkit- display: flex;
-    -moz- display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
     -o-display: flex;
     display: -webkit-flex;
     justify-content: center;
@@ -725,7 +760,7 @@ textarea::-webkit-input-placeholder {
     /*	background:#51ADD2;
 color:#FFF;*/
     background: #C7C8C9;
-    color: #00;
+    color: #000;
     font-weight: bold;
 }
 
@@ -877,7 +912,8 @@ MARGIN-LEFT: 10px;*/
     -moz-border: #e6e7e8 solid 1px !important;
     -o-border: #e6e7e8 solid 1px !important;
     -webkit-border: #e6e7e8 solid 1px !important;
-    border-radius: 0px !important -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
     -o-border-radius: 0px !important;
     -webkit-border-radius: 0px !important
 }
@@ -1783,7 +1819,8 @@ cart_purchase {
 }
 
 .mobile_logo {
-    padding-top: 10px margin: 0px;
+    padding-top: 10px;
+    margin: 0px;
 }
 
 .logo_mobile {
@@ -2024,7 +2061,7 @@ cart_purchase {
     text-align: left;
     margin: 10px;
 }
-}
+
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
 ====================================================================== */
@@ -2075,7 +2112,8 @@ cart_purchase {
     }
 
     .mobile_logo {
-        padding-top: 10px margin: 0px;
+        padding-top: 10px;
+        margin: 0px;
     }
 
     .logo_mobile {
@@ -2285,7 +2323,8 @@ cart_purchase {
     }
 
     .bgPage {
-        border: #efeff0 solid 1px margin: 2px 0;
+        border: #efeff0 solid 1px;
+        margin: 2px 0;
         width: 100%;
     }
 
@@ -2378,7 +2417,7 @@ cart_purchase {
     .bgPage tr td:nth-child(2),
     .bgPage tr td:nth-child(1),
     .submenutitle tr td:nth-child(1) {
-        //ckground:#900;	
+        background: #900;
         display: block;
     }
 
@@ -2512,7 +2551,8 @@ HOME PAGE CHANGES
         font-size: 29px;
         color: #007EC6;
         font-family: impact;
-        padding-top: 14px letter-spacing: 1px;
+        padding-top: 14px;
+        letter-spacing: 1px;
         text-align: left;
         line-height: 40px;
     }
@@ -3072,7 +3112,8 @@ textarea::-webkit-input-placeholder {
     Special STYLES
 =======================================*/
 .bor-radius {
-    border-radius: 10px 10px 0 0 !important -moz-border-radius: 10px 10px 0 0 !important;
+    border-radius: 10px 10px 0 0 !important;
+    -moz-border-radius: 10px 10px 0 0 !important;
     -o-border-radius: 10px 10px 0 0 !important;
     -webkit-border-radius: 10px 10px 0 0 !important
 }
@@ -3183,8 +3224,8 @@ textarea::-webkit-input-placeholder {
 
 .logo_block {
     display: flex;
-    -webkit- display: flex;
-    -moz- display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
     -o-display: flex;
     display: -webkit-flex;
     justify-content: center;
@@ -3559,7 +3600,7 @@ textarea::-webkit-input-placeholder {
 color:#FFF;*/
 
     background: #e6e6e6;
-    color: #00;
+    color: #000;
     font-weight: bold;
 }
 
@@ -3573,7 +3614,6 @@ color: #000000 !important;
     border: #efeff0 solid 1px;
     -moz-border: #efeff0 solid 1px;
     -o-border: #efeff0 solid 1px;
-    ;
     -webkit-border: #efeff0 solid 1px;
     margin: 2px 0;
     /*box-shadow:0 0 2px rgba(0, 0, 0, 0.1)*/
@@ -3715,7 +3755,8 @@ MARGIN-LEFT: 10px;*/
     -moz-border: #e6e7e8 solid 1px !important;
     -o-border: #e6e7e8 solid 1px !important;
     -webkit-border: #e6e7e8 solid 1px !important;
-    border-radius: 0px !important -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
     -o-border-radius: 0px !important;
     -webkit-border-radius: 0px !important
 }
@@ -4649,7 +4690,8 @@ listing {
 }
 
 .mobile_logo {
-    padding-top: 10px margin: 0px;
+    padding-top: 10px;
+    margin: 0px;
 }
 
 .logo_mobile {
@@ -4889,7 +4931,7 @@ listing {
     margin: 10px;
 }
 
-}
+
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
 ====================================================================== */
@@ -4939,7 +4981,8 @@ listing {
     }
 
     .mobile_logo {
-        padding-top: 10px margin: 0px;
+        padding-top: 10px;
+        margin: 0px;
     }
 
     .logo_mobile {
@@ -5147,7 +5190,8 @@ listing {
     }
 
     .bgPage {
-        border: #efeff0 solid 1px margin: 2px 0;
+        border: #efeff0 solid 1px;
+        margin: 2px 0;
         width: 100%;
     }
 
@@ -5238,7 +5282,7 @@ listing {
     .bgPage tr td:nth-child(2),
     .bgPage tr td:nth-child(1),
     .submenutitle tr td:nth-child(1) {
-        //ckground:#900;	
+        background: #900;
         display: block;
     }
 
@@ -5372,7 +5416,8 @@ HOME PAGE CHANGES
         font-size: 29px;
         color: #007EC6;
         font-family: impact;
-        padding-top: 14px letter-spacing: 1px;
+        padding-top: 14px;
+        letter-spacing: 1px;
         text-align: left;
         line-height: 40px;
     }
@@ -5895,7 +5940,7 @@ Panel list
     font-family: FontAwesome;
     color: #900;
     margin-left: -12px;
-    5012 font-size: 15px;
+    font-size: 15px;
     margin-top: 0px;
 }
 
@@ -6015,7 +6060,7 @@ INSIDER TAB
     line-height: normal;
 }
 
-}
+
 
 .inside>.offer-primary .shape {
     border-width: 0 30px 40px 0 !important;
@@ -6735,4 +6780,17 @@ letter-spacing: 0.5px;*/
         padding-left: 15px !important;
     }
 
+}
+
+/*================================
+    Alert Plugin styles
+================================*/
+
+#modelblock {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    left: 0px;
+    top: 0px;
 }
