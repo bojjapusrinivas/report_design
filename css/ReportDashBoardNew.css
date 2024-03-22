@@ -130,7 +130,7 @@
 
 .datagraphicTitle h3 {
     text-align: center;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 900;
     color: #255E91;
 }
@@ -387,7 +387,7 @@
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
 
     .ReportDashboard {
         flex-direction: column;
@@ -468,7 +468,7 @@
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 
     .ReportDashboard {
         flex-direction: column;
@@ -499,12 +499,14 @@
     }
 
     .semi-chart-block {
-        height: 120px;
+        height: 230px;
+        width: 375px;
+        margin: 0 auto;
     }
 
     .dataassets li {
-        width: 100%;
-        font-size: 14px;
+        width: 90%;
+        font-size: 16px;
     }
 
     .dataassets li div:nth-child(2) {
@@ -514,11 +516,17 @@
     }
 
     .datagraphicdomain h3 {
-        font-size: 15px;
+        font-size: 19px;
     }
 
     .bottomBlock .grph-section:nth-child(2) {
-        margin-right: 12px;
+        margin-right: 30px;
+    }
+
+    .datagraphicdomain {
+
+        padding: 6px 0px;
+
     }
 
     .domain-list li p {
@@ -530,7 +538,7 @@
     }
 
     .bottomBlock .grph-section:nth-child(1) {
-        margin-left: 13px;
+        margin-left: 32px;
     }
 
     .datagraphicTitle {
@@ -566,7 +574,7 @@
     }
 
     .grph-section {
-        width: 88px;
+        width: 108px;
     }
 
     .semiGraph-Content h6 {
@@ -575,9 +583,8 @@
 
     .semiGraph-Content .topBlock,
     .semiGraph-Content .bottomBlock {
-        height: 40%;
-        width: 100%;
-        padding-top: 52px;
+        height: 30%;
+        padding-top: 86px
     }
 
     .datagraphicTitle h3 {
@@ -588,7 +595,7 @@
 
     .datagraphiclinkto a {
 
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .datagraphicTitle h4 {
@@ -599,13 +606,14 @@
     }
 
     .semiGraph-Content h6 {
-        font-size: 12px;
+        font-size: 16px;
 
     }
 
     .semiGraph-Content h5 {
         margin-bottom: 1px;
-        line-height: 12px;
+        line-height: 19px;
+        font-size: 16px;
     }
 
     .semiGraph-Content h5 {
